@@ -1,7 +1,7 @@
 # ps algorithm
 * __세그먼트 트리__
 
-  * 펜윅
+  * [펜윅](https://github.com/simta1/ps-snippet/blob/main/%EC%84%B8%EA%B7%B8%EB%A8%BC%ED%8A%B8%20%ED%8A%B8%EB%A6%AC/FenwickTree.md)
   * 탑다운 세그
   * 바텀업 세그
   * 레이지 세그
