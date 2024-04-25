@@ -67,12 +67,12 @@ public:
         init(v, 1, 0, n - 1);
     }
 
-    void updateRange(int l, int r, T add) {
+    void updateRange(int l, int r, T add) { // 1-based
         updatePoint(1, 0, n - 1, l - 1, add);
         if (r != n) updatePoint(1, 0, n - 1, r, -add);
     }
 
-    T query(int l, int r) {
+    T query(int l, int r) { // 1-based
         return __gcd(query(1, 0, n - 1, 0, l - 1).sum, l == r ? 0 : query(1, 0, n - 1, l, r - 1).gcd);
     }
 };
@@ -91,9 +91,6 @@ imos법을 사용하므로 일반적인 상황에선(sum, max 등등을 다루�
 세그먼트 트리의 각 노드에서 sum과 gcd의 두가지 값을 저장하도록 하면    
 c의 값은 sum(a, b - a, c - b)와 같으므로 query(0, 2).sum으로 얻을 수 있고,   
 gcd(d - c, e - d, f - e, g - f)의 값은 query(3, 6).gcd로 얻을 수 있다.   
-
-### 사용설명
-update(), query() 매개변수로 보내는 인덱스 범위는 [1, n]
 
 ### 백준 문제
 [Range GCD](https://www.acmicpc.net/problem/12858)
