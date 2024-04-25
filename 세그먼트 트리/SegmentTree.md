@@ -74,8 +74,7 @@ range update가 필요한 경우 lazy propagation 사용
 
 ### 사용설명
 update(), query() 매개변수로 보내는 인덱스 범위는 [1, n]   
-updateAdd(int i, T val)는 i번째 값에 val을 더함   
-updateChange(int i, T val)는 i번째 값을 val로 변경   
+updateAdd(val)은 값에 val만큼 더하고 updateChange(val)은 값을 val로 변경함   
 merge()함수 바꿔서 상황에 맞는 세그먼트 트리 사용 ex) max, min
 
 ### 백준 문제
