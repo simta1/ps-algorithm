@@ -53,15 +53,15 @@ public:
         for (int i = 0; i < v.size(); i++) updateChange(i + 1, v[i]);
     }
 
-    void updateAdd(int i, T val) {
+    void updateAdd(int i, T val) { // 1-based
         update(1, 0, n - 1, i - 1, val, 1);
     }
 
-    void updateChange(int i, T val) {
+    void updateChange(int i, T val) { // 1-based
         update(1, 0, n - 1, i - 1, val, 0);
     }
 
-    T query(int l, int r) {
+    T query(int l, int r) { // 1-based
         return query(1, 0, n - 1, l - 1, r - 1).lr;
     }
 };
@@ -71,11 +71,7 @@ update O(logN)
 query O(logN)   
 
 ### 주의사항
-.
-
-### 사용설명
-update(), query() 매개변수로 보내는 인덱스 범위는 [1, n]   
-updateAdd(val)은 값에 val만큼 더하고 updateChange(val)은 값을 val로 변경함   
+.  
 
 ### 백준 문제
 [연속합과 쿼리](https://www.acmicpc.net/problem/16993)
