@@ -1,4 +1,4 @@
-### point update & range query
+### FenwickTree (point update & range query)
 ```cpp
 template <typename T>
 class FenwickTree {
@@ -28,7 +28,7 @@ public:
 ```
 
 
-### range update & point query
+### FenwickTree (range update & point query)
 ```cpp
 template <typename T>
 class FenwickTree {
