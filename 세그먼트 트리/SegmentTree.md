@@ -1,4 +1,4 @@
-### Segment Tree (point update & range query)
+### SegmentTree (point update & range query)
 ```cpp
 template <typename T>
 class SegmentTree {
