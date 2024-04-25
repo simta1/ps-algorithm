@@ -110,17 +110,17 @@ public:
         init(1, 0, n - 1);
     }
 
-    void updateAdd(int x, int y, T val) {
+    void updateAdd(int x, int y, T val) { // 1-based
         updateAdd(1, 0, n - 1, x - 1, y, val);
         v[x - 1][y - 1] += val;
     }
     
-    void updateChange(int x, int y, T val) {
+    void updateChange(int x, int y, T val) { // 1-based
         updateAdd(1, 0, n - 1, x - 1, y, val - v[x - 1][y - 1]);
         v[x - 1][y - 1] = val;
     }
 
-    T query(int x1, int y1, int x2, int y2) {
+    T query(int x1, int y1, int x2, int y2) { // 1-based
         return query(1, 0, n - 1, x1 - 1, x2 - 1, y1, y2);
     }
 };
@@ -133,11 +133,6 @@ N, M은 각각 행과 열의 개수
 
 ### 주의사항
 .
-
-### 사용설명
-update(), query() 매개변수로 보내는 인덱스 범위는 [1, n], [1, m]   
-updateAdd(val)은 값에 val만큼 더하고 updateChange(val)은 값을 val로 변경함   
-merge()함수 바꿔서 상황에 맞는 세그먼트 트리 사용 ex) max, min
 
 ### 백준 문제
 [구간 합 구하기 3](https://www.acmicpc.net/problem/11658)
