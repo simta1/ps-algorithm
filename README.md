@@ -2,12 +2,12 @@
 * __세그먼트 트리__
 
   * [펜윅](https://github.com/simta1/ps-snippet/blob/main/%EC%84%B8%EA%B7%B8%EB%A8%BC%ED%8A%B8%20%ED%8A%B8%EB%A6%AC/FenwickTree.md)
-  * 세그먼트 트리
-  * 레이지 세그
-  * 2D 세그
-  * 2D 펜윅
-  * 금광 세그
-  * range update GCD 세그
+  * [세그먼트 트리](https://github.com/simta1/ps-snippet/blob/main/%EC%84%B8%EA%B7%B8%EB%A8%BC%ED%8A%B8%20%ED%8A%B8%EB%A6%AC/SegmentTree.md)
+  * [레이지 세그](https://github.com/simta1/ps-snippet/blob/main/%EC%84%B8%EA%B7%B8%EB%A8%BC%ED%8A%B8%20%ED%8A%B8%EB%A6%AC/SegmentTree(Lazy%20Propagation).md)
+  * [2D 세그](https://github.com/simta1/ps-snippet/blob/main/%EC%84%B8%EA%B7%B8%EB%A8%BC%ED%8A%B8%20%ED%8A%B8%EB%A6%AC/SegmentTree2D.md)
+  * [2D 펜윅](https://github.com/simta1/ps-snippet/blob/main/%EC%84%B8%EA%B7%B8%EB%A8%BC%ED%8A%B8%20%ED%8A%B8%EB%A6%AC/FenwickTree2D.md)
+  * [금광 세그](https://github.com/simta1/ps-snippet/blob/main/%EC%84%B8%EA%B7%B8%EB%A8%BC%ED%8A%B8%20%ED%8A%B8%EB%A6%AC/Gold%20Mine%20SegmentTree.md)
+  * [range update GCD 세그](https://github.com/simta1/ps-snippet/blob/main/%EC%84%B8%EA%B7%B8%EB%A8%BC%ED%8A%B8%20%ED%8A%B8%EB%A6%AC/GCD%20SegmentTree.md)
   * 다이나믹 세그
   * 퍼시스턴트 세그
   * 머지소트 트리
