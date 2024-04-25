@@ -82,6 +82,9 @@ update O(logN)
 query O(logN)   
 lazy propagation 없이도 O(logN)으로 range update, range query 모두 가능하다.
 
+### 백준 문제
+[Range GCD](https://www.acmicpc.net/problem/12858)   
+
 ### 원리
 원리는 imos법을 생각하면 된다. imos법을 사용하면 range update도 lazy propagation없이 O(logN)구현이 가능하다.   
 imos법을 사용하므로 일반적인 상황에선(sum, max 등등을 다루는 세그먼트 트리) range query가 불가능 하지만 gcd를 구하는 상황이기에 range query도 가능하다.   
@@ -91,6 +94,3 @@ imos법을 사용하므로 일반적인 상황에선(sum, max 등등을 다루�
 세그먼트 트리의 각 노드에서 sum과 gcd의 두가지 값을 저장하도록 하면    
 c의 값은 sum(a, b - a, c - b)와 같으므로 query(0, 2).sum으로 얻을 수 있고,   
 gcd(d - c, e - d, f - e, g - f)의 값은 query(3, 6).gcd로 얻을 수 있다.   
-
-### 백준 문제
-[Range GCD](https://www.acmicpc.net/problem/12858)
