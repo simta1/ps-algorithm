@@ -65,11 +65,11 @@ public:
         init(v, 1, 0, n - 1);
     }
 
-    void update(int l, int r, T add) {
+    void update(int l, int r, T add) { // 1-based
         updateRange(1, 0, n - 1, l - 1, r - 1, add);
     }
 
-    T query(int l, int r) {
+    T query(int l, int r) { // 1-based
         return query(1, 0, n - 1, l - 1, r - 1);
     }
 };
@@ -80,9 +80,6 @@ query O(logN)
 
 ### 주의사항
 .
-
-### 사용설명
-update(), query() 매개변수로 보내는 인덱스 범위는 [1, n]
 
 ### 백준 문제
 [구간 합 구하기 2](https://www.acmicpc.net/problem/10999)
