@@ -23,13 +23,13 @@ public:
         }
     }
 
-    void update(int r, int c, T add) {
+    void update(int r, int c, T add) { // 1-based
         for (int i = r; i < tree.size(); i += (i & -i)) {
             for (int j = c; j < tree[0].size(); j += (j & -j)) tree[i][j] += add;
         }
     }
 
-    T query(int x1, int y1, int x2, int y2) {
+    T query(int x1, int y1, int x2, int y2) { // 1-based
         return sum(x2, y2) - sum(x2, y1 - 1) - sum(x1 - 1, y2) + sum(x1 - 1, y1 - 1);
     }
 };
@@ -59,14 +59,14 @@ public:
         }
     }
 
-    void updateRange(int x1, int y1, int x2, int y2, T add) {
+    void updateRange(int x1, int y1, int x2, int y2, T add) { // 1-based
         updatePoint(x1, y1, add);
         updatePoint(x1, y2 + 1, -add);
         updatePoint(x2 + 1, y1, -add);
         updatePoint(x2 + 1, y2 + 1, add);
     }
 
-    T query(int r, int c) {
+    T query(int r, int c) { // 1-based
         T res = 0;
         for (int i = r; i > 0; i -= (i & -i)) {
             for (int j = c; j > 0; j -= (j & -j)) res += tree[i][j];
@@ -82,9 +82,6 @@ N, M은 각각 행과 열의 개수
 
 ### 주의사항
 range update & point query 의 경우 imos법 사용하면서 (x2 + 1, y2 + 1)까지 접근하므로 배열은 [n + 1][m + 1]번째 항까지 필요
-
-### 사용설명
-update(), query() 매개변수로 보내는 인덱스 범위는 [1, n], [1, m]
 
 ### 백준 문제
 [구간 합 구하기 3](https://www.acmicpc.net/problem/11658)
