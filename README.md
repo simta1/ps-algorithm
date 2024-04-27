@@ -84,8 +84,8 @@
   * <span class="">[병렬 이분 탐색(P+)]</span>
 * ### DP
   * <span class="silver">[비트마스크(S-)](/DP/Bitmask.md)</span>
+  * <span class="gold">[배낭 문제 비트셋 최적화(G-)](/DP/Bitset%20Knapsack.md)</span>
   * <span class="gold">[비트마스크 DP(G+)](/DP/Bitmask%20DP.md)</span>
-  * <span class="">[배낭 문제 비트셋 최적화]</span>
   * <span class="">[CHT]</span>
   * <span class="">[SOS DP]</span>
   * <span class="">[Connection Profile DP]</span>
