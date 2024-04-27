@@ -55,9 +55,10 @@
     * <span class="gold">[플로이드 워셜(G-)](/그래프%20이론/그래프/Floyd-Warshall.md)</span>
     * <span class="gold">[위상 정렬(G+)](/그래프%20이론/그래프/Topological%20Sort.md)</span>
     * <span class="platinum">[강한 연결 요소(P-)](/그래프%20이론/그래프/Strongly%20Connected%20Component.md)</span>
+    * <span class="">[2-SAT(P-)]</span>
     * <span class="">[MST]</span>
     * <span class="">[2차 MST]</span>
-    * <span class="">[유향 MST(D)]</span>
+    * <span class="">[유향 MST(D+)]</span>
     * <span class="">[최소 차수 MST]</span>
     * <span class="">[2-set]</span>
     * <span class="">[선인장]</span>
@@ -70,7 +71,7 @@
     * <span class="">[최소 공통 조상]</span>
     * <span class="">[단절점]</span>
     * <span class="">[단절선]</span>
-    * <span class="">[오일러 경로 테크닉]</span>
+    * <span class="platinum">[오일러 경로 테크닉(P-)](/그래프%20이론/트리/Euler%20Tour%20Technique.md)</span>
     * <span class="">[heavy-light 분할]</span>
     * <span class="">[센트로이드 분할]</span>
     * <span class="">[트리 동형 사상]</span>
