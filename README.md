@@ -1,5 +1,5 @@
 <style>
-  .silver { background-color:#E5E5E5 }
+  .silver { background-color:#C5D5D5 }
   .gold { background-color:#FFF5B1 }
   .platinum { background-color:#DCFFE4 }
   .diamond { background-color:#C0FFFF }
@@ -82,10 +82,10 @@
   * <span class="">[이분 탐색(S-)]</span>
   * <span class="">[삼분 탐색]</span>
   * <span class="">[병렬 이분 탐색(P+)]</span>
-* ### __DP__
-  * <span class="">[비트마스크(S)]</span>
-  * <span class="">[비트마스크 DP(G)]</span>
-  * <span class="">[비트셋 최적화(배낭)]</span>
+* ### DP
+  * <span class="silver">[비트마스크(S-)](/DP/Bitmask.md)</span>
+  * <span class="gold">[비트마스크 DP(G+)](/DP/Bitmask%20DP.md)</span>
+  * <span class="">[배낭 문제 비트셋 최적화]</span>
   * <span class="">[CHT]</span>
   * <span class="">[SOS DP]</span>
   * <span class="">[Connection Profile DP]</span>
@@ -106,7 +106,7 @@
   * <span class="">[선분교차점 계산]</span>
   * <span class="">[볼록 껍질(Graham Scan)]</span>
   * <span class="">[회전하는 캘리퍼스(Rotating Calipers)]</span>
-  * <span class="">[반평면 교집합]</span>
+  * <span class="">[반평면 교집합(D-)]</span>
 * ### 수학
   * #### 정수론
     * <span class="">[확장 유클리드 호제법, 모듈러 역원]</span>

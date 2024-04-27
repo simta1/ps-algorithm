@@ -1,0 +1,70 @@
+[카테고리](/README.md)
+## 예시문제 : [할 일 정하기 1](https://www.acmicpc.net/problem/1311)
+### sol 1) for문 사용
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    cin.tie(0) -> sync_with_stdio(0);
+
+    int n;
+    cin >> n;
+
+    vector<vector<int> > v(n, vector<int>(n));
+    for (auto &r : v) for (auto &e : r) cin >> e;
+
+    const int INF = 1e9;
+    vector<vector<int> > dp(n + 1, vector<int>(1 << n, INF));
+    fill(dp[0].begin(), dp[0].end(), 0);
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            int cost = v[i][j];
+            for (int bit = 0; bit < (1 << n); bit++) if (dp[i][bit] != INF && (~bit & (1 << j))) {
+                dp[i + 1][bit | (1 << j)] = min(dp[i + 1][bit | (1 << j)], dp[i][bit] + cost);
+            }
+        }
+    }
+
+    cout << dp[n].back();
+
+    return 0;
+}
+```
+
+### sol 2) 재귀함수 사용
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    cin.tie(0) -> sync_with_stdio(0);
+
+    int n;
+    cin >> n;
+
+    vector<vector<int> > v(n, vector<int>(n));
+    for (auto &r : v) for (auto &e : r) cin >> e;
+
+    vector<vector<int> > dp(n, vector<int>(1 << n, -1));
+
+    function<int(int, int)> dfs = [&](int depth, int visited) -> int {
+        if (depth == n) return 0;
+
+        int &res = dp[depth][visited];
+        if (~res) return res;
+
+        res = 2e9;
+        for (int i = 0; i < n; i++) if (~visited & (1 << i)) {
+            res = min(res, dfs(depth + 1, visited | (1 << i)) + v[depth][i]);
+        }
+        return res;
+    };
+
+    cout << dfs(0, 0);
+    return 0;
+}
+```
+1번 방식은 확인하지 않아도 될 비트들까지 매번 확인하므로 더 느림   
+for문으로도 효율적으로 비트필드를 순회하는 방식에 관한 글을 본 기억이 있는 것 같은데 못 찾겠다.
