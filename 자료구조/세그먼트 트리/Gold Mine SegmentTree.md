@@ -1,3 +1,4 @@
+<span class="gold">[카테고리](/README.md)</span>
 ### GoldMineSeg (point update & range query)
 ```cpp
 template <typename T>

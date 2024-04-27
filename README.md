@@ -16,15 +16,15 @@
 
 * ### 자료구조
   * #### 세그먼트 트리
-    * <span class="gold">[펜윅(G-)](https://github.com/simta1/ps-snippet/blob/main/%EC%84%B8%EA%B7%B8%EB%A8%BC%ED%8A%B8%20%ED%8A%B8%EB%A6%AC/FenwickTree.md)</span>
-    * <span class="gold">[세그먼트 트리(G-)](https://github.com/simta1/ps-snippet/blob/main/%EC%84%B8%EA%B7%B8%EB%A8%BC%ED%8A%B8%20%ED%8A%B8%EB%A6%AC/SegmentTree.md)</span>
-    * <span class="platinum">[2D 펜윅(P-)](https://github.com/simta1/ps-snippet/blob/main/%EC%84%B8%EA%B7%B8%EB%A8%BC%ED%8A%B8%20%ED%8A%B8%EB%A6%AC/FenwickTree2D.md)</span>
-    * <span class="platinum">[2D 세그(P-)](https://github.com/simta1/ps-snippet/blob/main/%EC%84%B8%EA%B7%B8%EB%A8%BC%ED%8A%B8%20%ED%8A%B8%EB%A6%AC/SegmentTree2D.md)</span>
-    * <span class="">[n차원 펜윅(P-)]</span>
-    * <span class="platinum">[레이지 세그(P-)](https://github.com/simta1/ps-snippet/blob/main/%EC%84%B8%EA%B7%B8%EB%A8%BC%ED%8A%B8%20%ED%8A%B8%EB%A6%AC/SegmentTree(Lazy%20Propagation).md)</span>
-    * <span class="">[다이나믹 세그, 다이나믹 레이지 세그(P)]</span>
-    * <span class="platinum">[range GCD 세그(P+)](https://github.com/simta1/ps-snippet/blob/main/%EC%84%B8%EA%B7%B8%EB%A8%BC%ED%8A%B8%20%ED%8A%B8%EB%A6%AC/GCD%20SegmentTree.md)</span>
-    * <span class="platinum">[금광 세그(P+)](https://github.com/simta1/ps-snippet/blob/main/%EC%84%B8%EA%B7%B8%EB%A8%BC%ED%8A%B8%20%ED%8A%B8%EB%A6%AC/Gold%20Mine%20SegmentTree.md)</span>
+    * <span class="gold">[펜윅(G-)](/자료구조/세그먼트%20트리/FenwickTree.md)</span>
+    * <span class="gold">[세그먼트 트리(G-)](/자료구조/세그먼트%20트리/SegmentTree.md)</span>
+    * <span class="platinum">[2D 펜윅(P-)](/자료구조/세그먼트%20트리/FenwickTree2D.md)</span>
+    * <span class="platinum">[2D 세그(P-)](/자료구조/세그먼트%20트리/SegmentTree2D.md)</span>
+    * <span class="platinum">[n차원 펜윅(P-)](/자료구조/세그먼트%20트리/Multi%20Dimensional%20FenwickTree.md)</span>
+    * <span class="platinum">[레이지 세그(P-)](/자료구조/세그먼트%20트리/SegmentTree(Lazy%20Propagation).md)</span>
+    * <span class="platinum">[다이나믹 세그, 다이나믹 레이지 세그(P)](/자료구조/세그먼트%20트리/Dynamic%20SegmentTree.md)</span>
+    * <span class="platinum">[range GCD 세그(P+)](/자료구조/세그먼트%20트리/GCD%20SegmentTree.md)</span>
+    * <span class="platinum">[금광 세그(P+)](/자료구조/세그먼트%20트리/Gold%20Mine%20SegmentTree.md)</span>
     * <span class="">[퍼시스턴트 세그]</span>
     * <span class="">[머지소트 트리]</span>
     * <span class="">[세그트리 비츠(R-)]</span>
