@@ -34,7 +34,7 @@
     * <span class="">[AVL 트리]</span>
     * <span class="">[레드-블랙 트리(R)]</span>
   * #### 기타
-    * <span class="">[wavelet 트리]https://www.geeksforgeeks.org/wavelet-trees-introduction/ 참고</span>
+    * <span class="">[wavelet 트리]</span>
     * <span class="">[XOR 트라이]</span>
     * <span class="">[분리 집합]</span>
     * <span class="">[블록 컷 트리]</span>
@@ -50,9 +50,9 @@
 * ### 그래프 이론
   * #### 그래프
     * <span class="">[0-1 bfs]</span>
-    * <span class="">[다익스트라]</span>
-    * <span class="">[벨만-포드]</span>
-    * <span class="">[플로이드 워셜]</span>
+    * <span class="gold">[다익스트라(G-)](/그래프%20이론/그래프/Dijkstra.md)</span>
+    * <span class="gold">[벨만-포드(G-)](/그래프%20이론/그래프/Bellman-Ford.md)</span>
+    * <span class="gold">[플로이드 워셜(G-)](/그래프%20이론/그래프/Floyd-Warshall.md)</span>
     * <span class="">[위상 정렬]</span>
     * <span class="">[강한 연결 요소]</span>
     * <span class="">[MST]</span>

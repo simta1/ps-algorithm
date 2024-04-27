@@ -1,13 +1,15 @@
-### 코드
+[카테고리](/README.md)
+### Dijkstra
 ```cpp
 template <typename T>
 class Graph {
 private:
+    const T INF;
     vector<vector<pair<int, T> > > adj;
     vector<T> dist;
 
 public:
-    Graph(int n) : adj(n + 1), dist(n + 1) {}
+    Graph(int n) : INF(numeric_limits<T>::max()), adj(n + 1), dist(n + 1) {}
 
     void addEdge(int u, int v, T w) { // 1-based
         adj[u].push_back({v, w});
@@ -15,7 +17,6 @@ public:
     }
 
     void dijkstra(int start) { // 1-based
-        const T INF = numeric_limits<T>::max();
         fill(dist.begin(), dist.end(), INF);
         dist[start] = 0;
 
@@ -44,9 +45,11 @@ public:
 O(E logV)
 
 ### 주의사항
-간선이 양방향일 경우 addEdge()함수에서 주석 해제   
 모든 간선의 가중치가 0 이상일 때만 사용 가능   
 음수 가중치 존재 시 벨만-포드 사용   
+
+### 사용관련
+간선이 양방향일 경우 addEdge()함수에서 주석 해제   
 
 ### 백준문제
 [최소비용 구하기](https://www.acmicpc.net/problem/1916)

@@ -1,3 +1,4 @@
+[카테고리](/README.md)
 ### splay
 ```cpp
 template <typename T>
@@ -168,7 +169,7 @@ public:
         if (root) delete root;
     }
 
-    void flip(int l, int r) {
+    void reverse(int l, int r) {
         gather(l, r)->flipLazy ^= 1;
     }
 
@@ -180,9 +181,9 @@ public:
         gather(l, r);
         int num = (k > 0) ? k : (length + k); // length - abs(k)
 
-        flip(l, r);
-        flip(l, l + num - 1);
-        flip(l + num, r);
+        reverse(l, r);
+        reverse(l, l + num - 1);
+        reverse(l + num, r);
     }
 
     Data query(int l, int r) { // 1-based

@@ -1,4 +1,4 @@
-<span class="gold">[카테고리](/README.md)</span>
+[카테고리](/README.md)
 ### DynamicSeg (point update & range query)
 ```cpp
 template <typename U, typename T>

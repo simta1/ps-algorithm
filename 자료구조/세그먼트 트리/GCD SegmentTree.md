@@ -1,4 +1,4 @@
-<span class="gold">[카테고리](/README.md)</span>
+[카테고리](/README.md)
 ### GCD SegmentTree (range update & range query)
 ```cpp
 template <typename T>
