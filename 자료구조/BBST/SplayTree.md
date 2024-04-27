@@ -1,125 +1,62 @@
 ### splay
 ```cpp
-// 참고한 코드
-// https://seastar105.tistory.com/59
-// https://justicehui.github.io/hard-algorithm/2019/10/23/SplayTree4/
-// https://cubelover.tistory.com/10
-
-#include <bits/stdc++.h>
-using namespace std;
-
 template <typename T>
 class SplayTree {
 private:
+    struct Data {
+        T val, mn, mx, sum;
+
+        Data() {}
+        Data(T val) : val(val) { init(); }
+
+        void init() {
+            mn = mx = sum = val;
+        }
+
+        void merge(const Data &other) {
+            mn = min(mn, other.mn);
+            mx = max(mx, other.mx);
+            sum += other.sum;
+        }
+    };
+
     struct Node {
         Node *l, *r, *p;
         int sz;
-        bool flip;
+        bool flipLazy, dummy;
         // int key;
-        T val, ans[11];
 
-        Node() : l(nullptr), r(nullptr), p(nullptr), sz(1), flip(false) {};
-        Node(T val) : Node(), val(val) {
-            for (int i = 0; i < 11; i++) ans[i] = val;
+        Data data;
+
+        Node() :  l(nullptr), r(nullptr), p(nullptr), sz(1), flipLazy(false), dummy(false) {}
+        Node(int val, Node *p) : l(nullptr), r(nullptr), p(p), sz(1), flipLazy(false), dummy(false), data(val) {}
+        ~Node() {
+            if (l) delete l;
+            if (r) delete r;
         }
-        Node(T val, Node *p) : Node(val), p(p) {}
-    } *root;
+    };
 
-    // void insert(int key) {
-    //     Node *x = new Node;
-    //     x->l = x->r = x->p = NULL;
-    //     x->key = key;
-
-    //     if (!root) {
-    //         root = x;
-    //         return;
-    //     }
-        
-    //     Node *cur = root;
-
-    //     while (1) {
-    //         if(key == cur->key) { // 중복
-    //             delete x;
-    //             return;
-    //         }
-
-    //         if(key < cur->key) {
-    //             if (cur->l) cur = cur->l;
-    //             else {
-    //                 x->p = cur;
-    //                 cur->l = x;
-    //                 splay(x);
-    //                 return;
-    //             }
-    //         }
-    //         else{
-    //             if (cur->r) cur = cur->r;
-    //             else {
-    //                 x->p = cur;
-    //                 cur->r = x;
-    //                 splay(x);
-    //                 return;
-    //             }
-    //         }
-    //     }
-    // }
-
-    // bool find(int key) {
-    //     if (!root) return false;
-
-    //     Node *cur = root;
-
-    //     while (cur && key != cur->key) {
-    //         Node *next = (key < cur->key ? cur->l : cur->r);
-    //         if (!next) break;
-    //         cur = next;
-    //     }
-
-    //     splay(cur);
-    //     return key == cur->key;
-    // }
-
-    // void remove(int key) {
-    //     if (!find(key)) return;
-
-    //     Node *originRoot = root;
-    //     if (root->l && root->r) {
-    //         root = root->l;
-    //         root->p = NULL;
-    //         Node *cur = root;
-    //         while (cur->r) cur = cur->r;
-    //         cur->r = originRoot->r;
-    //         originRoot->r->p = cur;
-    //         splay(cur);
-    //     }
-    //     else if (root->l) {
-    //         root = root->l;
-    //         root->p = NULL;
-    //     }
-    //     else if (root->r) {
-    //         root = originRoot->r;
-    //         root->p = NULL;
-    //     }
-    //     else {
-    //         root = NULL;
-    //     }
-
-    //     delete originRoot;
-    // }
+    Node *root;
+    vector<Node *> ptr;
 
     void update(Node *cur) {
         cur->sz = 1;
         if (cur->l) cur->sz += cur->l->sz;
         if (cur->r) cur->sz += cur->r->sz;
+
+        // merge data
+        cur->data.init();
+        if (cur->l && !cur->l->dummy) cur->data.merge(cur->l->data);
+        if (cur->r && !cur->r->dummy) cur->data.merge(cur->r->data);
     }
 
     void lazy(Node *cur) {
-        if (!cur->flip) return;
+        if (!cur->flipLazy) return;
 
         swap(cur->l, cur->r);
-        if (cur->l) cur->l->flip = !cur->l->flip;
-        if (cur->r) cur->r->flip = !cur->r->flip;
-        cur->flip = false;
+        if (cur->l) cur->l->flipLazy ^= 1;
+        if (cur->r) cur->r->flipLazy ^= 1;
+        cur->flipLazy = false;
     }
 
     void rotate(Node *cur) {
@@ -128,9 +65,8 @@ private:
         Node *parent = cur->p;
         Node *child;
 
-        // 있어야 되나? 일단 주석상태로 제출해보고 통과되면 삭제할지 고민
-        // lazy(parent);
-        // lazy(cur);
+        lazy(parent);
+        lazy(cur);
 
         if (cur == parent->l) {
             parent->l = child = cur->r;
@@ -168,13 +104,24 @@ private:
         }
     }
 
-    // split
-    // merge
+    Node* gather(int l, int r) {
+        kth(l - 1);
+        Node *originRoot = root;
+        root = root->r;
+        root->p = nullptr;
 
-    void splayKth(int k) { // 1-based
+        kth(r - l + 1);
+        root->p = originRoot;
+        originRoot->r = root;
+        root = originRoot;
+
+        return root->r->l;
+    }
+
+    Node* kth(int k) { // 1-based
         Node *cur = root;
-        // 있어야 되나? 일단 주석상태로 제출해보고 통과되면 삭제할지 고민 2
-        // lazy(cur); 
+        lazy(cur);
+
         while (1) {
             while (cur->l && k < cur->l->sz) {
                 cur = cur->l;
@@ -186,136 +133,74 @@ private:
             lazy(cur);
         }
         splay(cur);
+        return root;
     }
 
-    Node* gather(int l, int r) {
-        splayKth(l - 1);
-        Node *originRoot = root;
-        root = root->r;
-        root->p = nullptr;
-
-        splayKth(r - l + 1);
-        originRoot->r = root;
-        root->p = originRoot;
-        root = originRoot;
-
-        return root->r->l;
+    void inorder(Node *cur) {
+        lazy(cur);
+        if (cur->l) inorder(cur->l);
+        if (!cur->dummy) cout << cur->data.val << " ";
+        if (cur->r) inorder(cur->r);
     }
 
 public:
-    SplayTree(const vector<T> &v) { // 0 : left dummy, 1 ~ n : element, n+1 : right dummy
+    SplayTree(const vector<T> &v) : ptr(v.size() + 2) {
         // left dummy
-        root = new Node(0);
+        ptr[0] = root = new Node(0, nullptr);
+        root->dummy = true;
 
         // real nodes
         Node *cur = root;
-        for (int i = 0; i < n; i++) {
-            cur->r = new Node(v[i], cur);
+        for (int i = 0; i < v.size(); i++) {
+            ptr[i + 1] = cur->r = new Node(v[i], cur);
             cur = cur->r;
         }
         
         // right dummy
-        cur->r = new Node(0, cur);
-        cur = cur->r;
+        ptr[v.size() + 1] = cur->r = new Node(0, cur);
+        cur->r->dummy = true;
 
-        // update sz
-        while (cur) {
-            update(cur);
-            cur = cur->p;
-        }
+        // init
+        for (cur = cur->r; cur; cur = cur->p) update(cur);
     }
 
-    // void reverse(int l, int r) {
-    //     Node *x = gather(l, r);
-    //     x->flip = !x->flip;
-    // }
-
-    void insertBeforeKth(int k, T val) { // 1-based
-        splayKth(k);
-        Node *cur = root->l;
-        while (cur->r) cur = cur->r;
-        cur->r = new Node(val, cur);
-        splay(cur->r);
+    ~SplayTree() {
+        if (root) delete root;
     }
 
-    void removeKth(int k) { // 1-based
-        splayKth(k);
-
-        Node *originRoot = root;
-        if (root->l && root->r) {
-            root = root->l;
-            root->p = NULL;
-            Node *cur = root;
-            while (cur->r) cur = cur->r;
-            cur->r = originRoot->r;
-            originRoot->r->p = cur;
-            splay(cur);
-        }
-        else if (root->l) {
-            root = root->l;
-            root->p = NULL;
-        }
-        else if (root->r) {
-            root = originRoot->r;
-            root->p = NULL;
-        }
-        else {
-            root = NULL;
-        }
-
-        delete originRoot;
+    void flip(int l, int r) {
+        gather(l, r)->flipLazy ^= 1;
     }
 
-    void changeKth(int k, T val) { // 1-based
-        splayKth(k);
-        root->val = val;
-        update(root);
-        return root;
+    void shift(int l, int r, int k) {
+        int length = r - l + 1;
+        k %= length;
+        if (!k) return;
+
+        gather(l, r);
+        int num = (k > 0) ? k : (length + k); // length - abs(k)
+
+        flip(l, r);
+        flip(l, l + num - 1);
+        flip(l + num, r);
     }
 
-    T query(int l, int r, int k) { // 1-based
-        return gather(l, r)->ans[k];
+    Data query(int l, int r) { // 1-based
+        return gather(l, r)->data;
+    }
+
+    Data query(int idx) { // 1-based
+        return kth(idx)->data;
+    }
+
+    int getIdx(int x) { // 1-based
+        splay(ptr[x]);
+        return root->l->sz;
+    }
+
+    void print() {
+        inorder(root);
+        cout << "\n";
     }
 };
-
-int main() {
-    cin.tie(0) -> sync_with_stdio(0);
-
-    int n;
-    cin >> n;
-
-    vector<long long> v(n);
-    for (auto &e : v) cin >> e;
-
-    SplayTree<long long> spl(v);
-
-    int m;
-    for (cin >> m; m--;) {
-        int a;
-        cin >> a;
-
-        if (a == 1) {
-            long long idx, val;
-            cin >> idx >> val;
-            spl.insertBeforeKth(idx + 1, val);
-        }
-        else if (a == 2) {
-            int idx;
-            cin >> idx;
-            spl.removeKth(idx + 1);
-        }
-        else if (a == 3) {
-            long long idx, val;
-            cin >> idx >> val;
-            spl.changeKth(idx + 1, val);
-        }
-        else {
-            int l, r, k;
-            cin >> l >> r >> k;
-            cout << spl.query(l + 1, r + 1, k) << "\n";
-        }
-    }
-
-    return 0;
-}
 ```

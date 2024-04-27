@@ -1,7 +1,7 @@
 ### SegmentTree with Lazy Propagation (range update & range query)
 ```cpp
 template <typename T>
-class SegmentTree {
+class LazySeg {
 private:
     int n;
     vector<T> tree, lazy;
@@ -60,8 +60,8 @@ private:
     }
 
 public:
-    SegmentTree(int n) : n(n), tree(4 * n), lazy(4 * n) {}
-    SegmentTree(const vector<T> &v) : n(v.size()), tree(4 * v.size()), lazy(4 * v.size()) {
+    LazySeg(int n) : n(n), tree(4 * n), lazy(4 * n) {}
+    LazySeg(const vector<T> &v) : n(v.size()), tree(4 * v.size()), lazy(4 * v.size()) {
         init(v, 1, 0, n - 1);
     }
 
