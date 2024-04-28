@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### Line-Line Intersection
+### Line-Line Intersection Check
 ```cpp
 template <typename T>
 struct Point {
