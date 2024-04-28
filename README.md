@@ -93,8 +93,7 @@
   * <span class="">[접미사 배열]</span>
   * <span class="">[Z algorithm]</span>
 * ### 기하학
-  * <span class="">[cross product]</span>
-  * <span class="">[ccw]</span>
+  * <span class="gold">[cross product, ccw(G-)](/기하학/cross%20product,%20ccw.md)</span>
   * <span class="">[선분교차판정]</span>
   * <span class="">[선분교차점 계산]</span>
   * <span class="">[볼록 껍질(Graham Scan)]</span>
