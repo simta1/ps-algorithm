@@ -78,10 +78,6 @@
 * ### 쿼리 관련
   * <span class="platinum">[Mo's algorithm(P+)](/쿼리%20관련/Mo's%20Algorithm.md)</span>
   * <span class="">[평방분할]</span>
-* ### n분 탐색
-  * <span class="silver">[이분 탐색(S-)](/n분%20탐색/Binary%20Search.md)</span>
-  * <span class="">[삼분 탐색]</span>
-  * <span class="">[병렬 이분 탐색(P+)]</span>
 * ### DP
   * <span class="silver">[비트마스크(S-)](/DP/Bitmask.md)</span>
   * <span class="gold">[배낭 문제 비트셋 최적화(G-)](/DP/Bitset%20Knapsack.md)</span>
@@ -126,14 +122,17 @@
     * <span class="">[NTT]</span>
     * <span class="">[DFT]</span>
 * ### 기타
-  * <span class="">[값 / 좌표 압축]</span>
-  * <span class="">[imos]</span>
+  * <span class="silver">[이분 탐색(S-)](/기타/Binary%20Search.md)</span>
+  * <span class="silver">[값 / 좌표 압축(S+)](/기타/Coordinate%20Compression.md)</span>
   * <span class="">[투 포인터]</span>
   * <span class="">[중간에서 만나기]</span>
+  * <span class="">[imos]</span>
+  * <span class="">[삼분 탐색]</span>
+  * <span class="">[병렬 이분 탐색(P+)]</span>
   * <span class="">[춤추는 링크, 크누스 X]</span>
   * <span class="">[히르쉬버그]</span>
 * ### 게임 이론
   * <span class="">[스프라그-그런디(비트셋)]</span>
 * ### 휴리스틱
-  * <span class="">[A]*</span>
+  * <span class="">[A*]</span>
   * <span class="">[담금질 기법]</span>

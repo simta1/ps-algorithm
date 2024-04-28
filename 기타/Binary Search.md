@@ -1,0 +1,39 @@
+[카테고리](/README.md)
+### Binary Search (T~F)
+```cpp
+bool check(int mid) {
+
+}
+
+int binarySearch(int l, int r) {
+    int lo = l, hi = r + 1;
+
+    while (lo + 1 < hi) {
+        int mid = lo + hi >> 1;
+        if (check(mid)) lo = mid; 
+        else hi = mid;
+    }
+    
+    return lo;
+}
+```
+### Binary Search (F~T)
+```cpp
+bool check(int mid) {
+
+}
+
+int binarySearch(int l, int r) {
+    int lo = l - 1, hi = r;
+
+    while (lo + 1 < hi) {
+        int mid = lo + hi >> 1;
+        if (check(mid)) hi = mid; 
+        else lo = mid;
+    }
+    
+    return hi;
+}
+```
+### 시간복잡도 
+$O(logN)$    
