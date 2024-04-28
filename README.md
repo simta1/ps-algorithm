@@ -79,7 +79,7 @@
   * <span class="platinum">[Mo's algorithm(P+)](/쿼리%20관련/Mo's%20Algorithm.md)</span>
   * <span class="">[평방분할]</span>
 * ### n분 탐색
-  * <span class="">[이분 탐색(S-)]</span>
+  * <span class="silver">[이분 탐색(S-)](/n분%20탐색/Binary%20Search.md)</span>
   * <span class="">[삼분 탐색]</span>
   * <span class="">[병렬 이분 탐색(P+)]</span>
 * ### DP
