@@ -1,4 +1,6 @@
-[카테고리](/README.md)
+[오일러 파이 함수](/수학/정수론/Euler's%20Totient%20Function.md)   
+[밀러 라빈](/수학/정수론/MillerRabin.md)   
+[카테고리](/README.md)   
 ### Pollard Rho
 ```cpp
 using ll = long long;
