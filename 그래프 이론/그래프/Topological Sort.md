@@ -38,7 +38,7 @@ class Graph {
 };
 ```
 ### 시간복잡도 
-O(V + E)
+$O(V + E)$
 
 ### 사용관련
 topologicalSort()에서 sorted.size() != n이라면 사이클이 존재

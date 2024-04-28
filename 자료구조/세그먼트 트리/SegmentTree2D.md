@@ -127,8 +127,8 @@ public:
 };
 ```
 ### 시간복잡도
-update O(log(N) * log(M))   
-query O(log(N) * log(M))   
+update $O(log(N) \times log(M))$   
+query $O(log(N) \times log(M))$   
 N, M은 각각 행과 열의 개수   
 펜윅 트리로 구현하는 게 훨씬 빠르고 코드도 짧다.   
 

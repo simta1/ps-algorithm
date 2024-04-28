@@ -36,7 +36,7 @@ class Graph {
 
 ```
 ### 시간복잡도 
-dfs 한 번. O(N)
+dfs 한 번. $O(N)$
 
 ### 사용관련
 auto [s, e] = getRange(x);   

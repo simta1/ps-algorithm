@@ -33,7 +33,7 @@ struct BIT<T, N, Ns...> {
 // BIT<int, 1024, 1024> fw;
 ```
 ### 시간복잡도
-update O(log^D(N)), D는 차원
+update $O(log^D(N))$, D는 차원
 
 ### 주의사항
 배열로 구현된거라 어느정도 크기부터는 지역변수로 선언 시 메모리 터짐   

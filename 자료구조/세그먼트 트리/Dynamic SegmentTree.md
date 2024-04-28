@@ -92,8 +92,8 @@ public:
 //작성중
 ```
 ### 시간복잡도
-update O(logN)   
-query O(logN)
+update $O(logN)$   
+query $O(logN)$
 
 ### 공간복잡도
 O(QlogN), Q는 쿼리 개수   

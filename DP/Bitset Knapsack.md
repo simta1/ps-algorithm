@@ -33,7 +33,7 @@ int main() {
 }
 ```
 ### 시간복잡도 
-O(2^n) (brute force) -> O(NC) (knapsack DP) -> O(NC / 32) (bitset)   
+$O(2^n)$ (brute force) -> $O(NC)$ (knapsack DP) -> $O(\frac{NC}{32})$ (bitset)   
 C는 최대 용량(무게)
 
 ### 주의사항

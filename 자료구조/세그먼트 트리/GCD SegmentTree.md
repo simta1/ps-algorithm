@@ -79,8 +79,8 @@ public:
 };
 ```
 ### 시간복잡도
-update O(logN)   
-query O(logN)   
+update $O(logN)$   
+query $O(logN)$   
 lazy propagation 없이도 O(logN)으로 range update, range query 모두 가능하다.
 
 ### 백준 문제

@@ -67,8 +67,8 @@ public:
 };
 ```
 ### 시간복잡도
-update O(logN)   
-query O(logN)
+update $O(logN)$   
+query $O(logN)$
 
 ### 주의사항
 range update가 필요한 경우 lazy propagation 사용
