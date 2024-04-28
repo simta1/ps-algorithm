@@ -12,12 +12,12 @@ struct Point {
 };
 
 template <typename T>
-T crossProduct(Point<T> p1, Point<T> p2) {
+T crossProduct(const Point<T> &p1, const Point<T> &p2) {
     return (p1.x * p2.y - p2.x * p1.y);
 }
 
 template <typename T>
-void printIntersection(Point<T> p1, Point<T> p2, Point<T> p3, Point<T> p4) {
+void printIntersection(const Point<T> &p1, const Point<T> &p2, const Point<T> &p3, const Point<T> &p4) {
     T cp = crossProduct(p2 - p1, p4 - p3);
 
     if (cp == 0) { // 평행

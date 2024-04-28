@@ -14,14 +14,14 @@ struct Point {
 ### Cross Product
 ```cpp
 template <typename T>
-T crossProduct(Point<T> p1, Point<T> p2) {
+T crossProduct(const Point<T> &p1, const Point<T> &p2) {
     return (p1.x * p2.y - p2.x * p1.y);
 }
 ```
 ### CCW
 ```cpp
 template <typename T>
-int ccw(Point<T> p1, Point<T> p2, Point<T> p3) {
+int ccw(const Point<T> &p1, const Point<T> &p2, const Point<T> &p3) {
     T cp = crossProduct(p2 - p1, p3 - p1);
     return (cp > 0) - (cp < 0);
 }
