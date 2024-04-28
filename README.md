@@ -69,8 +69,8 @@
     * <span class="">[최소 비용 최대 유량]</span>
   * #### 트리
     * <span class="">[최소 공통 조상]</span>
-    * <span class="">[단절점]</span>
-    * <span class="">[단절선]</span>
+    * <span class="">[단절점(P-)]</span>
+    * <span class="">[단절선(P-)]</span>
     * <span class="platinum">[오일러 경로 테크닉(P-)](/그래프%20이론/트리/Euler%20Tour%20Technique.md)</span>
     * <span class="">[heavy-light 분할]</span>
     * <span class="">[센트로이드 분할]</span>
