@@ -35,7 +35,7 @@
     * ~~<span class="">[레드-블랙 트리]</span>~~
   * #### 기타
     * <span class="gold">[분리 집합(G-)](/자료구조/기타/Disjoint%20Set.md)</span>
-    * <span class="">[리-차오 트리]</span>
+    * <span class="">[리-차오 트리(D-)]</span>
     * <span class="">[블록 컷 트리]</span>
     * <span class="">[데카르트 트리]</span>
     * <span class="">[KD tree]</span>
@@ -97,7 +97,7 @@
   * <span class="gold">[선분교차판정(G+)](/기하학/Line-Line%20Intersection%20check.md)</span>
   * <span class="platinum">[선분교차점 계산(P-)](/기하학/Line-Line%20Intersection%20calculate.md)</span>
   * <span class="platinum">[볼록 껍질(P-)](/기하학/Graham%20Scan.md)</span>
-  * <span class="">[회전하는 캘리퍼스(Rotating Calipers)]</span>
+  * <span class="platinum">[회전하는 캘리퍼스(P-)](/기하학/Rotating%20Calipers.md)</span>
   * <span class="">[반평면 교집합(D-)]</span>
 * ### 수학
   * #### 정수론
