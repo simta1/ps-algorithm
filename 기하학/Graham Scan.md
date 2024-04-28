@@ -42,12 +42,8 @@ vector<Point<T> > getConvexHull(vector<Point<T> > points) {
 $O(N~logN)$   
 
 ### 주의사항
-
-
-### 사용관련
-
+좌표들을 곱셈하기 때문에 overflow 고려할 땐 좌표의 최대값의 제곱을 기준으로 판단   
+중간에 덧셈 뺄셈 때문에 값이 생각보다 더 커져서 그냥 제곱한 값이 1e8정도만 되도 long long 쓰는 게 낫다.
 
 ### 백준문제
-[]()
-
-### 원리
+[볼록 껍질](https://www.acmicpc.net/problem/1708)
