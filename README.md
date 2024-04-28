@@ -114,8 +114,9 @@
     * <span class="">[Garner's algorithm]</span>
     * <span class="">[nCr mod 소수, 뤼카]</span>
     * <span class="">[nCr mod 합성수]</span>
-    * <span class="">[밀러-라빈 소수 판별법, 폴라드 로]</span>
-    * <span class="">[오일러 파이 함수]</span>
+    * <span class="gold">[오일러 파이 함수(G+)](/수학/정수론/Euler's%20Totient%20Function.md)</span>
+    * <span class="platinum">[밀러-라빈 소수 판별법(P+)](/수학/정수론/MillerRabin.md)</span>
+    * <span class="platinum">[폴라드 로(P+)](/수학/정수론/PollardRho.md)</span>
     * <span class="">[뫼비우스 함수]</span>
   * #### 푸리에 변환
     * <span class="">[FFT]</span>
