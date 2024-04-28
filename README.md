@@ -126,6 +126,7 @@
   * <span class="">[투 포인터(G-)]</span>
   * <span class="">[중간에서 만나기(G+)]</span>
   * <span class="">[imos]</span>
+  * <span class="">[희소 배열(G+)]</span>
   * <span class="platinum">[XOR 트라이(P-)](/기타/XOR%20Trie.md)</span>
   * <span class="">[삼분 탐색]</span>
   * <span class="">[병렬 이분 탐색(P+)]</span>
