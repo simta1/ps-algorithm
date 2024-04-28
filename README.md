@@ -29,7 +29,7 @@
     * <span class="">[퍼시스턴트 세그(D-)]</span>
     * <span class="">[세그트리 비츠(D+)]</span>
   * #### BBST
-    * <span class="">[스플레이 트리(D-)]</span>
+    * <span class="diamond">[스플레이 트리(D-)](/자료구조/BBST/SplayTree.md)</span>
     * <span class="">[링크/컷 트리(D+)]</span>
     * ~~<span class="">[AVL 트리]</span>~~
     * ~~<span class="">[레드-블랙 트리]</span>~~

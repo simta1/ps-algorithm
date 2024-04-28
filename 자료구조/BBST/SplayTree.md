@@ -1,5 +1,7 @@
 [카테고리](/README.md)
-### splay
+# 작성중.. 코드 실험 안 끝남
+
+### Splay Tree
 ```cpp
 template <typename T>
 class SplayTree {
@@ -39,6 +41,88 @@ private:
 
     Node *root;
     vector<Node *> ptr;
+
+    // void insert(int key) {
+    //     Node *x = new Node;
+    //     x->l = x->r = x->p = NULL;
+    //     x->key = key;
+
+    //     if (!root) {
+    //         root = x;
+    //         return;
+    //     }
+        
+    //     Node *cur = root;
+
+    //     while (1) {
+    //         if(key == cur->key) { // 중복
+    //             delete x;
+    //             return;
+    //         }
+
+    //         if(key < cur->key) {
+    //             if (cur->l) cur = cur->l;
+    //             else {
+    //                 x->p = cur;
+    //                 cur->l = x;
+    //                 splay(x);
+    //                 return;
+    //             }
+    //         }
+    //         else{
+    //             if (cur->r) cur = cur->r;
+    //             else {
+    //                 x->p = cur;
+    //                 cur->r = x;
+    //                 splay(x);
+    //                 return;
+    //             }
+    //         }
+    //     }
+    // }
+
+    // bool find(int key) {
+    //     if (!root) return false;
+
+    //     Node *cur = root;
+
+    //     while (cur && key != cur->key) {
+    //         Node *next = (key < cur->key ? cur->l : cur->r);
+    //         if (!next) break;
+    //         cur = next;
+    //     }
+
+    //     splay(cur);
+    //     return key == cur->key;
+    // }
+
+    // void remove(int key) {
+    //     if (!find(key)) return;
+
+    //     Node *originRoot = root;
+    //     if (root->l && root->r) {
+    //         root = root->l;
+    //         root->p = NULL;
+    //         Node *cur = root;
+    //         while (cur->r) cur = cur->r;
+    //         cur->r = originRoot->r;
+    //         originRoot->r->p = cur;
+    //         splay(cur);
+    //     }
+    //     else if (root->l) {
+    //         root = root->l;
+    //         root->p = NULL;
+    //     }
+    //     else if (root->r) {
+    //         root = originRoot->r;
+    //         root->p = NULL;
+    //     }
+    //     else {
+    //         root = NULL;
+    //     }
+
+    //     delete originRoot;
+    // }
 
     void update(Node *cur) {
         cur->sz = 1;
@@ -205,3 +289,14 @@ public:
     }
 };
 ```
+### 시간복잡도 
+$amortized~O(logN)$   
+
+### 주의사항
+
+
+### 사용관련
+
+
+### 백준문제
+[]()
