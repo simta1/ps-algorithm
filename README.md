@@ -45,6 +45,9 @@
     * <span class="">[도미네이터 트리(D+)]</span>
     * <span class="">[접미사 트리(R-)]</span>
     * <span class="">[탑 트리(R+)]</span> -->
+* ### 쿼리 관련
+  * <span class="platinum">[Mo's algorithm(P+)](/쿼리%20관련/Mo's%20Algorithm.md)</span>
+  * <span class="platinum">[평방분할(P+)](/쿼리%20관련/Sqrt%20Decomposition.md)</span>
 * ### 그래프 이론
   * #### 그래프
     * <span class="">[0-1 bfs(G-)]</span>
@@ -62,7 +65,7 @@
   * #### 네트워크 플로우
     * <span class="">[최대 유량]</span>
     * <span class="">[에드몬드 카프]</span>
-    * <span class="">[이분 매칭 - 디닉]</span>
+    * <span class="">[이분 매칭 디닉]</span>
     * <span class="">[최소 비용 최대 유량]</span>
   * #### 트리
     * <span class="">[최소 공통 조상]</span>
@@ -72,17 +75,14 @@
     * <span class="">[heavy-light 분할]</span>
     * <span class="">[센트로이드 분할]</span>
     * <span class="">[트리 동형 사상]</span>
-* ### 쿼리 관련
-  * <span class="platinum">[Mo's algorithm(P+)](/쿼리%20관련/Mo's%20Algorithm.md)</span>
-  * <span class="">[평방분할]</span>
 * ### DP
   * <span class="silver">[비트마스크(S-)](/DP/Bitmask.md)</span>
   * <span class="gold">[배낭 문제 비트셋 최적화(G-)](/DP/Bitset%20Knapsack.md)</span>
   * <span class="gold">[비트마스크 DP(G+)](/DP/Bitmask%20DP.md)</span>
   * <span class="">[CHT]</span>
   * <span class="">[SOS DP]</span>
-  * <span class="">[Connection Profile DP]</span>
   * <span class="">[벌레캠프-매시(D+)]</span>
+  * <span class="">[Connection Profile DP]</span>
 * ### 문자열
   * <span class="">[해싱]</span>
   * <span class="">[트라이]</span>
@@ -102,18 +102,20 @@
   * <span class="">[반평면 교집합(D-)]</span>
 * ### 수학
   * #### 정수론
+    * <span class="">[분할정복 거듭제곱, 행렬 거듭제곱(S+)]</span>
     * <span class="gold">[확장 유클리드 호제법, 모듈러 역원(G-)](/수학/정수론/ExtendedGCD,%20Modular%20Inverse.md)</span>
-    * <span class="">[중국인의 나머지 정리(CRT)]</span>
+    * <span class="">[중국인의 나머지 정리]</span>
     * <span class="">[Garner's algorithm]</span>
-    * <span class="">[nCr mod 소수, 뤼카]</span>
-    * <span class="">[nCr mod 합성수]</span>
+    * <span class="">[nCr mod 소수, 뤼카(P-)]</span>
+    * <span class="">[nCr mod 합성수(D-)]</span>
     * <span class="gold">[오일러 파이 함수(G+)](/수학/정수론/Euler's%20Totient%20Function.md)</span>
     * <span class="platinum">[밀러-라빈 소수 판별법(P+)](/수학/정수론/MillerRabin.md)</span>
     * <span class="platinum">[폴라드 로(P+)](/수학/정수론/PollardRho.md)</span>
-    * <span class="">[뫼비우스 함수]</span>
+    * <span class="">[포함 배제의 원리, 뫼비우스 함수, 뫼비우스 반전(D-)]</span>
+    * <span class="">[메르텐스 함수]</span>
   * #### 푸리에 변환
-    * <span class="">[FFT]</span>
-    * <span class="">[FFT 비재귀]</span>
+    * <span class="">[FFT(P+)]</span>
+    * <span class="">[FFT 비재귀(P+)]</span>
     * <span class="">[online FFT]</span>
     * <span class="">[3진 FFT]</span>
     * <span class="">[NTT]</span>
@@ -130,7 +132,7 @@
   * <span class="">[춤추는 링크, 크누스 X]</span>
   * <span class="">[히르쉬버그]</span>
 * ### 게임 이론
-  * <span class="">[스프라그-그런디(비트셋)]</span>
-* ### 휴리스틱
-  * <span class="">[A*]</span>
-  * <span class="">[담금질 기법]</span>
+  * <span class="">[비트셋 스프라그-그런디]</span>
+* ### ~~휴리스틱~~
+  * ~~<span class="">[A*]</span>~~
+  * ~~<span class="">[담금질 기법]</span>~~
