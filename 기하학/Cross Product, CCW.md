@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### Point 구조체
+### Point
 ```cpp
 template <typename T>
 struct Point {

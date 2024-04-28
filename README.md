@@ -93,7 +93,7 @@
   * <span class="">[접미사 배열]</span>
   * <span class="">[Z algorithm]</span>
 * ### 기하학
-  * <span class="gold">[cross product, ccw(G-)](/기하학/cross%20product,%20ccw.md)</span>
+  * <span class="gold">[cross product, CCW(G-)](/기하학/Cross%20Product,%20CCW.md)</span>
   * <span class="gold">[선분교차판정(G+)](/기하학/Line-Line%20Intersection%20check.md)</span>
   * <span class="platinum">[선분교차점 계산(P-)](/기하학/Line-Line%20Intersection%20calculate.md)</span>
   * <span class="platinum">[볼록 껍질(P-)](/기하학/Graham%20Scan.md)</span>
@@ -101,7 +101,7 @@
   * <span class="">[반평면 교집합(D-)]</span>
 * ### 수학
   * #### 정수론
-    * <span class="">[분할정복 거듭제곱, 행렬 거듭제곱(S+)]</span>
+    * <span class="">[분할정복 거듭제곱(S+)]</span>
     * <span class="gold">[확장 유클리드 호제법, 모듈러 역원(G-)](/수학/정수론/ExtendedGCD,%20Modular%20Inverse.md)</span>
     * <span class="">[중국인의 나머지 정리]</span>
     * <span class="">[Garner's algorithm]</span>
