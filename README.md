@@ -34,8 +34,8 @@
     * <span class="">[AVL 트리]</span>
     * <span class="">[레드-블랙 트리]</span>
   * #### 기타
-    * <span class="">[wavelet 트리]</span>
-    * <span class="">[분리 집합]</span>
+    * <span class="gold">[분리 집합(G-)](/자료구조/기타/Disjoint%20Set.md)</span>
+    * <span class="">[wavelet 트리(P+)]</span>
     * <span class="">[블록 컷 트리]</span>
     * <span class="">[리-차오 트리]</span>
     * <span class="">[데카르트 트리]</span>
@@ -123,8 +123,8 @@
 * ### 기타
   * <span class="silver">[이분 탐색(S-)](/기타/Binary%20Search.md)</span>
   * <span class="silver">[값 / 좌표 압축(S-)](/기타/Coordinate%20Compression.md)</span>
-  * <span class="">[투 포인터]</span>
-  * <span class="">[중간에서 만나기]</span>
+  * <span class="">[투 포인터(G-)]</span>
+  * <span class="">[중간에서 만나기(G+)]</span>
   * <span class="">[imos]</span>
   * <span class="platinum">[XOR 트라이(P-)](/기타/XOR%20Trie.md)</span>
   * <span class="">[삼분 탐색]</span>
