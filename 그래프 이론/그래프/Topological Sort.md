@@ -2,12 +2,12 @@
 ### Topological Sort
 ```cpp
 class Graph {
-   private:
+private:
     int n;
     vector<vector<int> > adj;
     vector<int> inDegree;
 
-   public:
+public:
     Graph(int n) : n(n), adj(n + 1), inDegree(n + 1) {}
 
     void addEdge(int u, int v) {

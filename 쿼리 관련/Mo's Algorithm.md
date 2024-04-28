@@ -2,7 +2,7 @@
 ### Mo's algorithm (push, pop)
 ```cpp
 class Mo {
-   private:
+private:
     struct Query {
         int s, e, idx;
     };
@@ -22,7 +22,7 @@ class Mo {
     
     }
 
-  public:
+public:
     Mo(int m, vector<int> &v) : queries(m), answer(m), v(v) {
         int i = 0;
         for (auto &[s, e, idx] : queries) {
@@ -59,7 +59,7 @@ class Mo {
 ### Mo's algorithm (push_front, push_back, pop_front, pop_back)
 ```cpp
 class Mo {
-   private:
+private:
     struct Query {
         int s, e, idx;
     };
@@ -87,7 +87,7 @@ class Mo {
     
     }
 
-  public:
+public:
     Mo(int m, vector<int> &v) : queries(m), answer(m), v(v) {
         int i = 0;
         for (auto &[s, e, idx] : queries) {
@@ -123,7 +123,8 @@ class Mo {
 ```
 ### 시간복잡도 
 $O((N+Q)\sqrt N \times T(N))$   
-T(N)은 push(), pop()의 시간복잡도
+T(N)은 push(), pop()의 시간복잡도   
+세그먼트 트리랑 같이 쓰는 경우 T(N)을 줄이기 위해 가능하다면 세그먼트 트리 대신 펜윅 트리 사용
 
 ### 주의사항
 solve() 코드에서 push를 pop보다 먼저하지 않으면 구간 조정할 때 push()하지도 않은 부분을 pop()부터 하게 되어 에러날 수 있음   

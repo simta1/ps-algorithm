@@ -2,7 +2,7 @@
 ### XOR Trie
 ```cpp
 class Trie {
-   private:
+private:
     struct Node {
         Node* child[2];
         int cnt;
@@ -11,7 +11,7 @@ class Trie {
     const int MAX_BIT = ceil(log2(MAX_INPUT));
     Node* root;
 
-   public:
+public:
     Trie() : root(new Node()) {}
 
     void insert(int num) {

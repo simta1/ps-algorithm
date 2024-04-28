@@ -2,7 +2,7 @@
 ### DisjointSet
 ```cpp
 class DisjointSet {
-   private:
+private:
     vector<int> parent;
 
     int find(int a) {
@@ -10,7 +10,7 @@ class DisjointSet {
         return parent[a];
     }
 
-   public:
+public:
     DisjointSet(int n) : parent(n + 1) {
         iota(parent.begin(), parent.end(), 0);
     }
@@ -27,7 +27,7 @@ class DisjointSet {
 ### DisjointSet (countSets 추가)
 ```cpp
 class DisjointSet {
-   private:
+private:
     vector<int> parent;
 
     int find(int a) {
@@ -35,7 +35,7 @@ class DisjointSet {
         return parent[a];
     }
 
-   public:
+public:
     DisjointSet(int n) : parent(n + 1) {
         iota(parent.begin(), parent.end(), 0);
     }

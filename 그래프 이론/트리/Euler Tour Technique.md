@@ -2,7 +2,7 @@
 ### ETT(dfs ordering)
 ```cpp
 class Graph {
-   private:
+private:
     const int root = 1;
     vector<vector<int> > adj;
     vector<pii> range;
@@ -16,7 +16,7 @@ class Graph {
         range[cur].second = cnt;
     }
 
-   public:
+public:
     Graph(int n) : adj(n + 1), range(n + 1) {}
 
     void addEdge(int u, int v) {

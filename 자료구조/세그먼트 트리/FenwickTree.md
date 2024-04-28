@@ -60,7 +60,8 @@ public:
 ```
 ### 시간복잡도
 update $O(logN)$   
-query $O(logN)$
+query $O(logN)$   
+같은 시간복잡도지만 세그먼트 트리보다 더 빠르다.
 
 ### 주의사항
 range update & point query 의 경우 updateRange(l, r)에서 updatePoint(r + 1)을 호출되므로 배열은 (n + 1)번째 항까지 필요
