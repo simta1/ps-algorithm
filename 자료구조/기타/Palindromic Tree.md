@@ -1,0 +1,1 @@
+회문트리 = eertree = palindromic tree

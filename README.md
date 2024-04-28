@@ -18,6 +18,7 @@
   * #### 세그먼트 트리
     * <span class="gold">[펜윅(G-)](/자료구조/세그먼트%20트리/FenwickTree.md)</span>
     * <span class="gold">[세그먼트 트리(G-)](/자료구조/세그먼트%20트리/SegmentTree.md)</span>
+    * <span class="">[머지소트 트리(P-)]</span>
     * <span class="platinum">[2D 펜윅(P-)](/자료구조/세그먼트%20트리/FenwickTree2D.md)</span>
     * <span class="platinum">[2D 세그(P-)](/자료구조/세그먼트%20트리/SegmentTree2D.md)</span>
     * <span class="platinum">[n차원 펜윅(P-)](/자료구조/세그먼트%20트리/Multi%20Dimensional%20FenwickTree.md)</span>
@@ -25,42 +26,39 @@
     * <span class="platinum">[다이나믹 세그, 다이나믹 레이지 세그(P+)](/자료구조/세그먼트%20트리/Dynamic%20SegmentTree.md)</span>
     * <span class="platinum">[range GCD 세그(P+)](/자료구조/세그먼트%20트리/GCD%20SegmentTree.md)</span>
     * <span class="platinum">[금광 세그(P+)](/자료구조/세그먼트%20트리/Gold%20Mine%20SegmentTree.md)</span>
-    * <span class="">[퍼시스턴트 세그]</span>
-    * <span class="">[머지소트 트리]</span>
-    * <span class="">[세그트리 비츠(R-)]</span>
+    * <span class="">[퍼시스턴트 세그(D-)]</span>
+    * <span class="">[세그트리 비츠(D+)]</span>
   * #### BBST
     * <span class="">[스플레이 트리(D-)]</span>
-    * <span class="">[링크/컷 트리]</span>
-    * <span class="">[AVL 트리]</span>
-    * <span class="">[레드-블랙 트리]</span>
+    * <span class="">[링크/컷 트리(D+)]</span>
+    * ~~<span class="">[AVL 트리]</span>~~
+    * ~~<span class="">[레드-블랙 트리]</span>~~
   * #### 기타
     * <span class="gold">[분리 집합(G-)](/자료구조/기타/Disjoint%20Set.md)</span>
-    * <span class="">[wavelet 트리(P+)]</span>
-    * <span class="">[블록 컷 트리]</span>
     * <span class="">[리-차오 트리]</span>
+    * <span class="">[블록 컷 트리]</span>
     * <span class="">[데카르트 트리]</span>
-    * <span class="">[탑 트리(R+)]</span>
-    * <span class="">[도미네이터 트리(D+)]</span>
-    * <span class="">[회문 트리]</span>
-    * <span class="">[접미사 트리]</span>
-    * <span class="">[eertree]</span>
-    * <span class="">[B-tree]</span>
     * <span class="">[KD tree]</span>
+    <!-- * <span class="">[B-tree]</span>
+    * <span class="">[wavelet 트리(P+)]</span>
+    * <span class="">[회문 트리(D+)]</span>
+    * <span class="">[도미네이터 트리(D+)]</span>
+    * <span class="">[접미사 트리(R-)]</span>
+    * <span class="">[탑 트리(R+)]</span> -->
 * ### 그래프 이론
   * #### 그래프
-    * <span class="">[0-1 bfs]</span>
+    * <span class="">[0-1 bfs(G-)]</span>
     * <span class="gold">[다익스트라(G-)](/그래프%20이론/그래프/Dijkstra.md)</span>
     * <span class="gold">[벨만-포드(G-)](/그래프%20이론/그래프/Bellman-Ford.md)</span>
     * <span class="gold">[플로이드 워셜(G-)](/그래프%20이론/그래프/Floyd-Warshall.md)</span>
+    * <span class="">[MST(G-)]</span>
     * <span class="gold">[위상 정렬(G+)](/그래프%20이론/그래프/Topological%20Sort.md)</span>
     * <span class="platinum">[강한 연결 요소(P-)](/그래프%20이론/그래프/Strongly%20Connected%20Component.md)</span>
     * <span class="">[2-SAT(P-)]</span>
-    * <span class="">[MST]</span>
-    * <span class="">[2차 MST]</span>
-    * <span class="">[유향 MST(D+)]</span>
-    * <span class="">[최소 차수 MST]</span>
-    * <span class="">[2-set]</span>
+    * <span class="">[2th MST(D-)]</span>
     * <span class="">[선인장]</span>
+    <!-- * <span class="">[유향 MST(D+)]</span> -->
+    <!-- * <span class="">[최소 차수 MST]</span> -->
   * #### 네트워크 플로우
     * <span class="">[최대 유량]</span>
     * <span class="">[에드몬드 카프]</span>
