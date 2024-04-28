@@ -94,8 +94,8 @@
   * <span class="">[Z algorithm]</span>
 * ### 기하학
   * <span class="gold">[cross product, ccw(G-)](/기하학/cross%20product,%20ccw.md)</span>
-  * <span class="gold">[선분교차판정(G+)](/기하학/Line-Line%20Intersection.md)</span>
-  * <span class="">[선분교차점 계산(P-)]</span>
+  * <span class="gold">[선분교차판정(G+)](/기하학/Line-Line%20Intersection%20check.md)</span>
+  * <span class="platinum">[선분교차점 계산(P-)](/기하학/Line-Line%20Intersection%20calculate.md)</span>
   * <span class="">[볼록 껍질(Graham Scan)]</span>
   * <span class="">[회전하는 캘리퍼스(Rotating Calipers)]</span>
   * <span class="">[반평면 교집합(D-)]</span>
