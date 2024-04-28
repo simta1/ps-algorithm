@@ -109,7 +109,7 @@
   * <span class="">[반평면 교집합(D-)]</span>
 * ### 수학
   * #### 정수론
-    * <span class="">[확장 유클리드 호제법, 모듈러 역원]</span>
+    * <span class="gold">[확장 유클리드 호제법, 모듈러 역원(G-)](/수학/정수론/ExtendedGCD,%20Modular%20Inverse.md)</span>
     * <span class="">[중국인의 나머지 정리(CRT)]</span>
     * <span class="">[Garner's algorithm]</span>
     * <span class="">[nCr mod 소수, 뤼카]</span>
