@@ -36,7 +36,7 @@ bool checkIntersect(Point<T> p1, Point<T> p2, Point<T> p3, Point<T> p4) {
 $O(1)$   
 
 ### 주의사항
-ccw에서 좌표들을 곱셈하기 때문에 overflow 고려할 땐 좌표의 최대값의 제곱을 기준으로 판단
+좌표들을 곱셈하기 때문에 overflow 고려할 땐 좌표의 최대값의 제곱을 기준으로 판단
 
 ### 사용관련
 checkIntersect()는 선분 p1p2, 선분 p3p4의 교차 여부 확인
