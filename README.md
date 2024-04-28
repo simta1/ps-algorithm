@@ -76,7 +76,7 @@
     * <span class="">[센트로이드 분할]</span>
     * <span class="">[트리 동형 사상]</span>
 * ### 쿼리 관련
-  * <span class="">[Mo's algorithm]</span>
+  * <span class="platinum">[Mo's algorithm(P+)](/쿼리%20관련/Mo's%20Algorithm.md)</span>
   * <span class="">[평방분할]</span>
 * ### n분 탐색
   * <span class="">[이분 탐색(S-)]</span>
