@@ -42,3 +42,13 @@ $O(1)$
 [선분 교차 3](https://www.acmicpc.net/problem/20149)
 
 ### 원리
+$\left ( \frac{y2-y1}{x2-x1} \right )(x-x1)+y1=\left ( \frac{y4-y3}{x4-x3} \right )(x-x3)+y3$   
+
+$(y2-y1)(x4-x3)(x-x1)+(y1-y3)(x2-x1)(x4-x3)=(y4-y3)(x2-x1)(x-x3)$   
+
+식 잘 정리하면   
+$x = \frac{cp(p1, p2) (x3-x4) - cp(p3, p4) (x1-x2)}{cp(p2-p1, p4-p3)}$   
+
+$y = \frac{cp(p1, p2) (y3-y4) - cp(p3, p4) (y1-y2)}{cp(p2-p1, p4-p3)}$
+
+수식 작성이 너무 귀찮아서 식 정리 과정은 머나먼 나중에 작성 예정
