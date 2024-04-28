@@ -68,7 +68,7 @@
     * <span class="">[이분 매칭 디닉]</span>
     * <span class="">[최소 비용 최대 유량]</span>
   * #### 트리
-    * <span class="">[최소 공통 조상]</span>
+    * <span class="platinum">[최소 공통 조상(P-)](/그래프%20이론/트리/Lowest%20Common%20Ancestor.md)</span>
     * <span class="">[단절점(P-)]</span>
     * <span class="">[단절선(P-)]</span>
     * <span class="platinum">[오일러 경로 테크닉(P-)](/그래프%20이론/트리/Euler%20Tour%20Technique.md)</span>
@@ -97,7 +97,8 @@
   * <span class="gold">[선분교차판정(G+)](/기하학/Line-Line%20Intersection%20check.md)</span>
   * <span class="platinum">[선분교차점 계산(P-)](/기하학/Line-Line%20Intersection%20calculate.md)</span>
   * <span class="platinum">[볼록 껍질(P-)](/기하학/Graham%20Scan.md)</span>
-  * <span class="platinum">[회전하는 캘리퍼스(P-)](/기하학/Rotating%20Calipers.md)</span>
+  * <span class="platinum">[가장 먼 두 점 : 회전하는 캘리퍼스(P-)](/기하학/Rotating%20Calipers.md)</span>
+  * <span class="platinum">[가장 가까운 두 점(P+)]</span>
   * <span class="">[반평면 교집합(D-)]</span>
 * ### 수학
   * #### 정수론
