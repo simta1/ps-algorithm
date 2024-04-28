@@ -5,21 +5,10 @@ template <typename T>
 struct Point {
     T x, y;
 
-    bool operator<(const Point &other) const {
-        return x == other.x ? y < other.y : x < other.x;
-    }
-
-    bool operator<=(const Point &other) const {
-        return x == other.x ? y <= other.y : x <= other.x;
-    }
-
-    bool operator==(const Point &other) const {
-        return x == other.x && y == other.y;
-    }
-
-    Point operator-(const Point &other) const {
-        return {x - other.x, y - other.y};
-    }
+    bool operator<(const Point &other) const { return x == other.x ? y < other.y : x < other.x; }
+    bool operator<=(const Point &other) const { return x == other.x ? y <= other.y : x <= other.x; }
+    bool operator==(const Point &other) const { return x == other.x && y == other.y; }
+    Point operator-(const Point &other) const { return {x - other.x, y - other.y}; }
 };
 ```
 ### Cross Product
