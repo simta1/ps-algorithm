@@ -1,7 +1,7 @@
 [카테고리](/README.md)
 ### LCA
 ```cpp
-class Graph {
+class Tree {
 private:
     int maxDepth;
     vector<int> depth;
@@ -22,7 +22,7 @@ private:
     }
 
 public:
-    Graph(int n) : depth(n + 1), adj(n + 1), maxDepth(floor(log2(n))), ac(n + 1, vector<int>(maxDepth + 1)) {
+    Tree(int n) : depth(n + 1), adj(n + 1), maxDepth(floor(log2(n))), ac(n + 1, vector<int>(maxDepth + 1)) {
         for (int i = 1; i < n; i++) {
             int a, b;
             cin >> a >> b;

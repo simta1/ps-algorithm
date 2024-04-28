@@ -1,11 +1,11 @@
 [카테고리](/README.md)
 ### ETT(dfs ordering)
 ```cpp
-class Graph {
+class Tree {
 private:
     const int root = 1;
     vector<vector<int> > adj;
-    vector<pii> range;
+    vector<pair<int, int> > range;
     int cnt;
 
     void dfs(int cur, int parent) {
@@ -17,7 +17,7 @@ private:
     }
 
 public:
-    Graph(int n) : adj(n + 1), range(n + 1) {}
+    Tree(int n) : adj(n + 1), range(n + 1) {}
 
     void addEdge(int u, int v) {
         adj[u].push_back(v);
@@ -29,7 +29,7 @@ public:
         dfs(root, -1);
     }
 
-    pii getRange(int x) {
+    pair<int, int> getRange(int x) {
         return range[x];
     }
 };
