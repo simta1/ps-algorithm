@@ -23,7 +23,7 @@
     * <span class="platinum">[2D 세그(P-)](/자료구조/세그먼트%20트리/SegmentTree2D.md)</span>
     * <span class="platinum">[n차원 펜윅(P-)](/자료구조/세그먼트%20트리/Multi%20Dimensional%20FenwickTree.md)</span>
     * <span class="platinum">[레이지 세그(P-)](/자료구조/세그먼트%20트리/SegmentTree(Lazy%20Propagation).md)</span>
-    * <span class="platinum">[다이나믹 세그, 다이나믹 레이지 세그(P+)](/자료구조/세그먼트%20트리/Dynamic%20SegmentTree.md)</span>
+    * <span class="platinum">[다이나믹 세그, 다이나믹 레이지 세그(P-)](/자료구조/세그먼트%20트리/Dynamic%20SegmentTree.md)</span>
     * <span class="platinum">[range GCD 세그(P+)](/자료구조/세그먼트%20트리/GCD%20SegmentTree.md)</span>
     * <span class="platinum">[금광 세그(P+)](/자료구조/세그먼트%20트리/Gold%20Mine%20SegmentTree.md)</span>
     * <span class="">[퍼시스턴트 세그(D-)]</span>
@@ -58,6 +58,7 @@
     * <span class="gold">[위상 정렬(G+)](/그래프%20이론/그래프/Topological%20Sort.md)</span>
     * <span class="platinum">[강한 연결 요소(P-)](/그래프%20이론/그래프/Strongly%20Connected%20Component.md)</span>
     * <span class="">[2-SAT(P-)]</span>
+    * <span class="">[오일러 회로(P-)]</span>
     * <span class="">[2th MST(D-)]</span>
     * <span class="">[선인장]</span>
     <!-- * <span class="">[유향 MST(D+)]</span> -->
