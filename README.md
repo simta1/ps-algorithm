@@ -26,7 +26,7 @@
     * <span class="platinum">[다이나믹 세그, 다이나믹 레이지 세그(P-)](/자료구조/세그먼트%20트리/Dynamic%20SegmentTree.md)</span>
     * <span class="platinum">[range GCD 세그(P+)](/자료구조/세그먼트%20트리/GCD%20SegmentTree.md)</span>
     * <span class="platinum">[금광 세그(P+)](/자료구조/세그먼트%20트리/Gold%20Mine%20SegmentTree.md)</span>
-    * <span class="">[퍼시스턴트 세그(D-)]</span>
+    * <span class="">[퍼시스턴트 세그(P+)]</span>
     * <span class="">[세그트리 비츠(D+)]</span>
   * #### BBST
     * <span class="diamond">[스플레이 트리(D-)](/자료구조/BBST/SplayTree.md)</span>

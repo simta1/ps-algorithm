@@ -14,7 +14,7 @@ namespace MillerRabin {
         ll res = 1;
 
         while (n) {
-            if (n % 2) res = multiply(res, a, mod);
+            if (n & 1) res = multiply(res, a, mod);
             a = multiply(a, a, mod);
             n >>= 1;
         }
@@ -26,7 +26,7 @@ namespace MillerRabin {
         if (n <= 1) return false;
 
         ll d = n - 1, r = 0;
-        while (d % 2 == 0) {
+        while (~d & 1) {
             d >>= 1;
             ++r;
         }
