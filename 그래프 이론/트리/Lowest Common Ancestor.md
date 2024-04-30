@@ -117,7 +117,7 @@ public:
 };
 ```
 ### 시간복잡도 
-초기화 $O(N~logN)$   
+preprocessing $O(N~logN)$   
 getLCA $O(logN)$
 
 ### 백준문제
