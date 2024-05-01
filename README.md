@@ -137,3 +137,19 @@
 * ### ~~휴리스틱~~
   * ~~<span class="">[A*]</span>~~
   * ~~<span class="">[담금질 기법]</span>~~
+
+# 유용한 C++ 기능들
+* ### 문법
+  * range-based for loop
+  * literal
+  * template argument deduction
+  * 람다 재귀
+  * 코드 여러줄 이어쓰기
+
+* ### 함수
+  * 수학관련
+  * 배열관련
+  * permutation
+  * custom pq
+  * io manip
+  * 문자열관련 <!-- substr, istringstream, getline -->
