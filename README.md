@@ -27,6 +27,7 @@
     * <span class="platinum">[range GCD 세그(P+)](/자료구조/세그먼트%20트리/GCD%20SegmentTree.md)</span>
     * <span class="platinum">[금광 세그(P+)](/자료구조/세그먼트%20트리/Gold%20Mine%20SegmentTree.md)</span>
     * <span class="">[퍼시스턴트 세그(P+)]</span>
+    * <span class="">[리-차오 트리(D-)]</span>
     * <span class="">[세그트리 비츠(D+)]</span>
   * #### BBST
     * <span class="diamond">[스플레이 트리(D-)](/자료구조/BBST/SplayTree.md)</span>
@@ -35,7 +36,6 @@
     * ~~<span class="">[레드-블랙 트리]</span>~~
   * #### 기타
     * <span class="gold">[분리 집합(G-)](/자료구조/기타/Disjoint%20Set.md)</span>
-    * <span class="">[리-차오 트리(D-)]</span>
     * <span class="">[블록 컷 트리]</span>
     * <span class="">[데카르트 트리]</span>
     * <span class="">[KD tree]</span>
@@ -85,10 +85,10 @@
   * <span class="">[벌레캠프-매시(D+)]</span>
   * <span class="">[Connection Profile DP]</span>
 * ### 문자열
+  * <span class="gold">[트라이G+](/문자열/Trie.md)</span>
+  * <span class="platinum">[KMP(P-)](/문자열/Knuth-Morris-Pratt%20Algorithm.md)</span>
   * <span class="">[해싱]</span>
-  * <span class="">[트라이]</span>
   * <span class="">[라빈 카프]</span>
-  * <span class="">[KMP]</span>
   * <span class="">[아호 코라식]</span>
   * <span class="">[매내처]</span>
   * <span class="">[접미사 배열]</span>
@@ -120,7 +120,6 @@
     * <span class="">[online FFT]</span>
     * <span class="">[3진 FFT]</span>
     * <span class="">[NTT]</span>
-    * <span class="">[DFT]</span>
 * ### 기타
   * <span class="silver">[이분 탐색(S-)](/기타/Binary%20Search.md)</span>
   * <span class="silver">[값 / 좌표 압축(S-)](/기타/Coordinate%20Compression.md)</span>
