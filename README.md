@@ -61,13 +61,13 @@
     * <span class="">[오일러 회로(P-)]</span>
     * <span class="">[2th MST(D-)]</span>
     * <span class="">[선인장]</span>
-    <!-- * <span class="">[유향 MST(D+)]</span> -->
+    * <span class="">[유향 MST(D+)]</span>
     <!-- * <span class="">[최소 차수 MST]</span> -->
   * #### 네트워크 플로우
-    * <span class="">[최대 유량]</span>
+    * <span class="">[최대 유량(P-)]</span>
     * <span class="">[에드몬드 카프]</span>
     * <span class="">[이분 매칭 디닉]</span>
-    * <span class="">[최소 비용 최대 유량]</span>
+    * <span class="">[최소 비용 최대 유량(P+)]</span>
   * #### 트리
     * <span class="platinum">[최소 공통 조상(P-)](/그래프%20이론/트리/Lowest%20Common%20Ancestor.md)</span>
     * <span class="">[단절점(P-)]</span>
@@ -85,7 +85,7 @@
   * <span class="">[벌레캠프-매시(D+)]</span>
   * <span class="">[Connection Profile DP]</span>
 * ### 문자열
-  * <span class="gold">[트라이G+](/문자열/Trie.md)</span>
+  * <span class="gold">[트라이(G+)](/문자열/Trie.md)</span>
   * <span class="platinum">[KMP(P-)](/문자열/Knuth-Morris-Pratt%20Algorithm.md)</span>
   * <span class="">[해싱]</span>
   * <span class="">[라빈 카프]</span>
@@ -99,11 +99,11 @@
   * <span class="platinum">[선분교차점 계산(P-)](/기하학/Line-Line%20Intersection%20calculate.md)</span>
   * <span class="platinum">[볼록 껍질(P-)](/기하학/Graham%20Scan.md)</span>
   * <span class="platinum">[가장 먼 두 점 : 회전하는 캘리퍼스(P-)](/기하학/Rotating%20Calipers.md)</span>
-  * <span class="platinum">[가장 가까운 두 점(P+)]</span>
+  * <span class="">[가장 가까운 두 점(P+)]</span>
   * <span class="">[반평면 교집합(D-)]</span>
 * ### 수학
   * #### 정수론
-    * <span class="">[분할정복 거듭제곱(S+)]</span>
+    * <span class="silver">[분할정복 거듭제곱(S+)](/수학/정수론/power.md)</span>
     * <span class="gold">[확장 유클리드 호제법, 모듈러 역원(G-)](/수학/정수론/ExtendedGCD,%20Modular%20Inverse.md)</span>
     * <span class="">[중국인의 나머지 정리]</span>
     * <span class="">[Garner's algorithm]</span>
@@ -115,11 +115,10 @@
     * <span class="">[포함 배제의 원리, 뫼비우스 함수, 뫼비우스 반전(D-)]</span>
     * <span class="">[메르텐스 함수]</span>
   * #### 푸리에 변환
-    * <span class="">[FFT(P+)]</span>
-    * <span class="">[FFT 비재귀(P+)]</span>
-    * <span class="">[online FFT]</span>
-    * <span class="">[3진 FFT]</span>
+    * <span class="platinum">[FFT(P+)](/수학/푸리에%20변환/Fast%20Fourier%20Transform.md)</span>
     * <span class="">[NTT]</span>
+    * <span class="">[3진 FFT]</span>
+    * <span class="">[online FFT]</span>
 * ### 기타
   * <span class="silver">[이분 탐색(S-)](/기타/Binary%20Search.md)</span>
   * <span class="silver">[값 / 좌표 압축(S-)](/기타/Coordinate%20Compression.md)</span>
