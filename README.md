@@ -102,23 +102,22 @@
   * <span class="">[가장 가까운 두 점(P+)]</span>
   * <span class="">[반평면 교집합(D-)]</span>
 * ### 수학
-  * #### 정수론
-    * <span class="silver">[분할정복 거듭제곱(S+)](/수학/정수론/power.md)</span>
-    * <span class="gold">[확장 유클리드 호제법, 모듈러 역원(G-)](/수학/정수론/ExtendedGCD,%20Modular%20Inverse.md)</span>
-    * <span class="">[중국인의 나머지 정리]</span>
-    * <span class="">[Garner's algorithm]</span>
-    * <span class="">[nCr mod 소수, 뤼카(P-)]</span>
-    * <span class="">[nCr mod 합성수(D-)]</span>
-    * <span class="gold">[오일러 파이 함수(G+)](/수학/정수론/Euler's%20Totient%20Function.md)</span>
-    * <span class="platinum">[밀러-라빈 소수 판별법(P+)](/수학/정수론/MillerRabin.md)</span>
-    * <span class="platinum">[폴라드 로(P+)](/수학/정수론/PollardRho.md)</span>
-    * <span class="">[포함 배제의 원리, 뫼비우스 함수, 뫼비우스 반전(D-)]</span>
-    * <span class="">[메르텐스 함수]</span>
-  * #### 푸리에 변환
-    * <span class="platinum">[FFT(P+)](/수학/푸리에%20변환/Fast%20Fourier%20Transform.md)</span>
-    * <span class="">[NTT]</span>
-    * <span class="">[3진 FFT]</span>
-    * <span class="">[online FFT]</span>
+  * <span class="silver">[분할정복 거듭제곱(S+)](/수학/정수론/power.md)</span>
+  * <span class="gold">[확장 유클리드 호제법, 모듈러 역원(G-)](/수학/정수론/ExtendedGCD,%20Modular%20Inverse.md)</span>
+  * <span class="">[중국인의 나머지 정리]</span>
+  * <span class="">[Garner's algorithm]</span>
+  * <span class="">[nCr mod 소수, 뤼카(P-)]</span>
+  * <span class="">[nCr mod 합성수(D-)]</span>
+  * <span class="gold">[오일러 파이 함수(G+)](/수학/정수론/Euler's%20Totient%20Function.md)</span>
+  * <span class="platinum">[밀러-라빈 소수 판별법(P+)](/수학/정수론/MillerRabin.md)</span>
+  * <span class="platinum">[폴라드 로(P+)](/수학/정수론/PollardRho.md)</span>
+  * <span class="">[포함 배제의 원리, 뫼비우스 함수, 뫼비우스 반전(D-)]</span>
+  * <span class="">[메르텐스 함수]</span>
+  * ------------- 
+  * <span class="platinum">[FFT(P+)](/수학/푸리에%20변환/Fast%20Fourier%20Transform.md)</span>
+  * <span class="">[NTT]</span>
+  * <span class="">[3진 FFT]</span>
+  * <span class="">[online FFT]</span>
 * ### 기타
   * <span class="silver">[이분 탐색(S-)](/기타/Binary%20Search.md)</span>
   * <span class="silver">[값 / 좌표 압축(S-)](/기타/Coordinate%20Compression.md)</span>
