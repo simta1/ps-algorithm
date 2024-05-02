@@ -14,7 +14,7 @@ ll phi(ll n) {
     return res;
 }
 ```
-### [Pollard Rho](/수학/정수론/PollardRho.md) 사용 
+### [Pollard Rho](/수학/PollardRho.md) 사용 
 ```cpp
 namespace PollardRho {
     //pollard rho code

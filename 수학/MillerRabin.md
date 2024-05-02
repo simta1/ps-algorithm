@@ -1,4 +1,4 @@
-[폴라드 로](/수학/정수론/PollardRho.md)   
+[폴라드 로](/수학/PollardRho.md)   
 [카테고리](/README.md)
 ### Miller Rabin
 ```cpp
