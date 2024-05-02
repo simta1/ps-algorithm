@@ -112,7 +112,7 @@
   * <span class="platinum">[밀러-라빈 소수 판별법(P+)](/수학/MillerRabin.md)</span>
   * <span class="platinum">[폴라드 로(P+)](/수학/PollardRho.md)</span>
   * <span class="platinum">[FFT(P+)](/수학/Fast%20Fourier%20Transform.md)</span>
-  * <span class="">[NTT]</span>
+  * <span class="platinum">[NTT(P+)](/수학/Number%20Theoretic%20Transform.md)</span>
   * <span class="">[3진 FFT]</span>
   * <span class="">[포함 배제의 원리, 뫼비우스 함수, 뫼비우스 반전(D-)]</span>
   * <span class="">[메르텐스 함수]</span>
