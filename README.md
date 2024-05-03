@@ -38,12 +38,11 @@
     * <span class="gold">[분리 집합(G-)](/자료구조/기타/Disjoint%20Set.md)</span>
     * <span class="">[블록 컷 트리]</span>
     * <span class="">[데카르트 트리]</span>
-    * <span class="">[KD tree]</span>
+    * <span class="">[회문 트리(D+)]</span>
+    * <span class="">[접미사 트리(R-)]</span>
+    * <span class="">[도미네이터 트리(D+)]</span>
     <!-- * <span class="">[B-tree]</span>
     * <span class="">[wavelet 트리(P+)]</span>
-    * <span class="">[회문 트리(D+)]</span>
-    * <span class="">[도미네이터 트리(D+)]</span>
-    * <span class="">[접미사 트리(R-)]</span>
     * <span class="">[탑 트리(R+)]</span> -->
 * ### 쿼리 관련
   * <span class="platinum">[Mo's algorithm(P+)](/쿼리%20관련/Mo's%20Algorithm.md)</span>
@@ -62,28 +61,34 @@
     * <span class="">[2th MST(D-)]</span>
     * <span class="">[선인장]</span>
     * <span class="">[유향 MST(D+)]</span>
+    * <span class="">[현 그래프(D+)]</span>
     <!-- * <span class="">[최소 차수 MST]</span> -->
   * #### 네트워크 플로우
     * <span class="">[최대 유량(P-)]</span>
     * <span class="">[에드몬드 카프]</span>
     * <span class="">[이분 매칭 디닉]</span>
     * <span class="">[최소 비용 최대 유량(P+)]</span>
+    * <span class="">[일반 매칭(D+)]</span>
   * #### 트리
     * <span class="platinum">[최소 공통 조상(P-)](/그래프%20이론/트리/Lowest%20Common%20Ancestor.md)</span>
     * <span class="">[단절점(P-)]</span>
     * <span class="">[단절선(P-)]</span>
     * <span class="platinum">[오일러 경로 테크닉(P-)](/그래프%20이론/트리/Euler%20Tour%20Technique.md)</span>
-    * <span class="">[heavy-light 분할]</span>
-    * <span class="">[센트로이드 분할]</span>
+    * <span class="">[heavy-light 분할(P+)]</span>
+    * <span class="">[센트로이드 분할(D-)]</span>
     * <span class="">[트리 동형 사상]</span>
 * ### DP
   * <span class="silver">[비트마스크(S-)](/DP/Bitmask.md)</span>
-  * <span class="gold">[배낭 문제 비트셋 최적화(G-)](/DP/Bitset%20Knapsack.md)</span>
+  * <span class="gold">[비트셋 배낭(G-)](/DP/Bitset%20Knapsack.md)</span>
   * <span class="gold">[비트마스크 DP(G+)](/DP/Bitmask%20DP.md)</span>
   * <span class="">[CHT]</span>
   * <span class="">[SOS DP]</span>
+  * <span class="">[Slope trick(D-)]</span>
+  * <span class="">[비트셋 최적화]</span>
+  * <span class="">[히르쉬버그(D+)]</span>
   * <span class="">[벌레캠프-매시(D+)]</span>
   * <span class="">[Connection Profile DP]</span>
+  <!-- * <span class="">[aliens 트릭(D-)]</span> -->
 * ### 문자열
   * <span class="gold">[트라이(G+)](/문자열/Trie.md)</span>
   * <span class="platinum">[KMP(P-)](/문자열/Knuth-Morris-Pratt%20Algorithm.md)</span>
@@ -99,8 +104,14 @@
   * <span class="platinum">[선분교차점 계산(P-)](/기하학/Line-Line%20Intersection%20calculate.md)</span>
   * <span class="platinum">[볼록 껍질(P-)](/기하학/Graham%20Scan.md)</span>
   * <span class="platinum">[가장 먼 두 점 : 회전하는 캘리퍼스(P-)](/기하학/Rotating%20Calipers.md)</span>
+  * <span class="">[오목 다각형 내부의 점 판정]</span>
   * <span class="">[가장 가까운 두 점(P+)]</span>
+  * <span class="">[최소 외접원(P+)]</span>
   * <span class="">[반평면 교집합(D-)]</span>
+  * <span class="">[KD tree]</span>
+  * <span class="">[그린 정리(D+)]</span>
+  * <span class="">[델로네 삼각분할(R-)]</span>
+  * <span class="">[보로노이 다이어그램(R-)]</span>
 * ### 수학
   * <span class="silver">[에라토스테네스의 체(S+)](/수학/Sieve%20of%20Eratosthenes.md)</span>
   * <span class="silver">[분할정복 거듭제곱(S+)](/수학/Power.md)</span>
@@ -113,11 +124,15 @@
   * <span class="platinum">[밀러-라빈 소수 판별법(P+)](/수학/MillerRabin.md)</span>
   * <span class="platinum">[폴라드 로(P+)](/수학/PollardRho.md)</span>
   * <span class="platinum">[FFT(P+)](/수학/Fast%20Fourier%20Transform.md)</span>
-  * <span class="platinum">[NTT(P+)](/수학/Number%20Theoretic%20Transform.md)</span>
+  * <span class="">[정밀도 높은 FFT(D-)]</span>
+  * <span class="diamond">[NTT(D-)](/수학/Number%20Theoretic%20Transform.md)</span>
+  * <span class="">[다항식 나눗셈]</span>
   * <span class="">[3진 FFT]</span>
-  * <span class="">[포함 배제의 원리, 뫼비우스 함수, 뫼비우스 반전(D-)]</span>
-  * <span class="">[메르텐스 함수]</span>
   * <span class="">[online FFT]</span>
+  * <span class="">[포함 배제의 원리, 뫼비우스 함수, 뫼비우스 반전(D-)]</span>
+  * <span class="">[생성 함수(D-)]</span>
+  * <span class="">[메르텐스 함수]</span>
+  * <span class="">[매트로이드(R-)]</span>
 * ### 기타
   * <span class="silver">[이분 탐색(S-)](/기타/Binary%20Search.md)</span>
   * <span class="silver">[값 / 좌표 압축(S-)](/기타/Coordinate%20Compression.md)</span>
@@ -129,7 +144,6 @@
   * <span class="">[삼분 탐색]</span>
   * <span class="">[병렬 이분 탐색(P+)]</span>
   * <span class="">[춤추는 링크, 크누스 X]</span>
-  * <span class="">[히르쉬버그]</span>
 * ### 게임 이론
   * <span class="">[비트셋 스프라그-그런디]</span>
 * ### ~~휴리스틱~~
