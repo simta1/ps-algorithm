@@ -53,8 +53,8 @@ namespace MillerRabin {
 }
 ```
 ### 시간복잡도 
-$O(log^3(N))$   
-정확히는 $O(k~log^3(N))$   
+$O(log^3{N})$   
+정확히는 $O(k~log^3{N})$   
 k는 알고리즘의 반복 횟수, 즉 코드에서 nums벡터의 크기(ull범위까진 k=7로 정확한 판별 가능)
 
 ### 백준문제
