@@ -16,8 +16,7 @@ ll modInverse(ll a, ll b) {
     return -1;
 }
 ```
-mod하는 수가 소수라면 페르마의 소정리에 따라 $a^{-1} \equiv a^{p-2} (mod~p)$로 계산할 수도 있다.
-
+mod하는 수가 소수라면 페르마의 소정리에 따라 $a^{-1} \equiv a^{p-2} (mod~p)$로 계산할 수도 있다.   
 
 ### 시간복잡도 
 $O(logN)$   
