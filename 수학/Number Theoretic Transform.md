@@ -20,15 +20,6 @@ private:
         return res;
     }
 
-    ll modInv(ll a) {
-        return power(a, mod - 2);
-    }
-
-public:
-    NTT() {
-        // assert(isPrime(mod) && isPrimitiveRoot(primitiveRoot, mod))
-    }
-
     void ntt(vector<ll> &f, bool is_reverse) {
         int n = f.size();
 
@@ -65,6 +56,15 @@ public:
             for (auto &e : f) e = multiply(e, oon);
         }
     }
+
+public:
+    NTT() {
+        // assert(isPrime(mod) && isPrimitiveRoot(primitiveRoot, mod))
+    }
+
+    ll modInv(ll a) {
+        return power(a, mod - 2);
+    }
     
     template <typename T>
     vector<ll> multiply(const vector<T> &v1, const vector<T> &v2) {
@@ -92,6 +92,29 @@ public:
 NTT<998'244'353, 3> ntt;
 NTT<2'281'701'377, 3> ntt;
 NTT<2'483'027'969, 3> ntt;
+```
+### NTT + CRT (mod 5'665'528'335'996'813'313 ~= 5e18)
+```cpp
+template <typename T>
+vector<ll> multiply(const vector<T> &v1, const vector<T> &v2) {
+    const ll p1 = 2'281'701'377;
+    const ll p2 = 2'483'027'969;
+
+    NTT<p1, 3> ntt1;
+    NTT<p2, 3> ntt2;
+
+    vector<ll> conv1 = ntt1.multiply(v1, v2);
+    vector<ll> conv2 = ntt2.multiply(v1, v2);
+    
+    ll i1 = ntt2.modInv(p1);
+    ll i2 = ntt1.modInv(p2);
+
+    vector<ll> res(conv1.size());
+    for (int i = 0; i < res.size(); i++) { // CRT
+        res[i] = (__int128(conv1[i]) * p2 * i2 + __int128(conv2[i]) * p1 * i1) % (p1 * p2);
+    }
+    return res;
+}
 ```
 ### 시간복잡도 
 $O(N~logN)$   
