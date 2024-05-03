@@ -102,7 +102,7 @@
   * <span class="">[가장 가까운 두 점(P+)]</span>
   * <span class="">[반평면 교집합(D-)]</span>
 * ### 수학
-  * <span class="silver">[에라토스테네스의 체(S-)](/수학/Sieve%20of%20Eratosthenes.md)</span>
+  * <span class="silver">[에라토스테네스의 체(S+)](/수학/Sieve%20of%20Eratosthenes.md)</span>
   * <span class="silver">[분할정복 거듭제곱(S+)](/수학/Power.md)</span>
   * <span class="gold">[확장 유클리드 호제법, 모듈러 역원(G-)](/수학/ExtendedGCD,%20Modular%20Inverse.md)</span>
   * <span class="">[중국인의 나머지 정리]</span>
