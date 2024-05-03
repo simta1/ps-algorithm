@@ -2,6 +2,7 @@
 ### FFT code 1) bitReverse 매번 직접 계산
 ```cpp
 namespace FourierTransform {
+    using ll = long long;
     using ld = long double;
     // using ld = double;
     using cpx = complex<ld>;
@@ -44,7 +45,8 @@ namespace FourierTransform {
         }
     }
 
-    vector<int> multiply(const vector<int> &v1, const vector<int> &v2) {
+    template <typename T>
+    vector<ll> multiply(const vector<T> &v1, const vector<T> &v2) {
         vector<cpx> a(v1.begin(), v1.end());
         vector<cpx> b(v2.begin(), v2.end());
 
@@ -61,7 +63,7 @@ namespace FourierTransform {
         for (int i = 0; i < n; i++) a[i] *= b[i];
         fft(a, true);
 
-        vector<int> res(n);
+        vector<ll> res(n);
         for (int i = 0; i < n; i++) res[i] = round(a[i].real());
         return res;
     }
@@ -70,6 +72,7 @@ namespace FourierTransform {
 ### FFT code 2) bitReverse 더 빠른 코드
 ```cpp
 namespace FourierTransform {
+    using ll = long long;
     using ld = long double;
     // using ld = double;
     using cpx = complex<ld>;
@@ -108,7 +111,8 @@ namespace FourierTransform {
         }
     }
 
-    vector<int> multiply(const vector<int> &v1, const vector<int> &v2) {
+    template <typename T>
+    vector<ll> multiply(const vector<T> &v1, const vector<T> &v2) {
         vector<cpx> a(v1.begin(), v1.end());
         vector<cpx> b(v2.begin(), v2.end());
 
@@ -125,7 +129,7 @@ namespace FourierTransform {
         for (int i = 0; i < n; i++) a[i] *= b[i];
         fft(a, true);
 
-        vector<int> res(n);
+        vector<ll> res(n);
         for (int i = 0; i < n; i++) res[i] = round(a[i].real());
         return res;
     }
