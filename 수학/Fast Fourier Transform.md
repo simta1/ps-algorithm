@@ -48,7 +48,7 @@ namespace FourierTransform {
 
         int n = 1;
         while (n <= a.size() || n <= b.size()) n <<= 1;
-        n <<= 1;
+        if ((n >> 1) != max(a.size(), b.size())) n <<= 1;
 
         a.resize(n);
         b.resize(n);
@@ -70,7 +70,7 @@ namespace FourierTransform {
 
         int n = 1;
         while (n <= a.size()) n <<= 1;
-        n <<= 1;
+        if ((n >> 1) != a.size()) n <<= 1;
 
         a.resize(n);
         fft(a, false);
@@ -89,10 +89,22 @@ $O(N~logN)$
 ### 주의사항
 실수 오차가 생각보다 커질 수 있다.   
 
+conv할 벡터의 크기를 미리 2의 거듭제곱으로 맞춘 뒤 multiply()나 square()함수를 사용하면   
+if ((n >> 1) != a.size()) n <<= 1; 코드 덕분에 메모리 효율이 꽤 개선된다. (아래 __사용관련__ 참고)
+
 ### 사용관련
 생각보다 실수 오차 없다 싶으면 using ld = long double;에서 long double 대신 double로 선택   
 long double과 double 시간 차이가 꽤 크게 난다.   
 [큰 수 곱셈 (2)](https://www.acmicpc.net/problem/15576) 문제 기준으로 long double에서 688ms였던 코드가 double로 바꾸니 268ms까지 줄어듦
+
+resize되는 크기는 벡터의 크기가 2의 거듭제곱일 때 가장 효율적(?)임    
+ex) 6, 7 conv -> resize(16) // 솔직히 13까지만 알아도 될텐데 (당연히 IDFT까지 끝내고 나면 14, 15, 16번째 항은 0이 될 것임) FFT 하기 위해서 더 크게 선언함   
+ex) 4, 4 conv -> resize(8) // 선언된 공간 모두 사용함   
+ex) 8, 8 conv -> resize(16) // 선언된 공간 모두 사용함      
+2의 거듭제곱이 아닐 때는 쓰지도 않을 공간까지 필요 이상으로 resize를 크게 함.   
+평소에는 크게 상관없지만 [보석 가게](https://www.acmicpc.net/problem/13575) 같은 문제에선 multiply를 많이 해야되서 이런 비효율이 계속 쌓이면 문제가 됨.   
+[보석 가게](https://www.acmicpc.net/problem/13575) 문제 기준으로 처음 벡터를 선언할 때 크기 1000으로 선언하면 생각보다 나비효과가 크게 작용해서 mle가 나는 듯 함.   
+처음부터 벡터의 크기를 2의 거듭제곱이 되도록(이 문제에선 1024로) 선언한 뒤 거듭제곱을 하니 mle가 해결됐음.   
 
 ### 백준문제
 [큰 수 곱셈 (2)](https://www.acmicpc.net/problem/15576)   
