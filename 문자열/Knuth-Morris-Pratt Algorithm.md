@@ -32,3 +32,6 @@ N, M은 각각 text, pattern의 길이
 
 ### 백준문제
 [찾기](https://www.acmicpc.net/problem/1786)
+
+### 참고문헌
+https://bowbowbow.tistory.com/6

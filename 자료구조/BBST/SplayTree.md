@@ -300,3 +300,8 @@ $amortized~O(logN)$
 
 ### 백준문제
 []()
+
+### 참고문헌
+https://cubelover.tistory.com/10
+https://blog.chodaeho.com/posts/2021/splay-tree-1/
+https://justicehui.github.io/hard-algorithm/2018/11/12/SplayTree1/

@@ -42,3 +42,6 @@ update $O(log^D(N))$, D는 차원
 
 ### 백준 문제
 [구간 합 구하기 3](https://www.acmicpc.net/problem/11658)
+
+### 참고문헌
+https://usaco.guide/plat/2DRQ?lang=cpp   
