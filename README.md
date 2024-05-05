@@ -60,7 +60,7 @@
     * <span class="">[오일러 회로(P-)]</span>
     * <span class="">[2th MST(D-)]</span>
     * <span class="">[선인장]</span>
-    * <span class="">[유향 MST(D+)]</span>
+    * <span class="diamond">[유향 MST(D+)](/그래프%20이론/그래프/Directed%20Minimum%20Spanning%20Tree.md)</span>
     * <span class="">[현 그래프(D+)]</span>
     <!-- * <span class="">[최소 차수 MST]</span> -->
   * #### 네트워크 플로우
