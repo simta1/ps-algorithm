@@ -44,7 +44,7 @@ T distSquare(const Point<T> &p1, const Point<T> &p2) {
 }
 
 template <typename T>
-T getDiameter(const vector<Point<T> > &points) {
+T getDiameterSquare(const vector<Point<T> > &points) {
     vector<Point<T> > v = getConvexHull(points);
 
     T diameter = 0;
@@ -64,7 +64,7 @@ $O(N~logN)$
 
 ### 주의사항
 template T가 정수형일 수도 있으므로 거리를 비교할 때 sqrt()를 쓰지 말고 distSquare()로  거리의 제곱을 기준으로 비교한다.
-getDiameter()도 제곱된 값을 리턴한다.
+getDiameterSquare()도 제곱된 값을 리턴한다.
 
 ### 백준문제
 [가장 먼 두 점](https://www.acmicpc.net/problem/2049)
