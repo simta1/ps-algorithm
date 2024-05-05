@@ -36,6 +36,7 @@
     * ~~<span class="">[레드-블랙 트리]</span>~~
   * #### 기타
     * <span class="gold">[분리 집합(G-)](/자료구조/기타/Disjoint%20Set.md)</span>
+    * <span class="">[로프]</span>
     * <span class="">[블록 컷 트리]</span>
     * <span class="">[데카르트 트리]</span>
     * <span class="">[회문 트리(D+)]</span>
@@ -61,6 +62,7 @@
     * <span class="">[선인장]</span>
     * <span class="">[2th MST(D-)]</span>
     * <span class="diamond">[유향 MST(D+)](/그래프%20이론/그래프/Directed%20Minimum%20Spanning%20Tree.md)</span>
+    * <span class="">[쌍대 그래프(D-)]</span>
     * <span class="">[현 그래프(D+)]</span>
     <!-- * <span class="">[최소 차수 MST]</span> -->
   * #### 네트워크 플로우
@@ -73,6 +75,8 @@
     * <span class="platinum">[최소 공통 조상(P-)](/그래프%20이론/트리/Lowest%20Common%20Ancestor.md)</span>
     * <span class="">[단절점(P-)]</span>
     * <span class="">[단절선(P-)]</span>
+    * <span class="">[이중 연결 요소]</span>
+    * <span class="">[블록 컷 트리]</span>
     * <span class="platinum">[오일러 경로 테크닉(P-)](/그래프%20이론/트리/Euler%20Tour%20Technique.md)</span>
     * <span class="">[heavy-light 분할(P+)]</span>
     * <span class="">[센트로이드 분할(D-)]</span>
@@ -86,6 +90,7 @@
   * <span class="">[Slope trick(D-)]</span>
   * <span class="">[비트셋 최적화]</span>
   * <span class="">[히르쉬버그(D+)]</span>
+  * <span class="">[키타마사(D-)]</span>
   * <span class="">[벌레캠프-매시(D+)]</span>
   * <span class="">[Connection Profile DP]</span>
   <!-- * <span class="">[aliens 트릭(D-)]</span> -->
