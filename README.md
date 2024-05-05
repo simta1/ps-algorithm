@@ -53,13 +53,13 @@
     * <span class="gold">[다익스트라(G-)](/그래프%20이론/그래프/Dijkstra.md)</span>
     * <span class="gold">[벨만-포드(G-)](/그래프%20이론/그래프/Bellman-Ford.md)</span>
     * <span class="gold">[플로이드 워셜(G-)](/그래프%20이론/그래프/Floyd-Warshall.md)</span>
-    * <span class="">[MST(G-)]</span>
+    * <span class="gold">[MST(G-)](/그래프%20이론/그래프/Minimum%20Spanning%20Tree.md)</span>
     * <span class="gold">[위상 정렬(G+)](/그래프%20이론/그래프/Topological%20Sort.md)</span>
     * <span class="platinum">[강한 연결 요소(P-)](/그래프%20이론/그래프/Strongly%20Connected%20Component.md)</span>
     * <span class="">[2-SAT(P-)]</span>
     * <span class="">[오일러 회로(P-)]</span>
-    * <span class="">[2th MST(D-)]</span>
     * <span class="">[선인장]</span>
+    * <span class="">[2th MST(D-)]</span>
     * <span class="diamond">[유향 MST(D+)](/그래프%20이론/그래프/Directed%20Minimum%20Spanning%20Tree.md)</span>
     * <span class="">[현 그래프(D+)]</span>
     <!-- * <span class="">[최소 차수 MST]</span> -->
