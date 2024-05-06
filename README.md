@@ -188,9 +188,21 @@
 
 ---
 # 참고문헌
-https://00ad-8e71-00ff-055d.tistory.com/3   
-https://blog.naver.com/PostView.naver?blogId=jinhan814&logNo=222689836982&parentCategoryNo=&categoryNo=6&viewDate=&isShowPopularPosts=false&from=postView   
-https://github.com/justiceHui/Unknown-To-Wellknown   
-https://jh05013.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/   
-https://justicehui.github.io/tutorial/   
-https://www.acmicpc.net/problem/tags   
+```markdown
+tlsdydaud1
+https://00ad-8e71-00ff-055d.tistory.com/3
+
+jh05013
+https://jh05013.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/
+
+jhnah917
+https://justicehui.github.io/tutorial/
+https://github.com/justiceHui/Unknown-To-Wellknown
+
+jin814   
+https://blog.naver.com/jinhan814/222439886998
+https://blog.naver.com/PostView.naver?blogId=jinhan814&logNo=222689836982&parentCategoryNo=&categoryNo=6&viewDate=&isShowPopularPosts=false&from=postView
+
+백준 알고리즘 분류
+https://www.acmicpc.net/problem/tags
+```
