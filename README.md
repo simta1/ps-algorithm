@@ -16,7 +16,7 @@
 
 * ### 자료구조
   * #### 세그먼트 트리
-    * <span class="gold">[펜윅(G-)](/자료구조/세그먼트%20트리/FenwickTree.md)</span>
+    * <span class="gold">[펜윅 트리(G-)](/자료구조/세그먼트%20트리/FenwickTree.md)</span>
     * <span class="gold">[세그먼트 트리(G-)](/자료구조/세그먼트%20트리/SegmentTree.md)</span>
     * <span class="platinum">[머지소트 트리(P-)](/자료구조/세그먼트%20트리/MergesortTree.md)</span>
     * <span class="platinum">[2D 펜윅(P-)](/자료구조/세그먼트%20트리/FenwickTree2D.md)</span>
@@ -81,17 +81,29 @@
     * <span class="">[센트로이드 분할(D-)]</span>
     * <span class="">[트리 동형 사상]</span>
 * ### DP
-  * <span class="silver">[비트마스크(S-)](/DP/Bitmask.md)</span>
-  * <span class="gold">[비트셋 배낭(G-)](/DP/Bitset%20Knapsack.md)</span>
-  * <span class="gold">[비트마스크 DP(G+)](/DP/Bitmask%20DP.md)</span>
-  * <span class="">[CHT]</span>
-  * <span class="">[SOS DP]</span>
-  * <span class="">[Slope trick(D-)]</span>
-  * <span class="">[비트셋 최적화]</span>
-  * <span class="">[히르쉬버그(D+)]</span>
-  * <span class="">[키타마사(D-)]</span>
-  * <span class="">[벌레캠프-매시(D+)]</span>
-  * <span class="">[Connection Profile DP]</span>
+  * #### 유명한 문제
+    * <span class="">[배낭 문제]</span>
+    * <span class="">[LIS]</span>
+    * <span class="">[LCS]</span>
+    * <span class="">[행렬 곱셈 순서]</span>
+    * <span class="">[TSP]</span>
+  * #### 여러 DP 유형
+    * <span class="gold">[비트마스크 DP(G+)](/DP/여러%20DP%20유형/Bitmask%20DP.md)</span>
+    * <span class="">[SOS DP]</span>
+    * <span class="">[토글링]</span>
+    * <span class="">[히르쉬버그(D+)]</span>
+    * <span class="">[Connection Profile DP]</span>
+  * #### 최적화
+    * <span class="gold">[비트셋 배낭(G-)](/DP/최적화/Bitset%20Knapsack.md)</span>
+    * <span class="">[비트 집합]</span>
+    * <span class="">[볼록껍질 최적화]</span>
+    * <span class="">[분할정복 최적화]</span>
+    * <span class="">[크누스 최적화]</span>
+    * <span class="">[단조큐 최적화]</span>
+    * <span class="">[Slope trick(D-)]</span>
+  * #### 기타
+    * <span class="">[키타마사(D-)]</span>
+    * <span class="">[벌레캠프-매시(D+)]</span>
   <!-- * <span class="">[aliens 트릭(D-)]</span> -->
 * ### 문자열
   * <span class="gold">[트라이(G+)](/문자열/Trie.md)</span>
@@ -125,6 +137,7 @@
   * <span class="">[nCr mod 소수, 뤼카(P-)]</span>
   * <span class="">[nCr mod 합성수(D-)]</span>
   * <span class="gold">[오일러 파이 함수(G+)](/수학/Euler's%20Totient%20Function.md)</span>
+  * <span class="">[이산 로그(P+)]</span>
   * <span class="platinum">[밀러-라빈 소수 판별법(P+)](/수학/MillerRabin.md)</span>
   * <span class="platinum">[폴라드 로(P+)](/수학/PollardRho.md)</span>
   * <span class="platinum">[FFT(P+)](/수학/Fast%20Fourier%20Transform.md)</span>
@@ -139,6 +152,7 @@
   * <span class="">[매트로이드(R-)]</span>
 * ### 기타
   * <span class="silver">[이분 탐색(S-)](/기타/Binary%20Search.md)</span>
+  * <span class="silver">[비트마스크(S-)](/기타/Bitmask.md)</span>
   * <span class="silver">[값 / 좌표 압축(S-)](/기타/Coordinate%20Compression.md)</span>
   * <span class="">[투 포인터(G-)]</span>
   * <span class="">[중간에서 만나기(G+)]</span>
@@ -148,8 +162,9 @@
   * <span class="">[삼분 탐색]</span>
   * <span class="">[병렬 이분 탐색(P+)]</span>
   * <span class="">[춤추는 링크, 크누스 X]</span>
+  * <span class="">[순열 사이클 분할]</span>
 * ### 게임 이론
-  * <span class="">[비트셋 스프라그-그런디]</span>
+  * <span class="">[스프라그-그런디]</span> <!-- (비트셋) -->
 * ### ~~휴리스틱~~
   * ~~<span class="">[A*]</span>~~
   * ~~<span class="">[담금질 기법]</span>~~
@@ -170,3 +185,12 @@
   * custom pq
   * io manip
   * 문자열관련 <!-- substr, istringstream, getline -->
+
+---
+# 참고문헌
+https://00ad-8e71-00ff-055d.tistory.com/3   
+https://blog.naver.com/PostView.naver?blogId=jinhan814&logNo=222689836982&parentCategoryNo=&categoryNo=6&viewDate=&isShowPopularPosts=false&from=postView   
+https://github.com/justiceHui/Unknown-To-Wellknown   
+https://jh05013.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/   
+https://justicehui.github.io/tutorial/   
+https://www.acmicpc.net/problem/tags   
