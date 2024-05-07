@@ -16,8 +16,8 @@
 
 * ### 자료구조
   * #### 세그먼트 트리
-    * <span class="gold">[펜윅 트리(G-)](/자료구조/세그먼트%20트리/FenwickTree.md)</span>
-    * <span class="gold">[세그먼트 트리(G-)](/자료구조/세그먼트%20트리/SegmentTree.md)</span>
+    * <span class="gold">[펜윅 트리(G+)](/자료구조/세그먼트%20트리/FenwickTree.md)</span>
+    * <span class="gold">[세그먼트 트리(G+)](/자료구조/세그먼트%20트리/SegmentTree.md)</span>
     * <span class="platinum">[머지소트 트리(P-)](/자료구조/세그먼트%20트리/MergesortTree.md)</span>
     * <span class="platinum">[2D 펜윅(P-)](/자료구조/세그먼트%20트리/FenwickTree2D.md)</span>
     * <span class="platinum">[2D 세그(P-)](/자료구조/세그먼트%20트리/SegmentTree2D.md)</span>
@@ -132,11 +132,11 @@
   * <span class="silver">[에라토스테네스의 체(S+)](/수학/Sieve%20of%20Eratosthenes.md)</span>
   * <span class="silver">[분할정복 거듭제곱(S+)](/수학/Power.md)</span>
   * <span class="gold">[확장 유클리드 호제법, 모듈러 역원(G-)](/수학/ExtendedGCD,%20Modular%20Inverse.md)</span>
+  * <span class="gold">[오일러 파이 함수(G+)](/수학/Euler's%20Totient%20Function.md)</span>
   * <span class="platinum">[중국인의 나머지 정리(P-)](/수학/Chinese%20Remainder%20Theorem.md)</span>
   * <span class="">[Garner's algorithm]</span>
   * <span class="">[nCr mod 소수, 뤼카(P-)]</span>
   * <span class="">[nCr mod 합성수(D-)]</span>
-  * <span class="gold">[오일러 파이 함수(G+)](/수학/Euler's%20Totient%20Function.md)</span>
   * <span class="">[이산 로그(P+)]</span>
   * <span class="platinum">[밀러-라빈 소수 판별법(P+)](/수학/MillerRabin.md)</span>
   * <span class="platinum">[폴라드 로(P+)](/수학/PollardRho.md)</span>
@@ -148,6 +148,7 @@
   * <span class="">[online FFT]</span>
   * <span class="">[포함 배제의 원리, 뫼비우스 함수, 뫼비우스 반전(D-)]</span>
   * <span class="">[생성 함수(D-)]</span>
+  * <span class="">[tonelliShanks, cornacchia]</span> <!-- https://www.acmicpc.net/problem/17646 -->
   * <span class="">[메르텐스 함수]</span>
   * <span class="">[매트로이드(R-)]</span>
 * ### 기타
@@ -179,13 +180,19 @@
   * 코드 여러줄 이어쓰기
 
 * ### 함수
-  * 수학관련
+  * 수학관련 <!-- atan, atan2 추가하기 -->
   * 배열관련
   * permutation
   * custom pq
   * io manip
   * 문자열관련 <!-- substr, istringstream, getline -->
 
+* ### ps용 설정
+  * cph
+  * snippet
+  * c_cpp_properties.json 설정
+  <!-- * Pre-defined Compiler Macros -->
+  * 버전 gnu++17로 해야 Template argument deduction 등 문법 사용가능
 ---
 # 참고문헌
 ```markdown
