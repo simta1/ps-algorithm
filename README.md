@@ -4,6 +4,7 @@
   .platinum { background-color:#DCFFE4 }
   .diamond { background-color:#C0FFFF }
   .ruby { background-color:#FFC0C0 }
+  .information { background-color:#D09AFF }
 </style>
 
 # ps algorithm
@@ -13,6 +14,7 @@
 <span class="platinum">플레(P)<span>
 <span class="diamond">다이아(D)<span>
 <span class="ruby">루비(R)<span>
+<span class="information">기타 지식(A)<span> <!-- additional information -->
 
 * ### 자료구조
   * #### 세그먼트 트리
@@ -151,7 +153,7 @@
   * <span class="">[online FFT]</span>
   * <span class="">[포함 배제의 원리, 뫼비우스 함수, 뫼비우스 반전(D-)]</span>
   * <span class="">[생성 함수(D-)]</span>
-  * <span class="">[tonelliShanks, cornacchia]</span> <!-- https://www.acmicpc.net/problem/17646 -->
+  * <span class="">[tonelliShanks, cornacchia(A)]</span> <!-- https://www.acmicpc.net/problem/17646 -->
   * <span class="">[메르텐스 함수]</span>
   * <span class="">[매트로이드(R-)]</span>
 * ### 기타
@@ -175,26 +177,27 @@
 ---
 # 유용한 C++ 기능들
 * ### 문법
-  * range-based for loop
-  * literal
-  * template argument deduction
-  * 람다 재귀
-  * 코드 여러줄 이어쓰기
-
+  * <span class="">[range-based for loop]</span>
+  * <span class="">[literal]</span>
+  * <span class="">[template argument deduction]</span>
+  * <span class="">[람다 재귀]</span>
+  * <span class="">[코드 여러줄 이어쓰기]</span>
 * ### 함수
-  * 수학관련 <!-- atan, atan2 추가하기 -->
-  * 배열관련
-  * permutation
-  * custom pq
-  * io manip
-  * 문자열관련 <!-- substr, istringstream, getline -->
-
+  * <span class="">[수학관련]</span> <!-- atan, atan2 추가하기 -->
+  * <span class="">[배열관련]</span>
+  * <span class="">[permutation]</span>
+  * <span class="">[custom pq]</span>
+  * <span class="">[io manip]</span>
+  * <span class="">[문자열관련]</span> <!-- substr, istringstream, getline -->
 * ### ps용 설정
-  * cph
-  * snippet
-  * c_cpp_properties.json 설정
-  <!-- * Pre-defined Compiler Macros -->
-  * 버전 gnu++17로 해야 Template argument deduction 등 문법 사용가능
+  * <span class="">[cph]</span>
+  * <span class="">[snippet]</span>
+  * <span class="">[c_cpp_properties.json 설정]</span>
+  <!-- * Pre-defined Compiler Macros
+  * 버전 gnu++17로 해야 Template argument deduction 등 문법 사용가능 -->
+* ### 기타
+  * <span class="information">[자주 쓰는 변수명](/C++%20관련%20정보들/기타/Variable%20Name.md)</span>
+  * <span class="">[비트 트릭]</span>
 ---
 # 참고문헌
 ```markdown
