@@ -4,7 +4,7 @@
   .platinum { background-color:#DCFFE4 }
   .diamond { background-color:#C0FFFF }
   .ruby { background-color:#FFC0C0 }
-  .information { background-color:#D09AFF }
+  .information { background-color:#E4BBFE }
 </style>
 
 # ps algorithm
@@ -120,6 +120,7 @@
   * <span class="">[접미사 배열]</span>
   * <span class="">[Z algorithm]</span>
 * ### 기하학
+  * <span class="">[오일러 삼각형 정리(A)]</span> <!-- 백준문제 : 외심과 내심은 사랑입니다 -->
   * <span class="gold">[cross product, CCW(G-)](/기하학/Cross%20Product,%20CCW.md)</span>
   * <span class="gold">[선분교차판정(G+)](/기하학/Line-Line%20Intersection%20check.md)</span>
   * <span class="platinum">[선분교차점 계산(P-)](/기하학/Line-Line%20Intersection%20calculate.md)</span>
