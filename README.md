@@ -36,6 +36,7 @@
     * ~~<span class="">[레드-블랙 트리]</span>~~
   * #### 기타
     * <span class="gold">[분리 집합(G-)](/자료구조/기타/Disjoint%20Set.md)</span>
+    * <span class="">[희소 배열(G+)]</span>
     * <span class="">[로프]</span>
     * <span class="">[데카르트 트리]</span>
     * <span class="">[회문 트리(D+)]</span>
@@ -43,6 +44,7 @@
     * <span class="">[접미사 트리(R-)]</span>
     * <span class="">[탑 트리(R+)]</span>
     <!-- * <span class="">[B-tree]</span>
+    * <span class="">[treap]</span>
     * <span class="">[wavelet 트리(P+)]</span> -->
 * ### 쿼리 관련
   * <span class="platinum">[Mo's algorithm(P+)](/쿼리%20관련/Mo's%20Algorithm.md)</span>
@@ -58,10 +60,12 @@
     * <span class="platinum">[강한 연결 요소(P-)](/그래프%20이론/그래프/Strongly%20Connected%20Component.md)</span>
     * <span class="">[2-SAT(P-)]</span>
     * <span class="">[오일러 회로(P-)]</span>
+    * <span class="">[단절점(P-)]</span>
+    * <span class="">[단절선(P-)]</span>
     * <span class="">[선인장]</span>
     * <span class="">[2th MST(D-)]</span>
-    * <span class="diamond">[유향 MST(D+)](/그래프%20이론/그래프/Directed%20Minimum%20Spanning%20Tree.md)</span>
     * <span class="">[쌍대 그래프(D-)]</span>
+    * <span class="diamond">[유향 MST(D+)](/그래프%20이론/그래프/Directed%20Minimum%20Spanning%20Tree.md)</span>
     * <span class="">[현 그래프(D+)]</span>
     <!-- * <span class="">[최소 차수 MST]</span> -->
   * #### 네트워크 플로우
@@ -72,12 +76,11 @@
     * <span class="">[일반 매칭(D+)]</span>
   * #### 트리
     * <span class="platinum">[최소 공통 조상(P-)](/그래프%20이론/트리/Lowest%20Common%20Ancestor.md)</span>
-    * <span class="">[단절점(P-)]</span>
-    * <span class="">[단절선(P-)]</span>
     * <span class="">[이중 연결 요소]</span>
     * <span class="">[블록 컷 트리]</span>
     * <span class="platinum">[오일러 경로 테크닉(P-)](/그래프%20이론/트리/Euler%20Tour%20Technique.md)</span>
     * <span class="">[heavy-light 분할(P+)]</span>
+    * <span class="">[트리 압축]</span>
     * <span class="">[센트로이드 분할(D-)]</span>
     * <span class="">[트리 동형 사상]</span>
 * ### DP
@@ -158,7 +161,6 @@
   * <span class="">[투 포인터(G-)]</span>
   * <span class="">[중간에서 만나기(G+)]</span>
   * <span class="">[imos]</span>
-  * <span class="">[희소 배열(G+)]</span>
   * <span class="platinum">[XOR 트라이(P-)](/기타/XOR%20Trie.md)</span>
   * <span class="">[삼분 탐색]</span>
   * <span class="">[병렬 이분 탐색(P+)]</span>
