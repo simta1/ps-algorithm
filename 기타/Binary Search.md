@@ -37,3 +37,6 @@ int binarySearch(int l, int r) {
 ```
 ### 시간복잡도 
 $O(logN)$    
+
+### 참고문헌
+https://www.acmicpc.net/blog/view/109
