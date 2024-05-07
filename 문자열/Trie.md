@@ -58,7 +58,7 @@ public:
     }
 };
 ```
-### Trie (for string)
+### Trie (string)
 ```cpp
 class Trie {
 private:
