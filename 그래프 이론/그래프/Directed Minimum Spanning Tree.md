@@ -69,6 +69,18 @@ public:
 ### 시간복잡도 
 $O(VE)$   
 
+### 사용관련
+```cpp
+for (int i = 1; i <= curN; i++) res += minIn[i].second;
+```
+DMST 불가능한 경우 -1 리턴하게 만들기
+```cpp
+for (int i = 1; i <= curN; i++) {
+    if (minIn[i].second == INF) return -1;
+    res += minIn[i].second;
+}
+```
+
 ### 백준문제
 [미생물 키우기](https://www.acmicpc.net/problem/16127)
 
