@@ -1,11 +1,12 @@
-<style>
-  .silver { background-color:#C5D5D5 }
-  .gold { background-color:#FFF5B1 }
-  .platinum { background-color:#DCFFE4 }
-  .diamond { background-color:#C0FFFF }
-  .ruby { background-color:#FFC0C0 }
-  .information { background-color:#E4BBFE }
-</style>
+<style>   
+  .silver { background-color:#C5D5D5 }   
+  .gold { background-color:#FFF5B1 }   
+  .platinum { background-color:#DCFFE4 }   
+  .diamond { background-color:#C0FFFF }   
+  .ruby { background-color:#FFC0C0 }   
+  .additional { background-color:#E4BBFE }   
+  .information { background-color:#ABCDEF }   
+</style>   
 
 # ps algorithm
 티어 분류 :
@@ -14,7 +15,7 @@
 <span class="platinum">플레(P)<span>
 <span class="diamond">다이아(D)<span>
 <span class="ruby">루비(R)<span>
-<span class="information">기타 지식(A)<span> <!-- additional information -->
+<span class="additional">기타 지식(A)<span>
 
 * ### 자료구조
   * #### 세그먼트 트리
@@ -154,7 +155,8 @@
   * <span class="">[online FFT]</span>
   * <span class="">[포함 배제의 원리, 뫼비우스 함수, 뫼비우스 반전(D-)]</span>
   * <span class="">[생성 함수(D-)]</span>
-  * <span class="">[tonelliShanks, cornacchia(A)]</span> <!-- https://www.acmicpc.net/problem/17646 -->
+  * <span class="additional">[Tonelli-Shanks algorithm(A)](/수학/Tonelli-Shanks.md)</span>
+  * <span class="additional">[Cornacchia's algorithm(A)](/수학/Cornacchia.md)</span>
   * <span class="">[메르텐스 함수]</span>
   * <span class="">[매트로이드(R-)]</span>
 * ### 기타
