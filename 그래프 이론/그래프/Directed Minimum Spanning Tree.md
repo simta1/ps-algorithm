@@ -70,11 +70,12 @@ public:
 $O(VE)$   
 
 ### 사용관련
+아래의 방법으로 DMST 불가능한지 판단할 수도 있다.
 ```cpp
+// 기존 코드
 for (int i = 1; i <= curN; i++) res += minIn[i].second;
-```
-DMST 불가능한 경우 -1 리턴하게 만들기
-```cpp
+
+// DMST 가능 여부 확인 추가
 for (int i = 1; i <= curN; i++) {
     if (minIn[i].second == INF) return -1;
     res += minIn[i].second;
