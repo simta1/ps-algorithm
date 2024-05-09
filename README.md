@@ -171,6 +171,7 @@
   * <span class="">[병렬 이분 탐색(P+)]</span>
   * <span class="">[춤추는 링크, 크누스 X]</span>
   * <span class="">[순열 사이클 분할]</span>
+  * <span class="">[임의 정밀도(epsilon값 계산)]</span>
 * ### 게임 이론
   * <span class="">[스프라그-그런디]</span> <!-- (비트셋) -->
 * ### ~~휴리스틱~~
@@ -195,7 +196,7 @@
 * ### ps용 설정
   * <span class="">[cph]</span>
   * <span class="">[snippet]</span>
-  * <span class="">[c_cpp_properties.json 설정]</span>
+  * <span class="">[debug, c_cpp_properties.json 설정]</span>
   <!-- * Pre-defined Compiler Macros
   * 버전 gnu++17로 해야 Template argument deduction 등 문법 사용가능 -->
 * ### 기타
