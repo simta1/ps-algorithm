@@ -202,7 +202,7 @@
   * 버전 gnu++17로 해야 Template argument deduction 등 문법 사용가능 -->
 * ### 기타
   * <span class="information">[자주 쓰는 변수명](/C++%20관련%20정보들/기타/Variable%20Name.md)</span>
-  * <span class="">[비트 트릭]</span>
+  * <span class="information">[비트 트릭](/C++%20관련%20정보들/기타/Bit%20Trick.md)</span>
 ---
 # 참고문헌
 ```markdown
