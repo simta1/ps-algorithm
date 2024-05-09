@@ -84,3 +84,6 @@ query $O(logN)$
 
 ### 백준 문제
 [구간 합 구하기 2](https://www.acmicpc.net/problem/10999)
+
+### 참고문헌
+https://book.acmicpc.net/ds/segment-tree-lazy-propagation

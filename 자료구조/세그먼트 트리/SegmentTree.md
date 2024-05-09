@@ -75,3 +75,6 @@ range update가 필요한 경우 lazy propagation 사용
 
 ### 백준 문제
 [구간 합 구하기](https://www.acmicpc.net/problem/2042)
+
+### 참고문헌
+https://book.acmicpc.net/ds/segment-tree
