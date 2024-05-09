@@ -184,7 +184,7 @@
 * ### 문법
   * <span class="">[range-based for loop]</span>
   * <span class="">[literal]</span>
-  * <span class="">[template argument deduction]</span>
+  * <span class="information">[template argument deduction](/C++%20관련%20정보들/문법/Template%20Argument%20Deduction.md)</span>
   * <span class="">[람다 재귀]</span>
   * <span class="">[코드 여러줄 이어쓰기]</span>
 * ### 함수
