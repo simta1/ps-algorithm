@@ -130,6 +130,7 @@
   * <span class="">[오목 다각형 내부의 점 판정]</span>
   * <span class="">[가장 가까운 두 점(P+)]</span>
   * <span class="">[최소 외접원(P+)]</span>
+  * <span class="">[반 나누기]</span>
   * <span class="">[반평면 교집합(D-)]</span>
   * <span class="">[KD tree]</span>
   * <span class="">[그린 정리(D+)]</span>
