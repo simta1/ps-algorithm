@@ -72,7 +72,14 @@ update $O(logN)$
 query $O(logN)$   
 
 ### 주의사항
-.  
+버리는 구간일 때 (0, 0, 0, 0)이 아니라 (0, -INF, -INF, -INF) 써야 됨
+```cpp
+// 틀린 코드
+if (l > e || s > r) return Node(0, 0, 0, 0);
+
+// 맞는 코드
+if (l > e || s > r) return Node(0, -INF, -INF, -INF);
+```
 
 ### 백준 문제
 [연속합과 쿼리](https://www.acmicpc.net/problem/16993)
