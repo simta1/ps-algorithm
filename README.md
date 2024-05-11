@@ -61,7 +61,7 @@
     * <span class="gold">[MST(G-)](/그래프%20이론/그래프/Minimum%20Spanning%20Tree.md)</span>
     * <span class="gold">[위상 정렬(G+)](/그래프%20이론/그래프/Topological%20Sort.md)</span>
     * <span class="platinum">[강한 연결 요소(P-)](/그래프%20이론/그래프/Strongly%20Connected%20Component.md)</span>
-    * <span class="">[2-SAT(P-)]</span>
+    * <span class="platinum">[2-SAT(P-)](/그래프%20이론/그래프/2-SAT.md)</span>
     * <span class="">[오일러 회로(P-)]</span>
     * <span class="">[단절점(P-)]</span>
     * <span class="">[단절선(P-)]</span>
@@ -95,6 +95,7 @@
     * <span class="">[TSP]</span>
   * #### 여러 DP 유형
     * <span class="gold">[비트마스크 DP(G+)](/DP/여러%20DP%20유형/Bitmask%20DP.md)</span>
+    * <span class="">[최단거리 역추적]</span>
     * <span class="">[SOS DP]</span>
     * <span class="">[토글링]</span>
     * <span class="">[히르쉬버그(D+)]</span>
