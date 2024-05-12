@@ -1,0 +1,53 @@
+[카테고리](/README.md)
+### Articulation Bridge
+```cpp
+class Graph {
+private:
+    int n, order;
+    vector<vector<int> > adj;
+    vector<int> visited;
+    vector<pair<int, int> > articulations;
+
+    int dfs(int cur, int parent) {
+        int res = visited[cur] = order++;
+        
+        for (int next : adj[cur]) if (next != parent) {
+            if (!~visited[next]) {
+                int nextRet = dfs(next, cur);
+                if (nextRet > visited[cur]) articulations.push_back({min(cur, next), max(cur, next)});
+                res = min(res, nextRet);
+            }
+            else res = min(res, visited[next]);
+        }
+
+        return res;
+    }
+
+public:
+    Graph(int n) : n(n), adj(n + 1), visited(n + 1, -1) {}
+
+    void addEdge(int u, int v) {
+        adj[u].push_back(v);
+        adj[v].push_back(u);
+    }
+
+    vector<pair<int, int> > getArticulationaBridges() {
+        order = 0;
+        
+        for (int i = 1; i <= n; i++) if(!~visited[i]) {
+            dfs(i, -1);
+        }
+
+        sort(articulations.begin(), articulations.end());
+        return articulations;
+    }
+};
+```
+### 시간복잡도 
+$O(V + E)$   
+
+### 백준문제
+[단절선](https://www.acmicpc.net/problem/11400)
+
+### 참고문헌
+https://bowbowbow.tistory.com/3

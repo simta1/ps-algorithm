@@ -63,8 +63,8 @@
     * <span class="platinum">[강한 연결 요소(P-)](/그래프%20이론/그래프/Strongly%20Connected%20Component.md)</span>
     * <span class="platinum">[2-SAT(P-)](/그래프%20이론/그래프/2-SAT.md)</span>
     * <span class="">[오일러 회로(P-)]</span>
-    * <span class="">[단절점(P-)]</span>
-    * <span class="">[단절선(P-)]</span>
+    * <span class="platinum">[단절점(P-)](/그래프%20이론/그래프/Articulation%20Point.md)</span>
+    * <span class="platinum">[단절선(P-)](/그래프%20이론/그래프/Articulation%20Bridge.md)</span>
     * <span class="">[선인장]</span>
     * <span class="">[2th MST(D-)]</span>
     * <span class="">[쌍대 그래프(D-)]</span>
@@ -72,6 +72,7 @@
     * <span class="">[현 그래프(D+)]</span>
     <!-- * <span class="">[최소 차수 MST]</span> -->
   * #### 네트워크 플로우
+    * <span class="">[L-R flow]</span>
     * <span class="">[최대 유량(P-)]</span>
     * <span class="">[에드몬드 카프]</span>
     * <span class="">[이분 매칭 디닉]</span>
