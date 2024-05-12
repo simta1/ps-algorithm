@@ -9,15 +9,15 @@ private:
     stack<int> s;
 
     int dfs(int cur) {
-        int ret = visited[cur] = order++;
+        int res = visited[cur] = order++;
         s.push(cur);
 
         for (int next : adj[cur]) {
-            if (!~visited[next]) ret = min(ret, dfs(next));
-            else if (!~sccNumber[next]) ret = min(ret, visited[next]);
+            if (!~visited[next]) res = min(res, dfs(next));
+            else if (!~sccNumber[next]) res = min(res, visited[next]);
         }
 
-        if (ret == visited[cur]) {
+        if (res == visited[cur]) {
             while (1) {
                 int node = s.top();
                 s.pop();
@@ -27,7 +27,7 @@ private:
             ++id;
         }
 
-        return ret;
+        return res;
     }
 
 public:
