@@ -65,6 +65,8 @@
     * <span class="">[오일러 회로(P-)]</span>
     * <span class="platinum">[단절점(P-)](/그래프%20이론/그래프/Articulation%20Point.md)</span>
     * <span class="platinum">[단절선(P-)](/그래프%20이론/그래프/Articulation%20Bridge.md)</span>
+    * <span class="">[이중 연결 요소]</span>
+    * <span class="">[블록 컷 트리]</span>
     * <span class="">[선인장]</span>
     * <span class="">[2th MST(D-)]</span>
     * <span class="">[쌍대 그래프(D-)]</span>
@@ -74,14 +76,12 @@
   * #### 네트워크 플로우
     * <span class="">[L-R flow]</span>
     * <span class="">[최대 유량(P-)]</span>
-    * <span class="">[에드몬드 카프]</span>
     * <span class="">[이분 매칭 디닉]</span>
     * <span class="">[최소 비용 최대 유량(P+)]</span>
     * <span class="">[일반 매칭(D+)]</span>
   * #### 트리
     * <span class="platinum">[최소 공통 조상(P-)](/그래프%20이론/트리/Lowest%20Common%20Ancestor.md)</span>
-    * <span class="">[이중 연결 요소]</span>
-    * <span class="">[블록 컷 트리]</span>
+    * <span class="platinum">[LCA를 통한 트리 쿼리(P-)](/그래프%20이론/트리/Tree%20Query%20Using%20LCA.md)</span>
     * <span class="platinum">[오일러 경로 테크닉(P-)](/그래프%20이론/트리/Euler%20Tour%20Technique.md)</span>
     * <span class="">[heavy-light 분할(P+)]</span>
     * <span class="">[트리 압축]</span>
