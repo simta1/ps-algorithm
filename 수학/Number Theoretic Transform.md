@@ -134,5 +134,4 @@ while (n < a.size() + b.size()) n <<= 1;
 NTT에서 n계산부분만 바꿔서 제출해보면 틀렸다고 나온다.   
 
 ### 백준문제
-[큰 수 곱셈 (2)](https://www.acmicpc.net/problem/15576)   
-[큰 수 곱셈 (3)](https://www.acmicpc.net/problem/22289)
+[씽크스몰](https://www.acmicpc.net/problem/11385) - NTT + CRT   
