@@ -116,5 +116,10 @@ public:
 insert $O(N)$   
 find $O(N)$
 
+### 주의사항
+노드에 end를 통해서 단어의 끝까지 도달했는지 저장할 필요가 있다.   
+그렇지 않으면 find()함수에서 트라이에 속한 단어의 일부(정확히는 접두사)만 들어가도 true로 잘못 판별된다.   
+ex) "apple"만 집어넣었는데 "a", "ap", ... 등이 전부 true
+
 ### 백준문제
 [개미굴](https://www.acmicpc.net/problem/14725)
