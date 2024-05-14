@@ -121,5 +121,24 @@ find $O(N)$
 그렇지 않으면 find()함수에서 트라이에 속한 단어의 일부(정확히는 접두사)만 들어가도 true로 잘못 판별된다.   
 ex) "apple"만 집어넣었는데 "a", "ap", ... 등이 전부 true
 
+### 사용관련
+단어의 접두사 전부 검색하려면 아래 코드 사용   
+ex) "apple", "app" 있을 때 "apples" 넣으면 vector{2, 4} 리턴
+```cpp
+vector<int> find(const string &st) {
+    vector<int> res;
+
+    Node *cur = root;
+    for (int i = 0; i < st.size() ; i++) {
+        auto e = st[i];
+        if (!cur->have(e)) break;
+        cur = cur->go(e);
+        if (cur->end) res.push_back(i);
+    }
+
+    return res;
+}
+```
+
 ### 백준문제
 [개미굴](https://www.acmicpc.net/problem/14725)
