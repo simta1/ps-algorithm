@@ -168,6 +168,8 @@
   * <span class="silver">[값 / 좌표 압축(S-)](/기타/Coordinate%20Compression.md)</span>
   * <span class="">[투 포인터(G-)]</span>
   * <span class="">[중간에서 만나기(G+)]</span>
+  * <span class="">[스위핑]</span>
+  * <span class="">[슬라이딩 윈도우]</span>
   * <span class="">[imos]</span>
   * <span class="platinum">[XOR 트라이(P-)](/기타/XOR%20Trie.md)</span>
   * <span class="">[삼분 탐색]</span>
