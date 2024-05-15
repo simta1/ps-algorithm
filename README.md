@@ -126,6 +126,7 @@
 * ### 기하학
   * <span class="">[오일러 삼각형 정리(A)]</span> <!-- 백준문제 : 외심과 내심은 사랑입니다 -->
   * <span class="gold">[cross product, CCW(G-)](/기하학/Cross%20Product,%20CCW.md)</span>
+  * <span class="gold">[직선-점 거리 계산(G-)](/기하학/Distance.md)</span>
   * <span class="gold">[선분교차판정(G+)](/기하학/Line-Line%20Intersection%20check.md)</span>
   * <span class="platinum">[선분교차점 계산(P-)](/기하학/Line-Line%20Intersection%20calculate.md)</span>
   * <span class="platinum">[볼록 껍질(P-)](/기하학/Graham%20Scan.md)</span>
