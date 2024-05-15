@@ -42,6 +42,7 @@
     * <span class="gold">[희소 배열(G+)](/자료구조/기타/Sparse%20Table.md)</span>
     * <span class="">[로프]</span>
     * <span class="">[데카르트 트리]</span>
+    * <span class="">[KD tree]</span>
     * <span class="">[회문 트리(D+)]</span>
     * <span class="">[도미네이터 트리(D+)]</span>
     * <span class="">[접미사 트리(R-)]</span>
@@ -134,7 +135,6 @@
   * <span class="">[최소 외접원(P+)]</span>
   * <span class="">[반 나누기]</span>
   * <span class="">[반평면 교집합(D-)]</span>
-  * <span class="">[KD tree]</span>
   * <span class="">[그린 정리(D+)]</span>
   * <span class="">[델로네 삼각분할(R-)]</span>
   * <span class="">[보로노이 다이어그램(R-)]</span>
