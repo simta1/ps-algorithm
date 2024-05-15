@@ -1,3 +1,4 @@
+[카테고리](/README.md)
 ### if (!~x)
 ```cpp
 if (!~visited[cur]) //방문 안 한 곳인지
