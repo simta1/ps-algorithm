@@ -1,7 +1,7 @@
 [카테고리](/README.md)
 ### KMP
 ```cpp
-vector<int> kmp(string st, string pattern) {
+vector<int> kmp(const string &st, const string &pattern) {
     int n = st.size();
     int m = pattern.size();
 
