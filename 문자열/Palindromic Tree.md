@@ -98,6 +98,8 @@ public:
             int cur = q.front();
             q.pop();
 
+            if (!tree[cur].lazy) continue;
+
             propagate(cur);
             int next = tree[cur].link;
             if (--suffixLinkIndegree[next] == 0) q.push(next);
