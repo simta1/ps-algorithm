@@ -233,6 +233,6 @@ propagate() 시간복잡도는 $O(N)$
 [팰린드롬](https://www.acmicpc.net/problem/10066)
 
 ### 참고문헌
-https://algoshitpo.github.io/2020/03/23/eertree/
-https://etyu39.tistory.com/4
-https://koosaga.com/249
+https://algoshitpo.github.io/2020/03/23/eertree/   
+https://etyu39.tistory.com/4   
+https://koosaga.com/249   
