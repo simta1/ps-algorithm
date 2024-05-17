@@ -68,12 +68,6 @@ private:
         }
     }
 
-    ll solve(int cur) {
-        ll res = ll(tree[cur].len > 0) * tree[cur].len * tree[cur].cnt;
-        for (auto [_, next] : tree[cur].edge) res = max(res, solve(next));
-        return res;
-    }
-
 public:
     PalindromicTree() : PalindromicTree("") {}
     PalindromicTree(string st) : tree(3) {
@@ -112,9 +106,106 @@ public:
     }
 };
 ```
-### Palindromic Tree ( = eertree ) - time $O(N)$, space $O(26N)$
+### Palindromic Tree (eertree) - time $O(N)$, space $O(26N)$
 ```cpp
+class PalindromicTree {
+private:
+    struct Node {
+        array<int, 26> edge;
+        int len, link; // suffix link
+        int cnt, lazy;
 
+        Node() {}
+        Node(int len, int link) : edge({}), len(len), link(link), cnt(0), lazy(0) {}
+
+        bool haveEdge(char c) {
+            return edge[c - 'a'];
+        }
+    };
+
+    void propagate(int node) {
+        tree[node].cnt += tree[node].lazy;
+        tree[tree[node].link].lazy += tree[node].lazy;
+        tree[node].lazy = 0;
+    }
+
+    int newNode(int len, int link) {
+        tree.push_back(Node(len, link));
+        return tree.size() - 1;
+    }
+
+    vector<Node > tree;
+    string st;
+    int last; // longest suffix palindrome of st
+
+    bool canAttach(int node, char c) {
+        if (tree[node].len == -1) return true;
+
+        int idx = st.size() - 1 - tree[node].len;
+        return idx >= 0 && st[idx] == c;
+    }
+    
+    void insert(char c) {
+        int cur = last;
+        int len = tree[cur].len;
+
+        while (!canAttach(cur, c)) cur = tree[cur].link;
+
+        if (!tree[cur].haveEdge(c)) {
+            if (tree[cur].len == -1) tree[cur].edge[c - 'a'] = newNode(tree[cur].len + 2, 2);
+            else {
+                int tmp = cur;
+                do { tmp = tree[tmp].link; } while (!canAttach(tmp, c));
+                tree[cur].edge[c - 'a'] = newNode(tree[cur].len + 2, tree[tmp].edge[c - 'a']);
+            }
+        }
+
+        last = tree[cur].edge[c - 'a'];
+        ++tree[last].lazy;
+        
+        st += c;
+    }
+
+public:
+    PalindromicTree() : PalindromicTree("") {}
+    PalindromicTree(string st) : tree(3) {
+        tree[1] = Node(-1, 1);
+        tree[2] = Node(0, 1);
+        last = 2;
+
+        for (auto &c : st) insert(c);
+    }
+
+    void propagate() {
+        vector<int> suffixLinkIndegree(tree.size());
+
+        for (int i = 3; i < tree.size(); i++) suffixLinkIndegree[tree[i].link]++;
+
+        queue<int> q;
+        for (int i = 3; i < tree.size(); i++) {
+            if (suffixLinkIndegree[i] == 0) q.push(i);
+        }
+
+        while (!q.empty()) {
+            int cur = q.front();
+            q.pop();
+
+            if (!tree[cur].lazy) continue;
+
+            propagate(cur);
+            int next = tree[cur].link;
+            if (--suffixLinkIndegree[next] == 0) q.push(next);
+        }
+    }
+
+    ll solve() {
+        propagate();
+        
+        ll res = 0;
+        for (int i = 3; i < tree.size(); i++) if (tree[i].len > 0) res = max(res, ll(tree[i].len) * tree[i].cnt);
+        return res;
+    }
+};
 ```
 ### 시간, 공간복잡도
 구현1) time $O(N~log \sigma)$, space $O(N)$   
@@ -124,7 +215,7 @@ $\sigma$는 문자열에 사용되는 문자 종류의 수
 
 ### 구현설명
 tree[0]은 혹시나 존재하지 않는 엣지(edge[c] == 0)에 들어가게 될 때를 대비해서 만들어놓은 더미   
-tree[node].cnt의 효율적인 계산을 위해서 lazy propagation 사용했음   
+tree[node].cnt의 효율적인 계산을 위해 lazy propagation 사용   
 public propagate()함수에서는 suffix link를 기준으로 위상정렬하여 lazy를 전파   
 
 각 노드의 cnt는 suffix link의 역방향 간선들로 트리를 만들었을 때 해당 노드를 부모로 하는 하위 트리의 노드 개수와 동일하기 때문에 suffix link의 역방향 간선을 adj에 저장하고 dfs로 각 노드에의 cnt를 계산하는 식으로도 구현 가능   
@@ -133,7 +224,7 @@ public propagate()함수에서는 suffix link를 기준으로 위상정렬하여
 그래프 순회할 때 traversal(1), traversal(2)로 두 개의 루트에 대해 모두 봐야 됨   
 원래 구현은 tree[1].edge에 tree[2]를 연결해줘서 루트를 하나로 만들지만 이러면 간선에 어떤 문자를 할당할지 애매해서 그냥 루트 2개로 쓸 생각   
 
-print()함수는 그냥 디버깅할 때 쓰려고 만들어둠   
+구현1의 경우 print()함수도 만들어둠. 그냥 트리구조 확인하는 용   
 
 당연히 tree[node].cnt사용할 거면 사용하기 전에 미리 public propagate() 한 번 실행해줘야 됨   
 propagate() 시간복잡도는 $O(N)$   
