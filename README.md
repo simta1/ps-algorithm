@@ -43,7 +43,7 @@
     * <span class="">[로프]</span>
     * <span class="">[데카르트 트리]</span>
     * <span class="">[KD tree]</span>
-    * <span class="">[회문 트리(D+)]</span>
+    * <span class="diamond">[회문 트리(D+)](/자료구조/기타/Palindromic%20Tree.md)</span>
     * <span class="">[도미네이터 트리(D+)]</span>
     * <span class="">[접미사 트리(R-)]</span>
     * <span class="">[탑 트리(R+)]</span>
