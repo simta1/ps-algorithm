@@ -43,7 +43,6 @@
     * <span class="">[로프]</span>
     * <span class="">[데카르트 트리]</span>
     * <span class="">[KD tree]</span>
-    * <span class="diamond">[회문 트리(D+)](/자료구조/기타/Palindromic%20Tree.md)</span>
     * <span class="">[도미네이터 트리(D+)]</span>
     * <span class="">[접미사 트리(R-)]</span>
     * <span class="">[탑 트리(R+)]</span>
@@ -123,6 +122,7 @@
   * <span class="">[매내처]</span>
   * <span class="">[접미사 배열]</span>
   * <span class="">[Z algorithm]</span>
+  * <span class="diamond">[회문 트리(D+)](/문자열/Palindromic%20Tree.md)</span>
 * ### 기하학
   * <span class="">[오일러 삼각형 정리(A)]</span> <!-- 백준문제 : 외심과 내심은 사랑입니다 -->
   * <span class="gold">[cross product, CCW(G-)](/기하학/Cross%20Product,%20CCW.md)</span>
