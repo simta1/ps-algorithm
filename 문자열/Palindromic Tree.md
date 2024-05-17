@@ -136,6 +136,7 @@ public propagate()함수에서는 suffix link를 기준으로 위상정렬하여
 print()함수는 그냥 디버깅할 때 쓰려고 만들어둠   
 
 당연히 tree[node].cnt사용할 거면 사용하기 전에 미리 public propagate() 한 번 실행해줘야 됨   
+propagate() 시간복잡도는 $O(N)$   
 
 ### 백준문제
 [팰린드롬](https://www.acmicpc.net/problem/10066)
