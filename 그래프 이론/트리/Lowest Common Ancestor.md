@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### LCA (fixed root)
+### LCA (Binary Lifting) - fixed root
 ```cpp
 class Tree {
 private:
@@ -52,7 +52,7 @@ public:
     }
 };
 ```
-### LCA (unfixed root)
+### LCA (Binary Lifting) - unfixed root
 ```cpp
 class Tree {
 private:
