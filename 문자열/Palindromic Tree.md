@@ -214,19 +214,19 @@ $\sigma$는 문자열에 사용되는 문자 종류의 수
 구현 2의 경우 소문자 알파벳만 있을 때를 가정하여 $\sigma = 26$으로 구현했음
 
 ### 구현설명
-tree[0]은 혹시나 존재하지 않는 엣지(edge[c] == 0)에 들어가게 될 때를 대비해서 만들어놓은 더미   
+tree[0]은 혹시나 존재하지 않는 간선(edge[c] == 0)에 들어가게 될 때를 대비해 만들어놓은 더미   
 tree[node].cnt의 효율적인 계산을 위해 lazy propagation 사용   
 public propagate()함수에서는 suffix link를 기준으로 위상정렬하여 lazy를 전파   
 
-각 노드의 cnt는 suffix link의 역방향 간선들로 트리를 만들었을 때 해당 노드를 부모로 하는 하위 트리의 노드 개수와 동일하기 때문에 suffix link의 역방향 간선을 adj에 저장하고 dfs로 각 노드에의 cnt를 계산하는 식으로도 구현 가능   
+각 노드의 cnt는 suffix link의 역방향 간선들로 트리를 만들었을 때 해당 노드를 부모로 하는 하위 트리의 노드 개수와 동일하기 때문에 suffix link의 역방향 간선을 adj에 저장하고 dfs로 각 노드의 cnt를 계산하는 방식으로도 구현 가능   
 
 ### 사용관련
-그래프 순회할 때 traversal(1), traversal(2)로 두 개의 루트에 대해 모두 봐야 됨   
-원래 구현은 tree[1].edge에 tree[2]를 연결해줘서 루트를 하나로 만들지만 이러면 간선에 어떤 문자를 할당할지 애매해서 그냥 루트 2개로 쓸 생각   
+그래프 순회할 때 traversal(1), traversal(2) 두 개의 루트에 대해 모두 순회   
+tree[1].edge에 tree[2]를 연결해서 루트를 하나로 만드는 구현도 있지만, 이 경우 간선에 어떤 문자를 할당할지 애매해서 그냥 루트 2개로 구현했음   
 
 구현1의 경우 print()함수도 만들어둠. 그냥 트리구조 확인하는 용   
 
-당연히 tree[node].cnt사용할 거면 사용하기 전에 미리 public propagate() 한 번 실행해줘야 됨   
+tree[node].cnt 사용하려면 미리 public propagate()부터 호출   
 propagate() 시간복잡도는 $O(N)$   
 
 ### 백준문제
