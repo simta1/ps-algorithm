@@ -86,5 +86,17 @@ public:
 preprocessing $O(N~logN)$   
 query $O(logN)$
 
+### 주의사항
+노드를 위로 올리기 전에 먼제 res를 업데이트해야 된다.   
+```cpp
+// 맞는 코드
+res = merge(res, ac[a][i].second);
+a = ac[a][i].first;
+
+// 틀린 코드
+// a = ac[a][i].first;
+// res = merge(res, ac[a][i].second);
+```
+
 ### 백준문제
 [도로 네트워크](https://www.acmicpc.net/problem/3176)
