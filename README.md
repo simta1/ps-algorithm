@@ -42,9 +42,8 @@
     * <span class="gold">[희소 배열(G+)](/자료구조/기타/Sparse%20Table.md)</span>
     * <span class="">[로프]</span>
     * <span class="">[데카르트 트리]</span>
-    * <span class="">[도미네이터 트리(D+)]</span>
     * <span class="">[접미사 트리(R-)]</span>
-    * <span class="">[탑 트리(R+)]</span>
+    * <span class="">[SPQR tree]</span>
     <!-- * <span class="">[B-tree]</span>
     * <span class="">[treap]</span>
     * <span class="">[wavelet 트리(P+)]</span> -->
@@ -69,6 +68,7 @@
     * <span class="">[선인장]</span>
     * <span class="">[2th MST(D-)]</span>
     * <span class="">[쌍대 그래프(D-)]</span>
+    * <span class="">[도미네이터 트리(D-)]</span>
     * <span class="diamond">[유향 MST(D+)](/그래프%20이론/그래프/Directed%20Minimum%20Spanning%20Tree.md)</span>
     * <span class="">[현 그래프(D+)]</span>
     <!-- * <span class="">[최소 차수 MST]</span> -->
@@ -86,6 +86,7 @@
     * <span class="">[트리 압축]</span>
     * <span class="">[센트로이드 분할(D-)]</span>
     * <span class="">[트리 동형 사상]</span>
+    * <span class="">[탑 트리(R-)]</span>
 * ### DP
   * #### 유명한 문제
     * <span class="">[배낭 문제(G-)]</span>
@@ -123,7 +124,6 @@
   * <span class="">[Z algorithm]</span>
   * <span class="diamond">[회문 트리(D+)](/문자열/Palindromic%20Tree.md)</span>
 * ### 기하학
-  * <span class="">[오일러 삼각형 정리(A)]</span> <!-- 백준문제 : 외심과 내심은 사랑입니다 -->
   * <span class="gold">[cross product, CCW(G-)](/기하학/Cross%20Product,%20CCW.md)</span>
   * <span class="gold">[직선-점 거리 계산(G-)](/기하학/Distance.md)</span>
   * <span class="gold">[선분교차판정(G+)](/기하학/Line-Line%20Intersection%20check.md)</span>
