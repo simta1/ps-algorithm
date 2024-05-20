@@ -40,7 +40,6 @@ private:
     
     void insert(char c) {
         int cur = last;
-        int len = tree[cur].len;
 
         while (!canAttach(cur, c)) cur = tree[cur].link;
 
@@ -147,7 +146,6 @@ private:
     
     void insert(char c) {
         int cur = last;
-        int len = tree[cur].len;
 
         while (!canAttach(cur, c)) cur = tree[cur].link;
 
