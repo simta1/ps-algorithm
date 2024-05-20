@@ -343,7 +343,7 @@ bitset<$I$>.count()이 $O(1)$인 줄 알았는데 $O(I)$였다.
 그래프 순회할 때 traversal(1), traversal(2) 두 개의 루트에 대해 모두 순회   
 tree[1].edge에 tree[2]를 연결해서 루트를 하나로 만드는 구현도 있지만, 이 경우 간선에 어떤 문자를 할당할지 애매해서 그냥 루트 2개로 구현했음   
 
-구현1의 경우 print()함수도 만들어둠. 그냥 트리구조 확인하는 용   
+구현1의 경우 디버그용으로 print()함수도 만들어둠.
 
 tree[node].cnt 사용하려면 미리 public propagate()부터 호출   
 propagate() 시간복잡도는 $O(N)$   
