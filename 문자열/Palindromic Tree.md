@@ -305,10 +305,11 @@ public:
 ### 시간, 공간복잡도
 구현1) time $O(N~log \sigma)$, space $O(N)$   
 구현2) time $O(N)$, space $O(N \sigma)$   
-Joint Tree) time $O(N)$, space $O(N~I)$   
 $\sigma$는 문자열에 사용되는 문자 종류의 수   
 구현 2의 경우 소문자 알파벳만 있을 때를 가정하여 $\sigma = 26$으로 구현했음   
-$I$는 트리에 넣을 문자열의 개수
+
+Joint Tree) time $O(N)$, space $O(N~I)$   
+$I$는 트리에 넣을 문자열의 개수   
 
 ### 구현설명
 tree[0]은 혹시나 존재하지 않는 간선(edge[c] == 0)에 들어가게 될 때를 대비해 만들어놓은 더미   
@@ -318,6 +319,25 @@ public propagate()함수에서는 suffix link를 기준으로 위상정렬하여
 각 노드의 cnt는 suffix link의 역방향 간선들로 트리를 만들었을 때 해당 노드를 부모로 하는 하위 트리의 노드 개수와 동일하기 때문에 suffix link의 역방향 간선을 adj에 저장하고 dfs로 각 노드의 cnt를 계산하는 방식으로도 구현 가능   
 
 Joint Tree는 tree[node].bitset[i]에 i번째 문자열이 해당 노드를 만들 수 있는지 여부를 저장   
+
+Joint Palindromic Tree에서 lcpLen() 함수는 time $O(N~I)$로 구현했다.    
+bitset<$I$>.count()이 $O(1)$인 줄 알았는데 $O(I)$였다.   
+그냥 모든 문자열에 공통인지만 알아도 되는 상황이면 굳이 bitset으로 모든 I개 문자열에 대한 정보를 저장할 필요없이 int형 변수 하나만 사용해서 time $O(N)$, space $O(N)$으로 구현 가능하다.   
+```cpp
+// void insert(char c) 코드
+    // I개 전부 저장
+    tree[last].bs[strings.size() - 1] = 1;
+
+    // int 하나만 사용
+    tree[last].firstZeroIdx = strings.size();
+
+// bool isCommon(int n) 코드
+    // I개 전부 저장
+    return bs.count() == n;
+
+    // int 하나만 사용
+    return firstZeroIdx == n;
+```
 
 ### 사용관련
 그래프 순회할 때 traversal(1), traversal(2) 두 개의 루트에 대해 모두 순회   
