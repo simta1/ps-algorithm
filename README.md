@@ -171,6 +171,7 @@
   * <span class="silver">[이분 탐색(S-)](/기타/Binary%20Search.md)</span>
   * <span class="silver">[비트마스크(S-)](/기타/Bitmask.md)</span>
   * <span class="silver">[값 / 좌표 압축(S-)](/기타/Coordinate%20Compression.md)</span>
+  * <span class="silver">[순열 사이클 분할(S+)](/기타/Permutation%20Cycle%20Decomposition.md)</span>
   * <span class="">[투 포인터(G-)]</span>
   * <span class="">[중간에서 만나기(G+)]</span>
   * <span class="">[스위핑]</span>
@@ -180,7 +181,6 @@
   * <span class="">[삼분 탐색]</span>
   * <span class="">[병렬 이분 탐색(P+)]</span>
   * <span class="">[춤추는 링크, 크누스 X]</span>
-  * <span class="">[순열 사이클 분할]</span>
   * <span class="">[임의 정밀도(epsilon값 계산)]</span>
 * ### 게임 이론
   * <span class="">[스프라그-그런디]</span> <!-- (비트셋) -->
