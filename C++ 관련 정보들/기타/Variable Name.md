@@ -22,3 +22,8 @@ for (int i = 0; i < n; i++) pos[v[i]] = i;
 vector<vector<pair<int, T> > > adj;
 vector<vector<pair<int, T> > > rdj; // reverse adj
 ```
+
+### trueValue
+visited배열 등에서 true인지 나타내는 값.   
+visited[i] != trueValue이면 false로 생각하는 방식.   
+배열 여러번 사용해야 될 때 굳이 O(N)으로 배열값 전부 0으로 초기화하지 않아도 trueValue값만 O(1)로 바꾸면 되서 시간복잡도 줄이는 용. (이분 매칭 코드 참고)
