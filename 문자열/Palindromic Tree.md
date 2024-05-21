@@ -321,7 +321,7 @@ public propagate()함수에서는 suffix link를 기준으로 위상정렬하여
 Joint Tree는 tree[node].bitset[i]에 i번째 문자열이 해당 노드를 만들 수 있는지 여부를 저장   
 
 Joint Palindromic Tree에서 lcpLen() 함수는 time $O(N~I)$로 구현했다.    
-bitset<$I$>.count()이 $O(1)$인 줄 알았는데 $O(I)$였다.   
+bitset< $I$ >.count()이 $O(1)$인 줄 알았는데 $O(I)$였다.   
 그냥 모든 문자열에 공통인지만 알아도 되는 상황이면 굳이 bitset으로 모든 I개 문자열에 대한 정보를 저장할 필요없이 int형 변수 하나만 사용해서 time $O(N)$, space $O(N)$으로 구현 가능하다.   
 ```cpp
 // void insert(char c) 코드
