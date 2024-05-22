@@ -36,7 +36,7 @@
     * <span class="diamond">[스플레이 트리(D-)](/자료구조/BBST/SplayTree.md)</span>
     * <span class="">[링크/컷 트리(D+)]</span>
     * ~~<span class="">[AVL 트리]</span>~~
-    * ~~<span class="">[레드-블랙 트리]</span>~~
+    * <span class="">[레드-블랙 트리]</span>
   * #### 기타
     * <span class="gold">[분리 집합(G-)](/자료구조/기타/Disjoint%20Set.md)</span>
     * <span class="gold">[희소 배열(G+)](/자료구조/기타/Sparse%20Table.md)</span>
@@ -159,11 +159,12 @@
   * <span class="">[이산 로그(P+)]</span>
   * <span class="platinum">[밀러-라빈 소수 판별법(P+)](/수학/MillerRabin.md)</span>
   * <span class="platinum">[폴라드 로(P+)](/수학/PollardRho.md)</span>
+  * ~~<span class="">[카라츠바]</span>~~
   * <span class="platinum">[FFT(P+)](/수학/Fast%20Fourier%20Transform.md)</span>
+  * <span class="">[3진 FFT(D-)]</span>
   * <span class="">[정밀도 높은 FFT(D-)]</span>
   * <span class="diamond">[NTT(D-)](/수학/Number%20Theoretic%20Transform.md)</span>
   * <span class="">[다항식 나눗셈]</span>
-  * <span class="">[3진 FFT]</span>
   * <span class="">[online FFT]</span>
   * <span class="">[포함 배제의 원리, 뫼비우스 함수, 뫼비우스 반전(D-)]</span>
   * <span class="">[생성 함수(D-)]</span>
