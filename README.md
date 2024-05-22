@@ -73,11 +73,12 @@
     * <span class="">[현 그래프(D+)]</span>
     <!-- * <span class="">[최소 차수 MST]</span> -->
   * #### 네트워크 플로우
-    * <span class="platinum">[Edmonds-Karp algorithm(P-)]</span>
-    * <span class="">[Dinic's algorithm]</span>
+    <!-- 최대 유량 -->
+    * <span class="platinum">[최대유량: Edmonds-Karp (P-)](/그래프%20이론/네트워크%20플로우/Edmonds-Karp.md)</span>
+    * <span class="">[최대유량: Dinic (P-)]</span>
+    * <span class="">[최대유량: Push-Relabel (P-)]</span>
     * <span class="">[L-R flow]</span>
-    * <span class="">[디닉]</span>
-    * <span class="">[이분 매칭 O(VE)]</span>
+    * <span class="">[이분 매칭]</span>
     * <span class="">[Hopcraft-Karp]</span>
     * <span class="">[최소 비용 최대 유량(P+)]</span>
     <!-- * <span class="">[일반 매칭(D+)]</span> -->
