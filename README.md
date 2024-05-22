@@ -73,11 +73,14 @@
     * <span class="">[현 그래프(D+)]</span>
     <!-- * <span class="">[최소 차수 MST]</span> -->
   * #### 네트워크 플로우
+    * <span class="platinum">[Edmonds-Karp algorithm(P-)]</span>
+    * <span class="">[Dinic's algorithm]</span>
     * <span class="">[L-R flow]</span>
-    * <span class="">[최대 유량(P-)]</span>
-    * <span class="">[이분 매칭 디닉]</span>
+    * <span class="">[디닉]</span>
+    * <span class="">[이분 매칭 O(VE)]</span>
+    * <span class="">[Hopcraft-Karp]</span>
     * <span class="">[최소 비용 최대 유량(P+)]</span>
-    * <span class="">[일반 매칭(D+)]</span>
+    <!-- * <span class="">[일반 매칭(D+)]</span> -->
   * #### 트리
     * <span class="platinum">[최소 공통 조상(P-)](/그래프%20이론/트리/Lowest%20Common%20Ancestor.md)</span>
     * <span class="platinum">[LCA를 통한 트리 쿼리(P-)](/그래프%20이론/트리/Tree%20Query%20Using%20LCA.md)</span>
