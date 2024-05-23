@@ -303,7 +303,7 @@ public:
 $O(VE^2)$   
 
 ### Space-Time tradeoff
-map이 훨씬 느리긴 하지만 n^2배열 메모리초과 나는 경우엔 어쩔 수 없이 사용   
+cap, flow 선언할 때 n^2배열 메모리초과 나는 경우 map 사용
 
 * [도시 왕복하기 2](https://www.acmicpc.net/problem/2316) 채점결과   
     * map : (6264KB, 272ms)   
@@ -320,8 +320,9 @@ maxFlow()의 리턴값이 -1이라면 최대유량이 무한한 경우
 
 ### 백준문제
 [도시 왕복하기 1](https://www.acmicpc.net/problem/17412)    
-[도시 왕복하기 2](https://www.acmicpc.net/problem/2316) - 정점분할   
-[학교 가지마!](https://www.acmicpc.net/problem/1420) - 정점분할, 무한간선   
+[간선 끊어가기 2](https://www.acmicpc.net/problem/14286) - 양방향 간선   
+[도시 왕복하기 2](https://www.acmicpc.net/problem/2316) - 양방향 간선, 정점분할   
+[학교 가지마!](https://www.acmicpc.net/problem/1420) - 양방향 간선, 정점분할, 무한간선   
 
 ### 참고문헌
 https://en.wikipedia.org/wiki/Edmonds%E2%80%93Karp_algorithm
