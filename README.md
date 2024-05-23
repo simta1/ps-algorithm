@@ -77,6 +77,7 @@
     * <span class="platinum">[최대유량: Edmonds-Karp (P-)](/그래프%20이론/네트워크%20플로우/Edmonds-Karp.md)</span>
     * <span class="">[최대유량: Dinic (P-)]</span>
     * <span class="">[최대유량: Push-Relabel (P-)]</span>
+    * <span class="">[최대 유량 최소 컷 정리(P+)]</span>
     * <span class="">[L-R flow]</span>
     * <span class="">[이분 매칭]</span>
     * <span class="">[Hopcraft-Karp]</span>

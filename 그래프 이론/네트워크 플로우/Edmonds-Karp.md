@@ -17,6 +17,7 @@ public:
         adj[b].push_back(a); // residual graph
         if (!~c || cap[a][b] == INF) cap[a][b] = INF;
         else cap[a][b] += c;
+        // cap[b][a] = cap[a][b];
     }
 
     int maxFlow(int s, int e) { // 1-based
@@ -81,6 +82,7 @@ public:
         adj[b].push_back(a); // residual graph
         if (!~c || cap[{a, b}] == INF) cap[{a, b}] = INF;
         else cap[{a, b}] += c;
+        // cap[{b, a}] = cap[{a, b}];
     }
 
     int maxFlow(int s, int e) { // 1-based
@@ -154,7 +156,7 @@ public:
 
     void addEdge(int a, int b, T c=1) { // 1-based
         _addEdge(out(a), in(b), c);
-        _addEdge(out(b), in(a), c);
+        // _addEdge(out(b), in(a), c);
     }
 
     int maxFlow(int s, int e) { // 1-based
@@ -239,7 +241,7 @@ public:
 
     void addEdge(int a, int b, T c=1) { // 1-based
         _addEdge(out(a), in(b), c);
-        _addEdge(out(b), in(a), c);
+        // _addEdge(out(b), in(a), c);
     }
 
     int maxFlow(int s, int e) { // 1-based
@@ -311,13 +313,15 @@ map이 훨씬 느리긴 하지만 n^2배열 메모리초과 나는 경우엔 어
 무한간선 추가하려면 addEdge(a, b, c)에서 c=-1 사용   
 maxFlow()의 리턴값이 -1이라면 최대유량이 무한한 경우   
 
+양방향 간선일 경우 public addEdge()에서 주석 해제   
+
 미리 in(sink) -> out(sink)로 INF크기의 간선을 만들어 유량을 제한해두면 오버플로우 방지 가능   
-정점분할 코드에만 적용해뒀음, 1, 2번째 코드 사용할 때 조심해야 됨
+정점분할 코드에만 적용해뒀음, 1, 2번째 코드 사용할 때 조심해야 됨   
 
 ### 백준문제
 [도시 왕복하기 1](https://www.acmicpc.net/problem/17412)    
-[도시 왕복하기 2](https://www.acmicpc.net/problem/2316) - 정점분할, [양방향 간선을 단방향으로 바꿀 수 있는 이유](https://www.acmicpc.net/board/view/102712)   
-[학교 가지마!](https://www.acmicpc.net/problem/1420) - 정점분할, 무한간선
+[도시 왕복하기 2](https://www.acmicpc.net/problem/2316) - 정점분할   
+[학교 가지마!](https://www.acmicpc.net/problem/1420) - 정점분할, 무한간선   
 
 ### 참고문헌
 https://en.wikipedia.org/wiki/Edmonds%E2%80%93Karp_algorithm
