@@ -1,4 +1,4 @@
-snipe [카테고리](/README.md)
+[카테고리](/README.md)
 ### Matrix
 ```cpp
 template <typename T, T mod>
@@ -46,7 +46,7 @@ public:
 ```
 ### 시간복잡도 
 operator* $O(R^3)$   
-power $O(NR^3)$    
+power $O(logNR^3)$    
 
 ### 백준문제
 [행렬 제곱](https://www.acmicpc.net/problem/10830)

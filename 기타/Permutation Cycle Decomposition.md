@@ -1,4 +1,4 @@
-snipe [카테고리](/README.md)
+[카테고리](/README.md)
 ### Permutation Cycle Decomposition
 ```cpp
 class PermutationCycleDecomposition {

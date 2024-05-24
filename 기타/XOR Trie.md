@@ -56,7 +56,7 @@ public:
 };
 ```
 ### 시간복잡도 
-$O(log(N))$   
+$O(logN)$   
 
 ### 백준문제
 [수열과 쿼리 20](https://www.acmicpc.net/problem/16903)

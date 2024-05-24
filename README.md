@@ -78,10 +78,10 @@
     * <span class="">[최대유량: Dinic (P-)]</span>
     * <span class="">[최대유량: Push-Relabel (P-)]</span>
     * <span class="">[최대 유량 최소 컷 정리(P+)]</span>
+    * <span class="">[최소 비용 최대 유량(P+)]</span>
     * <span class="">[L-R flow]</span>
     * <span class="">[이분 매칭]</span>
     * <span class="">[Hopcraft-Karp]</span>
-    * <span class="">[최소 비용 최대 유량(P+)]</span>
     <!-- * <span class="">[일반 매칭(D+)]</span> -->
   * #### 트리
     * <span class="platinum">[최소 공통 조상(P-)](/그래프%20이론/트리/Lowest%20Common%20Ancestor.md)</span>
