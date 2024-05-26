@@ -30,6 +30,9 @@ ll phi(ll n) {
 $O(\sqrt{N})$   
 폴라드 로 사용 시 $O(\sqrt[4]{N})$
 
+### 주의사항
+n이 소수일 경우도 고려    
+
 ### 백준문제
 [GCD(n, k) = 1](https://www.acmicpc.net/problem/11689) - $O(\sqrt{N})$   
 [gcd(n, k) = 1](https://www.acmicpc.net/problem/13926) - $O(\sqrt[4]{N})$
