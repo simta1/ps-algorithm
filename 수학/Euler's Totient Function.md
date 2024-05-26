@@ -1,13 +1,13 @@
 [카테고리](/README.md)
 ### Euler's Totient(Phi) Function
 ```cpp
-ll phi(ll n) {
-    ll res = n, p = 2;
+template <typename T>
+T phi(T n) {
+    T res = n;
 
-    while (p * p <= n) {
-        if (n % p == 0) res = res / p * (p - 1);
+    for (long long p = 2; p * p <= n; p++) if (n % p == 0) {
         while (n % p == 0) n /= p;
-        ++p;
+        res = res / p * (p - 1);
     }
     if (n > 1) res = res / n * (n - 1);
 
