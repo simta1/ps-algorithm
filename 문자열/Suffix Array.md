@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### Mander Myers
+### Suffix Array (Mander-Myers)
 ```cpp
 vector<int> getSuffixArray(const string &st) {
     int n = st.size();
@@ -19,23 +19,22 @@ vector<int> getSuffixArray(const string &st) {
         sa = sorted;
     };
 
-    bool finished = false;
     for (int t = 1; ; t <<= 1) {
         countingSort(t);
         countingSort(0);
 
-        if (finished) break;
-
         nextGroup[sa[0]] = 1;
         for (int i = 1; i < n; i++) nextGroup[sa[i]] = nextGroup[sa[i - 1]] +  (group[sa[i - 1]] != group[sa[i]] || group[sa[i - 1] + t] != group[sa[i] + t]);
         group = nextGroup;
-        
-        finished = (group[sa.back()] == n);
+
+        if (group[sa.back()] == n) break;
     }
 
     return sa;
 }
-
+```
+### LCP Array (Kasai's algorithm)
+```cpp
 vector<int> getLCPArray(const string &st, const vector<int> &sa) {
     int n = st.size();
     vector<int> pos(n), lcp(n);
@@ -52,21 +51,20 @@ vector<int> getLCPArray(const string &st, const vector<int> &sa) {
 ```
 ### 시간복잡도 
 suffixArray $O(N~logN)$   
-lcp $O(N)$
+lcp $O(N)$   
 suffixArray $O(N)$ 알고리즘도 있지만 복잡해서 잘 안쓴다고 한다.
 
 ### 주의사항
-group는 0 초과의 값을 가져야 된다.
-인덱스 초과된 값들을 0으로 바꿔서 cnt[0]에 저장하므로 group이 0을 가지면 안 된다.
-nextGroup[sa[0]] = 1로 초기화하는 것도 같은 이유
+group의 원소는 0 초과의 값을 가져야 된다.   
+인덱스 초과된 값들은 0으로 바꿔서 cnt[0]에 저장하므로 group이 0을 가지면 안 된다.   
+nextGroup[sa[0]] = 1로 초기화하는 것도 같은 이유   
 
 ### 백준문제
 [Suffix Array](https://www.acmicpc.net/problem/9248)
 
 ### 원리
 pos는 sa배열에 대한 역함수   
-가장 긴 접미사부터 계산해가야 되서 필요함
-
+가장 긴 접미사부터 계산해가야 되서 필요함   
 아래 코드는 모두 동치
 ```cpp
 h = max(h - 1, 0)

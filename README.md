@@ -125,7 +125,7 @@
   * <span class="">[라빈 카프]</span>
   * <span class="">[아호 코라식]</span>
   * <span class="">[매내처]</span>
-  * <span class="">[접미사 배열]</span>
+  * <span class="platinum">[접미사 배열과 lcp 배열(P+)](/문자열/Suffix%20Array.md)</span>
   * <span class="">[Z algorithm]</span>
   * <span class="diamond">[회문 트리(D+)](/문자열/Palindromic%20Tree.md)</span>
 * ### 기하학
