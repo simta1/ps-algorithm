@@ -79,6 +79,7 @@
     * ~~<span class="">[최대유량: Push-Relabel (P-)]</span>~~
     * <span class="">[최대 유량 최소 컷 정리(P+)]</span>
     * <span class="">[최소 비용 최대 유량(P+)]</span>
+    * <span class="platinum">[이분 매칭(P-)](/그래프%20이론/네트워크%20플로우/Bipartite%20Matching.md)</span>
     * <span class="">[L-R flow]</span>
     * <span class="">[이분 매칭]</span>
     * <span class="">[Hopcraft-Karp]</span>
