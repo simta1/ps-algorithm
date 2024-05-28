@@ -27,7 +27,7 @@
     * <span class="platinum">[n차원 펜윅(P-)](/자료구조/세그먼트%20트리/Multi%20Dimensional%20FenwickTree.md)</span>
     * <span class="platinum">[레이지 세그(P-)](/자료구조/세그먼트%20트리/SegmentTree(Lazy%20Propagation).md)</span>
     * <span class="platinum">[다이나믹 세그, 다이나믹 레이지 세그(P-)](/자료구조/세그먼트%20트리/Dynamic%20SegmentTree.md)</span>
-    * <span class="platinum">[range GCD 세그(P+)](/자료구조/세그먼트%20트리/GCD%20SegmentTree.md)</span>
+    * ~~<span class="platinum">[range GCD 세그(P+)](/자료구조/세그먼트%20트리/GCD%20SegmentTree.md)</span>~~
     * <span class="platinum">[금광 세그(P+)](/자료구조/세그먼트%20트리/Gold%20Mine%20SegmentTree.md)</span>
     * <span class="">[퍼시스턴트 세그(P+)]</span>
     * <span class="">[리-차오 트리(D-)]</span>
@@ -76,7 +76,7 @@
     <!-- 최대 유량 -->
     * <span class="platinum">[최대유량: Edmonds-Karp (P-)](/그래프%20이론/네트워크%20플로우/Edmonds-Karp.md)</span>
     * <span class="">[최대유량: Dinic (P-)]</span>
-    * <span class="">[최대유량: Push-Relabel (P-)]</span>
+    * ~~<span class="">[최대유량: Push-Relabel (P-)]</span>~~
     * <span class="">[최대 유량 최소 컷 정리(P+)]</span>
     * <span class="">[최소 비용 최대 유량(P+)]</span>
     * <span class="">[L-R flow]</span>
