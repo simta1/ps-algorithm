@@ -55,6 +55,7 @@
     * <span class="">[0-1 bfs(G-)]</span>
     * <span class="gold">[다익스트라(G-)](/그래프%20이론/그래프/Dijkstra.md)</span>
     * <span class="gold">[벨만-포드(G-)](/그래프%20이론/그래프/Bellman-Ford.md)</span>
+    * <span class="gold">[SPFA(G-)](/그래프%20이론/그래프/SPFA.md)</span>
     * <span class="gold">[플로이드 워셜(G-)](/그래프%20이론/그래프/Floyd-Warshall.md)</span>
     * <span class="gold">[MST(G-)](/그래프%20이론/그래프/Minimum%20Spanning%20Tree.md)</span>
     * <span class="gold">[위상 정렬(G+)](/그래프%20이론/그래프/Topological%20Sort.md)</span>
@@ -79,10 +80,9 @@
     * ~~<span class="">[최대유량: Push-Relabel (P-)]</span>~~
     * <span class="">[최대 유량 최소 컷 정리(P+)]</span>
     * <span class="">[최소 비용 최대 유량(P+)]</span>
-    * <span class="platinum">[이분 매칭(P-)](/그래프%20이론/네트워크%20플로우/Bipartite%20Matching.md)</span>
     * <span class="">[L-R flow]</span>
-    * <span class="">[이분 매칭]</span>
-    * <span class="">[Hopcraft-Karp]</span>
+    * <span class="platinum">[이분 매칭(P-)](/그래프%20이론/네트워크%20플로우/Bipartite%20Matching.md)</span>
+    * <span class="">[이분 매칭: Hopcraft-Karp]</span>
     <!-- * <span class="">[일반 매칭(D+)]</span> -->
   * #### 트리
     * <span class="platinum">[최소 공통 조상(P-)](/그래프%20이론/트리/Lowest%20Common%20Ancestor.md)</span>
