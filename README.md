@@ -51,7 +51,6 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
     * <span class="gold">[희소 배열(G+)](/자료구조/기타/Sparse%20Table.md)</span>
     * <span class="">[로프]</span>
     * <span class="">[데카르트 트리]</span>
-    * <span class="">[접미사 트리(R-)]</span>
     * <span class="">[SPQR tree]</span>
     <!-- * <span class="">[B-tree]</span>
     * <span class="">[treap]</span>
@@ -87,7 +86,6 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
     * <span class="platinum">[최대유량: Edmonds-Karp (P-)](/그래프%20이론/네트워크%20플로우/Edmonds-Karp.md)</span>
     * <span class="">[최대유량: Dinic (P-)]</span>
     * ~~<span class="">[최대유량: Push-Relabel (P-)]</span>~~
-    * <span class="">[최대 유량 최소 컷 정리(P+)]</span>
     * <span class="">[최소 비용 최대 유량(P+)]</span>
     * <span class="">[L-R flow]</span>
     * <span class="platinum">[이분 매칭(P-)](/그래프%20이론/네트워크%20플로우/Bipartite%20Matching.md)</span>
@@ -113,10 +111,10 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
     * <span class="gold">[비트마스크 DP(G+)](/DP/여러%20DP%20유형/Bitmask%20DP.md)</span>
     * <span class="">[최단거리 역추적]</span>
     * <span class="">[SOS DP]</span>
-    * <span class="">[토글링]</span>
     * <span class="">[히르쉬버그(D+)]</span>
     * <span class="">[Connection Profile DP]</span>
   * #### 최적화
+    * <span class="">[토글링]</span>
     * <span class="gold">[비트셋 배낭(G-)](/DP/최적화/Bitset%20Knapsack.md)</span>
     * <span class="">[비트 집합]</span>
     * <span class="">[볼록껍질 최적화]</span>
@@ -138,6 +136,7 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
   * <span class="platinum">[접미사 배열과 lcp 배열(P+)](/문자열/Suffix%20Array.md)</span>
   * <span class="">[Z algorithm]</span>
   * <span class="diamond">[회문 트리(D+)](/문자열/Palindromic%20Tree.md)</span>
+  * <span class="">[접미사 트리(R-)]</span>
 * ### 기하학
   * <span class="gold">[cross product, CCW(G-)](/기하학/Cross%20Product,%20CCW.md)</span>
   * <span class="gold">[직선-점 거리 계산(G-)](/기하학/Distance.md)</span>
