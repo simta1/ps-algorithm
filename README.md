@@ -158,7 +158,7 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
   * <span class="silver">[분할정복 거듭제곱(S+)](/수학/Power.md)</span>
   * <span class="silver">[nCr, 파스칼의 삼각형(S+)](/수학/Combination%20by%20DP.md)</span>
   * <span class="gold">[행렬 거듭제곱(G-)](/수학/Matrix.md)</span>
-  * <span class="gold">[확장 유클리드 호제법, 모듈러 역원(G-)](/수학/ExtendedGCD,%20Modular%20Inverse.md)</span>
+  * <span class="gold">[확장 유클리드 호제법, 모듈러 역원(G+)](/수학/ExtendedGCD,%20Modular%20Inverse.md)</span>
   * <span class="gold">[오일러 파이 함수(G+)](/수학/Euler's%20Totient%20Function.md)</span>
   * <span class="">[가우스 소거법(P-)]</span>
   * <span class="">[키르히호프(A)]</span> <!-- https://www.acmicpc.net/problem/9614 -->
@@ -196,7 +196,7 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
   * <span class="">[삼분 탐색]</span>
   * <span class="">[병렬 이분 탐색(P+)]</span>
   * <span class="">[춤추는 링크, 크누스 X]</span>
-  * <span class="">[임의 정밀도(epsilon값 계산)]</span>
+  * <span class="">[임의 정밀도(epsilon값 계산)(A)]</span>
 * ### 게임 이론
   * <span class="">[스프라그-그런디]</span> <!-- (비트셋) -->
 * ### ~~휴리스틱~~
@@ -230,24 +230,22 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
   * <span class="information">[코딩 아이디어](/C++%20관련%20정보들/기타/Idea.md)</span>
 ---
 # 참고문헌
-```markdown
-tlsdydaud1
-https://00ad-8e71-00ff-055d.tistory.com/3
+tlsdydaud1   
+https://00ad-8e71-00ff-055d.tistory.com/3   
 
-jh05013
-https://jh05013.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/
+jh05013   
+https://jh05013.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/   
 
-jhnah917
-https://justicehui.github.io/tutorial/
-https://github.com/justiceHui/Unknown-To-Wellknown
+jhnah917   
+https://justicehui.github.io/tutorial/   
+https://github.com/justiceHui/Unknown-To-Wellknown   
 
 jin814   
-https://blog.naver.com/jinhan814/222439886998
-https://blog.naver.com/PostView.naver?blogId=jinhan814&logNo=222689836982&parentCategoryNo=&categoryNo=6&viewDate=&isShowPopularPosts=false&from=postView
+https://blog.naver.com/jinhan814/222439886998   
+https://blog.naver.com/PostView.naver?blogId=jinhan814&logNo=222689836982&parentCategoryNo=&categoryNo=6&viewDate=&isShowPopularPosts=false&from=postView   
 
-kcm1700
-https://algospot.com/wiki/read/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98_%EB%8C%80%ED%9A%8C%EC%97%90_%ED%95%84%EC%9A%94%ED%95%9C_%EC%88%98%ED%95%99
+kcm1700   
+https://algospot.com/wiki/read/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98_%EB%8C%80%ED%9A%8C%EC%97%90_%ED%95%84%EC%9A%94%ED%95%9C_%EC%88%98%ED%95%99   
 
-백준 알고리즘 분류
-https://www.acmicpc.net/problem/tags
-```
+백준 알고리즘 분류   
+https://www.acmicpc.net/problem/tags   
