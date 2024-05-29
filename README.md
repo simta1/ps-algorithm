@@ -7,8 +7,7 @@
   .additional { background-color:#E4BBFE }   
   .information { background-color:#ABCDEF }   
 </style>   
-
-### 문서 작성 규칙
+##
 변수명 통일 -> [참고](/C++%20관련%20정보들/기타/Variable%20Name.md)   
 markdown.json에 문서 작성용 템플릿 있음. SNIP explain으로 사용   
 __주의사항__ 에 코드 작성하면서 겪었던 런타임 에러나 오류들 기록   
@@ -16,6 +15,7 @@ __주의사항__ 에 코드 작성하면서 겪었던 런타임 에러나 오류
 __시간복잡도__ 는 LaTeX 수식 사용. log(N)은 괄호 없이 logN으로 표기   
 __사용관련__ 은 코드 사용할 때 참고할 내용 기록   
 __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 수 있도록 문제 링크 적어두기   
+##
 
 # ps algorithm
 티어 분류 :
