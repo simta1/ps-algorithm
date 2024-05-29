@@ -36,6 +36,10 @@ public:
 ### 시간복잡도 
 $O(VE)$   
 
+### 주의사항
+trueValue = 1을 for문 안에 써서 for (int i = 1, trueValue = 1, ... ) 로 하면 안 된다.   
+클래스 멤버 trueValue와 별개의 또 다른 trueValue가 된다.    
+
 ### 사용관련
 n1, n2는 이분 그래프의 각 부분의 개수   
 
