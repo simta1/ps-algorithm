@@ -8,6 +8,7 @@
   .information { background-color:#ABCDEF }   
 </style>   
 
+### 문서 작성 규칙
 변수명 통일 -> [참고](/C++%20관련%20정보들/기타/Variable%20Name.md)   
 markdown.json에 문서 작성용 템플릿 있음. SNIP explain으로 사용   
 __주의사항__ 에 코드 작성하면서 겪었던 런타임 에러나 오류들 기록   
