@@ -33,7 +33,7 @@ public:
 
             if (++cnt[cur] >= n) return false;
 
-            for (auto &[next, cost] : adj[cur]) if (dist[cur] + cost < dist[next]) {
+            for (auto &[next, cost] : adj[cur]) if (dist[next] > dist[cur] + cost) {
                 dist[next] = dist[cur] + cost;
                 if (!inqueue[next]) {
                     q.push(next);
