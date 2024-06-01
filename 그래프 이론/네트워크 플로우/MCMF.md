@@ -114,7 +114,7 @@ adj를 vector<vector<pair<int, C> > > 로 하면 문제 생기는 경우 있음.
 https://m.blog.naver.com/kks227/220810623254    
 https://www.crocus.co.kr/1090   
 
-### 문제있는 코드
+### 수정 전 코드
 문제되는 상황 예시   
 u->v 간선과 v->u간선 둘 다 존재한다면,   
 spfa()에서 cur=u일 때 u->v실제 간선과 v->u의 역간선(유령 간선)을 확인하게 됨.   
