@@ -20,9 +20,9 @@ private:
 public:
     Graph(int n) : n(n), DIST_INF(numeric_limits<C>::max()), adj(n + 1), FLOW_INF(numeric_limits<F>::max()), cap(n + 1, vector<F>(n + 1, 0)) {}
 
-    void addEdge(int a, int b, C c, F capacity=1) { // 1-based
-        adj[a].push_back({b, c, capacity, int(adj[b].size())});
-        adj[b].push_back({a, -c, 0, int(adj[a].size()) - 1}); // residual graph
+    void addEdge(int a, int b, C cost, F capacity=1) { // 1-based
+        adj[a].push_back({b, cost, capacity, int(adj[b].size())});
+        adj[b].push_back({a, -cost, 0, int(adj[a].size()) - 1}); // residual graph
         if (!~capacity || cap[a][b] == FLOW_INF) cap[a][b] = FLOW_INF;
         else cap[a][b] += capacity;
         // cap[b][a] = cap[a][b];
@@ -93,6 +93,34 @@ public:
     }
 };
 ```
+### 정점분할
+```cpp
+template <typename C, typename F> // C : cost, F : flow
+class VertexSplitedGraph {
+private:
+    Graph<C, F> graph;
+
+    int in(int a) { return 2 * a - 2; } // 1-based
+    int out(int a) { return 2 * a - 1; } // 1-based
+
+public:
+    VertexSplitedGraph(int n) : graph(2 * n) {
+        for (int i = 1; i <= n; i++) graph.addEdge(in(i), out(i), 0, 1);
+    }
+
+    void addEdge(int a, int b, C cost, F capacity=1) {
+        graph.addEdge(out(a), in(b), cost, capacity);
+        // graph.addEdge(out(b), in(a), cost, capacity); // 양방향 간선
+    }
+
+    pair<C, F> mcmf(int s, int e) {
+        graph.addEdge(in(s), out(s), 0, -1);
+        graph.addEdge(in(e), out(e), 0, -1);
+        // graph.addEdge(in(ORIG_SINK), out(ORIG_SINK), 0, -1);
+        return graph.mcmf(in(s), out(e));
+    }
+};
+```
 ### 시간복잡도 
 average $O(Ef)$   
 worst $\Omega(VEf)$   
@@ -106,6 +134,12 @@ adj를 vector<vector<pair<int, C> > > 로 하면 문제 생기는 경우 있음.
 
 ### 사용관련
 간선 추가할 때 가중치의 부호를 바꿔 저장하면 최대 비용 최대 유량도 계산 가능   
+
+정점분할을 사용할 경우 s와 e에 대해선 in() -> out()으로 무한 간선을 추가해주지만   
+[제독](https://www.acmicpc.net/problem/3640)처럼 가상의 s'을 만들고 s'->s로 이어주는 경우   
+in(s') -> out(s') 에만 무한 간선이 생기고, in(s)->out(s)에는 무한간선을 추가해주지 않아서 진짜 sink를 한번만 지나야 하는 제한이 생겨서 문제가 됨   
+해결하려면 VertexSplitedGraph::mcmf()에서 주석으로 표시한 것처럼 진짜 sink의 정점분할된 부분에 무한 간선을 추가하는 과정을 거치면 됨   
+좀 더 일반화해서, 정점분할을 원하지 않는 node들에 대해서 graph.addEdge(in(node), out(node), 0, -1) 추가해주면 됨.
 
 ### 백준문제
 [열혈강호 5](https://www.acmicpc.net/problem/11408)   
