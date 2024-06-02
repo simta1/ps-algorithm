@@ -1,7 +1,7 @@
 [카테고리](/README.md)
 ### Bipartite Matching
 ```cpp
-class Graph {
+class BipartiteGraph {
 private:
     vector<vector<int> > adj;
     vector<int> visited, assign;
@@ -19,7 +19,7 @@ private:
     }
 
 public:
-    Graph(int n1, int n2) : adj(n1 + 1), visited(n2 + 1, 0), assign(n2 + 1, -1) {}
+    BipartiteGraph(int n1, int n2) : adj(n1 + 1), visited(n2 + 1, 0), assign(n2 + 1, -1) {}
 
     void addEdge(int a, int b) { // 1-based
         adj[a].push_back(b);
