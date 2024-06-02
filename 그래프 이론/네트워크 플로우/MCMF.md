@@ -21,11 +21,12 @@ public:
     Graph(int n) : n(n), DIST_INF(numeric_limits<C>::max()), adj(n + 1), FLOW_INF(numeric_limits<F>::max()), cap(n + 1, vector<F>(n + 1, 0)) {}
 
     void addEdge(int a, int b, C cost, F capacity=1) { // 1-based
-        adj[a].push_back({b, cost, capacity, int(adj[b].size())});
-        adj[b].push_back({a, -cost, 0, int(adj[a].size()) - 1}); // residual graph
+        adj[a].push_back({b, cost, !~capacity ? FLOW_INF : capacity, int(adj[b].size())});
+        adj[b].push_back({a, -cost, 0, int(adj[a].size()) - 1}); // 단방향 간선일 때 residual graph
+        // adj[b].push_back({a, -cost, !~capacity ? FLOW_INF : capacity, int(adj[a].size()) - 1}); // 양방향 간선일 때 residual graph
         if (!~capacity || cap[a][b] == FLOW_INF) cap[a][b] = FLOW_INF;
         else cap[a][b] += capacity;
-        // cap[b][a] = cap[a][b];
+        // cap[b][a] = cap[a][b]; // 양방향 간선
     }
 
     pair<C, F> mcmf(int s, int e) { // 1-based
