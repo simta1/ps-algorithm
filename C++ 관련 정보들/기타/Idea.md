@@ -19,5 +19,13 @@ for (int i = 0; i < n; i++) {
 
 // 변경 후
 for (int i = 0, j = n - 1; i < n; j = i++) {}
+```
 
+# 사이값 확인
+```cpp
+// 변경 전
+return (a < b && b < c) || (c < b && b < a);
+
+// 변경 후
+return (b > a) != (b > c);
 ```
