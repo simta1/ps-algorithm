@@ -31,11 +31,11 @@ $O(N+M)$
 N, M은 각각 text, pattern의 길이
 
 ### 사용관련
-앞뒤가 이어진 원형 구조의 문자열에서 검색하고 싶다면 st2 = st + st로 이어붙인 뒤 st2에서 검색   
+st가 cyclic string이라면 st2 = st + st로 이어붙인 뒤 kmp(st2, pattern) 사용
 
 ### 백준문제
 [찾기](https://www.acmicpc.net/problem/1786)   
-[시계 사진들](https://www.acmicpc.net/problem/10266) - 원형   
+[시계 사진들](https://www.acmicpc.net/problem/10266) - cyclic   
 
 ### 참고문헌
 https://bowbowbow.tistory.com/6
