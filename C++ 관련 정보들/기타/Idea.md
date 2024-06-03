@@ -9,3 +9,15 @@ return (x > 0) - (x < 0);
 // ex) 올림해서 둘째 자리까지 출력
 cout << fixed << setprecision(2) << ans + 0.00499999 << "\n";
 ```
+
+# cyclic 순회
+```cpp
+// 변경 전 코드, % 사용해서 엄청 느림
+for (int i = 0; i < n; i++) {
+    int j = (i + 1) % n;
+}
+
+// 변경 후
+for (int i = 0, j = n - 1; i < n; j = i++) {}
+
+```
