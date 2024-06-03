@@ -39,7 +39,6 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
     * ~~<span class="platinum">[range GCD 세그(P+)](/자료구조/세그먼트%20트리/GCD%20SegmentTree.md)</span>~~
     * <span class="platinum">[금광 세그(P+)](/자료구조/세그먼트%20트리/Gold%20Mine%20SegmentTree.md)</span>
     * <span class="">[퍼시스턴트 세그(P+)]</span>
-    * <span class="">[리-차오 트리(D-)]</span>
     * <span class="">[세그트리 비츠(D+)]</span>
   * #### BBST
     * <span class="diamond">[스플레이 트리(D-)](/자료구조/BBST/SplayTree.md)</span>
@@ -52,6 +51,8 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
     * <span class="">[로프]</span>
     * <span class="">[데카르트 트리]</span>
     * <span class="">[SPQR tree]</span>
+    * <span class="">[Line container]</span>
+    * <span class="">[리-차오 트리(D-)]</span>
     <!-- * <span class="">[B-tree]</span>
     * <span class="">[treap]</span>
     * <span class="">[wavelet 트리(P+)]</span> -->
@@ -62,6 +63,7 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
   * #### 그래프
     * <span class="">[0-1 bfs(G-)]</span>
     * <span class="gold">[다익스트라(G-)](/그래프%20이론/그래프/Dijkstra.md)</span>
+    * ~~<span class="">[A*]</span>~~
     * <span class="gold">[벨만-포드(G-)](/그래프%20이론/그래프/Bellman-Ford.md)</span>
     * <span class="gold">[SPFA(G-)](/그래프%20이론/그래프/SPFA.md)</span>
     * <span class="gold">[플로이드 워셜(G-)](/그래프%20이론/그래프/Floyd-Warshall.md)</span>
@@ -87,6 +89,7 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
     * <span class="">[최대유량: Dinic (P-)]</span>
     * ~~<span class="">[최대유량: Push-Relabel (P-)]</span>~~
     * <span class="platinum">[최소 비용 최대 유량(P+)](/그래프%20이론/네트워크%20플로우/MCMF.md)</span>
+    * <span class="">[Stoer-Wagner Algorithm]</span>
     * <span class="">[L-R flow]</span>
     * <span class="platinum">[이분 매칭(P-)](/그래프%20이론/네트워크%20플로우/Bipartite%20Matching.md)</span>
     * <span class="">[이분 매칭: Hopcraft-Karp]</span>
@@ -129,6 +132,7 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
 * ### 문자열
   * <span class="gold">[트라이(G+)](/문자열/Trie.md)</span>
   * <span class="platinum">[KMP(P-)](/문자열/Knuth-Morris-Pratt%20Algorithm.md)</span>
+  * <span class="">[bitap algorithm]</span>
   * <span class="">[해싱]</span>
   * <span class="">[라빈 카프]</span>
   * <span class="">[아호 코라식]</span>
@@ -197,12 +201,9 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
   * <span class="">[병렬 이분 탐색(P+)]</span>
   * <span class="">[춤추는 링크, 크누스 X]</span>
   * <span class="">[임의 정밀도(epsilon값 계산)(A)]</span>
+  * ~~<span class="">[담금질 기법]</span>~~
 * ### 게임 이론
   * <span class="">[스프라그-그런디]</span> <!-- (비트셋) -->
-* ### ~~휴리스틱~~
-  * ~~<span class="">[A*]</span>~~
-  * ~~<span class="">[담금질 기법]</span>~~
-
 ---
 # 유용한 C++ 기능들
 * ### 문법
