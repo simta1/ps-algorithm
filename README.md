@@ -111,6 +111,7 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
     * <span class="">[행렬 곱셈 순서]</span>
     * <span class="">[TSP]</span>
   * #### 여러 DP 유형
+    * <span class="">[dfs 재귀 구현](/DP/여러%20DP%20유형/DP%20by%20dfs.md)</span>
     * <span class="gold">[비트마스크 DP(G+)](/DP/여러%20DP%20유형/Bitmask%20DP.md)</span>
     * <span class="">[최단거리 역추적]</span>
     * <span class="">[SOS DP]</span>
@@ -119,6 +120,7 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
   * #### 최적화
     * <span class="">[토글링]</span>
     * <span class="gold">[비트셋 배낭(G-)](/DP/최적화/Bitset%20Knapsack.md)</span>
+    * <span class="">[비트셋 LCS]</span>
     * <span class="">[비트 집합]</span>
     * <span class="">[볼록껍질 최적화]</span>
     * <span class="">[분할정복 최적화]</span>
