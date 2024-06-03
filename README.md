@@ -84,15 +84,17 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
     * <span class="">[현 그래프(D+)]</span>
     <!-- * <span class="">[최소 차수 MST]</span> -->
   * #### 네트워크 플로우
-    <!-- 최대 유량 -->
+    * <span class="platinum">[최대유량 알고리즘들 정리](/그래프%20이론/네트워크%20플로우/MaxFlow.md)</span>
     * <span class="platinum">[최대유량: Edmonds-Karp (P-)](/그래프%20이론/네트워크%20플로우/Edmonds-Karp.md)</span>
     * <span class="">[최대유량: Dinic (P-)]</span>
     * ~~<span class="">[최대유량: Push-Relabel (P-)]</span>~~
     * <span class="platinum">[최소 비용 최대 유량(P+)](/그래프%20이론/네트워크%20플로우/MCMF.md)</span>
-    * <span class="">[Stoer-Wagner Algorithm]</span>
-    * <span class="">[L-R flow]</span>
     * <span class="platinum">[이분 매칭(P-)](/그래프%20이론/네트워크%20플로우/Bipartite%20Matching.md)</span>
     * <span class="">[이분 매칭: Hopcraft-Karp]</span>
+    * <span class="">[Stoer-Wagner Algorithm]</span>
+    * <span class="">[Gomory-Hu Tree]</span>
+    * <span class="">[L-R flow]</span>
+    * ~~<span class="">[Blossom Algorithm]</span>~~
     <!-- * <span class="">[일반 매칭(D+)]</span> -->
   * #### 트리
     * <span class="platinum">[최소 공통 조상(P-)](/그래프%20이론/트리/Lowest%20Common%20Ancestor.md)</span>
