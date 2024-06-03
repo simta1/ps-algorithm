@@ -152,7 +152,7 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
   * <span class="platinum">[선분교차점 계산(P-)](/기하학/Line-Line%20Intersection%20calculate.md)</span>
   * <span class="platinum">[볼록 껍질(P-)](/기하학/Graham%20Scan.md)</span>
   * <span class="platinum">[가장 먼 두 점 : 회전하는 캘리퍼스(P-)](/기하학/Rotating%20Calipers.md)</span>
-  * <span class="">[오목 다각형 내부의 점 판정]</span>
+  * <span class="">[볼록 다각형 내부의 점 판정]</span>
   * <span class="">[가장 가까운 두 점(P+)]</span>
   * <span class="">[최소 외접원(P+)]</span>
   * <span class="">[반 나누기]</span>
