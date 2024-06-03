@@ -68,7 +68,7 @@ cout << dp.back();
 ### 시간복잡도
 dp[n]을 계산하는데 걸리는 시간:   
 x(i)가 단조증가인 경우(CHT::fastQuery 사용) $O(N)$   
-x(i)가 불규칙한 경우(CHT::query 사용) $O(NlogN)$   
+x(i)가 불규칙한 경우(CHT::query 사용) $O(N~logN)$   
 
 ### 사용관련
 $dp[i] = min_{j < i} \left[ slope(j) \cdot x(i) + y\_intercept(j) \right]$   
