@@ -158,6 +158,7 @@ public:
 ```
 ### 시간복잡도 
 $O(VE^2)$   
+밀집그래프에선 [디닉](/그래프%20이론/네트워크%20플로우/Dinic.md) 사용   
 
 ### Space-Time tradeoff
 cap, flow 선언할 때 n^2배열 메모리초과 나는 경우 map 사용
