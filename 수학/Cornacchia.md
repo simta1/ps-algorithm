@@ -27,4 +27,4 @@ $O()$
 작성 예정
 
 ### 참고문헌
-// https://en.wikipedia.org/wiki/Cornacchia%27s_algorithm
+https://en.wikipedia.org/wiki/Cornacchia%27s_algorithm
