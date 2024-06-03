@@ -27,5 +27,8 @@ T distLP(const Point<T> &p1, const Point<T> &p2, const Point<T> &p3) { // distan
 ### 사용관련
 p1 == p2일 때 distLP() 사용하면 division by 0 에러남
 
+### 백준문제
+[쓰레기 슈트](https://www.acmicpc.net/problem/4225)
+
 ### 원리
 [좌표 계산](/수학/Coordinates.md)
