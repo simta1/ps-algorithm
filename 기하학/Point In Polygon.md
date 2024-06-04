@@ -21,9 +21,9 @@ int ccw(const Point<T> &p1, const Point<T> &p2, const Point<T> &p3) {
 }
 
 template <typename T>
-int checkPointInPolygon(const vector<Point<T> > &polygon, const Point<T> &point) { // 0 : 외부, 1 : 내부, 2 : 경계
+int checkPointInPolygon(const vector<Point<T> > &polygon, const Point<T> &point) { // -1 : 내부, 0 : 경계, 1 : 외부
     int n = polygon.size();
-    if (n < 3) return false;
+    assert(n >= 3);
 
     bool inside = false;
     auto isBetween = [](T a, T b, T c) { return min(a, c) <= b && b <= max(a, c); };
@@ -33,7 +33,7 @@ int checkPointInPolygon(const vector<Point<T> > &polygon, const Point<T> &point)
         const auto &p2 = polygon[j];
 
         // 다각형 경계
-        if (ccw(p1, point, p2) == 0 && isBetween(p1.x, point.x, p2.x) && isBetween(p1.y, point.y, p2.y)) return 2;
+        if (ccw(p1, point, p2) == 0 && isBetween(p1.x, point.x, p2.x) && isBetween(p1.y, point.y, p2.y)) return 0;
 
         // 다각형 내부
         if (min(p1.y, p2.y) <= point.y && point.y < max(p1.y, p2.y)) {
@@ -42,7 +42,7 @@ int checkPointInPolygon(const vector<Point<T> > &polygon, const Point<T> &point)
         }
     }
 
-    return inside;
+    return 1 - 2 * inside;
 }
 ```
 ### 시간복잡도 
