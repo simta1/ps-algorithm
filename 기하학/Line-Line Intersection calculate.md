@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### Line-Line Intersection Calculate
+##### [Point, Cross Product](/기하학/Cross%20Product,%20CCW.md)
 ```cpp
 template <typename T>
 struct Point {
@@ -15,7 +15,9 @@ template <typename T>
 T crossProduct(const Point<T> &p1, const Point<T> &p2) {
     return (p1.x * p2.y - p2.x * p1.y);
 }
-
+```
+### Line-Line Intersection Calculate
+```cpp
 template <typename T>
 void printIntersection(const Point<T> &p1, const Point<T> &p2, const Point<T> &p3, const Point<T> &p4) {
     T cp = crossProduct(p2 - p1, p4 - p3);
