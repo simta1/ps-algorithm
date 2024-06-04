@@ -21,7 +21,7 @@ int ccw(const Point<T> &p1, const Point<T> &p2, const Point<T> &p3) {
 }
 
 template <typename T>
-int checkPointInPolygon(const vector<Point<T> > &polygon, const Point<T> &point) {
+int checkPointInPolygon(const vector<Point<T> > &polygon, const Point<T> &point) { // 0 : 외부, 1 : 내부, 2 : 경계
     int n = polygon.size();
     if (n < 3) return false;
 
