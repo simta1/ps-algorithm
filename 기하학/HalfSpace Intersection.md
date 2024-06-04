@@ -1,0 +1,31 @@
+<!-- $
+\begin{equation}
+a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n \le b_1 \\
+a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n \le b_2 \\
+\cdots \\
+a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n \le b_m \\
+\end{equation}
+$ -->
+$a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n \le b_1$   
+$a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n \le b_2$   
+$\cdots$   
+$a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n \le b_m$   
+
+$
+\begin{equation}
+A = \begin{pmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{m1} & a_{m2} & \cdots & a_{mn}
+\end{pmatrix}, ~~
+b = \begin{pmatrix}
+b_{1} \\
+b_{2} \\
+\vdots \\
+b_{m} \\
+\end{pmatrix}
+\end{equation}
+$
+
+$\therefore Ax <= b$
