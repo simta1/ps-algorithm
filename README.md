@@ -147,16 +147,19 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
   * <span class="">[접미사 트리(R-)]</span>
 * ### 기하학
   * <span class="gold">[cross product, CCW(G-)](/기하학/Cross%20Product,%20CCW.md)</span>
+  * <span class="">[볼록다각형 판정]</span>
   * <span class="gold">[직선-점 거리 계산(G-)](/기하학/Distance.md)</span>
   * <span class="gold">[선분교차판정(G+)](/기하학/Line-Line%20Intersection%20check.md)</span>
   * <span class="platinum">[선분교차점 계산(P-)](/기하학/Line-Line%20Intersection%20calculate.md)</span>
   * <span class="platinum">[볼록 껍질(P-)](/기하학/Graham%20Scan.md)</span>
   * <span class="platinum">[가장 먼 두 점 : 회전하는 캘리퍼스(P-)](/기하학/Rotating%20Calipers.md)</span>
+  * <span class="platinum">[다각형 내부의 점 판정(P-)](/기하학/Point%20In%20Polygon.md)</span>
   * <span class="">[볼록 다각형 내부의 점 판정]</span>
   * <span class="">[가장 가까운 두 점(P+)]</span>
   * <span class="">[최소 외접원(P+)]</span>
   * <span class="">[반 나누기]</span>
   * <span class="">[반평면 교집합(D-)]</span>
+  * <span class="">[반공간 교집합]</span>
   * <span class="">[KD tree]</span>
   * <span class="">[그린 정리(D+)]</span>
   * <span class="">[델로네 삼각분할(R-)]</span>
