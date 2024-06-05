@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### Point in Polygon
+##### [Point, Cross Product, CCW](/기하학/Cross%20Product,%20CCW.md)
 ```cpp
 template <typename T>
 struct Point {
@@ -19,7 +19,9 @@ int ccw(const Point<T> &p1, const Point<T> &p2, const Point<T> &p3) {
     T cp = crossProduct(p2 - p1, p3 - p1);
     return (cp > 0) - (cp < 0);
 }
-
+```
+### Point in Polygon
+```cpp
 template <typename T>
 int checkPointInPolygon(const vector<Point<T> > &polygon, const Point<T> &point) { // -1 : 내부, 0 : 경계, 1 : 외부
     int n = polygon.size();
