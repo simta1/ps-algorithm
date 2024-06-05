@@ -67,7 +67,7 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
     * <span class="gold">[벨만-포드(G-)](/그래프%20이론/그래프/Bellman-Ford.md)</span>
     * <span class="gold">[SPFA(G-)](/그래프%20이론/그래프/SPFA.md)</span>
     * <span class="gold">[플로이드 워셜(G-)](/그래프%20이론/그래프/Floyd-Warshall.md)</span>
-    * <span class="gold">[최소 스패닝 트리: Kruskal(G-)](/그래프%20이론/그래프/Minimum%20Spanning%20Tree.md)</span>
+    * <span class="gold">[최소 스패닝 트리: Kruskal(G-)](/그래프%20이론/그래프/MST(Kruskal).md)</span>
     * ~~<span class="">[최소 스패닝 트리: Prim(G-)]</span>~~
     * <span class="">[최소 스패닝 트리: Borůvka]</span>
     * <span class="gold">[위상 정렬(G+)](/그래프%20이론/그래프/Topological%20Sort.md)</span>
