@@ -23,6 +23,8 @@ $O(min(V^\frac{2}{3}, E^\frac{1}{2})E)$
 <!-- [메시라이브](https://www.acmicpc.net/problem/21731)    -->
 
 
+### 사용관련
+[플로우 애매하게 TLE날 때 고려해 볼 만한 사항](https://www.acmicpc.net/board/view/7649)
 
 ### 참고문헌
 https://gseok.gitbooks.io/algorithm/content/b124-d2b8-c6cc-d06c-d50c-b85c-c6b0/d3ec-b4dc-d480-cee4-c2a828-ford-fulkerson-c560-b4dc-baac-b4dc-ce74-d50428-edmonds-karp.html   

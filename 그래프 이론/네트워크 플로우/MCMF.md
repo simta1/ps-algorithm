@@ -144,6 +144,7 @@ in(s') -> out(s') 에만 무한 간선이 생기고, in(s)->out(s)에는 무한�
 
 ### 백준문제
 [열혈강호 5](https://www.acmicpc.net/problem/11408)   
+[책 구매하기](https://www.acmicpc.net/problem/11405) - 무한간선   
 
 ### 참고문헌
 https://m.blog.naver.com/kks227/220810623254    
