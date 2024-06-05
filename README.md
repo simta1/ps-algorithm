@@ -9,7 +9,10 @@
 </style>   
 ##
 변수명 통일 -> [참고](/C++%20관련%20정보들/기타/Variable%20Name.md)   
-markdown.json에 문서 작성용 템플릿 있음. SNIP explain으로 사용   
+vector쓸 땐 array doubling 고려   
+매개변수로 vector받을 때 가능하면 최대한 상수 참조 사용   
+
+VSC markdown.json에 문서 작성용 템플릿 있음. SNIP explain으로 사용   
 __주의사항__ 에 코드 작성하면서 겪었던 런타임 에러나 오류들 기록   
 코드를 사용할 때의 주의사항이 아니라 해당 코드 구현하면서 겪은 주의사항을 기록   
 __시간복잡도__ 는 LaTeX 수식 사용. log(N)은 괄호 없이 logN으로 표기   
