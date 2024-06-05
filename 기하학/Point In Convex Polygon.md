@@ -55,6 +55,7 @@ $O(logN)$
 
 ### 사용관련
 오목다각형에선 사용 불가   
+나눗셈 없이 ccw로 구현해서 Point<int> 등 정수형에서도 오차 없이 작동
 
 dir은 polygon에서 점들이 주어진 방향(반시계 : 1, 시계 : -1, 모르는 경우(default) : 0)   
 dir모르는 경우 그냥 checkPoint(polygon, point)로 호출   

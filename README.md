@@ -84,6 +84,7 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
     * <span class="">[도미네이터 트리(D-)]</span>
     * <span class="diamond">[유향 MST(D+)](/그래프%20이론/그래프/Directed%20Minimum%20Spanning%20Tree.md)</span>
     * <span class="">[현 그래프(D+)]</span>
+    * <span class="">[일반 매칭(D+)]</span>
     <!-- * <span class="">[최소 차수 MST]</span> -->
   * #### 네트워크 플로우
     * <span class="platinum">[최대유량 알고리즘들 정리](/그래프%20이론/네트워크%20플로우/MaxFlow.md)</span>
@@ -98,7 +99,6 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
     * <span class="">[헝가리안]</span>
     * <span class="">[L-R flow]</span>
     * ~~<span class="">[Blossom Algorithm]</span>~~
-    <!-- * <span class="">[일반 매칭(D+)]</span> -->
   * #### 트리
     * <span class="platinum">[최소 공통 조상(P-)](/그래프%20이론/트리/Lowest%20Common%20Ancestor.md)</span>
     * <span class="platinum">[LCA를 통한 트리 쿼리(P-)](/그래프%20이론/트리/Tree%20Query%20Using%20LCA.md)</span>

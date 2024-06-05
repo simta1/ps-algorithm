@@ -66,6 +66,7 @@ if (min(p1.y, p2.y) <= point.y && point.y < max(p1.y, p2.y))
 
 ### 사용관련
 오목/볼록 상관없이 단순다각형이라면 전부 사용 가능   
+나눗셈 없이 ccw로 구현해서 Point<int> 등 정수형에서도 오차 없이 작동
 
 ### 백준문제
 [지민이의 테러](https://www.acmicpc.net/problem/1688)
