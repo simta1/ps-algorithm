@@ -67,7 +67,9 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
     * <span class="gold">[벨만-포드(G-)](/그래프%20이론/그래프/Bellman-Ford.md)</span>
     * <span class="gold">[SPFA(G-)](/그래프%20이론/그래프/SPFA.md)</span>
     * <span class="gold">[플로이드 워셜(G-)](/그래프%20이론/그래프/Floyd-Warshall.md)</span>
-    * <span class="gold">[MST(G-)](/그래프%20이론/그래프/Minimum%20Spanning%20Tree.md)</span>
+    * <span class="gold">[최소 스패닝 트리: Kruskal(G-)](/그래프%20이론/그래프/Minimum%20Spanning%20Tree.md)</span>
+    * ~~<span class="">[최소 스패닝 트리: Prim(G-)]</span>~~
+    * <span class="">[최소 스패닝 트리: Borůvka]</span>
     * <span class="gold">[위상 정렬(G+)](/그래프%20이론/그래프/Topological%20Sort.md)</span>
     * <span class="platinum">[강한 연결 요소(P-)](/그래프%20이론/그래프/Strongly%20Connected%20Component.md)</span>
     * <span class="platinum">[2-SAT(P-)](/그래프%20이론/그래프/2-SAT.md)</span>
@@ -93,6 +95,7 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
     * <span class="">[이분 매칭: Hopcraft-Karp]</span>
     * <span class="">[Stoer-Wagner Algorithm]</span>
     * <span class="">[Gomory-Hu Tree]</span>
+    * <span class="">[헝가리안]</span>
     * <span class="">[L-R flow]</span>
     * ~~<span class="">[Blossom Algorithm]</span>~~
     <!-- * <span class="">[일반 매칭(D+)]</span> -->
@@ -158,6 +161,7 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
   * <span class="">[가장 가까운 두 점(P+)]</span>
   * <span class="">[최소 외접원(P+)]</span>
   * <span class="">[반 나누기]</span>
+  * <span class="">[불도저]</span>
   * <span class="">[반평면 교집합(D-)]</span>
   * <span class="">[반공간 교집합]</span>
   * <span class="">[KD tree]</span>
@@ -219,6 +223,7 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
   * <span class="information">[template argument deduction](/C++%20관련%20정보들/문법/Template%20Argument%20Deduction.md)</span>
   * <span class="">[람다 재귀]</span>
   * <span class="">[코드 여러줄 이어쓰기]</span>
+  * <span class="">[리터럴 여러줄 이어쓰기]</span>
 * ### 함수
   * <span class="">[수학관련]</span> <!-- atan, atan2 추가하기 -->
   * <span class="">[배열관련]</span>
