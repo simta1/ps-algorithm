@@ -1,4 +1,25 @@
 [카테고리](/README.md)
+##### [Point, Cross Product, CCW](/기하학/Cross%20Product,%20CCW.md)
+```cpp
+template <typename T>
+struct Point {
+    T x, y;
+    
+    bool operator<(const Point<T>  &other) const { return x == other.x ? y < other.y : x < other.x; }
+    Point operator-(const Point &other) const { return {x - other.x, y - other.y}; }
+};
+
+template <typename T>
+T crossProduct(const Point<T> &p1, const Point<T> &p2) {
+    return (p1.x * p2.y - p2.x * p1.y);
+}
+
+template <typename T>
+int ccw(const Point<T> &p1, const Point<T> &p2, const Point<T> &p3) { // -1 : 시계, 0 : 일직선, 1 : 반시계
+    T cp = crossProduct(p2 - p1, p3 - p1);
+    return (cp > 0) - (cp < 0);
+}
+```
 ### Point in Convex Polygon
 ```cpp
 template <typename T>

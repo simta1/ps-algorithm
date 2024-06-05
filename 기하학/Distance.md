@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### distance from line to point
+##### [Point, Cross Product](/기하학/Cross%20Product,%20CCW.md)
 ```cpp
 template <typename T>
 struct Point {
@@ -13,7 +13,9 @@ template <typename T>
 T crossProduct(const Point<T> &p1, const Point<T> &p2) {
     return (p1.x * p2.y - p2.x * p1.y);
 }
-
+```
+### distance from line to point
+```cpp
 template <typename T>
 T distPP(const Point<T> &p1, const Point<T> &p2) { // distance from P(point) to P(point)
     return sqrtl((p2.x - p1.x) * (p2.x - p1.x) + (p2.y - p1.y) * (p2.y - p1.y));

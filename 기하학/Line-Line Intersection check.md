@@ -17,7 +17,7 @@ T crossProduct(const Point<T> &p1, const Point<T> &p2) {
 }
 
 template <typename T>
-int ccw(const Point<T> &p1, const Point<T> &p2, const Point<T> &p3) {
+int ccw(const Point<T> &p1, const Point<T> &p2, const Point<T> &p3) { // -1 : 시계, 0 : 일직선, 1 : 반시계
     T cp = crossProduct(p2 - p1, p3 - p1);
     return (cp > 0) - (cp < 0);
 }
