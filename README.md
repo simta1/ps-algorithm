@@ -73,6 +73,8 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
     * <span class="gold">[최소 스패닝 트리: Kruskal(G-)](/그래프%20이론/그래프/MST(Kruskal).md)</span>
     * ~~<span class="">[최소 스패닝 트리: Prim(G-)]</span>~~
     * <span class="">[최소 스패닝 트리: Borůvka]</span>
+    * <span class="gold">[정점 착색수(G+)](/그래프%20이론/그래프/Graph%20Coloring.md)</span>
+    * <span class="">[간선 착색수]</span>
     * <span class="gold">[위상 정렬(G+)](/그래프%20이론/그래프/Topological%20Sort.md)</span>
     * <span class="platinum">[강한 연결 요소(P-)](/그래프%20이론/그래프/Strongly%20Connected%20Component.md)</span>
     * <span class="platinum">[2-SAT(P-)](/그래프%20이론/그래프/2-SAT.md)</span>
