@@ -230,11 +230,11 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
 * ### 함수
   * <span class="">[수학관련]</span> <!-- atan, atan2 추가하기 -->
   * <span class="">[배열관련]</span>
+  * <span class="information">[문자열관련](/C++%20관련%20정보들/함수/string.md)</span>
   * <span class="information">[이분탐색 람다함수](/C++%20관련%20정보들/함수/lower_bound_lambda.md)</span>
   * <span class="">[permutation]</span>
   * <span class="">[custom pq]</span>
   * <span class="">[io manip]</span>
-  * <span class="">[문자열관련]</span> <!-- substr, istringstream, getline -->
 * ### ps용 설정
   * <span class="">[cph]</span>
   * <span class="">[snippet]</span>
