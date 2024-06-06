@@ -16,7 +16,7 @@ vector쓸 땐 array doubling 고려
 ### 카테고리 작성
 css로 티어색깔 표시. \<span class="tier"> 사용   
 알고리즘의 난이도는 1~3은 +, 4~5는 -로 표시. ex) 브론즈3 이상: B+   
-백준에 단일 태그로 존재하는 주요 알고리즘은 __볼드체__ 로 표시   
+백준에 단일 태그로 존재하는 주요 알고리즘이나 유명한 트릭은 __볼드체__ 로 표시   
 이외 지엽적이거나 추가적인 구현체는 _이텔릭체_ 로 표시   
 <!-- 별로 중요하지 않거나 구현계획 없는 알고리즘은 ~~취소선~~으로 표시 -->
 
@@ -40,18 +40,18 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
 
 * ### 자료구조
   * #### 세그먼트 트리
-    * <span class="gold">[펜윅 트리(G+)](/자료구조/세그먼트%20트리/FenwickTree.md)</span>
-    * <span class="gold">[세그먼트 트리(G+)](/자료구조/세그먼트%20트리/SegmentTree.md)</span>
-    * <span class="platinum">[머지소트 트리(P-)](/자료구조/세그먼트%20트리/MergesortTree.md)</span>
-    * <span class="platinum">[2D 펜윅(P-)](/자료구조/세그먼트%20트리/FenwickTree2D.md)</span>
-    * <span class="platinum">[2D 세그(P-)](/자료구조/세그먼트%20트리/SegmentTree2D.md)</span>
-    * <span class="platinum">[n차원 펜윅(P-)](/자료구조/세그먼트%20트리/Multi%20Dimensional%20FenwickTree.md)</span>
-    * <span class="platinum">[레이지 세그(P-)](/자료구조/세그먼트%20트리/SegmentTree(Lazy%20Propagation).md)</span>
-    * <span class="platinum">[다이나믹 세그, 다이나믹 레이지 세그(P-)](/자료구조/세그먼트%20트리/Dynamic%20SegmentTree.md)</span>
-    * ~~<span class="platinum">[range GCD 세그(P+)](/자료구조/세그먼트%20트리/GCD%20SegmentTree.md)</span>~~
-    * <span class="platinum">[금광 세그(P+)](/자료구조/세그먼트%20트리/Gold%20Mine%20SegmentTree.md)</span>
-    * <span class="">[퍼시스턴트 세그(P+)]</span>
-    * <span class="">[세그트리 비츠(D+)]</span>
+    * <span class="gold">[__펜윅 트리(G+)__](/자료구조/세그먼트%20트리/FenwickTree.md)</span>
+    * <span class="gold">[__세그먼트 트리(G+)__](/자료구조/세그먼트%20트리/SegmentTree.md)</span>
+    * <span class="platinum">[__머지소트 트리(P-)__](/자료구조/세그먼트%20트리/MergesortTree.md)</span>
+    * <span class="platinum">[__2D 펜윅(P-)__](/자료구조/세그먼트%20트리/FenwickTree2D.md)</span>
+    * <span class="platinum">[__2D 세그(P-)__](/자료구조/세그먼트%20트리/SegmentTree2D.md)</span>
+    * <span class="platinum">[__n차원 펜윅(P-)__](/자료구조/세그먼트%20트리/Multi%20Dimensional%20FenwickTree.md)</span>
+    * <span class="platinum">[__레이지 세그(P-)__](/자료구조/세그먼트%20트리/SegmentTree(Lazy%20Propagation).md)</span>
+    * <span class="platinum">[__다이나믹 세그, 다이나믹 레이지 세그(P-)__](/자료구조/세그먼트%20트리/Dynamic%20SegmentTree.md)</span>
+    * <span class="platinum">[_range GCD 세그(P+)_](/자료구조/세그먼트%20트리/GCD%20SegmentTree.md)</span>
+    * <span class="platinum">[__금광 세그(P+)__](/자료구조/세그먼트%20트리/Gold%20Mine%20SegmentTree.md)</span>
+    * <span class="">[__퍼시스턴트 세그(P+)__]</span>
+    * <span class="">[__세그트리 비츠(D+)__]</span>
   * #### BBST
     * <span class="diamond">[스플레이 트리(D-)](/자료구조/BBST/SplayTree.md)</span>
     * <span class="">[링크/컷 트리(D+)]</span>
