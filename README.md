@@ -246,6 +246,7 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
   * <span class="">[permutation]</span>
   * <span class="">[custom pq]</span>
   * <span class="">[io manip]</span>
+  * <span class="">[ext/pb_ds]</span>
 * ### ps용 설정
   * <span class="">[cph]</span>
   * <span class="">[snippet]</span>
@@ -275,5 +276,10 @@ https://blog.naver.com/PostView.naver?blogId=jinhan814&logNo=222689836982&parent
 kcm1700   
 https://algospot.com/wiki/read/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98_%EB%8C%80%ED%9A%8C%EC%97%90_%ED%95%84%EC%9A%94%ED%95%9C_%EC%88%98%ED%95%99   
 
+https://algospot.com/wiki/read/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98_%EB%8C%80%ED%9A%8C%EC%97%90_%ED%95%84%EC%9A%94%ED%95%9C_%EA%B8%B0%ED%95%98
+
 백준 알고리즘 분류   
 https://www.acmicpc.net/problem/tags   
+
+선형대수학   
+https://tistory.joonhyung.xyz/18   
