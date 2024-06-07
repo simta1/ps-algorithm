@@ -23,7 +23,7 @@ int ccw(const Point<T> &p1, const Point<T> &p2, const Point<T> &p3) { // -1 : �
 ### Point in Convex Polygon
 ```cpp
 template <typename T>
-int checkPointInPolygon(const vector<Point<T> > &polygon, const Point<T> &point, int dir=0) { // -1 : 내부, 0 : 경계, 1 : 외부
+int checkPointInConvexPolygon(const Point<T> &point, const vector<Point<T> > &polygon, int dir=0) { // -1 : 내부, 0 : 경계, 1 : 외부
     int n = polygon.size();
     assert(n >= 3);
 
@@ -31,6 +31,7 @@ int checkPointInPolygon(const vector<Point<T> > &polygon, const Point<T> &point,
         int i = 2;
         while (!dir) dir = ccw(polygon[0], polygon[1], polygon[i++]);
     }
+    assert(dir != 0); // dir = 0이면 모든 점이 일직선 위에 존재
 
     if (ccw(polygon[0], polygon[1], point) * dir < 0) return 1;
     if (ccw(polygon[0], polygon[n - 1], point) * dir > 0) return 1;
@@ -43,8 +44,9 @@ int checkPointInPolygon(const vector<Point<T> > &polygon, const Point<T> &point,
     }
 
     if (hi == n) { // polygon[0], polygon[n - 1], point가 일직선인 경우
-        T res = fabsl(point.x - polygon[0].x) - fabsl(polygon[lo].x - polygon[0].x);
-        return (res > 0) - (res < 0);
+        T distToPolygon = fabsl(polygon[n - 1].x - polygon[0].x) + fabsl(polygon[n - 1].y - polygon[0].y);
+        T distToPoint = fabsl(point.x - polygon[0].x) + fabsl(point.y - polygon[0].y);
+        return distToPoint > distToPolygon;
     }
 
     return -ccw(polygon[lo], polygon[hi], point) * dir;
@@ -52,6 +54,34 @@ int checkPointInPolygon(const vector<Point<T> > &polygon, const Point<T> &point,
 ```
 ### 시간복잡도 
 $O(logN)$   
+
+### 주의사항
+polygon[0], polygon[n - 1], point가 일직선인 경우 polygon[0]에서 두 점 polygon[n - 1], point까지의 거리를 비교할 때 x좌표나 y좌표 중 하나만 사용해서 계산하면 안 된다. 어차피 세 점이 한 직선 위에 있어 기울기가 같으니 x, y좌표 중 하나만 사용해도 될 것 같지만, 세 점이 모두 x좌표가 같거나 혹은 y좌표가 같은 경우 거리가 전부 0으로 계산되므로 x, y좌표 둘 모두를 고려해야 된다.
+```cpp
+if (hi == n) { // polygon[0], polygon[n - 1], point가 일직선인 경우
+
+    // 잘못된 코드
+    T distToPolygon = fabsl(polygon[n - 1].x - polygon[0].x);
+    T distToPoint = fabsl(point.x - polygon[0].x);
+    return distToPoint > distToPolygon;
+    
+    // 고친 코드
+    T distToPolygon = fabsl(polygon[n - 1].x - polygon[0].x) + fabsl(polygon[n - 1].y - polygon[0].y);
+    T distToPoint = fabsl(point.x - polygon[0].x) + fabsl(point.y - polygon[0].y);
+    return distToPoint > distToPolygon;
+
+}
+```
+polygon[0], polygon[n - 1], point가 일직선에 있다는 것은 애초에 point가 다각형 내부에 있을 수 없다는 뜻이다. 다각형 외부 또는 다각형의 경계에 존재한다.
+
+```cpp
+// 잘못된 코드
+T diff = distToPoint - distToPolygon;
+return (diff > 0) - (diff < 0);
+
+// 고친 코드
+return distToPoint > distToPolygon;
+```
 
 ### 사용관련
 오목다각형에선 사용 불가   
