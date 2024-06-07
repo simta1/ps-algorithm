@@ -23,7 +23,7 @@ int ccw(const Point<T> &p1, const Point<T> &p2, const Point<T> &p3) { // -1 : �
 ### Point in Polygon
 ```cpp
 template <typename T>
-int checkPointInPolygon(const vector<Point<T> > &polygon, const Point<T> &point) { // -1 : 내부, 0 : 경계, 1 : 외부
+int checkPointInPolygon(const Point<T> &point, const vector<Point<T> > &polygon) { // -1 : 내부, 0 : 경계, 1 : 외부
     int n = polygon.size();
     assert(n >= 3);
 
