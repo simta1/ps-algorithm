@@ -67,9 +67,6 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
     * <span class="">[SPQR tree]</span>
     * <span class="">[treap]</span>
     * <span class="">[wavelet 트리(P+)]</span> -->
-* ### 쿼리 관련
-  * <span class="platinum">[Mo's algorithm(P+)](/쿼리%20관련/Mo's%20Algorithm.md)</span>
-  * <span class="platinum">[평방분할(P+)](/쿼리%20관련/Sqrt%20Decomposition.md)</span>
 * ### 그래프 이론
   * #### 그래프
     * <span class="">[0-1 bfs(G-)]</span>
@@ -222,6 +219,8 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
   * <span class="">[imos]</span>
   * <span class="platinum">[XOR 트라이(P-)](/기타/XOR%20Trie.md)</span>
   * <span class="">[삼분 탐색]</span>
+  * <span class="platinum">[Mo's algorithm(P+)](/쿼리%20관련/Mo's%20Algorithm.md)</span>
+  * <span class="platinum">[평방분할(P+)](/쿼리%20관련/Sqrt%20Decomposition.md)</span>
   * <span class="">[병렬 이분 탐색(P+)]</span>
   * <span class="">[춤추는 링크, 크누스 X]</span>
   * <span class="">[임의 정밀도(epsilon값 계산)(A)]</span>
@@ -245,8 +244,6 @@ stateDiagram-v2
 자료구조 --> 스플레이_트리
 자료구조 --> 분리_집합
 자료구조 --> 희소_배열
-쿼리관련 --> Mo's
-쿼리관련 --> 평방분할
 그래프_이론 --> 그래프
   그래프 --> 이분_그래프_판정
   그래프 --> 다익스트라
@@ -302,6 +299,8 @@ FFT --> NTT
 [*] --> 값_좌표_압축
 [*] --> 순열_사이클_분할
 트라이 --> XOR_트라이
+[*] --> Mo's
+[*] --> 평방분할
 
 %% 사전지식 간선
 비트_트릭 --> 펜윅_트리
