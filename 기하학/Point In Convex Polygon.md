@@ -91,7 +91,8 @@ dir은 polygon에서 점들이 주어진 방향(반시계 : 1, 시계 : -1, 모�
 dir모르는 경우 그냥 checkPoint(polygon, point)로 호출   
 
 ### 백준문제
-[미스테리 싸인](https://www.acmicpc.net/problem/20670)
+[미스테리 싸인](https://www.acmicpc.net/problem/20670) - 테스트케이스 좀 약한 듯   
+[점 분리](https://www.acmicpc.net/problem/3878)
 
 ### 참고문헌
 https://velog.io/@vkdldjvkdnj/boj09875   
