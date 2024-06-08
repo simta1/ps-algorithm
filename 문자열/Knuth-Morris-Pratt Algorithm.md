@@ -1,15 +1,24 @@
 [카테고리](/README.md)
+### Fail Function
+```cpp
+vector<int> getPi(const string &st) {
+    vector<int> pi(st.size());
+
+    for (int i = 1, j = 0; i < st.size(); i++) {
+        while (j > 0 && st[i] != st[j]) j = pi[j - 1];
+        if (st[i] == st[j]) pi[i] = ++j;
+    }
+    
+    return pi;
+}
+```
 ### KMP
 ```cpp
 vector<int> kmp(const string &st, const string &pattern) {
     int n = st.size();
     int m = pattern.size();
 
-    vector<int> pi(m);
-    for (int i = 1, j = 0; i < m; i++) {
-        while (j > 0 && pattern[i] != pattern[j]) j = pi[j - 1];
-        if (pattern[i] == pattern[j]) pi[i] = ++j;
-    }
+    auto pi = getPi(pattern);
     
     vector<int> res;
     for(int i = 0, j = 0; i < n; i++){
