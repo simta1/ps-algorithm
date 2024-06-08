@@ -45,7 +45,7 @@ private:
 public:
     Graph(int n) : n(n), adj(2 * n), visited(2 * n, -1), sccNumber(2 * n, -1) {}
 
-    void addEdge(int a, int b) {
+    void addEdge(int a, int b) { // 1-based
         adj[getNode(-a)].push_back(getNode(b));
         adj[getNode(-b)].push_back(getNode(a));
     }
@@ -67,16 +67,23 @@ public:
 ### 시간복잡도 
 $O(V + E)$   
 
-### 주의사항
-문제 조건에 따라 추가 간선을 잘 설정해야 된다.   
-[아이돌](https://www.acmicpc.net/problem/3648) 문제의 경우 상근이가 무조건 진출할 수 있도록 해야하므로   
-findSCC()하기 전 adj[getNode(-1)].push_back(getNode(1)); 를 추가해서 1이 무조건 true이도록 해야 된다.   
+### 사용관련
+addEdge에서 false, true는 각각 -, +부호로 표현
+```cpp
+// (!x1 or x2) 
+graph.addEdge(-1, 2);
 
-getNode()함수의 코드를 return (abs(a) - 1) * 2 + (a > 0); 대신 return (abs(a) - 1) * 2 + (a < 0);로 바꿔면 findSCC에서 무조건 -i가 i보다 먼저 dfs()되므로 간선을 딱히 추가하지 않고도 해결할 수 있지만 이런 방법보다는 직접 간선을 추가함으로써 조건을 명시해주는 것이 더욱 확실하고 안전하다.   
-getNode()함수의 순서를 조작하는 방법은 실수할 확률이 높고 혹시나 제출이 맞더라도 틀왜맞 코드가 되기 쉽다.
+// (!x2 or !x3)
+graph.addEdge(-2, -3);
+```
+
+true를 강제하고 싶은 값이 있다면 추가 간선을 설정해주면 된다.   
+x가 true여야 된다면 adj[getNode(-x)].push_back(getNode(x));를 추가하면 된다.   
+이 방식으로 1-sat과 2-sat이 혼합된 경우도 해결할 수 있다.   
 
 ### 백준문제
-[2-SAT - 4](https://www.acmicpc.net/problem/11281)
+[2-SAT - 4](https://www.acmicpc.net/problem/11281)   
+[아이돌](https://www.acmicpc.net/problem/3648) - 1-sat 포함   
 
 ### 원리
 false -> true 꼴이 되야 함   
