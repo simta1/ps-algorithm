@@ -125,6 +125,7 @@ mermaid사용
     * <span class="">[탑 트리(R-)]</span>
 * ### DP
   * #### 유명한 문제
+    * <span class="silver">[Kadane algorithm(S+)](/DP/유명한%20문제/Kadane%20Algorithm.md)</span>
     * <span class="">[배낭 문제(G-)]</span>
     * <span class="">[LIS]</span>
     * <span class="">[LCS]</span>
