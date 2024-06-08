@@ -59,7 +59,7 @@ public:
         return true;
     }
 
-    bool getValue(int i) {
+    bool getValue(int i) { // 1-based
         return sccNumber[getNode(i)] < sccNumber[getNode(-i)];
     }
 };
@@ -68,6 +68,7 @@ public:
 $O(V + E)$   
 
 ### 사용관련
+CNF에서 or로 연결된 부분들을 addEdge하여 사용
 addEdge에서 false, true는 각각 -, +부호로 표현
 ```cpp
 // (!x1 or x2) 
