@@ -45,7 +45,11 @@ private:
 public:
     Graph(int n) : n(n), adj(2 * n), visited(2 * n, -1), sccNumber(2 * n, -1) {}
 
-    void addEdge(int a, int b) { // 1-based
+    void add1SAT(int a) { // 1-based
+        adj[getNode(-a)].push_back(getNode(a));
+    }
+
+    void add2SAT(int a, int b) { // 1-based
         adj[getNode(-a)].push_back(getNode(b));
         adj[getNode(-b)].push_back(getNode(a));
     }
@@ -68,23 +72,19 @@ public:
 $O(V + E)$   
 
 ### 사용관련
-CNF에서 or로 연결된 부분들을 addEdge하여 사용
-addEdge에서 false, true는 각각 -, +부호로 표현
+true를 강제하고 싶은 값이 있다면 add1SAT() 사용   
+CNF에서 or로 연결된 부분들은 add2SAT()하여 사용   
+false, true는 각각 -, +부호로 표현   
 ```cpp
 // (!x1 or x2) 
-graph.addEdge(-1, 2);
+graph.add2SAT(-1, 2);
 
 // (!x2 or !x3)
-graph.addEdge(-2, -3);
+graph.add2SAT(-2, -3);
 ```
-
-true를 강제하고 싶은 값이 있다면 추가 간선을 설정해주면 된다.   
-x가 true여야 된다면 adj[getNode(-x)].push_back(getNode(x));를 추가하면 된다.   
-이 방식으로 1-sat과 2-sat이 혼합된 경우도 해결할 수 있다.   
-
 ### 백준문제
 [2-SAT - 4](https://www.acmicpc.net/problem/11281)   
-[아이돌](https://www.acmicpc.net/problem/3648) - 1-sat 포함   
+[아이돌](https://www.acmicpc.net/problem/3648) - 1SAT 포함   
 
 ### 원리
 false -> true 꼴이 되야 함   
