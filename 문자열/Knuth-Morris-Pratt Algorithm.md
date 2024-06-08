@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### Fail Function
+### Fail Function (string)
 ```cpp
 vector<int> getPi(const string &st) {
     vector<int> pi(st.size());
@@ -12,9 +12,47 @@ vector<int> getPi(const string &st) {
     return pi;
 }
 ```
-### KMP
+### KMP (string)
 ```cpp
 vector<int> kmp(const string &st, const string &pattern) {
+    int n = st.size();
+    int m = pattern.size();
+
+    auto pi = getPi(pattern);
+    
+    vector<int> res;
+    for(int i = 0, j = 0; i < n; i++){
+        while(j > 0 && st[i] != pattern[j]) j = pi[j - 1];
+        if (st[i] == pattern[j]) {
+            if(j == m - 1) {
+                res.push_back(i - m + 1);
+                j = pi[j];
+            }
+            else ++j;
+        }
+    }
+    
+    return res;
+}
+```
+### Fail Function (vector\<T>)
+```cpp
+template <typename T>
+vector<int> getPi(const vector<T> &st) {
+    vector<int> pi(st.size());
+
+    for (int i = 1, j = 0; i < st.size(); i++) {
+        while (j > 0 && st[i] != st[j]) j = pi[j - 1];
+        if (st[i] == st[j]) pi[i] = ++j;
+    }
+
+    return pi;
+}
+```
+### KMP (vector\<T>)
+```cpp
+template <typename T>
+vector<int> kmp(const vector<T> &st, const vector<T> &pattern) {
     int n = st.size();
     int m = pattern.size();
 
