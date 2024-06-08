@@ -73,6 +73,24 @@ query $O(logN)$
 ### 주의사항
 range update가 필요한 경우 lazy propagation 사용
 
+### 사용관련
+i번째 값에 val만큼 더하려면 updateAdd(i, val);   
+i번째 값을 val로 바꾸려면 updateChange(i, val);   
+
+상황에 맞게 merge()함수 변경해서 사용   
+```cpp
+// ex) mod sum
+T merge(const T &a, const T &b) {
+    return (a + b) % mod;
+}
+
+// ex) max segment tree
+T merge(const T &a, const T &b) {
+    return max(a, b);
+}
+```
+min segment tree 사용할 땐 private query()에서 return 0대신 return INF로 변경   
+
 ### 백준 문제
 [구간 합 구하기](https://www.acmicpc.net/problem/2042)
 
