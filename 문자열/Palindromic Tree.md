@@ -103,6 +103,14 @@ public:
         print(1, "");
         print(2, "");
     }
+
+    ll count() {
+        propagate();
+
+        ll res = 0;
+        for (int i = 3; i < tree.size(); i++) res += tree[i].cnt;
+        return res;
+    }
 };
 ```
 ### Palindromic Tree (eertree) - time $O(N)$, space $O(26N)$
@@ -196,11 +204,11 @@ public:
         }
     }
 
-    ll solve() {
+    ll count() {
         propagate();
-        
+
         ll res = 0;
-        for (int i = 3; i < tree.size(); i++) if (tree[i].len > 0) res = max(res, ll(tree[i].len) * tree[i].cnt);
+        for (int i = 3; i < tree.size(); i++) res += tree[i].cnt;
         return res;
     }
 };
