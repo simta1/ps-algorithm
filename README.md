@@ -156,10 +156,10 @@ mermaid사용
   * <span class="gold">[트라이(G+)](/문자열/Trie.md)</span>
   * <span class="platinum">[매내처(P-)](/문자열/Manacher.md)</span>
   * <span class="platinum">[KMP(P-)](/문자열/Knuth-Morris-Pratt%20Algorithm.md)</span>
+  * <span class="platinum">[아호 코라식(P+)](/문자열/Aho_Corasick.md)</span>
   * ~~<span class="">[bitap algorithm]</span>~~
   * <span class="">[해싱]</span>
   * <span class="">[라빈 카프]</span>
-  * <span class="">[아호 코라식]</span>
   * <span class="platinum">[접미사 배열과 lcp 배열(P+)](/문자열/Suffix%20Array.md)</span>
   * <span class="">[Z algorithm]</span>
   * <span class="diamond">[회문 트리(D+)](/문자열/Palindromic%20Tree.md)</span>
@@ -213,6 +213,9 @@ mermaid사용
   * <span class="additional">[Cornacchia's algorithm(A)](/수학/Cornacchia.md)</span>
   * <span class="">[메르텐스 함수]</span>
   * <span class="">[매트로이드(R-)]</span>
+* ### 게임 이론
+  * <span class="">[스프라그-그런디]</span> <!-- (비트셋) -->
+  * <span class="">[hackenbush]</span>
 * ### 기타
   * <span class="silver">[이분 탐색(S-)](/기타/Binary%20Search.md)</span>
   * <span class="silver">[비트마스크(S-)](/기타/Bitmask.md)</span>
@@ -231,8 +234,6 @@ mermaid사용
   * <span class="">[춤추는 링크, 크누스 X]</span>
   * <span class="">[임의 정밀도(epsilon값 계산)(A)]</span>
   * ~~<span class="">[담금질 기법]</span>~~
-* ### 게임 이론
-  * <span class="">[스프라그-그런디]</span> <!-- (비트셋) -->
 
 ## 알고리즘별 필요 사전지식
 ```mermaid
@@ -313,11 +314,13 @@ FFT --> NTT
 %% [*] --> 문자열
 문자열 --> 트라이
 트라이 --> XOR_트라이
+문자열 --> KMP
+트라이 --> 아호_코라식
+KMP --> 아호_코라식
+문자열 --> 접미사_배열과_lcp_배열
 문자열 --> 펠린드롬
 펠린드롬 --> 매내처
 펠린드롬 --> 회문_트리
-문자열 --> KMP
-문자열 --> 접미사_배열과_lcp_배열
 
 %% [*] --> 기하학
 기하학 --> 외적
@@ -402,3 +405,6 @@ https://tistory.joonhyung.xyz/18
 
 bowbowbow   
 https://bowbowbow.tistory.com/category/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98   
+
+kks227   
+https://m.blog.naver.com/kks227?categoryNo=299&tab=1   
