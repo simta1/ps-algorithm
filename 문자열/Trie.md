@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### Trie (class template)
+### Trie (vector\<T>)
 ```cpp
 template <typename T>
 class Trie {
