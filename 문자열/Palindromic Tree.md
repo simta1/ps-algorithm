@@ -69,7 +69,7 @@ private:
 
 public:
     PalindromicTree() : PalindromicTree("") {}
-    PalindromicTree(string st) : tree(3) {
+    PalindromicTree(const string &st) : tree(3) {
         tree[1] = Node(-1, 1);
         tree[2] = Node(0, 1);
         last = 2;
@@ -174,7 +174,7 @@ private:
 
 public:
     PalindromicTree() : PalindromicTree("") {}
-    PalindromicTree(string st) : tree(3) {
+    PalindromicTree(const string &st) : tree(3) {
         tree[1] = Node(-1, 1);
         tree[2] = Node(0, 1);
         last = 2;
