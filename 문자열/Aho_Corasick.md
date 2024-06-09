@@ -193,5 +193,5 @@ ggqq/'a'{Enter}l~q5@q
 [문자열 집합 판별](https://www.acmicpc.net/problem/9250)   
 
 ### 참고문헌
-https://m.blog.naver.com/kks227/220992598966
+https://m.blog.naver.com/kks227/220992598966   
 https://www.geeksforgeeks.org/aho-corasick-algorithm-pattern-searching/   
