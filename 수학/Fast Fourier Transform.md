@@ -3,8 +3,8 @@
 ```cpp
 namespace FourierTransform {
     using ll = long long;
-    using ld = long double;
-    // using ld = double;
+    // using ld = long double;
+    using ld = double;
     using cpx = complex<ld>;
     const ld PI = acos(-1); 
 
@@ -93,7 +93,7 @@ conv할 벡터의 크기를 미리 2의 거듭제곱으로 맞춘 뒤 multiply()
 if ((n >> 1) != a.size()) n <<= 1; 코드 덕분에 메모리 효율이 꽤 개선된다. (아래 __사용관련__ 참고)
 
 ### 사용관련
-최대/최소값의 범위가 그리 크지 않다면 using ld = double;로 long double 대신 double 사용   
+최대/최소값의 범위가 그리 크지 않다면 using ld = double; 사용   
 long double과 double 시간 차이가 꽤 크게 난다.   
 [큰 수 곱셈 (2)](https://www.acmicpc.net/problem/15576) 문제 기준으로 long double에서 688ms였던 코드가 double로 바꾸니 268ms까지 줄어듦
 
