@@ -154,12 +154,12 @@ mermaid사용
   <!-- * <span class="">[aliens 트릭(D-)]</span> -->
 * ### 문자열
   * <span class="gold">[트라이(G+)](/문자열/Trie.md)</span>
+  * <span class="platinum">[매내처(P-)](/문자열/Manacher.md)</span>
   * <span class="platinum">[KMP(P-)](/문자열/Knuth-Morris-Pratt%20Algorithm.md)</span>
   * ~~<span class="">[bitap algorithm]</span>~~
   * <span class="">[해싱]</span>
   * <span class="">[라빈 카프]</span>
   * <span class="">[아호 코라식]</span>
-  * <span class="">[매내처]</span>
   * <span class="platinum">[접미사 배열과 lcp 배열(P+)](/문자열/Suffix%20Array.md)</span>
   * <span class="">[Z algorithm]</span>
   * <span class="diamond">[회문 트리(D+)](/문자열/Palindromic%20Tree.md)</span>
@@ -313,9 +313,11 @@ FFT --> NTT
 %% [*] --> 문자열
 문자열 --> 트라이
 트라이 --> XOR_트라이
+문자열 --> 펠린드롬
+펠린드롬 --> 매내처
+펠린드롬 --> 회문_트리
 문자열 --> KMP
 문자열 --> 접미사_배열과_lcp_배열
-문자열 --> 회문_트리
 
 %% [*] --> 기하학
 기하학 --> 외적
