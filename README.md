@@ -89,7 +89,7 @@ mermaid사용
     * <span class="gold">[위상 정렬(G+)](/그래프%20이론/그래프/Topological%20Sort.md)</span>
     * <span class="platinum">[강한 연결 요소(P-)](/그래프%20이론/그래프/Strongly%20Connected%20Component.md)</span>
     * <span class="platinum">[2-SAT(P-)](/그래프%20이론/그래프/2-SAT.md)</span>
-    * <span class="">[오일러 회로(P-)]</span>
+    * <span class="platinum">[오일러 회로(P-)](/그래프%20이론/그래프/Eulerian%20Circuit.md)</span>
     * <span class="platinum">[단절점(P-)](/그래프%20이론/그래프/Articulation%20Point.md)</span>
     * <span class="platinum">[단절선(P-)](/그래프%20이론/그래프/Articulation%20Bridge.md)</span>
     * <span class="">[이중 연결 요소]</span>
