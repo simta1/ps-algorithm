@@ -95,12 +95,13 @@ public:
     }
 };
 ```
-### Aho-Corasick (array 구현, 소문자 알파벳 전용)
+### Aho-Corasick (array 구현)
 ```cpp
+template <char alphabet, int N>
 class AhoCorasickTrie {
 private:
     struct Node {
-        array<Node *, 26> mp;
+        array<Node *, N> mp;
         Node *fail;
         bool end = false;
 
@@ -113,16 +114,16 @@ private:
         }
 
         bool have(char val) {
-            return mp[val - 'a'];
+            return mp[val - alphabet];
         }
 
         Node *go(char val) {
             if (!have(val)) {
                 Node *node = new Node;
-                mp[val - 'a'] = node;
+                mp[val - alphabet] = node;
             }
 
-            return mp[val - 'a'];
+            return mp[val - alphabet];
         }
     } *root;
 
@@ -146,7 +147,7 @@ public:
             Node *cur = q.front();
             q.pop();
 
-            for (int i = 0; i < 26; i++) {
+            for (int i = 0; i < N; i++) {
                 auto next = cur->mp[i];
                 if (!next) continue;
 
@@ -154,8 +155,8 @@ public:
                 else {
                     Node *dest = cur->fail;
 
-                    while (dest != root && !dest->have(i + 'a')) dest = dest->fail;
-                    if (dest->have(i + 'a')) dest = dest->go(i + 'a');
+                    while (dest != root && !dest->have(i + alphabet)) dest = dest->fail;
+                    if (dest->have(i + alphabet)) dest = dest->go(i + alphabet);
                     next->fail = dest;
                 }
 
@@ -214,13 +215,33 @@ cnt += ll(cur->end);로 명시해줄 경우 속도저하가 줄어들긴 하지�
 findSubstring() 사용하기 전에 무조건 makeFailFunction()먼저 호출 후 사용   
 
 1번째 구현은 문자 종류없이 항상 사용 가능하고 메모리도 적게 쓰지만 속도가 살짝 느림   
-2번째 구현의 경우 map 대신 배열을 사용하므로 속도는 더 빠르지만 문자의 종류가 알파벳 소문자만 있을 때로 제한 됨.   
-알파벳 대문자만 있는 경우는 코드에서 직접 'a'부분을 전부 'A'로 바꿔서 사용   
-'A'로 바꾼 코드도 추가할까 싶었는데 너무 필요없는 내용으로 문서가 길어지게 될 것 같아 vim매크로로 대체   
-ggqq/'a'{Enter}l~q5@q   
+2번째 구현의 경우 map 대신 배열을 사용하므로 속도는 더 빠르지만 문자의 종류가 제한됨   
 
+template \<char alphabet, int N>에서 alphabet은 문자열이 전부 소문자로 이루어졌다면 'a', 대문자라면 'A' 사용   
+```cpp
+// 소문자
+AhoCorasickTrie<'a', 26> aho;
+
+// 대문자
+AhoCorasickTrie<'A', 26> aho;
+```
+array는 초기화할 때 fill을 사용하므로 O(N)의 시간복잡도가 들기 때문에 array크기는 줄일 수 있다면 최대한 줄이는 게 좋음   
+알파벳의 종류가 26개 전부 주어지는 상황이 아니라면 template의 N을 조절해 사용   
+대신 이 경우 미리 입력받은 문자열을 알맞게 변환해 사용해야 됨   
+```cpp
+// ex) 문자가 'A', 'G', 'C', 'T'만 주어지는 경우
+for (auto &c : st) {
+    if (c == 'A') c = 'a';
+    else if (c == 'G') c = 'b';
+    else if (c == 'C') c = 'c';
+    else c = 'd';
+}
+
+AhoCorasickTrie<'a', 4> aho;
+```
 ### 백준문제
 [문자열 집합 판별](https://www.acmicpc.net/problem/9250)   
+[돌연변이](https://www.acmicpc.net/problem/10256) - 문자 4종류만 주어짐, array 크기 조절   
 
 ### 참고문헌
 https://m.blog.naver.com/kks227/220992598966   
