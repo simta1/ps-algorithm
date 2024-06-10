@@ -38,6 +38,8 @@ public:
     AhoCorasickTrie() : root(new Node()) {}
     ~AhoCorasickTrie() { delete root; }
 
+    void print() { print(root, 0); }
+
     void insert(const string &st) {
         Node *cur = root;
         for (auto &ch : st) cur = cur->go(ch);
@@ -78,6 +80,18 @@ public:
             if (cur->end) return true;
         }
         return false;
+    }
+    
+    long long countSubstring(const string &st) {
+        Node *cur = root;
+        long long cnt = 0;
+
+        for (auto &e : st) {
+            while (cur != root && !cur->have(e)) cur = cur->fail;
+            if (cur->have(e)) cur = cur->go(e);
+            if (cur->end) ++cnt;
+        }
+        return cnt;
     }
 };
 ```
@@ -160,6 +174,18 @@ public:
         }
         return false;
     }
+    
+    long long countSubstring(const string &st) {
+        Node *cur = root;
+        long long cnt = 0;
+
+        for (auto &e : st) {
+            while (cur != root && !cur->have(e)) cur = cur->fail;
+            if (cur->have(e)) cur = cur->go(e);
+            if (cur->end) ++cnt;
+        }
+        return cnt;
+    }
 };
 ```
 ### 시간복잡도 
@@ -179,6 +205,10 @@ AhoCorasickTrie::find()함수 변경
 ### 주의사항
 소멸자 ~Node()에서 delete fail;하면 안 됨   
 go방향으로 순서대로 delete하면 어차피 전부다 삭제되는데 중간에 delete fail; 넣으면 순서 엉킴   
+
+countSubstring()에서 if (cur->end) ++cnt;를 cnt += cur->end;로 바꾸면 오히려 더 느려짐   
+cnt는 long long, cur->end는 bool이므로 형변환 때문에 속도저하가 꽤 큼   
+cnt += ll(cur->end);로 명시해줄 경우 속도저하가 줄어들긴 하지만 이 경우에는 그냥 if문 쓰는 게 더 나을 듯   
 
 ### 사용관련
 findSubstring() 사용하기 전에 무조건 makeFailFunction()먼저 호출 후 사용   
