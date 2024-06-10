@@ -1,21 +1,6 @@
 [카테고리](/README.md)
-### MST
+##### [Disjoint Set](/자료구조/기타/Disjoint%20Set.md)
 ```cpp
-#include <bits/stdc++.h>
-using namespace std;
-
-struct Edge {
-    int cost, s, e;
-
-    Edge(int cost, int s, int e) : cost(cost), s(s), e(e) {}
-};
-
-struct Compare {
-    bool operator()(const Edge &bottom, const Edge &top) const {
-        return bottom.cost > top.cost;
-    }
-};
-
 class DisjointSet {
 private:
     vector<int> parent;
@@ -38,42 +23,55 @@ public:
         return find(a) == find(b);
     }
 };
-
-int main() {
-    cin.tie(0) -> sync_with_stdio(0);
-
-    int n, m;
-    cin >> n >> m;
-
-    priority_queue<Edge, vector<Edge>, Compare> edges;
-    for (int i = 0; i < m; i++) {
-        int a, b, c;
-        cin >> a >> b >> c;
-        edges.push(Edge(c, a, b));
-    }
-
-    DisjointSet ds(n + 1);
-    int ans = 0;
-
-    while (!edges.empty()) {
-        auto [cost, u, v] = edges.top();
-        edges.pop();
-        
-        if (!ds.isConnected(u, v)) {
-            ds.merge(u, v);
-            ans += cost;
-        }
-    }
-
-    cout << ans;
-    return 0;
-}
 ```
-어차피 edge들만 저장하면 되는데 Graph 클래스까지 만들기 귀찮다.   
-언젠간 리팩토링해서 다시 올리지 않을까
+### MST (Kruskal's algorithm)
+```cpp
+template <typename T>
+class Graph {
+private:
+    struct Edge {
+        int s, e;
+        T cost;
 
+        Edge(int s, int e, T cost) : s(s), e(e), cost(cost) {}
+    };
+
+    struct Compare {
+        bool operator()(const Edge &bottom, const Edge &top) const {
+            return bottom.cost > top.cost;
+        }
+    };
+
+    int n;
+    priority_queue<Edge, vector<Edge>, Compare> edges;
+
+public:
+    Graph(int n) : n(n) {}
+
+    void addEdge(int u, int v, int w) {
+        edges.push({u, v, w});
+    }
+
+    T MST() {
+        T res = 0;
+        DisjointSet ds(n + 1);
+
+        while (!edges.empty()) {
+            auto [u, v, cost] = edges.top();
+            edges.pop();
+
+            if (!ds.isConnected(u, v)) {
+                ds.merge(u, v);
+                res += cost;
+            }
+        }
+        
+        return res;
+    }
+};
+```
 ### 시간복잡도 
-$O(N~logN)$   
+$O(E~logE)$   
 
 ### 백준문제
-[최소 스패닝 트리](https://www.acmicpc.net/problem/1197)
+[최소 스패닝 트리](https://www.acmicpc.net/problem/1197)   
