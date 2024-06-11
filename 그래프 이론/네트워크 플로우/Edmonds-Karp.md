@@ -9,12 +9,33 @@ private:
     F INF;
     vector<vector<F> > cap;
 
+    bool bfs(int s, int e, vector<int> &parent, vector<vector<F> > &flow) { // find augmenting path
+        fill(parent.begin(), parent.end(), -1);
+
+        queue<int> q;
+        q.push(s);
+        
+        while (!q.empty()) {
+            int cur = q.front();
+            q.pop();
+
+            for (auto &next : adj[cur]) if (!~parent[next] && cap[cur][next] > flow[cur][next]) {
+                q.push(next);
+                parent[next] = cur;
+                if (next == e) return true;
+            }
+        }
+
+        return false;
+    };
+
 public:
     Graph(int n) : n(n), adj(n + 1), INF(numeric_limits<F>::max()), cap(n + 1, vector<F>(n + 1, 0)) {}
 
     void addEdge(int a, int b, F capacity=1) { // 1-based
         adj[a].push_back(b);
         adj[b].push_back(a); // residual graph
+
         if (!~capacity || cap[a][b] == INF) cap[a][b] = INF;
         else cap[a][b] += capacity;
         // cap[b][a] = cap[a][b]; // 양방향 간선, 정점분할했다면 VertexSplitedGraph::addEdge()부분 주석만 바꾸고 여긴 건들면 안됨
@@ -25,27 +46,7 @@ public:
         vector<vector<F> > flow(n + 1, vector<F>(n + 1, 0));
         vector<int> parent(n + 1);
 
-        auto bfs = [&]() { // find augmenting path
-            fill(parent.begin(), parent.end(), -1);
-
-            queue<int> q;
-            q.push(s);
-            
-            while (!q.empty()) {
-                int cur = q.front();
-                q.pop();
-
-                for (auto &next : adj[cur]) if (!~parent[next] && cap[cur][next] > flow[cur][next]) {
-                    q.push(next);
-                    parent[next] = cur;
-                    if (next == e) return true;
-                }
-            }
-
-            return false;
-        };
-
-        while (bfs()) {
+        while (bfs(s, e, parent, flow)) {
             F f = INF;
             for (int cur = e; cur != s; cur = parent[cur]) {
                 int prev = parent[cur];
@@ -74,12 +75,33 @@ private:
     F INF;
     map<pair<int, int>, F> cap;
 
+    bool bfs(int s, int e, vector<int> &parent, map<pair<int, int>, F> &flow) { // find augmenting path
+        fill(parent.begin(), parent.end(), -1);
+
+        queue<int> q;
+        q.push(s);
+        
+        while (!q.empty()) {
+            int cur = q.front();
+            q.pop();
+
+            for (auto &next : adj[cur]) if (!~parent[next] && cap[{cur, next}] > flow[{cur, next}]) {
+                q.push(next);
+                parent[next] = cur;
+                if (next == e) return true;
+            }
+        }
+
+        return false;
+    };
+
 public:
     Graph(int n) : n(n), adj(n + 1), INF(numeric_limits<F>::max()) {}
 
     void addEdge(int a, int b, F capacity=1) { // 1-based
         adj[a].push_back(b);
         adj[b].push_back(a); // residual graph
+        
         if (!~capacity || cap[{a, b}] == INF) cap[{a, b}] = INF;
         else cap[{a, b}] += capacity;
         // cap[{b, a}] = cap[{a, b}]; // 양방향 간선, 정점분할했다면 VertexSplitedGraph::addEdge()부분 주석만 바꾸고 여긴 건들면 안됨
@@ -90,27 +112,7 @@ public:
         map<pair<int, int>, F> flow;
         vector<int> parent(n + 1);
 
-        auto bfs = [&]() { // find augmenting path
-            fill(parent.begin(), parent.end(), -1);
-
-            queue<int> q;
-            q.push(s);
-            
-            while (!q.empty()) {
-                int cur = q.front();
-                q.pop();
-
-                for (auto &next : adj[cur]) if (!~parent[next] && cap[{cur, next}] > flow[{cur, next}]) {
-                    q.push(next);
-                    parent[next] = cur;
-                    if (next == e) return true;
-                }
-            }
-
-            return false;
-        };
-
-        while (bfs()) {
+        while (bfs(s, e, parent, flow)) {
             F f = INF;
             for (int cur = e; cur != s; cur = parent[cur]) {
                 int prev = parent[cur];
