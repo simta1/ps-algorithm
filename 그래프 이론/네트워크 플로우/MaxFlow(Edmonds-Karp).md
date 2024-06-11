@@ -7,9 +7,10 @@ private:
     int n;
     vector<vector<int> > adj;
     F INF;
-    vector<vector<F> > cap;
+    vector<vector<F> > cap, flow;
+    vector<int> parent;
 
-    bool bfs(int s, int e, vector<int> &parent, vector<vector<F> > &flow) { // find augmenting path
+    bool bfs(int s, int e) { // find augmenting path
         fill(parent.begin(), parent.end(), -1);
 
         queue<int> q;
@@ -30,7 +31,7 @@ private:
     };
 
 public:
-    Graph(int n) : n(n), adj(n + 1), INF(numeric_limits<F>::max()), cap(n + 1, vector<F>(n + 1, 0)) {}
+    Graph(int n) : n(n), adj(n + 1), INF(numeric_limits<F>::max()), cap(n + 1, vector<F>(n + 1, 0)), flow(n + 1, vector<F>(n + 1, 0)), parent(n + 1) {}
 
     void addEdge(int a, int b, F capacity=1) { // 1-based
         adj[a].push_back(b);
@@ -43,10 +44,8 @@ public:
 
     int maxFlow(int s, int e) { // 1-based
         int res = 0;
-        vector<vector<F> > flow(n + 1, vector<F>(n + 1, 0));
-        vector<int> parent(n + 1);
 
-        while (bfs(s, e, parent, flow)) {
+        while (bfs(s, e)) {
             F f = INF;
             for (int cur = e; cur != s; cur = parent[cur]) {
                 int prev = parent[cur];
@@ -73,9 +72,10 @@ private:
     int n;
     vector<vector<int> > adj;
     F INF;
-    map<pair<int, int>, F> cap;
+    map<pair<int, int>, F> cap, flow;
+    vector<int> parent;
 
-    bool bfs(int s, int e, vector<int> &parent, map<pair<int, int>, F> &flow) { // find augmenting path
+    bool bfs(int s, int e) { // find augmenting path
         fill(parent.begin(), parent.end(), -1);
 
         queue<int> q;
@@ -96,7 +96,7 @@ private:
     };
 
 public:
-    Graph(int n) : n(n), adj(n + 1), INF(numeric_limits<F>::max()) {}
+    Graph(int n) : n(n), adj(n + 1), INF(numeric_limits<F>::max()), parent(n + 1) {}
 
     void addEdge(int a, int b, F capacity=1) { // 1-based
         adj[a].push_back(b);
@@ -109,10 +109,8 @@ public:
 
     F maxFlow(int s, int e) { // 1-based
         int res = 0;
-        map<pair<int, int>, F> flow;
-        vector<int> parent(n + 1);
 
-        while (bfs(s, e, parent, flow)) {
+        while (bfs(s, e)) {
             F f = INF;
             for (int cur = e; cur != s; cur = parent[cur]) {
                 int prev = parent[cur];
@@ -181,11 +179,25 @@ maxFlow()의 리턴값이 -1이라면 최대유량이 무한한 경우
 가상의 s'을 만들어서 s' -> s로 용량 INF의 간선을 만들고 s'->e의 최대유량을 계산하면 오버플로우 방지 가능   
 정점분할에선 in(sink) -> out(sink)로 INF크기의 간선을 만들기 때문에 신경 안써도 됨   
 
+최대유량에 직접적으로 영향을 주는, 즉 간선의 용량을 줄일 경우 최대유량도 줄어들게 되는 간선을 찾으려면 maxFlow()를 먼저 호출한 뒤 각 간선의 양 끝점 u, v에 대해 bfs(u, v)를 확인   
+if (!bfs(u, v))라면 u에서 v의 모든 용량이 최대유량에 필수적으로 사용되고 있는 경우이므로 최대유량에 직접적으로 영향을 미치고 있는 간선   
+단순히 cap[u][v] == flow[u][v]로 간선이 포화되어있는지만 확인하는 것으론 부족한데, 예를 들어 아래 그래프에서 maxFlow(1, 4)를 호출하였고 1->3으로 유량 2를 흘려주고 있는 상황이라면 cap[1][3] == flow[1][3]으로 포화되어있지만 1->3의 간선의 용량을 줄인다 하더라도 1->2->3을 거쳐서 줄인 용량만큼 흘려보내줄 수 있으므로 최대유량은 감소하지 않음   
+```mermaid
+stateDiagram-v2
+direction LR
+
+1 --> 2:2
+2 --> 3:2
+1 --> 3:2
+3 --> 4:2
+```
+
 ### 백준문제
 [도시 왕복하기 1](https://www.acmicpc.net/problem/17412)    
 [간선 끊어가기 2](https://www.acmicpc.net/problem/14286) - 양방향 간선   
 [도시 왕복하기 2](https://www.acmicpc.net/problem/2316) - 양방향 간선, 정점분할   
 [학교 가지마!](https://www.acmicpc.net/problem/1420) - 양방향 간선, 정점분할, 무한간선   
+[완전 중요한 간선](https://www.acmicpc.net/problem/5651) - 최대유량에 직접적으로 영향을 주는 간선   
 
 ### 참고문헌
 https://en.wikipedia.org/wiki/Edmonds%E2%80%93Karp_algorithm
