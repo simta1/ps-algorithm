@@ -1,10 +1,11 @@
 ### 앞으로 추가할 알고리즘
+  1. 라빈 카프
   1. hld
   1. centroid decomposition
+  1. $\vdots$
   1. 스프라그 그런디
   1. 최대유량 Dinic
   1. 이분매칭 Hopcraft Karp
-  1. 라빈 카프
   1. $\vdots$
   1. DP 최적화들
   1. FFT 나눗셈
