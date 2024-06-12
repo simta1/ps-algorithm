@@ -51,7 +51,8 @@ auto solve = [&]() { // 1-based
 ```
 ### 시간복잡도 
 dp[n][m]까지 계산하는 시간:   
-$O(NM~logM)$   
+naive $O(NM^2)$   
+dnc 최적화 $O(NM~logM)$   
 
 ### 주의사항
 if (l > r) return; 꼭 필요하다.   
@@ -60,15 +61,19 @@ m = 0, dnc(l, m - 1)호출되면서 l > r 됨
 
 ### 사용관련
 람다함수 이름을 monge로 짓긴 했지만 꼭 monge array일 필요는 없음   
-monge는 dnc최적화가 사용가능한 충분조건일 뿐 필요조건은 아님.   
+monge는 dnc최적화가 사용가능한 충분조건일 뿐 필요조건은 아님   
 즉, monge가 아니어도 dnc 최적화 사용가능한 경우가 존재   
-정확한 사용조건은,   
-```md
-```
 
-$$dp[i][j] = min_{lowerLimit(j) \le k \le upperLimit(j)} \left[ dp[i - 1][k] + monge(k, j) \right]$$
-$$or$$
-$$dp[i][j] = max_{lowerLimit(j) \le k \le upperLimit(j)} \left[ dp[i - 1][k] + monge(k, j) \right]$$
+정확한 사용조건은,   
+1. 점화식의 형태. $dp[i][j] = min_{low(j) \le k \le up(j)} \left[ dp[i - 1][k] + C(k, j) \right]$   
+min이 아니라 max여도 가능   
+2. 단조성. dp[i][j]에 대해 dp[i - 1][k] + C(k, j)가 최소가 되는 가장 작은 k를 bestK(i, j)라 할 때 bestK가 단조성을 가지는지.   
+즉, 항상 bestK(i, j) <= bestK(i, j + 1)이거나 항상 bestK(i, j) >= bestK(i, j - 1)   
+
+    C가 monge array일 경우 항상 조건2를 만족함   
+
+---
+$dp[i][j] = min_{lowerLimit(j) \le k \le upperLimit(j)} \left[ dp[i - 1][k] + monge(k, j) \right]$   
 수식에 맞게 람다함수 작성
 
 dnc(i, s, e, l, r)는 dp[i][l~r] 계산   
@@ -94,3 +99,4 @@ upperLimit(m) : m
 https://anz1217.tistory.com/144   
 https://blog.myungwoo.kr/99   
 https://ps.mjstudio.net/dnc-opt   
+https://justicehui.github.io/hard-algorithm/2019/01/03/DnCOpt/   
