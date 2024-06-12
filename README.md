@@ -144,7 +144,7 @@ mermaid사용
     * <span class="">[비트셋 LCS]</span>
     * <span class="">[비트 집합]</span>
     * <span class="platinum">[볼록껍질 최적화(P+)](/DP/최적화/CHT.md)</span>
-    * <span class="">[분할정복 최적화]</span>
+    * <span class="platinum">[분할정복 최적화(P+)](/DP/최적화/DnC.md)</span>
     * <span class="">[크누스 최적화]</span>
     * <span class="">[단조큐 최적화]</span>
     * <span class="">[Slope trick(D-)]</span>
@@ -289,6 +289,7 @@ direction LR
 %% [*] --> 동적_계획법
 동적_계획법 --> 비트마스크_DP
 동적_계획법 --> 볼록껍질_최적화
+동적_계획법 --> 분할정복_최적화
 
 %% [*] --> 수학
 수학 --> 에라토스테네스의_체
@@ -409,3 +410,9 @@ https://bowbowbow.tistory.com/category/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98
 
 kks227   
 https://m.blog.naver.com/kks227?categoryNo=299&tab=1   
+
+MJ Studio
+https://ps.mjstudio.net/categories/algorithm
+
+koosaga
+https://koosaga.com/242
