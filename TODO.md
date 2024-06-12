@@ -5,13 +5,13 @@
   1. 최대유량 Dinic
   1. 이분매칭 Hopcraft Karp
   1. 라빈 카프
-  1. PST
+  1. $\vdots$
+  1. DP 최적화들
   1. FFT 나눗셈
+  1. PST
   1. lineContainer
   1. 리-차오
-  1. DP 최적화들
   1. 선형대수학 카테고리 추가
-  1. $\vdots$
 
 ### 기존 문서에 추가할 거
   * [ ] 오일러 회로 -> 오일러 경로
