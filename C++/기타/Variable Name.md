@@ -42,3 +42,23 @@ vector<vector<pair<int, T> > > rdj; // reverse adj
 visited배열 등에서 true인지 나타내는 값.   
 visited[i] != trueValue이면 false로 생각하는 방식.   
 배열 여러번 사용해야 될 때 굳이 O(N)으로 배열값 전부 0으로 초기화하지 않아도 trueValue값만 O(1)로 바꾸면 되서 시간복잡도 줄이는 용. ([이분 매칭](/그래프%20이론/네트워크%20플로우/Bipartite%20Matching.md) 코드 참고)
+
+### dpos, dir, sx, sy, cx, cy, ex, ey, dx, dy
+2차원 배열 위에서 움직일 때 이동방향, 좌표정보 저장   
+
+sx, sy는 시작 위치(start)   
+cx, cy는 현재 위치(cur)   
+ex, ey는 목적지 위치(end)   
+dx, dy는 이동방향에 따른 좌표변화량(differential)   
+   
+dir는 현재 이동방향을 0~3으로 저장   
+dpos는 dx, dy들 모아놓은 배열   
+```cpp
+const vector<pair<int, int> > dpos = {{-1, 0}, {0, -1}, {1, 0}, {0, 1}}; // 상좌하우
+const string dirToChar = "NWSE";
+
+// ex)
+auto [dx, dy] = dpos[dir];
+cx += dx;
+cy += dy;
+```
