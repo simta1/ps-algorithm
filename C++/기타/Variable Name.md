@@ -31,6 +31,10 @@ for (auto &e : v) ++cnt[e - offset];
 for (int i = 0; i < n; i++) pos[v[i]] = i;
 ```
 
+### adj, chd
+adj(adjacent) : 그래프에서 인접리스트   
+chd(child) : 트리에서 인접리스트. 입력을 양방향 간선으로 받아 adj에 저장한 뒤 부모->자식 방향 간선만 남겨 저장   
+
 ### rdj
 그래프에서 역방향 간선 저장. rdj 뜻은 그냥 reverse adj 줄인 거
 ```cpp
