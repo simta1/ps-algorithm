@@ -14,6 +14,18 @@ addEdge() // 그래프 간선 추가
 propagate() // lazy seg, splay tree 등에서 lazy전파하는 함수. 다른 이름 사용한 코드 좀 있어서 수정해야 됨.
 ```
 
+### 배열명, 변수명 비슷할 때
+변수명에 약어 사용   
+ex) parent, par  
+```cpp
+void makeTree(int cur, int par) {
+    parent[cur] = par;
+    for (auto next : adj[cur]) if (cur != par) {
+        makeTree(next, cur);
+    }
+}
+```
+
 ### offset
 배열에 음수 인덱스 사용하고 싶을 때 인덱스 얼마나 평행이동할지 저장
 ```cpp
