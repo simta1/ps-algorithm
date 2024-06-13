@@ -6,14 +6,14 @@ private:
     const int root = 1;
     vector<vector<int> > adj;
     vector<pair<int, int> > range;
-    int cnt;
+    int dfsn;
 
     void dfs(int cur, int parent) {
-        range[cur].first = ++cnt;
+        range[cur].first = ++dfsn;
         for (int next : adj[cur]) if (next != parent) {
             dfs(next, cur);
         }
-        range[cur].second = cnt;
+        range[cur].second = dfsn;
     }
 
 public:
@@ -25,7 +25,7 @@ public:
     }
 
     void eulerTour() {
-        cnt = 0;
+        dfsn = 0;
         dfs(root, -1);
     }
 

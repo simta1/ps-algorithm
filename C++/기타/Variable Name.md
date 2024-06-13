@@ -38,6 +38,9 @@ vector<vector<pair<int, T> > > adj;
 vector<vector<pair<int, T> > > rdj; // reverse adj
 ```
 
+### dfsn
+ETT 등 dfs 스패닝 트리에서 방문순서 저장   
+
 ### trueValue
 visited배열 등에서 true인지 나타내는 값.   
 visited[i] != trueValue이면 false로 생각하는 방식.   
