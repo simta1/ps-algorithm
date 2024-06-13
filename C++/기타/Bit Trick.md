@@ -4,6 +4,9 @@ a와 b의 부호가 같으면 true
 a, b 둘다 0이 아닐 때 사용   
 if (a * b > 0) 는 오버플로우 될 가능성이 있어서 별로다.
 
+### if (a ^ b)
+a != b이면 true
+
 ### if (!~x)
 ```cpp
 if (!~visited[cur]) //방문 안 한 곳인지
