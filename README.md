@@ -190,6 +190,7 @@ mermaid stateDiagram-v2 사용
   * <span class="silver">[분할정복 거듭제곱(S+)](/수학/Power.md)</span>
   * <span class="silver">[nCr, 파스칼의 삼각형(S+)](/수학/Combination%20by%20DP.md)</span>
   * <span class="gold">[행렬 거듭제곱(G-)](/수학/Matrix.md)</span>
+  * <span class="gold">[p-지수(G+)](/수학/p-adic%20valuation.md)</span>
   * <span class="gold">[확장 유클리드 호제법, 모듈러 역원(G+)](/수학/ExtendedGCD,%20Modular%20Inverse.md)</span>
   * <span class="gold">[오일러 파이 함수(G+)](/수학/Euler's%20Totient%20Function.md)</span>
   * <span class="">[가우스 소거법(P-)]</span>
