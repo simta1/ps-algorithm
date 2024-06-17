@@ -206,7 +206,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[메르텐스 함수]</span>
   * <span class="">[매트로이드(R-)]</span>
 * ### 선형대수학
-  * <span class="silver">[행렬(S-)](/수학/Matrix.md)</span>
+  * <span class="silver">[행렬(S-)](/선형대수학/Matrix.md)</span>
   * <span class="">[가우스 소거법(P-)]</span>
   * <span class="">[키르히호프(A)]</span> <!-- https://www.acmicpc.net/problem/9614 -->
 * ### 게임 이론
