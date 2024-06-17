@@ -15,12 +15,12 @@ vector쓸 땐 array doubling 고려
 
 ### 카테고리 작성
 css로 티어색깔 표시. \<span class="tier"> 사용   
-알고리즘의 난이도는 1\~3은 +, 4\~5는 -로 표시. ex) 브론즈3 이상: B+   
+알고리즘의 난이도는 1\~3은 +, 4\~5는 -로 표시   
 백준에 단일 태그로 존재하는 주요 알고리즘이나 유명한 트릭이 아닌, 지엽적이거나 추가적인 구현체는 _이텔릭체_ 로 표시   
 <!-- 별로 중요하지 않거나 구현계획 없는 알고리즘은 ~~취소선~~으로 표시 -->
 
 ### 문서 작성
-VSC markdown.json에 문서 작성용 템플릿 있음. SNIP explain으로 사용   
+VSC markdown.json에서 문서 작성용 템플릿 스니펫 사용   
 __주의사항__ 에 코드 작성하면서 겪었던 런타임 에러나 오류들 기록   
 코드를 사용할 때의 주의사항이 아니라 해당 코드 구현하면서 겪은 주의사항을 기록   
 __시간복잡도__ 는 LaTeX 수식 사용. log(N)은 괄호 없이 logN으로 표기   
@@ -40,7 +40,7 @@ mermaid stateDiagram-v2 사용
 <span class="platinum">플레(P)<span>
 <span class="diamond">다이아(D)<span>
 <span class="ruby">루비(R)<span>
-<span class="additional">기타 지식(A)<span>
+<span class="additional">기타(A)<span>
 
 * ### 자료구조
   * #### 세그먼트 트리
@@ -124,33 +124,26 @@ mermaid stateDiagram-v2 사용
     * <span class="">[트리 동형 사상]</span>
     * <span class="">[탑 트리(R-)]</span>
 * ### DP
-  * #### 유명한 문제
-    * <span class="silver">[Kadane algorithm(S+)](/DP/유명한%20문제/Kadane%20Algorithm.md)</span>
-    * <span class="">[배낭 문제(G-)]</span>
-    * <span class="">[LIS]</span>
-    * <span class="">[LCS]</span>
-    * <span class="">[행렬 곱셈 순서]</span>
-    * <span class="">[TSP]</span>
-  * #### 여러 DP 유형
-    * <span class="">[DP dfs 구현코드](/DP/여러%20DP%20유형/DP%20by%20dfs.md)</span>
-    * <span class="gold">[비트마스크 DP(G+)](/DP/여러%20DP%20유형/Bitmask%20DP.md)</span>
-    * <span class="">[최단거리 역추적]</span>
-    * <span class="">[SOS DP]</span>
-    * <span class="">[히르쉬버그(D+)]</span>
-    * <span class="">[Connection Profile DP]</span>
-  * #### 최적화
-    * <span class="">[토글링]</span>
-    * <span class="gold">[비트셋 배낭(G-)](/DP/최적화/Bitset%20Knapsack.md)</span>
-    * <span class="">[비트셋 LCS]</span>
-    * <span class="">[비트 집합]</span>
-    * <span class="platinum">[볼록껍질 최적화(P+)](/DP/최적화/CHT.md)</span>
-    * <span class="platinum">[분할정복 최적화(P+)](/DP/최적화/DnC.md)</span>
-    * <span class="">[크누스 최적화]</span>
-    * <span class="">[단조큐 최적화]</span>
-    * <span class="">[Slope trick(D-)]</span>
-  * #### 기타
-    * <span class="">[키타마사(D-)]</span>
-    * <span class="">[벌레캠프-매시(D+)]</span>
+  * <span class="silver">[Kadane algorithm(S+)](/DP/유명한%20문제/Kadane%20Algorithm.md)</span>
+  * <span class="">[배낭 문제(G-)]</span>
+  * <span class="gold">[비트셋 배낭(G-)](/DP/최적화/Bitset%20Knapsack.md)</span>
+  * <span class="">[LCS]</span>
+  * <span class="">[비트셋 LCS]</span>
+  * <span class="">[탑다운 재귀 구현](/DP/여러%20DP%20유형/DP%20by%20dfs.md)</span>
+  * <span class="gold">[비트마스크 DP(G+)](/DP/여러%20DP%20유형/Bitmask%20DP.md)</span>
+  * <span class="">[최단거리 역추적]</span>
+  * <span class="">[SOS DP]</span>
+  * <span class="">[히르쉬버그(D+)]</span>
+  * <span class="">[Connection Profile DP]</span>
+  * <span class="">[토글링]</span>
+  * <span class="">[비트 집합]</span>
+  * <span class="platinum">[볼록껍질 최적화(P+)](/DP/최적화/CHT.md)</span>
+  * <span class="platinum">[분할정복 최적화(P+)](/DP/최적화/DnC.md)</span>
+  * <span class="">[크누스 최적화]</span>
+  * <span class="">[단조큐 최적화]</span>
+  * <span class="">[Slope trick(D-)]</span>
+  * <span class="">[키타마사(D-)]</span>
+  * <span class="">[벌레캠프-매시(D+)]</span>
   <!-- * <span class="">[aliens 트릭(D-)]</span> -->
 * ### 문자열
   * <span class="gold">[트라이(G+)](/문자열/Trie.md)</span>
@@ -219,6 +212,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[스프라그-그런디]</span> <!-- (비트셋) -->
   * <span class="">[hackenbush]</span>
 * ### 기타
+  * <span class="additional">[비트 트릭(A)](/C++/기타/Bit%20Trick.md)</span>
   * <span class="silver">[이분 탐색(S-)](/기타/Binary%20Search.md)</span>
   * <span class="silver">[비트마스크(S-)](/기타/Bitmask.md)</span>
   * <span class="silver">[값 / 좌표 압축(S-)](/기타/Coordinate%20Compression.md)</span>
@@ -352,20 +346,20 @@ ccw --> 볼록_다각형_내부의_점_판점
 %% ccw --> 볼록다각형_판정
 ```
 ---
-# 유용한 C++ 기능들
+# C++ 유용한 기능
 * ### 문법
   * <span class="">[range-based for loop]</span>
   * <span class="">[literal]</span>
-  * <span class="information">[template argument deduction](/C++%20관련%20정보들/문법/Template%20Argument%20Deduction.md)</span>
+  * <span class="information">[template argument deduction](/C++/문법/Template%20Argument%20Deduction.md)</span>
   * <span class="">[람다 재귀]</span>
   * <span class="">[코드 여러줄 이어쓰기]</span>
   * <span class="">[리터럴 여러줄 이어쓰기]</span>
 * ### 함수
   * <span class="">[수학관련]</span> <!-- atan, atan2 추가하기 -->
   * <span class="">[배열관련]</span>
-  * <span class="information">[타입관련](/C++%20관련%20정보들/함수/casting%20operators.md)</span>
-  * <span class="information">[문자열관련](/C++%20관련%20정보들/함수/string.md)</span>
-  * <span class="information">[이분탐색 람다함수](/C++%20관련%20정보들/함수/lower_bound_lambda.md)</span>
+  * <span class="information">[타입관련](/C++/함수/casting%20operators.md)</span>
+  * <span class="information">[문자열관련](/C++/함수/string.md)</span>
+  * <span class="information">[이분탐색 람다함수](/C++/함수/lower_bound_lambda.md)</span>
   * <span class="">[permutation]</span>
   * <span class="">[custom pq]</span>
   * <span class="">[io manip]</span>
@@ -378,7 +372,6 @@ ccw --> 볼록_다각형_내부의_점_판점
   * 버전 gnu++17로 해야 Template argument deduction 등 문법 사용가능 -->
 * ### 기타
   * <span class="information">[자주 쓰는 변수명](/C++%20관련%20정보들/기타/Variable%20Name.md)</span>
-  * <span class="information">[비트 트릭](/C++%20관련%20정보들/기타/Bit%20Trick.md)</span>
   * <span class="information">[코딩 아이디어](/C++%20관련%20정보들/기타/Idea.md)</span>
 ---
 # 참고문헌
