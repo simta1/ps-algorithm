@@ -182,12 +182,9 @@ mermaid stateDiagram-v2 사용
   * <span class="silver">[에라토스테네스의 체(S+)](/수학/Sieve%20of%20Eratosthenes.md)</span>
   * <span class="silver">[분할정복 거듭제곱(S+)](/수학/Power.md)</span>
   * <span class="silver">[nCr, 파스칼의 삼각형(S+)](/수학/Combination%20by%20DP.md)</span>
-  * <span class="gold">[행렬 거듭제곱(G-)](/수학/Matrix.md)</span>
   * <span class="gold">[p-지수(G+)](/수학/p-adic%20valuation.md)</span>
   * <span class="gold">[확장 유클리드 호제법, 모듈러 역원(G+)](/수학/ExtendedGCD,%20Modular%20Inverse.md)</span>
   * <span class="gold">[오일러 파이 함수(G+)](/수학/Euler's%20Totient%20Function.md)</span>
-  * <span class="">[가우스 소거법(P-)]</span>
-  * <span class="">[키르히호프(A)]</span> <!-- https://www.acmicpc.net/problem/9614 -->
   * <span class="platinum">[중국인의 나머지 정리(P-)](/수학/Chinese%20Remainder%20Theorem.md)</span>
   * <span class="">[Garner's algorithm]</span>
   * <span class="">[nCr mod 소수, 뤼카(P-)]</span>
@@ -200,7 +197,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[3진 FFT(D-)]</span>
   * <span class="">[정밀도 높은 FFT(D-)]</span>
   * <span class="diamond">[NTT(D-)](/수학/Number%20Theoretic%20Transform.md)</span>
-  * <span class="">[다항식 나눗셈]</span>
+  * <span class="">[FFT 나눗셈]</span>
   * <span class="">[online FFT]</span>
   * <span class="">[포함 배제의 원리, 뫼비우스 함수, 뫼비우스 반전(D-)]</span>
   * <span class="">[생성 함수(D-)]</span>
@@ -208,6 +205,10 @@ mermaid stateDiagram-v2 사용
   * <span class="additional">[Cornacchia's algorithm(A)](/수학/Cornacchia.md)</span>
   * <span class="">[메르텐스 함수]</span>
   * <span class="">[매트로이드(R-)]</span>
+* ### 선형대수학
+  * <span class="silver">[행렬(S-)](/수학/Matrix.md)</span>
+  * <span class="">[가우스 소거법(P-)]</span>
+  * <span class="">[키르히호프(A)]</span> <!-- https://www.acmicpc.net/problem/9614 -->
 * ### 게임 이론
   * <span class="">[스프라그-그런디]</span> <!-- (비트셋) -->
   * <span class="">[hackenbush]</span>
