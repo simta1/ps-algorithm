@@ -124,21 +124,21 @@ mermaid stateDiagram-v2 사용
     * <span class="">[트리 동형 사상]</span>
     * <span class="">[탑 트리(R-)]</span>
 * ### DP
-  * <span class="silver">[Kadane algorithm(S+)](/DP/유명한%20문제/Kadane%20Algorithm.md)</span>
+  * <span class="silver">[Kadane algorithm(S+)](/DP/Kadane%20Algorithm.md)</span>
   * <span class="">[배낭 문제(G-)]</span>
-  * <span class="gold">[비트셋 배낭(G-)](/DP/최적화/Bitset%20Knapsack.md)</span>
+  * <span class="gold">[비트셋 배낭(G-)](/DP/Bitset%20Knapsack.md)</span>
   * <span class="">[LCS]</span>
   * <span class="">[비트셋 LCS]</span>
-  * <span class="">[탑다운 재귀 구현](/DP/여러%20DP%20유형/DP%20by%20dfs.md)</span>
-  * <span class="gold">[비트마스크 DP(G+)](/DP/여러%20DP%20유형/Bitmask%20DP.md)</span>
+  * <span class="">[탑다운 재귀 구현](/DP/DP%20by%20dfs.md)</span>
+  * <span class="gold">[비트마스크 DP(G+)](/DP/Bitmask%20DP.md)</span>
   * <span class="">[최단거리 역추적]</span>
   * <span class="">[SOS DP]</span>
   * <span class="">[히르쉬버그(D+)]</span>
   * <span class="">[Connection Profile DP]</span>
   * <span class="">[토글링]</span>
   * <span class="">[비트 집합]</span>
-  * <span class="platinum">[볼록껍질 최적화(P+)](/DP/최적화/CHT.md)</span>
-  * <span class="platinum">[분할정복 최적화(P+)](/DP/최적화/DnC.md)</span>
+  * <span class="platinum">[볼록껍질 최적화(P+)](/DP/CHT.md)</span>
+  * <span class="platinum">[분할정복 최적화(P+)](/DP/DnC.md)</span>
   * <span class="">[크누스 최적화]</span>
   * <span class="">[단조큐 최적화]</span>
   * <span class="">[Slope trick(D-)]</span>
