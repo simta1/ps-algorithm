@@ -125,10 +125,10 @@ mermaid stateDiagram-v2 사용
     * <span class="">[탑 트리(R-)]</span>
 * ### DP
   * <span class="silver">[Kadane algorithm(S+)](/DP/Kadane%20Algorithm.md)</span>
-  * <span class="">[배낭 문제(G-)]</span>
+  <!-- * <span class="">[배낭 문제(G-)]</span> -->
   * <span class="gold">[비트셋 배낭(G-)](/DP/Bitset%20Knapsack.md)</span>
-  * <span class="">[LCS]</span>
-  * <span class="">[비트셋 LCS]</span>
+  <!-- * <span class="">[LCS]</span> -->
+  <!-- * <span class="">[비트셋 LCS]</span> -->
   * <span class="">[탑다운 재귀 구현](/DP/DP%20by%20dfs.md)</span>
   * <span class="gold">[비트마스크 DP(G+)](/DP/Bitmask%20DP.md)</span>
   * <span class="">[최단거리 역추적]</span>
