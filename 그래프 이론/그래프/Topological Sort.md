@@ -59,4 +59,5 @@ while (!q.empty()) {
 ```
 
 ### 백준문제
-[줄 세우기](https://www.acmicpc.net/problem/2252)
+[줄 세우기](https://www.acmicpc.net/problem/2252)   
+[프로젝트 스케줄링](https://www.acmicpc.net/problem/14907) - PERT   
