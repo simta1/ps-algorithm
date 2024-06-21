@@ -74,6 +74,8 @@ mermaid stateDiagram-v2 사용
     * <span class="">[wavelet 트리(P+)]</span> -->
 * ### 그래프 이론
   * #### 그래프
+    <!-- https://ps.mjstudio.net/tip-bfs-fill -->
+    * <span class="">[flood fill]</span>
     * <span class="">[0-1 bfs(G-)]</span>
     * <span class="gold">[이분 그래프 판정(G-)](/그래프%20이론/그래프/Bipartiteness%20Testing.md)</span>
     * <span class="gold">[다익스트라(G-)](/그래프%20이론/그래프/Dijkstra.md)</span>
@@ -257,8 +259,6 @@ direction LR
 %% [*] --> 그래프_이론
 %% 그래프_이론 --> 그래프
   그래프 --> 최소_스패닝_트리
-  최소_스패닝_트리 --> 최소_스패닝_트리(Kruskal)
-  분리_집합 --> 최소_스패닝_트리(Kruskal)
   그래프 --> 이분_그래프_판정
   그래프 --> 다익스트라
   그래프 --> 벨만_포드
@@ -275,7 +275,6 @@ direction LR
 그래프 --> 네트워크_플로우
   네트워크_플로우 --> 최대유량
   최대유량 --> 최소_비용_최대_유량
-  최대유량 --> 최대유량(Edmonds_Karp)
   SPFA --> 최소_비용_최대_유량
   네트워크_플로우 --> 이분_매칭
 그래프 --> 트리
