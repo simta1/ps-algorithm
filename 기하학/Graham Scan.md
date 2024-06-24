@@ -24,6 +24,8 @@ int ccw(const Point<T> &p1, const Point<T> &p2, const Point<T> &p3) { // -1 : ì‹
 ```cpp
 template <typename T>
 vector<Point<T> > getConvexHull(vector<Point<T> > points) {
+    assert (points.size() >= 3);
+    
     swap(points[0], *min_element(points.begin(), points.end()));
     sort(points.begin() + 1, points.end(), [&](const Point<T> &a, const Point<T> &b) {
         int dir = ccw(points[0], a, b);
