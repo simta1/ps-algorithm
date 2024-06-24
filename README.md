@@ -166,6 +166,7 @@ mermaid stateDiagram-v2 사용
 * ### 기하학
   * <span class="gold">[cross product, CCW(G-)](/기하학/Cross%20Product,%20CCW.md)</span>
   * <span class="">[plane sweeping]</span>
+  * <span class="gold">[볼록다각형 넓이(G-)](/기하학/Polygon%20Area.md)</span>
   * <span class="">[볼록다각형 판정]</span>
   * <span class="gold">[직선-점 거리 계산(G-)](/기하학/Distance.md)</span>
   * <span class="gold">[선분교차판정(G+)](/기하학/Line-Line%20Intersection%20check.md)</span>
