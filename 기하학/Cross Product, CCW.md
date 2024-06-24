@@ -1,25 +1,25 @@
 [카테고리](/README.md)
-### Point
+### Point, Cross Product, CCW
 ```cpp
 template <typename T>
 struct Point {
     T x, y;
+
+    Point() = default;
+    Point(int x, int y) : x(x), y(y) {}
+    template <typename U> Point(const Point<U> &other) : x(static_cast<T>(other.x)), y(static_cast<T>(other.y)) {}
 
     bool operator<(const Point &other) const { return x == other.x ? y < other.y : x < other.x; }
     bool operator<=(const Point &other) const { return x == other.x ? y <= other.y : x <= other.x; }
     bool operator==(const Point &other) const { return x == other.x && y == other.y; }
     Point operator-(const Point &other) const { return {x - other.x, y - other.y}; }
 };
-```
-### Cross Product
-```cpp
+
 template <typename T>
 T crossProduct(const Point<T> &p1, const Point<T> &p2) {
     return (p1.x * p2.y - p2.x * p1.y);
 }
-```
-### CCW
-```cpp
+
 template <typename T>
 int ccw(const Point<T> &p1, const Point<T> &p2, const Point<T> &p3) { // -1 : 시계, 0 : 일직선, 1 : 반시계
     T cp = crossProduct(p2 - p1, p3 - p1);
