@@ -54,3 +54,10 @@ st[pos:] 리턴
 
 ### substr(pos, cnt)
 st[pos:(pos+cnt)] 리턴
+
+## 문자열 형변환
+```cpp
+int num = stoi(st); // s(tring) to i(int)
+st.c_str()
+```
+st.c_str()은 rope 생성자에 문자열 보내거나 하는 경우 사용
