@@ -236,8 +236,8 @@ mermaid stateDiagram-v2 사용
   * <span class="">[imos]</span>
   * <span class="platinum">[XOR 트라이(P-)](/기타/XOR%20Trie.md)</span>
   * <span class="">[삼분 탐색]</span>
-  * <span class="platinum">[Mo's algorithm(P+)](/쿼리%20관련/Mo's%20Algorithm.md)</span>
-  * <span class="platinum">[평방분할(P+)](/쿼리%20관련/Sqrt%20Decomposition.md)</span>
+  * <span class="platinum">[Mo's algorithm(P+)](/기타/Mo's%20Algorithm.md)</span>
+  * <span class="platinum">[평방분할(P+)](/기타/Sqrt%20Decomposition.md)</span>
   * <span class="">[병렬 이분 탐색(P+)]</span>
   * <span class="">[춤추는 링크, 크누스 X]</span>
   * <span class="">[임의 정밀도(epsilon값 계산)(A)]</span>
@@ -372,8 +372,7 @@ ccw --> 볼록_다각형_내부의_점_판점
   * <span class="">[permutation]</span>
   * <span class="">[custom pq]</span>
   * <span class="">[io manip]</span>
-  * <span class="">[ext/rope]</span>
-  * <span class="">[ext/pb_ds]</span>
+  * <span class="information">[ext](/C++/함수/ext.md)</span>
 * ### ps용 설정
   * <span class="">[cph]</span>
   * <span class="">[snippet]</span>
