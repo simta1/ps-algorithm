@@ -49,6 +49,10 @@ vector<string> splitString(const string &str, char delimiter) {
     return words;
 }
 ```
+#### istringstream good(), eof(), fail(), bad()
+```cpp
+```
+
 ### substr(pos)
 st[pos:] 리턴
 
@@ -58,6 +62,6 @@ st[pos:(pos+cnt)] 리턴
 ## 문자열 형변환
 ```cpp
 int num = stoi(st); // s(tring) to i(int)
-st.c_str()
+crope rp(st.c_str()); // std::string to c_str
+if (isdigit(ch)) ; // 숫자인지 확인
 ```
-st.c_str()은 rope 생성자에 문자열 보내거나 하는 경우 사용
