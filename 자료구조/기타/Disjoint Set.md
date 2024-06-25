@@ -60,6 +60,14 @@ $O(\alpha(N))$
 $\alpha$는 inverse Ackermann function으로 아무리 커도 O(4)정도로 생각하면 된다. 대충 2↑↑(n + 3)의 역함수다.
 
 ### 주의사항
+find(int a)에서
+return a;하면 안 된다.
+return a;하고 싶으면 if문 안에서도 리턴해야된다.
+```cpp
+if (parent[a] != a) return parent[a] = find(parent[a]);
+return a;
+```
+
 union by rank를 추가할 경우 merge함수에서 if (a == b) return;이 포함되어야 된다. path compression만 있을 때는 a == b여도 상관없지만, union by rank를 사용하는 경우 이후 rank를 업데이트하는 과정이 있으므로 if (a == b) return;을 해야 rank가 효율적으로 계산된다.   
 
 ### 사용관련
