@@ -370,7 +370,7 @@ ccw --> 볼록_다각형_내부의_점_판점
   * <span class="information">[문자열관련](/C++/함수/string.md)</span>
   * <span class="information">[이분탐색 람다함수](/C++/함수/lower_bound_lambda.md)</span>
   * <span class="">[permutation]</span>
-  * <span class="">[custom pq]</span>
+  * <span class="information">[custom pq](/C++/함수/costom%20pq.md)</span>
   * <span class="">[io manip]</span>
   * <span class="information">[ext](/C++/함수/ext.md)</span>
 * ### ps용 설정
