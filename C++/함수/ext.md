@@ -57,9 +57,9 @@ set처럼 중복 안 됨
 
 ### find
 ```cpp
-cout << *oset.find_by_order(num) << '\n';
+cout << *oset.find_by_order(order) << '\n';
 cout << oset.order_of_key(key) << '\n';
 ```
-0-based임
+find_by_order에 보내는 매개변수와 order_of_key의 리턴값은 모두 0-based   
 order_of_key의 경우 key가 ordered_set에 들어있는지는 확인하지 않음   
 ordered_set에 없는 경우에도 ordered_set에 있을 경우의 order을 리턴해줌   
