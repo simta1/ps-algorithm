@@ -48,10 +48,11 @@ using namespace __gnu_pbds;
 using ordered_set = tree<int,null_type,less<int>,rb_tree_tag,tree_order_statistics_node_update>;
 ```
 
-### 삽입, 삭제
+### 삽입, 삭제 O(logN)
 ```cpp
 ordered_set oset;
 oset.insert(num);
+oset.erase(num);
 ```
 set처럼 중복 안 됨
 
