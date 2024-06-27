@@ -75,7 +75,8 @@ public:
 ```cpp
 private:
     int findKth(int node, int s, int e, T k) {
-        if (s == e) return s;
+        if (s == e) return s + 1; // 1-based
+        // if (s == e) return s; // 0-based
 
         int m = s + e >> 1;
         if (k <= tree[node * 2]) return findKth(node * 2, s, m, k);
