@@ -46,7 +46,7 @@ mermaid stateDiagram-v2 사용
   * #### 세그먼트 트리
     * <span class="gold">[펜윅 트리(G+)](/자료구조/세그먼트%20트리/FenwickTree.md)</span>
     * <span class="gold">[세그먼트 트리(G+)](/자료구조/세그먼트%20트리/SegmentTree.md)</span>
-    * <span class="platinum">[세그먼트 트리에서의 이분 탐색(P-)](/ps-snippet/자료구조/세그먼트%20트리/Biary%20Search%20on%20SegmentTree.md)</span>
+    * <span class="platinum">[세그먼트 트리에서의 이분 탐색(P-)](/자료구조/세그먼트%20트리/Biary%20Search%20on%20SegmentTree.md)</span>
     * <span class="platinum">[2D 펜윅(P-)](/자료구조/세그먼트%20트리/FenwickTree2D.md)</span>
     * <span class="platinum">[2D 세그(P-)](/자료구조/세그먼트%20트리/SegmentTree2D.md)</span>
     * <span class="platinum">[n차원 펜윅(P-)](/자료구조/세그먼트%20트리/Multi%20Dimensional%20FenwickTree.md)</span>
@@ -230,7 +230,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[투 포인터(G-)]</span>
   * <span class="">[모노톤 스택]</span>
   * <span class="">[모노톤 큐]</span>
-  * <span class="gold">[후위 표기식(G+)](/ps-snippet/기타/Postfix%20Notation.md)</span>
+  * <span class="gold">[후위 표기식(G+)](/기타/Postfix%20Notation.md)</span>
   * <span class="">[중간에서 만나기(G+)]</span>
   * <span class="">[스위핑]</span>
   * <span class="">[슬라이딩 윈도우]</span>
