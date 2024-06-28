@@ -89,7 +89,17 @@ T merge(const T &a, const T &b) {
     return max(a, b);
 }
 ```
-min segment tree 사용할 땐 private query()에서 return 0대신 return INF로 변경   
+
+상황에 맞게 query()함수 변경해서 사용
+```cpp
+T query(int node, int s, int e, int l, int r) {
+    ...
+    if (l > e || s > r) return 0; // sum seg
+    if (l > e || s > r) return 1; // mul seg
+    if (l > e || s > r) return INF; // min seg
+    ...
+}
+```
 
 ### 백준 문제
 [구간 합 구하기](https://www.acmicpc.net/problem/2042)
