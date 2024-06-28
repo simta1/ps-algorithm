@@ -18,6 +18,7 @@
   * [ ] 오일러 회로 -> 오일러 경로
   * [ ] CHT DP -> lineContainer
   * [ ] convex hull -> monotone chain
+  * [ ] 행렬제곱 -> $O(R^3 + RlogN)$ 구현
 
 ### 코드 테스트 안 끝난 거
   * [ ] splay tree

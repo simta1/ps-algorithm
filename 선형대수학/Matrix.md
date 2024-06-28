@@ -49,5 +49,7 @@ public:
 operator* $O(R^3)$   
 power $O(R^3 logN)$
 
+power $O(R^3 + R logN)$ 구현도 존재하나 나중에 작성   
+
 ### 백준문제
 [행렬 제곱](https://www.acmicpc.net/problem/10830)
