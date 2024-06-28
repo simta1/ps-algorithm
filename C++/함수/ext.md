@@ -45,22 +45,42 @@ operator>>은 오버로딩 안 돼 있음
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
 using namespace __gnu_pbds;
-using ordered_set = tree<int,null_type,less<int>,rb_tree_tag,tree_order_statistics_node_update>;
+using ordered_set = tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update>;
 ```
 
 ### 삽입, 삭제 O(logN)
 ```cpp
-ordered_set oset;
-oset.insert(num);
-oset.erase(num);
+ordered_set os;
+os.insert(num);
+os.erase(num);
 ```
 set처럼 중복 안 됨
 
 ### find
 ```cpp
-cout << *oset.find_by_order(order) << '\n';
-cout << oset.order_of_key(key) << '\n';
+cout << *os.find_by_order(order) << '\n';
+cout << os.order_of_key(key) << '\n';
 ```
 find_by_order에 보내는 매개변수와 order_of_key의 리턴값은 모두 0-based   
 order_of_key의 경우 key가 ordered_set에 들어있는지는 확인하지 않음   
 ordered_set에 없는 경우에도 ordered_set에 있을 경우의 order을 리턴해줌   
+
+# multiset with ext/pb_ds
+### 헤더
+```cpp
+using ordered_multiset = tree<int, null_type, less_equal<int>, rb_tree_tag, tree_order_statistics_node_update>;
+```
+less\<int> 대신 less_equal\<int> 사용
+
+### 삽입, 삭제 O(logN)
+```cpp
+ordered_multiset oms;
+oms.insert(num);
+oms.erase(os.find_by_order(order));
+```
+
+multiset에선 erase(num) 쓰면 이상하게 됨.   
+해결 방법은 아직 모름   
+코포 설명글 링크 https://codeforces.com/blog/entry/11080?locale=en   
+
+테스트용 백준문제 : [데이터 구조](https://www.acmicpc.net/problem/12899)
