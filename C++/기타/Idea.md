@@ -22,6 +22,14 @@ for (int i = 0; i < n; i++) {
 for (int i = 0, j = n - 1; i < n; j = i++) {}
 ```
 
+# 정수 이등분
+```cpp
+int half1 = x + 1 >> 1;
+int half2 = x >> 1;
+```
+x = x / 2 + (x + 1) / 2   
+x기우성 상관없이 항상 성립   
+
 # 사이값 확인
 ```cpp
 // 변경 전
