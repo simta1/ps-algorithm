@@ -30,7 +30,8 @@ public:
         return res;
 	}
 
-	friend Matrix<T, mod> power(Matrix a, int n) {
+    template <typename F>
+	friend Matrix<T, mod> power(Matrix a, F n) {
         assert(a.rows == a.cols);
         Matrix<T, mod> res(a.rows, a.rows, true);
 
@@ -46,6 +47,7 @@ public:
 ```
 ### 시간복잡도 
 operator* $O(R^3)$   
+power $O(R^3 logN)$
 
 ### 백준문제
 [행렬 제곱](https://www.acmicpc.net/problem/10830)
