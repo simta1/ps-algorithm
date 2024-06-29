@@ -81,3 +81,12 @@ auto [dx, dy] = dpos[dir];
 cx += dx;
 cy += dy;
 ```
+
+### fac, facInv
+```cpp
+vector<ll> fac(n + 1, 1);
+for (int i = 2; i < fac.size(); i++) fac[i] = fac[i - 1] * i % mod;
+vector<ll> facInv(fac.size(), modInverse(fac.back(), mod));
+for (int i = facInv.size() - 1; i > 0; i--) facInv[i - 1] = facInv[i] * i % mod;
+```
+팩토리얼, 각 팩토리얼에 대응되는 모듈러 역원 저장
