@@ -38,3 +38,15 @@ return (a < b && b < c) || (c < b && b < a);
 // 변경 후
 return (b > a) != (b > c);
 ```
+
+# 오차 없는 ceil
+```cpp
+return (a + b - 1) / b; // ceil(a / b)
+```
+ceil(a / b)로 그냥 ceil() 사용할 경우 부동소수점 오류로 오차 생기는 경우 존재   
+
+# 오차 없는 log2
+```cpp
+constexpr int log2f(int x) { return 63 - __builtin_clzll(x); }
+constexpr int log2c(int x) { return 64 - __builtin_clzll(x - 1); }
+```
