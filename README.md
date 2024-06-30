@@ -237,7 +237,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[슬라이딩 윈도우]</span>
   * <span class="">[imos]</span>
   * <span class="platinum">[XOR 트라이(P-)](/기타/XOR%20Trie.md)</span>
-  * <span class="">[삼분 탐색]</span>
+  * <span class="platinum">[삼분 탐색(P-)](/기타/Ternary%20Search.md)</span>
   * <span class="platinum">[Mo's algorithm(P+)](/기타/Mo's%20Algorithm.md)</span>
   * <span class="platinum">[평방분할(P+)](/기타/Sqrt%20Decomposition.md)</span>
   * <span class="">[병렬 이분 탐색(P+)]</span>
