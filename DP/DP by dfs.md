@@ -1,9 +1,9 @@
 [카테고리](/README.md)
-### dfs 람다재귀 구현
+### dp 람다재귀 구현
 ```cpp
 vector dp(dim1, vector<int>(dim2, -1));
 
-function<int(int, int)> dfs = [&](int cur, int state) -> int {
+function<int(int, int)> f = [&](int cur, int state) -> int {
     // cout << cur << " " << state << "\n"; // for debug
 
     // base condition
@@ -12,7 +12,21 @@ function<int(int, int)> dfs = [&](int cur, int state) -> int {
     if (~res) return res;
 
     res = 0; // visit check
-    res = (res + dfs(next, nextState)) % mod;
+    res = (res + f(next, nextState)) % mod;
+    return res;
+};
+```
+### map 사용
+```cpp
+map<pair<int, int>, int> dp;
+function<int(int, int)> f = [&](int n, int k) -> int {
+    // base condition
+
+    if (dp.count({n, k})) return dp[{n, k}];
+
+    ll &res = dp[{n, k}];
+    res = 0;
+    res = (res + f(next, nextState)) % mod;
     return res;
 };
 ```
