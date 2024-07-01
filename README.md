@@ -223,7 +223,8 @@ mermaid stateDiagram-v2 사용
   * <span class="">[hackenbush]</span>
 * ### 기타
   * <span class="">[fastio]</span> <!-- https://www.acmicpc.net/blog/view/105 -->
-  * <span class="additional">[비트 트릭(A)](/C++/기타/Bit%20Trick.md)</span>
+  * <span class="additional">[비트 트릭(A)](/ps-snippet/기타/Bit%20Trick.md)</span>
+  * <span class="additional">[비트 트릭 2(A)](/ps-snippet/기타/Bit%20Trick2.md)</span>
   * <span class="silver">[이분 탐색(S-)](/기타/Binary%20Search.md)</span>
   * <span class="silver">[비트마스크(S-)](/기타/Bitmask.md)</span>
   * <span class="silver">[값 / 좌표 압축(S-)](/기타/Coordinate%20Compression.md)</span>
