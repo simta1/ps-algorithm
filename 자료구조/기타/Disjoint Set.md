@@ -1,7 +1,7 @@
 [카테고리](/README.md)
 ### DisjointSet (path compression)
 ```cpp
-class DisjointSet { // path compression only
+class DisjointSet {
 private:
     vector<int> parent;
 
@@ -26,7 +26,7 @@ public:
 ```
 ### DisjointSet (path compression + union by rank)
 ```cpp
-class DisjointSet { // path compression + union by rank
+class DisjointSet {
 private:
     vector<int> parent, rank;
 
