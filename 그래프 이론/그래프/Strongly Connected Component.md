@@ -3,7 +3,7 @@
 ```cpp
 class Graph {
 private:
-    int n, dfsn, id;
+    int n, dfsn, sccn;
     vector<vector<int> > adj;
     vector<int> visited, sccNumber;
     stack<int> s;
@@ -21,10 +21,10 @@ private:
             while (1) {
                 int node = s.top();
                 s.pop();
-                sccNumber[node] = id;
+                sccNumber[node] = sccn;
                 if (node == cur) break;
             }
-            ++id;
+            ++sccn;
         }
 
         return res;
@@ -38,14 +38,14 @@ public:
     }
 
     vector<vector<int> > findSCC() {
-        dfsn = id = 0;
+        dfsn = sccn = 0;
 
         for (int i = 1; i <= n; i++) if (!~visited[i]) {
             dfs(i);
         }
 
-        vector<vector<int> > sccList(id);
-        for (int i = 1; i <= n; i++) sccList[id - 1 - sccNumber[i]].push_back(i);
+        vector<vector<int> > sccList(sccn);
+        for (int i = 1; i <= n; i++) sccList[sccn - 1 - sccNumber[i]].push_back(i);
         
         return sccList;
     }
