@@ -55,10 +55,15 @@ namespace MillerRabin {
 ### 시간복잡도 
 $O(log^3{N})$   
 정확히는 $O(k~log^3{N})$   
-k는 알고리즘의 반복 횟수, 즉 코드에서 nums벡터의 크기(ull범위까진 k=7로 정확한 판별 가능)
+k는 알고리즘 반복 횟수, 즉 코드에서 nums벡터의 크기(ull범위까진 k=7로 정확한 판별 가능)   
+
+n이 매우 큰 수일 때 큰 수 곱셈의 시간복잡도를 고려해 $log^2N$를 붙인 것이라 함, ll범위에선 그냥 $O(k~logN)$으로 생각해도 되는 듯   
 
 ### 백준문제
 [아파트 임대](https://www.acmicpc.net/problem/5615)
+
+### 참고문헌
+https://www.teferi.net/ps/%EC%86%8C%EC%88%98_%ED%8C%90%EB%B3%84
 
 ### 원리
 $N$이 소수이면 $~~~~~~~~~~\rightarrow$ proposition p   
@@ -70,4 +75,5 @@ $a^{d \times 2^{r-1}} \equiv +1(mod~N)$ 인 경우에 대해 재귀적으로 $\p
 $\therefore a^{d} \equiv \pm1(mod~N)~~~~~or~~~~~a^{d \times 2^i} \equiv -1 (mod~N)$  $~~~~~~~~~~\rightarrow$ proposition q   
 
 p -> q 의 대우 ~q -> ~p 를 사용해서 소수가 아닌 수들을 거를 수 있음   
-a의 값을 7개의 수 {2,325, 9375, 28178, 450775, 9780504, 1795265022}로 하여 확인할 경우 unsigned long long 범위까진 전부 걸러낼 수 있음이 알려짐
+a의 값을 7개의 수 {2,325, 9375, 28178, 450775, 9780504, 1795265022}로 하여 확인할 경우 unsigned long long 범위까진 전부 걸러낼 수 있음이 알려짐   
+int 범위는 {2, 7, 61}만으로도 충분함
