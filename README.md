@@ -100,15 +100,16 @@ mermaid stateDiagram-v2 사용
     * <span class="">[이중 연결 요소]</span>
     * <span class="">[블록 컷 트리]</span>
     * <span class="">[선인장]</span>
-    * <span class="">[오프라인 동적 연결성 판정]</span>
-    * <span class="">[온라인 동적 연결성 판정]</span>
     * <span class="">[_2th MST(D-)_]</span>
     * <span class="">[쌍대 그래프(D-)]</span>
     * <span class="">[도미네이터 트리(D-)]</span>
+    * <span class="">[오프라인 동적 연결성 판정]</span>
+    * <span class="">[온라인 동적 연결성 판정]</span>
     * <span class="diamond">[유향 MST(D+)](/그래프%20이론/그래프/Directed%20Minimum%20Spanning%20Tree.md)</span>
     * <span class="">[현 그래프(D+)]</span>
     <!-- * <span class="">[현 그래프 판정]</span> -->
     * <span class="">[일반 매칭(D+)]</span>
+    * <span class="">[offline incremental SCC(R-)]</span>
     <!-- * <span class="">[_최소 차수 MST_]</span> -->
   * #### 네트워크 플로우
     * <span class="platinum">[최대유량 알고리즘들 정리](/그래프%20이론/네트워크%20플로우/MaxFlow.md)</span>

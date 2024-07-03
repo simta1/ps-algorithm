@@ -3,13 +3,13 @@
 ```cpp
 class Graph {
 private:
-    int n, order;
+    int n, dfsn;
     vector<vector<int> > adj;
     vector<int> visited;
     vector<pair<int, int> > articulations;
 
     int dfs(int cur, int parent) {
-        int res = visited[cur] = order++;
+        int res = visited[cur] = dfsn++;
         
         for (int next : adj[cur]) if (next != parent) {
             if (!~visited[next]) {
@@ -32,7 +32,7 @@ public:
     }
 
     vector<pair<int, int> > getArticulationaBridges() {
-        order = 0;
+        dfsn = 0;
         
         for (int i = 1; i <= n; i++) if(!~visited[i]) {
             dfs(i, -1);

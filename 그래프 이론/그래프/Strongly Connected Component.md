@@ -3,13 +3,13 @@
 ```cpp
 class Graph {
 private:
-    int n, order, id;
+    int n, dfsn, id;
     vector<vector<int> > adj;
     vector<int> visited, sccNumber;
     stack<int> s;
 
     int dfs(int cur) {
-        int res = visited[cur] = order++;
+        int res = visited[cur] = dfsn++;
         s.push(cur);
 
         for (int next : adj[cur]) {
@@ -38,7 +38,7 @@ public:
     }
 
     vector<vector<int> > findSCC() {
-        order = id = 0;
+        dfsn = id = 0;
 
         for (int i = 1; i <= n; i++) if (!~visited[i]) {
             dfs(i);

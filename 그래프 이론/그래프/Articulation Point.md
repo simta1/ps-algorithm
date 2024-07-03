@@ -3,12 +3,12 @@
 ```cpp
 class Graph {
 private:
-    int n, order;
+    int n, dfsn;
     vector<vector<int> > adj;
     vector<int> visited, isArticulation;
 
     int dfs(int cur, bool isRoot) {
-        int res = visited[cur] = order++;
+        int res = visited[cur] = dfsn++;
         
         int child = 0;
         for (int next : adj[cur]) {
@@ -35,7 +35,7 @@ public:
     }
 
     vector<int> getArticulationPoints() {
-        order = 0;
+        dfsn = 0;
         
         for (int i = 1; i <= n; i++) if(!~visited[i]) {
             dfs(i, true);
