@@ -136,8 +136,8 @@ vector<vector<pair<int, int> > > getFirstMergeTime(int n, const vector<pair<int,
 }
 ```
 ### 시간복잡도 
-$O(M~logM)$   
-M은 간선들 개수   
+$O((V+E)~logE)$   
+E는 전체 간선 개수   
 
 ### 주의사항
 dnc(0, idxes.size() - 1, idxes)로 호출하면 안 됨.   
