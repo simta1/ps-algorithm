@@ -83,7 +83,7 @@ ex) st = "abaab"
 pi.back() = 2, 뒤에서 2번째 지점에서부터 중복이 시작됨 => 즉 앞에서 3개가 가능한 최소 주기   
 $\therefore$ n - pi.back() = 3   
 
-cyclic string에서도 검색 가능
+cyclic string에서도 검색 가능   
 st가 cyclic string이라면 st2 = st + st로 이어붙인 뒤 kmp(st2, pattern) 사용
 
 ### 백준문제
