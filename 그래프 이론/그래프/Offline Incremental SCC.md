@@ -97,7 +97,7 @@ vector<vector<pair<int, int> > > getFirstMergeTime(int n, const vector<pair<int,
 
     vector<vector<pair<int, int> > > res(edges.size());
 
-    function<void(int, int, vector<int>&)> dnc = [&](int s, int e, vector<int> &idxes) {
+    function<void(int, int, vector<int>&)> dnc = [&](int s, int e, const vector<int> &idxes) {
         if (s == e) {
             if (s == edges.size()) return;
 
