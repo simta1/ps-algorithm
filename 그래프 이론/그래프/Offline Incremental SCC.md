@@ -157,7 +157,8 @@ edges = {{1, 2}, {2, 3}, {2, 1}}로 주어진다면
 result[2]에 edges[0]과 edges[2]의 정보가 저장됨
 
 사용예시 ([Link Cut Digraph](https://www.acmicpc.net/problem/19028))   
-main함수 안에서 추가로 DisjointSet 선언해서 scc합쳐가며 오프라인 쿼리로 풀면 됨   
+main함수 안에서 추가로 DisjointSet 선언해서 scc합쳐가며 오프라인 쿼리로 풀면 된다.   
+dnc함수 안에서 s==e일 때마다 ans업데이트하고 출력하는 식으로도 풀 수 있긴 한데 코드 분리를 위해 따로 계산했다.   
 ```cpp
 int main() {
     cin.tie(0) -> sync_with_stdio(0);
