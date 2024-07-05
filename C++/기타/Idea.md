@@ -22,6 +22,11 @@ for (int i = 0; i < n; i++) {
 for (int i = 0, j = n - 1; i < n; j = i++) {}
 ```
 
+# count in sorted vector
+```cpp
+int cnt = upper_bound(v.begin(), v.end(), val) - lower_bound(v.begin(), v.end(), val);
+```
+
 # 정수 이등분
 ```cpp
 int half1 = x + 1 >> 1;
