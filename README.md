@@ -118,6 +118,7 @@ mermaid stateDiagram-v2 사용
     * ~~<span class="">[최대유량: Push-Relabel (P-)]</span>~~
     * <span class="platinum">[최소 비용 최대 유량(P+)](/그래프%20이론/네트워크%20플로우/MCMF.md)</span>
     * <span class="platinum">[이분 매칭(P-)](/그래프%20이론/네트워크%20플로우/Bipartite%20Matching.md)</span>
+    * <span class="">[Circulation]</span> <!-- https://blog.naver.com/kks227/221426339344 -->
     * <span class="">[이분 매칭: Hopcraft-Karp]</span>
     * <span class="">[Stoer-Wagner Algorithm]</span>
     * <span class="">[Gomory-Hu Tree]</span>
@@ -136,16 +137,16 @@ mermaid stateDiagram-v2 사용
   <!-- * <span class="">[배낭 문제(G-)]</span> -->
   <!-- * <span class="">[LCS]</span> -->
   <!-- * <span class="">[비트셋 LCS]</span> -->
+  <!-- * <span class="">[비트 집합]</span> -->
   * <span class="silver">[Kadane algorithm(S+)](/DP/Kadane%20Algorithm.md)</span>
   * <span class="gold">[비트셋 배낭(G-)](/DP/Bitset%20Knapsack.md)</span>
   * <span class="">[탑다운 재귀 구현](/DP/DP%20by%20dfs.md)</span>
   * <span class="gold">[비트마스크 DP(G+)](/DP/Bitmask%20DP.md)</span>
   * <span class="">[최단거리 역추적]</span>
-  * <span class="">[SOS DP]</span>
+  * <span class="">[SOS DP(D-)](/ps-snippet/DP/SOS%20DP.md)</span>
   * <span class="">[히르쉬버그(D+)]</span>
   * <span class="">[Connection Profile DP]</span>
   * <span class="">[토글링]</span>
-  * <span class="">[비트 집합]</span>
   * <span class="platinum">[볼록껍질 최적화(P+)](/DP/CHT.md)</span>
   * <span class="platinum">[분할정복 최적화(P+)](/DP/DnC.md)</span>
   * <span class="">[크누스 최적화]</span>
@@ -181,6 +182,7 @@ mermaid stateDiagram-v2 사용
   * <span class="platinum">[_가장 가까운 두 점(P+)_](/기하학/Closest%20Two%20Points.md)</span>
   * <span class="">[최소 외접원(P+)]</span>
   * <span class="">[_반 나누기_]</span>
+  * <span class="">[볼록다각형 접선]</span>
   * <span class="">[불도저]</span>
   * <span class="">[반평면 교집합(D-)]</span>
   * ~~<span class="">[반공간 교집합]</span>~~
