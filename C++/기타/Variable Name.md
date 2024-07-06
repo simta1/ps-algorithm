@@ -90,3 +90,6 @@ vector<ll> facInv(fac.size(), modInverse(fac.back(), mod));
 for (int i = facInv.size() - 1; i > 0; i--) facInv[i - 1] = facInv[i] * i % mod;
 ```
 팩토리얼, 각 팩토리얼에 대응되는 모듈러 역원 저장
+
+### sq, sqr
+제곱, 제곱근 저장
