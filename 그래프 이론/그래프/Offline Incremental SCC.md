@@ -1,6 +1,8 @@
 [카테고리](/README.md)
-#### [Disjoint Set](/자료구조/기타/Disjoint%20Set.md)
-find()만 접근제어자 public으로 변경
+### [Disjoint Set](/자료구조/기타/Disjoint%20Set.md)
+<details>
+<summary>find()만 접근제어자 public으로 변경</summary>
+
 ```cpp
 class DisjointSet {
 private:
@@ -25,10 +27,15 @@ public:
     }
 };
 ```
-#### [SCC](/그래프%20이론/그래프/Strongly%20Connected%20Component.md)
-scc를 계산할 노드들만 따로 저장하기 위한 inGraph 선언   
-addEdge()랑 clear()에 inGraph업데이트하는 과정 추가   
+</details>
+
+### [SCC](/그래프%20이론/그래프/Strongly%20Connected%20Component.md)
+<details>
+<summary> scc를 계산할 노드들만 따로 저장하기 위한 inGraph 선언<br>
+addEdge()랑 clear()에 inGraph업데이트하는 과정 추가<br>
 findSCC()에서 visited, sccNumber매번 초기화하도록 추가   
+</summary>
+
 ```cpp
 class Graph {
 private:
@@ -89,6 +96,8 @@ public:
     }
 };
 ```
+</details>
+
 ### Offline Incremental SCC
 ```cpp
 vector<vector<pair<int, int> > > getFirstMergeTime(int n, const vector<pair<int, int> > &edges) {
