@@ -55,3 +55,20 @@ ceil(a / b)로 그냥 ceil() 사용할 경우 부동소수점 오류로 오차 �
 constexpr int log2f(int x) { return 63 - __builtin_clzll(x); }
 constexpr int log2c(int x) { return 64 - __builtin_clzll(x - 1); }
 ```
+
+# 벡터 끝쪽 원소 접근
+```cpp
+// 마지막 원소
+v[v.size() - 1]
+*(v.end() - 1)
+*v.rbegin()
+v.back()
+
+*--v.end()
+
+// 마지막 2번째 원소
+*----v.end()
+
+// ex) 볼록껍질 등 구현할 때
+ccw(*----v.end(), *--v.end(), point)
+```
