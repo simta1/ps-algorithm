@@ -84,8 +84,8 @@ public:
         }
     }
 
-    int getSCCN(int x) {
-        return sccNumber[x];
+    int isSameSCC(int u, int v) {
+        return sccNumber[u] == sccNumber[v];
     }
 };
 ```
@@ -120,7 +120,7 @@ vector<vector<pair<int, int> > > getFirstMergeTime(int n, const vector<pair<int,
         vector<int> lIdxes, rIdxes;
         for (int idx : idxes) {
             auto [u, v] = edges[idx];
-            if (idx <= m && graph.getSCCN(ds.find(u)) == graph.getSCCN(ds.find(v))) lIdxes.push_back(idx);
+            if (idx <= m && graph.isSameSCC(ds.find(u), ds.find(v))) lIdxes.push_back(idx);
             else rIdxes.push_back(idx);
         }
 
@@ -142,7 +142,7 @@ E는 전체 간선 개수
 ### 주의사항
 dnc(0, idxes.size() - 1, idxes)로 호출하면 안 됨.   
 사이클을 이루지 않는 간선들은 계속 right로 몰리게 되므로 s == e == edges.size() - 1일 때 실제로 합쳐지는 간선과 그렇지 않은 간선을 구별할 수 없음   
-따로 dnc(0, idxes.size(), idxes)로 호출해서 edges.size()일 때의 간선들만 제외해주면 됨   
+따로 dnc(0, idxes.size(), idxes)로 호출해서 s == e == edges.size()일 때의 간선들만 제외해주면 됨   
 
 findSCC()에서 매번 inGraph의 노드들에 대해서 -1로 초기화해줘야 됨. 유니온파인드로 압축하면서 같은 인덱스를 다시 확인하게 되기 때문   
 
