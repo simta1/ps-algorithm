@@ -49,7 +49,7 @@ public:
 canColor(k) : $k^{n - 1}$ + 백트래킹
 
 ### 주의사항
-colors[cur] = -1; 무조건 적어야 됨   
+colors[cur] = -1; 백트래킹 까먹으면 안 됨
 
 ### 백준문제
 [Coloring Graphs](https://www.acmicpc.net/problem/24782)   
