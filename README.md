@@ -32,6 +32,20 @@ __백준문제__ 에는 혹시 코드 수정하게 됐을 때 테스트해볼 �
 mermaid stateDiagram-v2 사용   
 
 ## -->
+# time complexity
+| constraints           | time complexity                           | algorithm                                             |
+|-----------------------|-------------------------------------------|-------------------------------------------------------|
+| $n \le 12$            | $O(n!)$                                   |                                                       |
+| $n \le 25$            | $O(2^n)$, $O(n^2 \cdot 2^n)$              |                                                       |
+| $n \le 50$            | $O(\sqrt2^n)$                             |                                                       |
+| $n \le 100$           | $O(n^4)$                                  |                                                       |
+| $n \le 500$           | $O(n^3)$                                  |                                                       |
+| $n \le 5,000$         | $O(n^2)$                                  |                                                       |
+| $n \le 100,000$       | $O(n \sqrt n)$, $O(n \log^2n)$            |                                                       |
+| $n \le 1,000,000$     | $O(n \log n)$                             |                                                       |
+| $n \le 5,000,000$     | $O(n \log n)$                             | SegmentTree(bottom-up only)                           |
+| $n \le 100,000,000$   | $O(n)$                                    |                                                       |
+| $n \gt 10^8 $         | $O(logn)$, $O(1)$                         |                                                       |
 
 # ps algorithm
 티어 분류 :
@@ -46,12 +60,14 @@ mermaid stateDiagram-v2 사용
   * #### 세그먼트 트리
     * <span class="gold">[펜윅 트리(G+)](/자료구조/세그먼트%20트리/FenwickTree.md)</span>
     * <span class="gold">[세그먼트 트리(G+)](/자료구조/세그먼트%20트리/SegmentTree.md)</span>
+    * <span class="">[비재귀 세그(G+)]</span>
     * <span class="platinum">[세그먼트 트리에서의 이분 탐색(P-)](/자료구조/세그먼트%20트리/Biary%20Search%20on%20SegmentTree.md)</span>
     * <span class="platinum">[2D 펜윅(P-)](/자료구조/세그먼트%20트리/FenwickTree2D.md)</span>
     * <span class="platinum">[2D 세그(P-)](/자료구조/세그먼트%20트리/SegmentTree2D.md)</span>
     * <span class="platinum">[n차원 펜윅(P-)](/자료구조/세그먼트%20트리/Multi%20Dimensional%20FenwickTree.md)</span>
     * <span class="platinum">[머지소트 트리(P-)](/자료구조/세그먼트%20트리/MergesortTree.md)</span>
     * <span class="platinum">[레이지 세그(P-)](/자료구조/세그먼트%20트리/SegmentTree(Lazy%20Propagation).md)</span>
+    * <span class="">[비재귀 레이지 세그]</span> <!-- https://www.acmicpc.net/blog/view/117 -->
     * <span class="platinum">[다이나믹 세그, 다이나믹 레이지 세그(P-)](/자료구조/세그먼트%20트리/Dynamic%20SegmentTree.md)</span>
     * ~~<span class="platinum">[_range GCD 세그(P+)_](/자료구조/세그먼트%20트리/GCD%20SegmentTree.md)</span>~~
     * <span class="platinum">[금광 세그(P+)](/자료구조/세그먼트%20트리/Gold%20Mine%20SegmentTree.md)</span>
