@@ -77,7 +77,7 @@ $dp[i][j] = min_{lowerLimit(j) \le k \le upperLimit(j)} \left[ dp[i - 1][k] + mo
 수식에 맞게 람다함수 작성
 
 dnc(i, s, e, l, r)는 dp[i][l\~r] 계산   
-l~r이 구하려는 범위, s~e는 현재 가능한 k의 범위   
+l\~r이 구하려는 범위, s\~e는 현재 가능한 k의 범위   
 세그먼트트리랑 변수의미 통일해서 이해하면 편하다.   
 
 lowerLimit(m)과 upperLimit(m)은 문제에 따라 알맞게 사용   
