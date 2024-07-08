@@ -127,8 +127,7 @@ mermaid stateDiagram-v2 사용
     * <span class="ruby">[offline incremental SCC(R-)](/그래프%20이론/그래프/Offline%20Incremental%20SCC.md)</span>
     <!-- * <span class="">[현 그래프 판정]</span> -->
     <!-- * <span class="">[_최소 차수 MST_]</span> -->
-  * #### 네트워크 플로우
-    * <span class="platinum">[최대유량 알고리즘들 정리](/그래프%20이론/네트워크%20플로우/MaxFlow.md)</span>
+  * #### [네트워크 플로우](/그래프%20이론/네트워크%20플로우/MaxFlow.md)
     * <span class="platinum">[최대유량: Edmonds-Karp (P-)](/그래프%20이론/네트워크%20플로우/Edmonds-Karp.md)</span>
     * <span class="">[최대유량: Dinic (P-)]</span>
     * ~~<span class="">[최대유량: Push-Relabel (P-)]</span>~~
@@ -149,14 +148,13 @@ mermaid stateDiagram-v2 사용
     * <span class="">[센트로이드 분할(D-)]</span>
     * <span class="">[트리 동형 사상]</span>
     * <span class="">[탑 트리(R-)]</span>
-* ### DP
+* ### [DP](/DP/DP%20by%20dfs.md)
   <!-- * <span class="">[배낭 문제(G-)]</span> -->
   <!-- * <span class="">[LCS]</span> -->
   <!-- * <span class="">[비트셋 LCS]</span> -->
   <!-- * <span class="">[비트 집합]</span> -->
   * <span class="silver">[Kadane algorithm(S+)](/DP/Kadane%20Algorithm.md)</span>
   * <span class="gold">[비트셋 배낭(G-)](/DP/Bitset%20Knapsack.md)</span>
-  * <span class="">[탑다운 재귀 구현](/DP/DP%20by%20dfs.md)</span>
   * <span class="gold">[비트마스크 DP(G+)](/DP/Bitmask%20DP.md)</span>
   * <span class="">[최단거리 역추적]</span>
   * <span class="">[SOS DP(D-)](/ps-snippet/DP/SOS%20DP.md)</span>
