@@ -76,7 +76,7 @@ min이 아니라 max여도 가능
 $dp[i][j] = min_{lowerLimit(j) \le k \le upperLimit(j)} \left[ dp[i - 1][k] + monge(k, j) \right]$   
 수식에 맞게 람다함수 작성
 
-dnc(i, s, e, l, r)는 dp[i][l~r] 계산   
+dnc(i, s, e, l, r)는 dp[i][l\~r] 계산   
 l~r이 구하려는 범위, s~e는 현재 가능한 k의 범위   
 세그먼트트리랑 변수의미 통일해서 이해하면 편하다.   
 
