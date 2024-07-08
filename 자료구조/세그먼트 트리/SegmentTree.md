@@ -77,6 +77,17 @@ range update가 필요한 경우 lazy propagation 사용
 i번째 값에 val만큼 더하려면 updateAdd(i, val);   
 i번째 값을 val로 바꾸려면 updateChange(i, val);   
 
+생성자에서 벡터 받아서 세그먼트 트리 만드는 경우 init쓰는 게 update n번 호출하는 것보다 빠르다.   
+실제로 [최솟값 찾기](https://www.acmicpc.net/problem/11003)에서는 탑다운 세그로 푸는 경우엔 시간초과 피하려면 init을 써야 된다.   
+```cpp
+// 느림
+for (int i = 0; i < v.size(); i++) updateChange(i + 1, v[i]);
+
+// 빠른 코드
+init(v, 1, 0, n - 1);
+```
+
+
 상황에 맞게 merge()함수 변경해서 사용   
 ```cpp
 // ex) mod sum
