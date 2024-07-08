@@ -148,7 +148,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[센트로이드 분할(D-)]</span>
     * <span class="">[트리 동형 사상]</span>
     * <span class="">[탑 트리(R-)]</span>
-* ### [DP](/DP/DP%20by%20dfs.md)
+* ### [DP](/DP/Top-Down%20DP.md)
   <!-- * <span class="">[배낭 문제(G-)]</span> -->
   <!-- * <span class="">[LCS]</span> -->
   <!-- * <span class="">[비트셋 LCS]</span> -->
