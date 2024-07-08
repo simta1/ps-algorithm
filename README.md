@@ -127,7 +127,7 @@ mermaid stateDiagram-v2 사용
     * <span class="ruby">[offline incremental SCC(R-)](/그래프%20이론/그래프/Offline%20Incremental%20SCC.md)</span>
     <!-- * <span class="">[현 그래프 판정]</span> -->
     <!-- * <span class="">[_최소 차수 MST_]</span> -->
-  * #### [네트워크 플로우](/그래프%20이론/네트워크%20플로우/MaxFlow.md)
+  * #### [네트워크 플로우](/그래프%20이론/네트워크%20플로우/최대유량%20알고리즘들%20정리.md)
     * <span class="platinum">[최대유량: Edmonds-Karp (P-)](/그래프%20이론/네트워크%20플로우/Edmonds-Karp.md)</span>
     * <span class="">[최대유량: Dinic (P-)]</span>
     * ~~<span class="">[최대유량: Push-Relabel (P-)]</span>~~
