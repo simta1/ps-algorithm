@@ -60,7 +60,7 @@ mermaid stateDiagram-v2 사용
   * #### 세그먼트 트리
     * <span class="gold">[펜윅 트리(G+)](/자료구조/세그먼트%20트리/FenwickTree.md)</span>
     * <span class="gold">[세그먼트 트리(G+)](/자료구조/세그먼트%20트리/SegmentTree.md)</span>
-    * <span class="">[비재귀 세그(G+)]</span>
+    * <span class="gold">[비재귀 세그(G+)](/자료구조/세그먼트%20트리/Bottom-Up%20SegmentTree.md)</span>
     * <span class="platinum">[세그먼트 트리에서의 이분 탐색(P-)](/자료구조/세그먼트%20트리/Biary%20Search%20on%20SegmentTree.md)</span>
     * <span class="platinum">[2D 펜윅(P-)](/자료구조/세그먼트%20트리/FenwickTree2D.md)</span>
     * <span class="platinum">[2D 세그(P-)](/자료구조/세그먼트%20트리/SegmentTree2D.md)</span>
@@ -175,7 +175,7 @@ mermaid stateDiagram-v2 사용
   * <span class="gold">[트라이(G+)](/문자열/Trie.md)</span>
   * <span class="platinum">[매내처(P-)](/문자열/Manacher.md)</span>
   * <span class="platinum">[KMP(P-)](/문자열/Knuth-Morris-Pratt%20Algorithm.md)</span>
-  * <span class="platinum">[아호 코라식(P+)](/문자열/Aho_Corasick.md)</span>
+  * <span class="platinum">[아호 코라식(P+)](/문자열/Aho-Corasick.md)</span>
   * ~~<span class="">[bitap algorithm]</span>~~
   * <span class="">[해싱]</span>
   * <span class="">[라빈 카프]</span>
