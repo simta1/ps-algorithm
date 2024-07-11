@@ -126,6 +126,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[일반 매칭(D+)]</span>
     * <span class="ruby">[offline incremental SCC(R-)](/그래프%20이론/그래프/Offline%20Incremental%20SCC.md)</span>
     <!-- * <span class="">[현 그래프 판정]</span> -->
+    <!-- * <span class="">[Perfect Elimination Ordering]</span> -->
     <!-- * <span class="">[_최소 차수 MST_]</span> -->
   * #### [네트워크 플로우](/그래프%20이론/네트워크%20플로우/최대유량%20알고리즘들%20정리.md)
     * <span class="platinum">[최대유량: Edmonds-Karp (P-)](/그래프%20이론/네트워크%20플로우/Edmonds-Karp.md)</span>
@@ -154,10 +155,10 @@ mermaid stateDiagram-v2 사용
   <!-- * <span class="">[비트셋 LCS]</span> -->
   <!-- * <span class="">[비트 집합]</span> -->
   * <span class="silver">[Kadane algorithm(S+)](/DP/Kadane%20Algorithm.md)</span>
-  * <span class="gold">[비트셋 배낭(G-)](/DP/Bitset%20Knapsack.md)</span>
+  * <span class="gold">[비트셋 배낭(G-)](/DP/Bitset%20Knapsack.md)</span> <!-- https://egod1537.tistory.com/entry/Bounded-Knapsack-Problem%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9C%BC%EB%A1%9C-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0 -->
   * <span class="gold">[비트마스크 DP(G+)](/DP/Bitmask%20DP.md)</span>
   * <span class="">[최단거리 역추적]</span>
-  * <span class="">[SOS DP(D-)](/ps-snippet/DP/SOS%20DP.md)</span>
+  * <span class="">[SOS DP(D-)](/DP/SOS%20DP.md)</span>
   * <span class="">[히르쉬버그(D+)]</span>
   * <span class="">[Connection Profile DP]</span>
   * <span class="">[토글링]</span>
@@ -249,11 +250,13 @@ mermaid stateDiagram-v2 사용
   * <span class="">[투 포인터(G-)]</span>
   * <span class="">[모노톤 스택]</span>
   * <span class="">[모노톤 큐]</span>
+  * <span class="">[누적합, imos]</span>
   * <span class="gold">[후위 표기식(G+)](/기타/Postfix%20Notation.md)</span>
   * <span class="">[중간에서 만나기(G+)]</span>
+  * <span class="platinum">[반전수(P-)](/기타/Inversions%20of%20array.md)</span>
   * <span class="">[스위핑]</span>
   * <span class="">[슬라이딩 윈도우]</span>
-  * <span class="">[imos]</span>
+  * <span class="">[덱을 이용한 구간 최댓값 트릭(P-)]</span>
   * <span class="platinum">[XOR 트라이(P-)](/기타/XOR%20Trie.md)</span>
   * <span class="platinum">[삼분 탐색(P-)](/기타/Ternary%20Search.md)</span>
   * <span class="platinum">[Mo's algorithm(P+)](/기타/Mo's%20Algorithm.md)</span>
