@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### inversions (세그트리 사용해서 구현)
+### inversions (세그트리로 구현)
 ```cpp
 template <typename T>
 class FenwickTree {
@@ -35,7 +35,8 @@ void coordinate_compression(vector<T> &orig) {
     for (auto &e : orig) e = lower_bound(v.begin(), v.end(), e) - v.begin();
 }
 
-long long countInversions(vector<int> v) {
+template <typename T>
+long long countInversions(vector<T> v) {
     coordinate_compression(v); // 0-based
 
     long long res = 0;
@@ -51,14 +52,39 @@ long long countInversions(vector<int> v) {
 }
 ```
 ### Inversions (분할정복으로 구현)
-```
+```cpp
+template <typename T>
+long long countInversions(vector<T> v) {
+    function<long long(int, int)> dnc = [&](int s, int e) -> long long {
+        if (s == e) return 0;
+        
+        int m = s + e >> 1;
+        long long res = dnc(s, m) + dnc(m + 1, e);
 
+        int l = s, r = m + 1;
+        while (l <= m && r <= e) {
+            if (v[l] <= v[r]) ++l;
+            else {
+                res += m - l + 1;
+                ++r;
+            }
+        }
+    
+        inplace_merge(v.begin() + s, v.begin() + m + 1, v.begin() + e + 1);
+        return res;
+    };
+
+    return dnc(0, v.size() - 1);
+}
 ```
 ### 시간복잡도
 $O(N~logN)$   
 
 ### 용어정의
 배열 $\{a_1, \cdots, a_n\}$에서 $i \lt j$, $a_i \gt a_j$를 만족하는 순서쌍 $(i, j)$의 개수
+
+### 주의사항
+값 변경 있으므로 참조 사용하지 않도록 주의
 
 ### 사용관련
 분할정복 쓰면 좌표압축 안 쓰고 계산 가능
