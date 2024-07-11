@@ -5,28 +5,28 @@ template <typename T>
 class FenwickTree {
 private:
     vector<T> tree;
- 
+
     T sum(int i) {
         T res = 0;
         for (; i > 0; i -= (i & -i)) res += tree[i];
         return res;
     }
- 
+
 public:
     FenwickTree(int n) : tree(n + 1) {}
     FenwickTree(const vector<T> &v) : tree(v.size() + 1) {
         for (int i = 0; i < v.size(); i++) update(i + 1, v[i]);
     }
- 
+
     void update(int i, T add) { // 1-based
         for (; i < tree.size(); i += (i & -i)) tree[i] += add;
     }
- 
+
     T query(int l, int r) { // 1-based
         return sum(r) - sum(l - 1);
     }
 };
- 
+
 template <typename T>
 void coordinate_compression(vector<T> &orig) {
     vector<T> v(orig);
@@ -34,19 +34,19 @@ void coordinate_compression(vector<T> &orig) {
     v.erase(unique(v.begin(), v.end()), v.end());
     for (auto &e : orig) e = lower_bound(v.begin(), v.end(), e) - v.begin();
 }
- 
+
 long long countInversions(vector<int> v) {
     coordinate_compression(v); // 0-based
-    
+
     long long res = 0;
     FenwickTree<int> fw(v.size());
- 
+
     for (auto &e : v) {
         ++e; // 1-based
         res += fw.query(e + 1, v.size());
         fw.update(e, 1);
     }
- 
+
     return res;
 }
 ```
