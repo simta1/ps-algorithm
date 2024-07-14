@@ -403,8 +403,8 @@ ccw --> 볼록_다각형_내부의_점_판점
   <!-- * Pre-defined Compiler Macros
   * 버전 gnu++17로 해야 Template argument deduction 등 문법 사용가능 -->
 * ### 기타
-  * <span class="information">[자주 쓰는 변수명](/C++%20관련%20정보들/기타/Variable%20Name.md)</span>
-  * <span class="information">[코딩 아이디어](/C++%20관련%20정보들/기타/Idea.md)</span>
+  * <span class="information">[자주 쓰는 변수명](/C++/기타/Variable%20Name.md)</span>
+  * <span class="information">[코딩 아이디어](/C++/기타/Idea.md)</span>
 ---
 # 참고문헌
 tlsdydaud1   
