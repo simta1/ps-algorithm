@@ -46,9 +46,9 @@ return (b > a) != (b > c);
 
 # 오차 없는 ceil
 ```cpp
-return (a + b - 1) / b; // ceil(a / b)
+return (a + b - 1) / b; // ceil(double(a) / b)
 ```
-ceil(a / b)로 그냥 ceil() 사용할 경우 부동소수점 오류로 오차 생기는 경우 존재   
+ceil(double(a) / b)로 계산할 경우 부동소수점 오차로 계산 잘못되는 경우 존재   
 
 # 오차 없는 log2
 ```cpp
