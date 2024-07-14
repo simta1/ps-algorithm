@@ -33,7 +33,7 @@ vector<int> v(n);
 for (auto &e : v) cin >> e;
 
 int offset = *min_element(v.begin(), v.end());
-vector<int> cnt(*max_element(v.begin(), v.end()) - offset);
+vector<int> cnt(*max_element(v.begin(), v.end()) - offset + 1);
 for (auto &e : v) ++cnt[e - offset];
 ```
 
