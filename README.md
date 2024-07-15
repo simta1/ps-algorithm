@@ -256,7 +256,7 @@ mermaid stateDiagram-v2 사용
   * <span class="platinum">[반전수(P-)](/기타/Inversions%20of%20array.md)</span>
   * <span class="">[스위핑]</span>
   * <span class="">[슬라이딩 윈도우]</span>
-  * <span class="platinum">[덱을 이용한 구간 최댓값 트릭(P-)](/ps-snippet/기타/Deque%20Trick.md)</span>
+  * <span class="platinum">[덱을 이용한 구간 최댓값 트릭(P-)](/기타/Deque%20Trick.md)</span>
   * <span class="platinum">[XOR 트라이(P-)](/기타/XOR%20Trie.md)</span>
   * <span class="platinum">[삼분 탐색(P-)](/기타/Ternary%20Search.md)</span>
   * <span class="platinum">[Mo's algorithm(P+)](/기타/Mo's%20Algorithm.md)</span>
