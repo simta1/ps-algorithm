@@ -44,7 +44,7 @@ for (int i = 0; i < n; i++) pos[v[i]] = i;
 ```
 
 ### adj, chd
-adj(adjacent) : 그래프에서 인접리스트   
+adj(adjacent) : 그래프에서 인접리스트       
 chd(child) : 트리에서 인접리스트. 입력을 양방향 간선으로 받아 adj에 저장한 뒤 부모->자식 방향 간선만 남겨 저장   
 
 ### rdj
@@ -55,7 +55,7 @@ vector<vector<pair<int, T> > > rdj; // reverse adj
 ```
 
 ### dfsn
-ETT 등 dfs 스패닝 트리에서 방문순서 저장   
+ETT 등에서 dfs 스패닝 트리 만들 때 방문순서 저장   
 
 ### trueValue
 visited배열 등에서 true인지 나타내는 값.   
