@@ -72,3 +72,9 @@ v.back()
 // ex) 볼록껍질 등 구현할 때
 ccw(*----v.end(), *--v.end(), point)
 ```
+
+# constrain
+```cpp
+return (val >= 0) * val;
+return max(val, 0);
+```
