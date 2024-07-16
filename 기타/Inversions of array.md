@@ -95,3 +95,8 @@ $O(N~logN)$
 ### 백준문제
 [버블 소트](https://www.acmicpc.net/problem/1517)   
 [D. Swap Dilemma](https://codeforces.com/contest/1983/problem/D)
+
+### 참고문헌
+https://overnap.com/parity-of-permutation-and-inversion/   
+https://portrait-of-youngblood.tistory.com/9   
+https://gosamy.tistory.com/35   
