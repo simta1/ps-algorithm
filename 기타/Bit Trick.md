@@ -68,7 +68,16 @@ void reverse(int l, int r) {
 }
 ```
 
+### x >> 31, -x >> 31
+```cpp
+bool isPositive = (x >> 31);
+bool isNegative = (-x >> 31);
+```
 
+### ~0u << 2
+```cpp
+const int inf = ~0u >> 2; // 1073741823
+```
 
 ---
 # 그냥 참고용
