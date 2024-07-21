@@ -121,7 +121,7 @@ public:
 ```
 ### 시간복잡도
 $O(N + logN ~ log\frac{N}{\epsilon})$   
-(누적합 없이 naive로 구현할 경우 $O(N ~ log\frac{N}{\epsilon})$)   
+(누적합 없이 naive로 구현할 경우 $O(N ~ log\frac{N}{\epsilon})$ )   
 
 ### 사용관련
 ld랑 eps 필요한만큼 조절해서 사용
