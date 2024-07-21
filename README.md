@@ -192,6 +192,7 @@ mermaid stateDiagram-v2 사용
   * <span class="platinum">[가장 먼 두 점 : 회전하는 캘리퍼스(P-)](/기하학/Rotating%20Calipers.md)</span>
   * <span class="platinum">[다각형 내부의 점 판정(P-)](/기하학/Point%20In%20Polygon.md)</span>
   * <span class="platinum">[볼록 다각형 내부의 점 판정(P+)](/기하학/Point%20In%20Convex%20Polygon.md)</span>
+  * <span class="platinum">[_등적등주 분할(P+)_](/기하학/Equalizer.md)</span>
   * <span class="platinum">[_가장 가까운 두 점(P+)_](/기하학/Closest%20Two%20Points.md)</span>
   * <span class="">[최소 외접원(P+)]</span>
   * <span class="">[_반 나누기_]</span>
