@@ -182,11 +182,10 @@ mermaid stateDiagram-v2 사용
   * <span class="diamond">[회문 트리(D+)](/문자열/Palindromic%20Tree.md)</span>
   * <span class="">[접미사 트리(R-)]</span>
 * ### 기하학
-  * <span class="gold">[cross product, CCW(G-)](/기하학/Cross%20Product,%20CCW.md)</span>
+  * <span class="gold">[cross product, CCW, 직선-점 거리 계산(G-)](/기하학/Geometry%20Header.md)</span>
   * <span class="">[plane sweeping]</span>
   * <span class="gold">[볼록다각형 넓이(G-)](/기하학/Polygon%20Area.md)</span>
   * <span class="">[볼록다각형 판정]</span>
-  * <span class="gold">[직선-점 거리 계산(G-)](/기하학/Distance.md)</span>
   * <span class="gold">[선분교차판정(G+)](/기하학/Line-Line%20Intersection%20check.md)</span>
   * <span class="platinum">[_선분교차점 계산(P-)_](/기하학/Line-Line%20Intersection%20calculate.md)</span>
   * <span class="platinum">[볼록 껍질(P-)](/기하학/Graham%20Scan.md)</span>
@@ -268,6 +267,7 @@ mermaid stateDiagram-v2 사용
 # C++ 유용한 기능
 * ### 문법
   * <span class="">[range-based for loop]</span>
+  * <span class="">[using]</span> <!-- 기하학 풀 때 using ld; -->
   * <span class="">[literal]</span>
   * <span class="information">[template argument deduction](/C++/문법/Template%20Argument%20Deduction.md)</span>
   * <span class="">[람다 재귀]</span>
@@ -275,7 +275,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[리터럴 여러줄 이어쓰기]</span>
 * ### 함수
   * <span class="">[수학관련]</span> <!-- atan, atan2 추가하기 -->
-  * <span class="">[배열관련]</span>
+  * <span class="">[배열관련]</span> <!-- copy doubling -->
   * <span class="information">[타입관련](/C++/함수/casting%20operators.md)</span>
   * <span class="information">[문자열관련](/C++/함수/string.md)</span>
   * <span class="information">[이분탐색 람다함수](/C++/함수/lower_bound_lambda.md)</span>
@@ -289,6 +289,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[debug, c_cpp_properties.json 설정]</span>
   <!-- * Pre-defined Compiler Macros
   * 버전 gnu++17로 해야 Template argument deduction 등 문법 사용가능 -->
+  * <span class="">[predifined macro]</span>
   * <span class="">[percompiled header]</span> <!-- https://codeforces.com/blog/entry/79026 --> <!-- https://codeforces.com/blog/entry/53909? -->
 * ### 기타
   * <span class="information">[자주 쓰는 변수명](/C++/기타/Variable%20Name.md)</span>
