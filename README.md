@@ -7,7 +7,6 @@
   .additional { background-color:#E4BBFE }   
   .information { background-color:#ABCDEF }   
 </style>   
-##
 <!-- ### 코드 작성
 변수명 통일 -> [참고](/C++%20관련%20정보들/기타/Variable%20Name.md)   
 vector쓸 땐 array doubling 고려   
@@ -248,6 +247,7 @@ mermaid stateDiagram-v2 사용
   * <span class="silver">[값 / 좌표 압축(S-)](/기타/Coordinate%20Compression.md)</span>
   * <span class="silver">[순열 사이클 분할(S+)](/기타/Permutation%20Cycle%20Decomposition.md)</span>
   * <span class="">[투 포인터(G-)]</span>
+  * <span class="">[랜덤]</span> <!-- static 사용 -->
   * <span class="">[모노톤 스택]</span>
   * <span class="">[모노톤 큐]</span>
   * <span class="">[누적합, imos]</span>
@@ -265,8 +265,73 @@ mermaid stateDiagram-v2 사용
   * <span class="">[춤추는 링크, 크누스 X]</span>
   * <span class="">[임의 정밀도(epsilon값 계산)(A)]</span>
   * ~~<span class="">[담금질 기법]</span>~~
+# C++ 유용한 기능
+* ### 문법
+  * <span class="">[range-based for loop]</span>
+  * <span class="">[literal]</span>
+  * <span class="information">[template argument deduction](/C++/문법/Template%20Argument%20Deduction.md)</span>
+  * <span class="">[람다 재귀]</span>
+  * <span class="">[코드 여러줄 이어쓰기]</span>
+  * <span class="">[리터럴 여러줄 이어쓰기]</span>
+* ### 함수
+  * <span class="">[수학관련]</span> <!-- atan, atan2 추가하기 -->
+  * <span class="">[배열관련]</span>
+  * <span class="information">[타입관련](/C++/함수/casting%20operators.md)</span>
+  * <span class="information">[문자열관련](/C++/함수/string.md)</span>
+  * <span class="information">[이분탐색 람다함수](/C++/함수/lower_bound_lambda.md)</span>
+  * <span class="">[permutation]</span>
+  * <span class="information">[custom pq](/C++/함수/costom%20pq.md)</span>
+  * <span class="">[io manip]</span>
+  * <span class="information">[ext](/C++/함수/ext.md)</span>
+* ### ps용 설정
+  * <span class="">[cph]</span>
+  * <span class="">[snippet]</span>
+  * <span class="">[debug, c_cpp_properties.json 설정]</span>
+  <!-- * Pre-defined Compiler Macros
+  * 버전 gnu++17로 해야 Template argument deduction 등 문법 사용가능 -->
+  * <span class="">[percompiled header]</span> <!-- https://codeforces.com/blog/entry/79026 --> <!-- https://codeforces.com/blog/entry/53909? -->
+* ### 기타
+  * <span class="information">[자주 쓰는 변수명](/C++/기타/Variable%20Name.md)</span>
+  * <span class="information">[코딩 아이디어](/C++/기타/Idea.md)</span>
+# 참고문헌
+tlsdydaud1   
+https://00ad-8e71-00ff-055d.tistory.com/3   
 
-## 알고리즘별 필요 사전지식
+jh05013   
+https://jh05013.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/   
+
+jhnah917   
+https://justicehui.github.io/tutorial/   
+https://github.com/justiceHui/Unknown-To-Wellknown   
+
+jin814   
+https://blog.naver.com/jinhan814/222439886998   
+https://blog.naver.com/PostView.naver?blogId=jinhan814&logNo=222689836982&parentCategoryNo=&categoryNo=6&viewDate=&isShowPopularPosts=false&from=postView   
+
+kcm1700   
+https://algospot.com/wiki/read/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98_%EB%8C%80%ED%9A%8C%EC%97%90_%ED%95%84%EC%9A%94%ED%95%9C_%EC%88%98%ED%95%99   
+
+https://algospot.com/wiki/read/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98_%EB%8C%80%ED%9A%8C%EC%97%90_%ED%95%84%EC%9A%94%ED%95%9C_%EA%B8%B0%ED%95%98
+
+백준 알고리즘 분류   
+https://www.acmicpc.net/problem/tags   
+
+선형대수학   
+https://tistory.joonhyung.xyz/18   
+
+bowbowbow   
+https://bowbowbow.tistory.com/category/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98   
+
+kks227   
+https://m.blog.naver.com/kks227?categoryNo=299&tab=1   
+
+MJ Studio   
+https://ps.mjstudio.net/categories/algorithm   
+
+koosaga   
+https://koosaga.com/242   
+
+# 알고리즘 순서
 ```mermaid
 stateDiagram-v2
 direction LR
@@ -377,69 +442,3 @@ ccw --> 볼록_다각형_내부의_점_판점
 %% 트라이 --> 아호_코라식
 %% ccw --> 볼록다각형_판정
 ```
----
-# C++ 유용한 기능
-* ### 문법
-  * <span class="">[range-based for loop]</span>
-  * <span class="">[literal]</span>
-  * <span class="information">[template argument deduction](/C++/문법/Template%20Argument%20Deduction.md)</span>
-  * <span class="">[람다 재귀]</span>
-  * <span class="">[코드 여러줄 이어쓰기]</span>
-  * <span class="">[리터럴 여러줄 이어쓰기]</span>
-* ### 함수
-  * <span class="">[수학관련]</span> <!-- atan, atan2 추가하기 -->
-  * <span class="">[배열관련]</span>
-  * <span class="information">[타입관련](/C++/함수/casting%20operators.md)</span>
-  * <span class="information">[문자열관련](/C++/함수/string.md)</span>
-  * <span class="information">[이분탐색 람다함수](/C++/함수/lower_bound_lambda.md)</span>
-  * <span class="">[permutation]</span>
-  * <span class="information">[custom pq](/C++/함수/costom%20pq.md)</span>
-  * <span class="">[io manip]</span>
-  * <span class="information">[ext](/C++/함수/ext.md)</span>
-* ### ps용 설정
-  * <span class="">[cph]</span>
-  * <span class="">[snippet]</span>
-  * <span class="">[debug, c_cpp_properties.json 설정]</span>
-  <!-- * Pre-defined Compiler Macros
-  * 버전 gnu++17로 해야 Template argument deduction 등 문법 사용가능 -->
-* ### 기타
-  * <span class="information">[자주 쓰는 변수명](/C++/기타/Variable%20Name.md)</span>
-  * <span class="information">[코딩 아이디어](/C++/기타/Idea.md)</span>
----
-# 참고문헌
-tlsdydaud1   
-https://00ad-8e71-00ff-055d.tistory.com/3   
-
-jh05013   
-https://jh05013.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/   
-
-jhnah917   
-https://justicehui.github.io/tutorial/   
-https://github.com/justiceHui/Unknown-To-Wellknown   
-
-jin814   
-https://blog.naver.com/jinhan814/222439886998   
-https://blog.naver.com/PostView.naver?blogId=jinhan814&logNo=222689836982&parentCategoryNo=&categoryNo=6&viewDate=&isShowPopularPosts=false&from=postView   
-
-kcm1700   
-https://algospot.com/wiki/read/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98_%EB%8C%80%ED%9A%8C%EC%97%90_%ED%95%84%EC%9A%94%ED%95%9C_%EC%88%98%ED%95%99   
-
-https://algospot.com/wiki/read/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98_%EB%8C%80%ED%9A%8C%EC%97%90_%ED%95%84%EC%9A%94%ED%95%9C_%EA%B8%B0%ED%95%98
-
-백준 알고리즘 분류   
-https://www.acmicpc.net/problem/tags   
-
-선형대수학   
-https://tistory.joonhyung.xyz/18   
-
-bowbowbow   
-https://bowbowbow.tistory.com/category/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98   
-
-kks227   
-https://m.blog.naver.com/kks227?categoryNo=299&tab=1   
-
-MJ Studio   
-https://ps.mjstudio.net/categories/algorithm   
-
-koosaga   
-https://koosaga.com/242   
