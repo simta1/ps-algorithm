@@ -1,5 +1,8 @@
 [카테고리](/README.md)
-##### [Point, Cross Product, CCW](/기하학/Cross%20Product,%20CCW.md)
+##### [Point, Cross Product, CCW](/기하학/Geometry%20Header.md)
+<details>
+<summary>기하학 헤더</summary>
+
 ```cpp
 template <typename T>
 struct Point {
@@ -22,6 +25,8 @@ int ccw(const Point<T> &p1, const Point<T> &p2, const Point<T> &p3) { // -1 : �
     return (cp > 0) - (cp < 0);
 }
 ```
+</details>
+
 ### Line-Line Intersection Check
 ```cpp
 template <typename T>

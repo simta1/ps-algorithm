@@ -1,11 +1,18 @@
 [카테고리](/README.md)
-### Polygon Area
+### [Triangle Area](/기하학/Geometry%20Header.md)
+<details>
+<summary>기하학 헤더</summary>
+
 ```cpp
 template <typename T>
-ld getTriangleArea(const Point<T> &a, const Point<T> &b, const Point<T> &c) {
+inline ld getTriangleArea(const Point<T> &a, const Point<T> &b, const Point<T> &c) {
     return 0.5l * fabsl(a.x * b.y + b.x * c.y + c.x * a.y - a.y * b.x - b.y * c.x - c.y * a.x);
 }
+```
+</details>
 
+### Polygon Area
+```cpp
 template <typename T>
 ld getPolygonArea(const vector<Point<T> > &polygon) {
     if (polygon.size() <= 2) return 0;

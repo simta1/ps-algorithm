@@ -1,5 +1,9 @@
 [카테고리](/README.md)
-##### [Point, Cross Product](/기하학/Cross%20Product,%20CCW.md)
+##### 
+### [Point, Cross Product](/기하학/Geometry%20Header.md)
+<details>
+<summary>기하학 헤더</summary>
+
 ```cpp
 template <typename T>
 struct Point {
@@ -16,6 +20,8 @@ T crossProduct(const Point<T> &p1, const Point<T> &p2) {
     return (p1.x * p2.y - p2.x * p1.y);
 }
 ```
+</details>
+
 ### Line-Line Intersection Calculate
 ```cpp
 template <typename T>

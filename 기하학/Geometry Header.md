@@ -1,4 +1,9 @@
 [카테고리](/README.md)
+### 자료형
+```cpp
+using ld = double;
+```
+오차 범위에 따라 double과 long double을 변경하기 쉽도록 ld 사용
 ### Point, Cross Product, CCW
 ```cpp
 template <typename T>
@@ -26,7 +31,6 @@ int ccw(const Point<T> &p1, const Point<T> &p2, const Point<T> &p3) { // -1 : �
     return (cp > 0) - (cp < 0);
 }
 ```
-
 ### Distance
 ```cpp
 template <typename T>
@@ -40,7 +44,18 @@ T distLP(const Point<T> &p1, const Point<T> &p2, const Point<T> &p3) { // distan
     return crossProduct(p2 - p1, p3 - p1) / distPP(p1, p2);
 }
 ```
+### Area
+```cpp
+template <typename T>
+inline ld getTriangleArea(const Point<T> &a, const Point<T> &b, const Point<T> &c) {
+    return 0.5l * fabsl(a.x * b.y + b.x * c.y + c.x * a.y - a.y * b.x - b.y * c.x - c.y * a.x);
+}
 
+template <typename T>
+inline ld getRectangleArea(const Point<T> &p1, const Point<T> &p2, const Point<T> &p3, const Point<T> &p4) {
+    return getTriangleArea(p1, p2, p3) + getTriangleArea(p1, p4, p3);
+}
+```
 ### isBetween
 ```cpp
 template <typename T>
