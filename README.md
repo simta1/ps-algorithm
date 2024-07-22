@@ -211,6 +211,7 @@ mermaid stateDiagram-v2 사용
   * <span class="gold">[p-지수(G+)](/수학/p-adic%20valuation.md)</span>
   * <span class="gold">[확장 유클리드 호제법, 모듈러 역원(G+)](/수학/ExtendedGCD,%20Modular%20Inverse.md)</span>
   * <span class="gold">[오일러 파이 함수(G+)](/수학/Euler's%20Totient%20Function.md)</span>
+  * <span class="additional">[고합성수 검색용 구현체(A)](/수학/Highly%20Composite%20Number.md)</span>
   * <span class="platinum">[중국인의 나머지 정리(P-)](/수학/Chinese%20Remainder%20Theorem.md)</span>
   * <span class="">[Garner's algorithm]</span>
   * <span class="">[nCr mod 소수, 뤼카(P-)]</span>
@@ -234,7 +235,7 @@ mermaid stateDiagram-v2 사용
 * ### 선형대수학
   * <span class="silver">[행렬(S-)](/선형대수학/Matrix.md)</span>
   * <span class="">[가우스 소거법(P-)]</span>
-  * <span class="">[키르히호프(A)]</span> <!-- https://www.acmicpc.net/problem/9614 -->
+  * <span class="">[키르히호프(P-)]</span> <!-- https://www.acmicpc.net/problem/9614 -->
 * ### 게임 이론
   * <span class="">[스프라그-그런디]</span> <!-- (비트셋) -->
   * <span class="">[hackenbush]</span>
