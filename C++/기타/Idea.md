@@ -29,6 +29,17 @@ for (int i = 0, j = n - 1; i < n; j = i++) {}
 int cnt = upper_bound(v.begin(), v.end(), val) - lower_bound(v.begin(), v.end(), val);
 ```
 
+# search in sorted vector
+```cpp
+// x이하의 최대 원소
+assert (v[0] <= x);
+*--upper_bound(v.begin(), v.end(), x);
+
+// x미만의 최대 원소
+assert (v[0] < x);
+*--lower_bound(v.begin(), v.end(), x);
+```
+
 # 정수 이등분
 ```cpp
 int half1 = x + 1 >> 1;
