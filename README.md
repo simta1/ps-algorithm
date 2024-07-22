@@ -205,6 +205,8 @@ mermaid stateDiagram-v2 사용
   * <span class="">[델로네 삼각분할(R-)]</span>
   * <span class="">[보로노이 다이어그램(R-)]</span>
 * ### 수학
+  <!-- * <span class="">[고합성수 찾기]</span>
+  * <span class="">[우월고합성수]</span> -->
   * <span class="silver">[에라토스테네스의 체(S+)](/수학/Sieve%20of%20Eratosthenes.md)</span>
   * <span class="silver">[분할정복 거듭제곱(S+)](/수학/Power.md)</span>
   * <span class="silver">[nCr, 파스칼의 삼각형(S+)](/수학/Combination%20by%20DP.md)</span>
