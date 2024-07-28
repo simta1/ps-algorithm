@@ -150,11 +150,13 @@ mermaid stateDiagram-v2 사용
     * <span class="">[탑 트리(R-)]</span>
 * ### [DP](/DP/Top-Down%20DP.md)
   <!-- * <span class="">[배낭 문제(G-)]</span> -->
+  <!-- 비트셋 배낭 https://www.acmicpc.net/problem/16072 -->
   <!-- * <span class="">[LCS]</span> -->
   <!-- * <span class="">[비트셋 LCS]</span> -->
   <!-- * <span class="">[비트 집합]</span> -->
   * <span class="silver">[Kadane algorithm(S+)](/DP/Kadane%20Algorithm.md)</span>
-  * <span class="gold">[비트셋 배낭(G-)](/DP/Bitset%20Knapsack.md)</span> <!-- https://egod1537.tistory.com/entry/Bounded-Knapsack-Problem%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9C%BC%EB%A1%9C-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0 -->
+  * <span class="gold">[배낭 문제(G-)](/DP/Knapsack.md)</span>
+  * <span class="gold">[비트셋 배낭(G-)](/DP/Knapsack(Bitset).md)</span> <!-- https://egod1537.tistory.com/entry/Bounded-Knapsack-Problem%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9C%BC%EB%A1%9C-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0 -->
   * <span class="gold">[비트마스크 DP(G+)](/DP/Bitmask%20DP.md)</span>
   * <span class="">[최단거리 역추적]</span>
   * <span class="">[SOS DP(D-)](/DP/SOS%20DP.md)</span>
@@ -298,6 +300,7 @@ mermaid stateDiagram-v2 사용
 * ### 기타
   * <span class="information">[자주 쓰는 변수명](/C++/기타/Variable%20Name.md)</span>
   * <span class="information">[코딩 아이디어](/C++/기타/Idea.md)</span>
+  <!-- https://xy-plane.tistory.com/11 -->
 # 참고문헌
 tlsdydaud1   
 https://00ad-8e71-00ff-055d.tistory.com/3   
