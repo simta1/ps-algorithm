@@ -6,8 +6,7 @@ private:
     vector<int> parent;
 
     int find(int a) {
-        if (parent[a] != a) parent[a] = find(parent[a]);
-        return parent[a];
+        return parent[a] == a ? a : parent[a] = find(parent[a]);
     }
 
 public:
@@ -31,8 +30,7 @@ private:
     vector<int> parent, rank;
 
     int find(int a) {
-        if (parent[a] != a) parent[a] = find(parent[a]);
-        return parent[a];
+        return parent[a] == a ? a : parent[a] = find(parent[a]);
     }
 
 public:
