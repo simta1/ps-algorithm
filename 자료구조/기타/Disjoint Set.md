@@ -69,6 +69,8 @@ return a;
 union by rank를 추가할 경우 merge함수에서 if (a == b) return;이 포함되어야 된다. path compression만 있을 때는 a == b여도 상관없지만, union by rank를 사용하는 경우 이후 rank를 업데이트하는 과정이 있으므로 if (a == b) return;을 해야 rank가 효율적으로 계산된다.   
 
 ### 사용관련
+1-based로 사용할 수 있도록 구현했지만 0번 인덱스도 사용가능
+
 솔직히 rank by union 안 쓰고 path compression만 해도 시간이 비슷하게 나온다. 오히려 rank by union쓰면 메모리만 2배로 쓰고 코드만 길어지기에 웬만하면 path compression만 사용하는 게 나은 듯 싶다.
 예외적으로 rollback이 필요한 경우엔 path compression을 사용할 수 없어 rank by union를 쓴다.
 
