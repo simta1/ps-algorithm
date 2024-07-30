@@ -13,6 +13,13 @@ int sign = (x >> 31) - (-x >> 31); // 더 빠른 코드, 형변환 안 일어나
 cout << fixed << setprecision(2) << ans + 0.00499999 << "\n";
 ```
 
+# 역방향 순회
+```cpp
+for (int i = 5; i--;) cout << i << " "; // 4 3 2 1 0
+
+for (int i = v.size(); i--;) v[i];
+```
+
 # cyclic 순회
 ```cpp
 // 변경 전 코드, % 사용해서 엄청 느림
