@@ -75,7 +75,6 @@ mermaid stateDiagram-v2 사용
   * #### BBST
     * <span class="diamond">[스플레이 트리(D-)](/자료구조/BBST/SplayTree.md)</span>
     * <span class="">[링크/컷 트리(D+)]</span>
-    * ~~<span class="">[AVL 트리]</span>~~
     * <span class="">[레드-블랙 트리]</span>
   * #### 기타
     * <span class="gold">[분리 집합(G-)](/자료구조/기타/Disjoint%20Set.md)</span>
@@ -283,6 +282,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[수학관련]</span> <!-- atan, atan2 추가하기 -->
   * <span class="">[배열관련]</span> <!-- copy doubling -->
   * <span class="information">[타입관련](/C++/함수/casting%20operators.md)</span>
+  * <span class="information">[문자관련](/C++/함수/char.md)</span>
   * <span class="information">[문자열관련](/C++/함수/string.md)</span>
   * <span class="information">[이분탐색 람다함수](/C++/함수/lower_bound_lambda.md)</span>
   * <span class="">[permutation]</span>
