@@ -98,3 +98,8 @@ ccw(*----v.end(), *--v.end(), point)
 return (val >= 0) * val;
 return max(val, 0);
 ```
+
+# vector 자기자신 복사
+```cpp
+copy(v.begin(), v.end(), back_inserter(v));
+```
