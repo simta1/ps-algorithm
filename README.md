@@ -246,6 +246,8 @@ mermaid stateDiagram-v2 사용
   * <span class="">[fastio]</span> <!-- https://www.acmicpc.net/blog/view/105 -->
   * <span class="additional">[비트 트릭(A)](/기타/Bit%20Trick.md)</span>
   * <span class="additional">[비트 트릭 2(A)](/기타/Bit%20Trick2.md)</span>
+  * <span class="">[계수 정렬]()</span>
+  * <span class="silver">[기수 정렬(S-)](/기타/Radix%20Sort.md)</span>
   * <span class="silver">[이분 탐색(S-)](/기타/Binary%20Search.md)</span>
   * <span class="silver">[비트마스크(S-)](/기타/Bitmask.md)</span>
   * <span class="silver">[값 / 좌표 압축(S-)](/기타/Coordinate%20Compression.md)</span>
@@ -420,6 +422,7 @@ FFT --> NTT
 문자열 --> KMP
 트라이 --> 아호_코라식
 KMP --> 아호_코라식
+%% 계수_정렬 --> 접미사_배열과_lcp_배열
 문자열 --> 접미사_배열과_lcp_배열
 문자열 --> 펠린드롬
 펠린드롬 --> 매내처
