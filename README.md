@@ -1,4 +1,5 @@
 <style>   
+  .bronze { background-color:#CE8946 }   
   .silver { background-color:#C5D5D5 }   
   .gold { background-color:#FFF5B1 }   
   .platinum { background-color:#DCFFE4 }   
@@ -48,6 +49,7 @@ mermaid stateDiagram-v2 사용
 
 # ps algorithm
 티어 분류 :
+<span class="bronze">브론즈(B)<span>
 <span class="silver">실버(S)<span>
 <span class="gold">골드(G)<span>
 <span class="platinum">플레(P)<span>
@@ -171,6 +173,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[벌레캠프-매시(D+)]</span>
   <!-- * <span class="">[aliens 트릭(D-)]</span> -->
 * ### 문자열
+  * <span class="bronze">[문자열 압축(B)](/문자열/String%20Compression.md)</span>
   * <span class="gold">[트라이(G+)](/문자열/Trie.md)</span>
   * <span class="platinum">[매내처(P-)](/문자열/Manacher.md)</span>
   * <span class="platinum">[KMP(P-)](/문자열/Knuth-Morris-Pratt%20Algorithm.md)</span>
