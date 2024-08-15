@@ -1,4 +1,5 @@
 [카테고리](/README.md)
+## Binary Search on SegmentTree
 ### [Segment Tree](/ps-snippet/자료구조/세그먼트%20트리/SegmentTree.md)
 <details>
 <summary>세그먼트 트리 기본 코드</summary>
@@ -88,11 +89,46 @@ public:
         return k > tree[1] ? -1 : findKth(1, 0, n - 1, k);
     }
 ```
+
+### findLeftMost / findRightMost
+```cpp
+private:
+    int findLeftMost(int node, int s, int e, int l, int r) {
+        if (l > e || s > r || tree[node] == 0) return -1;
+        if (s == e) return s + 1; // 1-based
+ 
+        int m = s + e >> 1;
+        int leftRes = findLeftMost(2 * node, s, m, l, r);
+        return ~leftRes ? leftRes : findLeftMost(2 * node + 1, m + 1, e, l, r);
+    }
+ 
+    int findRightMost(int node, int s, int e, int l, int r) {
+        if (l > e || s > r || tree[node] == 0) return -1;
+        if (s == e) return s + 1; // 1-based
+ 
+        int m = s + e >> 1;
+        int rightRes = findRightMost(2 * node + 1, m + 1, e, l, r);
+        return ~rightRes ? rightRes : findRightMost(2 * node, s, m, l, r);
+    }
+
+public:
+    int findRightMost(int l, int r) {
+        return findRightMost(1, 0, n - 1, l - 1, r - 1);
+    }
+ 
+    int findLeftMost(int l, int r) {
+        return findLeftMost(1, 0, n - 1, l - 1, r - 1);
+    }
+```
 ### 시간복잡도 
 $O(logN)$   
 
+### 사용관련
+findKth, findRightMost, findLeftMost에서 값이 없는 경우 -1 리턴
+
 ### 백준문제
-[중앙값 측정](https://www.acmicpc.net/problem/9426)
+[중앙값 측정](https://www.acmicpc.net/problem/9426) - findKth   
+[D. Colored Portals](https://codeforces.com/contest/2004/problem/D) - findLeftMost / findRightMost
 
 ### 참고문헌
 https://00ad-8e71-00ff-055d.tistory.com/162
