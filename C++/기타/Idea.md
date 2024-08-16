@@ -72,8 +72,8 @@ ceil(double(a) / b)로 계산할 경우 부동소수점 오차로 계산 잘못�
 
 # 오차 없는 log2
 ```cpp
-constexpr int log2f(int x) { return 63 - __builtin_clzll(x); }
-constexpr int log2c(int x) { return 64 - __builtin_clzll(x - 1); }
+constexpr int log2f(ll x) { return 63 - __builtin_clzll(x); }
+constexpr int log2c(ll x) { return 64 - __builtin_clzll(x - 1); }
 ```
 
 # 벡터 끝쪽 원소 접근
