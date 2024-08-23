@@ -52,3 +52,68 @@ max구해야 될 때 0쓰면 틀리고 -INF로 둬야 제대로 계산되는 경
 
 __4. return 했는지__   
 혹시 결과 출력 안 되면 return res; 까먹었는지 확인   
+
+## top-down -> bottom-up 변환 예시
+### [팰린드롬 만들기](https://www.acmicpc.net/problem/1695)
+### top-down
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    cin.tie(0) -> sync_with_stdio(0);
+    
+    int n;
+    cin >> n;
+    
+    vector<int> v(n);
+    for (auto &e : v) cin >> e;
+    
+    vector dp(n, vector<int>(n, -1));
+
+    function<int(int, int)> f = [&](int idx1, int idx2) -> int {
+        if (idx1 >= idx2) return 0;
+
+        int &res = dp[idx1][idx2];
+        if (~res) return res;
+
+        res = 2e9; // visit check
+        if (v[idx1] == v[idx2]) res = min(res, f(idx1 + 1, idx2 - 1));
+        res = min(res, f(idx1 + 1, idx2) + 1);
+        res = min(res, f(idx1, idx2 - 1) + 1);
+
+        return res;
+    };
+
+    cout << f(0, n - 1);
+    return 0;
+}
+```
+
+### bottom-up
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    cin.tie(0) -> sync_with_stdio(0);
+    
+    int n;
+    cin >> n;
+    
+    vector<int> v(n);
+    for (auto &e : v) cin >> e;
+    
+    vector dp(n, vector<int>(n, 0));
+
+    for (int len = 2; len <= n; len++) {
+        for (int s = 0, e = len - 1; e < n; s++, e++) {
+            dp[s][e] = min(dp[s + 1][e], dp[s][e - 1]) + 1;
+            if (v[s] == v[e]) dp[s][e] = min(dp[s][e], dp[s + 1][e - 1]);
+        }
+    }
+
+    cout << dp[0][n - 1];
+    return 0;
+}
+```
