@@ -49,7 +49,6 @@ mermaid stateDiagram-v2 사용
 
 # ps algorithm
 티어 분류 :
-<span class="bronze">브론즈(B)<span>
 <span class="silver">실버(S)<span>
 <span class="gold">골드(G)<span>
 <span class="platinum">플레(P)<span>
@@ -173,7 +172,6 @@ mermaid stateDiagram-v2 사용
   * <span class="">[벌레캠프-매시(D+)]</span>
   <!-- * <span class="">[aliens 트릭(D-)]</span> -->
 * ### 문자열
-  * <span class="bronze">[문자열 압축(B)](/문자열/String%20Compression.md)</span>
   * <span class="gold">[트라이(G+)](/문자열/Trie.md)</span>
   * <span class="platinum">[매내처(P-)](/문자열/Manacher.md)</span>
   * <span class="platinum">[KMP(P-)](/문자열/Knuth-Morris-Pratt%20Algorithm.md)</span>
@@ -211,13 +209,13 @@ mermaid stateDiagram-v2 사용
 * ### 수학
   <!-- * <span class="">[고합성수 찾기]</span>
   * <span class="">[우월고합성수]</span> -->
+  <!-- * <span class="">[Linear-sieve]</span> -->
   * <span class="silver">[에라토스테네스의 체(S+)](/수학/Sieve%20of%20Eratosthenes.md)</span>
   * <span class="silver">[분할정복 거듭제곱(S+)](/수학/Power.md)</span>
   * <span class="silver">[nCr, 파스칼의 삼각형(S+)](/수학/Combination%20by%20DP.md)</span>
   * <span class="gold">[p-지수(G+)](/수학/p-adic%20valuation.md)</span>
   * <span class="gold">[확장 유클리드 호제법, 모듈러 역원(G+)](/수학/ExtendedGCD,%20Modular%20Inverse.md)</span>
   * <span class="gold">[오일러 파이 함수(G+)](/수학/Euler's%20Totient%20Function.md)</span>
-  * <span class="additional">[고합성수 검색용 구현체(A)](/수학/Highly%20Composite%20Number.md)</span>
   * <span class="platinum">[중국인의 나머지 정리(P-)](/수학/Chinese%20Remainder%20Theorem.md)</span>
   * <span class="">[Garner's algorithm]</span>
   * <span class="">[nCr mod 소수, 뤼카(P-)]</span>
@@ -231,6 +229,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[정밀도 높은 FFT(D-)]</span>
   * <span class="diamond">[NTT(D-)](/수학/Number%20Theoretic%20Transform.md)</span>
   * <span class="">[FFT 나눗셈]</span>
+  * <span class="">[FFT 응용]</span> <!-- https://hyperbolic.tistory.com/4 -->
   * <span class="">[online FFT]</span>
   * <span class="">[포함 배제의 원리, 뫼비우스 함수, 뫼비우스 반전(D-)]</span>
   * <span class="">[생성 함수(D-)]</span>
@@ -256,7 +255,6 @@ mermaid stateDiagram-v2 사용
   * <span class="silver">[값 / 좌표 압축(S-)](/기타/Coordinate%20Compression.md)</span>
   * <span class="silver">[순열 사이클 분할(S+)](/기타/Permutation%20Cycle%20Decomposition.md)</span>
   * <span class="">[투 포인터(G-)]</span>
-  * <span class="">[랜덤]</span> <!-- static 사용 -->
   * <span class="">[모노톤 스택]</span>
   * <span class="">[모노톤 큐]</span>
   * <span class="">[누적합, imos]</span>
@@ -274,6 +272,13 @@ mermaid stateDiagram-v2 사용
   * <span class="">[춤추는 링크, 크누스 X]</span>
   * <span class="">[임의 정밀도(epsilon값 계산)(A)]</span>
   * ~~<span class="">[담금질 기법]</span>~~
+* ### utils
+  <!-- 문자열/문자열 압축 여기로 옮기기 -->
+  <!-- 랜덤 구현체 여기에 추가 -->
+  * <span class="additional">[문자열 압축(A)](/utils/String%20Compression.md)</span>
+  * <span class="">[랜덤]</span> <!-- static 사용 -->
+  * <span class="">[개수, 종류 세기]</span>
+  * <span class="additional">[고합성수 검색(A)](/utils/Highly%20Composite%20Number.md)</span>
 # C++ 유용한 기능
 * ### 문법
   * <span class="">[range-based for loop]</span>
