@@ -273,11 +273,9 @@ mermaid stateDiagram-v2 사용
   * <span class="">[임의 정밀도(epsilon값 계산)(A)]</span>
   * ~~<span class="">[담금질 기법]</span>~~
 * ### utils
-  <!-- 문자열/문자열 압축 여기로 옮기기 -->
-  <!-- 랜덤 구현체 여기에 추가 -->
   * <span class="additional">[문자열 압축(A)](/utils/String%20Compression.md)</span>
-  * <span class="">[랜덤(A)](/utils/Random.md)</span> <!-- static 사용 -->
-  * <span class="">[개수, 종류 세기]</span>
+  * <span class="additional">[개수 계산(A)](/utils/Counter.md)</span>
+  * <span class="additional">[랜덤(A)](/utils/Random.md)</span>
   * <span class="additional">[고합성수 검색(A)](/utils/Highly%20Composite%20Number.md)</span>
 # C++ 유용한 기능
 * ### 문법
