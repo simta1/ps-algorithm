@@ -276,7 +276,7 @@ mermaid stateDiagram-v2 사용
   <!-- 문자열/문자열 압축 여기로 옮기기 -->
   <!-- 랜덤 구현체 여기에 추가 -->
   * <span class="additional">[문자열 압축(A)](/utils/String%20Compression.md)</span>
-  * <span class="">[랜덤]</span> <!-- static 사용 -->
+  * <span class="">[랜덤(A)](/utils/Random.md)</span> <!-- static 사용 -->
   * <span class="">[개수, 종류 세기]</span>
   * <span class="additional">[고합성수 검색(A)](/utils/Highly%20Composite%20Number.md)</span>
 # C++ 유용한 기능
