@@ -66,6 +66,48 @@ namespace FourierTransform {
         return res;
     }
 
+    const int splitBit = 15;
+    template <typename T>
+    vector<ll> multiplyPrecisely(const vector<T> &v1, const vector<T> &v2) {
+        int n = pow2GE(v1.size() + v2.size());
+
+        vector<cpx> a1(n), a2(n), b1(n), b2(n);
+        for (int i = 0; i < v1.size(); i++) {
+            a1[i] = v1[i] & ~-(1 << splitBit);
+            a2[i] = v1[i] >> splitBit;
+        }
+        for (int i = 0; i < v2.size(); i++) {
+            b1[i] = v2[i] & ~-(1 << splitBit);
+            b2[i] = v2[i] >> splitBit;
+        }
+
+        fft(a1, false);
+        fft(a2, false);
+        fft(b1, false);
+        fft(b2, false);
+
+        vector<cpx> c1(n), c2(n), c3(n);
+        for(int i=0; i<n; i++){
+            c1[i] = a1[i] * b1[i];
+            c2[i] = a1[i] * b2[i] + a2[i] * b1[i];
+            c3[i] = a2[i] * b2[i];
+        }
+
+        fft(c1, true);
+        fft(c2, true);
+        fft(c3, true);
+
+        vector<ll> res(n);
+        for (int i = 0; i < n; i++) {
+            ll a = llround(c1[i].real()); // % mod;
+            ll b = llround(c2[i].real()); // % mod;
+            ll c = llround(c3[i].real()); // % mod;
+            res[i] = (a + (b << splitBit) + (c << 2 * splitBit)); // % mod;
+            // if (res[i] < 0) res[i] += mod;
+        }
+        return res;
+    }
+
     template <typename T>
     vector<ll> square(const vector<T> &v) {
         vector<cpx> a(v.begin(), v.end());
@@ -111,6 +153,9 @@ ex) 8, 8 conv -> resize(16) // 선언된 공간 모두 사용함
 ### 백준문제
 [큰 수 곱셈 (2)](https://www.acmicpc.net/problem/15576)   
 [큰 수 곱셈 (3)](https://www.acmicpc.net/problem/22289)
+
+### 참고링크
+https://algoshitpo.github.io/2020/05/20/fft-ntt/   
 
 ### 원리
 ```cpp
