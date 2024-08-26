@@ -1,5 +1,6 @@
 [카테고리](/README.md)
-### Highly Composite Number (검색용)
+## 고합성수 검색
+<!-- Highly Composite Number -->
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -18,5 +19,5 @@ int main() {
 }
 ```
 
-### 참고문헌
+### 참고링크
 https://algo-method.com/descriptions/92
