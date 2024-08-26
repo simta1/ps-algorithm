@@ -207,7 +207,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[그린 정리(D+)]</span>
   * <span class="">[델로네 삼각분할(R-)]</span>
   * <span class="">[보로노이 다이어그램(R-)]</span>
-* ### 수학
+* ### [수학](/수학/개념%20정리.md)
   <!-- * <span class="">[고합성수 찾기]</span>
   * <span class="">[우월고합성수]</span> -->
   <!-- * <span class="">[Linear-sieve]</span> -->
