@@ -80,7 +80,7 @@ mermaid stateDiagram-v2 사용
   * #### 기타
     * <span class="gold">[분리 집합(G-)](/자료구조/기타/Disjoint%20Set.md)</span>
     * <span class="">[유니온 파인드 롤백]</span>
-    * <span class="gold">[희소 배열(G+)](/자료구조/기타/Sparse%20Table.md)</span>
+    * <span class="gold">[희소 배열(G+)](/자료구조/기타/희소배열.md)</span>
     * <span class="">[로프]</span>
     * <span class="">[데카르트 트리]</span>
     * <span class="">[Line container]</span>
