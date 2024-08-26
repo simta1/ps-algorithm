@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### GCD SegmentTree (range update & range query)
+## GCD SegmentTree (range update & range query)
 ```cpp
 template <typename T>
 class SegmentTree {
@@ -83,7 +83,7 @@ update $O(logN)$
 query $O(logN)$   
 lazy propagation 없이도 O(logN)으로 range update, range query 모두 가능하다.
 
-### 백준 문제
+### 문제
 [Range GCD](https://www.acmicpc.net/problem/12858)   
 
 ### 원리

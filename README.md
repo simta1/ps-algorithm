@@ -58,19 +58,19 @@ mermaid stateDiagram-v2 사용
 
 * ### 자료구조
   * #### 세그먼트 트리
-    * <span class="gold">[펜윅 트리(G+)](/자료구조/세그먼트%20트리/FenwickTree.md)</span>
-    * <span class="gold">[세그먼트 트리(G+)](/자료구조/세그먼트%20트리/SegmentTree.md)</span>
-    * <span class="gold">[비재귀 세그(G+)](/자료구조/세그먼트%20트리/Bottom-Up%20SegmentTree.md)</span>
-    * <span class="platinum">[세그 이분 탐색(P-)](/자료구조/세그먼트%20트리/Biary%20Search%20on%20SegmentTree.md)</span>
-    * <span class="platinum">[2D 펜윅(P-)](/자료구조/세그먼트%20트리/FenwickTree2D.md)</span>
-    * <span class="platinum">[2D 세그(P-)](/자료구조/세그먼트%20트리/SegmentTree2D.md)</span>
-    * <span class="platinum">[n차원 펜윅(P-)](/자료구조/세그먼트%20트리/Multi%20Dimensional%20FenwickTree.md)</span>
-    * <span class="platinum">[머지소트 트리(P-)](/자료구조/세그먼트%20트리/MergesortTree.md)</span>
-    * <span class="platinum">[레이지 세그(P-)](/자료구조/세그먼트%20트리/SegmentTree(Lazy%20Propagation).md)</span>
+    * <span class="gold">[펜윅 트리(G+)](/자료구조/세그먼트%20트리/펜윅.md)</span>
+    * <span class="gold">[세그먼트 트리(G+)](/자료구조/세그먼트%20트리/세그.md)</span>
+    * <span class="gold">[비재귀 세그(G+)](/자료구조/세그먼트%20트리/비재귀%20세그.md)</span>
+    * <span class="platinum">[세그 이분 탐색(P-)](/자료구조/세그먼트%20트리/세그이분탐색.md)</span>
+    * <span class="platinum">[2D 펜윅(P-)](/자료구조/세그먼트%20트리/2차원%20펜윅.md)</span>
+    * <span class="platinum">[2D 세그(P-)](/자료구조/세그먼트%20트리/2차원%20세그.md)</span>
+    * <span class="platinum">[n차원 펜윅(P-)](/자료구조/세그먼트%20트리/다차원%20펜윅.md)</span>
+    * <span class="platinum">[머지소트 트리(P-)](/자료구조/세그먼트%20트리/머지소트%20트리.md)</span>
+    * <span class="platinum">[레이지 세그(P-)](/자료구조/세그먼트%20트리/레이지%20세그.md)</span>
     * <span class="">[비재귀 레이지 세그]</span> <!-- https://www.acmicpc.net/blog/view/117 -->
-    * <span class="platinum">[다이나믹 세그, 다이나믹 레이지 세그(P-)](/자료구조/세그먼트%20트리/Dynamic%20SegmentTree.md)</span>
-    * ~~<span class="platinum">[_range GCD 세그(P+)_](/자료구조/세그먼트%20트리/GCD%20SegmentTree.md)</span>~~
-    * <span class="platinum">[금광 세그(P+)](/자료구조/세그먼트%20트리/Gold%20Mine%20SegmentTree.md)</span>
+    * <span class="platinum">[다이나믹 세그, 다이나믹 레이지 세그(P-)](/자료구조/세그먼트%20트리/다이나믹%20세그.md)</span>
+    * ~~<span class="platinum">[_range GCD 세그(P+)_](/자료구조/세그먼트%20트리/GCD%20세그.md)</span>~~
+    * <span class="platinum">[금광 세그(P+)](/자료구조/세그먼트%20트리/금광%20세그.md)</span>
     * <span class="">[퍼시스턴트 세그(P+)]</span>
     * <span class="">[세그트리 비츠(D+)]</span>
   * #### BBST
