@@ -1,5 +1,9 @@
 [카테고리](/README.md)
-##### [Point](/기하학/Cross%20Product,%20CCW.md)
+## 가장 가까운 두 점(Closest Two Points)
+### [기하학 헤더](/기하학/Geometry%20Header.md)
+<details>
+<summary>Point</summary>
+
 ```cpp
 template <typename T>
 struct Point {
@@ -9,6 +13,8 @@ struct Point {
     Point operator-(const Point &other) const { return {x - other.x, y - other.y}; }
 };
 ```
+</details>
+
 ### Closest Two Points
 ```cpp
 template <typename T>
@@ -56,12 +62,12 @@ T getClosestTwoPoints(vector<Point<T> > points) {
 ### 시간복잡도 
 $O(N ~log^2 N)$   
 
-### 사용관련
+### 사용설명
 original points가 바껴도 된다면 vector<Point<T> > &points로 참조 사용   
 
-### 백준문제
+### 문제
 [가장 가까운 두 점](https://www.acmicpc.net/problem/2261)   
 
-### 참고문헌
+### 참고링크
 https://daisylum.tistory.com/22   
 https://hackids.tistory.com/61

@@ -1,7 +1,8 @@
 [카테고리](/README.md)
-### [Point, Cross Product, CCW](/기하학/Geometry%20Header.md)
+## 다각형 내부의 점 판정(PIP, Point In Polygon)
+### [기하학 헤더](/기하학/Geometry%20Header.md)
 <details>
-<summary>기하학 헤더</summary>
+<summary>Point, Cross Product, CCW</summary>
 
 ```cpp
 template <typename T>
@@ -54,9 +55,9 @@ int checkPointInPolygon(const Point<T> &point, const vector<Point<T> > &polygon)
 ```
 ### 시간복잡도 
 $O(N)$   
-볼록다각형에선 [$O(logN)$ 알고리즘](/기하학/Point%20In%20Convex%20Polygon.md) 존재   
+볼록다각형에선 [$O(logN)$ 알고리즘](/기하학/PIP(convex).md) 존재   
 
-### 주의사항
+### 구현 주의사항
 다각형 내부 확인할 때 한 쪽 부등호에만 등식 포함   
 ```cpp
 // 꼭짓점 고려 안 됨
@@ -69,11 +70,11 @@ if (min(p1.y, p2.y) <= point.y && point.y <= max(p1.y, p2.y))
 if (min(p1.y, p2.y) <= point.y && point.y < max(p1.y, p2.y))
 ```
 
-### 사용관련
+### 사용설명
 오목/볼록 상관없이 단순다각형이라면 전부 사용 가능   
 나눗셈 없이 ccw로 구현해서 Point\<int> 등 정수형에서도 오차 없이 작동
 
-### 백준문제
+### 문제
 [지민이의 테러](https://www.acmicpc.net/problem/1688)
 
 ### 원리
@@ -81,5 +82,5 @@ point에서 양의 x축 방향으로 뻗은 기울기 0의 반직선과 다각�
 일단 반직선 대신 직선으로 생각 : point.y가 p1.y와 p2.y 사이 값이라면 무조건 교차   
 반직선과의 교차를 확인하려면 추가로 $\overline{p_1p_2}$와 point의 방향 관계를 ccw로 확인   
 
-### 참고문헌
+### 참고링크
 https://anz1217.tistory.com/107   
