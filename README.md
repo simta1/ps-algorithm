@@ -173,6 +173,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[벌레캠프-매시(D+)]</span>
   <!-- * <span class="">[aliens 트릭(D-)]</span> -->
 * ### 문자열
+<!-- RBS(Regular Bracket Sequence) -->
   * <span class="gold">[트라이(G+)](/문자열/Trie.md)</span>
   * <span class="platinum">[매내처(P-)](/문자열/Manacher.md)</span>
   * <span class="platinum">[KMP(P-)](/문자열/Knuth-Morris-Pratt%20Algorithm.md)</span>
@@ -280,6 +281,8 @@ mermaid stateDiagram-v2 사용
   * <span class="additional">[랜덤](/utils/Random.md)</span>
   * <span class="additional">[고합성수 검색](/utils/Highly%20Composite%20Number.md)</span>
   * <span class="additional">[배열 연산](/utils/Array.md)</span>
+  * <span class="additional">[bigInt]()</span>
+  * <span class="additional">[baseInt]()</span> <!-- bigint랑 합쳐서 구현하는 게 나을 듯 -->
 # C++ 유용한 기능
 * ### 문법
   * <span class="">[range-based for loop]</span>
