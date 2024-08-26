@@ -1,4 +1,5 @@
 [카테고리](/README.md)
+## Mo's
 ### Mo's algorithm (push, pop)
 ```cpp
 class Mo {

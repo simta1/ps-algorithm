@@ -1,6 +1,5 @@
 [카테고리](/README.md)
-## Two Pointer
-<!-- TODO -->
+## Two Pointer <!-- TODO -->
 ### 같은방향에서 시작
 - 연속한 구간 검색 시 사용
 - 모두 양수여야 함
@@ -27,17 +26,17 @@ while (e <= n) {
 ### 시간복잡도 
 $O()$   
 
-### 주의사항
+### 구현 주의사항
 
 
-### 사용관련
+### 사용설명
 
 
-### 백준문제
+### 문제
 [주몽](https://www.acmicpc.net/problem/1940) - 반대 방향   
 [Building a Field](https://www.acmicpc.net/problem/16522) - 같은 방향   
 
 ### 원리
 
 
-### 참고문헌
+### 참고링크

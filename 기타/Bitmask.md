@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### Bitmask
+## Bitmask
 ```cpp
 // init
 a = 0; // empty
@@ -18,11 +18,11 @@ if (~a & (1<<x))// don't have
 a &= (a - 1);	// remove last
 x = log2(a & -a); // get last
 ```
-### 주의사항
+### 구현 주의사항
 비트연산이 덧셈뺄셈보다 연산자우선순위 낮음
 
-### 백준문제
-[집합](https://www.acmicpc.net/problem/11723)
+### 문제
+[집합](https://www.acmicpc.net/problem/11723)   
 
 ### 원리
-0, 1, 2, ... , (n - 1)번째 값이 각각 2^0, 2^1, 2^2, ..., 2^(n-1)자리에 저장된다.
+0, 1, 2, ... , (n - 1)번째 값을 각각 2^0, 2^1, 2^2, ..., 2^(n-1)자리에 저장

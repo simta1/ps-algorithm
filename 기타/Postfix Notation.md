@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### Infix to Postfix
+## Infix to Postfix
 ```cpp
 int precedence(char c) {
     if (c == '+' || c == '-') return 1;
@@ -36,5 +36,5 @@ string infixToPostFix(const string &st) {
 ### 시간복잡도 
 $O(N)$   
 
-### 백준문제
+### 문제
 [후위 표기식](https://www.acmicpc.net/problem/1918)

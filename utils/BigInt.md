@@ -1,7 +1,6 @@
 [카테고리](/README.md)
-# 코드 실험 안 했음
-<!-- TODO -->
-### BigInt
+# 코드 실험 안 했음 <!-- TODO -->
+## BigInt
 ```cpp
 template <int N>
 class BaseInt {
@@ -129,16 +128,16 @@ public:
 ### 시간복잡도 
 $O()$   
 
-### 주의사항
+### 구현 주의사항
 
 
-### 사용관련
+### 사용설명
 
 
-### 백준문제
-[36진수](https://www.acmicpc.net/problem/1036)
+### 문제
+[36진수](https://www.acmicpc.net/problem/1036)   
 
 ### 원리
 
 
-### 참고문헌
+### 참고링크

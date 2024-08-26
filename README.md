@@ -246,36 +246,32 @@ mermaid stateDiagram-v2 사용
   * <span class="">[스프라그-그런디]</span> <!-- (비트셋) -->
   * <span class="">[hackenbush]</span>
 * ### 기타
-  * <span class="">[fastio]</span> <!-- https://www.acmicpc.net/blog/view/105 -->
-  * <span class="additional">[비트 트릭(A)](/기타/Bit%20Trick.md)</span>
-  * <span class="additional">[비트 트릭 2(A)](/기타/Bit%20Trick2.md)</span>
   * <span class="">[계수 정렬]</span>
-  * <span class="silver">[투 포인터(S-)](/기타/Two%20Pointer.md)</span>
   * <span class="silver">[기수 정렬(S-)](/기타/Radix%20Sort.md)</span>
-  * <span class="silver">[이분 탐색(S-)](/기타/Binary%20Search.md)</span>
+  * <span class="silver">[이분탐색(S-)](/기타/이분탐색.md)</span>
+  * <span class="silver">[투 포인터(S-)](/기타/Two%20Pointer.md)</span>
   * <span class="silver">[비트마스크(S-)](/기타/Bitmask.md)</span>
-  * <span class="silver">[값 / 좌표 압축(S-)](/기타/Coordinate%20Compression.md)</span>
-  * <span class="silver">[순열 사이클 분할(S+)](/기타/Permutation%20Cycle%20Decomposition.md)</span>
-  * <span class="">[투 포인터(G-)]</span>
+  * <span class="silver">[좌표 압축(S-)](/기타/좌표압축.md)</span>
+  * <span class="silver">[순열 사이클 분할(S+)](/기타/순열%20사이클%20분할.md)</span>
   * <span class="">[모노톤 스택]</span>
   * <span class="">[모노톤 큐]</span>
   * <span class="">[누적합, imos]</span>
   * <span class="gold">[후위 표기식(G+)](/기타/Postfix%20Notation.md)</span>
   * <span class="">[중간에서 만나기(G+)]</span>
-  * <span class="platinum">[반전수(P-)](/기타/Inversions%20of%20array.md)</span>
+  * <span class="platinum">[반전수(P-)](/기타/반전수.md)</span>
   * <span class="">[스위핑]</span>
   * <span class="">[슬라이딩 윈도우]</span>
   * <span class="platinum">[덱을 이용한 구간 최댓값 트릭(P-)](/기타/Deque%20Trick.md)</span>
   * <span class="platinum">[XOR 트라이(P-)](/기타/XOR%20Trie.md)</span>
-  * <span class="platinum">[삼분 탐색(P-)](/기타/Ternary%20Search.md)</span>
-  * <span class="platinum">[Mo's algorithm(P+)](/기타/Mo's%20Algorithm.md)</span>
-  * <span class="platinum">[평방분할(P+)](/기타/Sqrt%20Decomposition.md)</span>
+  * <span class="platinum">[삼분 탐색(P-)](/기타/삼분탐색.md)</span>
+  * <span class="platinum">[Mo's algorithm(P+)](/기타/Mo's.md)</span>
+  * <span class="platinum">[평방분할(P+)](/기타/제곱근%20분할법.md)</span>
   * <span class="">[병렬 이분 탐색(P+)]</span>
   * <span class="">[춤추는 링크, 크누스 X]</span>
   * <span class="">[임의 정밀도(epsilon값 계산)(A)]</span>
   * ~~<span class="">[담금질 기법]</span>~~
 * ### utils
-  * <span class="">[fastio]</span>
+  * <span class="">[fastio]</span> <!-- https://www.acmicpc.net/blog/view/105 -->
   * <span class="additional">[문자열 압축](/utils/String%20Compression.md)</span>
   * <span class="additional">[개수 계산](/utils/Counter.md)</span>
   * <span class="additional">[랜덤](/utils/Random.md)</span>
@@ -293,6 +289,8 @@ mermaid stateDiagram-v2 사용
   * <span class="">[코드 여러줄 이어쓰기]</span>
   * <span class="">[리터럴 여러줄 이어쓰기]</span>
 * ### 함수
+  <!-- TODO * <span class="additional">[비트 트릭(A)](/기타/Bit%20Trick.md)</span>
+  * <span class="additional">[비트 트릭 2(A)](/기타/Bit%20Trick2.md)</span> TODO -->
   * <span class="">[수학관련]</span> <!-- atan, atan2 추가하기 -->
   * <span class="">[배열관련]</span> <!-- copy doubling -->
   * <span class="information">[타입관련](/C++/함수/casting%20operators.md)</span>

@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### Radix Sort
+## Radix Sort
 ```cpp
 template <typename T>
 void radixSort(vector<T> &v) {
@@ -26,8 +26,8 @@ void radixSort(vector<T> &v) {
 int $O(4N)$   
 long long $O(8N)$   
 
-### 사용관련
+### 사용설명
 정수형, 양수에서만 사용   
 
-### 백준문제
+### 문제
 [수 정렬하기 2](https://www.acmicpc.net/problem/2751)
