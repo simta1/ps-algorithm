@@ -176,14 +176,14 @@ mermaid stateDiagram-v2 사용
 <!-- RBS(Regular Bracket Sequence) -->
   * <span class="gold">[트라이(G+)](/문자열/Trie.md)</span>
   * <span class="platinum">[매내처(P-)](/문자열/Manacher.md)</span>
-  * <span class="platinum">[KMP(P-)](/문자열/Knuth-Morris-Pratt%20Algorithm.md)</span>
+  * <span class="platinum">[KMP(P-)](/문자열/KMP.md)</span>
   * <span class="platinum">[아호 코라식(P+)](/문자열/Aho-Corasick.md)</span>
   * ~~<span class="">[bitap algorithm]</span>~~
   * <span class="">[해싱]</span>
   * <span class="">[라빈 카프]</span>
-  * <span class="platinum">[접미사 배열과 lcp 배열(P+)](/문자열/Suffix%20Array.md)</span>
+  * <span class="platinum">[접미사 배열과 lcp 배열(P+)](/문자열/Suffix%20and%20LCP%20Array.md)</span>
   * <span class="">[Z algorithm]</span>
-  * <span class="diamond">[회문 트리(D+)](/문자열/Palindromic%20Tree.md)</span>
+  * <span class="diamond">[회문 트리(D+)](/문자열/회문%20트리.md)</span>
   * <span class="">[접미사 트리(R-)]</span>
 * ### 기하학
   <!-- * ~~<span class="">[반공간 교집합]</span>~~ -->

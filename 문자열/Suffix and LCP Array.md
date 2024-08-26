@@ -1,4 +1,5 @@
 [카테고리](/README.md)
+## Suffix Array, LCP Array
 ### Suffix Array (Mander-Myers)
 ```cpp
 vector<int> getSuffixArray(const string &st) {
@@ -54,16 +55,16 @@ suffixArray $O(N~logN)$
 lcp $O(N)$   
 suffixArray $O(N)$ 알고리즘도 있지만 복잡해서 잘 안쓴다고 한다.
 
-### 주의사항
+### 구현 주의사항
 group의 원소는 0 초과의 값을 가져야 된다.   
 countingSort에서 group[a + t] 접근할 때 인덱스 초과하면 0으로 바꿔서 cnt[0]에 저장하므로 group이 0을 가지면 안 된다.   
 nextGroup[sa[0]] = 1로 초기화하는 것도 같은 이유   
 
-### 사용관련
+### 사용설명
 lcp[i]는 sa[i]와 sa[i - 1]의 최장 공통 접두사   
 lcp[0]은 그냥 쓰레기값
 
-### 백준문제
+### 문제
 [Suffix Array](https://www.acmicpc.net/problem/9248)
 
 ### 원리
@@ -77,8 +78,8 @@ h -= bool(h);
 h -= !!h;
 ```
 
-### 참고문헌
-https://blog.naver.com/kks227/221028710658
+### 참고링크
+https://blog.naver.com/kks227/221028710658   
 https://loosie.tistory.com/798   
 https://blog.myungwoo.kr/57   
 https://koosaga.com/125   

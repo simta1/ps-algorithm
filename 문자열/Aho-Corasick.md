@@ -1,5 +1,6 @@
 [카테고리](/README.md)
-### Aho-Corasick (map 구현)
+## Aho-Corasick
+### map으로 구현
 ```cpp
 class AhoCorasickTrie {
 private:
@@ -95,7 +96,7 @@ public:
     }
 };
 ```
-### Aho-Corasick (array 구현)
+### array로 구현
 ```cpp
 template <char alphabet, int N>
 class AhoCorasickTrie {
@@ -203,7 +204,7 @@ struct Node의 내부에 fail변수 추가
 AhoCorasickTrie::makeFailFunction()함수 추가   
 AhoCorasickTrie::find()함수 변경   
 
-### 주의사항
+### 구현 주의사항
 소멸자 ~Node()에서 delete fail;하면 안 됨   
 go방향으로 순서대로 delete하면 어차피 전부다 삭제되는데 중간에 delete fail; 넣으면 순서 엉킴   
 
@@ -211,7 +212,7 @@ countSubstring()에서 if (cur->end) ++cnt;를 cnt += cur->end;로 바꾸면 오
 cnt는 long long, cur->end는 bool이므로 형변환 때문에 속도저하가 꽤 큼   
 cnt += ll(cur->end);로 명시해줄 경우 속도저하가 줄어들긴 하지만 이 경우에는 그냥 if문 쓰는 게 더 나을 듯   
 
-### 사용관련
+### 사용설명
 findSubstring() 사용하기 전에 무조건 makeFailFunction()먼저 호출 후 사용   
 
 1번째 구현은 문자 종류없이 항상 사용 가능하고 메모리도 적게 쓰지만 속도가 살짝 느림   
@@ -239,10 +240,10 @@ for (auto &c : st) {
 
 AhoCorasickTrie<'a', 4> aho;
 ```
-### 백준문제
+### 문제
 [문자열 집합 판별](https://www.acmicpc.net/problem/9250)   
 [돌연변이](https://www.acmicpc.net/problem/10256) - 문자 4종류만 주어짐, array 크기 조절   
 
-### 참고문헌
+### 참고링크
 https://m.blog.naver.com/kks227/220992598966   
 https://www.geeksforgeeks.org/aho-corasick-algorithm-pattern-searching/   

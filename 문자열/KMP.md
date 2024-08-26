@@ -1,4 +1,5 @@
 [카테고리](/README.md)
+## KMP(Knuth-Morris-Pratt Algorithm)
 ### Fail Function (string)
 ```cpp
 vector<int> getPi(const string &st) {
@@ -77,7 +78,7 @@ vector<int> kmp(const vector<T> &st, const vector<T> &pattern) {
 $O(N+M)$   
 N, M은 각각 text, pattern의 길이
 
-### 사용관련
+### 사용설명
 n - pi.back()으로 최소주기 계산 가능   
 ex) st = "abaab"   
 pi.back() = 2, 뒤에서 2번째 지점에서부터 중복이 시작됨 => 즉 앞에서 3개가 가능한 최소 주기   
@@ -86,12 +87,12 @@ $\therefore$ n - pi.back() = 3
 cyclic string에서도 검색 가능   
 st가 cyclic string이라면 st2 = st + st로 이어붙인 뒤 kmp(st2, pattern) 사용
 
-### 백준문제
+### 문제
 [찾기](https://www.acmicpc.net/problem/1786)   
 [광고](https://www.acmicpc.net/problem/1305) - 최소 주기 계산   
 [Slot Machines](https://www.acmicpc.net/problem/14959) - 최소 주기 계산   
 [시계 사진들](https://www.acmicpc.net/problem/10266) - cyclic   
 
-### 참고문헌
+### 참고링크
 https://hyeo-noo.tistory.com/182   
 https://bowbowbow.tistory.com/6
