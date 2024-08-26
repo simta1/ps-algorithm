@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-## SCC
+## SCC(Strongly Connected Component)
 ### Tarjan's algorithm
 ```cpp
 class Graph {

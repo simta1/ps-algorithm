@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### MCMF
+## MCMF(Minimum Cost Maximum Flow)
 ```cpp
 template <typename C, typename F> // C : cost, F : flow
 class Graph {
@@ -128,12 +128,12 @@ worst $\Omega(VEf)$
 SPFA의 속도에 따라 달라진다.   
 f는 최대 유량   
 
-### 주의사항
+### 구현 주의사항
 adj를 vector<vector<pair<int, C> > > 로 하면 문제 생기는 경우 있음.   
 [열혈강호 5](https://www.acmicpc.net/problem/11408)에서는 상관없었지만 [제독](https://www.acmicpc.net/problem/3640) 풀다가 문제 있는거 알게 되서 수정함.   
 수정 전 코드는 아래 참고   
 
-### 사용관련
+### 사용설명
 간선 추가할 때 가중치의 부호를 바꿔 저장하면 최대 비용 최대 유량도 계산 가능   
 
 정점분할을 사용할 경우 s와 e에 대해선 in() -> out()으로 무한 간선을 추가해주지만   
@@ -142,11 +142,11 @@ in(s') -> out(s') 에만 무한 간선이 생기고, in(s)->out(s)에는 무한�
 해결하려면 VertexSplitedGraph::mcmf()에서 주석으로 표시한 것처럼 진짜 sink의 정점분할된 부분에 무한 간선을 추가하는 과정을 거치면 됨   
 좀 더 일반화해서, 정점분할을 원하지 않는 node들에 대해서 graph.addEdge(in(node), out(node), 0, -1) 추가해주면 됨.
 
-### 백준문제
+### 문제
 [열혈강호 5](https://www.acmicpc.net/problem/11408)   
 [책 구매하기](https://www.acmicpc.net/problem/11405) - 무한간선   
 
-### 참고문헌
+### 참고링크
 https://m.blog.naver.com/kks227/220810623254    
 https://www.crocus.co.kr/1090   
 

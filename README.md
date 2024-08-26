@@ -127,12 +127,12 @@ mermaid stateDiagram-v2 사용
     <!-- * <span class="">[현 그래프 판정]</span> -->
     <!-- * <span class="">[Perfect Elimination Ordering]</span> -->
     <!-- * <span class="">[_최소 차수 MST_]</span> -->
-  * #### [네트워크 플로우](/그래프%20이론/네트워크%20플로우/최대유량%20알고리즘들%20정리.md)
-    * <span class="platinum">[최대유량: Edmonds-Karp (P-)](/그래프%20이론/네트워크%20플로우/Edmonds-Karp.md)</span>
+  * #### [네트워크 플로우](/그래프%20이론/네트워크%20플로우/개념%20정리.md)
+    * <span class="platinum">[최대유량: Edmonds-Karp (P-)](/그래프%20이론/네트워크%20플로우/최대%20유량.md)</span>
     * <span class="">[최대유량: Dinic (P-)]</span>
     * ~~<span class="">[최대유량: Push-Relabel (P-)]</span>~~
     * <span class="platinum">[최소 비용 최대 유량(P+)](/그래프%20이론/네트워크%20플로우/MCMF.md)</span>
-    * <span class="platinum">[이분 매칭(P-)](/그래프%20이론/네트워크%20플로우/Bipartite%20Matching.md)</span>
+    * <span class="platinum">[이분 매칭(P-)](/그래프%20이론/네트워크%20플로우/이분매칭.md)</span>
     * <span class="">[Circulation]</span> <!-- https://blog.naver.com/kks227/221426339344 -->
     * <span class="">[이분 매칭: Hopcraft-Karp]</span>
     * <span class="">[Stoer-Wagner Algorithm]</span>
