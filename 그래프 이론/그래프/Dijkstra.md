@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### Dijkstra
+## Dijkstra
 ```cpp
 template <typename T>
 class Graph {
@@ -44,13 +44,12 @@ public:
 ### 시간복잡도 
 $O(E~logV)$   
 
-### 주의사항
+### 사용설명
 모든 간선의 가중치가 0 이상일 때만 사용 가능   
 음수 가중치 존재 시 벨만-포드 사용   
 
-### 사용관련
 간선이 양방향일 경우 addEdge()함수에서 주석 해제   
 
-### 백준문제
+### 문제
 [최소비용 구하기](https://www.acmicpc.net/problem/1916)   
 [거의 최단 경로](https://www.acmicpc.net/problem/5719) - 다익스트라 + 최단경로 역추적

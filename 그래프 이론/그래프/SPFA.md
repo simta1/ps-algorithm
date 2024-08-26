@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### SPFA (Shortest Path Faster Algorithm)
+## SPFA (Shortest Path Faster Algorithm)
 ```cpp
 template <typename T>
 class Graph {
@@ -58,12 +58,12 @@ public:
 average $O(E)$   
 worst $\Omega(VE)$   
 
-### 사용관련
+### 사용설명
 SPFA()는 음수 간선 순환 발생 시(비용을 무한히 줄일 수 있는 경우) false 리턴   
 
-### 백준문제
+### 문제
 [타임머신](https://www.acmicpc.net/problem/11657)
 
-### 참고문헌
+### 참고링크
 https://en.wikipedia.org/wiki/Shortest_path_faster_algorithm   
 https://www.crocus.co.kr/1089

@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### DMST
+## DMST(Directed Minimum Spanning Tree)
 ```cpp
 template <typename T>
 class Graph {
@@ -69,7 +69,7 @@ public:
 ### 시간복잡도 
 $O(VE)$   
 
-### 사용관련
+### 사용설명
 아래의 방법으로 DMST 불가능한지 판단할 수도 있다.
 ```cpp
 // 기존 코드
@@ -82,9 +82,9 @@ for (int i = 1; i <= curN; i++) {
 }
 ```
 
-### 백준문제
+### 문제
 [미생물 키우기](https://www.acmicpc.net/problem/16127)
 
-### 참고문헌
+### 참고링크
 https://gina65.tistory.com/23   
 https://koosaga.com/265

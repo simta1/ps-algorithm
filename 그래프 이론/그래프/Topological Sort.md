@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### Topological Sort
+## Topological Sort
 ```cpp
 class Graph {
 private:
@@ -40,7 +40,7 @@ public:
 ### 시간복잡도 
 $O(V + E)$
 
-### 사용관련
+### 사용설명
 topologicalSort()에서 sorted.size() != n이라면 사이클이 존재
 
 PERT 계산할 땐 위상정렬하면서 dp 계산   
@@ -58,6 +58,6 @@ while (!q.empty()) {
 }
 ```
 
-### 백준문제
+### 문제
 [줄 세우기](https://www.acmicpc.net/problem/2252)   
 [프로젝트 스케줄링](https://www.acmicpc.net/problem/14907) - PERT   

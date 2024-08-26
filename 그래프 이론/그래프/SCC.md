@@ -1,5 +1,6 @@
 [카테고리](/README.md)
-### SCC - Tarjan's algorithm
+## SCC
+### Tarjan's algorithm
 ```cpp
 class Graph {
 private:
@@ -54,10 +55,10 @@ public:
 ### 시간복잡도 
 $O(V + E)$   
 
-### 주의사항
+### 구현 주의사항
 타잔 알고리즘으로 SCC를 구할 경우 위상정렬의 역순이 되므로 sccNumber의 값이 클수록 위상정렬 시 앞 쪽에 위치   
 
 self-loop나 parallel edge있어도 잘 작동하므로 딱히 고려할 필요 없음
 
-### 백준문제
+### 문제
 [Strongly Connected Component](https://www.acmicpc.net/problem/2150)

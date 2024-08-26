@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### Graph Coloring
+## Graph Coloring
 ```cpp
 class Graph {
 private:
@@ -48,13 +48,13 @@ public:
 ### 시간복잡도 
 canColor(k) : $k^{n - 1}$ + 백트래킹
 
-### 주의사항
+### 구현 주의사항
 colors[cur] = -1; 백트래킹 까먹으면 안 됨
 
-### 백준문제
+### 문제
 [Coloring Graphs](https://www.acmicpc.net/problem/24782)   
 
-### 참고문헌
+### 참고링크
 https://www.geeksforgeeks.org/graph-coloring-applications/   
 https://dad-rock.tistory.com/692   
 

@@ -1,4 +1,5 @@
 [카테고리](/README.md)
+## MST(Minimum Spanning Tree)
 ##### [Disjoint Set](/자료구조/기타/Disjoint%20Set.md)
 ```cpp
 class DisjointSet {
@@ -24,7 +25,7 @@ public:
     }
 };
 ```
-### MST (Kruskal's algorithm)
+### Kruskal's algorithm
 ```cpp
 template <typename T>
 class Graph {
@@ -73,5 +74,5 @@ public:
 ### 시간복잡도 
 $O(E~logE)$   
 
-### 백준문제
+### 문제
 [최소 스패닝 트리](https://www.acmicpc.net/problem/1197)   
