@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### Cornacchia
+## Cornacchia
 ```cpp
 pll cornacchia(ll m, ll d = 1) { // x^2 + dy^2 = m
     if (m == 2) return {1, 1};
@@ -20,11 +20,11 @@ pll cornacchia(ll m, ll d = 1) { // x^2 + dy^2 = m
 ### 시간복잡도 
 $O()$   
 
-### 백준문제
+### 문제
 [제곱수의 합 2 (More Huge)](https://www.acmicpc.net/problem/17646)
 
 ### 원리
 작성 예정
 
-### 참고문헌
+### 참고링크
 https://en.wikipedia.org/wiki/Cornacchia%27s_algorithm

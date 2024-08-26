@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### NTT
+## NTT (Number Theoretic Transform)
 ```cpp
 template <ll mod, ll primitiveRoot>
 class NTT {
@@ -119,7 +119,7 @@ vector<ll> multiply(const vector<T> &v1, const vector<T> &v2) {
 ### 시간복잡도 
 $O(N~logN)$   
 
-### 주의사항
+### 구현 주의사항
 이유를 모르겠는데 multiply함수에서 n(resize()할 크기) 계산할 때 FFT 코드에서 했던 방식으로 계산하면 안된다. [백준 질문 게시판](https://www.acmicpc.net/board/view/142161)   
 ```cpp
 // FFT
@@ -133,5 +133,5 @@ while (n < a.size() + b.size()) n <<= 1;
 ```
 NTT에서 n계산부분만 바꿔서 제출해보면 틀렸다고 나온다.   
 
-### 백준문제
+### 문제
 [씽크스몰](https://www.acmicpc.net/problem/11385) - NTT + CRT   

@@ -21,10 +21,10 @@ mod하는 수가 소수라면 페르마의 소정리에 따라 $a^{-1} \equiv a^
 ### 시간복잡도 
 $O(logN)$   
 
-### 사용관련
+### 사용설명
 modInverse(n, MOD);로 사용
 
-### 백준문제
+### 문제
 [Σ](https://www.acmicpc.net/problem/13172)
 
 ### 원리

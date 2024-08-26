@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### Combination (Pascal's triangle)
+## Combination by DP
 ```cpp
 template <typename T, T mod>
 class Combination {
@@ -25,9 +25,11 @@ public:
 ### 시간복잡도 
 $O(N K)$   
 
-### 백준문제
+### 문제
 [다리 놓기](https://www.acmicpc.net/problem/1010)   
 [N포커](https://www.acmicpc.net/problem/16565)   
 
 ### 원리
-$\binom{n}{r} = \binom{n-1}{r-1} + \binom{n-1}{r} $
+파스칼의 삼각형   
+
+$\binom{n}{r} = \binom{n-1}{r-1} + \binom{n-1}{r} $   

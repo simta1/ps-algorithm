@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### p-adic valuation
+## p-지수(p-adic valuation)
 ```cpp
 template <typename T>
 T pAdicValuation(T n, T p) {

@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### Tonelli-Shanks
+## Tonelli-Shanks
 ```cpp
 ll tonelliShanks(ll n, ll p) { // x^2 === n (mod p)
     n = (n + p) % p;
@@ -40,11 +40,11 @@ ll tonelliShanks(ll n, ll p) { // x^2 === n (mod p)
 ### 시간복잡도 
 $O()$   
 
-### 백준문제
+### 문제
 [제곱수의 합 2 (More Huge)](https://www.acmicpc.net/problem/17646)
 
 ### 원리
 작성 예정
 
-### 참고문헌
+### 참고링크
 https://en.wikipedia.org/wiki/Tonelli%E2%80%93Shanks_algorithm

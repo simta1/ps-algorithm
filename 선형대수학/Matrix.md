@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### Matrix
+## Matrix
 ```cpp
 template <typename T, T mod>
 class Matrix {
@@ -49,7 +49,8 @@ public:
 operator* $O(R^3)$   
 power $O(R^3 logN)$
 
+<!-- TODO -->
 power $O(R^3 + R logN)$ 구현도 존재하나 나중에 작성   
 
-### 백준문제
+### 문제
 [행렬 제곱](https://www.acmicpc.net/problem/10830)

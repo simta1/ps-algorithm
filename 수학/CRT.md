@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### CRT
+## CRT(Chinese Remainder Theorem)
 ```cpp
 using ll = long long;
 using pll = pair<ll, ll>;
@@ -43,8 +43,8 @@ pll crt(const vector<pll> &rems) {
 ### 시간복잡도 
 $O(N~logN)$   
 
-### 사용관련   
+### 사용설명
 crt().first = -1이라면 연립합동식이 해를 가지지 않음
 
-### 백준문제
+### 문제
 [단어 굴리기](https://www.acmicpc.net/problem/1571)

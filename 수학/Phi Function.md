@@ -1,5 +1,6 @@
 [카테고리](/README.md)
-### Euler's Totient(Phi) Function
+## Phi Function(Euler's Totient Function)
+### $ O(\sqrt{N}) $ 소인수분해 사용
 ```cpp
 template <typename T>
 T phi(T n) {
@@ -14,7 +15,7 @@ T phi(T n) {
     return res;
 }
 ```
-### [Pollard Rho](/수학/PollardRho.md) 사용 
+### $ O(\sqrt[4]{N}) $ 소인수분해 사용([Pollard Rho](/수학/PollardRho.md))
 ```cpp
 namespace PollardRho {
     //pollard rho code
@@ -30,10 +31,13 @@ ll phi(ll n) {
 $O(\sqrt{N})$   
 폴라드 로 사용 시 $O(\sqrt[4]{N})$
 
-### 주의사항
+### 구현 주의사항
 n이 소수일 경우도 고려    
+```cpp
+if (n > 1) res = res / n * (n - 1);
+```
 
-### 백준문제
+### 문제
 [GCD(n, k) = 1](https://www.acmicpc.net/problem/11689) - $O(\sqrt{N})$   
 [gcd(n, k) = 1](https://www.acmicpc.net/problem/13926) - $O(\sqrt[4]{N})$
 

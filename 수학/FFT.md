@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-## FFT (Fast Fourier Transform)
+### FFT
 ```cpp
 namespace FourierTransform {
     using ll = long long;
@@ -128,13 +128,13 @@ namespace FourierTransform {
 ### 시간복잡도 
 $O(N~logN)$   
 
-### 구현 주의사항
+### 주의사항
 실수 오차가 생각보다 커질 수 있다.   
 
 conv할 벡터의 크기를 미리 2의 거듭제곱으로 맞춘 뒤 multiply()나 square()함수를 사용하면   
 if ((n >> 1) != a.size()) n <<= 1; 코드 덕분에 메모리 효율이 꽤 개선된다. (아래 __사용관련__ 참고)
 
-### 사용설명
+### 사용관련
 오차범위 확인할 때 참고 -> [부동소숫점 오류](https://www.acmicpc.net/blog/view/37)
 
 최대/최소값의 범위가 그리 크지 않다면 using ld = double; 사용   
@@ -150,9 +150,12 @@ ex) 8, 8 conv -> resize(16) // 선언된 공간 모두 사용함
 [보석 가게](https://www.acmicpc.net/problem/13575) 문제 기준으로 처음 벡터를 선언할 때 크기 1000으로 선언하면 생각보다 나비효과가 크게 작용해서 mle가 나는 듯 함.   
 처음부터 벡터의 크기를 2의 거듭제곱이 되도록(이 문제에선 1024로) 선언한 뒤 거듭제곱을 하니 mle가 해결됐음.   
 
-### 문제
+### 백준문제
 [큰 수 곱셈 (2)](https://www.acmicpc.net/problem/15576)   
 [큰 수 곱셈 (3)](https://www.acmicpc.net/problem/22289)
+
+### 참고링크
+https://algoshitpo.github.io/2020/05/20/fft-ntt/   
 
 ### 원리
 ```cpp
@@ -195,6 +198,3 @@ void fft(vector<cpx> &f, bool is_reverse) {
     // ...
 }
 ```
-
-### 참고링크
-https://algoshitpo.github.io/2020/05/20/fft-ntt/   
