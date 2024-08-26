@@ -275,10 +275,11 @@ mermaid stateDiagram-v2 사용
   * ~~<span class="">[담금질 기법]</span>~~
 * ### utils
   * <span class="">[fastio]</span>
-  * <span class="additional">[문자열 압축(A)](/utils/String%20Compression.md)</span>
-  * <span class="additional">[개수 계산(A)](/utils/Counter.md)</span>
-  * <span class="additional">[랜덤(A)](/utils/Random.md)</span>
-  * <span class="additional">[고합성수 검색(A)](/utils/Highly%20Composite%20Number.md)</span>
+  * <span class="additional">[문자열 압축](/utils/String%20Compression.md)</span>
+  * <span class="additional">[개수 계산](/utils/Counter.md)</span>
+  * <span class="additional">[랜덤](/utils/Random.md)</span>
+  * <span class="additional">[고합성수 검색](/utils/Highly%20Composite%20Number.md)</span>
+  * <span class="additional">[배열 연산](/utils/Array.md)</span>
 # C++ 유용한 기능
 * ### 문법
   * <span class="">[range-based for loop]</span>
