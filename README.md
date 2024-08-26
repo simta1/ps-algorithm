@@ -155,6 +155,7 @@ mermaid stateDiagram-v2 사용
   <!-- * <span class="">[비트셋 LCS]</span> -->
   <!-- * <span class="">[비트 집합]</span> -->
   * <span class="silver">[Kadane algorithm(S+)](/DP/Kadane%20Algorithm.md)</span>
+  * <span class="gold">[lcs(G-)](/DP/lcs.md)</span>
   * <span class="gold">[배낭 문제(G-)](/DP/Knapsack.md)</span>
   * <span class="gold">[비트셋 배낭(G-)](/DP/Knapsack(Bitset).md)</span> <!-- https://egod1537.tistory.com/entry/Bounded-Knapsack-Problem%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9C%BC%EB%A1%9C-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0 -->
   * <span class="gold">[비트마스크 DP(G+)](/DP/Bitmask%20DP.md)</span>
@@ -226,7 +227,6 @@ mermaid stateDiagram-v2 사용
   * ~~<span class="">[카라츠바]</span>~~
   * <span class="platinum">[FFT(P+)](/수학/Fast%20Fourier%20Transform.md)</span>
   * <span class="">[3진 FFT(D-)]</span>
-  * <span class="">[정밀도 높은 FFT(D-)]</span>
   * <span class="diamond">[NTT(D-)](/수학/Number%20Theoretic%20Transform.md)</span>
   * <span class="">[FFT 나눗셈]</span>
   * <span class="">[FFT 응용]</span> <!-- https://hyperbolic.tistory.com/4 -->
@@ -248,7 +248,8 @@ mermaid stateDiagram-v2 사용
   * <span class="">[fastio]</span> <!-- https://www.acmicpc.net/blog/view/105 -->
   * <span class="additional">[비트 트릭(A)](/기타/Bit%20Trick.md)</span>
   * <span class="additional">[비트 트릭 2(A)](/기타/Bit%20Trick2.md)</span>
-  * <span class="">[계수 정렬]()</span>
+  * <span class="">[계수 정렬]</span>
+  * <span class="silver">[투 포인터(S-)](/기타/Two%20Pointer.md)</span>
   * <span class="silver">[기수 정렬(S-)](/기타/Radix%20Sort.md)</span>
   * <span class="silver">[이분 탐색(S-)](/기타/Binary%20Search.md)</span>
   * <span class="silver">[비트마스크(S-)](/기타/Bitmask.md)</span>
@@ -273,6 +274,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[임의 정밀도(epsilon값 계산)(A)]</span>
   * ~~<span class="">[담금질 기법]</span>~~
 * ### utils
+  * <span class="">[fastio]</span>
   * <span class="additional">[문자열 압축(A)](/utils/String%20Compression.md)</span>
   * <span class="additional">[개수 계산(A)](/utils/Counter.md)</span>
   * <span class="additional">[랜덤(A)](/utils/Random.md)</span>
