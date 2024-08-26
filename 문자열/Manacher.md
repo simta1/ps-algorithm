@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### Manacher
+## Manacher
 ```cpp
 class Manacher {
 private:
@@ -39,18 +39,18 @@ public:
 ### 시간복잡도 
 $O(N)$   
 
-### 주의사항
+### 구현 주의사항
 문자열 사이에 '#' 끼워넣을 때 주의   
 st += (c + '#'); 으로 하면 c와 '#'이 각각 char형이기 때문에, c와 '#'의 아스키코드를 합한 값에 해당하는 char형 문자 하나가 st의 끝에 추가되어 st가 제대로 만들어지지 않음   
 st += (c + "#"); 의 경우에도 이유는 모르겠으나 st가 제대로 만들어지지 않음   
 그냥 st += c, st += '#';으로 나누어 적는 게 낫다.   
 
-### 사용관련
+### 사용설명
 i를 중심으로 하는 최장 펠린드롬 부분문자열의 길이는 radius[i]   
 따라서 i를 중심으로 하는 펠린드롬 부분문자열의 개수는 (radius[i] + 1) / 2개   
 
 
-### 백준문제
+### 문제
 [가장 긴 팰린드롬 부분 문자열](https://www.acmicpc.net/problem/13275)   
 [#15164번_제보](https://www.acmicpc.net/problem/16163) - 회문 부분 문자열의 개수   
 
@@ -72,7 +72,7 @@ ex) #a#a#, radius[i] = 2
 반대쪽의 문자까지 고려하면 radius[i] / 2 * 2 = radius[i]개의 문자 존재   
 $\therefore$ 중앙지점에 있는 문자는 '#'이므로 고려되지 않고, 따라서 radius[i]개   
 
-### 참고문헌
+### 참고링크
 https://m.blog.naver.com/jqkt15/222108415284   
-https://nicotina04.tistory.com/250
+https://nicotina04.tistory.com/250   
 https://www.crocus.co.kr/1075   

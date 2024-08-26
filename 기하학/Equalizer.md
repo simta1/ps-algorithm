@@ -1,7 +1,8 @@
 [카테고리](/README.md)
-### [Point, Distance, Area](/기하학/Geometry%20Header.md)
+## 등적등주 분할(Equalizer)
+### [기하학 헤더](/기하학/Geometry%20Header.md)
 <details>
-<summary>기하학 헤더</summary>
+<summary>Point, Distance, Area</summary>
 
 ```cpp
 template <typename T>
@@ -123,8 +124,8 @@ public:
 $O(N + logN ~ log\frac{N}{\epsilon})$   
 (누적합 없이 naive로 구현할 경우 $O(N ~ log\frac{N}{\epsilon})$ )   
 
-### 사용관련
+### 사용설명
 ld랑 eps 필요한만큼 조절해서 사용
 
-### 백준문제
+### 문제
 [반 나누기 (Hard)](https://www.acmicpc.net/problem/31397)   

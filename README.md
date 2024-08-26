@@ -58,19 +58,19 @@ mermaid stateDiagram-v2 사용
 
 * ### 자료구조
   * #### 세그먼트 트리
-    * <span class="gold">[펜윅 트리(G+)](/자료구조/세그먼트%20트리/FenwickTree.md)</span>
-    * <span class="gold">[세그먼트 트리(G+)](/자료구조/세그먼트%20트리/SegmentTree.md)</span>
-    * <span class="gold">[비재귀 세그(G+)](/자료구조/세그먼트%20트리/Bottom-Up%20SegmentTree.md)</span>
-    * <span class="platinum">[세그 이분 탐색(P-)](/자료구조/세그먼트%20트리/Biary%20Search%20on%20SegmentTree.md)</span>
-    * <span class="platinum">[2D 펜윅(P-)](/자료구조/세그먼트%20트리/FenwickTree2D.md)</span>
-    * <span class="platinum">[2D 세그(P-)](/자료구조/세그먼트%20트리/SegmentTree2D.md)</span>
-    * <span class="platinum">[n차원 펜윅(P-)](/자료구조/세그먼트%20트리/Multi%20Dimensional%20FenwickTree.md)</span>
-    * <span class="platinum">[머지소트 트리(P-)](/자료구조/세그먼트%20트리/MergesortTree.md)</span>
-    * <span class="platinum">[레이지 세그(P-)](/자료구조/세그먼트%20트리/SegmentTree(Lazy%20Propagation).md)</span>
+    * <span class="gold">[펜윅 트리(G+)](/자료구조/세그먼트%20트리/펜윅.md)</span>
+    * <span class="gold">[세그먼트 트리(G+)](/자료구조/세그먼트%20트리/세그.md)</span>
+    * <span class="gold">[비재귀 세그(G+)](/자료구조/세그먼트%20트리/비재귀%20세그.md)</span>
+    * <span class="platinum">[세그 이분 탐색(P-)](/자료구조/세그먼트%20트리/세그이분탐색.md)</span>
+    * <span class="platinum">[2D 펜윅(P-)](/자료구조/세그먼트%20트리/2차원%20펜윅.md)</span>
+    * <span class="platinum">[2D 세그(P-)](/자료구조/세그먼트%20트리/2차원%20세그.md)</span>
+    * <span class="platinum">[n차원 펜윅(P-)](/자료구조/세그먼트%20트리/다차원%20펜윅.md)</span>
+    * <span class="platinum">[머지소트 트리(P-)](/자료구조/세그먼트%20트리/머지소트%20트리.md)</span>
+    * <span class="platinum">[레이지 세그(P-)](/자료구조/세그먼트%20트리/레이지%20세그.md)</span>
     * <span class="">[비재귀 레이지 세그]</span> <!-- https://www.acmicpc.net/blog/view/117 -->
-    * <span class="platinum">[다이나믹 세그, 다이나믹 레이지 세그(P-)](/자료구조/세그먼트%20트리/Dynamic%20SegmentTree.md)</span>
-    * ~~<span class="platinum">[_range GCD 세그(P+)_](/자료구조/세그먼트%20트리/GCD%20SegmentTree.md)</span>~~
-    * <span class="platinum">[금광 세그(P+)](/자료구조/세그먼트%20트리/Gold%20Mine%20SegmentTree.md)</span>
+    * <span class="platinum">[다이나믹 세그, 다이나믹 레이지 세그(P-)](/자료구조/세그먼트%20트리/다이나믹%20세그.md)</span>
+    * ~~<span class="platinum">[_range GCD 세그(P+)_](/자료구조/세그먼트%20트리/GCD%20세그.md)</span>~~
+    * <span class="platinum">[금광 세그(P+)](/자료구조/세그먼트%20트리/금광%20세그.md)</span>
     * <span class="">[퍼시스턴트 세그(P+)]</span>
     * <span class="">[세그트리 비츠(D+)]</span>
   * #### BBST
@@ -80,7 +80,7 @@ mermaid stateDiagram-v2 사용
   * #### 기타
     * <span class="gold">[분리 집합(G-)](/자료구조/기타/Disjoint%20Set.md)</span>
     * <span class="">[유니온 파인드 롤백]</span>
-    * <span class="gold">[희소 배열(G+)](/자료구조/기타/Sparse%20Table.md)</span>
+    * <span class="gold">[희소 배열(G+)](/자료구조/기타/희소배열.md)</span>
     * <span class="">[로프]</span>
     * <span class="">[데카르트 트리]</span>
     * <span class="">[Line container]</span>
@@ -95,23 +95,23 @@ mermaid stateDiagram-v2 사용
     <!-- https://ps.mjstudio.net/tip-bfs-fill -->
     * <span class="">[flood fill]</span>
     * <span class="">[0-1 bfs(G-)]</span>
-    * <span class="gold">[이분 그래프 판정(G-)](/그래프%20이론/그래프/Bipartiteness%20Testing.md)</span>
+    * <span class="gold">[이분 그래프 판정(G-)](/그래프%20이론/그래프/이분그래프%20판정.md)</span>
     * <span class="gold">[다익스트라(G-)](/그래프%20이론/그래프/Dijkstra.md)</span>
     * ~~<span class="">[A*]</span>~~
     * <span class="gold">[벨만-포드(G-)](/그래프%20이론/그래프/Bellman-Ford.md)</span>
     * <span class="gold">[SPFA(G-)](/그래프%20이론/그래프/SPFA.md)</span>
     * <span class="gold">[플로이드 워셜(G-)](/그래프%20이론/그래프/Floyd-Warshall.md)</span>
-    * <span class="gold">[최소 스패닝 트리: Kruskal(G-)](/그래프%20이론/그래프/MST(Kruskal).md)</span>
+    * <span class="gold">[최소 스패닝 트리: Kruskal(G-)](/그래프%20이론/그래프/MST.md)</span>
     * ~~<span class="">[최소 스패닝 트리: Prim(G-)]</span>~~
     * <span class="">[최소 스패닝 트리: Borůvka]</span>
     * <span class="gold">[_정점 착색수(G+)_](/그래프%20이론/그래프/Graph%20Coloring.md)</span>
     * <span class="">[_간선 착색수_]</span>
     * <span class="gold">[위상 정렬(G+)](/그래프%20이론/그래프/Topological%20Sort.md)</span>
-    * <span class="platinum">[강한 연결 요소(P-)](/그래프%20이론/그래프/Strongly%20Connected%20Component.md)</span>
+    * <span class="platinum">[강한 연결 요소(P-)](/그래프%20이론/그래프/SCC.md)</span>
     * <span class="platinum">[2-SAT(P-)](/그래프%20이론/그래프/2-SAT.md)</span>
-    * <span class="platinum">[오일러 회로(P-)](/그래프%20이론/그래프/Eulerian%20Circuit.md)</span>
-    * <span class="platinum">[단절점(P-)](/그래프%20이론/그래프/Articulation%20Point.md)</span>
-    * <span class="platinum">[단절선(P-)](/그래프%20이론/그래프/Articulation%20Bridge.md)</span>
+    * <span class="platinum">[오일러 회로(P-)](/그래프%20이론/그래프/오일러%20회로.md)</span>
+    * <span class="platinum">[단절점(P-)](/그래프%20이론/그래프/단절점.md)</span>
+    * <span class="platinum">[단절선(P-)](/그래프%20이론/그래프/단절선.md)</span>
     * <span class="">[이중 연결 요소]</span>
     * <span class="">[블록 컷 트리]</span>
     * <span class="">[선인장]</span>
@@ -120,19 +120,19 @@ mermaid stateDiagram-v2 사용
     * <span class="">[도미네이터 트리(D-)]</span>
     * <span class="">[오프라인 동적 연결성 판정]</span>
     * <span class="">[온라인 동적 연결성 판정]</span>
-    * <span class="diamond">[유향 MST(D+)](/그래프%20이론/그래프/Directed%20Minimum%20Spanning%20Tree.md)</span>
+    * <span class="diamond">[유향 MST(D+)](/그래프%20이론/그래프/DMST.md)</span>
     * <span class="">[현 그래프(D+)]</span>
     * <span class="">[일반 매칭(D+)]</span>
     * <span class="ruby">[offline incremental SCC(R-)](/그래프%20이론/그래프/Offline%20Incremental%20SCC.md)</span>
     <!-- * <span class="">[현 그래프 판정]</span> -->
     <!-- * <span class="">[Perfect Elimination Ordering]</span> -->
     <!-- * <span class="">[_최소 차수 MST_]</span> -->
-  * #### [네트워크 플로우](/그래프%20이론/네트워크%20플로우/최대유량%20알고리즘들%20정리.md)
-    * <span class="platinum">[최대유량: Edmonds-Karp (P-)](/그래프%20이론/네트워크%20플로우/Edmonds-Karp.md)</span>
+  * #### [네트워크 플로우](/그래프%20이론/네트워크%20플로우/개념%20정리.md)
+    * <span class="platinum">[최대유량: Edmonds-Karp (P-)](/그래프%20이론/네트워크%20플로우/최대%20유량.md)</span>
     * <span class="">[최대유량: Dinic (P-)]</span>
     * ~~<span class="">[최대유량: Push-Relabel (P-)]</span>~~
     * <span class="platinum">[최소 비용 최대 유량(P+)](/그래프%20이론/네트워크%20플로우/MCMF.md)</span>
-    * <span class="platinum">[이분 매칭(P-)](/그래프%20이론/네트워크%20플로우/Bipartite%20Matching.md)</span>
+    * <span class="platinum">[이분 매칭(P-)](/그래프%20이론/네트워크%20플로우/이분매칭.md)</span>
     * <span class="">[Circulation]</span> <!-- https://blog.naver.com/kks227/221426339344 -->
     * <span class="">[이분 매칭: Hopcraft-Karp]</span>
     * <span class="">[Stoer-Wagner Algorithm]</span>
@@ -140,9 +140,9 @@ mermaid stateDiagram-v2 사용
     * <span class="">[헝가리안]</span>
     * <span class="">[L-R flow]</span>
   * #### 트리
-    * <span class="platinum">[최소 공통 조상(P-)](/그래프%20이론/트리/Lowest%20Common%20Ancestor.md)</span>
-    * <span class="platinum">[LCA를 통한 트리 쿼리(P-)](/그래프%20이론/트리/Tree%20Query%20Using%20LCA.md)</span>
-    * <span class="platinum">[오일러 경로 테크닉(P-)](/그래프%20이론/트리/Euler%20Tour%20Technique.md)</span>
+    * <span class="platinum">[최소 공통 조상(P-)](/그래프%20이론/트리/LCA.md)</span>
+    * <span class="platinum">[LCA를 통한 트리 쿼리(P-)](/그래프%20이론/트리/Query%20with%20LCA.md)</span>
+    * <span class="platinum">[오일러 경로 테크닉(P-)](/그래프%20이론/트리/ETT.md)</span>
     * <span class="">[heavy-light 분할(P+)]</span>
     * <span class="">[트리 압축]</span>
     * <span class="">[센트로이드 분할(D-)]</span>
@@ -151,11 +151,10 @@ mermaid stateDiagram-v2 사용
 * ### [DP](/DP/Top-Down%20DP.md)
   <!-- * <span class="">[배낭 문제(G-)]</span> -->
   <!-- 비트셋 배낭 https://www.acmicpc.net/problem/16072 -->
-  <!-- * <span class="">[LCS]</span> -->
   <!-- * <span class="">[비트셋 LCS]</span> -->
   <!-- * <span class="">[비트 집합]</span> -->
   * <span class="silver">[Kadane algorithm(S+)](/DP/Kadane%20Algorithm.md)</span>
-  * <span class="gold">[lcs(G-)](/DP/lcs.md)</span>
+  * <span class="gold">[LCS(G-)](/DP/lcs.md)</span>
   * <span class="gold">[배낭 문제(G-)](/DP/Knapsack.md)</span>
   * <span class="gold">[비트셋 배낭(G-)](/DP/Knapsack(Bitset).md)</span> <!-- https://egod1537.tistory.com/entry/Bounded-Knapsack-Problem%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9C%BC%EB%A1%9C-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0 -->
   * <span class="gold">[비트마스크 DP(G+)](/DP/Bitmask%20DP.md)</span>
@@ -176,34 +175,33 @@ mermaid stateDiagram-v2 사용
 <!-- RBS(Regular Bracket Sequence) -->
   * <span class="gold">[트라이(G+)](/문자열/Trie.md)</span>
   * <span class="platinum">[매내처(P-)](/문자열/Manacher.md)</span>
-  * <span class="platinum">[KMP(P-)](/문자열/Knuth-Morris-Pratt%20Algorithm.md)</span>
+  * <span class="platinum">[KMP(P-)](/문자열/KMP.md)</span>
   * <span class="platinum">[아호 코라식(P+)](/문자열/Aho-Corasick.md)</span>
   * ~~<span class="">[bitap algorithm]</span>~~
   * <span class="">[해싱]</span>
   * <span class="">[라빈 카프]</span>
-  * <span class="platinum">[접미사 배열과 lcp 배열(P+)](/문자열/Suffix%20Array.md)</span>
+  * <span class="platinum">[접미사 배열과 lcp 배열(P+)](/문자열/Suffix%20and%20LCP%20Array.md)</span>
   * <span class="">[Z algorithm]</span>
-  * <span class="diamond">[회문 트리(D+)](/문자열/Palindromic%20Tree.md)</span>
+  * <span class="diamond">[회문 트리(D+)](/문자열/회문%20트리.md)</span>
   * <span class="">[접미사 트리(R-)]</span>
 * ### 기하학
+  <!-- * ~~<span class="">[반공간 교집합]</span>~~ -->
   * <span class="gold">[cross product, CCW, 직선-점 거리 계산(G-)](/기하학/Geometry%20Header.md)</span>
   * <span class="">[plane sweeping]</span>
   * <span class="gold">[볼록다각형 넓이(G-)](/기하학/Polygon%20Area.md)</span>
   * <span class="">[볼록다각형 판정]</span>
-  * <span class="gold">[선분교차판정(G+)](/기하학/Line-Line%20Intersection%20check.md)</span>
-  * <span class="platinum">[_선분교차점 계산(P-)_](/기하학/Line-Line%20Intersection%20calculate.md)</span>
-  * <span class="platinum">[볼록 껍질(P-)](/기하학/Graham%20Scan.md)</span>
+  * <span class="gold">[선분교차판정(G+)](/기하학/선분교차판정.md)</span>
+  * <span class="platinum">[선분교차점 계산(P-)](/기하학/Intersection%20Calculate(LL).md)</span>
+  * <span class="platinum">[볼록 껍질(P-)](/기하학/볼록%20껍질.md)</span>
   * <span class="platinum">[가장 먼 두 점 : 회전하는 캘리퍼스(P-)](/기하학/Rotating%20Calipers.md)</span>
-  * <span class="platinum">[다각형 내부의 점 판정(P-)](/기하학/Point%20In%20Polygon.md)</span>
-  * <span class="platinum">[볼록 다각형 내부의 점 판정(P+)](/기하학/Point%20In%20Convex%20Polygon.md)</span>
-  * <span class="platinum">[_등적등주 분할(P+)_](/기하학/Equalizer.md)</span>
-  * <span class="platinum">[_가장 가까운 두 점(P+)_](/기하학/Closest%20Two%20Points.md)</span>
+  * <span class="platinum">[다각형 내부의 점 판정(P-)](/기하학/PIP.md)</span>
+  * <span class="platinum">[볼록 다각형 내부의 점 판정(P+)](/기하학/PIP(convex).md)</span>
+  * <span class="platinum">[등적등주 분할(P+)](/기하학/Equalizer.md)</span>
+  * <span class="platinum">[가장 가까운 두 점(P+)](/기하학/Closest%20Two%20Points.md)</span>
   * <span class="">[최소 외접원(P+)]</span>
-  * <span class="">[_반 나누기_]</span>
   * <span class="">[볼록다각형 접선]</span>
   * <span class="">[불도저]</span>
   * <span class="">[반평면 교집합(D-)]</span>
-  * ~~<span class="">[반공간 교집합]</span>~~
   * <span class="">[KD tree]</span>
   * <span class="">[그린 정리(D+)]</span>
   * <span class="">[델로네 삼각분할(R-)]</span>
@@ -212,13 +210,13 @@ mermaid stateDiagram-v2 사용
   <!-- * <span class="">[고합성수 찾기]</span>
   * <span class="">[우월고합성수]</span> -->
   <!-- * <span class="">[Linear-sieve]</span> -->
-  * <span class="silver">[에라토스테네스의 체(S+)](/수학/Sieve%20of%20Eratosthenes.md)</span>
-  * <span class="silver">[분할정복 거듭제곱(S+)](/수학/Power.md)</span>
-  * <span class="silver">[nCr, 파스칼의 삼각형(S+)](/수학/Combination%20by%20DP.md)</span>
-  * <span class="gold">[p-지수(G+)](/수학/p-adic%20valuation.md)</span>
+  * <span class="silver">[에라토스테네스의 체(S+)](/수학/에라토스테네스의%20체.md)</span>
+  * <span class="silver">[분할정복 거듭제곱(S+)](/수학/빠른%20거듭제곱.md)</span>
+  * <span class="silver">[nCr, 파스칼의 삼각형(S+)](/수학/Combination(DP).md)</span>
+  * <span class="gold">[p-지수(G+)](/수학/p-지수.md)</span>
   * <span class="gold">[확장 유클리드 호제법, 모듈러 역원(G+)](/수학/ExtendedGCD,%20Modular%20Inverse.md)</span>
-  * <span class="gold">[오일러 파이 함수(G+)](/수학/Euler's%20Totient%20Function.md)</span>
-  * <span class="platinum">[중국인의 나머지 정리(P-)](/수학/Chinese%20Remainder%20Theorem.md)</span>
+  * <span class="gold">[오일러 파이 함수(G+)](/수학/Phi%20Function.md)</span>
+  * <span class="platinum">[중국인의 나머지 정리(P-)](/수학/CRT.md)</span>
   * <span class="">[Garner's algorithm]</span>
   * <span class="">[nCr mod 소수, 뤼카(P-)]</span>
   * <span class="">[nCr mod 합성수(D-)]</span>
@@ -226,9 +224,9 @@ mermaid stateDiagram-v2 사용
   * <span class="platinum">[밀러-라빈 소수 판별법(P+)](/수학/MillerRabin.md)</span>
   * <span class="platinum">[폴라드 로(P+)](/수학/PollardRho.md)</span>
   * ~~<span class="">[카라츠바]</span>~~
-  * <span class="platinum">[FFT(P+)](/수학/Fast%20Fourier%20Transform.md)</span>
+  * <span class="platinum">[FFT(P+)](/수학/FFT.md)</span>
   * <span class="">[3진 FFT(D-)]</span>
-  * <span class="diamond">[NTT(D-)](/수학/Number%20Theoretic%20Transform.md)</span>
+  * <span class="diamond">[NTT(D-)](/수학/NTT.md)</span>
   * <span class="">[FFT 나눗셈]</span>
   * <span class="">[FFT 응용]</span> <!-- https://hyperbolic.tistory.com/4 -->
   * <span class="">[online FFT]</span>
@@ -246,36 +244,32 @@ mermaid stateDiagram-v2 사용
   * <span class="">[스프라그-그런디]</span> <!-- (비트셋) -->
   * <span class="">[hackenbush]</span>
 * ### 기타
-  * <span class="">[fastio]</span> <!-- https://www.acmicpc.net/blog/view/105 -->
-  * <span class="additional">[비트 트릭(A)](/기타/Bit%20Trick.md)</span>
-  * <span class="additional">[비트 트릭 2(A)](/기타/Bit%20Trick2.md)</span>
   * <span class="">[계수 정렬]</span>
-  * <span class="silver">[투 포인터(S-)](/기타/Two%20Pointer.md)</span>
   * <span class="silver">[기수 정렬(S-)](/기타/Radix%20Sort.md)</span>
-  * <span class="silver">[이분 탐색(S-)](/기타/Binary%20Search.md)</span>
+  * <span class="silver">[이분탐색(S-)](/기타/이분탐색.md)</span>
+  * <span class="silver">[투 포인터(S-)](/기타/Two%20Pointer.md)</span>
   * <span class="silver">[비트마스크(S-)](/기타/Bitmask.md)</span>
-  * <span class="silver">[값 / 좌표 압축(S-)](/기타/Coordinate%20Compression.md)</span>
-  * <span class="silver">[순열 사이클 분할(S+)](/기타/Permutation%20Cycle%20Decomposition.md)</span>
-  * <span class="">[투 포인터(G-)]</span>
+  * <span class="silver">[좌표 압축(S-)](/기타/좌표압축.md)</span>
+  * <span class="silver">[순열 사이클 분할(S+)](/기타/순열%20사이클%20분할.md)</span>
   * <span class="">[모노톤 스택]</span>
   * <span class="">[모노톤 큐]</span>
   * <span class="">[누적합, imos]</span>
   * <span class="gold">[후위 표기식(G+)](/기타/Postfix%20Notation.md)</span>
   * <span class="">[중간에서 만나기(G+)]</span>
-  * <span class="platinum">[반전수(P-)](/기타/Inversions%20of%20array.md)</span>
+  * <span class="platinum">[반전수(P-)](/기타/반전수.md)</span>
   * <span class="">[스위핑]</span>
   * <span class="">[슬라이딩 윈도우]</span>
   * <span class="platinum">[덱을 이용한 구간 최댓값 트릭(P-)](/기타/Deque%20Trick.md)</span>
   * <span class="platinum">[XOR 트라이(P-)](/기타/XOR%20Trie.md)</span>
-  * <span class="platinum">[삼분 탐색(P-)](/기타/Ternary%20Search.md)</span>
-  * <span class="platinum">[Mo's algorithm(P+)](/기타/Mo's%20Algorithm.md)</span>
-  * <span class="platinum">[평방분할(P+)](/기타/Sqrt%20Decomposition.md)</span>
+  * <span class="platinum">[삼분 탐색(P-)](/기타/삼분탐색.md)</span>
+  * <span class="platinum">[Mo's algorithm(P+)](/기타/Mo's.md)</span>
+  * <span class="platinum">[평방분할(P+)](/기타/제곱근%20분할법.md)</span>
   * <span class="">[병렬 이분 탐색(P+)]</span>
   * <span class="">[춤추는 링크, 크누스 X]</span>
   * <span class="">[임의 정밀도(epsilon값 계산)(A)]</span>
   * ~~<span class="">[담금질 기법]</span>~~
 * ### utils
-  * <span class="">[fastio]</span>
+  * <span class="">[fastio]</span> <!-- https://www.acmicpc.net/blog/view/105 -->
   * <span class="additional">[문자열 압축](/utils/String%20Compression.md)</span>
   * <span class="additional">[개수 계산](/utils/Counter.md)</span>
   * <span class="additional">[랜덤](/utils/Random.md)</span>
@@ -293,6 +287,8 @@ mermaid stateDiagram-v2 사용
   * <span class="">[코드 여러줄 이어쓰기]</span>
   * <span class="">[리터럴 여러줄 이어쓰기]</span>
 * ### 함수
+  <!-- TODO * <span class="additional">[비트 트릭(A)](/기타/Bit%20Trick.md)</span>
+  * <span class="additional">[비트 트릭 2(A)](/기타/Bit%20Trick2.md)</span> TODO -->
   * <span class="">[수학관련]</span> <!-- atan, atan2 추가하기 -->
   * <span class="">[배열관련]</span> <!-- copy doubling -->
   * <span class="information">[타입관련](/C++/함수/casting%20operators.md)</span>

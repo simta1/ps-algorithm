@@ -1,7 +1,8 @@
 [카테고리](/README.md)
-### [Point, Cross Product, CCW](/기하학/Geometry%20Header.md)
+## Rotating Calipers
+### [기하학 헤더](/기하학/Geometry%20Header.md)
 <details>
-<summary>기하학 헤더</summary>
+<summary>Point, Cross Product, CCW</summary>
 
 ```cpp
 template <typename T>
@@ -69,9 +70,9 @@ T getDiameterSquare(const vector<Point<T> > &points) {
 $O(N~logN)$   
 회전하는 캘리퍼스 자체는 $O(N)$이지만 볼록껍질이 미리 주어져야 하므로 볼록 껍질을 계산하는 시간을 포함하면 $O(N~logN)$이다.
 
-### 주의사항
+### 구현 주의사항
 template T가 정수형일 수도 있으므로 거리를 비교할 때 sqrt()를 쓰지 말고 distSquare()로  거리의 제곱을 기준으로 비교한다.
 getDiameterSquare()도 제곱된 값을 리턴한다.
 
-### 백준문제
+### 문제
 [가장 먼 두 점](https://www.acmicpc.net/problem/2049)

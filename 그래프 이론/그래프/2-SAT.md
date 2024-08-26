@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### 2-SAT
+## 2-SAT
 ```cpp
 class Graph {
 private:
@@ -71,7 +71,7 @@ public:
 ### 시간복잡도 
 $O(V + E)$   
 
-### 사용관련
+### 사용설명
 true를 강제하고 싶은 값이 있다면 add1SAT() 사용   
 CNF에서 or로 연결된 부분들은 add2SAT()하여 사용   
 false, true는 각각 -, +부호로 표현   
@@ -82,7 +82,7 @@ graph.add2SAT(-1, 2);
 // (!x2 or !x3)
 graph.add2SAT(-2, -3);
 ```
-### 백준문제
+### 문제
 [2-SAT - 4](https://www.acmicpc.net/problem/11281)   
 [아이돌](https://www.acmicpc.net/problem/3648) - 1SAT 포함   
 

@@ -1,7 +1,6 @@
 [카테고리](/README.md)
-# 작성중.. 코드 실험 안 끝남
-
-### Splay Tree
+# 작성중.. 코드 실험 안 끝남 <!-- TODO -->
+## Splay Tree
 ```cpp
 template <typename T>
 class SplayTree {
@@ -292,16 +291,16 @@ public:
 ### 시간복잡도 
 $amortized~O(logN)$   
 
-### 주의사항
+### 구현 주의사항
 
 
-### 사용관련
+### 사용설명
 
 
-### 백준문제
+### 문제
 []()
 
-### 참고문헌
-https://cubelover.tistory.com/10
-https://blog.chodaeho.com/posts/2021/splay-tree-1/
-https://justicehui.github.io/hard-algorithm/2018/11/12/SplayTree1/
+### 참고링크
+https://cubelover.tistory.com/10   
+https://blog.chodaeho.com/posts/2021/splay-tree-1/   
+https://justicehui.github.io/hard-algorithm/2018/11/12/SplayTree1/   

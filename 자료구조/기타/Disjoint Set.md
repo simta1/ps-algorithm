@@ -1,4 +1,5 @@
 [카테고리](/README.md)
+## 분리 집합, 유니온 파인드
 ### DisjointSet (path compression)
 ```cpp
 class DisjointSet {
@@ -57,7 +58,7 @@ public:
 $O(\alpha(N))$   
 $\alpha$는 inverse Ackermann function으로 아무리 커도 O(4)정도로 생각하면 된다. 대충 2↑↑(n + 3)의 역함수다.
 
-### 주의사항
+### 구현 주의사항
 find(int a)에서
 return a;하면 안 된다.
 return a;하고 싶으면 if문 안에서도 리턴해야된다.
@@ -68,7 +69,7 @@ return a;
 
 union by rank를 추가할 경우 merge함수에서 if (a == b) return;이 포함되어야 된다. path compression만 있을 때는 a == b여도 상관없지만, union by rank를 사용하는 경우 이후 rank를 업데이트하는 과정이 있으므로 if (a == b) return;을 해야 rank가 효율적으로 계산된다.   
 
-### 사용관련
+### 사용설명
 1-based로 사용할 수 있도록 구현했지만 0번 인덱스도 사용가능
 
 솔직히 rank by union 안 쓰고 path compression만 해도 시간이 비슷하게 나온다. 오히려 rank by union쓰면 메모리만 2배로 쓰고 코드만 길어지기에 웬만하면 path compression만 사용하는 게 나은 듯 싶다.
@@ -76,7 +77,7 @@ union by rank를 추가할 경우 merge함수에서 if (a == b) return;이 포�
 
 int cnt = 0;을 선언한 뒤 merge호출 될 때마다 cnt += !isConnected()로 몇 번 합쳐졌는지 계산해 두면 (n - cnt)로 집합의 개수도 알 수 있다.
 
-### 백준문제
+### 문제
 [집합의 표현](https://www.acmicpc.net/problem/1717)
 
 ### 시간복잡도 관련..

@@ -1,7 +1,7 @@
-[오일러 파이 함수](/수학/Euler's%20Totient%20Function.md)   
+[오일러 파이 함수](/수학/Phi%20Function.md)   
 [밀러 라빈](/수학/MillerRabin.md)   
 [카테고리](/README.md)   
-### Pollard Rho
+## Pollard Rho
 ```cpp
 using ll = long long;
 using pll = pair<ll, ll>;
@@ -97,8 +97,8 @@ namespace PollardRho {
 ### 시간복잡도 
 $O(\sqrt[4]N)$   
 
-### 주의사항
+### 구현 주의사항
 PollardRho::getPrime()는 2를 찾지 못하기 때문에 따로 2의 배수인지 확인해야 된다. (getPrime()함수 첫번째 줄 코드)
 
-### 백준문제
+### 문제
 [큰 수 소인수분해](https://www.acmicpc.net/problem/4149)

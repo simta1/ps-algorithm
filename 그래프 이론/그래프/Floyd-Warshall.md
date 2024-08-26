@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### Floyd-Warshall
+## Floyd-Warshall
 ```cpp
 template <typename T>
 class Graph {
@@ -39,12 +39,12 @@ public:
 $O(V^3)$   
 음수 가중치 존재 시에도 사용 가능
 
-### 주의사항
+### 구현 주의사항
 dist[s][m] + dist[m][e]를 계산할 때 overflow를 방지하려면 INF는 numeric_limits::max() / 2 이하의 값 사용   
 
-### 사용관련
+### 사용설명
 간선이 양방향일 경우 addEdge()에서 주석 해제   
 floydWarshall()는 음수 간선 순환 발생 시(비용을 무한히 줄일 수 있는 경우) false 리턴   
 
-### 백준문제
-[플로이드](https://www.acmicpc.net/problem/11404)
+### 문제
+[플로이드](https://www.acmicpc.net/problem/11404)   

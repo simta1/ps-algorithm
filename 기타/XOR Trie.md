@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### XOR Trie
+## XOR Trie
 ```cpp
 class Trie {
 private:
@@ -58,5 +58,5 @@ public:
 ### 시간복잡도 
 $O(logN)$   
 
-### 백준문제
+### 문제
 [수열과 쿼리 20](https://www.acmicpc.net/problem/16903)

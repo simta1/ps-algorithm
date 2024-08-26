@@ -1,4 +1,5 @@
 [카테고리](/README.md)
+## Offline Incremental SCC
 ### [Disjoint Set](/자료구조/기타/Disjoint%20Set.md)
 <details>
 <summary>find()만 접근제어자 public으로 변경</summary>
@@ -148,7 +149,7 @@ vector<vector<pair<int, int> > > getFirstMergeTime(int n, const vector<pair<int,
 $O((V+E)~logE)$   
 E는 전체 간선 개수   
 
-### 주의사항
+### 구현 주의사항
 dnc(0, idxes.size() - 1, idxes)로 호출하면 안 됨.   
 사이클을 이루지 않는 간선들은 계속 right로 몰리게 되므로 s == e == edges.size() - 1일 때 실제로 합쳐지는 간선과 그렇지 않은 간선을 구별할 수 없음   
 따로 dnc(0, idxes.size(), idxes)로 호출해서 s == e == edges.size()일 때의 간선들만 제외해주면 됨   
@@ -157,7 +158,7 @@ findSCC()에서 매번 inGraph의 노드들에 대해서 -1로 초기화해줘�
 
 self-loop나 parallel edge 있어도 잘 작동함
 
-### 사용관련
+### 사용설명
 getFirstMergeTime(n, edges)는 edges의 각 간선들이 처음으로 사이클에 포함되는 순간을 계산해서 리턴
 
 ex)
@@ -201,10 +202,10 @@ int main() {
 }
 ```
 
-### 백준문제
+### 문제
 [Link Cut Digraph](https://www.acmicpc.net/problem/19028)   
 [F. Simultaneous Coloring](https://codeforces.com/contest/1989/problem/F)
 
-### 참고문헌
-https://cheet0se.tistory.com/18
+### 참고링크
+https://cheet0se.tistory.com/18   
 https://codeforces.com/blog/entry/91608

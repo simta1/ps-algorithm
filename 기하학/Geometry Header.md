@@ -1,4 +1,5 @@
 [카테고리](/README.md)
+## 기하학 헤더
 ### 자료형
 ```cpp
 using ld = double;
@@ -68,10 +69,10 @@ bool isBetween(Point<T> a, Point<T> b, Point<T> c) {
 ```cpp
 ```
 
-### 주의사항
+### 구현 주의사항
 좌표들을 곱셈하기 때문에 overflow 고려할 땐 좌표의 최대값의 제곱을 기준으로 판단
 
-### 백준문제
+### 문제
 [CCW](https://www.acmicpc.net/problem/11758) - CCW   
 [쓰레기 슈트](https://www.acmicpc.net/problem/4225) - distance   
 

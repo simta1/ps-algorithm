@@ -1,4 +1,5 @@
 [카테고리](/README.md)
+## Trie
 ### Trie (vector\<T>)
 ```cpp
 template <typename T>
@@ -116,12 +117,12 @@ public:
 insert $O(N)$   
 find $O(N)$
 
-### 주의사항
+### 구현 주의사항
 노드에 end를 통해서 단어의 끝까지 도달했는지 저장할 필요가 있다.   
 그렇지 않으면 find()함수에서 트라이에 속한 단어의 일부(정확히는 접두사)만 들어가도 true로 잘못 판별된다.   
 ex) "apple"만 집어넣었는데 "a", "ap", ... 등이 전부 true
 
-### 사용관련
+### 사용설명
 단어의 접두사 전부 검색하려면 아래 코드 사용   
 ex) "apple", "app" 있을 때 "apples" 넣으면 vector{2, 4} 리턴
 ```cpp
@@ -140,5 +141,5 @@ vector<int> find(const string &st) {
 }
 ```
 
-### 백준문제
+### 문제
 [개미굴](https://www.acmicpc.net/problem/14725)

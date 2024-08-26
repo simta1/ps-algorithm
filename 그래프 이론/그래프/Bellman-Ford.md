@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### Bellman-Ford
+## Bellman-Ford
 ```cpp
 template <typename T>
 class Graph {
@@ -52,8 +52,8 @@ public:
 $O(VE)$   
 다익스트라보다 느리지만 음수 가중치 존재 시에도 사용 가능
 
-### 사용관련
+### 사용설명
 bellmanFord()는 음수 간선 순환 발생 시(비용을 무한히 줄일 수 있는 경우) false 리턴   
 
-### 백준문제
+### 문제
 [최소비용 구하기](https://www.acmicpc.net/problem/1916)

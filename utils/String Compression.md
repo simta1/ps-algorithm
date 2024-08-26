@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-## String Compression $O(N)$
+## 문자열 압축
 ### pair\<char, int\>
 ```cpp
 vector<pair<char, int> > compress(const string &st) {

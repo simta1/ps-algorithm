@@ -1,6 +1,6 @@
 [폴라드 로](/수학/PollardRho.md)   
 [카테고리](/README.md)
-### Miller Rabin
+## Miller Rabin
 ```cpp
 using ll = long long;
 using pll = pair<ll, ll>;
@@ -59,10 +59,10 @@ k는 알고리즘 반복 횟수, 즉 코드에서 nums벡터의 크기(ull범위
 
 n이 매우 큰 수일 때 큰 수 곱셈의 시간복잡도를 고려해 $log^2N$를 붙인 것이라 함, ll범위에선 그냥 $O(k~logN)$으로 생각해도 되는 듯   
 
-### 백준문제
+### 문제
 [아파트 임대](https://www.acmicpc.net/problem/5615)
 
-### 참고문헌
+### 참고링크
 https://www.teferi.net/ps/%EC%86%8C%EC%88%98_%ED%8C%90%EB%B3%84
 
 ### 원리

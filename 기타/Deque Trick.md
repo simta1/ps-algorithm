@@ -1,5 +1,6 @@
 [카테고리](/README.md)
-# 작성중.. 코드 실험 안 끝남
+# 작성중.. 코드 실험 안 끝남 <!-- TODO -->
+## Deque Trick
 ### Deque Trick (min)
 ```cpp
 vector<int> dequeTrick(int len, const vector<int> &v) {
@@ -37,12 +38,12 @@ vector<int> dequeTrick(int len, const vector<int> &v) {
 ### 시간복잡도 
 $O()$   
 
-### 주의사항
+### 구현 주의사항
 
 
-### 사용관련
+### 사용설명
 
 
-### 백준문제
+### 문제
 [최솟값 찾기](https://www.acmicpc.net/problem/11003) - min   
 [상자 빌리기](https://www.acmicpc.net/problem/21982) - max   
