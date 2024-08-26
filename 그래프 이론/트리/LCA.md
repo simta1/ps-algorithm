@@ -1,5 +1,6 @@
 [카테고리](/README.md)
-### LCA (Binary Lifting) - fixed root
+## LCA(Lowest Common Ancestor, Binary Lifting)
+### fixed root
 ```cpp
 class Tree {
 private:
@@ -52,7 +53,7 @@ public:
     }
 };
 ```
-### LCA (Binary Lifting) - unfixed root
+### unfixed root
 ```cpp
 class Tree {
 private:
@@ -120,7 +121,7 @@ public:
 preprocessing $O(N~logN)$   
 getLCA $O(logN)$
 
-### 백준문제
+### 문제
 [LCA 2](https://www.acmicpc.net/problem/11438) - fixed root   
 [LCA와 쿼리](https://www.acmicpc.net/problem/15480) - unfixed root
 

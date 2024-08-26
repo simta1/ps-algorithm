@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### ETT(dfs ordering)
+## ETT(Euler Tour Technique, dfs ordering)
 ```cpp
 class Tree {
 private:
@@ -38,10 +38,10 @@ public:
 ### 시간복잡도 
 dfs 한 번. $O(N)$
 
-### 사용관련
+### 사용설명
 auto [s, e] = getRange(x);   
 [s, e] : 하위노드들(x포함)   
 [s + 1, e] : 하위노드들(x 미포함)   
 
-### 백준문제
+### 문제
 [자동차 공장](https://www.acmicpc.net/problem/2820)

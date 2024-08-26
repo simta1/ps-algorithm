@@ -140,9 +140,9 @@ mermaid stateDiagram-v2 사용
     * <span class="">[헝가리안]</span>
     * <span class="">[L-R flow]</span>
   * #### 트리
-    * <span class="platinum">[최소 공통 조상(P-)](/그래프%20이론/트리/Lowest%20Common%20Ancestor.md)</span>
-    * <span class="platinum">[LCA를 통한 트리 쿼리(P-)](/그래프%20이론/트리/Tree%20Query%20Using%20LCA.md)</span>
-    * <span class="platinum">[오일러 경로 테크닉(P-)](/그래프%20이론/트리/Euler%20Tour%20Technique.md)</span>
+    * <span class="platinum">[최소 공통 조상(P-)](/그래프%20이론/트리/LCA.md)</span>
+    * <span class="platinum">[LCA를 통한 트리 쿼리(P-)](/그래프%20이론/트리/Query%20with%20LCA.md)</span>
+    * <span class="platinum">[오일러 경로 테크닉(P-)](/그래프%20이론/트리/ETT.md)</span>
     * <span class="">[heavy-light 분할(P+)]</span>
     * <span class="">[트리 압축]</span>
     * <span class="">[센트로이드 분할(D-)]</span>
