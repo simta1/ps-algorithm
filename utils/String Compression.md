@@ -7,10 +7,9 @@ vector<pair<char, int> > compress(const string &st) {
     int n = st.length();
     
     for (int i = 0; i < n;) {
-        char ch = st[i];
         int cnt = 0;
-        while (i < n && st[i] == ch) ++cnt, ++i;
-        res.push_back({ch, cnt});
+        while (i < n && st[i] == st[i]) ++cnt, ++i;
+        res.push_back({st[i], cnt});
     }
     
     return res;
@@ -23,9 +22,8 @@ vector<int> compress(const string &st) {
     int n = st.length();
     
     for (int i = 0; i < n;) {
-        char ch = st[i];
         int cnt = 0;
-        while (i < n && st[i] == ch) ++cnt, ++i;
+        while (i < n && st[i] == st[i]) ++cnt, ++i;
         res.push_back(cnt);
     }
     
