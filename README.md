@@ -94,6 +94,7 @@ mermaid stateDiagram-v2 사용
 * ### 그래프 이론
   * #### 그래프
     <!-- https://ps.mjstudio.net/tip-bfs-fill -->
+    <!-- * <span class="">[온라인 동적 연결성 판정]</span> -->
     * <span class="">[flood fill]</span>
     * <span class="">[0-1 bfs(G-)]</span>
     * <span class="gold">[이분 그래프 판정(G-)](/그래프%20이론/그래프/이분그래프%20판정.md)</span>
@@ -108,6 +109,7 @@ mermaid stateDiagram-v2 사용
     * <span class="gold">[_정점 착색수(G+)_](/그래프%20이론/그래프/Graph%20Coloring.md)</span>
     * <span class="">[_간선 착색수_]</span>
     * <span class="gold">[위상 정렬(G+)](/그래프%20이론/그래프/Topological%20Sort.md)</span>
+    * <span class="">[kth 최단 경로]</span>
     * <span class="platinum">[강한 연결 요소(P-)](/그래프%20이론/그래프/SCC.md)</span>
     * <span class="platinum">[2-SAT(P-)](/그래프%20이론/그래프/2-SAT.md)</span>
     * <span class="platinum">[오일러 회로(P-)](/그래프%20이론/그래프/오일러%20회로.md)</span>
@@ -120,7 +122,6 @@ mermaid stateDiagram-v2 사용
     * <span class="">[쌍대 그래프(D-)]</span>
     * <span class="">[도미네이터 트리(D-)]</span>
     * <span class="">[오프라인 동적 연결성 판정]</span>
-    * <span class="">[온라인 동적 연결성 판정]</span>
     * <span class="diamond">[유향 MST(D+)](/그래프%20이론/그래프/DMST.md)</span>
     * <span class="">[현 그래프(D+)]</span>
     * <span class="">[일반 매칭(D+)]</span>
@@ -226,6 +227,7 @@ mermaid stateDiagram-v2 사용
   * <span class="platinum">[폴라드 로(P+)](/수학/PollardRho.md)</span>
   * ~~<span class="">[카라츠바]</span>~~
   * <span class="platinum">[FFT(P+)](/수학/FFT.md)</span>
+  * <span class="">[이산 제곱근]</span>
   * <span class="">[3진 FFT(D-)]</span>
   * <span class="diamond">[NTT(D-)](/수학/NTT.md)</span>
   * <span class="">[FFT 나눗셈]</span>

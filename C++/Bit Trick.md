@@ -75,7 +75,7 @@ bool isPositive = (x >> 31);
 bool isNegative = (-x >> 31);
 ```
 
-### ~0u << 2
+### ~0u >> 2
 ```cpp
 const int inf = ~0u >> 2; // 1073741823
 ```
