@@ -81,6 +81,7 @@ mermaid stateDiagram-v2 사용
     * <span class="gold">[분리 집합(G-)](/자료구조/기타/Disjoint%20Set.md)</span>
     * <span class="">[유니온 파인드 롤백]</span>
     * <span class="gold">[희소 배열(G+)](/자료구조/기타/희소배열.md)</span>
+    * <span class="platinum">[XOR 트라이(P-)](/자료구조/기타/XOR%20Trie.md)</span>
     * <span class="">[로프]</span>
     * <span class="">[데카르트 트리]</span>
     * <span class="">[Line container]</span>
@@ -260,7 +261,6 @@ mermaid stateDiagram-v2 사용
   * <span class="">[스위핑]</span>
   * <span class="">[슬라이딩 윈도우]</span>
   * <span class="platinum">[덱을 이용한 구간 최댓값 트릭(P-)](/기타/Deque%20Trick.md)</span>
-  * <span class="platinum">[XOR 트라이(P-)](/기타/XOR%20Trie.md)</span>
   * <span class="platinum">[삼분 탐색(P-)](/기타/삼분탐색.md)</span>
   * <span class="platinum">[Mo's algorithm(P+)](/기타/Mo's.md)</span>
   * <span class="platinum">[평방분할(P+)](/기타/제곱근%20분할법.md)</span>
