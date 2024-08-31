@@ -222,12 +222,11 @@ mermaid stateDiagram-v2 사용
   * <span class="">[Garner's algorithm]</span>
   * <span class="">[nCr mod 소수, 뤼카(P-)]</span>
   * <span class="">[nCr mod 합성수(D-)]</span>
-  * <span class="">[이산 로그(P+)]</span>
   * <span class="platinum">[밀러-라빈 소수 판별법(P+)](/수학/MillerRabin.md)</span>
   * <span class="platinum">[폴라드 로(P+)](/수학/PollardRho.md)</span>
-  * ~~<span class="">[카라츠바]</span>~~
+  * <span class="">[이산 로그(P+)]</span>
   * <span class="platinum">[FFT(P+)](/수학/FFT.md)</span>
-  * <span class="">[이산 제곱근]</span>
+  * ~~<span class="">[카라츠바]</span>~~
   * <span class="">[3진 FFT(D-)]</span>
   * <span class="diamond">[NTT(D-)](/수학/NTT.md)</span>
   * <span class="">[FFT 나눗셈]</span>
@@ -235,8 +234,9 @@ mermaid stateDiagram-v2 사용
   * <span class="">[online FFT]</span>
   * <span class="">[포함 배제의 원리, 뫼비우스 함수, 뫼비우스 반전(D-)]</span>
   * <span class="">[생성 함수(D-)]</span>
-  * <span class="additional">[Tonelli-Shanks algorithm(A)](/수학/Tonelli-Shanks.md)</span>
-  * <span class="additional">[Cornacchia's algorithm(A)](/수학/Cornacchia.md)</span>
+  * <span class="diamond">[Tonelli-Shanks algorithm(D-)](/수학/Tonelli-Shanks.md)</span>
+  * <span class="diamond">[Cornacchia's algorithm(D-)](/수학/Cornacchia.md)</span>
+  * <span class="">[이산 제곱근]</span>
   * <span class="">[메르텐스 함수]</span>
   * <span class="">[매트로이드(R-)]</span>
 * ### 선형대수학
@@ -247,6 +247,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[스프라그-그런디]</span> <!-- (비트셋) -->
   * <span class="">[hackenbush]</span>
 * ### 기타
+  * <span class="additional">[비트 트릭(A)](/기타/Bit%20Trick.md)</span>
   * <span class="">[계수 정렬]</span>
   * <span class="silver">[기수 정렬(S-)](/기타/Radix%20Sort.md)</span>
   * <span class="silver">[이분탐색(S-)](/기타/이분탐색.md)</span>
@@ -290,8 +291,6 @@ mermaid stateDiagram-v2 사용
   * <span class="">[코드 여러줄 이어쓰기]</span>
   * <span class="">[리터럴 여러줄 이어쓰기]</span>
 * ### 함수
-  <!-- TODO * <span class="additional">[비트 트릭(A)](/기타/Bit%20Trick.md)</span>
-  * <span class="additional">[비트 트릭 2(A)](/기타/Bit%20Trick2.md)</span> TODO -->
   * <span class="">[수학관련]</span> <!-- atan, atan2 추가하기 -->
   * <span class="">[배열관련]</span> <!-- copy doubling -->
   * <span class="information">[타입관련](/C++/함수/casting%20operators.md)</span>
