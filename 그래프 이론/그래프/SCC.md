@@ -1,3 +1,4 @@
+[Offline Incremental SCC](/그래프%20이론/그래프/Offline%20Incremental%20SCC.md)   
 [카테고리](/README.md)
 ## SCC(Strongly Connected Component)
 ### Tarjan's algorithm

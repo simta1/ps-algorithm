@@ -30,7 +30,7 @@ public:
 ```
 </details>
 
-### [SCC](/그래프%20이론/그래프/Strongly%20Connected%20Component.md)
+### [SCC](/그래프%20이론/그래프/SCC.md)
 <details>
 <summary> scc를 계산할 노드들만 따로 저장하기 위한 inGraph 선언<br>
 addEdge()랑 clear()에 inGraph업데이트하는 과정 추가<br>
