@@ -1,5 +1,5 @@
-[카테고리](/README.md)   
 [Cornacchia](/수학/Cornacchia.md)   
+[카테고리](/README.md)
 ## Tonelli-Shanks
 ```cpp
 ll tonelliShanks(ll n, ll p) { // x^2 === n (mod p)
