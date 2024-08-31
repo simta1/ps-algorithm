@@ -277,6 +277,7 @@ mermaid stateDiagram-v2 사용
   * <span class="additional">[랜덤](/utils/Random.md)</span>
   * <span class="additional">[고합성수 검색](/utils/Highly%20Composite%20Number.md)</span>
   * <span class="additional">[배열 연산](/utils/Array.md)</span>
+  * <span class="additional">[가까운 2의 멱수 계산](/utils/Nearest%20Power2.md)</span>
   * <span class="additional">[bigInt]()</span>
   * <span class="additional">[baseInt]()</span> <!-- bigint랑 합쳐서 구현하는 게 나을 듯 -->
 # C++ 유용한 기능
