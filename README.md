@@ -294,6 +294,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[수학관련]</span> <!-- atan, atan2 추가하기 -->
   * <span class="">[배열관련]</span> <!-- copy doubling -->
   * <span class="information">[타입관련](/C++/함수/casting%20operators.md)</span>
+  * <span class="information">[GCC built-in]</span>
   * <span class="information">[문자관련](/C++/함수/char.md)</span>
   * <span class="information">[문자열관련](/C++/함수/string.md)</span>
   * <span class="information">[이분탐색 람다함수](/C++/함수/lower_bound_lambda.md)</span>
