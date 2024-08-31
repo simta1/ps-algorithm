@@ -1,4 +1,5 @@
-[카테고리](/README.md)
+[카테고리](/README.md)   
+[Cornacchia](/수학/Cornacchia.md)   
 ## Tonelli-Shanks
 ```cpp
 ll tonelliShanks(ll n, ll p) { // x^2 === n (mod p)
@@ -38,7 +39,7 @@ ll tonelliShanks(ll n, ll p) { // x^2 === n (mod p)
 }
 ```
 ### 시간복잡도 
-$O()$   
+$O(log^2{p})$   
 
 ### 문제
 [제곱수의 합 2 (More Huge)](https://www.acmicpc.net/problem/17646)
@@ -47,4 +48,6 @@ $O()$
 작성 예정
 
 ### 참고링크
-https://en.wikipedia.org/wiki/Tonelli%E2%80%93Shanks_algorithm
+https://en.wikipedia.org/wiki/Tonelli%E2%80%93Shanks_algorithm   
+https://00ad-8e71-00ff-055d.tistory.com/74   
+https://rkm0959.tistory.com/20   
