@@ -7,23 +7,23 @@ private:
     vector<vector<T> > dp;
 
 public:
-    Combination(int maxN, int maxK) : dp(maxN + 1, vector<T>(maxK + 1, -1)) {}
+    Combination(int maxN, int maxR) : dp(maxN + 1, vector<T>(maxR + 1, -1)) {}
     Combination(int maxN) : Combination(maxN, maxN) {}
 
-    T operator()(int n, int k) {
-        if (k > n || k < 0) return 0;
+    T operator()(int n, int r) {
+        if (r > n || r < 0) return 0;
         if (n == 1) return 1;
-        if (k == 0 || k == n) return 1;
+        if (r == 0 || r == n) return 1;
         
-        T &res = dp[n][k];
+        T &res = dp[n][r];
         if (~res) return res;
 
-        return res = ((*this)(n - 1, k - 1) + (*this)(n - 1, k)) % mod;
+        return res = ((*this)(n - 1, r - 1) + (*this)(n - 1, r)) % mod;
     }
 };
 ```
 ### 시간복잡도 
-$O(N K)$   
+$O(N R)$   
 
 ### 문제
 [다리 놓기](https://www.acmicpc.net/problem/1010)   
