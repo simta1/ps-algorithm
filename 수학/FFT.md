@@ -42,7 +42,7 @@ namespace FourierTransform {
     }
 
     int powGE(int n) {
-        return 1 << 31 - __builtin_clz(n) + !!(n & (n - 1));
+        return 1 << 32 - __builtin_clz(n) - !(n & ~-n);
     }
 
     template <typename T>
