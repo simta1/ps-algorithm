@@ -294,7 +294,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[수학관련]</span> <!-- atan, atan2 추가하기 -->
   * <span class="">[배열관련]</span> <!-- copy doubling -->
   * <span class="information">[타입관련](/C++/함수/casting%20operators.md)</span>
-  * <span class="information">[GCC built-in]</span>
+  * <span class="information">[GCC built-in](/C++/함수/builtin.md)</span>
   * <span class="information">[문자관련](/C++/함수/char.md)</span>
   * <span class="information">[문자열관련](/C++/함수/string.md)</span>
   * <span class="information">[이분탐색 람다함수](/C++/함수/lower_bound_lambda.md)</span>
@@ -302,9 +302,9 @@ mermaid stateDiagram-v2 사용
   * <span class="information">[custom pq](/C++/함수/costom%20pq.md)</span>
   * <span class="">[io manip]</span>
   * <span class="information">[ext](/C++/함수/ext.md)</span>
-* ### ps용 설정
+* ### ps용 환경설정
   * <span class="">[cph]</span>
-  * <span class="">[snippet]</span>
+  * <span class="information">[snippet](/C++/ps용%20환경설정/snippet.md)</span>
   * <span class="">[debug, c_cpp_properties.json 설정]</span>
   <!-- * Pre-defined Compiler Macros
   * 버전 gnu++17로 해야 Template argument deduction 등 문법 사용가능 -->
