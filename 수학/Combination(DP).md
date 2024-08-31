@@ -1,5 +1,6 @@
 [카테고리](/README.md)
 ## Combination by DP
+### Combination
 ```cpp
 template <typename T, T mod>
 class Combination {
@@ -34,15 +35,43 @@ public:
     }
 };
 ```
+### Catalan
+```cpp
+template <typename T, T mod>
+class Catalan {
+private:
+    vector<T> dp;
+
+public:
+    Catalan(int maxN) : dp(maxN + 1, -1) {}
+
+    T operator()(int n) {
+        if (n == 0) return 1;
+        
+        T &res = dp[n];
+        if (~res) return res;
+
+        res = 0;
+        for (int i = 0; i < n; i++) res = (res + (*this)(i) * (*this)(n - 1 - i)) % mod;
+        return res;
+    }
+};
+```
 ### 시간복잡도 
 $O(N R)$   
 
+### 공간복잡도
+Combination $O(N R)$   
+Catalan $O(N)$
+
 ### 사용설명
 catalan이나 H, A사용할 경우 combination기준에서 maxN 얼마인지 계산해서 사용
+카탈란수만 필요하면 Catalan사용.
 
 ### 문제
 [다리 놓기](https://www.acmicpc.net/problem/1010)   
 [N포커](https://www.acmicpc.net/problem/16565)   
+[정상 회담 2](https://www.acmicpc.net/problem/1670) - catalan   
 
 ### 원리
 파스칼의 삼각형   
