@@ -61,7 +61,7 @@ mermaid stateDiagram-v2 사용
     * <span class="gold">[펜윅 트리(G+)](/자료구조/세그먼트%20트리/펜윅.md)</span>
     * <span class="gold">[세그먼트 트리(G+)](/자료구조/세그먼트%20트리/세그.md)</span>
     * <span class="gold">[비재귀 세그(G+)](/자료구조/세그먼트%20트리/비재귀%20세그.md)</span>
-    * <span class="platinum">[세그 이분 탐색(P-)](/자료구조/세그먼트%20트리/세그이분탐색.md)</span>
+    * <span class="platinum">[세그 이분 탐색(P-)](/자료구조/세그먼트%20트리/세그%20이분%20탐색.md)</span>
     * <span class="platinum">[2D 펜윅(P-)](/자료구조/세그먼트%20트리/2차원%20펜윅.md)</span>
     * <span class="platinum">[2D 세그(P-)](/자료구조/세그먼트%20트리/2차원%20세그.md)</span>
     * <span class="platinum">[n차원 펜윅(P-)](/자료구조/세그먼트%20트리/다차원%20펜윅.md)</span>
