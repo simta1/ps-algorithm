@@ -68,6 +68,31 @@ Catalan $O(N)$
 catalan이나 H, A사용할 경우 combination기준에서 maxN 얼마인지 계산해서 사용
 카탈란수만 필요하면 Catalan사용.
 
+```cpp
+class Combination {
+private:
+    vector<vector<T> > dp;
+    T INF;
+
+public:
+    Combination(int maxN, int maxR) : dp(maxN + 1, vector<T>(maxR + 1, -1)) {}
+    Combination(int maxN) : Combination(maxN, maxN) {}
+
+    T operator()(int n, int r) {
+        if (r > n || r < 0) return 0;
+        if (n == 1) return 1;
+        if (r == 0 || r == n) return 1;
+        
+        T &res = dp[n][r];
+        if (~res) return res;
+
+        return res = min(INF, (*this)(n - 1, r - 1) + (*this)(n - 1, r));
+    }
+};
+```
+modInt 대신 infInt사용한 코드   
+INF <= numeric_limits\<T\>::max() / 2 가정한 거라서 INF 더 큰 경우에는 덧셈 로직 바꿔서 사용
+
 ### 문제
 [다리 놓기](https://www.acmicpc.net/problem/1010)   
 [N포커](https://www.acmicpc.net/problem/16565)   
