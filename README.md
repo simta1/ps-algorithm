@@ -293,12 +293,12 @@ mermaid stateDiagram-v2 사용
 * ### 함수
   * <span class="">[수학관련]</span> <!-- atan, atan2 추가하기 -->
   * <span class="">[배열관련]</span> <!-- copy doubling -->
+  * <span class="information">[permutation](/C++/함수/permutation.md)</span>
   * <span class="information">[타입관련](/C++/함수/casting%20operators.md)</span>
   * <span class="information">[GCC built-in](/C++/함수/builtin.md)</span>
   * <span class="information">[문자관련](/C++/함수/char.md)</span>
   * <span class="information">[문자열관련](/C++/함수/string.md)</span>
   * <span class="information">[이분탐색 람다함수](/C++/함수/lower_bound_lambda.md)</span>
-  * <span class="">[permutation]</span>
   * <span class="information">[custom pq](/C++/함수/costom%20pq.md)</span>
   * <span class="">[io manip]</span>
   * <span class="information">[ext](/C++/함수/ext.md)</span>
