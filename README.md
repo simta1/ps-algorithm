@@ -236,6 +236,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[online FFT]</span>
   * <span class="">[포함 배제의 원리, 뫼비우스 함수, 뫼비우스 반전(D-)]</span>
   * <span class="">[생성 함수(D-)]</span>
+  <!-- 카탈란 생성함수 O(nlogN) -->
   * <span class="diamond">[Tonelli-Shanks algorithm(D-)](/수학/Tonelli-Shanks.md)</span>
   * <span class="diamond">[Cornacchia's algorithm(D-)](/수학/Cornacchia.md)</span>
   * <span class="">[이산 제곱근]</span>
@@ -298,6 +299,7 @@ mermaid stateDiagram-v2 사용
   * <span class="information">[permutation](/C++/함수/permutation.md)</span>
   * <span class="information">[타입관련](/C++/함수/casting%20operators.md)</span>
   * <span class="information">[GCC built-in](/C++/함수/builtin.md)</span>
+  * <span class="information">[GCC 최적화](/C++/함수/GCC%20optimize.md)</span>
   * <span class="information">[문자관련](/C++/함수/char.md)</span>
   * <span class="information">[문자열관련](/C++/함수/string.md)</span>
   * <span class="information">[이분탐색 람다함수](/C++/함수/lower_bound_lambda.md)</span>
@@ -316,7 +318,7 @@ mermaid stateDiagram-v2 사용
   * <span class="information">[자주 쓰는 변수명](/C++/기타/Variable%20Name.md)</span>
   * <span class="information">[코딩 아이디어](/C++/기타/Idea.md)</span>
   <!-- https://xy-plane.tistory.com/11 -->
-# 참고문헌
+# 참고링크
 tlsdydaud1   
 https://00ad-8e71-00ff-055d.tistory.com/3   
 

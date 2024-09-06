@@ -17,6 +17,7 @@
 			"using pii = pair<int, int>;",
 			"using pll = pair<ll, ll>;",
 			"using tii = tuple<int, int, int>;",
+			"using qii = tuple<int, int, int, int>;",
 			"",
 			"int main() {",
 			"\tcin.tie(0) -> sync_with_stdio(0);",
@@ -27,6 +28,17 @@
 			"}"
 		],
 		"description": "ps default code"
+	},
+
+	"GCC optimize": {
+		"prefix": "#pragma GCC",
+		"body": [
+			"#pragma GCC optimize(\"O3\")",
+			"#pragma GCC optimize(\"Ofast\")",
+			"#pragma GCC optimize(\"unroll-loops\")",
+			""
+		],
+		"description": "GCC optimize"
 	},
 
 	"include ext/rope": {
@@ -119,6 +131,17 @@
 		"description": "vector<int> v(n)"
 	},
 
+	"cin vec2D": {
+		"prefix": "SNIP cin_v2",
+		"body": [
+			"vector v(${1:n}, vector<int>(${2:m}));",
+			"for (auto &r : v) for (auto &e : r) cin >> e;",
+			"",
+			""
+		],
+		"description": "vector v(n, vector<int>(m))"
+	},
+
 	"cin x": {
 		"prefix": "SNIP cin_x",
 		"body": [
@@ -154,10 +177,9 @@
 
 	// 오토핫키 핫스트링으로 쓰던 것들
 	"cout vector": {
-		"prefix": "dkdnt",
+		"prefix": "dkdnt ",
 		"body": [
 			"for (auto &e : ${1:v}) cout << e << \" \"; cout << \"\\n\";",
-			"",
 			""
 		],
 		"description": "cout vector"
@@ -239,6 +261,15 @@
         "when": "editorTextFocus"
     },
     {
+        "key": "shift+alt+g",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "langId": "cpp",
+            "name": "GCC optimize"
+        },
+        "when": "editorTextFocus"
+    },
+    {
         "key": "shift+alt+r",
         "command": "editor.action.insertSnippet",
         "args": {
@@ -307,6 +338,15 @@
         "args": {
             "langId": "cpp",
             "name": "cin v"
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+2",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "langId": "cpp",
+            "name": "cin vec2D"
         },
         "when": "editorTextFocus"
     },
