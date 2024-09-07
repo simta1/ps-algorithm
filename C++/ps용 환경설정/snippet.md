@@ -165,6 +165,8 @@
 			"",
 			"} fio;",
 			"",
+			"#define cin fio",
+			"#define cout fio",
 			""
 		],
 		"description": "fastio"
