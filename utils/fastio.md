@@ -115,7 +115,7 @@ static constexpr bool noNegative = true;
 ```
 
 ### 사용설명
-<!-- TODO double, float 등등 입력 -->
+<!-- TODO readDouble, getLine -->
 ```cpp
 int a, b;
 fin >> a >> b;

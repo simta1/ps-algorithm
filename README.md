@@ -209,43 +209,47 @@ mermaid stateDiagram-v2 사용
   * <span class="">[델로네 삼각분할(R-)]</span>
   * <span class="">[보로노이 다이어그램(R-)]</span>
 * ### [수학](/수학/개념%20정리.md)
-  <!-- * <span class="">[고합성수 찾기]</span>
-  * <span class="">[우월고합성수]</span> -->
-  <!-- * <span class="">[Linear-sieve]</span> -->
-  * <span class="silver">[에라토스테네스의 체(S+)](/수학/에라토스테네스의%20체.md)</span>
-  * <span class="silver">[분할정복 거듭제곱(S+)](/수학/빠른%20거듭제곱.md)</span>
-  * <span class="silver">[nCr, 파스칼의 삼각형(S+)](/수학/Combination(DP).md)</span>
-  * <span class="gold">[p-지수(G+)](/수학/p-지수.md)</span>
-  * <span class="gold">[확장 유클리드 호제법, 모듈러 역원(G+)](/수학/ExtendedGCD,%20Modular%20Inverse.md)</span>
-  * <span class="gold">[오일러 파이 함수(G+)](/수학/Phi%20Function.md)</span>
-  * <span class="">[자연수 분할]</span> <!-- P(n, k) -->
-  * <span class="">[집합 분할]</span> <!-- 2종 스털링 S(n, k) -->
-  * <span class="platinum">[중국인의 나머지 정리(P-)](/수학/CRT.md)</span>
-  * <span class="">[Garner's algorithm]</span>
-  * <span class="">[nCr mod 소수, 뤼카(P-)]</span>
-  * <span class="">[nCr mod 합성수(D-)]</span>
-  * <span class="platinum">[밀러-라빈 소수 판별법(P+)](/수학/MillerRabin.md)</span>
-  * <span class="platinum">[폴라드 로(P+)](/수학/PollardRho.md)</span>
-  * <span class="">[이산 로그(P+)]</span>
-  * <span class="platinum">[FFT(P+)](/수학/FFT.md)</span>
-  * ~~<span class="">[카라츠바]</span>~~
-  * <span class="">[3진 FFT(D-)]</span>
-  * <span class="diamond">[NTT(D-)](/수학/NTT.md)</span>
-  * <span class="">[FFT 나눗셈]</span>
-  * <span class="">[FFT 응용]</span> <!-- https://hyperbolic.tistory.com/4 -->
-  * <span class="">[online FFT]</span>
-  * <span class="">[포함 배제의 원리, 뫼비우스 함수, 뫼비우스 반전(D-)]</span>
-  * <span class="">[생성 함수(D-)]</span>
-  <!-- 카탈란 생성함수 O(nlogN) -->
-  * <span class="diamond">[Tonelli-Shanks algorithm(D-)](/수학/Tonelli-Shanks.md)</span>
-  * <span class="diamond">[Cornacchia's algorithm(D-)](/수학/Cornacchia.md)</span>
-  * <span class="">[이산 제곱근]</span>
-  * <span class="">[메르텐스 함수]</span>
-  * <span class="">[매트로이드(R-)]</span>
-* ### 선형대수학
-  * <span class="silver">[행렬(S-)](/선형대수학/Matrix.md)</span>
-  * <span class="">[가우스 소거법(P-)]</span>
-  * <span class="">[키르히호프(P-)]</span> <!-- https://www.acmicpc.net/problem/9614 -->
+  * #### 조합론
+    * <span class="silver">[nCr, 파스칼의 삼각형(S+)](/수학/조합론/Combination(DP).md)</span>
+    * <span class="">[자연수 분할]</span> <!-- P(n, k) -->
+    * <span class="platinum">[집합 분할(P-)](/수학/조합론/집합%20분할.md)</span>
+    * <span class="">[교란순열]</span>
+    * <span class="">[nCr mod 소수, 뤼카(P-)]</span>
+    * <span class="">[nCr mod 합성수(D-)]</span>
+  * #### 선형대수학
+    * <span class="silver">[행렬(S-)](/수학/선형대수학/Matrix.md)</span>
+    * <span class="">[가우스 소거법(P-)]</span>
+    * <span class="">[키르히호프(P-)]</span> <!-- https://www.acmicpc.net/problem/9614 -->
+  * #### 기타
+    <!-- * <span class="">[고합성수 찾기]</span>
+    * <span class="">[우월고합성수]</span> -->
+    * <span class="silver">[에라토스테네스의 체(S+)](/수학/에라토스테네스의%20체.md)</span>
+    * <span class="">[Linear-sieve]</span>
+    * <span class="silver">[분할정복 거듭제곱(S+)](/수학/빠른%20거듭제곱.md)</span>
+    * <span class="gold">[p-지수(G+)](/수학/p-지수.md)</span>
+    * <span class="gold">[확장 유클리드 호제법, 모듈러 역원(G+)](/수학/ExtendedGCD,%20Modular%20Inverse.md)</span>
+    * <span class="gold">[오일러 파이 함수(G+)](/수학/Phi%20Function.md)</span>
+    * <span class="">[생성 함수(D-)]</span>
+    * <span class="platinum">[중국인의 나머지 정리(P-)](/수학/CRT.md)</span>
+    * <span class="">[Garner's algorithm]</span>
+    * <span class="platinum">[밀러-라빈 소수 판별법(P+)](/수학/MillerRabin.md)</span>
+    * <span class="platinum">[폴라드 로(P+)](/수학/PollardRho.md)</span>
+    * <span class="">[이산 로그(P+)]</span>
+    * <span class="platinum">[FFT(P+)](/수학/FFT.md)</span>
+    * ~~<span class="">[카라츠바]</span>~~
+    * <span class="">[3진 FFT(D-)]</span>
+    * <span class="diamond">[NTT(D-)](/수학/NTT.md)</span>
+    * <span class="">[FFT 나눗셈]</span>
+    * <span class="">[FFT 응용]</span> <!-- https://hyperbolic.tistory.com/4 -->
+    * <span class="">[online FFT]</span>
+    * <span class="">[포함 배제의 원리, 뫼비우스 함수, 뫼비우스 반전(D-)]</span>
+    * <span class="">[수론적 함수]</span>
+    <!-- 카탈란 생성함수 O(nlogN) -->
+    * <span class="diamond">[Tonelli-Shanks algorithm(D-)](/수학/Tonelli-Shanks.md)</span>
+    * <span class="diamond">[Cornacchia's algorithm(D-)](/수학/Cornacchia.md)</span>
+    * <span class="">[이산 제곱근]</span>
+    * <span class="">[메르텐스 함수]</span>
+    * <span class="">[매트로이드(R-)]</span>
 * ### 게임 이론
   * <span class="">[스프라그-그런디]</span> <!-- (비트셋) -->
   * <span class="">[hackenbush]</span>
@@ -357,6 +361,9 @@ koosaga
 https://koosaga.com/242   
 
 https://youngyojun.github.io/
+
+S/W 멤버십 기술 블로그
+https://infossm.github.io/blog/
 
 <!-- # 알고리즘 순서 -->
   ```mermaid

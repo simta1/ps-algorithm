@@ -69,6 +69,7 @@ catalan이나 H, A사용할 경우 combination기준에서 maxN 얼마인지 계
 카탈란수만 필요하면 Catalan사용.
 
 ```cpp
+template <typename T>
 class Combination {
 private:
     vector<vector<T> > dp;
