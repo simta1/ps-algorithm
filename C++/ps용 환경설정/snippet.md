@@ -282,6 +282,25 @@
 		"description": "string st"
 	},
 
+	"lambdaWrap": {
+		"prefix": "SNIP lambdaWrap",
+		"body": [
+			"[&]() {",
+			"\t$0",
+			"}()${1:;}"
+		],
+		"description": "wrap with lambda"
+	},
+
+	"inRange": {
+		"prefix": "SNIP inRange",
+		"body": [
+			// "auto inRange = [&](int ${1:i}, int ${2:j}) { return $1 >= 0 && $1 < ${3:n} && $2 >= 0 && $2 < ${4:m}; };"
+			"auto inRange = [&](int i, int j) { return i >= 0 && i < ${1:n} && j >= 0 && j < ${2:m}; };"
+		],
+		"description": "inRange lambda function"
+	},
+	
 	// 오토핫키 핫스트링으로 쓰던 것들
 	"cout vector": {
 		"prefix": "dkdnt ",
@@ -490,6 +509,24 @@
         "args": {
             "langId": "cpp",
             "name": "cin st"
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+l",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "langId": "cpp",
+            "name": "lambdaWrap"
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+r",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "langId": "cpp",
+            "name": "inRange"
         },
         "when": "editorTextFocus"
     },
