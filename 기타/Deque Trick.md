@@ -35,6 +35,20 @@ vector<int> dequeTrick(int len, const vector<int> &v) {
     return res;
 }
 ```
+### Deque Trick (cmp 함수 복잡한 경우)
+```cpp
+deque<int> dq;
+
+auto cmp = [&](int front, int back) {
+    // return ~~~~~;
+};
+
+for (int i = 0; i < v.size(); i++) {
+    while (!dq.empty() && !cmp(dq.back(), i)) dq.pop_back();
+    dq.push_back(i);
+    if (i - dq.front() + 1 > k) dq.pop_front();
+}
+```
 ### 시간복잡도 
 $O()$   
 
@@ -47,6 +61,7 @@ $O()$
 ### 문제
 [최솟값 찾기](https://www.acmicpc.net/problem/11003) - min   
 [상자 빌리기](https://www.acmicpc.net/problem/21982) - max   
+[작은 새](https://www.acmicpc.net/problem/10129) - cmp 복잡한 경우   
 
 ### 원리
 [작은 새](https://www.acmicpc.net/problem/10129)처럼 조건 복잡해졌을 때 안 헷갈리는 법.   
