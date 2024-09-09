@@ -521,15 +521,15 @@
         },
         "when": "editorTextFocus"
     },
-    {
-        "key": "shift+alt+r",
-        "command": "editor.action.insertSnippet",
-        "args": {
-            "langId": "cpp",
-            "name": "inRange"
-        },
-        "when": "editorTextFocus"
-    },
+    // {
+    //     "key": "shift+alt+r",
+    //     "command": "editor.action.insertSnippet",
+    //     "args": {
+    //         "langId": "cpp",
+    //         "name": "inRange"
+    //     },
+    //     "when": "editorTextFocus"
+    // },
 
     // 스니펫 (오토핫키 핫스트링으로 쓰던 것들)
     {
