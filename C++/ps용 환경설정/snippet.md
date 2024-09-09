@@ -13,7 +13,9 @@
 		"body": [
 			"#include <bits/stdc++.h>",
 			"using namespace std;",
+			"using ld = double;",
 			"using ll = long long;",
+			"using ull = unsigned long long;",
 			"using pii = pair<int, int>;",
 			"using pll = pair<ll, ll>;",
 			"using tii = tuple<int, int, int>;",
