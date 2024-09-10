@@ -226,6 +226,7 @@ mermaid stateDiagram-v2 사용
     * <span class="silver">[에라토스테네스의 체(S+)](/수학/에라토스테네스의%20체.md)</span>
     * <span class="">[Linear-sieve]</span>
     * <span class="silver">[분할정복 거듭제곱(S+)](/수학/빠른%20거듭제곱.md)</span>
+    * <span class="gold">[harmonic lemma(G+)](/수학/harmonic%20lemma.md)</span>
     * <span class="gold">[p-지수(G+)](/수학/p-지수.md)</span>
     * <span class="gold">[확장 유클리드 호제법, 모듈러 역원(G+)](/수학/ExtendedGCD,%20Modular%20Inverse.md)</span>
     * <span class="gold">[오일러 파이 함수(G+)](/수학/Phi%20Function.md)</span>
@@ -336,6 +337,8 @@ https://github.com/justiceHui/Unknown-To-Wellknown
 jin814   
 https://blog.naver.com/jinhan814/222439886998   
 https://blog.naver.com/PostView.naver?blogId=jinhan814&logNo=222689836982&parentCategoryNo=&categoryNo=6&viewDate=&isShowPopularPosts=false&from=postView   
+
+https://ahgus89.github.io/
 
 kcm1700   
 https://algospot.com/wiki/read/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98_%EB%8C%80%ED%9A%8C%EC%97%90_%ED%95%84%EC%9A%94%ED%95%9C_%EC%88%98%ED%95%99   
