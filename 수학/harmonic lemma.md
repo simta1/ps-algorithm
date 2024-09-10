@@ -80,4 +80,5 @@ ll harmonicSum(T n, T x) { // [x/1] + [x/2] + ... + [x/n]
 ```
 
 ### 참고링크
-https://ahgus89.github.io/algorithm/Harmonic-Lemma/
+https://ahgus89.github.io/algorithm/Harmonic-Lemma/   
+https://codeforces.com/blog/entry/53925   

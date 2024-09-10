@@ -201,7 +201,7 @@ mermaid stateDiagram-v2 사용
   * <span class="platinum">[등적등주 분할(P+)](/기하학/Equalizer.md)</span>
   * <span class="platinum">[가장 가까운 두 점(P+)](/기하학/Closest%20Two%20Points.md)</span>
   * <span class="">[최소 외접원(P+)]</span>
-  * <span class="">[볼록다각형 접선]</span>
+  * <span class="">[볼록다각형 접선]</span> <!-- https://www.acmicpc.net/problem/18190 --> <!-- https://youngyojun.github.io/contest/review/2020/02/15/iamcoder-2019-yearend-contest/ -->
   * <span class="">[불도저]</span>
   * <span class="">[반평면 교집합(D-)]</span>
   * <span class="">[KD tree]</span>
