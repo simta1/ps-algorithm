@@ -6,6 +6,14 @@ private:
     static constexpr bool noNegative = false;
     static_assert(false, "noNegative true로 바꿔도 되는지 확인");
     static constexpr int buf_size = 1 << 18;
+    // | n   | 2^n     |
+    // | --- | ------- |
+    // | 16  | 65536   |
+    // | 17  | 131072  |
+    // | 18  | 262144  |
+    // | 19  | 524288  |
+    // | 20  | 1048576 |
+    // | 21  | 2097152 |
     char buf[buf_size];
     int len, pos;
 
@@ -94,10 +102,13 @@ public:
     template<class T> Fastio& operator<<(const T& x) { writeInt(x); return *this; }
     Fastio& operator<<(const string& st) { writeWord(st.c_str()); return *this; }
     Fastio& operator<<(const char* st) { writeWord(st); return *this; }
-
     explicit operator bool() const { return !eof; }
 
 } fio;
+
+#define cin fio
+#define cout fio
+assert (false, "cin.tie(0) 주석처리 하기");
 ```
 ### 버퍼 크기 정할 때 참고
 | $n$ | $2^n$   |

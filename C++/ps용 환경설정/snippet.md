@@ -75,6 +75,14 @@
 			"\tstatic constexpr bool noNegative = false;",
 			"\tstatic_assert(false, \"noNegative true로 바꿔도 되는지 확인\");",
 			"\tstatic constexpr int buf_size = 1 << 18;",
+			"\t// | n   | 2^n     |",
+			"\t// | --- | ------- |",
+			"\t// | 16  | 65536   |",
+			"\t// | 17  | 131072  |",
+			"\t// | 18  | 262144  |",
+			"\t// | 19  | 524288  |",
+			"\t// | 20  | 1048576 |",
+			"\t// | 21  | 2097152 |",
 			"\tchar buf[buf_size];",
 			"\tint len, pos;",
 			"",
@@ -169,6 +177,7 @@
 			"",
 			"#define cin fio",
 			"#define cout fio",
+			"assert (false, \"cin.tie(0) 주석처리 하기\");",
 			""
 		],
 		"description": "fastio"
