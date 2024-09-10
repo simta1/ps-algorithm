@@ -313,6 +313,7 @@ mermaid stateDiagram-v2 사용
   * <span class="information">[ext](/C++/함수/ext.md)</span>
 * ### ps용 환경설정
   * <span class="">[cph]</span>
+  * <span class="information">[define](/C++/ps용%20환경설정/define.md)</span>
   * <span class="information">[snippet](/C++/ps용%20환경설정/snippet.md)</span>
   * <span class="">[debug, c_cpp_properties.json 설정]</span>
   <!-- * Pre-defined Compiler Macros
@@ -480,3 +481,4 @@ https://infossm.github.io/blog/
   %% %% 트라이 --> 아호_코라식
   %% %% ccw --> 볼록다각형_판정
   ```
+

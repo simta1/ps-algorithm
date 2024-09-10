@@ -321,6 +321,17 @@
 		],
 		"description": "cout vector"
 	},
+	
+	"cout vector2D": {
+		"prefix": "dkdnt2 ",
+		"body": [
+			"for (auto &r : ${1:v}) {",
+			"\tfor (auto &e : r) cout << e << \" \";",
+			"\tcout << \"\\n\";",
+			"}"
+		],
+		"description": "cout vector2D"
+	},
 
 	"for [0:n)": {
 		"prefix": "vhf ",
