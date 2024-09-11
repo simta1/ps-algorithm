@@ -56,12 +56,41 @@ template <typename T>
 inline ld getRectangleArea(const Point<T> &p1, const Point<T> &p2, const Point<T> &p3, const Point<T> &p4) {
     return getTriangleArea(p1, p2, p3) + getTriangleArea(p1, p4, p3);
 }
+
+ld heron(ld a, ld b, ld c) { // 헤론
+    ld s = ld(0.5) * (a + b + c);
+    return sqrt(s * (s - a) * (s - b) * (s - c));
+}
+
+ld brahmagupta(ld a, ld b, ld c, ld d) { // 브라마굽타, 사각형 네 꼭짓점이 공원점일 때
+    ld s = ld(0.5) * (a + b + c + d);
+    return sqrt((s - a) * (s - b) * (s - c) * (s - d));
+}
+
+ld getSegmentCircleArea(ld r, ld len) { // 활꼴 넓이, r : 반지름, len : 활꼴 길이
+    ld cosTheta = 1 - ld(len * len) / (2 * r * r);
+    ld sinTheta = sqrt(1 - cosTheta * cosTheta); // > 0
+    ld theta = acos(cosTheta);
+    return ld(0.5) * r * r * (theta - sinTheta);
+}
 ```
+
 ### isBetween
 ```cpp
 template <typename T>
 bool isBetween(Point<T> a, Point<T> b, Point<T> c) {
     return min(a.x, c.x) <= b.x && b.x <= max(a.x, c.x) && min(a.y, c.y) <= b.y && b.y <= max(a.y, c.y);
+}
+```
+
+### triangle
+```cpp
+ld getOtherSideLength(ld a, ld b, ld cosTheta) { // cos II
+    return sqrt(a * a + b * b - 2 * a * b * cosTheta);
+}
+
+ld getCosTheta(ld x, ld y, ld z) { // x 맞은편 각도
+    return (y * y + z * z - x * x) / 2 / y / z;
 }
 ```
 
