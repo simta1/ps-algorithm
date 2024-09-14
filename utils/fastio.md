@@ -68,13 +68,13 @@ private:
         return st;
     }
 
-    inline void writeChar(int x){
+    inline void writeChar(int x) {
         if (write_pos == buf_size) fwrite(write_buf, 1, buf_size, stdout), write_pos = 0;
         write_buf[write_pos++] = x;
     }
 
     template <class T>
-    void writeInt(T x, char end=0){
+    void writeInt(T x, char end=0) {
         if (x < 0) writeChar('-'), x = -x;
         char s[24]; int n = 0;
         while (x || !n) s[n++] = '0' + x % 10, x /= 10;
@@ -82,7 +82,7 @@ private:
         if (end) writeChar(end);
     }
 
-    inline void writeWord(const char *s){
+    inline void writeWord(const char *s) {
         while (*s) writeChar(*s++);
     }
 

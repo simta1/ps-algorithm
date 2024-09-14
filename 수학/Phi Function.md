@@ -27,6 +27,7 @@ ll phi(ll n) {
     return res;
 }
 ```
+<!-- TODO linear-sieve로 phi[1:n] 계산 https://ps.mjstudio.net/linear-sieve#%EC%9D%91%EC%9A%A9-1---%EC%86%8C%EC%9D%B8%EC%88%98%EB%B6%84%ED%95%B4 -->
 ### 시간복잡도 
 $O(\sqrt{N})$   
 폴라드 로 사용 시 $O(\sqrt[4]{N})$

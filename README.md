@@ -226,11 +226,11 @@ mermaid stateDiagram-v2 사용
     * <span class="silver">[분할정복 거듭제곱(S+)](/수학/빠른%20거듭제곱.md)</span>
     * <span class="silver">[에라토스테네스의 체(S+)](/수학/에라토스테네스의%20체.md)</span>
     * <span class="gold">[Linear-sieve(G-)](/ps-snippet/수학/Linear%20Sieve.md)</span>
-    * <span class="gold">[harmonic lemma(G-)](/수학/harmonic%20lemma.md)</span>
+    * <span class="gold">[harmonic lemma(G-)](/수학/Harmonic%20Lemma.md)</span>
     * <span class="gold">[p-지수(G+)](/수학/p-지수.md)</span>
     * <span class="gold">[확장 유클리드 호제법, 모듈러 역원(G+)](/수학/ExtendedGCD,%20Modular%20Inverse.md)</span>
     * <span class="gold">[오일러 파이 함수(G+)](/수학/Phi%20Function.md)</span>
-    * <span class="">[생성 함수(D-)]</span>
+    * <span class="">[생성 함수(D-)]</span> <!-- 카탈란 생성함수 O(nlogN) -->
     * <span class="platinum">[중국인의 나머지 정리(P-)](/수학/CRT.md)</span>
     * <span class="">[Garner's algorithm]</span>
     * <span class="platinum">[밀러-라빈 소수 판별법(P+)](/수학/MillerRabin.md)</span>
@@ -243,13 +243,13 @@ mermaid stateDiagram-v2 사용
     * <span class="">[FFT 나눗셈]</span>
     * <span class="">[FFT 응용]</span> <!-- https://hyperbolic.tistory.com/4 -->
     * <span class="">[online FFT]</span>
-    * <span class="">[포함 배제의 원리, 뫼비우스 함수, 뫼비우스 반전(D-)]</span>
-    * <span class="">[수론적 함수]</span>
-    <!-- 카탈란 생성함수 O(nlogN) -->
+    * <span class="">[뫼비우스 함수(D-)](/수학/뫼비우스.md)</span>
+    * <span class="">[뫼비우스 반전(D-)]</span>
+    * <span class="">[메르텐스 함수(D-)]</span>
+    <!-- * <span class="">[수론적 함수]</span> -->
     * <span class="diamond">[Tonelli-Shanks algorithm(D-)](/수학/Tonelli-Shanks.md)</span>
     * <span class="diamond">[Cornacchia's algorithm(D-)](/수학/Cornacchia.md)</span>
     * <span class="">[이산 제곱근]</span>
-    * <span class="">[메르텐스 함수]</span>
     * <span class="">[매트로이드(R-)]</span>
 * ### 게임 이론
   * <span class="">[스프라그-그런디]</span> <!-- (비트셋) -->
@@ -366,8 +366,11 @@ https://koosaga.com/242
 
 https://youngyojun.github.io/
 
-S/W 멤버십 기술 블로그
-https://infossm.github.io/blog/
+S/W 멤버십 기술 블로그   
+https://infossm.github.io/blog/   
+
+gratus907   
+https://gratus-blog.tistory.com/   
 
 <!-- # 알고리즘 순서 -->
   ```mermaid
@@ -481,4 +484,3 @@ https://infossm.github.io/blog/
   %% %% 트라이 --> 아호_코라식
   %% %% ccw --> 볼록다각형_판정
   ```
-
