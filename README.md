@@ -223,9 +223,9 @@ mermaid stateDiagram-v2 사용
   * #### 기타
     <!-- * <span class="">[고합성수 찾기]</span>
     * <span class="">[우월고합성수]</span> -->
-    * <span class="silver">[에라토스테네스의 체(S+)](/수학/에라토스테네스의%20체.md)</span>
-    * <span class="">[Linear-sieve]</span>
     * <span class="silver">[분할정복 거듭제곱(S+)](/수학/빠른%20거듭제곱.md)</span>
+    * <span class="silver">[에라토스테네스의 체(S+)](/수학/에라토스테네스의%20체.md)</span>
+    * <span class="gold">[Linear-sieve(G-)](/ps-snippet/수학/Linear%20Sieve.md)</span>
     * <span class="gold">[harmonic lemma(G-)](/수학/harmonic%20lemma.md)</span>
     * <span class="gold">[p-지수(G+)](/수학/p-지수.md)</span>
     * <span class="gold">[확장 유클리드 호제법, 모듈러 역원(G+)](/수학/ExtendedGCD,%20Modular%20Inverse.md)</span>
@@ -302,7 +302,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[수학관련]</span> <!-- atan, atan2 추가하기 -->
   * <span class="">[배열관련]</span> <!-- copy doubling -->
   * <span class="information">[permutation](/C++/함수/permutation.md)</span>
-  * <span class="information">[타입관련](/C++/함수/casting%20operators.md)</span>
+  * <span class="information">[casting](/C++/함수/casting%20operators.md)</span>
   * <span class="information">[GCC built-in](/C++/함수/builtin.md)</span>
   * <span class="information">[GCC 최적화](/C++/함수/GCC%20optimize.md)</span>
   * <span class="information">[문자관련](/C++/함수/char.md)</span>
