@@ -243,8 +243,8 @@ mermaid stateDiagram-v2 사용
     * <span class="">[FFT 나눗셈]</span>
     * <span class="">[FFT 응용]</span> <!-- https://hyperbolic.tistory.com/4 -->
     * <span class="">[online FFT]</span>
-    * <span class="">[뫼비우스 함수(D-)](/수학/뫼비우스.md)</span>
-    * <span class="">[뫼비우스 반전(D-)]</span>
+    * <span class="diamond">[뫼비우스 함수(D-)](/수학/뫼비우스.md)</span>
+    * <span class="diamond">[뫼비우스 반전(D-)](/수학/뫼비우스%20반전.md)</span>
     * <span class="">[메르텐스 함수(D-)]</span>
     <!-- * <span class="">[수론적 함수]</span> -->
     * <span class="diamond">[Tonelli-Shanks algorithm(D-)](/수학/Tonelli-Shanks.md)</span>
