@@ -136,11 +136,11 @@ mermaid stateDiagram-v2 사용
     * <span class="platinum">[최소 비용 최대 유량(P+)](/그래프%20이론/네트워크%20플로우/MCMF.md)</span>
     * <span class="platinum">[이분 매칭(P-)](/그래프%20이론/네트워크%20플로우/이분매칭.md)</span>
     * <span class="">[Circulation]</span> <!-- https://blog.naver.com/kks227/221426339344 -->
+    * <span class="">[L-R flow]</span>
     * <span class="">[이분 매칭: Hopcraft-Karp]</span>
     * <span class="">[Stoer-Wagner Algorithm]</span>
     * <span class="">[Gomory-Hu Tree]</span>
     * <span class="">[헝가리안]</span>
-    * <span class="">[L-R flow]</span>
   * #### 트리
     * <span class="platinum">[최소 공통 조상(P-)](/그래프%20이론/트리/LCA.md)</span>
     * <span class="platinum">[LCA를 통한 트리 쿼리(P-)](/그래프%20이론/트리/Query%20with%20LCA.md)</span>
@@ -225,7 +225,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[우월고합성수]</span> -->
     * <span class="silver">[분할정복 거듭제곱(S+)](/수학/빠른%20거듭제곱.md)</span>
     * <span class="silver">[에라토스테네스의 체(S+)](/수학/에라토스테네스의%20체.md)</span>
-    * <span class="gold">[Linear-sieve(G-)](/ps-snippet/수학/Linear%20Sieve.md)</span>
+    * <span class="gold">[Linear-sieve(G-)](/수학/Linear%20Sieve.md)</span>
     * <span class="gold">[harmonic lemma(G-)](/수학/Harmonic%20Lemma.md)</span>
     * <span class="gold">[p-지수(G+)](/수학/p-지수.md)</span>
     * <span class="gold">[확장 유클리드 호제법, 모듈러 역원(G+)](/수학/ExtendedGCD,%20Modular%20Inverse.md)</span>
@@ -245,11 +245,12 @@ mermaid stateDiagram-v2 사용
     * <span class="">[online FFT]</span>
     * <span class="diamond">[뫼비우스 함수(D-)](/수학/뫼비우스.md)</span>
     * <span class="diamond">[뫼비우스 반전(D-)](/수학/뫼비우스%20반전.md)</span>
-    * <span class="">[메르텐스 함수(D-)]</span>
-    <!-- * <span class="">[수론적 함수]</span> -->
+    * <span class="diamond">[메르텐스 함수(D+)](/수학/메르텐스.md)</span>
+    * <span class="">[메르텐스 트릭, Xudyh's sieve (D+)]</span>
+    * <span class="">[min_25's sieve(D+)]</span>
+    * <span class="">[이산 제곱근]</span>
     * <span class="diamond">[Tonelli-Shanks algorithm(D-)](/수학/Tonelli-Shanks.md)</span>
     * <span class="diamond">[Cornacchia's algorithm(D-)](/수학/Cornacchia.md)</span>
-    * <span class="">[이산 제곱근]</span>
     * <span class="">[매트로이드(R-)]</span>
 * ### 게임 이론
   * <span class="">[스프라그-그런디]</span> <!-- (비트셋) -->
@@ -372,6 +373,9 @@ https://infossm.github.io/blog/
 gratus907   
 https://gratus-blog.tistory.com/   
 
+정수론 시리즈   
+https://xy-plane.tistory.com/16
+
 <!-- # 알고리즘 순서 -->
   ```mermaid
   stateDiagram-v2
@@ -484,3 +488,4 @@ https://gratus-blog.tistory.com/
   %% %% 트라이 --> 아호_코라식
   %% %% ccw --> 볼록다각형_판정
   ```
+

@@ -14,6 +14,18 @@ ll harmonicSum(T n) { // [n/1] + [n/2] + ... + [n/n]
     return res;
 }
 ```
+### $\displaystyle\sum_{k=1}^{min(m, n)} \left\lfloor \dfrac{m}{k}  \right\rfloor\left\lfloor \dfrac{n}{k} \right\rfloor$ 계산
+```cpp
+template <typename T>
+ll harmonicSum(T n) { // [m/1][n/1] + [m/2][n/2] + ... + [m/min(m,n)][n/min(m,n)]
+    ll res = 0;
+    for (T i = 1, j; i <= n; i = j + 1) {
+        j = min(m / (m / i), n / (n / i));
+        res += (m / i) * (n / i) * (j - i + 1);
+    }
+    return res;
+}
+```
 ### $\displaystyle\sum_{k=1}^{n} \left\lfloor \dfrac{x}{k} \right\rfloor$ 계산
 ```cpp
 template <typename T>
@@ -57,7 +69,7 @@ $O(\sqrt N)$
 아래 코드에서 i <= sqrt(n)인 경우만 따로 계산한 게 위 코드
 ```cpp
 template <typename T>
-ll harmonicSum(T n) { // sum_{k=1}^{n} [n/k]
+ll harmonicSum(T n) { // [n/1] + [n/2] + ... + [n/n]
     ll res = 0;
     for (T i = 1, j; i <= n; i = j + 1) {
         j = n / (n / i);
@@ -82,3 +94,4 @@ ll harmonicSum(T n, T x) { // [x/1] + [x/2] + ... + [x/n]
 ### 참고링크
 https://ahgus89.github.io/algorithm/Harmonic-Lemma/   
 https://codeforces.com/blog/entry/53925   
+https://xy-plane.tistory.com/17   
