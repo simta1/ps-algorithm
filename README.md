@@ -227,6 +227,7 @@ mermaid stateDiagram-v2 사용
     * <span class="silver">[에라토스테네스의 체(S+)](/수학/에라토스테네스의%20체.md)</span>
     * <span class="gold">[Linear-sieve(G-)](/수학/Linear%20Sieve.md)</span>
     * <span class="gold">[harmonic lemma(G-)](/수학/Harmonic%20Lemma.md)</span>
+    * <span class="gold">[거듭제곱 피보나치(G+)](/ps-snippet/수학/피보나치.md)</span>
     * <span class="gold">[p-지수(G+)](/수학/p-지수.md)</span>
     * <span class="gold">[확장 유클리드 호제법, 모듈러 역원(G+)](/수학/ExtendedGCD,%20Modular%20Inverse.md)</span>
     * <span class="gold">[오일러 파이 함수(G+)](/수학/Phi%20Function.md)</span>
