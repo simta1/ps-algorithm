@@ -1,3 +1,4 @@
+[곱셈적 함수](/수학/곱셈적%20함수.md)   
 [카테고리](/README.md)
 ## Phi Function(Euler's Totient Function)
 ### $ O(\sqrt{N}) $ 소인수분해 사용

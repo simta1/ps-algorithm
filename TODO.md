@@ -1,4 +1,4 @@
-### 앞으로 추가할 알고리즘
+### 앞으로 해야될 거
   1. 라빈 카프
   1. hld
   1. centroid decomposition
@@ -13,6 +13,7 @@
   1. lineContainer
   1. 리-차오
   1. 선형대수학 카테고리 추가
+  1. infint, modint, baseint 구현체 추가
 
 ### 기존 문서에 추가할 거
   * [ ] 오일러 회로 -> 오일러 경로

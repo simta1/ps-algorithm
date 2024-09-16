@@ -188,6 +188,8 @@ mermaid stateDiagram-v2 사용
   * <span class="">[접미사 트리(R-)]</span>
 * ### 기하학
   <!-- * ~~<span class="">[반공간 교집합]</span>~~ -->
+  <!-- * <span class="">[circle 볼록 껍질(R)]</span> -->
+  <!-- https://www.acmicpc.net/problem/27957 -->
   * <span class="gold">[cross product, CCW, 직선-점 거리 계산(G-)](/기하학/Geometry%20Header.md)</span>
   * <span class="">[plane sweeping]</span>
   * <span class="gold">[볼록다각형 넓이(G-)](/기하학/Polygon%20Area.md)</span>
@@ -225,7 +227,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[우월고합성수]</span> -->
     * <span class="silver">[분할정복 거듭제곱(S+)](/수학/빠른%20거듭제곱.md)</span>
     * <span class="silver">[에라토스테네스의 체(S+)](/수학/에라토스테네스의%20체.md)</span>
-    * <span class="gold">[Linear-sieve(G-)](/수학/Linear%20Sieve.md)</span>
+    * <span class="gold">[Linear sieve 소수 판별(G-)](/수학/Linear%20Sieve.md)</span>
     * <span class="gold">[harmonic lemma(G-)](/수학/Harmonic%20Lemma.md)</span>
     * <span class="gold">[거듭제곱 피보나치(G+)](/ps-snippet/수학/피보나치.md)</span>
     * <span class="gold">[p-지수(G+)](/수학/p-지수.md)</span>
@@ -244,10 +246,11 @@ mermaid stateDiagram-v2 사용
     * <span class="">[FFT 나눗셈]</span>
     * <span class="">[FFT 응용]</span> <!-- https://hyperbolic.tistory.com/4 -->
     * <span class="">[online FFT]</span>
+    * <span class="diamond">[Linear sieve 곱셈적 함수(D-)](/수학/곱셈적%20함수.md)</span>
     * <span class="diamond">[뫼비우스 함수(D-)](/수학/뫼비우스.md)</span>
     * <span class="diamond">[뫼비우스 반전(D-)](/수학/뫼비우스%20반전.md)</span>
     * <span class="diamond">[메르텐스 함수(D+)](/수학/메르텐스.md)</span>
-    * <span class="">[메르텐스 트릭, Xudyh's sieve (D+)]</span>
+    * <span class="diamond">[메르텐스 트릭, Xudyh's sieve (D+)](/수학/Xudyh's%20sieve.md)</span>
     * <span class="">[min_25's sieve(D+)]</span>
     * <span class="">[이산 제곱근]</span>
     * <span class="diamond">[Tonelli-Shanks algorithm(D-)](/수학/Tonelli-Shanks.md)</span>
@@ -289,8 +292,9 @@ mermaid stateDiagram-v2 사용
   * <span class="additional">[고합성수 검색](/utils/Highly%20Composite%20Number.md)</span>
   * <span class="additional">[배열 연산](/utils/Array.md)</span>
   * <span class="additional">[가까운 2의 멱수 계산](/utils/Nearest%20Power2.md)</span>
-  * <span class="additional">[bigInt]()</span>
-  * <span class="additional">[baseInt]()</span> <!-- bigint랑 합쳐서 구현하는 게 나을 듯 -->
+  * <span class="">[modInt]</span>
+  * <span class="">[bigInt]</span>
+  * <span class="">[baseInt]</span> <!-- bigint랑 합쳐서 구현하는 게 나을 듯 -->
 # C++ 유용한 기능
 * ### 문법
   * <span class="">[range-based for loop]</span>

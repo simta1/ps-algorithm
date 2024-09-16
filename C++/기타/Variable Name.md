@@ -96,3 +96,7 @@ for (int i = facInv.size() - 1; i > 0; i--) facInv[i - 1] = facInv[i] * i % mod;
 
 ### sq, sqr
 제곱, 제곱근 저장
+
+### lpf, lpe
+`lpf` : linear sieve구현할 때 최소소인수 저장   
+`lpe` : 최소소인수의 지수 저장   
