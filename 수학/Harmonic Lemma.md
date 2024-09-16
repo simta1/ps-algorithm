@@ -29,17 +29,15 @@ ll harmonicSum(T n) { // [m/1][n/1] + [m/2][n/2] + ... + [m/min(m,n)][n/min(m,n)
 
 // code 2
 template <typename T>
-ll harmonicSum(T n) { // a/i, b/i, c/i, d/i 등등 여러개일 때
+ll harmonicSum(T n) { // [m/i - n/i]
     ll res = 0;
-    for (T i = 1, j; i <= n; i = j + 1) {
+    for (T i = 1, j; i <= max(m, n); i = j + 1) {
         j = min({
-            a / i ? a / (a / i) : 2e9,
-            b / i ? b / (b / i) : 2e9,
-            c / i ? c / (c / i) : 2e9,
-            d / i ? d / (d / i) : 2e9,
+            m / i ? m / (m / i) : 2e9,
+            n / i ? n / (n / i) : 2e9,
         });
         if (j == 2e9) break;
-        res += (b / i - a / i) * (d / i - c / i) * (j - i + 1);
+        res += (m / i - n / i) * (j - i + 1);
     }
     return res;
 }
