@@ -27,10 +27,42 @@ ll phi(ll n) {
     return res;
 }
 ```
-<!-- TODO linear-sieve로 phi[1:n] 계산 https://ps.mjstudio.net/linear-sieve#%EC%9D%91%EC%9A%A9-1---%EC%86%8C%EC%9D%B8%EC%88%98%EB%B6%84%ED%95%B4 -->
+### O(N) 함수 테이블 채우기
+```cpp
+vector<int> getPhi(int n) {
+    vector<int> phi(n + 1);
+    phi[1] = 1;
+
+    vector<int> primes, lpf(n + 1); // least prime factor
+    primes.reserve(n / log(n));
+
+    for (ll i = 2; i <= n; i++) {
+        if (!lpf[i]) {
+            lpf[i] = i;
+            primes.push_back(i);
+            phi[i] = i - 1;
+        }
+        for (auto p : primes) {
+            if (i * p > n) break;
+            lpf[i * p] = p;
+            if (i % p == 0) {
+                phi[i * p] = phi[i] * p;
+                break;
+            }
+            else {
+                phi[i * p] = phi[i] * phi[p];
+            }
+        }
+    }
+
+    return phi;
+}
+```
 ### 시간복잡도 
-$O(\sqrt{N})$   
-폴라드 로 사용 시 $O(\sqrt[4]{N})$
+`phi[n]` 하나 계산 $O(\sqrt{N})$   
+폴라드 로 사용 시 $O(\sqrt[4]{N})$   
+
+`phi[1:n]` 전부 계산 $O(N)$   
 
 ### 구현 주의사항
 n이 소수일 경우도 고려    
@@ -44,3 +76,7 @@ if (n > 1) res = res / n * (n - 1);
 
 ### 원리
 $phi(n) = n \times \prod_{i=1}^{}(\frac{p_i-1}{p_i})$
+
+### 참고링크
+곱셈적 함수 linear sieve   
+https://ps.mjstudio.net/linear-sieve#%EC%9D%91%EC%9A%A9-1---%EC%86%8C%EC%9D%B8%EC%88%98%EB%B6%84%ED%95%B4   
