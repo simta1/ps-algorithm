@@ -16,12 +16,30 @@ ll harmonicSum(T n) { // [n/1] + [n/2] + ... + [n/n]
 ```
 ### $\displaystyle\sum_{k=1}^{min(m, n)} \left\lfloor \dfrac{m}{k}  \right\rfloor\left\lfloor \dfrac{n}{k} \right\rfloor$ 계산
 ```cpp
+// code 1
 template <typename T>
 ll harmonicSum(T n) { // [m/1][n/1] + [m/2][n/2] + ... + [m/min(m,n)][n/min(m,n)]
     ll res = 0;
-    for (T i = 1, j; i <= n; i = j + 1) {
+    for (T i = 1, j; i <= min(m, n); i = j + 1) {
         j = min(m / (m / i), n / (n / i));
         res += (m / i) * (n / i) * (j - i + 1);
+    }
+    return res;
+}
+
+// code 2
+template <typename T>
+ll harmonicSum(T n) { // a/i, b/i, c/i, d/i 등등 여러개일 때
+    ll res = 0;
+    for (T i = 1, j; i <= n; i = j + 1) {
+        j = min({
+            a / i ? a / (a / i) : 2e9,
+            b / i ? b / (b / i) : 2e9,
+            c / i ? c / (c / i) : 2e9,
+            d / i ? d / (d / i) : 2e9,
+        });
+        if (j == 2e9) break;
+        res += (b / i - a / i) * (d / i - c / i) * (j - i + 1);
     }
     return res;
 }
