@@ -22,7 +22,7 @@ private:
         // return positiveMod();
     };
 
-    T pfs_f(ll x) { // f(x) = mu(x) * x
+    T pfs_f(ll x) { // f(x) = 
         if (x < pfsF.size()) return pfsF[x]; // precomputation
 
         if (mp.count(x)) return mp[x];
