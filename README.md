@@ -251,7 +251,7 @@ mermaid stateDiagram-v2 사용
     * <span class="diamond">[뫼비우스 반전(D-)](/수학/뫼비우스%20반전.md)</span>
     * <span class="diamond">[메르텐스 함수(D+)](/수학/메르텐스.md)</span>
     * <span class="diamond">[메르텐스 트릭, Xudyh's sieve (D+)](/수학/Xudyh's%20sieve.md)</span>
-    * <span class="">[min_25's sieve(D+)]</span>
+    * <span class="">[min_25's sieve]</span>
     * <span class="">[이산 제곱근]</span>
     * <span class="diamond">[Tonelli-Shanks algorithm(D-)](/수학/Tonelli-Shanks.md)</span>
     * <span class="diamond">[Cornacchia's algorithm(D-)](/수학/Cornacchia.md)</span>
@@ -284,6 +284,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[춤추는 링크, 크누스 X]</span>
   * <span class="">[임의 정밀도(epsilon값 계산)(A)]</span>
   * ~~<span class="">[담금질 기법]</span>~~
+  * <span class="">[Fracturing Search(D+)]</span> <!-- https://usaco.guide/adv/fracturing-search?lang=cpp --> <!-- https://www.acmicpc.net/problem/14166 -->
 * ### utils
   * <span class="additional">[fastio](/utils/fastio.md)</span>
   * <span class="additional">[문자열 압축](/utils/String%20Compression.md)</span>
