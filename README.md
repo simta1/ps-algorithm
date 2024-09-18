@@ -236,6 +236,8 @@ mermaid stateDiagram-v2 사용
     * <span class="">[생성 함수(D-)]</span> <!-- 카탈란 생성함수 O(nlogN) -->
     * <span class="platinum">[중국인의 나머지 정리(P-)](/수학/CRT.md)</span>
     * <span class="">[Garner's algorithm]</span>
+    * <span class="">[베르누이 수]</span>
+    * <span class="">[Stern-Brocot 트리]</span> <!-- https://blog.myungwoo.kr/126 -->
     * <span class="platinum">[밀러-라빈 소수 판별법(P+)](/수학/MillerRabin.md)</span>
     * <span class="platinum">[폴라드 로(P+)](/수학/PollardRho.md)</span>
     * <span class="">[이산 로그(P+)]</span>
@@ -381,6 +383,8 @@ https://gratus-blog.tistory.com/
 
 정수론 시리즈   
 https://xy-plane.tistory.com/16
+
+https://blog.myungwoo.kr/
 
 <!-- # 알고리즘 순서 -->
   ```mermaid
