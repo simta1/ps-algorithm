@@ -243,7 +243,8 @@ mermaid stateDiagram-v2 사용
     * <span class="">[이산 로그(P+)]</span>
     * <span class="platinum">[FFT(P+)](/수학/FFT.md)</span>
     * ~~<span class="">[카라츠바]</span>~~
-    * <span class="">[3진 FFT(D-)]</span>
+    * <span class="diamond">[Power tower(D-)](/수학/Power%20Tower.md)</span>
+    * <span class="">[3진 FFT(D-)]</span> <!-- https://www.acmicpc.net/problem/14882 -->
     * <span class="diamond">[NTT(D-)](/수학/NTT.md)</span>
     * <span class="">[FFT 나눗셈]</span>
     * <span class="">[FFT 응용]</span> <!-- https://hyperbolic.tistory.com/4 -->
