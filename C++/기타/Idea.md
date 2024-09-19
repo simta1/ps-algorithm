@@ -64,9 +64,11 @@ return (a < b && b < c) || (c < b && b < a);
 return (b > a) != (b > c);
 ```
 
-# 오차 없는 ceil
+# 오차 없는 ceil, round
+[C/C++에서의 몫 연산자 사용 팁](https://xy-plane.tistory.com/11)   
 ```cpp
 return (a + b - 1) / b; // ceil(double(a) / b)
+return (a + b / 2) / b; // round(double(a) / b)
 ```
 ceil(double(a) / b)로 계산할 경우 부동소수점 오차로 계산 잘못되는 경우 존재   
 
