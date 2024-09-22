@@ -69,10 +69,10 @@ $O(N^{2/3})$
 [비로소 서로소](https://www.acmicpc.net/problem/32240)
 
 ### 원리
-$g(1)S_f(N) = S_{f*g}(N) - \displaystyle\sum_{d=2}^{N} g(d) S_f \left(\left\lfloor \dfrac{N}{d} \right\rfloor \right) $   
+$g(1)S_f(N) = S_{f \ast g}(N) - \displaystyle\sum_{d=2}^{N} g(d) S_f \left(\left\lfloor \dfrac{N}{d} \right\rfloor \right) $   
 증명은 [메르텐스 함수](/수학/메르텐스.md) 원리 참고   
 
-$S_f(N) = \dfrac {S_{f*g}(N) - \displaystyle\sum_{d=2}^{N} g(d) S_f \left(\left\lfloor \dfrac{N}{d} \right\rfloor \right) }{g(1)} $   
+$S_f(N) = \dfrac {S_{f \ast g}(N) - \displaystyle\sum_{d=2}^{N} g(d) S_f \left(\left\lfloor \dfrac{N}{d} \right\rfloor \right) }{g(1)} $   
 
 
 ### 참고링크

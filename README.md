@@ -170,7 +170,6 @@ mermaid stateDiagram-v2 사용
   * <span class="">[크누스 최적화]</span>
   * <span class="">[단조큐 최적화]</span>
   * <span class="">[Slope trick(D-)]</span>
-  * <span class="">[키타마사(D-)]</span>
   * <span class="">[벌레캠프-매시(D+)]</span>
   <!-- * <span class="">[aliens 트릭(D-)]</span> -->
 * ### 문자열
@@ -211,13 +210,15 @@ mermaid stateDiagram-v2 사용
   * <span class="">[델로네 삼각분할(R-)]</span>
   * <span class="">[보로노이 다이어그램(R-)]</span>
 * ### [수학](/수학/개념%20정리.md)
-  * #### 조합론
+  * #### 조합론, 수열
     * <span class="silver">[nCr, 파스칼의 삼각형(S+)](/수학/조합론/Combination(DP).md)</span> <!-- https://justicehui.github.io/medium-algorithm/2024/02/10/combinatorics/ -->
     * <span class="">[교란수]</span>
     * <span class="">[자연수 분할](/수학/조합론/자연수%20분할.md)</span> <!-- P(n, k) -->
     * <span class="platinum">[집합 분할(P-)](/수학/조합론/집합%20분할.md)</span>
     * <span class="">[nCr mod 소수, 뤼카(P-)]</span>
     * <span class="">[nCr mod 합성수(D-)]</span>
+    * <span class="">[생성 함수(D-)]</span> <!-- 카탈란 생성함수 O(nlogN) -->
+    * <span class="">[키타마사(D-)]</span>
   * #### 선형대수학
     * <span class="silver">[행렬(S-)](/수학/선형대수학/Matrix.md)</span>
     * <span class="">[가우스 소거법(P-)]</span>
@@ -233,7 +234,6 @@ mermaid stateDiagram-v2 사용
     * <span class="gold">[p-지수(G+)](/수학/p-지수.md)</span>
     * <span class="gold">[확장 유클리드 호제법, 모듈러 역원(G+)](/수학/ExtendedGCD,%20Modular%20Inverse.md)</span>
     * <span class="gold">[오일러 파이 함수(G+)](/수학/Phi%20Function.md)</span>
-    * <span class="">[생성 함수(D-)]</span> <!-- 카탈란 생성함수 O(nlogN) -->
     * <span class="platinum">[중국인의 나머지 정리(P-)](/수학/CRT.md)</span>
     * <span class="">[Garner's algorithm]</span>
     * <span class="">[베르누이 수]</span>
@@ -247,6 +247,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[3진 FFT(D-)]</span> <!-- https://www.acmicpc.net/problem/14882 -->
     * <span class="diamond">[NTT(D-)](/수학/NTT.md)</span>
     * <span class="">[FFT 나눗셈]</span>
+    * <span class="">[xor convolution]</span>
     * <span class="">[FFT 응용]</span> <!-- https://hyperbolic.tistory.com/4 -->
     * <span class="">[online FFT]</span>
     * <span class="diamond">[Linear sieve 곱셈적 함수(D-)](/수학/곱셈적%20함수.md)</span>
