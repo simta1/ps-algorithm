@@ -212,6 +212,7 @@ mermaid stateDiagram-v2 사용
 * ### [수학](/수학/개념%20정리.md)
   * #### 조합론, 수열
     * <span class="silver">[nCr, 파스칼의 삼각형(S+)](/수학/조합론/Combination(DP).md)</span> <!-- https://justicehui.github.io/medium-algorithm/2024/02/10/combinatorics/ -->
+    * <span class="gold">[거듭제곱 피보나치(G+)](/수학/조합론/피보나치.md)</span>
     * <span class="">[교란수]</span>
     * <span class="">[자연수 분할](/수학/조합론/자연수%20분할.md)</span> <!-- P(n, k) -->
     * <span class="platinum">[집합 분할(P-)](/수학/조합론/집합%20분할.md)</span>
@@ -230,7 +231,6 @@ mermaid stateDiagram-v2 사용
     * <span class="silver">[에라토스테네스의 체(S+)](/수학/에라토스테네스의%20체.md)</span>
     * <span class="gold">[Linear sieve 소수 판별(G-)](/수학/Linear%20Sieve.md)</span>
     * <span class="gold">[harmonic lemma(G-)](/수학/Harmonic%20Lemma.md)</span>
-    * <span class="gold">[거듭제곱 피보나치(G+)](/ps-snippet/수학/피보나치.md)</span>
     * <span class="gold">[p-지수(G+)](/수학/p-지수.md)</span>
     * <span class="gold">[확장 유클리드 호제법, 모듈러 역원(G+)](/수학/ExtendedGCD,%20Modular%20Inverse.md)</span>
     * <span class="gold">[오일러 파이 함수(G+)](/수학/Phi%20Function.md)</span>
