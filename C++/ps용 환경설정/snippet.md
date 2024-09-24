@@ -259,6 +259,15 @@
 		],
 		"description": "vector v(n, vector<int>(m))"
 	},
+	
+	"cin sort": {
+		"prefix": "SNIP sort",
+		"body": [
+			"sort(${1:v}.begin(), $1.end()$0);",
+			""
+		],
+		"description": "sort(v.begin(), v.end())"
+	},
 
 	"cin x": {
 		"prefix": "SNIP cin_x",
@@ -269,6 +278,17 @@
 			""
 		],
 		"description": "int x"
+	},
+
+	"cin xy": {
+		"prefix": "SNIP cin_xy",
+		"body": [
+			"int x, y;",
+			"cin >> x >> y;",
+			"",
+			""
+		],
+		"description": "int x, y"
 	},
 
 	"cin c": {
@@ -307,7 +327,8 @@
 		"prefix": "SNIP inRange",
 		"body": [
 			// "auto inRange = [&](int ${1:i}, int ${2:j}) { return $1 >= 0 && $1 < ${3:n} && $2 >= 0 && $2 < ${4:m}; };"
-			"auto inRange = [&](int i, int j) { return i >= 0 && i < ${1:n} && j >= 0 && j < ${2:m}; };"
+			"auto inRange = [&](int i, int j) { return i >= 0 && i < ${1:n} && j >= 0 && j < ${2:m}; };",
+			""
 		],
 		"description": "inRange lambda function"
 	},
@@ -321,7 +342,7 @@
 		],
 		"description": "cout vector"
 	},
-	
+
 	"cout vector2D": {
 		"prefix": "dkdnt2 ",
 		"body": [
@@ -508,11 +529,29 @@
         "when": "editorTextFocus"
     },
     {
+        "key": "shift+alt+o",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "langId": "cpp",
+            "name": "cin sort"
+        },
+        "when": "editorTextFocus"
+    },
+    {
         "key": "shift+alt+x",
         "command": "editor.action.insertSnippet",
         "args": {
             "langId": "cpp",
             "name": "cin x"
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+y",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "langId": "cpp",
+            "name": "cin xy"
         },
         "when": "editorTextFocus"
     },
@@ -583,6 +622,6 @@
         "key": "shift+space",
         "command": "jumpToPrevSnippetPlaceholder",
         "when": "editorTextFocus && hasPrevTabstop"
-    }
+    },
 ]
 ```
