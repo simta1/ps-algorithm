@@ -252,8 +252,8 @@
 	"cin vec2D": {
 		"prefix": "SNIP cin_v2",
 		"body": [
-			"vector v(${1:n}, vector<int>(${2:m}));",
-			"for (auto &r : v) for (auto &e : r) cin >> e;",
+			"vector ${1:v}(${2:n}, vector<int>(${3:m}));",
+			"for (auto &r : $1) for (auto &e : r) cin >> e;",
 			"",
 			""
 		],
