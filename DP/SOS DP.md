@@ -1,5 +1,6 @@
 [카테고리](/README.md)
 # 아직 테스트 안 해본 코드임
+<!-- TODO -->
 ### SOS DP (2D 구현)
 ```cpp
 vector dp(1 << n, vector<T>(n + 1));
