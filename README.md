@@ -78,10 +78,10 @@ mermaid stateDiagram-v2 사용
     * <span class="">[링크/컷 트리(D+)]</span>
     * <span class="">[레드-블랙 트리]</span>
   * #### 기타
-    * <span class="gold">[분리 집합(G-)](/자료구조/기타/Disjoint%20Set.md)</span>
+    * <span class="gold">[분리 집합(G-)](/자료구조/기타/DSU.md)</span>
     * <span class="">[유니온 파인드 롤백]</span>
     * <span class="gold">[희소 배열(G+)](/자료구조/기타/희소배열.md)</span>
-    * <span class="">[상대좌표 유니온 파인드(P+)]</span>
+    * <span class="platinum">[유니온 파인드 with Potential(P+)](/자료구조/기타/DSU%20potential.md)</span>
     * <span class="platinum">[XOR 트라이(P-)](/자료구조/기타/XOR%20Trie.md)</span>
     * <span class="">[로프]</span>
     * <span class="">[데카르트 트리]</span>
@@ -388,6 +388,8 @@ https://gratus-blog.tistory.com/
 https://xy-plane.tistory.com/16
 
 https://blog.myungwoo.kr/
+
+https://nyaannyaan.github.io/library/data-structure/union-find-with-potential.hpp.html
 
 <!-- # 알고리즘 순서 -->
   ```mermaid
