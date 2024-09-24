@@ -1,4 +1,79 @@
 [카테고리](/README.md)
+[카테고리](/README.md)
+## Bitmask DP
+### 000...0 -> popcount()가 1개인 비트 -> popcount()가 2개인 비트 -> ... -> 111...1로 전파될 때
+---
+### 직관적인 기본코드 $O(N^2 2^N)$
+```cpp
+vector<ld> dp(1 << n, INVALID_VALUE);
+dp[0] = INIT_VALUE;
+
+for (int cnt = 0; cnt < n; cnt++) {
+    for (int bit = 0; bit < (1 << n); bit++) if (__builtin_popcount(bit) == cnt) {
+        for (int i = 0; i < n; i++) if (!(bit & 1 << i)) {
+            dp[bit | 1 << i] = best(dp[bit | 1 << i], func(dp[bit], i, cnt));
+        }
+    }
+}
+
+cout << dp.back();
+```
+best()는 min()이나 max(), add() 등의 함수. 일단 일반화를 위해 best라 표시했음   
+popcount()의 개수 cnt에 대해 for문으로 순회.   
+시간복잡도 최악.   
+
+### 기본코드 $O(N 2^N)$
+```cpp
+vector<ld> dp(1 << n, INVALID_VALUE);
+dp[0] = INIT_VALUE;
+
+for (int bit = 0; bit < (1 << n); bit++) {
+    int cnt = __builtin_popcount(bit);
+    for (int i = 0; i < n; i++) if (!(bit & 1 << i)) {
+        dp[bit | 1 << i] = best(dp[bit | 1 << i], func(dp[bit], i, cnt));
+    }
+}
+
+cout << dp.back();
+```
+그냥 0부터 $2^n$까지 순차적으로 봐도 됨   
+임의의 i에 대해서 i의 부분집합에 해당하는 모든 비트들은 어차피 0~(i-1)을 순회하는 동안 확인되기 때문에 순서가 꼬이지 않음   
+
+### 최적화코드 $O(N 2^{N-1})$
+```cpp
+vector<ld> dp(1 << n, INVALID_VALUE);
+dp[0] = INIT_VALUE;
+
+int endBit = ~-(1 << n);
+for (int bit = 0; bit < (1 << n); bit++) {
+    int cnt = __builtin_popcount(bit);
+    int zeroBitFinder = bit;
+    while (zeroBitFinder != endBit) {
+        int newBit = ~zeroBitFinder & (zeroBitFinder + 1);
+        int i = 31 - __builtin_clz(newBit);
+        dp[bit | newBit] = best(dp[bit | newBit], func(dp[bit], i, cnt));
+        zeroBitFinder |= (zeroBitFinder + 1);
+    }
+}
+
+cout << dp.back();
+```
+gcc builtin `__builtin_popcount`와 `__builtin_clz`는 $O(1)$이므로 굉장히 빠름
+
+기본 코드에선 bit에서 0비트의 위치를 찾기 위해 i=0~n을 전부 순회하며 확인했지만 애초에 0비트만 순회하도록 최적화 가능   
+
+`~x & (x + 1)`는 x의 최우측 0비트를 찾는 비트트릭   
+펜윅트리에서 최우측 1비트를 찾을 때 쓰는 `x & -x`에 `x` 대신 `x+1`을 대입한 것으로 이해하면 편함
+
+결과적으로 popcount가 k개인 nCk개의 비트들에 대해 각각 k개씩의 불필요한 순회를 줄일 수 있으므로 총 $\displaystyle\sum_{k=0}^{n-1}k\binom{n}{k} = n 2^{n-1} - 1$ 번의 연산을 이득봄.   
+기본코드의 연산횟수가 $O(N 2^N)$이므로 시간을 2배 단축 가능   
+
+### 시간복잡도
+$O(N * 2^N)$   
+
+### 문제
+[007](https://www.acmicpc.net/problem/3056)   
+
 ## 예시문제 : [할 일 정하기 1](https://www.acmicpc.net/problem/1311)
 ### sol 1) for문 사용
 ```cpp
