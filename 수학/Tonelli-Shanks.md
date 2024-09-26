@@ -1,6 +1,7 @@
 [Cornacchia](/수학/Cornacchia.md)   
 [카테고리](/README.md)
-## 이산 제곱근 (Tonelli-Shanks)
+## 이산 제곱근
+### Tonelli-Shanks
 ```cpp
 ll multiply(ll a, ll b, ll mod) {
     return a * b % mod;
@@ -59,14 +60,52 @@ ll tonelliShanks(ll n, ll p) { // x^2 === n (mod p) // 해가 없다면 -1 리�
     return R;
 }
 ```
+### 이차합동식
+```cpp
+pll quadraticCongruence(ll a, ll b, ll p) { // x^2 + ax + b === 0 (mod p) // 해가 없다면 {-1, -1} 리턴
+    assert (a >= 0 && a < p);
+    assert (b >= 0 && b < p);
+    
+    if (p == 2) {
+        if (a && b) return {-1, -1};
+        if (a && !b) return {0, 1};
+        if (!a && b) return {1, 1};
+        return {0, 0};
+    }
+    else {
+        ll c = (a + (a & 1) * p) >> 1;
+        ll d = (c * c % p - b + p) % p;
+        ll sqr = tonelliShanks(d, p);
+        if (!~sqr) return {-1, -1};
+        return {(p - c + p - sqr) % p, (p - c + sqr) % p};
+    }
+}
+```
 ### 시간복잡도 
 $O(log^2{p})$   
 
-### 문제
-[제곱수의 합 2 (More Huge)](https://www.acmicpc.net/problem/17646)
+### 구현 주의사항
+원래 tonelliShanks가 p=2일 땐 작동하지 않기에 (`rand() % (p - 2)` 코드 때문) 이차합동식을 풀 때 p=2인 경우를 따로 예외처리했음   
 
-### 원리
-작성 예정
+이제는 tonelliShanks내부에서 p=2일 때를 처리하도록 해서 상관없긴 함   
+
+### 사용설명
+p는 소수   
+
+n이 mod p에 대한 2차잉여가 아닐 경우 -1 리턴   
+리턴된 `R` 말고도 `(p - R) % p`또한 해가 됨
+
+### 문제
+[Factorization](https://www.acmicpc.net/problem/17603) - 이차합동식   
+[제곱수의 합 2 (More Huge)](https://www.acmicpc.net/problem/17646)   
+
+### 원리 (이차합동식)
+$\left( x + \dfrac{a}{2} \right)^2 \equiv -b + \left( \dfrac{a}{2} \right)^2 \pmod{p}$   
+
+$c := \dfrac{a}{2} \pmod{p}$   
+
+$d := c^2 - b \pmod{p}$   
+
 
 ### 참고링크
 https://en.wikipedia.org/wiki/Tonelli%E2%80%93Shanks_algorithm   
