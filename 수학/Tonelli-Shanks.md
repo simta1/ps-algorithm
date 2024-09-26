@@ -1,9 +1,30 @@
 [Cornacchia](/수학/Cornacchia.md)   
 [카테고리](/README.md)
-## Tonelli-Shanks
+## 이산 제곱근 (Tonelli-Shanks)
 ```cpp
-ll tonelliShanks(ll n, ll p) { // x^2 === n (mod p)
-    n = (n + p) % p;
+ll multiply(ll a, ll b, ll mod) {
+    return a * b % mod;
+    // return __int128(a) * b % mod;
+}
+
+ll power(ll a, ll n, ll mod) { //a ^ n % mod
+    ll res = 1;
+
+    while (n) {
+        if (n & 1) res = multiply(res, a, mod);
+        a = multiply(a, a, mod);
+        n >>= 1;
+    }
+
+    return res;
+}
+
+ll tonelliShanks(ll n, ll p) { // x^2 === n (mod p) // 해가 없다면 -1 리턴
+    assert (n >= 0 && n < p);
+    
+    if (!n) return 0;
+    if (p == 2) return n;
+    if (power(n, (p - 1) / 2, p) != 1) return -1;
 
     ll Q = p - 1, S = 0;
     while (~Q & 1) {
@@ -12,30 +33,30 @@ ll tonelliShanks(ll n, ll p) { // x^2 === n (mod p)
     }
 
     ll z;
-    do {z = rand() % (p - 2) + 2;} while (MillerRabin::power(z, (p - 1) / 2, p) == 1);
+    do {z = rand() % (p - 2) + 2;} while (power(z, (p - 1) / 2, p) == 1);
 
     ll M = S;
-    ll c = MillerRabin::power(z, Q, p);
-    ll t = MillerRabin::power(n, Q, p);
-    ll R = MillerRabin::power(n, (Q + 1) / 2, p);
+    ll c = power(z, Q, p);
+    ll t = power(n, Q, p);
+    ll R = power(n, (Q + 1) / 2, p);
 
-    while (t != 0 && t != 1) {
+    while (t != 1) {
         ll i = [&]() {
             ll tmp = t;
             for (int i = 1; i < M; i++) {
-                tmp = MillerRabin::power(tmp, 2, p);
+                tmp = power(tmp, 2, p);
                 if (tmp == 1) return i;
             }
         }();
 
-        ll b = MillerRabin::power(c, MillerRabin::power(2, M - i - 1, p - 1), p); // c ^ (2 ^ (M - i - 1)), phi(p) = p - 1
+        ll b = power(c, power(2, M - i - 1, p - 1), p); // c ^ (2 ^ (M - i - 1)), phi(p) = p - 1
         M = i;
         c = multiply(b, b, p);
         t = multiply(t, c, p);
         R = multiply(R, b, p);
     }
     
-    return t == 1 ? R : 0;
+    return R;
 }
 ```
 ### 시간복잡도 
