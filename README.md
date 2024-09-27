@@ -277,6 +277,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[모노톤 스택]</span>
   * <span class="">[모노톤 큐]</span>
   * <span class="">[누적합, imos]</span>
+  * <span class="">[Gray code](/기타/Gray%20code.md)</span>
   * <span class="gold">[후위 표기식(G+)](/기타/Postfix%20Notation.md)</span>
   * <span class="">[중간에서 만나기(G+)]</span>
   * <span class="platinum">[반전수(P-)](/기타/반전수.md)</span>
