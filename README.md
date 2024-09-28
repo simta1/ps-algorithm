@@ -142,6 +142,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[일반 매칭(D+)]</span>
     * <span class="">[Stoer-Wagner Algorithm]</span>
     * <span class="">[Gomory-Hu Tree]</span>
+    <!-- * <span class="">[홀의 결혼 정리]</span> -->
   * #### 트리
     * <span class="platinum">[최소 공통 조상(P-)](/그래프%20이론/트리/LCA.md)</span>
     * <span class="platinum">[LCA를 통한 트리 쿼리(P-)](/그래프%20이론/트리/Query%20with%20LCA.md)</span>
@@ -292,6 +293,8 @@ mermaid stateDiagram-v2 사용
   * <span class="">[임의 정밀도(epsilon값 계산)(A)]</span>
   * ~~<span class="">[담금질 기법]</span>~~
   * <span class="">[Fracturing Search(D+)]</span> <!-- https://usaco.guide/adv/fracturing-search?lang=cpp --> <!-- https://www.acmicpc.net/problem/14166 -->
+  * <span class="">[선형 계획법]</span>
+  * <span class="">[쌍대성]</span>
 * ### utils
   * <span class="additional">[fastio](/utils/fastio.md)</span>
   * <span class="additional">[bit](/utils/Bit.md)</span>
