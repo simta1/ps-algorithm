@@ -294,6 +294,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[Fracturing Search(D+)]</span> <!-- https://usaco.guide/adv/fracturing-search?lang=cpp --> <!-- https://www.acmicpc.net/problem/14166 -->
 * ### utils
   * <span class="additional">[fastio](/utils/fastio.md)</span>
+  * <span class="additional">[bit](/utils/Bit.md)</span>
   * <span class="additional">[문자열 압축](/utils/String%20Compression.md)</span>
   * <span class="additional">[개수 계산](/utils/Counter.md)</span>
   * <span class="additional">[랜덤](/utils/Random.md)</span>
