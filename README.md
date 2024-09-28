@@ -92,7 +92,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[SPQR tree]</span>
     * <span class="">[treap]</span>
     * <span class="">[wavelet 트리(P+)]</span> -->
-* ### 그래프 이론
+* ### [그래프 이론](/그래프%20이론/개념%20정리.md)
   * #### 그래프
     <!-- https://ps.mjstudio.net/tip-bfs-fill -->
     <!-- * <span class="">[온라인 동적 연결성 판정]</span> -->
@@ -125,7 +125,6 @@ mermaid stateDiagram-v2 사용
     * <span class="">[오프라인 동적 연결성 판정]</span>
     * <span class="diamond">[유향 MST(D+)](/그래프%20이론/그래프/DMST.md)</span>
     * <span class="">[현 그래프(D+)]</span>
-    * <span class="">[일반 매칭(D+)]</span>
     * <span class="ruby">[offline incremental SCC(R-)](/그래프%20이론/그래프/Offline%20Incremental%20SCC.md)</span>
     <!-- * <span class="">[현 그래프 판정]</span> -->
     <!-- * <span class="">[Perfect Elimination Ordering]</span> -->
@@ -136,12 +135,13 @@ mermaid stateDiagram-v2 사용
     * ~~<span class="">[최대유량: Push-Relabel (P-)]</span>~~
     * <span class="platinum">[최소 비용 최대 유량(P+)](/그래프%20이론/네트워크%20플로우/MCMF.md)</span>
     * <span class="platinum">[이분 매칭(P-)](/그래프%20이론/네트워크%20플로우/이분매칭.md)</span>
-    * <span class="">[Circulation]</span> <!-- https://blog.naver.com/kks227/221426339344 -->
+    * <span class="">[Circulation(D-)]</span> <!-- https://blog.naver.com/kks227/221426339344 -->
     * <span class="">[L-R flow]</span>
     * <span class="">[이분 매칭: Hopcraft-Karp]</span>
+    * <span class="">[헝가리안 (D-)]</span>
+    * <span class="">[일반 매칭(D+)]</span>
     * <span class="">[Stoer-Wagner Algorithm]</span>
     * <span class="">[Gomory-Hu Tree]</span>
-    * <span class="">[헝가리안]</span>
   * #### 트리
     * <span class="platinum">[최소 공통 조상(P-)](/그래프%20이론/트리/LCA.md)</span>
     * <span class="platinum">[LCA를 통한 트리 쿼리(P-)](/그래프%20이론/트리/Query%20with%20LCA.md)</span>
@@ -264,7 +264,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[매트로이드(R-)]</span>
 * ### 게임 이론
   * <span class="">[스프라그-그런디]</span> <!-- (비트셋) -->
-  * <span class="">[hackenbush]</span>
+  * <span class="">[hackenbush]</span> <!-- https://en.wikipedia.org/wiki/Hackenbush -->
 * ### 기타
   * <span class="additional">[비트 트릭(A)](/기타/Bit%20Trick.md)</span>
   * <span class="">[계수 정렬]</span>
