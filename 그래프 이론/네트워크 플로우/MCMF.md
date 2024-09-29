@@ -158,7 +158,7 @@ spfa()에서 cur=u일 때 u->v실제 간선과 v->u의 역간선(유령 간선)�
 또한 유령간선의 가중치는 실제간선과 부호가 다르므로 존재하지도 않는 음수사이클을 만들게 될 수가 있고, 이 경우 SPFA에서 dist가 계속 갱신되며 무한 루프가 됨   
 최대 유량도 같은 방식으로 구현했지만 문제되지 않은 이유는 parent배열을 통해 방문체크를 하며 단순히 bfs를 하기 때문에 무한 루프 돌 일이 없기 때문   
 해결하려면 adj에서 간선을 저장할 때 용량의 정보도 같이 저장하면 됨. 유령 간선이라면 애초에 adj[cur][i].capacity = 0으로 두고, 역방향의 실제 간선이 흘렀을 때 capacity의 값을 양수로 바꾸도록 하여 해결 가능.   
-수정된 코드에서는 Edge 구조체를 만들어 vector<vector<Edge> >로 사용했음.    
+수정된 코드에서는 Edge 구조체를 만들어 `vector<vector<Edge> >`로 사용했음.    
 ```cpp
 template <typename C, typename F> // C : cost, F : flow
 class Graph {

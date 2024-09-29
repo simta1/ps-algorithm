@@ -78,12 +78,13 @@ mermaid stateDiagram-v2 사용
     * <span class="">[링크/컷 트리(D+)]</span>
     * <span class="">[레드-블랙 트리]</span>
   * #### 기타
-    * <span class="gold">[분리 집합(G-)](/자료구조/기타/DSU.md)</span>
+    * <span class="gold">[유니온 파인드(G-)](/자료구조/기타/DSU.md)</span>
     * <span class="">[유니온 파인드 롤백]</span>
     * <span class="gold">[희소 배열(G+)](/자료구조/기타/희소배열.md)</span>
-    * <span class="platinum">[유니온 파인드 with Potential(P+)](/자료구조/기타/DSU%20potential.md)</span>
     * <span class="platinum">[XOR 트라이(P-)](/자료구조/기타/XOR%20Trie.md)</span>
+    * <span class="platinum">[유니온 파인드 with Potential(P+)](/자료구조/기타/DSU%20potential.md)</span>
     * <span class="">[로프]</span>
+    * <span class="">[pbds]</span>
     * <span class="">[데카르트 트리]</span>
     * <span class="">[Line container]</span>
     * <span class="">[리-차오 트리(D-)]</span>
@@ -98,7 +99,7 @@ mermaid stateDiagram-v2 사용
     <!-- * <span class="">[온라인 동적 연결성 판정]</span> -->
     * <span class="">[flood fill]</span>
     * <span class="">[0-1 bfs(G-)]</span>
-    * <span class="gold">[이분 그래프 판정(G-)](/그래프%20이론/그래프/이분그래프%20판정.md)</span>
+    * <span class="gold">[이분그래프 판정(G-)](/그래프%20이론/그래프/이분그래프%20판정.md)</span>
     * <span class="gold">[다익스트라(G-)](/그래프%20이론/그래프/Dijkstra.md)</span>
     * ~~<span class="">[A*]</span>~~
     * <span class="gold">[벨만-포드(G-)](/그래프%20이론/그래프/Bellman-Ford.md)</span>
@@ -295,6 +296,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[Fracturing Search(D+)]</span> <!-- https://usaco.guide/adv/fracturing-search?lang=cpp --> <!-- https://www.acmicpc.net/problem/14166 -->
   * <span class="">[선형 계획법]</span>
   * <span class="">[쌍대성]</span>
+  * <span class="">[Simplex algorithm]</span>
 * ### utils
   * <span class="additional">[fastio](/utils/fastio.md)</span>
   * <span class="additional">[bit](/utils/Bit.md)</span>
