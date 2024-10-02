@@ -94,6 +94,31 @@ public:
     }
 };
 ```
+### 정점분할
+```cpp
+template <bool directed, typename F>
+class VertexSplitedGraph {
+private:
+    Graph<true, F> graph;
+    
+    int in(int a) { return 2 * a - 1; } // 1-based
+    int out(int a) { return 2 * a; } // 1-based
+
+public:
+    VertexSplitedGraph(int n) : graph(2 * n) {
+        for (int i = 1; i <= n; i++) graph.addEdge(in(i), out(i), 1); // 각 정점 지날 수 있는 횟수 // k번까지 지날 수 있다면 1 대신 k 사용
+    }
+
+    void addEdge(int a, int b, F cap = 1) { // 1-based
+        graph.addEdge(out(a), in(b), cap);
+        if constexpr (!directed) graph.addEdge(out(b), in(a), cap);
+    }
+
+    F maxFlow(int s, int e) { // 1-based
+        return graph.maxFlow(out(s), in(e));
+    }
+};
+```
 ### 시간복잡도 
 $O(V^2 E)$   
 
@@ -101,20 +126,21 @@ $O(V^2 E)$
 >`vector<vector<F>>`로 cap, flow를 2차원 배열에 저장하는 건 가끔 n 엄청 큰 문제에서 메모리 초과날 때 있어서 별로임   
 그렇다고 map 쓰기엔 꽤 느려서 그냥 Edge구조체에 같이 저장하는 게 가장 나은 듯 함   
 
-
 > 무한간선이 포함된 그래프일 경우 최대유량 구할 때 INF에 다른 수가 더해지면서 오버플로우 날 가능성이 있음   
 이를 방지하고자 proxySource를 선언한뒤 proxySource -> e로 무한간선 하나를 이어준 뒤 proxySource -> sink로의 최대유량을 계산함   
 이러면 애초에 유량이 inf를 초과해서 흐를 수 없으므로 오버플로우 날 수가 없음
 
 ### 사용설명
-무한간선이라면 addEdge(a, b, -1) 사용
+> 무한간선이라면 addEdge(a, b, -1) 사용
 maxFlow(s, e)는 최대유량이 무한하다면 -1 리턴함
 
+> 정점분할의 경우 각 정점을 1번만 방문 가능한 경우를 기준으로 코드 짬. 방문 제한 횟수가 k번이라면 `VertexSplitedGraph::addEdge()`에서 1 대신 k 사용(주석 참고)
+
 ### 문제
-[]()
-
-### 원리
-
+[도시 왕복하기 1](https://www.acmicpc.net/problem/17412) - 단방향 간선   
+[간선 끊어가기 2](https://www.acmicpc.net/problem/14286) - 양방향 간선   
+[도시 왕복하기 2](https://www.acmicpc.net/problem/2316) - 양방향 간선, 정점분할   
+[학교 가지마!](https://www.acmicpc.net/problem/1420) - 양방향 간선, 정점분할, 무한간선   
 
 ### 참고링크
 https://blog.naver.com/PostView.naver?blogId=jqkt15&logNo=222070243236&categoryNo=51&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postView&userTopListOpen=true&userTopListCount=5&userTopListManageOpen=false&userTopListCurrentPage=1&photoView=5   
