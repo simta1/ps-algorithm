@@ -15,7 +15,7 @@ private:
     F INF;
     int n, proxySource;
     vector<vector<Edge> > adj;
-    vector<int> level, work;
+    vector<int> level, adjStartIdx;
 
     bool bfs(int s, int e) { // level graph
         fill(level.begin(), level.end(), -1);
@@ -40,7 +40,7 @@ private:
     F dfs(int cur, int e, F fflow) {
         if (cur == e) return fflow;
         
-        for (int &i = work[cur]; i < adj[cur].size(); i++) {
+        for (int &i = adjStartIdx[cur]; i < adj[cur].size(); i++) {
             auto [next, cap, flow, rev] = adj[cur][i];
             if (level[next] == level[cur] + 1 && flow < cap) {
                 F df = dfs(next, e, min(fflow, cap - flow));
@@ -56,7 +56,7 @@ private:
     }
         
 public:
-    Graph(int n) : n(n), proxySource(n + 1), adj(n + 2), level(n + 2), work(n + 2) {
+    Graph(int n) : n(n), proxySource(n + 1), adj(n + 2), level(n + 2), adjStartIdx(n + 2) {
         INF = numeric_limits<F>::max();
     }
     
@@ -77,7 +77,7 @@ public:
         F res = 0;
         
         while (bfs(proxySource, e)) {
-            fill(work.begin(), work.end(), 0);
+            fill(adjStartIdx.begin(), adjStartIdx.end(), 0);
 
             while (1) {
                 F f = dfs(proxySource, e, INF);
@@ -147,3 +147,4 @@ maxFlow(s, e)는 최대유량이 무한하다면 -1 리턴함
 https://blog.naver.com/PostView.naver?blogId=jqkt15&logNo=222070243236&categoryNo=51&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postView&userTopListOpen=true&userTopListCount=5&userTopListManageOpen=false&userTopListCurrentPage=1&photoView=5   
 https://blog.naver.com/kks227/220812858041   
 https://www.crocus.co.kr/1088   
+https://greeksharifa.github.io/algorithm%20&%20data%20structure/2018/07/11/algorithm-dinic/   

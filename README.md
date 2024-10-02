@@ -135,11 +135,11 @@ mermaid stateDiagram-v2 사용
     * <span class="platinum">[이분 매칭(P-)](/그래프%20이론/네트워크%20플로우/이분매칭.md)</span>
     * ~~<span class="platinum">[최대유량: Edmonds-Karp (P-)](/그래프%20이론/네트워크%20플로우/최대%20유량.md)</span>~~
     * <span class="platinum">[최대유량: Dinic (P-)](/그래프%20이론/네트워크%20플로우/Dinic.md)</span>
+    * <span class="platinum">[이분 매칭: Hopcraft-Karp(P-)](/그래프%20이론/네트워크%20플로우/Hopcroft-Karp.md)</span>
     * ~~<span class="">[최대유량: Push-Relabel (P-)]</span>~~
     * <span class="platinum">[최소 비용 최대 유량(P+)](/그래프%20이론/네트워크%20플로우/MCMF.md)</span>
     * <span class="">[Circulation(D-)]</span> <!-- https://blog.naver.com/kks227/221426339344 -->
     * <span class="">[L-R flow]</span>
-    * <span class="">[이분 매칭: Hopcraft-Karp]</span>
     * <span class="">[헝가리안 (D-)]</span>
     * <span class="">[일반 매칭(D+)]</span>
     * <span class="">[Stoer-Wagner Algorithm]</span>
