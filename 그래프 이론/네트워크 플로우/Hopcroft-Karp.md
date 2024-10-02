@@ -70,14 +70,8 @@ public:
 ### 시간복잡도
 $O(E \sqrt V)$   
 
-### 구현 주의사항
-
-
-### 사용설명
-
-
 ### 문제
-[System Engineer](https://www.crocus.co.kr/744) - [`O(VE) 빠른 구현체`](/그래프%20이론/네트워크%20플로우/이분매칭.md)로도 풀리긴 한다.
+[System Engineer](https://www.acmicpc.net/problem/3736) - [`O(VE) 빠른 구현체`](/그래프%20이론/네트워크%20플로우/이분매칭.md)로도 풀리긴 한다.
 
 ### 참고링크
 https://m.blog.naver.com/kks227/220816033373   
