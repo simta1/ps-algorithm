@@ -74,6 +74,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[퍼시스턴트 세그(P+)]</span>
     * <span class="">[세그트리 비츠(D+)]</span>
   * #### BBST
+    * <span class="">[treap]</span>
     * <span class="diamond">[스플레이 트리(D-)](/자료구조/BBST/SplayTree.md)</span>
     * <span class="">[링크/컷 트리(D+)]</span>
     * <span class="">[레드-블랙 트리]</span>
@@ -131,11 +132,11 @@ mermaid stateDiagram-v2 사용
     <!-- * <span class="">[Perfect Elimination Ordering]</span> -->
     <!-- * <span class="">[_최소 차수 MST_]</span> -->
   * #### [네트워크 플로우](/그래프%20이론/네트워크%20플로우/개념%20정리.md)
-    * <span class="platinum">[최대유량: Edmonds-Karp (P-)](/그래프%20이론/네트워크%20플로우/최대%20유량.md)</span>
-    * <span class="">[최대유량: Dinic (P-)]</span>
+    * <span class="platinum">[이분 매칭(P-)](/그래프%20이론/네트워크%20플로우/이분매칭.md)</span>
+    * ~~<span class="platinum">[최대유량: Edmonds-Karp (P-)](/그래프%20이론/네트워크%20플로우/최대%20유량.md)</span>~~
+    * <span class="platinum">[최대유량: Dinic (P-)](/그래프%20이론/네트워크%20플로우/Dinic.md)</span>
     * ~~<span class="">[최대유량: Push-Relabel (P-)]</span>~~
     * <span class="platinum">[최소 비용 최대 유량(P+)](/그래프%20이론/네트워크%20플로우/MCMF.md)</span>
-    * <span class="platinum">[이분 매칭(P-)](/그래프%20이론/네트워크%20플로우/이분매칭.md)</span>
     * <span class="">[Circulation(D-)]</span> <!-- https://blog.naver.com/kks227/221426339344 -->
     * <span class="">[L-R flow]</span>
     * <span class="">[이분 매칭: Hopcraft-Karp]</span>
@@ -321,6 +322,7 @@ mermaid stateDiagram-v2 사용
 * ### 함수
   * <span class="">[수학관련]</span> <!-- atan, atan2 추가하기 -->
   * <span class="">[배열관련]</span> <!-- copy doubling -->
+  * <span class="">[constexpr, static_assert]</span> <!-- if constexpr 등등도 포함 -->
   * <span class="information">[permutation](/C++/함수/permutation.md)</span>
   * <span class="information">[casting](/C++/함수/casting%20operators.md)</span>
   * <span class="information">[GCC built-in](/C++/함수/builtin.md)</span>

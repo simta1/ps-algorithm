@@ -28,6 +28,7 @@
   * [ ] 방향 그래프에서 오일러 회로
 
 ### 개선할 거
+  * [ ] 그래프들 `addEdge()`함수 간선 양방향/단방향인지 `template <bool directed>`, `if constexpr`사용해서 수정
   * [ ] 회문 트리, 아호-코라식 배열구현에서 문자 종류 제한 개선(convertCharToIdx함수 추가)
 
 ### 추가 최적화
