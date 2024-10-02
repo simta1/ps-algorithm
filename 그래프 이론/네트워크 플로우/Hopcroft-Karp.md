@@ -4,10 +4,11 @@
 class BipartiteGraph {
 private:
     vector<vector<int> > adj;
-    vector<int> level, adjStartIdx, assign;
+    vector<int> level, assign, visited;
     vector<bool> used;
+    int trueValue;
 
-    void bfs() { // level graph
+    bool bfs() { // level graph
         queue<int> q;
         for (int i = 1; i < adj.size(); i++) {
             if (!used[i]) {
@@ -17,22 +18,27 @@ private:
             else level[i] = -1;
         }
 
+        bool flag = false;
         while (!q.empty()) {
             int person = q.front();
             q.pop();
             for (auto work : adj[person]) {
-                if (~assign[work] && !~level[assign[work]]) {
+                if (!~assign[work]) flag = true;
+                else if (!~level[assign[work]]) {
                     level[assign[work]] = level[person] + 1;
                     q.push(assign[work]);
                 }
             }
         }
+        return flag;
     };
 
     bool dfs(int person) {
-        for (int &i = adjStartIdx[person]; i < adj[person].size(); i++) {
-            auto work = adj[person][i];
-            if (!~assign[work] || level[assign[work]] == level[person] + 1 && dfs(assign[work])) {
+        if (visited[person] == trueValue) return 0;
+        visited[person] = trueValue;
+
+        for (auto work : adj[person]) {
+            if (!~assign[work] || visited[assign[work]] != trueValue && level[assign[work]] == level[person] + 1 && dfs(assign[work])) {
                 used[person] = true;
                 assign[work] = person;
                 return true;
@@ -42,7 +48,7 @@ private:
     }
 
 public:
-    BipartiteGraph(int n1, int n2) : adj(n1 + 1), level(n1 + 1), adjStartIdx(n1 + 1), used(n1 + 1, 0), assign(n2 + 1, -1) {}
+    BipartiteGraph(int n1, int n2) : adj(n1 + 1), level(n1 + 1), visited(n1 + 1, 0), used(n1 + 1, 0), assign(n2 + 1, -1) {}
 
     void addEdge(int a, int b) { // 1-based
         adj[a].push_back(b);
@@ -51,14 +57,10 @@ public:
     int bipartiteMatching() {
         int res = 0;
         
-        while (1) {
-            bfs();
-            fill(adjStartIdx.begin(), adjStartIdx.end(), 0);
-
-            int flow = 0;
-            for (int i = 1; i < adj.size(); i++) flow += (!used[i] && dfs(i));
-            if (flow == 0) break;
-            res += flow;
+        trueValue = 1;
+        while (bfs()) {
+            for (int i = 1; i < adj.size(); i++) res += (!used[i] && dfs(i));
+            ++trueValue;
         }
 
         return res;
