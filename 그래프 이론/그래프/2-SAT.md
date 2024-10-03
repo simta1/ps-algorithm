@@ -85,9 +85,10 @@ graph.add2SAT(-2, -3);
 ### 문제
 [2-SAT - 4](https://www.acmicpc.net/problem/11281)   
 [아이돌](https://www.acmicpc.net/problem/3648) - 1SAT 포함   
+[TV Show Game](https://www.acmicpc.net/problem/16367) - a, b, c중 2개 이상이 참일 조건을 2-sat으로 나타내기
 
 ### 원리
-false -> true 꼴이 되야 함   
+false -> true 꼴이 되어야 함   
 x -> !x 라면 x = false   
 !x -> x 라면 x = true   
 
