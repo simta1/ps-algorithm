@@ -317,7 +317,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[using]</span> <!-- 기하학 풀 때 using ld; -->
   * <span class="">[literal]</span>
   * <span class="information">[template argument deduction](/C++/문법/Template%20Argument%20Deduction.md)</span>
-  * <span class="">[람다 재귀]</span>
+  * <span class="information">[람다 캡처, 재귀](/C++/문법/lambda.md)</span>
   * <span class="">[코드 여러줄 이어쓰기]</span>
   * <span class="">[리터럴 여러줄 이어쓰기]</span>
 * ### 함수
