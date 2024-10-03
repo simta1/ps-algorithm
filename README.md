@@ -229,6 +229,7 @@ mermaid stateDiagram-v2 사용
     * <span class="silver">[행렬(S-)](/수학/선형대수학/Matrix.md)</span>
     * <span class="">[가우스 소거법(P-)]</span>
     * <span class="">[키르히호프(P-)]</span> <!-- https://www.acmicpc.net/problem/9614 -->
+    * <span class="">[Freivalds' algorithm]</span> <!-- https://www.acmicpc.net/problem/13165 -->
   * #### 기타
     <!-- * <span class="">[고합성수 찾기]</span>
     * <span class="">[우월고합성수]</span> -->
