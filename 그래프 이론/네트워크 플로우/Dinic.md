@@ -142,6 +142,7 @@ maxFlow(s, e)는 최대유량이 무한하다면 -1 리턴함
 [도시 왕복하기 2](https://www.acmicpc.net/problem/2316) - 양방향 간선, 정점분할   
 [학교 가지마!](https://www.acmicpc.net/problem/1420) - 양방향 간선, 정점분할, 무한간선   
 [완전 중요한 간선](https://www.acmicpc.net/problem/5651) - `maxFlow()`호출한 뒤 간선 s->e에 대해 `!bfs(s, e)`이면 완전 중요한 간선임   
+[빠른 플로우 알고리즘이 필요한 문제들 - koosaga](https://www.acmicpc.net/workbook/view/882)   
 
 ### 참고링크
 https://blog.naver.com/PostView.naver?blogId=jqkt15&logNo=222070243236&categoryNo=51&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postView&userTopListOpen=true&userTopListCount=5&userTopListManageOpen=false&userTopListCurrentPage=1&photoView=5   
