@@ -3,44 +3,42 @@
 ```cpp
 class BipartiteGraph {
 private:
+    int n1, n2;
     vector<vector<int> > adj;
-    vector<int> level, assign, visited;
-    vector<int> assignp;
+    vector<int> matchL, matchR, checkedR, level;
     int trueValue;
 
     bool bfs() { // level graph
         queue<int> q;
-        for (int i = 1; i < adj.size(); i++) {
-            if (!~assignp[i]) {
-                level[i] = 0;
-                q.push(i);
+        for (int l = 1; l <= n1; l++) {
+            if (!~matchL[l]) {
+                level[l] = 0;
+                q.push(l);
             }
-            else level[i] = -1;
+            else level[l] = -1;
         }
 
         bool flag = false;
         while (!q.empty()) {
-            int person = q.front();
+            int l = q.front();
             q.pop();
-            for (auto work : adj[person]) {
-                if (!~assign[work]) flag = true;
-                else if (!~level[assign[work]]) {
-                    level[assign[work]] = level[person] + 1;
-                    q.push(assign[work]);
+            for (auto r : adj[l]) {
+                if (!~matchR[r]) flag = true;
+                else if (!~level[matchR[r]]) {
+                    level[matchR[r]] = level[l] + 1;
+                    q.push(matchR[r]);
                 }
             }
         }
         return flag;
     };
 
-    bool dfs(int person) {
-        if (visited[person] == trueValue) return 0;
-        visited[person] = trueValue;
-
-        for (auto work : adj[person]) {
-            if (!~assign[work] || level[assign[work]] == level[person] + 1 && dfs(assign[work])) {
-                assignp[person] = work;
-                assign[work] = person;
+    bool dfs(int l) {
+        for (auto r : adj[l]) if (checkedR[r] != trueValue) {
+            checkedR[r] = trueValue;
+            if (!~matchR[r] || level[matchR[r]] == level[l] + 1 && dfs(matchR[r])) {
+                matchL[l] = r;
+                matchR[r] = l;
                 return true;
             }
         }
@@ -48,10 +46,10 @@ private:
     }
 
 public:
-    BipartiteGraph(int n1, int n2) : adj(n1 + 1), level(n1 + 1), visited(n1 + 1, 0), assignp(n1 + 1, -1), assign(n2 + 1, -1) {}
+    BipartiteGraph(int n1, int n2) : n1(n1), n2(n2), adj(n1 + 1), matchL(n1 + 1, -1), matchR(n2 + 1, -1), checkedR(n2 + 1, 0), level(n1 + 1) {}
 
-    void addEdge(int a, int b) { // 1-based
-        adj[a].push_back(b);
+    void addEdge(int l, int r) { // 1-based
+        adj[l].push_back(r);
     }
 
     int bipartiteMatching() { // Hopcroft-Karp
@@ -59,7 +57,7 @@ public:
         
         trueValue = 1;
         while (bfs()) {
-            for (int i = 1; i < adj.size(); i++) res += (!~assignp[i] && dfs(i));
+            for (int l = 1; l <= n1; l++) res += (!~matchL[l] && dfs(l));
             ++trueValue;
         }
 
