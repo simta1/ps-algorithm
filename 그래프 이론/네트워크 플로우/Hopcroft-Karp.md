@@ -54,7 +54,7 @@ public:
         adj[a].push_back(b);
     }
 
-    int bipartiteMatching() {
+    int bipartiteMatching() { // Hopcroft-Karp
         int res = 0;
         
         trueValue = 1;
