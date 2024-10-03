@@ -62,9 +62,28 @@ public:
         return res;
     }
 
-    pair<vector<bool>, vector<bool> > minimumVertexCover() {
-        cout << n1 + n2 - bipartiteMatching() << "\n";
+    pair<vector<int>, vector<int> > minimumVertexCover() {
+        bipartiteMatching();
         
+        vector<bool> visitedL(n1 + 1), visitedR(n2 + 1);
+        function<void(int)> visit = [&](int l) {
+            visitedL[l] = true;
+
+            for (auto r : adj[l]) if (~matchR[r] && !visitedR[r] && !visitedL[matchR[r]]) {
+                visitedR[r] = true;
+                visit(matchR[r]);
+            }
+        };
+        
+        for (int l = 1; l <= n1; l++) if (!~matchL[l]) visit(l);
+        
+        vector<int> mvcL, mvcR;
+        for (int l = 1; l <= n1; l++) if (!visitedL[l]) mvcL.push_back(l);
+        for (int r = 1; r <= n2; r++) if (visitedR[r]) mvcR.push_back(r);
+        return {mvcL, mvcR};
+    }
+
+    pair<vector<bool>, vector<bool> > getIsMvc() {
         vector<bool> isMvcL(n1 + 1, 1), isMvcR(n2 + 1);
         function<void(int)> visit = [&](int l) {
             isMvcL[l] = false;
