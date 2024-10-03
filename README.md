@@ -210,7 +210,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[볼록다각형 접선]</span> <!-- https://www.acmicpc.net/problem/18190 --> <!-- https://youngyojun.github.io/contest/review/2020/02/15/iamcoder-2019-yearend-contest/ -->
   * <span class="">[불도저]</span>
   * <span class="">[반평면 교집합(D-)]</span>
-  * <span class="">[KD tree]</span>
+  * <span class="">[KD tree]</span> <!-- https://algoshitpo.github.io/2020/02/09/kdtree/ -->
   * <span class="">[그린 정리(D+)]</span>
   * <span class="">[델로네 삼각분할(R-)]</span>
   * <span class="">[보로노이 다이어그램(R-)]</span>
@@ -229,7 +229,9 @@ mermaid stateDiagram-v2 사용
     * <span class="silver">[행렬(S-)](/수학/선형대수학/Matrix.md)</span>
     * <span class="">[가우스 소거법(P-)]</span>
     * <span class="">[키르히호프(P-)]</span> <!-- https://www.acmicpc.net/problem/9614 -->
+    * <span class="">[strassen algorithm]</span>
     * <span class="">[Freivalds' algorithm]</span> <!-- https://www.acmicpc.net/problem/13165 -->
+    <!-- * <span class="">[Deterministic Verification of Integer Matrix Multiplication in Quadratic Time]</span> -->
   * #### 기타
     <!-- * <span class="">[고합성수 찾기]</span>
     * <span class="">[우월고합성수]</span> -->

@@ -20,7 +20,6 @@
 			"using pii = pair<int, int>;",
 			"using tii = tuple<int, int, int>;",
 			"using qii = tuple<int, int, int, int>;",
-			"",
 			"const vector<pair<int, int> > dpos = {{-1, 0}, {0, -1}, {1, 0}, {0, 1}}; // 상좌하우",
 			"const string dirToChar = \"NWSE\";",
 			"",
