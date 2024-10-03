@@ -85,7 +85,7 @@ mermaid stateDiagram-v2 사용
     * <span class="platinum">[XOR 트라이(P-)](/자료구조/기타/XOR%20Trie.md)</span>
     * <span class="platinum">[유니온 파인드 with Potential(P+)](/자료구조/기타/DSU%20potential.md)</span>
     * <span class="">[로프]</span>
-    * <span class="">[pbds]</span>
+    * <span class="platinum">[ordered_set(P-)](/자료구조/기타/ordered_set.md)</span>
     * <span class="">[데카르트 트리]</span>
     * <span class="">[Line container]</span>
     * <span class="">[리-차오 트리(D-)]</span>
