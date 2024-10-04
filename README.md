@@ -84,8 +84,8 @@ mermaid stateDiagram-v2 사용
     * <span class="gold">[희소 배열(G+)](/자료구조/기타/희소배열.md)</span>
     * <span class="platinum">[XOR 트라이(P-)](/자료구조/기타/XOR%20Trie.md)</span>
     * <span class="platinum">[유니온 파인드 with Potential(P+)](/자료구조/기타/DSU%20potential.md)</span>
-    * <span class="platinum">[로프](/자료구조/기타/rope.md)</span>
-    * <span class="platinum">[ordered_set(P-)](/자료구조/기타/ordered_set.md)</span>
+    * <span class="platinum">[로프(P-)](/자료구조/기타/rope.md)</span>
+    * <span class="platinum">[ordered set(P-)](/자료구조/기타/ordered_set.md)</span>
     * <span class="">[데카르트 트리]</span>
     * <span class="">[Line container]</span>
     * <span class="">[리-차오 트리(D-)]</span>
@@ -336,7 +336,6 @@ mermaid stateDiagram-v2 사용
   * <span class="information">[이분탐색 람다함수](/C++/함수/lower_bound_lambda.md)</span>
   * <span class="information">[custom pq](/C++/함수/costom%20pq.md)</span>
   * <span class="">[io manip]</span>
-  * <span class="information">[ext](/C++/함수/ext.md)</span>
 * ### ps용 환경설정
   * <span class="">[cph]</span>
   * <span class="information">[define](/C++/ps용%20환경설정/define.md)</span>
