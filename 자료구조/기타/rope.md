@@ -22,10 +22,7 @@ rp.erase(pos, cnt);
 문자열 삽입 뿐 아니라 로프 삽입도 가능
 ### 분리 O(logN)
 ```cpp
-rope<char> rp = "Hello, World!";
-rope<char> left, right;
-
-rp.split(idx, left, right); // [0:idx), [idx:n)으로 분리
+rp.substr(idx, cnt);
 ```
 ### 결합 (operator+) O(logN)
 ```cpp

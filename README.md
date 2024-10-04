@@ -58,6 +58,7 @@ mermaid stateDiagram-v2 사용
 
 * ### 자료구조
   * #### 세그먼트 트리
+    <!-- 펜윅으로 머지소트 트리 대체? https://codeforces.com/blog/entry/107849 -->
     * <span class="gold">[펜윅 트리(G+)](/자료구조/세그먼트%20트리/펜윅.md)</span>
     * <span class="gold">[세그먼트 트리(G+)](/자료구조/세그먼트%20트리/세그.md)</span>
     * <span class="gold">[비재귀 세그(G+)](/자료구조/세그먼트%20트리/비재귀%20세그.md)</span>
