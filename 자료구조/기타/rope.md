@@ -23,6 +23,7 @@ rp.erase(pos, cnt);
 ### 분리 O(logN)
 ```cpp
 rp.substr(idx, cnt);
+rp.substr(idx); // rp[idx] 문자 하나. string에서 st.substr(idx)가 st[idx:]을 의미했던 것과는 다름에 주의
 ```
 ### 결합 (operator+) O(logN)
 ```cpp
@@ -45,6 +46,8 @@ $O(logN)$
 
 ### 문제
 [순열복원](https://www.acmicpc.net/problem/1777)
+[로프와 쿼리](https://www.acmicpc.net/problem/16994) - substr
 
 ### 참고링크
 https://m.blog.naver.com/melon940925/222120515591   
+https://www.geeksforgeeks.org/stl-ropes-in-c/   
