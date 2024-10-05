@@ -194,7 +194,12 @@ mermaid stateDiagram-v2 사용
   <!-- * ~~<span class="">[반공간 교집합]</span>~~ -->
   <!-- * <span class="">[circle 볼록 껍질(R)]</span> -->
   <!-- https://www.acmicpc.net/problem/27957 -->
-  * <span class="gold">[cross product, CCW, 직선-점 거리 계산(G-)](/기하학/Geometry%20Header.md)</span>
+  * <span class="additional">[기하학 헤더](/기하학/Geometry%20Header.md)</span>
+    * <span class="gold">[외적, CCW(G-)]</span>
+    * <span class="gold">[거리 계산 : point-point, line-point]</span>
+    * <span class="gold">[넓이 계산 : 삼각형 신발끈, 사각형 신발끈, 헤론, 브라마굽타, 활꼴]</span>
+    * <span class="gold">[제2 cos]</span>
+    * <span class="gold">[좌표 계산 : 2d회전, 3d회전]</span>
   * <span class="">[plane sweeping]</span>
   * <span class="gold">[볼록다각형 넓이(G-)](/기하학/Polygon%20Area.md)</span>
   * <span class="">[볼록다각형 판정]</span>
@@ -276,7 +281,7 @@ mermaid stateDiagram-v2 사용
   * <span class="additional">[비트 트릭(A)](/기타/Bit%20Trick.md)</span>
   * <span class="">[계수 정렬]</span>
   * <span class="silver">[기수 정렬(S-)](/기타/Radix%20Sort.md)</span>
-  * <span class="silver">[이분탐색(S-)](/기타/이분탐색.md)</span>
+  * <span class="silver">[이분 탐색(S-)](/기타/이분탐색.md)</span>
   * <span class="silver">[투 포인터(S-)](/기타/Two%20Pointer.md)</span>
   * <span class="silver">[비트마스크(S-)](/기타/Bitmask.md)</span>
   * <span class="silver">[좌표 압축(S-)](/기타/좌표압축.md)</span>
@@ -294,6 +299,7 @@ mermaid stateDiagram-v2 사용
   * <span class="platinum">[삼분 탐색(P-)](/기타/삼분탐색.md)</span>
   * <span class="platinum">[Mo's algorithm(P+)](/기타/Mo's.md)</span>
   * <span class="platinum">[평방분할(P+)](/기타/제곱근%20분할법.md)</span>
+  * <span class="">[small to large]</span>
   * <span class="">[병렬 이분 탐색(P+)]</span>
   * <span class="">[춤추는 링크, 크누스 X]</span>
   * <span class="">[임의 정밀도(epsilon값 계산)(A)]</span>

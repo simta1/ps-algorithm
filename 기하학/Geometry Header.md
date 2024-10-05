@@ -98,6 +98,14 @@ ld getCosTheta(ld x, ld y, ld z) { // x 맞은편 각도
 ```cpp
 ```
 
+### 회전변환
+```cpp
+void rotate2D(ld &x, ld &y, ld theta) { // 반시계방향으로 theta만큼 회전
+    tie(x, y) = pair<ld, ld>{cos(theta) * x + sin(theta) * y, -sin(theta) * x + cos(theta) * y};
+}
+```
+<!-- TODO rotate3D추가해야 됨, 3D에서 z에 아무값넣어보내면 2D로도 쓸수있으니 3D만들고 나서 2D삭제하면 될 듯 -->
+
 ### 구현 주의사항
 좌표들을 곱셈하기 때문에 overflow 고려할 땐 좌표의 최대값의 제곱을 기준으로 판단
 
