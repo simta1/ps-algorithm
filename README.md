@@ -141,7 +141,7 @@ mermaid stateDiagram-v2 사용
     * <span class="platinum">[최소 비용 최대 유량(P+)](/그래프%20이론/네트워크%20플로우/MCMF.md)</span>
     * <span class="">[Circulation(D-)]</span> <!-- https://blog.naver.com/kks227/221426339344 -->
     * <span class="">[L-R flow]</span>
-    * <span class="">[헝가리안 (D-)]</span>
+    * <span class="diamond">[헝가리안(D-)](/ps-snippet/그래프%20이론/네트워크%20플로우/헝가리안.md)</span>
     * <span class="">[일반 매칭(D+)]</span>
     * <span class="">[Stoer-Wagner Algorithm]</span>
     * <span class="">[Gomory-Hu Tree]</span>
