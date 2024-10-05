@@ -263,13 +263,21 @@
 		"description": "vector v(n, vector<int>(m))"
 	},
 	
-	"cin sort": {
+	"sort": {
 		"prefix": "SNIP sort",
 		"body": [
 			"sort(${1:v}.begin(), $1.end()$0);",
 			""
 		],
 		"description": "sort(v.begin(), v.end())"
+	},
+	
+	"all(vector)": {
+		"prefix": "SNIP all",
+		"body": [
+			"${1:v}.begin(), $1.end()"
+		],
+		"description": "v.begin(), v.end()"
 	},
 
 	"cin x": {
@@ -536,7 +544,16 @@
         "command": "editor.action.insertSnippet",
         "args": {
             "langId": "cpp",
-            "name": "cin sort"
+            "name": "sort"
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+a",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "langId": "cpp",
+            "name": "all(vector)"
         },
         "when": "editorTextFocus"
     },
@@ -626,5 +643,12 @@
         "command": "jumpToPrevSnippetPlaceholder",
         "when": "editorTextFocus && hasPrevTabstop"
     },
+    
+    // // 파일 탐색기 이동
+    // {
+    //     "key": "p",
+    //     "command": "workbench.files.action.goToParentFolder",
+    //     "when": "explorerViewletVisible && !inputFocus"
+    // }
 ]
 ```
