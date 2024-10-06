@@ -59,6 +59,9 @@ mermaid stateDiagram-v2 사용
 * ### 자료구조
   * #### 세그먼트 트리
     <!-- 펜윅으로 머지소트 트리 대체? https://codeforces.com/blog/entry/107849 -->
+    <!-- * <span class="">[비재귀 레이지 세그]</span> -->
+    <!-- https://www.acmicpc.net/blog/view/117 -->
+    <!-- 펜윅 레이지 + 역원없는 연산 지원 버전 만들까 싶었으나 솔직히 너무 과한 듯. 다이나믹 레이지 세그가 너무 막강함 -->
     * <span class="gold">[펜윅 트리(G+)](/자료구조/세그먼트%20트리/펜윅.md)</span>
     * <span class="gold">[세그먼트 트리(G+)](/자료구조/세그먼트%20트리/세그.md)</span>
     * <span class="gold">[비재귀 세그(G+)](/자료구조/세그먼트%20트리/비재귀%20세그.md)</span>
@@ -68,8 +71,8 @@ mermaid stateDiagram-v2 사용
     * <span class="platinum">[n차원 펜윅(P-)](/자료구조/세그먼트%20트리/다차원%20펜윅.md)</span>
     * <span class="platinum">[머지소트 트리(P-)](/자료구조/세그먼트%20트리/머지소트%20트리.md)</span>
     * <span class="platinum">[레이지 세그(P-)](/자료구조/세그먼트%20트리/레이지%20세그.md)</span>
-    * <span class="">[비재귀 레이지 세그]</span> <!-- https://www.acmicpc.net/blog/view/117 -->
-    * <span class="platinum">[다이나믹 세그, 다이나믹 레이지 세그(P-)](/자료구조/세그먼트%20트리/다이나믹%20세그.md)</span>
+    * <span class="platinum">[다이나믹 세그(P-)](/자료구조/세그먼트%20트리/다이나믹%20세그.md)</span>
+    * <span class="platinum">[다이나믹레이지세그 + 세그이분탐색 + 금광세그(P+)]</span>
     * ~~<span class="platinum">[_range GCD 세그(P+)_](/자료구조/세그먼트%20트리/GCD%20세그.md)</span>~~
     * <span class="platinum">[금광 세그(P+)](/자료구조/세그먼트%20트리/금광%20세그.md)</span>
     * <span class="">[퍼시스턴트 세그(P+)]</span>
@@ -103,6 +106,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[0-1 bfs(G-)]</span>
     * <span class="gold">[이분그래프 판정(G-)](/그래프%20이론/그래프/이분그래프%20판정.md)</span>
     * <span class="gold">[다익스트라(G-)](/그래프%20이론/그래프/Dijkstra.md)</span>
+    * <span class="">[dial's algorithm]</span>
     * ~~<span class="">[A*]</span>~~
     * <span class="gold">[벨만-포드(G-)](/그래프%20이론/그래프/Bellman-Ford.md)</span>
     * <span class="gold">[SPFA(G-)](/그래프%20이론/그래프/SPFA.md)</span>
@@ -411,7 +415,9 @@ https://blog.myungwoo.kr/
 
 https://nyaannyaan.github.io/library/data-structure/union-find-with-potential.hpp.html
 
-<!-- # 알고리즘 순서 -->
+https://cocoachan.tistory.com/
+
+<!-- # 알고리즘 순서 { -->
   ```mermaid
   stateDiagram-v2
   direction LR
@@ -523,4 +529,5 @@ https://nyaannyaan.github.io/library/data-structure/union-find-with-potential.hp
   %% %% 트라이 --> 아호_코라식
   %% %% ccw --> 볼록다각형_판정
   ```
-
+<!-- } -->
+<!-- vim %이동을 위한 괄호임 삭제하면 안 됨 -->
