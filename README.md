@@ -200,10 +200,10 @@ mermaid stateDiagram-v2 사용
     * <span class="gold">[넓이 계산 : 삼각형 신발끈, 사각형 신발끈, 헤론, 브라마굽타, 활꼴]</span>
     * <span class="gold">[제2 cos]</span>
     * <span class="gold">[좌표 계산 : 2d회전, 3d회전]</span>
-  * <span class="">[plane sweeping]</span>
   * <span class="gold">[볼록다각형 넓이(G-)](/기하학/Polygon%20Area.md)</span>
   * <span class="">[볼록다각형 판정]</span>
   * <span class="gold">[선분교차판정(G+)](/기하학/선분교차판정.md)</span>
+  * <span class="platinum">[plane sweeping(P-)](/ps-snippet/기하학/Plane%20Sweeping.md)</span>
   * <span class="platinum">[선분교차점 계산(P-)](/기하학/Intersection%20Calculate(LL).md)</span>
   * <span class="platinum">[볼록 껍질(P-)](/기하학/볼록%20껍질.md)</span>
   * <span class="platinum">[가장 먼 두 점 : 회전하는 캘리퍼스(P-)](/기하학/Rotating%20Calipers.md)</span>
