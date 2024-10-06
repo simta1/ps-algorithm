@@ -7,7 +7,7 @@ struct Line {
 };
 
 template <typename T, typename R>
-R rectTotalArea(vector<tuple<T, T, T, T> > &rects, R res) {
+R rectTotalArea(vector<tuple<T, T, T, T> > &rects, R res) { // tuple -> {x1, y1, x2, y2}
     T mnY = numeric_limits<T>::max(), mxY = numeric_limits<T>::min();
     for (auto [x1, y1, x2, y2] : rects) {
         mnY = min({mnY, y1, y2});
