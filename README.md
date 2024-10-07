@@ -72,7 +72,7 @@ mermaid stateDiagram-v2 사용
     * <span class="platinum">[머지소트 트리(P-)](/자료구조/세그먼트%20트리/머지소트%20트리.md)</span>
     * <span class="platinum">[레이지 세그(P-)](/자료구조/세그먼트%20트리/레이지%20세그.md)</span>
     * <span class="platinum">[다이나믹 세그(P-)](/자료구조/세그먼트%20트리/다이나믹%20세그.md)</span>
-    * <span class="platinum">[다이나믹레이지세그 + 세그이분탐색 + 금광세그(P+)]</span>
+    * <span class="platinum">[다이나믹 레이지 세그(P+)](/자료구조/세그먼트%20트리/다이나믹%20레이지%20세그.md)</span>
     * ~~<span class="platinum">[_range GCD 세그(P+)_](/자료구조/세그먼트%20트리/GCD%20세그.md)</span>~~
     * <span class="platinum">[금광 세그(P+)](/자료구조/세그먼트%20트리/금광%20세그.md)</span>
     * <span class="">[퍼시스턴트 세그(P+)]</span>
