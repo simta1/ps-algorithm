@@ -166,6 +166,7 @@ mermaid stateDiagram-v2 사용
   <!-- * <span class="">[비트 집합]</span> -->
   * <span class="silver">[Kadane algorithm(S+)](/DP/Kadane%20Algorithm.md)</span>
   * <span class="gold">[LCS(G-)](/DP/lcs.md)</span>
+  * <span class="">[LIS]</span>
   * <span class="gold">[배낭 문제(G-)](/DP/Knapsack.md)</span>
   * <span class="gold">[비트셋 배낭(G-)](/DP/Knapsack(Bitset).md)</span> <!-- https://egod1537.tistory.com/entry/Bounded-Knapsack-Problem%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9C%BC%EB%A1%9C-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0 -->
   * <span class="gold">[비트마스크 DP(G+)](/DP/Bitmask%20DP.md)</span>
@@ -347,7 +348,7 @@ mermaid stateDiagram-v2 사용
   * <span class="information">[문자열관련](/C++/함수/string.md)</span>
   * <span class="information">[이분탐색 람다함수](/C++/함수/lower_bound_lambda.md)</span>
   * <span class="information">[custom pq](/C++/함수/costom%20pq.md)</span>
-  * <span class="">[io manip]</span>
+  * <span class="information">[io manip](/C++/함수/iomanip.md)</span>
 * ### ps용 환경설정
   * <span class="">[cph]</span>
   * <span class="information">[define](/C++/ps용%20환경설정/define.md)</span>
