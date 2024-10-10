@@ -94,6 +94,17 @@ ld getCosTheta(ld x, ld y, ld z) { // x 맞은편 각도
 }
 ```
 
+### 삼각함수
+```cpp
+pll merge(ll a, ll b, ll c, ll d) { // tanT1 = a / b, tanT2 = c / d, tan(T1 + T2) = ?
+    return {
+        (a * d % mod + b * c % mod) % mod,
+        (b * d % mod - a * c % mod + mod) % mod
+    };
+}
+```
+리턴값도 (분자, 분모) 형태
+
 ### isOnPL
 ```cpp
 ```
