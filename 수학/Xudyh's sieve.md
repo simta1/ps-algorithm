@@ -42,8 +42,8 @@ private:
 
 public:
     Xudyh(ll maxN) {
-        int fSize = pow(2 * maxN, 2.0 / 3);
-        // pfsF = getMulFunc(fSize);
+        int preComputeSize = pow(2 * maxN, 2.0 / 3);
+        // pfsF = getMulFunc(preComputeSize);
         for (int i = 1; i < pfsF.size(); i++) pfsF[i] = (pfsF[i] + pfsF[i - 1]) % mod;
     }
 
