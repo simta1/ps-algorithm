@@ -1,3 +1,11 @@
+[카테고리](/README.md)
+### rotate
+```cpp
+rotate(v.begin(), v.begin() + idx, v.end());
+```
+v[idx]에 있던 값이 0번째 위치로 이동해옴.
+{ v[0], ..., v[idx - 1], v[idx], v[idx + 1], ..., v[n - 1] } -> { v[idx], v[idx + 1], ..., v[n - 1], v[0], ..., v[idx - 1] }
+
 ### swapLR
 ```cpp
 void swapLR(vector<int> &v, int idx) {
