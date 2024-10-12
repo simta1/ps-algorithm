@@ -234,7 +234,7 @@ mermaid stateDiagram-v2 사용
     * <span class="platinum">[집합 분할(P-)](/수학/조합론/집합%20분할.md)</span>
     * <span class="">[nCr mod 소수, 뤼카(P-)]</span>
     * <span class="">[nCr mod 합성수(D-)]</span>
-    * <span class="">[생성 함수(D-)]</span> <!-- 카탈란 생성함수 O(nlogN) -->
+    * <span class="">[생성 함수(D-)]</span> <!-- 카탈란 생성함수 O(nlogN) --> <!-- https://github.com/infossm/infossm.github.io/blob/master/_posts/2019-10-19-generating-function.md -->
     * <span class="">[키타마사(D-)]</span>
   * #### 선형대수학
     * <span class="silver">[행렬(S-)](/수학/선형대수학/Matrix.md)</span>
@@ -282,7 +282,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[매트로이드(R-)]</span>
 * ### 게임 이론
   * <span class="">[스프라그-그런디]</span> <!-- (비트셋) -->
-  * <span class="">[hackenbush]</span> <!-- https://en.wikipedia.org/wiki/Hackenbush -->
+  * <span class="">[hackenbush]</span> <!-- https://en.wikipedia.org/wiki/Hackenbush --> <!-- https://rkm0959.tistory.com/139 -->
 * ### 기타
   * <span class="additional">[비트 트릭(A)](/기타/Bit%20Trick.md)</span>
   * <span class="">[계수 정렬]</span>

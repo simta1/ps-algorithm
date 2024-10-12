@@ -20,8 +20,8 @@ ll harmonicSum(T n) { // [n/1] + [n/2] + ... + [n/n]
 template <typename T>
 ll harmonicSum(T n) { // [m/1][n/1] + [m/2][n/2] + ... + [m/min(m,n)][n/min(m,n)]
     ll res = 0;
-    for (T i = 1, j; i <= min(m, n); i = j + 1) {
-        j = min(m / (m / i), n / (n / i));
+    for (T i = 1, j; i <= min(m, n); i = j + 1) { // 애초에 min(m, n)까지만 보면 되서 m / i, n / i는 항상 양수임
+        j = min(m / (m / i), n / (n / i)); // 따라서 division by zero 고려할 필요 없음
         res += (m / i) * (n / i) * (j - i + 1);
     }
     return res;
@@ -31,7 +31,7 @@ ll harmonicSum(T n) { // [m/1][n/1] + [m/2][n/2] + ... + [m/min(m,n)][n/min(m,n)
 template <typename T>
 ll harmonicSum(T n) { // [m/i - n/i]
     ll res = 0;
-    for (T i = 1, j; i <= max(m, n); i = j + 1) {
+    for (T i = 1, j; i <= max(m, n); i = j + 1) { // max(m, n)까지 봐야된다면 division by zero를 고려해야 함
         j = min({
             m / i ? m / (m / i) : 2e9,
             n / i ? n / (n / i) : 2e9,
