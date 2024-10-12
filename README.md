@@ -246,6 +246,7 @@ mermaid stateDiagram-v2 사용
   * #### 기타
     <!-- * <span class="">[고합성수 찾기]</span>
     * <span class="">[우월고합성수]</span> -->
+    <!-- Szemerédi–Trotter theorem -->
     * <span class="silver">[분할정복 거듭제곱(S+)](/수학/빠른%20거듭제곱.md)</span>
     * <span class="silver">[에라토스테네스의 체(S+)](/수학/에라토스테네스의%20체.md)</span>
     * <span class="gold">[Linear sieve 소수 판별(G-)](/수학/Linear%20Sieve.md)</span>
