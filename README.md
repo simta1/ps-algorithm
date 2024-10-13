@@ -258,7 +258,7 @@ mermaid stateDiagram-v2 사용
     * <span class="platinum">[중국인의 나머지 정리(P-)](/수학/CRT.md)</span>
     * <span class="">[Garner's algorithm]</span>
     * <span class="">[베르누이 수]</span>
-    * <span class="">[Stern-Brocot 트리]</span> <!-- https://blog.myungwoo.kr/126 -->
+    * <span class="">[Stern-Brocot 트리]</span> <!-- https://blog.myungwoo.kr/126 --> <!-- https://youngyojun.github.io/secmem/2022/02/18/sigma-sum-stern-brocot/ -->
     * <span class="platinum">[밀러-라빈 소수 판별법(P+)](/수학/MillerRabin.md)</span>
     * <span class="platinum">[폴라드 로(P+)](/수학/PollardRho.md)</span>
     * <span class="">[이산 로그(P+)]</span>
@@ -420,6 +420,9 @@ https://blog.myungwoo.kr/
 https://nyaannyaan.github.io/library/data-structure/union-find-with-potential.hpp.html
 
 https://cocoachan.tistory.com/
+
+pentagon03   
+https://howtoliveworldnice.tistory.com/category/Algorithm/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%9D%B4%EB%A1%A0%20%EC%A0%95%EB%A6%AC
 
 <!-- # 알고리즘 순서 { -->
   ```mermaid
