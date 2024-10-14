@@ -82,6 +82,8 @@ $dp[k] = \dfrac{1}{k+1} \left\{ (n + 1)^{k+1} - 1 - \displaystyle\sum_{i=0}^{k-1
 
 ### 문제
 [합](https://www.acmicpc.net/problem/1492)
+[F. The Sum of the k-th Powers](https://codeforces.com/problemset/problem/622/F) - k너무 커서 라그랑주 보간법 써야 됨   
 
 ### 참고링크
 https://en.wikipedia.org/wiki/Faulhaber%27s_formula   
+https://codeforces.com/topic/113960/en1 <!-- TODO -->   
