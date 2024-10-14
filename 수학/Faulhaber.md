@@ -47,7 +47,6 @@ public:
 ```
 </details>
 
-$dp[k] = \dfrac{1}{k+1} \left\{ (n + 1)^{k+1} - 1 - \displaystyle\sum_{i=0}^{k-1} \binom{k+1}{i} dp[i] \right\}$   
 ```cpp
 ll powSum(ll n, int k) { // 1^k + 2^k + ... + n^k
     const ll mod = 1e9 + 7;
@@ -77,6 +76,9 @@ $(1^k + 2^k + ... + n^k) \mod{M}$ 계산
 <!-- TODO Faulhaber's formula 추가해야됨 -->
 어쩌다보니 Faulhaber안썼음   
 나중에 추가하려나   
+
+$let)$ $dp[k] := 1^k + 2^k + ... + n^k$   
+$dp[k] = \dfrac{1}{k+1} \left\{ (n + 1)^{k+1} - 1 - \displaystyle\sum_{i=0}^{k-1} \binom{k+1}{i} dp[i] \right\}$   
 
 ### 문제
 [합](https://www.acmicpc.net/problem/1492)
