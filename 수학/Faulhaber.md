@@ -21,7 +21,7 @@ ll power(ll a, ll n, ll mod) { // a ^ n % mod
 ```
 </details>
 
-### $1^k + 2^k +... + n^k$ 계산
+### $1^k + 2^k +... + n^k$ 계산 ([라그랑주 보간법](/수학/라그랑주%20보간법.md) 사용)
 ```cpp
 ll powerSum(ll n, int k, ll mod) {
     vector<ll> y(k + 2, 0);
