@@ -272,6 +272,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[xor convolution]</span>
     * <span class="">[FFT 응용]</span> <!-- https://hyperbolic.tistory.com/4 -->
     * <span class="">[online FFT]</span>
+    * <span class="diamond">[다항식 보간법(D-)]</span>
     * <span class="diamond">[Linear sieve 곱셈적 함수(D-)](/수학/곱셈적%20함수.md)</span>
     * <span class="diamond">[뫼비우스 함수(D-)](/수학/뫼비우스.md)</span>
     * <span class="diamond">[뫼비우스 반전(D-)](/수학/뫼비우스%20반전.md)</span>
