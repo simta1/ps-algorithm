@@ -54,6 +54,12 @@ public:
 ```
 ### 시간복잡도
 $O(N^{2/3})$   
+precomputation 안 할 경우 $O(N^{3/4})$   
+
+정확히는,   
+$K$ 이하의 모든 $n$에 대해 $S_f(n)$을 $O(K)$에 precomputation 해둘 경우 $S_f(N)$을 구하는 시간복잡도는 $O(K + \dfrac{2N}{\sqrt{K}})$이고 $K = (2N)^{\frac{2}{3}}$라 하면 $O(N^{2/3})$   
+
+무조건 $K = (2N)^{\frac{2}{3}}$가 최선은 아닌 게, [Easy Problem](https://www.acmicpc.net/problem/16644)처럼 mertens함수의 값을 여러번 계산해야되는 경우 $O(\dfrac{2N}{\sqrt{K}})$는 여러 번 호출되지만 $O(K)$의 precomputation과정은 한번만 실행됨을 고려하면 $K$를 더 크게 잡는 게 효율적이다.
 
 ### 구현 주의사항
 뫼비우스 함수나 harmonic lemma 등등 쓰는 모든 문제에 적용되는 거긴 한데   
@@ -66,7 +72,8 @@ $O(N^{2/3})$
 <!-- TODO xudyh 코드랑 비슷하게 클래스로 바꿔야 함 -->
 
 ### 문제
-[비로소 서로소](https://www.acmicpc.net/problem/32240)
+[비로소 서로소](https://www.acmicpc.net/problem/32240)   
+[Möbius Madness](https://www.acmicpc.net/problem/16164) - precomputation 꼭 필요   
 
 ### 원리
 $g(1)S_f(N) = S_{f \ast g}(N) - \displaystyle\sum_{d=2}^{N} g(d) S_f \left(\left\lfloor \dfrac{N}{d} \right\rfloor \right) $   
