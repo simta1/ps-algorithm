@@ -4,7 +4,24 @@
 그냥 귀찮아서 제목은 유지했지만 faulhaber아님.   
 애초에 보간법 알면faulhaber를 알 필요 자체가 없어보임   
 
-### 보간법 사용
+### 빠른 거듭제곱
+<details>
+<summary>코드</summary>
+
+```cpp
+ll power(ll a, ll n, ll mod) { // a ^ n % mod
+    ll res = 1;
+    while (n) {
+        if (n & 1) res = res * a % mod;
+        a = a * a % mod;
+        n >>= 1;
+    }
+    return res;
+}
+```
+</details>
+
+### $1^k + 2^k +... + n^k$ 계산
 ```cpp
 ll powerSum(ll n, int k, ll mod) {
     vector<ll> y(k + 2, 0);
@@ -13,8 +30,9 @@ ll powerSum(ll n, int k, ll mod) {
 }
 ```
 ### 시간복잡도
-$O(K \log MOD)$   
+$O(K \log{MOD})$   
 $\log$는 라그랑주 보간법에서 모듈러 역원 때문에 붙음   
+처음에 y좌표 계산할 때 빠른 거듭제곱 써도 $O(KlogK)$ 걸리긴 하지만 애초에 $K<=mod$라 무시함   
 
 ### 사용설명
 $(1^k + 2^k + ... + n^k) \mod{M}$ 계산   
@@ -30,8 +48,8 @@ $f(x) = 1^k + 2^k + ... + x^k = a_{k+1} x^{k+1} + a_k x^k + ... + a_0x^0$라 하
 ### 문제
 [합](https://www.acmicpc.net/problem/1492) - $O(K^2logK)$ 가능   
 [거듭제곱의 합 1](https://www.acmicpc.net/problem/25974) - $O(K^2logK)$ 가능   
-[거듭제곱의 합 2](https://www.acmicpc.net/problem/27293) - $O(KlogMOD)$   
-[F. The Sum of the k-th Powers](https://codeforces.com/problemset/problem/622/F) - $O(KlogMOD)$
+[거듭제곱의 합 2](https://www.acmicpc.net/problem/27293) - $O(K \log{MOD})$   
+[F. The Sum of the k-th Powers](https://codeforces.com/problemset/problem/622/F) - $O(K \log{MOD})$   
 
 ### 참고링크
 https://en.wikipedia.org/wiki/Faulhaber%27s_formula   
