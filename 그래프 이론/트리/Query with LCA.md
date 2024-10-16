@@ -87,7 +87,7 @@ preprocessing $O(N~logN)$
 query $O(logN)$
 
 ### 구현 주의사항
-노드를 위로 올리기 전에 먼제 res를 업데이트해야 된다.   
+노드를 위로 올리기 전에 먼저 res를 업데이트해야 된다.   
 ```cpp
 // 맞는 코드
 res = merge(res, ac[a][i].second);

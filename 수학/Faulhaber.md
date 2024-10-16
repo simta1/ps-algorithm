@@ -39,7 +39,7 @@ $(1^k + 2^k + ... + n^k) \mod{M}$ 계산
 
 $O(K^2logK)$긴 하지만 아래처럼 DP로도 계산할 수 있긴 함(플레2정도의 풀이)   
 $let)$ $dp[k] := 1^k + 2^k + ... + n^k$   
-$dp[k] = \dfrac{1}{k+1} \left\{ (n + 1)^{k+1} - 1 - \displaystyle\sum_{i=0}^{k-1} \binom{k+1}{i} dp[i] \right\}$   
+$dp[k] = \dfrac{1}{k+1} \left[ (n + 1)^{k+1} - 1 - \displaystyle\sum_{i=0}^{k-1} \binom{k+1}{i} dp[i] \right]$   
 
 ### 원리
 $f(x) = 1^k + 2^k + ... + x^k = a_{k+1} x^{k+1} + a_k x^k + ... + a_0x^0$라 하면 k+2개의 좌표만 알면 보간법으로 계수를 유일하게 결정 가능   
