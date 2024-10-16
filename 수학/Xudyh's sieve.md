@@ -52,6 +52,53 @@ public:
     }
 };
 ```
+
+### Xudyh's sieve
+pfs_fg랑 pfs_g를 생성자에서 람다로 받도록 수정한 형태   
+한 코드에서 여러가지 f에 대해 xudyh's sieve 사용해야되는 문제 있어서 추가함   
+precomputation배열도 직접 생성자로 넣어줘야 함   
+```cpp
+template <typename T, T mod>
+class Xudyh {
+private:
+    vector<T> pfsF; // precomputation
+    map<ll, T> mp; // memoization
+    function<T(ll)> pfs_fg;
+    function<T(ll)> pfs_g;
+
+    T positiveMod(ll x) {
+        return (x % mod + mod) % mod;
+    }
+
+    T pfs_f(ll x) { // f(x) = 
+        if (x < pfsF.size()) return pfsF[x]; // precomputation
+
+        if (mp.count(x)) return mp[x];
+        auto &res = mp[x];
+
+        res = pfs_fg(x); // S_f(N) = (  S_f*g(N) - sum {d = 2~N} g(d)S_f(N/d)  ) / g(1)
+        for (ll i = 2, j; i <= x; i = j + 1) {
+            j = x / (x / i);
+            res -= pfs_f(x / i) * (pfs_g(j) - pfs_g(i - 1) + mod) % mod;
+            res %= mod;
+        }
+        res = (res + mod) % mod;
+        // res /= g(1);
+
+        return res;
+    }
+
+public:
+    Xudyh(const vector<T> &f, function<T(ll)> fg, function<T(ll)> g) : pfs_fg(fg), pfs_g(g) {
+        pfsF.resize(f.size());
+        for (int i = 1; i < pfsF.size(); i++) pfsF[i] = (pfsF[i - 1] + f[i]) % mod;
+    }
+
+    T getSum(ll i, ll j) {
+        return positiveMod(pfs_f(j) - pfs_f(i - 1));
+    }
+};
+```
 ### 시간복잡도
 $O(N^{2/3})$   
 precomputation 안 할 경우 $O(N^{3/4})$   
