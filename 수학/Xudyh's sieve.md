@@ -8,7 +8,7 @@ private:
     vector<T> pfsF; // precomputation
     map<ll, T> mp; // memoization
 
-    T positiveMod(ll x) {
+    T positiveMod(T x) {
         return (x % mod + mod) % mod;
     }
 
@@ -66,7 +66,7 @@ private:
     function<T(ll)> pfs_fg;
     function<T(ll)> pfs_g;
 
-    T positiveMod(ll x) {
+    T positiveMod(T x) {
         return (x % mod + mod) % mod;
     }
 
