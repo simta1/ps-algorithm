@@ -208,12 +208,11 @@ mermaid stateDiagram-v2 사용
   * <span class="gold">[볼록다각형 넓이(G-)](/기하학/Polygon%20Area.md)</span>
   * <span class="">[볼록다각형 판정]</span>
   * <span class="gold">[선분교차판정(G+)](/기하학/선분교차판정.md)</span>
-  * <span class="platinum">[plane sweeping(P-)](/ps-snippet/기하학/Plane%20Sweeping.md)</span>
   * <span class="platinum">[선분교차점 계산(P-)](/기하학/Intersection%20Calculate(LL).md)</span>
   * <span class="platinum">[볼록 껍질(P-)](/기하학/볼록%20껍질.md)</span>
   * <span class="platinum">[가장 먼 두 점 : 회전하는 캘리퍼스(P-)](/기하학/Rotating%20Calipers.md)</span>
   * <span class="platinum">[다각형 내부의 점 판정(P-)](/기하학/PIP.md)</span>
-  * <span class="platinum">[plane sweeping(P+)](/기하학/Plane%20Sweeping.md)</span>
+  * <span class="platinum">[plane sweeping(P-)](/기하학/Plane%20Sweeping.md)</span>
   * <span class="platinum">[볼록 다각형 내부의 점 판정(P+)](/기하학/PIP(convex).md)</span>
   * <span class="platinum">[등적등주 분할(P+)](/기하학/Equalizer.md)</span>
   * <span class="platinum">[가장 가까운 두 점(P+)](/기하학/Closest%20Two%20Points.md)</span>
@@ -262,9 +261,12 @@ mermaid stateDiagram-v2 사용
     * <span class="">[Stern-Brocot 트리]</span> <!-- https://blog.myungwoo.kr/126 --> <!-- https://youngyojun.github.io/secmem/2022/02/18/sigma-sum-stern-brocot/ -->
     * <span class="platinum">[밀러-라빈 소수 판별법(P+)](/수학/MillerRabin.md)</span>
     * <span class="platinum">[폴라드 로(P+)](/수학/PollardRho.md)</span>
-    * <span class="">[이산 로그(P+)]</span>
     * <span class="platinum">[FFT(P+)](/수학/FFT.md)</span>
     * ~~<span class="">[카라츠바]</span>~~
+    * <span class="">[이산 로그(P+)]</span>
+    * <span class="diamond">[이산 제곱근(D-)](/수학/Tonelli-Shanks.md)</span>
+    * <span class="">[이산 k제곱근]</span>
+    * <span class="diamond">[Cornacchia's algorithm(D-)](/수학/Cornacchia.md)</span>
     * <span class="diamond">[Power tower(D-)](/수학/Power%20Tower.md)</span>
     * <span class="">[3진 FFT(D-)]</span> <!-- https://www.acmicpc.net/problem/14882 -->
     * <span class="diamond">[NTT(D-)](/수학/NTT.md)</span>
@@ -279,9 +281,6 @@ mermaid stateDiagram-v2 사용
     * <span class="diamond">[메르텐스 함수(D+)](/수학/메르텐스.md)</span>
     * <span class="diamond">[메르텐스 트릭, Xudyh's sieve (D+)](/수학/Xudyh's%20sieve.md)</span>
     * <span class="">[min_25's sieve]</span>
-    * <span class="diamond">[이산 제곱근(D-)](/수학/Tonelli-Shanks.md)</span>
-    * <span class="">[이산 k제곱근]</span>
-    * <span class="diamond">[Cornacchia's algorithm(D-)](/수학/Cornacchia.md)</span>
     * <span class="">[매트로이드(R-)]</span>
 * ### 게임 이론
   * <span class="">[스프라그-그런디]</span> <!-- (비트셋) -->

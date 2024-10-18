@@ -49,6 +49,8 @@ R rectTotalArea(vector<tuple<T, T, T, T> > &rects, R res) { // tuple -> {x1, y1,
 $O(N Y)$   
 Y는 y좌표 최댓값   
 
+TODO 세그트리로 시간복잡도 더 빠르게 할 수 있음   
+
 ### 구현 주의사항
 
 
