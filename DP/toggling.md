@@ -8,11 +8,11 @@
 */
 
 // 기본 코드
-for (int i = 0; i < n; i++) dp[i] <- f(dp[i - 1])
+for (int i = 1; i < n; i++) dp[i] <- f(dp[i - 1])
 cout << dp[n];
 
 // 토글링 적용
-for (int i = 0; i < n; i++) dp[i & 1] <- f(dp[i - 1 & 1])
+for (int i = 1; i < n; i++) dp[i & 1] <- f(dp[i - 1 & 1])
 return dp[n & 1];
 ```
 ### 공간복잡도
@@ -24,14 +24,14 @@ return dp[n & 1];
 `dp[i & 1] += f(dp[i - 1 & 1])` 꼴이면 이전에 있던 값들을 날려주고 사용해야 함   
 
 ```cpp
-for (int i = 0; i < n; i++) {
+for (int i = 1; i < n; i++) {
     // dp[i & 1] 초기화 필요한지 확인해야 됨
     dp[i & 1] <- f(dp[i - 1 & 1])
 }
 ```
 
 ### 문제
-[]()
+[]()   
 
 ### 참고링크
 https://ps.mjstudio.net/boj-10759   
