@@ -12,7 +12,7 @@ for (int bit = 0; bit < (1 << n); bit++) {
     while (zeroBitFinder != endBit) {
         int newBit = ~zeroBitFinder & (zeroBitFinder + 1);
         int i = 31 - __builtin_clz(newBit);
-        dp[bit | newBit] = best(dp[bit | newBit], merge(dp[bit], func(i, cnt)));
+        dp[bit | newBit] = best(dp[bit | newBit], func(dp[bit], i, cnt));
         zeroBitFinder |= (zeroBitFinder + 1);
     }
 }
@@ -71,7 +71,7 @@ $O(N ~ 2^{N-1})$
 >     while (zeroBitFinder != endBit) {
 >         int newBit = ~zeroBitFinder & (zeroBitFinder + 1);
 >         int i = 31 - __builtin_clz(newBit);
->         dp[bit | newBit] = best(dp[bit | newBit], merge(dp[bit], func(i, cnt)));
+>         dp[bit | newBit] = best(dp[bit | newBit], func(dp[bit], i, cnt));
 >         zeroBitFinder |= (zeroBitFinder + 1);
 >     }
 > }
