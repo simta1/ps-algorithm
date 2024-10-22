@@ -169,14 +169,14 @@ mermaid stateDiagram-v2 사용
   * <span class="gold">[LCS(G-)](/DP/LCS.md)</span>
   * <span class="gold">[배낭 문제(G-)](/DP/Knapsack.md)</span>
   * <span class="gold">[비트셋 배낭(G-)](/DP/Knapsack(Bitset).md)</span> <!-- https://egod1537.tistory.com/entry/Bounded-Knapsack-Problem%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9C%BC%EB%A1%9C-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0 -->
-  * <span class="gold">[비트마스크 DP(G+)](/DP/Bitmask%20DP.md)</span>
   * <span class="">[최단거리 역추적]</span>
+  * <span class="gold">[비트마스크 DP(G+)](/DP/Bitmask%20DP.md)</span>
+  * <span class="platinum">[토글링(P-)](/DP/toggling.md)</span>
   * <span class="platinum">[볼록껍질 최적화(P+)](/DP/CHT.md)</span>
   * <span class="platinum">[분할정복 최적화(P+)](/DP/DnC.md)</span>
   * <span class="diamond">[SOS DP(D-)](/DP/SOS%20DP.md)</span>
   * <span class="">[히르쉬버그(D+)]</span>
   * <span class="">[Connection Profile DP]</span>
-  * <span class="">[토글링]</span>
   * <span class="">[크누스 최적화]</span>
   * <span class="">[단조큐 최적화]</span>
   * <span class="">[Slope trick(D-)]</span>
@@ -211,8 +211,8 @@ mermaid stateDiagram-v2 사용
   * <span class="platinum">[선분교차점 계산(P-)](/기하학/Intersection%20Calculate(LL).md)</span>
   * <span class="platinum">[볼록 껍질(P-)](/기하학/볼록%20껍질.md)</span>
   * <span class="platinum">[가장 먼 두 점 : 회전하는 캘리퍼스(P-)](/기하학/Rotating%20Calipers.md)</span>
-  * <span class="platinum">[다각형 내부의 점 판정(P-)](/기하학/PIP.md)</span>
   * <span class="platinum">[plane sweeping(P-)](/기하학/Plane%20Sweeping.md)</span>
+  * <span class="platinum">[다각형 내부의 점 판정(P-)](/기하학/PIP.md)</span>
   * <span class="platinum">[볼록 다각형 내부의 점 판정(P+)](/기하학/PIP(convex).md)</span>
   * <span class="platinum">[등적등주 분할(P+)](/기하학/Equalizer.md)</span>
   * <span class="platinum">[가장 가까운 두 점(P+)](/기하학/Closest%20Two%20Points.md)</span>
@@ -253,6 +253,7 @@ mermaid stateDiagram-v2 사용
     * <span class="gold">[harmonic lemma(G-)](/수학/Harmonic%20Lemma.md)</span>
     * <span class="gold">[p-지수(G+)](/수학/p-지수.md)</span>
     * <span class="gold">[확장 유클리드 호제법, 모듈러 역원(G+)](/수학/ExtendedGCD,%20Modular%20Inverse.md)</span>
+    * <span class="">[모듈러 역원 값 여러개 계산]</span> <!-- https://codeforces.com/blog/entry/83075 -->
     * <span class="gold">[오일러 파이 함수(G+)](/수학/Phi%20Function.md)</span>
     * <span class="platinum">[중국인의 나머지 정리(P-)](/수학/CRT.md)</span>
     * <span class="">[Garner's algorithm]</span>
