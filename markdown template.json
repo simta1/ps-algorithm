@@ -62,5 +62,21 @@
 			"### 참고링크"
 		],
 		"description": "ps-snippet geometry template"
+	},
+	"ps-snippet folded code template": {
+		"prefix": "SNIP folded_code",
+		"body": [
+			"### [선행 알고리즘 이름](하이퍼링크 주소)",
+			"<details>",
+			"<summary>fold열고 닫는 버튼에 써지는 문구</summary>",
+			"",
+			"```cpp",
+			"",
+			"```",
+			"</details>",
+			"",
+			"### 알고리즘 이름"
+		],
+		"description": "ps-snippet folded code template"
 	}
 }
