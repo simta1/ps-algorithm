@@ -201,11 +201,11 @@ mermaid stateDiagram-v2 사용
   <!-- * <span class="">[circle 볼록 껍질(R)]</span> -->
   <!-- https://www.acmicpc.net/problem/27957 -->
   * <span class="additional">[기하학 헤더](/기하학/Geometry%20Header.md)</span>
-    * <span class="gold">[외적, CCW(G-)]</span>
-    * <span class="gold">[거리 계산 : point-point, line-point]</span>
-    * <span class="gold">[넓이 계산 : 삼각형 신발끈, 사각형 신발끈, 헤론, 브라마굽타, 활꼴]</span>
-    * <span class="gold">[제2 cos]</span>
-    * <span class="gold">[좌표 계산 : 2d회전, 3d회전]</span>
+    * <span class="">[외적, CCW(G-)]</span>
+    * <span class="">[거리 계산 : point-point, line-point]</span>
+    * <span class="">[넓이 계산 : 삼각형 신발끈, 사각형 신발끈, 헤론, 브라마굽타, 활꼴]</span>
+    * <span class="">[제2 cos]</span>
+    * <span class="">[좌표 계산 : 2d회전, 3d회전]</span>
   * <span class="gold">[볼록다각형 넓이(G-)](/기하학/Polygon%20Area.md)</span>
   * <span class="">[볼록다각형 판정]</span>
   * <span class="gold">[선분교차판정(G+)](/기하학/선분교차판정.md)</span>

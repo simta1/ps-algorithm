@@ -109,13 +109,26 @@ pll merge(ll a, ll b, ll c, ll d) { // tanT1 = a / b, tanT2 = c / d, tan(T1 + T2
 ```cpp
 ```
 
-### 회전변환
+### 회전이동
 ```cpp
 void rotate2D(ld &x, ld &y, ld theta) { // 반시계방향으로 theta만큼 회전
     tie(x, y) = pair<ld, ld>{cos(theta) * x + sin(theta) * y, -sin(theta) * x + cos(theta) * y};
 }
 ```
 <!-- TODO rotate3D추가해야 됨, 3D에서 z에 아무값넣어보내면 2D로도 쓸수있으니 3D만들고 나서 2D삭제하면 될 듯 -->
+
+### 대칭이동
+```cpp
+Point<ld> reflectPL(const Point<ld> &p, const Point<ld> &p1, const Point<ld> &p2) { // p의 L(line, p1p2) 기준 대칭이동
+    ld a = p2.y - p1.y;
+    ld b = p1.x - p2.x;
+    ld c = a * p.y - b * p.x;
+    ld d = a * p1.x + b * p1.y;
+    ld hx = (-b * c + a * d) / (a * a + b * b); // 수선의 발
+    ld hy = (a * c + b * d) / (a * a + b * b);
+    return Point<ld>{2 * hx - p.x, 2 * hy - p.y};
+}
+```
 
 ### 구현 주의사항
 좌표들을 곱셈하기 때문에 overflow 고려할 땐 좌표의 최대값의 제곱을 기준으로 판단
