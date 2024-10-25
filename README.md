@@ -149,6 +149,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[일반 매칭(D+)]</span>
     * <span class="">[Stoer-Wagner Algorithm]</span>
     * <span class="">[Gomory-Hu Tree]</span>
+    <!-- * <span class="">[Successive Shortest Path Algorithm]</span> --> <!-- https://koosaga.com/289 --> <!-- 다이아1 문제 https://www.acmicpc.net/problem/23181 -->
     <!-- * <span class="">[홀의 결혼 정리]</span> -->
   * #### 트리
     * <span class="platinum">[최소 공통 조상(P-)](/그래프%20이론/트리/LCA.md)</span>
@@ -208,7 +209,7 @@ mermaid stateDiagram-v2 사용
   * <span class="gold">[볼록다각형 넓이(G-)](/기하학/Polygon%20Area.md)</span>
   * <span class="">[볼록다각형 판정]</span>
   * <span class="gold">[선분교차판정(G+)](/기하학/선분교차판정.md)</span>
-  * <span class="platinum">[선분교차점 계산(P-)](/기하학/Intersection%20Calculate(LL).md)</span>
+  * <span class="platinum">[선분교차점 계산(P-)](/기하학/선분교차점%20계산.md)</span>
   * <span class="platinum">[볼록 껍질(P-)](/기하학/볼록%20껍질.md)</span>
   * <span class="platinum">[가장 먼 두 점 : 회전하는 캘리퍼스(P-)](/기하학/Rotating%20Calipers.md)</span>
   * <span class="platinum">[plane sweeping(P-)](/기하학/Plane%20Sweeping.md)</span>
