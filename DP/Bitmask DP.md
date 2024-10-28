@@ -19,6 +19,30 @@ for (int bit = 0; bit < (1 << n); bit++) {
 
 cout << dp.back();
 ```
+### Bitmask DP 최단거리 역추적
+```cpp
+function<void(int)> trace = [&](int bit) {
+    cout << bit << " ";
+    if (!bit) return;
+    
+    int cnt = __builtin_popcount(bit);
+    int oneBitFinder = bit;
+    while (oneBitFinder) {
+        int oneBit = oneBitFinder & -oneBitFinder;
+        int i = 31 - __builtin_clz(oneBit);
+
+        if (check(dp[bit ^ oneBit], i, cnt)) {
+            trace(bit ^ oneBit);
+            return;
+        }
+        
+        oneBitFinder &= (oneBitFinder - 1);
+    }
+
+    assert(false);
+};
+```
+
 ### 시간복잡도
 $O(N ~ 2^{N-1})$   
 
@@ -154,3 +178,55 @@ for (int bit = 0; bit < (1 << n); bit++) {
 ll p = dp.back()[0], q = 1;
 ```
 k로 나눈 나머지를 저장하는 차원이 하나 더 존재하므로 zeroBitFinder 순회문 안에 추가 반복문 필요
+
+### [In Search of the Lost Array](https://www.acmicpc.net/problem/32457)
+```cpp
+vector dp(1 << b.size(), vector<bool>(101));
+fill(dp[0].begin() + 1, dp[0].end(), true);
+
+int endBit = dp.size() - 1;
+for (int bit = 0; bit < dp.size(); bit++) {
+    int zeroBitFinder = bit;
+    while (zeroBitFinder != endBit) {
+        int newBit = ~zeroBitFinder & (zeroBitFinder + 1);
+        int i = 31 - __builtin_clz(newBit);
+        
+        for (int x = 1; x <= 100; x++) if (b[i] % x == 0 && b[i] <= 100 * x) {
+            dp[bit | newBit][b[i] / x] = dp[bit | newBit][b[i] / x] | dp[bit][x];
+        }
+        
+        zeroBitFinder |= (zeroBitFinder + 1);
+    }
+}
+
+function<void(int, int)> trace = [&](int bit, int x) {
+    assert (dp[bit][x]);
+
+    cout << x << " ";
+    if (!bit) return;
+    
+    int oneBitFinder = bit;
+    while (oneBitFinder) {
+        int oneBit = oneBitFinder & -oneBitFinder;
+        int i = 31 - __builtin_clz(oneBit);
+
+        if (b[i] % x == 0 && b[i] <= 100 * x && dp[bit ^ oneBit][b[i] / x]) {
+            trace(bit ^ oneBit, b[i] / x);
+            return;
+        }
+        
+        oneBitFinder &= oneBitFinder - 1;
+    }
+
+    assert(false);
+};
+
+for (int x = 1; x <= 100; x++) if (dp.back()[x]) {
+    cout << "Yes\n";
+    trace(dp.size() - 1, x);
+    return 0;
+}
+```
+
+최단거리 역추적 필요한 문제임   
+문제 입력상 `1 << n` 대신 `1 << n - 1`사용해야 되서 같은 의미인 `dp.size()`로 대체해서 사용했음   
