@@ -170,7 +170,7 @@ mermaid stateDiagram-v2 사용
   * <span class="gold">[LCS(G-)](/DP/LCS.md)</span>
   * <span class="gold">[배낭 문제(G-)](/DP/Knapsack.md)</span>
   * <span class="gold">[비트셋 배낭(G-)](/DP/Knapsack(Bitset).md)</span> <!-- https://egod1537.tistory.com/entry/Bounded-Knapsack-Problem%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9C%BC%EB%A1%9C-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0 -->
-  * <span class="">[최단거리 역추적]</span>
+  * <span class="">[최단거리 역추적](/DP/DP%20역추적.md)</span>
   * <span class="gold">[비트마스크 DP(G+)](/DP/Bitmask%20DP.md)</span>
   * <span class="platinum">[토글링(P-)](/DP/toggling.md)</span>
   * <span class="platinum">[볼록껍질 최적화(P+)](/DP/CHT.md)</span>
@@ -198,8 +198,6 @@ mermaid stateDiagram-v2 사용
   * <span class="">[접미사 트리(R-)]</span>
 * ### 기하학
   <!-- * ~~<span class="">[반공간 교집합]</span>~~ -->
-  <!-- * <span class="">[circle 볼록 껍질(R)]</span> -->
-  <!-- https://www.acmicpc.net/problem/27957 -->
   * <span class="additional">[기하학 헤더](/기하학/Geometry%20Header.md)</span>
     * <span class="">[외적, CCW(G-)]</span>
     * <span class="">[거리 계산 : point-point, line-point]</span>
@@ -225,6 +223,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[그린 정리(D+)]</span>
   * <span class="">[델로네 삼각분할(R-)]</span>
   * <span class="">[보로노이 다이어그램(R-)]</span>
+  * <span class="">[disk convex hull(R)]</span> <!-- https://www.acmicpc.net/problem/27957 -->
 * ### [수학](/수학/개념%20정리.md)
   * #### 조합론, 수열
     * <span class="silver">[nCr, 파스칼의 삼각형(S+)](/수학/조합론/Combination(DP).md)</span> <!-- https://justicehui.github.io/medium-algorithm/2024/02/10/combinatorics/ -->
