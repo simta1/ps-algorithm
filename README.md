@@ -250,7 +250,8 @@ mermaid stateDiagram-v2 사용
     * <span class="silver">[에라토스테네스의 체(S+)](/수학/에라토스테네스의%20체.md)</span>
     * <span class="gold">[Linear sieve 소수 판별(G-)](/수학/Linear%20Sieve.md)</span>
     * <span class="gold">[약수 리스트 계산(G-)](/수학/약수%20리스트%20계산.md)</span>
-    * <span class="gold">[harmonic lemma(G-)](/수학/Harmonic%20Lemma.md)</span>
+    * <span class="gold">[harmonic lemma 조화 수열 계산(G+)](/수학/Harmonic%20Lemma.md)</span>
+    * <span class="gold">[harmonic lemma 배수 개수 계산(G+)](/수학/배수%20개수%20계산.md)</span>
     * <span class="gold">[p-지수(G+)](/수학/p-지수.md)</span>
     * <span class="gold">[확장 유클리드 호제법, 모듈러 역원(G+)](/수학/ExtendedGCD,%20Modular%20Inverse.md)</span>
     * <span class="">[모듈러 역원 값 여러개 계산]</span> <!-- https://codeforces.com/blog/entry/83075 -->
