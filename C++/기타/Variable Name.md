@@ -37,6 +37,9 @@ vector<int> cnt(*max_element(v.begin(), v.end()) - offset + 1);
 for (auto &e : v) ++cnt[e - offset];
 ```
 
+### mask
+비트마스킹할 때 비트 저장용 변수   
+
 ### pos[]
 배열의 원소가 어떤 인덱스에 위치하는지 역으로 저장. 인덱스의 역함수 느낌.   
 ```cpp
