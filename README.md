@@ -190,8 +190,8 @@ mermaid stateDiagram-v2 사용
   * <span class="platinum">[KMP(P-)](/문자열/KMP.md)</span>
   * <span class="platinum">[아호 코라식(P+)](/문자열/Aho-Corasick.md)</span>
   * ~~<span class="">[bitap algorithm]</span>~~
-  * <span class="">[해싱]</span>
-  * <span class="">[라빈 카프]</span>
+  * <span class="platinum">[롤링 해시(P-)](/문자열/롤링%20해시.md)</span>
+  * <span class="">[라빈 카프(P-)]</span>
   * <span class="platinum">[접미사 배열과 lcp 배열(P+)](/문자열/Suffix%20and%20LCP%20Array.md)</span>
   * <span class="">[Z algorithm]</span>
   * <span class="diamond">[회문 트리(D+)](/문자열/회문%20트리.md)</span>
