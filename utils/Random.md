@@ -8,10 +8,7 @@ class Random {
     
 public:
     Random() : engine(chrono::system_clock::now().time_since_epoch().count()), distribution(MIN, MAX) {}
-
-    T operator()() {
-        return distribution(engine);
-    }
+    T operator()() { return distribution(engine); }
 };
 ```
 ### 시간복잡도 
