@@ -341,7 +341,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[코드 여러줄 이어쓰기]</span>
   * <span class="">[리터럴 여러줄 이어쓰기]</span>
 * ### 함수
-  * <span class="">[수학관련]</span> <!-- atan, atan2 추가하기 -->
+  * <span class="information">[수학관련](/C++/함수/math.md)</span>
   * <span class="">[배열관련]</span> <!-- copy doubling -->
   * <span class="">[constexpr, static_assert]</span> <!-- if constexpr 등등도 포함 -->
   * <span class="information">[multiset](/C++/함수/multiset.md)</span>
