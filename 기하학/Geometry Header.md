@@ -36,6 +36,16 @@ ccw 쓸 때 좌표 최대값의 제곱의 8배정도까지 나올 수 있으니 
 왠만하면 int는 안쓰는 게 나은 듯, 왠만하면 `ll`이나 `ld`사용하는 걸 추천   
 
 ### Distance
+<details>
+<summary>식 정리 과정</summary>
+
+p1p2와 p3 사이 거리(수선의 발이 선분 위에 있을 때)   
+
+$(y_2 - y_1)(x - x_1) - (x_2 - x_1)(y - y_1) = 0$   
+
+$(x_3, y_3) \text{에서 거리} = \dfrac{|(y_2 - y_1)(x_3 - x_1) - (x_2 - x_1)(y_3 - y_1)|}{\sqrt{(y_2 - y_1) ^ 2 + (x_2 - x_1) ^ 2}} = \dfrac{|cp(p3 - p1, p2 - p1)|}{dist(p_1, p_2)}$
+</details>
+
 ```cpp
 template <typename T>
 T distPP(const Point<T> &p1, const Point<T> &p2) { // distance from P(point) to P(point)
@@ -171,9 +181,3 @@ void rotate2D(ld &x, ld &y, ld theta) { // 반시계방향으로 theta만큼 회
 ### 문제
 [CCW](https://www.acmicpc.net/problem/11758) - CCW   
 [쓰레기 슈트](https://www.acmicpc.net/problem/4225) - distance   
-
-### 원리
-p1p2와 p3 사이 거리(수선의 발이 선분 위에 있을 때)   
-$(y_2 - y_1)(x - x_1) - (x_2 - x_1)(y - y_1) = 0$   
-$(x_3, y_3)$에서 거리
-$\dfrac{|(y_2 - y_1)(x_3 - x_1) - (x_2 - x_1)(y_3 - y_1)|}{\sqrt{(y_2 - y_1) ^ 2 + (x_2 - x_1) ^ 2}} = \dfrac{|cp(p3 - p1, p2 - p1)|}{dist(p_1, p_2)}$
