@@ -130,39 +130,14 @@ c = -a * x1 - b * y1;
 <summary>식 정리 과정</summary>
 
 (X, Y)에서 (x1, y1), (x2, y2)을 지나는 직선에 수선의 발 내린다고 하면   
-$$
-\left\{
-\begin{array}{l}
-\dfrac{y_2 - y_1}{x_2 - x_1} \cdot \dfrac{y - Y}{x - X} = -1 \\[10pt]
-\dfrac{y - y_1}{x - x_1} = \dfrac{y_2 - y_1}{x_2 - x_1}
-\end{array}
-\right.
-\quad \Rightarrow \quad
-\left\{
-\begin{array}{l}
-(y - Y)(y_2 - y_1) + (x - X)(x_2 - x_1) = 0 \\[10pt]
-(y_2 - y_1)(x - x_1) + (x_1 - x_2)(y - y_1) = 0
-\end{array}
-\right.
-$$
+
+$\dfrac{y_2 - y_1}{x_2 - x_1} \cdot \dfrac{y - Y}{x - X} = -1 \quad \Rightarrow \quad (y - Y)(y_2 - y_1) + (x - X)(x_2 - x_1) = 0$   
+
+$\dfrac{y - y_1}{x - x_1} = \dfrac{y_2 - y_1}{x_2 - x_1} \quad \Rightarrow \quad (y_2 - y_1)(x - x_1) + (x_1 - x_2)(y - y_1) = 0$   
 
 $let) \quad a = y_2 - y_1, \quad b = x_1 - x_2, \quad c = a Y - b X, \quad d = a x_1 + b y_1$   
 
-$$
-\left\{
-\begin{array}{l}
--bx + ay = c \\[10pt]
-ax + by = d
-\end{array}
-\right.
-\quad \Rightarrow \quad \therefore
-\left\{
-\begin{array}{l}
-x = \dfrac{-bc + ad}{a^2 + b^2} \\[10pt]
-y = \dfrac{ac + bd}{a^2 + b^2}
-\end{array}
-\right.
-$$
+$-bx + ay = c, \quad ax + by = d \quad \Rightarrow \quad \therefore x = \dfrac{-bc + ad}{a^2 + b^2}, \quad y = \dfrac{ac + bd}{a^2 + b^2}$   
 </details>
 
 ```cpp
@@ -201,4 +176,4 @@ void rotate2D(ld &x, ld &y, ld theta) { // 반시계방향으로 theta만큼 회
 p1p2와 p3 사이 거리(수선의 발이 선분 위에 있을 때)   
 $(y_2 - y_1)(x - x_1) - (x_2 - x_1)(y - y_1) = 0$   
 $(x_3, y_3)$에서 거리
-$\frac{|(y_2 - y_1)(x_3 - x_1) - (x_2 - x_1)(y_3 - y_1)|}{\sqrt{(y_2 - y_1) ^ 2 + (x_2 - x_1) ^ 2}} = \frac{|cp(p3 - p1, p2 - p1)|}{dist(p_1, p_2)}$
+$\dfrac{|(y_2 - y_1)(x_3 - x_1) - (x_2 - x_1)(y_3 - y_1)|}{\sqrt{(y_2 - y_1) ^ 2 + (x_2 - x_1) ^ 2}} = \dfrac{|cp(p3 - p1, p2 - p1)|}{dist(p_1, p_2)}$
