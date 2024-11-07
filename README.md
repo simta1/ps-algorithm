@@ -147,7 +147,7 @@ mermaid stateDiagram-v2 사용
     * <span class="diamond">[서큘레이션(D-)](/그래프%20이론/네트워크%20플로우/서큘레이션.md)</span>
     * <span class="diamond">[헝가리안(D-)](/그래프%20이론/네트워크%20플로우/헝가리안.md)</span>
     * <span class="">[일반 매칭(D+)]</span>
-    * <span class="">[Stoer-Wagner Algorithm]</span>
+    * <span class="">[Stoer-Wagner Algorithm]</span> <!-- https://justicehui.github.io/hard-algorithm/2019/11/28/global-min-cut/ -->
     * <span class="">[Gomory-Hu Tree]</span>
     <!-- * <span class="">[Successive Shortest Path Algorithm]</span> --> <!-- https://koosaga.com/289 --> <!-- 다이아1 문제 https://www.acmicpc.net/problem/23181 -->
     <!-- * <span class="">[홀의 결혼 정리]</span> -->
@@ -187,17 +187,22 @@ mermaid stateDiagram-v2 사용
 <!-- RBS(Regular Bracket Sequence) -->
   * <span class="gold">[트라이(G+)](/문자열/Trie.md)</span>
   * <span class="platinum">[매내처(P-)](/문자열/Manacher.md)</span>
+  * <span class="platinum">[롤링 해시(P-)](/문자열/롤링%20해시.md)</span>
+  * <span class="platinum">[라빈 카프(P-)](/문자열/Rabin-Karp.md)</span>
   * <span class="platinum">[KMP(P-)](/문자열/KMP.md)</span>
   * <span class="platinum">[아호 코라식(P+)](/문자열/Aho-Corasick.md)</span>
   * ~~<span class="">[bitap algorithm]</span>~~
-  * <span class="platinum">[롤링 해시(P-)](/문자열/롤링%20해시.md)</span>
-  * <span class="platinum">[라빈 카프(P-)](/문자열/Rabin-Karp.md)</span>
   * <span class="platinum">[접미사 배열과 lcp 배열(P+)](/문자열/Suffix%20and%20LCP%20Array.md)</span>
   * <span class="">[Z algorithm]</span>
   * <span class="diamond">[회문 트리(D+)](/문자열/회문%20트리.md)</span>
   * <span class="">[접미사 트리(R-)]</span>
 * ### 기하학
   <!-- * ~~<span class="">[반공간 교집합]</span>~~ -->
+  <!-- * <span class="">[3D convex hull]</span>
+  * <span class="">[dynamic convex hull]</span>
+  * <span class="">[polygon raycast]</span>
+  molamola 팀노트 https://zigui.tistory.com/5 -->
+  <!-- https://zigui.tistory.com/34 -->
   * <span class="additional">[기하학 헤더](/기하학/Geometry%20Header.md)</span>
     * <span class="">[외적, CCW(G-)]</span>
     * <span class="">[거리 계산 : point-point, line-point]</span>
@@ -222,7 +227,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[KD tree]</span> <!-- https://algoshitpo.github.io/2020/02/09/kdtree/ -->
   * <span class="">[그린 정리(D+)]</span>
   * <span class="">[델로네 삼각분할(R-)]</span>
-  * <span class="">[보로노이 다이어그램(R-)]</span>
+  * <span class="">[보로노이 다이어그램(R-)]</span> <!-- https://zigui.tistory.com/32 -->
   * <span class="">[disk convex hull(R)]</span> <!-- https://www.acmicpc.net/problem/27957 -->
 * ### [수학](/수학/개념%20정리.md)
   * #### 조합론, 수열
@@ -273,6 +278,8 @@ mermaid stateDiagram-v2 사용
     * <span class="">[3진 FFT(D-)]</span> <!-- https://www.acmicpc.net/problem/14882 -->
     * <span class="diamond">[NTT(D-)](/수학/NTT.md)</span>
     * <span class="">[FFT 나눗셈]</span>
+    * <span class="">[simplex]</span>
+    * <span class="">[LP]</span>
     * <span class="">[xor convolution]</span>
     * <span class="">[FFT 응용]</span> <!-- https://hyperbolic.tistory.com/4 -->
     * <span class="">[online FFT]</span>
@@ -426,6 +433,10 @@ https://cocoachan.tistory.com/
 
 pentagon03   
 https://howtoliveworldnice.tistory.com/category/Algorithm/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%9D%B4%EB%A1%A0%20%EC%A0%95%EB%A6%AC
+
+(기하학)
+zlzmsrhak
+https://zigui.tistory.com/34
 
 <!-- # 알고리즘 순서 { -->
   ```mermaid
