@@ -48,12 +48,12 @@ $(x_3, y_3) \text{에서 거리} = \dfrac{|(y_2 - y_1)(x_3 - x_1) - (x_2 - x_1)(
 
 ```cpp
 template <typename T>
-T distPP(const Point<T> &p1, const Point<T> &p2) { // distance from P(point) to P(point)
+inline ld distPP(const Point<T> &p1, const Point<T> &p2) { // distance from P(point) to P(point)
     return sqrtl((p2.x - p1.x) * (p2.x - p1.x) + (p2.y - p1.y) * (p2.y - p1.y));
 }
 
 template <typename T>
-T distLP(const Point<T> &p1, const Point<T> &p2, const Point<T> &p3) { // distance from L(line, p1p2) to P(point, p3)
+ld distLP(const Point<T> &p1, const Point<T> &p2, const Point<T> &p3) { // distance from L(line, p1p2) to P(point, p3)
     assert (!(p1 == p2)); // p1 != p2
     return crossProduct(p2 - p1, p3 - p1) / distPP(p1, p2);
 }
