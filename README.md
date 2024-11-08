@@ -143,8 +143,7 @@ mermaid stateDiagram-v2 사용
     * <span class="platinum">[이분 매칭: Hopcraft-Karp(P-)](/그래프%20이론/네트워크%20플로우/Hopcroft-Karp.md)</span>
     * ~~<span class="">[최대유량: Push-Relabel (P-)]</span>~~
     * <span class="platinum">[최소 비용 최대 유량(P+)](/그래프%20이론/네트워크%20플로우/MCMF.md)</span>
-    * <span class="">[L-R flow]</span>
-    * <span class="diamond">[서큘레이션(D-)](/그래프%20이론/네트워크%20플로우/서큘레이션.md)</span>
+    * <span class="diamond">[서큘레이션, L-R flow(D-)](/그래프%20이론/네트워크%20플로우/서큘레이션.md)</span>
     * <span class="diamond">[헝가리안(D-)](/그래프%20이론/네트워크%20플로우/헝가리안.md)</span>
     * <span class="">[일반 매칭(D+)]</span>
     * <span class="">[Stoer-Wagner Algorithm]</span> <!-- https://justicehui.github.io/hard-algorithm/2019/11/28/global-min-cut/ -->
@@ -305,6 +304,7 @@ mermaid stateDiagram-v2 사용
   * <span class="silver">[순열 사이클 분할(S+)](/기타/순열%20사이클%20분할.md)</span>
   * <span class="">[모노톤 스택]</span>
   * <span class="">[모노톤 큐]</span>
+  * <span class="">[XOR Hashing]</span> <!-- https://codeforces.com/blog/entry/85900 -->
   * <span class="">[누적합, imos]</span>
   * <span class="">[Barrett reduction]</span>
   * <span class="">[Gray code](/기타/Gray%20code.md)</span>
@@ -434,8 +434,8 @@ https://cocoachan.tistory.com/
 pentagon03   
 https://howtoliveworldnice.tistory.com/category/Algorithm/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%9D%B4%EB%A1%A0%20%EC%A0%95%EB%A6%AC
 
-(기하학)
-zlzmsrhak
+기하학   
+zigui   
 https://zigui.tistory.com/34
 
 <!-- # 알고리즘 순서 { -->
