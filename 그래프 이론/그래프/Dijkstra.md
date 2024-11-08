@@ -1,24 +1,26 @@
 [카테고리](/README.md)
 ## Dijkstra
 ```cpp
-template <typename T>
+template <bool directed, typename T>
 class Graph {
 private:
     const T INF;
+    int n;
     vector<vector<pair<int, T> > > adj;
-    vector<T> dist;
 
 public:
-    Graph(int n) : INF(numeric_limits<T>::max()), adj(n + 1), dist(n + 1) {}
+    Graph(int n) : INF(numeric_limits<T>::max()), n(n), adj(n + 1) {}
 
     void addEdge(int u, int v, T w) { // 1-based
         adj[u].push_back({v, w});
-        // adj[v].push_back({u, w});
+        if constexpr (!directed) adj[v].push_back({u, w});
     }
 
-    void dijkstra(int start) { // 1-based
-        fill(dist.begin(), dist.end(), INF);
+    pair<vector<T>, vector<int> > dijkstra(int start) { // 1-based
+        vector<T> dist(n + 1, INF);
         dist[start] = 0;
+
+        vector<int> path(n + 1, -1);
 
         priority_queue<pair<T, int>, vector<pair<T, int> >, greater<pair<T, int> > > pq;
         pq.push({dist[start], start});
@@ -29,16 +31,25 @@ public:
 
             if (distance > dist[cur]) continue;
 
-            for (auto &[next, cost] : adj[cur]) if (dist[next] > dist[cur] + cost) {
+            for (auto [next, cost] : adj[cur]) if (dist[next] > dist[cur] + cost) {
                 dist[next] = dist[cur] + cost;
                 pq.push({dist[next], next});
+                path[next] = cur;
             }
         }
+        
+        return {dist, path};
     }
-
-    T getDist(int end) { // 1-based
-        return dist[end];
-    }
+};
+```
+### 경로 역추적
+```cpp
+auto trace = [&path](int start, int end) {
+    vector<int> res;
+    for (int cur = end; cur != start; cur = path[cur]) res.push_back(cur);
+    res.push_back(start);
+    reverse(res.begin(), res.end());
+    return res;
 };
 ```
 ### 시간복잡도 
@@ -52,4 +63,5 @@ $O(E~logV)$
 
 ### 문제
 [최소비용 구하기](https://www.acmicpc.net/problem/1916)   
-[거의 최단 경로](https://www.acmicpc.net/problem/5719) - 다익스트라 + 최단경로 역추적
+[최소비용 구하기](https://www.acmicpc.net/problem/11779) - 경로 역추적   
+[거의 최단 경로](https://www.acmicpc.net/problem/5719) - 간선 활성화/비활성화
