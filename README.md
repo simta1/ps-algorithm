@@ -119,23 +119,26 @@ mermaid stateDiagram-v2 사용
     * <span class="gold">[위상 정렬(G+)](/그래프%20이론/그래프/Topological%20Sort.md)</span>
     * <span class="">[kth 최단 경로]</span>
     * <span class="platinum">[강한 연결 요소(P-)](/그래프%20이론/그래프/SCC.md)</span>
-    * <span class="platinum">[2-SAT(P-)](/그래프%20이론/그래프/2-SAT.md)</span>
-    * <span class="platinum">[오일러 회로(P-)](/그래프%20이론/그래프/오일러%20회로.md)</span>
     * <span class="platinum">[단절점(P-)](/그래프%20이론/그래프/단절점.md)</span>
     * <span class="platinum">[단절선(P-)](/그래프%20이론/그래프/단절선.md)</span>
     * <span class="">[이중 연결 요소]</span>
+    * <span class="platinum">[2-SAT(P-)](/그래프%20이론/그래프/2-SAT.md)</span>
+    * <span class="platinum">[오일러 회로(P-)](/그래프%20이론/그래프/오일러%20회로.md)</span>
     * <span class="">[블록 컷 트리]</span>
     * <span class="">[선인장]</span>
     * <span class="">[_2th MST(D-)_]</span>
     * <span class="">[쌍대 그래프(D-)]</span>
     * <span class="">[도미네이터 트리(D-)]</span>
     * <span class="">[오프라인 동적 연결성 판정]</span>
-    * <span class="diamond">[유향 MST(D+)](/그래프%20이론/그래프/DMST.md)</span>
+    * <span class="">[평면 그래프]</span>
+    * <span class="">[쌍대 그래프]</span>
     * <span class="">[현 그래프(D+)]</span>
+    * <span class="diamond">[유향 MST(D+)](/그래프%20이론/그래프/DMST.md)</span>
     * <span class="ruby">[offline incremental SCC(R-)](/그래프%20이론/그래프/Offline%20Incremental%20SCC.md)</span>
     <!-- * <span class="">[현 그래프 판정]</span> -->
     <!-- * <span class="">[Perfect Elimination Ordering]</span> -->
-    <!-- * <span class="">[_최소 차수 MST_]</span> -->
+    <!-- * <span class="">[최소 차수 MST]</span> -->
+    <!-- * <span class="">[Euclidean MST]</span> -->
   * #### [네트워크 플로우](/그래프%20이론/네트워크%20플로우/개념%20정리.md)
     * <span class="platinum">[이분 매칭(P-)](/그래프%20이론/네트워크%20플로우/이분매칭.md)</span>
     * ~~<span class="platinum">[최대유량: Edmonds-Karp (P-)](/그래프%20이론/네트워크%20플로우/최대%20유량.md)</span>~~
@@ -161,14 +164,14 @@ mermaid stateDiagram-v2 사용
     * <span class="">[탑 트리(R-)]</span>
 * ### [DP](/DP/Top-Down%20DP.md)
   <!-- * <span class="">[배낭 문제(G-)]</span> -->
-  <!-- 비트셋 배낭 https://www.acmicpc.net/problem/16072 -->
-  <!-- * <span class="">[비트셋 LCS]</span> -->
   <!-- * <span class="">[비트 집합]</span> -->
+  <!-- https://egod1537.tistory.com/entry/Bounded-Knapsack-Problem%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9C%BC%EB%A1%9C-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0 -->
   * <span class="silver">[Kadane algorithm(S+)](/DP/Kadane%20Algorithm.md)</span>
   * <span class="silver">[LIS(S+)](/DP/LIS.md)</span>
   * <span class="gold">[LCS(G-)](/DP/LCS.md)</span>
+  * <span class="">[비트셋 LCS]</span>
   * <span class="gold">[배낭 문제(G-)](/DP/Knapsack.md)</span>
-  * <span class="gold">[비트셋 배낭(G-)](/DP/Knapsack(Bitset).md)</span> <!-- https://egod1537.tistory.com/entry/Bounded-Knapsack-Problem%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9C%BC%EB%A1%9C-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0 -->
+  * <span class="gold">[비트셋 배낭(G-)](/DP/Knapsack(Bitset).md)</span>
   * <span class="">[최단거리 역추적](/DP/DP%20역추적.md)</span>
   * <span class="gold">[비트마스크 DP(G+)](/DP/Bitmask%20DP.md)</span>
   * <span class="platinum">[토글링(P-)](/DP/toggling.md)</span>
@@ -375,6 +378,9 @@ mermaid stateDiagram-v2 사용
   * <span class="information">[코딩 아이디어](/C++/기타/Idea.md)</span>
   <!-- https://xy-plane.tistory.com/11 -->
 # 참고링크
+백준 알고리즘 분류   
+https://www.acmicpc.net/problem/tags   
+
 tlsdydaud1   
 https://00ad-8e71-00ff-055d.tistory.com/3   
 
@@ -389,15 +395,12 @@ jin814
 https://blog.naver.com/jinhan814/222439886998   
 https://blog.naver.com/PostView.naver?blogId=jinhan814&logNo=222689836982&parentCategoryNo=&categoryNo=6&viewDate=&isShowPopularPosts=false&from=postView   
 
+정수론   
 https://ahgus89.github.io/
 
 kcm1700   
 https://algospot.com/wiki/read/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98_%EB%8C%80%ED%9A%8C%EC%97%90_%ED%95%84%EC%9A%94%ED%95%9C_%EC%88%98%ED%95%99   
-
-https://algospot.com/wiki/read/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98_%EB%8C%80%ED%9A%8C%EC%97%90_%ED%95%84%EC%9A%94%ED%95%9C_%EA%B8%B0%ED%95%98
-
-백준 알고리즘 분류   
-https://www.acmicpc.net/problem/tags   
+https://algospot.com/wiki/read/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98_%EB%8C%80%ED%9A%8C%EC%97%90_%ED%95%84%EC%9A%94%ED%95%9C_%EA%B8%B0%ED%95%98   
 
 선형대수학   
 https://tistory.joonhyung.xyz/18   
@@ -437,6 +440,9 @@ https://howtoliveworldnice.tistory.com/category/Algorithm/%EC%95%8C%EA%B3%A0%EB%
 기하학   
 zigui   
 https://zigui.tistory.com/34
+
+algoshitpo   
+https://algoshitpo.github.io/   
 
 <!-- # 알고리즘 순서 { -->
   ```mermaid

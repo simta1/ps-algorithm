@@ -41,4 +41,8 @@ C는 최대 용량(무게)
 당연히 dp값이 0, 1 이외의 값을 가질 수 있는 문제에선 못씀
 
 ### 백준문제
-[Bad Packing](https://www.acmicpc.net/problem/21135) - 비트셋 안써도 안정적으로 통과하지만 비트셋 쓰면 훨씬 빠름
+[Bad Packing](https://www.acmicpc.net/problem/21135) - 비트셋 안써도 안정적으로 통과하지만 비트셋 쓰면 훨씬 빠름   
+[Kitchen Cable Chaos](https://www.acmicpc.net/problem/16072)   
+
+### 참고링크
+https://egod1537.tistory.com/entry/Bounded-Knapsack-Problem%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9C%BC%EB%A1%9C-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0   
