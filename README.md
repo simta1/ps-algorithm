@@ -133,6 +133,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[쌍대 그래프(D-)]</span>
     * <span class="">[도미네이터 트리(D-)]</span>
     * <span class="">[오프라인 동적 연결성 판정]</span>
+    * <span class="">[삼각형 찾기]</span> <!-- https://jh05013.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EC%82%BC%EA%B0%81%ED%98%95%20%EC%B0%BE%EA%B8%B0/ -->
     * <span class="">[평면 그래프]</span>
     * <span class="">[쌍대 그래프]</span>
     * <span class="">[현 그래프(D+)]</span>
@@ -226,6 +227,7 @@ mermaid stateDiagram-v2 사용
   * <span class="platinum">[등적등주 분할(P+)](/기하학/Equalizer.md)</span>
   * <span class="platinum">[가장 가까운 두 점(P+)](/기하학/Closest%20Two%20Points.md)</span>
   * <span class="">[최소 외접원(P+)]</span>
+  * <span class="">[polygon union]</span> <!-- https://jh05013.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EB%8F%84%ED%98%95%EC%9D%98%20%ED%95%A9%EC%A7%91%ED%95%A9%EA%B3%BC%20%EB%84%93%EC%9D%B4/ -->
   * <span class="">[볼록다각형 접선]</span> <!-- https://www.acmicpc.net/problem/18190 --> <!-- https://youngyojun.github.io/contest/review/2020/02/15/iamcoder-2019-yearend-contest/ -->
   * <span class="">[불도저]</span>
   * <span class="">[반평면 교집합(D-)]</span>
