@@ -219,6 +219,30 @@ public:
     }
 };
 ```
+### Splay tree에서 이분 탐색
+```cpp
+public:
+    int findMnIdx(int l, int r) { // v[l]~v[r]에서 최솟값 가지는 곳의 인덱스
+        int cur = gather(l, r);
+        propagate(cur);
+
+        T target = tree[cur].data.mn;
+        
+        while (target != tree[cur].data.val) {
+            if (tree[cur].l && target == tree[tree[cur].l].data.mn) {
+                cur = tree[cur].l;
+                propagate(cur);
+            }
+            else {
+                cur = tree[cur].r;
+                propagate(cur);
+            }
+        }
+        
+        splay(cur);
+        return tree[tree[root].l].sz;
+    }
+```
 ### 시간복잡도 
 $amortized~O(logN)$   
 
