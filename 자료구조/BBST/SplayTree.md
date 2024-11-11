@@ -1,13 +1,30 @@
 [카테고리](/README.md)
 ## Splay Tree
 ```cpp
-template <typename T, typename Data>
+template <typename T>
 class SplayTree {
 private:
-    static_assert(is_default_constructible<Data>::value, "Data구조체에 기본 생성자 없음");
-    static_assert(is_constructible<Data, T>::value, "Data구조체에 Data(T val) 생성자 없음");
-    static_assert(is_same<decltype(declval<Data>().init()), void>::value, "Data구조체에 void init(void) 함수 없음");
-    static_assert(is_same<decltype(declval<Data>().merge(declval<const Data&>())), void>::value, "Data구조체에 void merge(const Data&) 함수 없음");
+    struct Data {
+        T val;
+        assert(false, "추가 변수 선언");
+        // ex) T mn, mx, sum;
+
+        Data() {}
+        Data(ll val) : val(val) {}
+
+        void init() {
+            assert(false, "추가 변수 초기화");
+            // ex) mn = mx = sum = val;
+        }
+
+        void merge(const Data &other) {
+            assert(false, "추가 변수 merge");
+            // ex)
+            // mn = min(mn, other.mn);
+            // mx = max(mx, other.mx);
+            // sum += other.sum;
+        }
+    };
 
     struct Node {
         Data data;
@@ -177,21 +194,6 @@ public:
         cout << "\n";
     }
 };
-
-struct Data {
-    ll val;
-    // 기타 변수들 선언
-
-    Data() {}
-    Data(ll val) : val(val) {}
-
-    void init() {} // 기타 변수들 초기화 
-    void merge(const Data &other) {} // 기타 변수들 merge
-};
-
-// int main()
-vector<ll> v(n);
-SplayTree<ll, Data> spl(v);
 ```
 ### 시간복잡도 
 $amortized~O(logN)$   
@@ -236,21 +238,7 @@ void rotate(int cur) {
 left dummy, right dummy는 gather()함수를 쉽게 구현하기 위한 더미임   
 
 ### 사용설명
-Data구조체는 아래와 같이 2개의 생성자와 init, merge함수를 가져야 하며, 이는 static_assert로 확인하게 해뒀음   
-원래 init과 merge함수는 생성자에서 람다로 받아서 사용하려 했으나, 벤치마크 결과 구조체 내부에 직접 선언해서 사용하는 것이 훨씬 빨랐음   
-생성자에선 val만 설정하면 되고 기타 변수들 초기화는 init에서만 하면 됨   
-```cpp
-struct Data {
-    ll val;
-
-    Data() {} // 기본 생성자 가져야 함
-    Data(ll val) : val(val) {} // Data(T val) 생성자 가져야 함
-
-    void init() {} // init(void) 함수 가져야 함
-    void merge(const Data &other) {} // merge(const Data &) 함수 가져야 함
-};
-
-```
+매번 상황에 맞게 Data구조체의 `assert(false)` 부분 코드만 작성해서 사용   
 
 `rotate(x)`는 x를 x의 부모노드 위치로 올림   
 `splay(x)`는 rotate를 적절히 사용해 x를 루트로 옮김   
