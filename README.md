@@ -57,6 +57,7 @@ mermaid stateDiagram-v2 사용
 <span class="additional">기타(A)<span>
 
 * ### 자료구조
+    <span class="information">[자료구조 구현할 때 주의사항](/자료구조/주의사항.md)</span>
   * #### 세그먼트 트리
     <!-- 펜윅으로 머지소트 트리 대체? https://codeforces.com/blog/entry/107849 -->
     <!-- * <span class="">[비재귀 레이지 세그]</span> -->
@@ -96,6 +97,8 @@ mermaid stateDiagram-v2 사용
     <!-- * <span class="">[weighted QU]</span> -->
     <!-- * <span class="">[B-tree]</span>
     * <span class="">[SPQR tree]</span>
+    * <span class="">[PQ tree]</span>
+    https://infossm.github.io/blog/2021/10/20/PQ_Tree_Part_1/
     * <span class="">[treap]</span>
     * <span class="">[wavelet 트리(P+)]</span> -->
 * ### [그래프 이론](/그래프%20이론/개념%20정리.md)
@@ -242,6 +245,10 @@ mermaid stateDiagram-v2 사용
     * <span class="">[nCr mod 합성수(D-)]</span>
     * <span class="">[생성 함수(D-)]</span> <!-- 카탈란 생성함수 O(nlogN) --> <!-- https://github.com/infossm/infossm.github.io/blob/master/_posts/2019-10-19-generating-function.md -->
     * <span class="">[키타마사(D-)]</span>
+    * <span class="">[Bostan-Mori]</span>
+    <!-- https://codeforces.com/blog/entry/111862 -->
+    <!-- https://blog.myungwoo.kr/149 -->
+    <!-- https://infossm.github.io/blog/2021/12/21/Bostan-Mori_Algorithm/ -->
   * #### 선형대수학
     * <span class="silver">[행렬(S-)](/수학/선형대수학/Matrix.md)</span>
     * <span class="">[가우스 소거법(P-)]</span>
@@ -265,6 +272,7 @@ mermaid stateDiagram-v2 사용
     * <span class="gold">[오일러 파이 함수(G+)](/수학/Phi%20Function.md)</span>
     * <span class="platinum">[중국인의 나머지 정리(P-)](/수학/CRT.md)</span>
     * <span class="">[Garner's algorithm]</span>
+    * <span class="">[Barrett reduction]</span>
     * <span class="">[베르누이 수]</span>
     * ~~<span class="platinum">[Faulhaber(P+)](/수학/Faulhaber.md)</span>~~
     * <span class="">[Stern-Brocot 트리]</span> <!-- https://blog.myungwoo.kr/126 --> <!-- https://youngyojun.github.io/secmem/2022/02/18/sigma-sum-stern-brocot/ -->
@@ -296,6 +304,7 @@ mermaid stateDiagram-v2 사용
 * ### 게임 이론
   * <span class="">[스프라그-그런디]</span> <!-- (비트셋) -->
   * <span class="">[hackenbush]</span> <!-- https://en.wikipedia.org/wiki/Hackenbush --> <!-- https://rkm0959.tistory.com/139 -->
+  * <span class="">[coldgame]</span> <!-- https://infossm.github.io/blog/2024/11/01/Coldgame-problem-solving/ -->
 * ### 기타
   * <span class="additional">[비트 트릭(A)](/기타/Bit%20Trick.md)</span>
   * <span class="">[계수 정렬]</span>
@@ -321,10 +330,11 @@ mermaid stateDiagram-v2 사용
   * <span class="platinum">[Mo's algorithm(P+)](/기타/Mo's.md)</span>
   * <span class="platinum">[평방분할(P+)](/기타/제곱근%20분할법.md)</span>
   * <span class="">[small to large]</span>
+  * <span class="">[range mode query]</span> <!-- https://infossm.github.io/blog/2021/05/20/Data-Structure-For-Range-Mode-Query/ --> <!-- https://www.acmicpc.net/problem/14898 -->
   * <span class="">[병렬 이분 탐색(P+)]</span>
   * <span class="">[춤추는 링크, 크누스 X]</span>
   * <span class="">[임의 정밀도(epsilon값 계산)(A)]</span>
-  * ~~<span class="">[담금질 기법]</span>~~
+  * ~~<span class="">[담금질 기법]</span>~~ <!-- https://ryute.tistory.com/35    --> <!-- https://ryute.tistory.com/36    -->
   * <span class="">[Fracturing Search(D+)]</span> <!-- https://usaco.guide/adv/fracturing-search?lang=cpp --> <!-- https://www.acmicpc.net/problem/14166 -->
   * <span class="">[선형 계획법]</span>
   * <span class="">[쌍대성]</span>
@@ -391,7 +401,7 @@ jhnah917
 https://justicehui.github.io/tutorial/   
 https://github.com/justiceHui/Unknown-To-Wellknown   
 
-jin814   
+jinhan814   
 https://blog.naver.com/jinhan814/222439886998   
 https://blog.naver.com/PostView.naver?blogId=jinhan814&logNo=222689836982&parentCategoryNo=&categoryNo=6&viewDate=&isShowPopularPosts=false&from=postView   
 
