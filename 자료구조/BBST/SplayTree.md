@@ -10,7 +10,7 @@ private:
         // ex) T sum;
 
         Data() {}
-        Data(ll val) : val(val) {}
+        Data(T val) : val(val) {}
         void setVal(T val) { this->val = val; }
 
         void init() {
@@ -31,15 +31,14 @@ private:
         // int key; // insert, delete, find
         bool flipLazy, dummy;
 
-        Node() :  l(0), r(0), p(0), sz(1), flipLazy(false), dummy(false) {}
-        Node(int val, int p, bool dummy) : l(0), r(0), p(p), sz(1), flipLazy(false), dummy(dummy), data(val) {}
+        Node(T val, int p, bool dummy) : l(0), r(0), p(p), sz(1), flipLazy(false), dummy(dummy), data(val) {}
     };
 
     int root;
     vector<Node> tree;
 
-    int newNode(int val, int p, bool dummy) {
-        tree.push_back(Node(val, p, dummy));
+    int newNode(T val, int p, bool dummy) {
+        tree.emplace_back(val, p, dummy);
         return tree.size() - 1;
     }
 
@@ -285,8 +284,35 @@ cout << tree[tree[root].l].sz; // 안전
 ### 문제
 [배열](https://www.acmicpc.net/problem/13159)   
 [수열과 쿼리 2](https://www.acmicpc.net/problem/13543)   
+[Robotic Sort](https://www.acmicpc.net/problem/3444)   
 
 ### 참고링크
 https://cubelover.tistory.com/10   
 https://blog.chodaeho.com/posts/2021/splay-tree-1/   
 https://justicehui.github.io/hard-algorithm/2018/11/12/SplayTree1/   
+
+### TODO 아직 고민 중인 거
+```cpp
+void update(int cur) {
+    tree[cur].sz = 1;
+    if (tree[cur].l) tree[cur].sz += tree[tree[cur].l].sz;
+    if (tree[cur].r) tree[cur].sz += tree[tree[cur].r].sz;
+
+    // 기존 코드
+    tree[cur].data.init();
+    if (tree[cur].l && !tree[tree[cur].l].dummy) tree[cur].data.merge(tree[tree[cur].l].data);
+    if (tree[cur].r && !tree[tree[cur].r].dummy) tree[cur].data.merge(tree[tree[cur].r].data);
+
+    // 이렇게 하는 게 맞지 않나?
+    if (!tree[cur].dummy) tree[cur].data.init();
+    else tree[cur].data.initDummy();
+    if (tree[cur].l) tree[cur].data.merge(tree[tree[cur].l].data);
+    if (tree[cur].r) tree[cur].data.merge(tree[tree[cur].r].data);
+}
+```
+
+dummy일 때도 업데이트해야되는 경우 있을 것 같아서 아래쪽 코드처럼 바꿔야되지 않을까 싶은데 기존 코드도 잘 돌아간다.   
+-> 생각해보니 애초에 left dummy와 right dummy를 루트에 두고 값을 읽는 경우가 거의 없을듯   
+1) insertBeforeKth(1) 하면 left dummy가 루트로 올라오지만, 이 경우 바로 새 노드가 insert되므로 루트는 left dummy가 아님, + left dummy의 자식 없을 듯
+2) gather(1, r) 하면?
+3) gather(l, n) 하면?
