@@ -11,11 +11,21 @@ private:
 
         Data() {}
         Data(T val) : val(val) {}
-        void setVal(T val) { this->val = val; }
+        void setVal(T val) { this->val = val; } // changeKth에서 사용
 
         void init() {
             assert(false, "추가 변수 초기화");
             // ex) sum = val;
+        }
+
+        void initDummy() {
+            assert(false, "추가 변수 초기화(dummy이므로 항등원으로 초기화해야 함)");
+            // ex) sum = 0;
+            /*  이유는 모르겠지만 initDummy()함수 비어놔도 잘 작동함
+                실제로 dummy가 중간에 끼면서 루트쪽 노드에 정확한 값이 계산되지 못하는 경우가 있긴 하지만,
+                query()함수에서 값을 읽을 때 gather() 범위 내에는 dummy가 없어서인지 값이 잘 계산됨
+                BBST특성상 항상 이럴수밖에 없는건지, 아니면 반례가 존재하지만 내가 아직 겪지 못한 것인지는 모르겠지만
+                아직까진 initDummy()를 비어놔도 잘 작동했다. 그래도 혹시모르니 일단 initDummy작성하는 게 나을 듯 */
         }
 
         void merge(const Data &other) {
@@ -48,9 +58,10 @@ private:
         if (tree[cur].r) tree[cur].sz += tree[tree[cur].r].sz;
 
         // merge data
-        tree[cur].data.init();
-        if (tree[cur].l && !tree[tree[cur].l].dummy) tree[cur].data.merge(tree[tree[cur].l].data);
-        if (tree[cur].r && !tree[tree[cur].r].dummy) tree[cur].data.merge(tree[tree[cur].r].data);
+        if (!tree[cur].dummy) tree[cur].data.init();
+        else tree[cur].data.initDummy();
+        if (tree[cur].l) tree[cur].data.merge(tree[tree[cur].l].data);
+        if (tree[cur].r) tree[cur].data.merge(tree[tree[cur].r].data);
     }
 
     void propagate(int cur) {
@@ -314,27 +325,3 @@ cout << tree[tree[root].l].sz; // 안전
 https://cubelover.tistory.com/10   
 https://blog.chodaeho.com/posts/2021/splay-tree-1/   
 https://justicehui.github.io/hard-algorithm/2018/11/12/SplayTree1/   
-
-### TODO 아직 고민 중인 거
-```cpp
-void update(int cur) {
-    tree[cur].sz = 1;
-    if (tree[cur].l) tree[cur].sz += tree[tree[cur].l].sz;
-    if (tree[cur].r) tree[cur].sz += tree[tree[cur].r].sz;
-
-    // 지금 코드
-    tree[cur].data.init();
-    if (tree[cur].l && !tree[tree[cur].l].dummy) tree[cur].data.merge(tree[tree[cur].l].data);
-    if (tree[cur].r && !tree[tree[cur].r].dummy) tree[cur].data.merge(tree[tree[cur].r].data);
-
-    // 이렇게 하는 게 맞지 않나?
-    if (!tree[cur].dummy) tree[cur].data.init();
-    else tree[cur].data.initDummy();
-    if (tree[cur].l) tree[cur].data.merge(tree[tree[cur].l].data);
-    if (tree[cur].r) tree[cur].data.merge(tree[tree[cur].r].data);
-}
-```
-
-dummy일 때도 업데이트해야되는 경우 있을 것 같아서 아래쪽 코드처럼 바꿔야되지 않을까 싶은데 기존 코드도 잘 돌아간다.   
--> 디버깅해보니 실제로 dummy가 중간에 끼면서 루트쪽 노드에 정확한 값이 계산되지 못하는 경우가 있지만, query()함수에서 값을 읽을 땐 gather() 범위 내에는 dummy가 없어서 값이 잘 계산된다.
-솔직히 BBST특성상 항상 이럴수밖에 없는건지, 아니면 반례가 존재하지만 내가 아직 겪지 못한 것인지는 모르겠지만 일단 proof by AC하듯 지금 코드 그대로 유지할 생각이다.
