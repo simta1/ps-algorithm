@@ -81,6 +81,7 @@ mermaid stateDiagram-v2 사용
   * #### BBST
     * <span class="">[treap]</span>
     * <span class="diamond">[스플레이 트리(D-)](/자료구조/BBST/SplayTree.md)</span>
+    * <span class="">[Persistent BBST, Weight-Balanced Tree]</span> <!-- https://koosaga.com/342 -->
     * <span class="">[링크/컷 트리(D+)]</span>
     * <span class="">[레드-블랙 트리]</span>
   * #### 기타
@@ -91,16 +92,14 @@ mermaid stateDiagram-v2 사용
     * <span class="platinum">[유니온 파인드 with Potential(P+)](/자료구조/기타/DSU%20potential.md)</span>
     * <span class="platinum">[로프(P-)](/자료구조/기타/rope.md)</span>
     * <span class="platinum">[ordered set(P-)](/자료구조/기타/ordered_set.md)</span>
-    * <span class="">[데카르트 트리]</span>
+    * <span class="">[SPQR tree]</span>
+    * <span class="">[PQ tree]</span> <!-- https://infossm.github.io/blog/2021/10/20/PQ_Tree_Part_1/ -->
+    * <span class="">[데카르트 트리(Cartesian tree)]</span>
     * <span class="">[Line container]</span>
     * <span class="">[리-차오 트리(D-)]</span>
     <!-- * <span class="">[weighted QU]</span> -->
-    <!-- * <span class="">[B-tree]</span>
-    * <span class="">[SPQR tree]</span>
-    * <span class="">[PQ tree]</span>
-    https://infossm.github.io/blog/2021/10/20/PQ_Tree_Part_1/
-    * <span class="">[treap]</span>
-    * <span class="">[wavelet 트리(P+)]</span> -->
+    <!-- * <span class="">[B-tree]</span> -->
+    <!-- * <span class="">[wavelet 트리(P+)]</span> -->
 * ### [그래프 이론](/그래프%20이론/개념%20정리.md)
   * #### 그래프
     <!-- https://ps.mjstudio.net/tip-bfs-fill -->
@@ -150,6 +149,7 @@ mermaid stateDiagram-v2 사용
     * <span class="platinum">[이분 매칭: Hopcraft-Karp(P-)](/그래프%20이론/네트워크%20플로우/Hopcroft-Karp.md)</span>
     * ~~<span class="">[최대유량: Push-Relabel (P-)]</span>~~
     * <span class="platinum">[최소 비용 최대 유량(P+)](/그래프%20이론/네트워크%20플로우/MCMF.md)</span>
+    * <span class="platinum">[zkw mcmf]</span>
     * <span class="diamond">[서큘레이션, L-R flow(D-)](/그래프%20이론/네트워크%20플로우/서큘레이션.md)</span>
     * <span class="diamond">[헝가리안(D-)](/그래프%20이론/네트워크%20플로우/헝가리안.md)</span>
     * <span class="">[일반 매칭(D+)]</span>

@@ -322,7 +322,7 @@ void update(int cur) {
     if (tree[cur].l) tree[cur].sz += tree[tree[cur].l].sz;
     if (tree[cur].r) tree[cur].sz += tree[tree[cur].r].sz;
 
-    // 기존 코드
+    // 지금 코드
     tree[cur].data.init();
     if (tree[cur].l && !tree[tree[cur].l].dummy) tree[cur].data.merge(tree[tree[cur].l].data);
     if (tree[cur].r && !tree[tree[cur].r].dummy) tree[cur].data.merge(tree[tree[cur].r].data);
@@ -336,7 +336,5 @@ void update(int cur) {
 ```
 
 dummy일 때도 업데이트해야되는 경우 있을 것 같아서 아래쪽 코드처럼 바꿔야되지 않을까 싶은데 기존 코드도 잘 돌아간다.   
--> 생각해보니 애초에 left dummy와 right dummy를 루트에 두고 값을 읽는 경우가 거의 없을듯   
-1) insertBeforeKth(1) 하면 left dummy가 루트로 올라오지만, 이 경우 바로 새 노드가 insert되므로 루트는 left dummy가 아님, + left dummy의 자식 없을 듯
-2) gather(1, r) 하면?
-3) gather(l, n) 하면?
+-> 디버깅해보니 실제로 dummy가 중간에 끼면서 루트쪽 노드에 정확한 값이 계산되지 못하는 경우가 있지만, query()함수에서 값을 읽을 땐 gather() 범위 내에는 dummy가 없어서 값이 잘 계산된다.
+솔직히 BBST특성상 항상 이럴수밖에 없는건지, 아니면 반례가 존재하지만 내가 아직 겪지 못한 것인지는 모르겠지만 일단 proof by AC하듯 지금 코드 그대로 유지할 생각이다.
