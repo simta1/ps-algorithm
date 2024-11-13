@@ -60,12 +60,21 @@ private:
         // merge data
         if (!tree[cur].dummy) tree[cur].data.init();
         else tree[cur].data.initDummy();
-        if (tree[cur].l) tree[cur].data.merge(tree[tree[cur].l].data);
-        if (tree[cur].r) tree[cur].data.merge(tree[tree[cur].r].data);
+        if (tree[cur].l) {
+            if constexpr (flippable) propagate(tree[cur].l); // 왼쪽자식과 오른쪽자식이 뒤바껴도 data가 바뀌지 않는 경우(sum, mn, mx) 불필요한 코드, 상수 커팅 필요 시 삭제
+            tree[cur].data.merge(tree[tree[cur].l].data);
+        }
+        if (tree[cur].r) {
+            if constexpr (flippable) propagate(tree[cur].r); // 왼쪽자식과 오른쪽자식이 뒤바껴도 data가 바뀌지 않는 경우(sum, mn, mx) 불필요한 코드, 상수 커팅 필요 시 삭제
+            tree[cur].data.merge(tree[tree[cur].r].data);
+        }
     }
 
     void propagate(int cur) { if constexpr (!flippable) assert(false);
         if (!tree[cur].flipLazy) return;
+
+        assert(false, "왼쪽자식과 오른쪽자식이 뒤바뀔 때 data가 바뀐다면 data바꾸는 코드 추가");
+        // ex) swap(tree[cur].data.leftSum, tree[cur].data.rightSum);
 
         swap(tree[cur].l, tree[cur].r);
         if (tree[cur].l) tree[tree[cur].l].flipLazy ^= 1;
@@ -270,6 +279,28 @@ dummy는 총 3개 있음
 tree[]배열을 1-based로 만들기 위해 `tree[0]`에 있는 더미   
 `gather()`와 `insertBeforeKth()` 등에서 예외처리를 하지 않기 위해 트리의 양끝단에 추가하는 left dummy, right dummy   
 
+### 구현 주의사항
+만약 [수열과 쿼리 31](https://www.acmicpc.net/problem/17607)과 같이 왼쪽 자식과 오른쪽 자식이 바뀔 때 Data의 정보가 달라지는 경우에는 update()함수에서 자식들을 머지하기 전에 자식들의 flipLazy를 먼저 전파시켜야 된다.   
+```cpp
+void update(int cur) {
+    tree[cur].sz = 1;
+    if (tree[cur].l) tree[cur].sz += tree[tree[cur].l].sz;
+    if (tree[cur].r) tree[cur].sz += tree[tree[cur].r].sz;
+
+    // merge data
+    if (!tree[cur].dummy) tree[cur].data.init();
+    else tree[cur].data.initDummy();
+    if (tree[cur].l) {
+        propagate(tree[cur].l); // 필요
+        tree[cur].data.leftMerge(tree[tree[cur].l].data, tree[tree[cur].l].sz);
+    }
+    if (tree[cur].r) {
+        propagate(tree[cur].r); // 필요
+        tree[cur].data.rightMerge(tree[tree[cur].r].data, tree[cur].l ? tree[tree[cur].l].sz : 0, tree[tree[cur].r].sz);
+    }
+}
+```
+
 ### 사용설명
 `SplayTree<bool flippable, typename T>`에서 flippable는 flip연산 사용할 건지의 여부.   
 flip을 사용하지 않을 때 false로 설정해주면 불필요한 코드를 `if constexpr`로 걸러내므로 속도개선이 꽤 된다.   
@@ -294,6 +325,7 @@ cout << tree[tree[root].l].sz; // 안전
 [배열](https://www.acmicpc.net/problem/13159)   
 [수열과 쿼리 2](https://www.acmicpc.net/problem/13543)   
 [Robotic Sort](https://www.acmicpc.net/problem/3444)   
+[수열과 쿼리 31](https://www.acmicpc.net/problem/17607) - 왼쪽 자식과 오른쪽 자식이 뒤바뀔 때 data가 달라지는 경우   
 
 ### 참고링크
 https://cubelover.tistory.com/10   
