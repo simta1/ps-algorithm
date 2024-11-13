@@ -230,15 +230,15 @@ public:
     }
 
     void shift(int l, int r, int k) { // 1-based // 오른쪽으로 k칸만큼 shift // 1, 2, ..., l-1 / r-k+1, ..., r-1, r, l, l+1, ..., r-k / r+1, ..., n
-        int length = r - l + 1;
-        k %= length;
+        int len = r - l + 1;
+        k %= len;
+        if (k < 0) k += len;
+
         if (!k) return;
 
-        int num = (k > 0) ? k : (length + k); // length - abs(k)
-
         flip(l, r);
-        flip(l, l + num - 1);
-        flip(l + num, r);
+        flip(l, l + k - 1);
+        flip(l + k, r);
     }
 
     void inorder() {
