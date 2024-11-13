@@ -94,7 +94,7 @@ mermaid stateDiagram-v2 사용
     * <span class="platinum">[ordered set(P-)](/자료구조/기타/ordered_set.md)</span>
     * <span class="">[SPQR tree]</span>
     * <span class="">[PQ tree]</span> <!-- https://infossm.github.io/blog/2021/10/20/PQ_Tree_Part_1/ -->
-    * <span class="">[데카르트 트리(Cartesian tree)]</span>
+    * <span class="">[데카르트 트리(Cartesian tree)]</span> <!-- https://imeimi.tistory.com/42 구간 내에서의 RMQ는 cartesian tree에서의 LCA? -->
     * <span class="">[Line container]</span>
     * <span class="">[리-차오 트리(D-)]</span>
     <!-- * <span class="">[weighted QU]</span> -->
@@ -302,7 +302,7 @@ mermaid stateDiagram-v2 사용
     * <span class="diamond">[메르텐스 함수(D+)](/수학/메르텐스.md)</span>
     * <span class="diamond">[메르텐스 트릭, Xudyh's sieve (D+)](/수학/Xudyh's%20sieve.md)</span>
     * <span class="">[min_25's sieve]</span>
-    * <span class="">[매트로이드(R-)]</span>
+    * <span class="">[매트로이드(R-)]</span> <!-- https://imeimi.tistory.com/45 -->
 * ### 게임 이론
   * <span class="">[스프라그-그런디]</span> <!-- (비트셋) -->
   * <span class="">[hackenbush]</span> <!-- https://en.wikipedia.org/wiki/Hackenbush --> <!-- https://rkm0959.tistory.com/139 -->
@@ -327,6 +327,7 @@ mermaid stateDiagram-v2 사용
   * <span class="platinum">[반전수(P-)](/기타/반전수.md)</span>
   * <span class="">[스위핑]</span>
   * <span class="">[슬라이딩 윈도우]</span>
+  * <span class="">[Range Minimum Query]</span>
   * <span class="platinum">[덱을 이용한 구간 최댓값 트릭(P-)](/기타/Deque%20Trick.md)</span>
   * <span class="platinum">[삼분 탐색(P-)](/기타/삼분탐색.md)</span>
   * <span class="platinum">[Mo's algorithm(P+)](/기타/Mo's.md)</span>
@@ -456,6 +457,8 @@ https://zigui.tistory.com/34
 
 algoshitpo   
 https://algoshitpo.github.io/   
+
+https://imeimi.tistory.com/   
 
 koosaga - olympiad Library codes   
 https://github.com/koosaga/olympiad/tree/master/Library/codes   

@@ -121,6 +121,7 @@ public:
 ```
 ### 시간복잡도 
 $O(V^2 E)$   
+링크/컷 트리를 사용하여 $O(VE \log{V})$로 구현할 수도 있다고 한다. https://imeimi.tistory.com/36   
 
 ### 구현 주의사항
 >`vector<vector<F>>`로 cap, flow를 2차원 배열에 저장하는 건 가끔 n 엄청 큰 문제에서 메모리 초과날 때 있어서 별로임   
