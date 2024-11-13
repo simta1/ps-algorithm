@@ -331,9 +331,10 @@ mermaid stateDiagram-v2 사용
   * <span class="platinum">[삼분 탐색(P-)](/기타/삼분탐색.md)</span>
   * <span class="platinum">[Mo's algorithm(P+)](/기타/Mo's.md)</span>
   * <span class="platinum">[평방분할(P+)](/기타/제곱근%20분할법.md)</span>
+  * <span class="">[병렬 이분 탐색(P+)]</span>
   * <span class="">[small to large]</span>
   * <span class="">[range mode query]</span> <!-- https://infossm.github.io/blog/2021/05/20/Data-Structure-For-Range-Mode-Query/ --> <!-- https://www.acmicpc.net/problem/14898 -->
-  * <span class="">[병렬 이분 탐색(P+)]</span>
+  * <span class="">[SMAWK]</span> <!-- https://github.com/koosaga/olympiad/blob/master/Library/codes/ad_hoc/smawk.cpp -->
   * <span class="">[춤추는 링크, 크누스 X]</span>
   * <span class="">[임의 정밀도(epsilon값 계산)(A)]</span>
   * ~~<span class="">[담금질 기법]</span>~~ <!-- https://ryute.tistory.com/35    --> <!-- https://ryute.tistory.com/36    -->
@@ -455,6 +456,9 @@ https://zigui.tistory.com/34
 
 algoshitpo   
 https://algoshitpo.github.io/   
+
+koosaga - olympiad Library codes   
+https://github.com/koosaga/olympiad/tree/master/Library/codes   
 
 <!-- # 알고리즘 순서 { -->
   ```mermaid
