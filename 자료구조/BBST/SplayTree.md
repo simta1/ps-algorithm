@@ -1,7 +1,7 @@
 [카테고리](/README.md)
 ## Splay Tree
 ```cpp
-template <typename T>
+template <bool flippable, typename T>
 class SplayTree {
 private:
     struct Data {
@@ -22,10 +22,11 @@ private:
             assert(false, "추가 변수 초기화(dummy이므로 항등원으로 초기화해야 함)");
             // ex) sum = 0;
             /*  이유는 모르겠지만 initDummy()함수 비어놔도 잘 작동함
-                실제로 dummy가 중간에 끼면서 루트쪽 노드에 정확한 값이 계산되지 못하는 경우가 있긴 하지만,
-                query()함수에서 값을 읽을 때 gather() 범위 내에는 dummy가 없어서인지 값이 잘 계산됨
+                실제로 디버깅해보니 dummy가 중간에 끼면서 루트쪽 노드에 정확한 값이 계산되지 못하는 경우가 있긴 하지만,
+                query()함수로 값을 읽을 때는 gather() 범위 내에는 dummy가 없어서인지 값이 잘 계산됨
                 BBST특성상 항상 이럴수밖에 없는건지, 아니면 반례가 존재하지만 내가 아직 겪지 못한 것인지는 모르겠지만
-                아직까진 initDummy()를 비어놔도 잘 작동했다. 그래도 혹시모르니 일단 initDummy작성하는 게 나을 듯 */
+                아직까진 initDummy()를 비어놔도 틀린 문제 없음. 그래도 혹시모르니 일단 initDummy작성하는 게 나을 듯
+                항등원 애매하거나 쓰기 귀찮을 땐 그냥 비어둔 채로 제출해보고 proof by AC 노려볼만 한 듯 */
         }
 
         void merge(const Data &other) {
@@ -38,7 +39,6 @@ private:
         Data data;
 
         int l, r, p, sz; // l, r, p는 왼쪽자식, 오른쪽자식, 부모의 주소(인덱스), sz는 서브트리의 사이즈
-        // int key; // insert, delete, find
         bool flipLazy, dummy;
 
         Node(T val, int p, bool dummy) : l(0), r(0), p(p), sz(1), flipLazy(false), dummy(dummy), data(val) {}
@@ -64,7 +64,7 @@ private:
         if (tree[cur].r) tree[cur].data.merge(tree[tree[cur].r].data);
     }
 
-    void propagate(int cur) {
+    void propagate(int cur) { if constexpr (!flippable) assert(false);
         if (!tree[cur].flipLazy) return;
 
         swap(tree[cur].l, tree[cur].r);
@@ -80,8 +80,8 @@ private:
         int grandParent = tree[parent].p;
         int child;
 
-        propagate(parent);
-        propagate(cur);
+        if constexpr (flippable) propagate(parent);
+        if constexpr (flippable) propagate(cur);
 
         if (!grandParent) root = cur; // grandParent 연결관게 수정
         else if (tree[grandParent].l == parent) tree[grandParent].l = cur;
@@ -119,17 +119,17 @@ private:
 
     int kth(int k) { // 1-based // 사실은 0-based지만 0번째 노드가 left dummy라서 사용자 입장에선 1-based임
         int cur = root;
-        propagate(cur);
+        if constexpr (flippable) propagate(cur);
 
         while (1) {
             while (tree[cur].l && k < tree[tree[cur].l].sz) {
                 cur = tree[cur].l;
-                propagate(cur);
+                if constexpr (flippable) propagate(cur);
             }
             if (tree[cur].l) k -= tree[tree[cur].l].sz;
             if (!k--) break;
             cur = tree[cur].r;
-            propagate(cur);
+            if constexpr (flippable) propagate(cur);
         }
         splay(cur);
         return root;
@@ -150,7 +150,7 @@ private:
     }
 
     void inorder(int cur) {
-        propagate(cur);
+        if constexpr (flippable) propagate(cur);
         if (tree[cur].l) inorder(tree[cur].l);
         if (!tree[cur].dummy) cout << tree[cur].data.val << " ";
         if (tree[cur].r) inorder(tree[cur].r);
@@ -160,17 +160,16 @@ public:
     SplayTree(const vector<T> &v, int numberOfQuery=0) { // v는 0-based로 받음
         tree.reserve(v.size() + 3 + numberOfQuery);
         
-        newNode(0, 0, true); // dummy, tree배열을 1-based로 만들기 위함
-        root = newNode(0, 0, true); // left dummy, gather 쉽게 구현하는 용도
+        newNode(0, 0, true);
+        root = newNode(0, 0, true);
+
         int cur = root;
-        for (int i = 0; i < v.size(); i++) cur = tree[cur].r = newNode(v[i], cur, false); // real nodes
-        tree[cur].r = newNode(0, cur, true); // right dummy, gather 쉽게 구현하는 용도
+        for (int i = 0; i < v.size(); i++) cur = tree[cur].r = newNode(v[i], cur, false);
 
-        for (cur = tree[cur].r; cur; cur = tree[cur].p) update(cur); // init
+        tree[cur].r = newNode(0, cur, true);
+
+        for (cur = tree[cur].r; cur; cur = tree[cur].p) update(cur);
     }
-
-    T query(int l, int r) { return tree[gather(l, r)].data.val; } // 1-based
-    void flip(int l, int r) { tree[gather(l, r)].flipLazy ^= 1; } // 1-based
 
     void insertBeforeKth(int k, T val) { // 1-based, 1<=k<=n+1
         kth(k);
@@ -212,6 +211,15 @@ public:
         }
     }
     
+    T query(int l, int r) { // 1-based
+        return tree[gather(l, r)].data.val;
+        assert(false, "문제에 맞게 리턴값 바꾸기");
+    }
+
+    void flip(int l, int r) { if constexpr (!flippable) assert(false); // 1-based
+        tree[gather(l, r)].flipLazy ^= 1;
+    }
+
     void shift(int l, int r, int k) { // 1-based // 오른쪽으로 k칸만큼 shift // 1, 2, ..., l-1 / r-k+1, ..., r-1, r, l, l+1, ..., r-k / r+1, ..., n
         int length = r - l + 1;
         k %= length;
@@ -235,18 +243,18 @@ public:
 public:
     int findMnIdx(int l, int r) { // v[l]~v[r]에서 최솟값 가지는 곳의 인덱스
         int cur = gather(l, r);
-        propagate(cur);
+        if constexpr (flippable) propagate(cur);
 
         T target = tree[cur].data.mn;
         
         while (target != tree[cur].data.val) {
             if (tree[cur].l && target == tree[tree[cur].l].data.mn) {
                 cur = tree[cur].l;
-                propagate(cur);
+                if constexpr (flippable) propagate(cur);
             }
             else {
                 cur = tree[cur].r;
-                propagate(cur);
+                if constexpr (flippable) propagate(cur);
             }
         }
         
@@ -258,51 +266,17 @@ public:
 $amortized~O(logN)$   
 
 ### 구현설명
-rotate 전 `propagate()`와 rotate 후 `update()`는 필수   
-`rotate(x)`함수에서 연결관계(`l, r, p`)가 바뀌는 노드는 x, x의 자식, x의 부모, x의 조부모 4가지임   
-`int parent, grandParent, child, cur`는 const가 붙어있다고 생각하고 구현하면 편함. 실제로 붙일까 싶었는데 child는 선언만 미리 하고 값을 나중에 넣기 때문에 const를 쓰진 않았음   
-```cpp
-void rotate(int cur) {
-    if (!tree[cur].p) return;
-
-    int parent = tree[cur].p;
-    int grandParent = tree[parent].p;
-    int child;
-
-    propagate(parent);
-    propagate(cur);
-
-    if (!grandParent) root = cur; // grandParent 연결관게 수정
-    else if (tree[grandParent].l == parent) tree[grandParent].l = cur;
-    else tree[grandParent].r = cur;
-
-    if (cur == tree[parent].l) { // parent, cur 연결관게 수정
-        tree[parent].l = child = tree[cur].r;
-        tree[cur].r = parent;
-    }
-    else {
-        tree[parent].r = child = tree[cur].l;
-        tree[cur].l = parent;
-    }
-    tree[parent].p = cur;
-    tree[cur].p = grandParent;
-
-    if (child) tree[child].p = parent; // child 연결관게 수정
-
-    update(parent);
-    update(cur);
-}
-```
-
-left dummy, right dummy는 gather()함수를 쉽게 구현하기 위한 더미임   
-
-dummy노드 만들 때 굳이 항등원 넣으려 고민할 필요 없음. 애초에 update()함수에서 dummy아닌 것들만 합치게 해둠  
+dummy는 총 3개 있음   
+tree[]배열을 1-based로 만들기 위해 `tree[0]`에 있는 더미   
+`gather()`와 `insertBeforeKth()` 등에서 예외처리를 하지 않기 위해 트리의 양끝단에 추가하는 left dummy, right dummy   
 
 ### 사용설명
+`SplayTree<bool flippable, typename T>`에서 flippable는 flip연산 사용할 건지의 여부.   
+flip을 사용하지 않을 때 false로 설정해주면 불필요한 코드를 `if constexpr`로 걸러내므로 속도개선이 꽤 된다.   
+물론 그냥 true로 놓고 사용해도 상관은 없다.   
+
 매번 상황에 맞게 Data구조체의 `assert(false)` 부분 코드만 작성해서 사용   
 
-`rotate(x)`는 x를 x의 부모노드 위치로 올림   
-`splay(x)`는 rotate를 적절히 사용해 x를 루트로 옮김   
 스플레이 트리의 모든 연산에서 트리의 inorder 순서는 유지됨   
 
 어떤 노드의 정보를 읽고 싶다면 splay 후에 사용하는 게 안전함   
