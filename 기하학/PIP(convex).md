@@ -9,7 +9,7 @@ template <typename T>
 struct Point {
     T x, y;
     
-    bool operator<(const Point<T>  &other) const { return x == other.x ? y < other.y : x < other.x; }
+    bool operator<(const Point &other) const { return tie(x, y) < tie(other.x, other.y); }
     Point operator-(const Point &other) const { return {x - other.x, y - other.y}; }
 };
 

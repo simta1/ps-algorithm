@@ -15,9 +15,9 @@ struct Point {
     Point(T x, T y) : x(x), y(y) {}
     template <typename U> Point(const Point<U> &other) : x(static_cast<T>(other.x)), y(static_cast<T>(other.y)) {}
 
-    bool operator<(const Point &other) const { return x == other.x ? y < other.y : x < other.x; }
-    bool operator<=(const Point &other) const { return x == other.x ? y <= other.y : x <= other.x; }
-    bool operator==(const Point &other) const { return x == other.x && y == other.y; }
+    bool operator<(const Point &other) const { return tie(x, y) < tie(other.x, other.y); }
+    bool operator<=(const Point &other) const { return tie(x, y) <= tie(other.x, other.y); }
+    bool operator==(const Point &other) const { return tie(x, y) == tie(other.x, other.y); }
     Point operator-(const Point &other) const { return {x - other.x, y - other.y}; }
 };
 
