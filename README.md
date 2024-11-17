@@ -76,7 +76,7 @@ mermaid stateDiagram-v2 사용
     * <span class="platinum">[다이나믹 세그(P-)](/자료구조/세그먼트%20트리/다이나믹%20세그.md)</span>
     * <span class="platinum">[다이나믹 레이지 세그(P+)](/자료구조/세그먼트%20트리/다이나믹%20레이지%20세그.md)</span>
     * ~~<span class="platinum">[_range GCD 세그(P+)_](/자료구조/세그먼트%20트리/GCD%20세그.md)</span>~~
-    * <span class="platinum">[금광 세그(P+)](/자료구조/세그먼트%20트리/금광%20세그.md)</span>
+    * <span class="platinum">[금광 세그(최대 연속 부분합 세그)(P+)](/자료구조/세그먼트%20트리/금광%20세그.md)</span>
     * <span class="">[퍼시스턴트 세그(P+)]</span>
     * <span class="">[세그트리 비츠(D+)]</span>
   * #### BBST
@@ -232,7 +232,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[최소 외접원(P+)]</span>
   * <span class="">[볼록다각형 접선]</span> <!-- https://www.acmicpc.net/problem/18190 --> <!-- https://youngyojun.github.io/contest/review/2020/02/15/iamcoder-2019-yearend-contest/ -->
   * <span class="">[반평면 교집합(D-)]</span>
-  * <span class="diamond">[불도저 트릭(D+)](/기하학/불도저.md)</span>
+  * <span class="diamond">[불도저 트릭(Rotating Line Sweep)(D+)](/기하학/불도저.md)</span>
   * <span class="">[KD tree]</span> <!-- https://algoshitpo.github.io/2020/02/09/kdtree/ -->
   * <span class="">[polygon union]</span> <!-- https://jh05013.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EB%8F%84%ED%98%95%EC%9D%98%20%ED%95%A9%EC%A7%91%ED%95%A9%EA%B3%BC%20%EB%84%93%EC%9D%B4/ -->
   * <span class="">[그린 정리(D+)]</span>
