@@ -438,6 +438,7 @@ https://ps.mjstudio.net/categories/algorithm
 koosaga   
 https://koosaga.com/242   
 
+?   
 https://youngyojun.github.io/
 
 S/W 멤버십 기술 블로그   
@@ -449,22 +450,25 @@ https://gratus-blog.tistory.com/
 정수론 시리즈   
 https://xy-plane.tistory.com/16
 
+myungwoo   
 https://blog.myungwoo.kr/
 
+Nyaan   
 https://nyaannyaan.github.io/library/data-structure/union-find-with-potential.hpp.html
 
+궁극의 웰노운 알고리즘   
 https://cocoachan.tistory.com/
 
 pentagon03   
 https://howtoliveworldnice.tistory.com/category/Algorithm/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EC%9D%B4%EB%A1%A0%20%EC%A0%95%EB%A6%AC
 
-기하학   
-zigui   
+zigui - 기하학   
 https://zigui.tistory.com/34
 
 algoshitpo   
 https://algoshitpo.github.io/   
 
+?   
 https://imeimi.tistory.com/   
 
 koosaga - olympiad Library codes   
