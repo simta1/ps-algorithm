@@ -40,6 +40,7 @@ mermaid stateDiagram-v2 사용
 | $n \le 50$            | $O(\sqrt2^n)$                             |                                                       |
 | $n \le 100$           | $O(n^4)$                                  |                                                       |
 | $n \le 500$           | $O(n^3)$                                  |                                                       |
+| $n \le 2,000$         | $O(n^2 \log{n})$                                  |                                                       |
 | $n \le 5,000$         | $O(n^2)$                                  |                                                       |
 | $n \le 100,000$       | $O(n \sqrt n)$, $O(n \log^2n)$            |                                                       |
 | $n \le 1,000,000$     | $O(n \log n)$                             |                                                       |
@@ -82,7 +83,6 @@ mermaid stateDiagram-v2 사용
     * <span class="">[treap]</span>
     * <span class="diamond">[스플레이 트리(D-)](/자료구조/BBST/SplayTree.md)</span>
     * <span class="">[Persistent BBST, Weight-Balanced Tree]</span> <!-- https://koosaga.com/342 -->
-    * <span class="">[링크/컷 트리(D+)]</span>
     * <span class="">[레드-블랙 트리]</span>
   * #### 기타
     * <span class="gold">[유니온 파인드(G-)](/자료구조/기타/DSU.md)</span>
@@ -165,7 +165,8 @@ mermaid stateDiagram-v2 사용
     * <span class="">[트리 압축]</span>
     * <span class="">[센트로이드 분할(D-)]</span>
     * <span class="">[트리 동형 사상]</span>
-    * <span class="">[탑 트리(R-)]</span>
+    * <span class="">[링크/컷 트리(D+)]</span>
+    * <span class="">[탑 트리(R-)]</span> <!-- https://etyu39.tistory.com/8 -->
 * ### [DP](/DP/Top-Down%20DP.md)
   <!-- * <span class="">[배낭 문제(G-)]</span> -->
   <!-- * <span class="">[비트 집합]</span> -->
@@ -182,7 +183,9 @@ mermaid stateDiagram-v2 사용
   * <span class="platinum">[볼록껍질 최적화(P+)](/DP/CHT.md)</span>
   * <span class="platinum">[분할정복 최적화(P+)](/DP/DnC.md)</span>
   * <span class="diamond">[SOS DP(D-)](/DP/SOS%20DP.md)</span>
+  * <span class="">[검은 돌 트릭]</span>
   * <span class="">[히르쉬버그(D+)]</span>
+  * <span class="">[aliens 트릭]</span>
   * <span class="">[Connection Profile DP]</span>
   * <span class="">[크누스 최적화]</span>
   * <span class="">[단조큐 최적화]</span>
@@ -227,11 +230,11 @@ mermaid stateDiagram-v2 사용
   * <span class="platinum">[등적등주 분할(P+)](/기하학/Equalizer.md)</span>
   * <span class="platinum">[가장 가까운 두 점(P+)](/기하학/Closest%20Two%20Points.md)</span>
   * <span class="">[최소 외접원(P+)]</span>
-  * <span class="">[polygon union]</span> <!-- https://jh05013.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EB%8F%84%ED%98%95%EC%9D%98%20%ED%95%A9%EC%A7%91%ED%95%A9%EA%B3%BC%20%EB%84%93%EC%9D%B4/ -->
   * <span class="">[볼록다각형 접선]</span> <!-- https://www.acmicpc.net/problem/18190 --> <!-- https://youngyojun.github.io/contest/review/2020/02/15/iamcoder-2019-yearend-contest/ -->
-  * <span class="">[불도저]</span>
   * <span class="">[반평면 교집합(D-)]</span>
+  * <span class="diamond">[불도저 트릭(D+)](/기하학/불도저.md)</span>
   * <span class="">[KD tree]</span> <!-- https://algoshitpo.github.io/2020/02/09/kdtree/ -->
+  * <span class="">[polygon union]</span> <!-- https://jh05013.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EB%8F%84%ED%98%95%EC%9D%98%20%ED%95%A9%EC%A7%91%ED%95%A9%EA%B3%BC%20%EB%84%93%EC%9D%B4/ -->
   * <span class="">[그린 정리(D+)]</span>
   * <span class="">[델로네 삼각분할(R-)]</span>
   * <span class="">[보로노이 다이어그램(R-)]</span> <!-- https://zigui.tistory.com/32 -->
@@ -303,6 +306,7 @@ mermaid stateDiagram-v2 사용
     * <span class="diamond">[메르텐스 트릭, Xudyh's sieve (D+)](/수학/Xudyh's%20sieve.md)</span>
     * <span class="">[min_25's sieve]</span>
     * <span class="">[매트로이드(R-)]</span> <!-- https://imeimi.tistory.com/45 -->
+    <!-- https://m.blog.naver.com/kks227/221031527413 -->
 * ### 게임 이론
   * <span class="">[스프라그-그런디]</span> <!-- (비트셋) -->
   * <span class="">[hackenbush]</span> <!-- https://en.wikipedia.org/wiki/Hackenbush --> <!-- https://rkm0959.tistory.com/139 -->
