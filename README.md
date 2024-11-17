@@ -208,7 +208,6 @@ mermaid stateDiagram-v2 사용
 * ### 기하학
   <!-- * ~~<span class="">[반공간 교집합]</span>~~ -->
   <!-- * <span class="">[3D convex hull]</span>
-  * <span class="">[dynamic convex hull]</span>
   * <span class="">[polygon raycast]</span>
   molamola 팀노트 https://zigui.tistory.com/5 -->
   <!-- https://zigui.tistory.com/34 -->
@@ -222,7 +221,8 @@ mermaid stateDiagram-v2 사용
   * <span class="">[볼록다각형 판정]</span>
   * <span class="gold">[선분교차판정(G+)](/기하학/선분교차판정.md)</span>
   * <span class="platinum">[선분교차점 계산(P-)](/기하학/선분교차점%20계산.md)</span>
-  * <span class="platinum">[볼록 껍질(P-)](/기하학/볼록%20껍질.md)</span>
+  * <span class="platinum">[볼록 껍질:Graham Scan(P-)](/기하학/볼록%20껍질.md)</span>
+  * <span class="platinum">[볼록 껍질:monotone chain]</span> <!-- 다각형접선, convex layers에 쓰임 -->
   * <span class="platinum">[가장 먼 두 점 : 회전하는 캘리퍼스(P-)](/기하학/Rotating%20Calipers.md)</span>
   * <span class="platinum">[plane sweeping(P-)](/기하학/Plane%20Sweeping.md)</span>
   * <span class="platinum">[다각형 내부의 점 판정(P-)](/기하학/PIP.md)</span>
@@ -232,6 +232,8 @@ mermaid stateDiagram-v2 사용
   * <span class="">[최소 외접원(P+)]</span>
   * <span class="">[볼록다각형 접선]</span> <!-- https://www.acmicpc.net/problem/18190 --> <!-- https://youngyojun.github.io/contest/review/2020/02/15/iamcoder-2019-yearend-contest/ -->
   * <span class="">[반평면 교집합(D-)]</span>
+  * <span class="">[dynamic convex hull]</span>
+  * <span class="">[convex layers]</span> <!-- https://judge.yosupo.jp/problem/convex_layers --> <!-- https://en.wikipedia.org/wiki/Convex_layers -->
   * <span class="diamond">[불도저 트릭(Rotating Line Sweep)(D+)](/기하학/불도저.md)</span>
   * <span class="">[KD tree]</span> <!-- https://algoshitpo.github.io/2020/02/09/kdtree/ -->
   * <span class="">[polygon union]</span> <!-- https://jh05013.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EB%8F%84%ED%98%95%EC%9D%98%20%ED%95%A9%EC%A7%91%ED%95%A9%EA%B3%BC%20%EB%84%93%EC%9D%B4/ -->
@@ -298,6 +300,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[xor convolution]</span>
     * <span class="">[FFT 응용]</span> <!-- https://hyperbolic.tistory.com/4 -->
     * <span class="">[online FFT]</span>
+    * <span class="">[FWHT]</span> <!-- https://velog.io/@dnr6054/Fast-Walsh-Hadamard-Transform -->
     * <span class="diamond">[라그랑주 보간법(D-)](/수학/라그랑주%20보간법.md)</span>
     * <span class="diamond">[Linear sieve 곱셈적 함수(D-)](/수학/곱셈적%20함수.md)</span>
     * <span class="diamond">[뫼비우스 함수(D-)](/수학/뫼비우스.md)</span>
