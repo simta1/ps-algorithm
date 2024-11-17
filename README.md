@@ -324,7 +324,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[모노톤 큐]</span>
   * <span class="">[XOR Hashing]</span> <!-- https://codeforces.com/blog/entry/85900 -->
   * <span class="">[누적합, imos]</span>
-  * <span class="">[Barrett reduction]</span>
+  * <span class="">[SIMD]</span>
   * <span class="">[Gray code](/기타/Gray%20code.md)</span>
   * <span class="gold">[후위 표기식(G+)](/기타/Postfix%20Notation.md)</span>
   * <span class="">[중간에서 만나기(G+)]</span>
