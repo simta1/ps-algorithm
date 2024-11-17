@@ -40,7 +40,7 @@ mermaid stateDiagram-v2 사용
 | $n \le 50$            | $O(\sqrt2^n)$                             |                                                       |
 | $n \le 100$           | $O(n^4)$                                  |                                                       |
 | $n \le 500$           | $O(n^3)$                                  |                                                       |
-| $n \le 2,000$         | $O(n^2 \log{n})$                                  |                                                       |
+| $n \le 2,000$         | $O(n^2 \log{n})$, $O(\dfrac{n^3}{24})$    | SIMD                                                  |
 | $n \le 5,000$         | $O(n^2)$                                  |                                                       |
 | $n \le 100,000$       | $O(n \sqrt n)$, $O(n \log^2n)$            |                                                       |
 | $n \le 1,000,000$     | $O(n \log n)$                             |                                                       |
