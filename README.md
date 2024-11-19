@@ -221,8 +221,8 @@ mermaid stateDiagram-v2 사용
   * <span class="">[볼록다각형 판정]</span>
   * <span class="gold">[선분교차판정(G+)](/기하학/선분교차판정.md)</span>
   * <span class="platinum">[선분교차점 계산(P-)](/기하학/선분교차점%20계산.md)</span>
-  * <span class="platinum">[볼록 껍질:Graham Scan(P-)](/기하학/볼록%20껍질.md)</span>
-  * <span class="platinum">[볼록 껍질:monotone chain]</span> <!-- 다각형접선, convex layers에 쓰임 -->
+  * <span class="platinum">[볼록 껍질:Graham Scan(P-)](/기하학/볼록껍질(Graham%20Scan).md)</span>
+  * <span class="platinum">[볼록 껍질:Monotone Chain(P-)](/기하학/볼록껍질(Monotone%20Chain).md)</span>
   * <span class="platinum">[가장 먼 두 점 : 회전하는 캘리퍼스(P-)](/기하학/Rotating%20Calipers.md)</span>
   * <span class="platinum">[plane sweeping(P-)](/기하학/Plane%20Sweeping.md)</span>
   * <span class="platinum">[다각형 내부의 점 판정(P-)](/기하학/PIP.md)</span>

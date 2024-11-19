@@ -29,14 +29,13 @@ int ccw(const Point<T> &p1, const Point<T> &p2, const Point<T> &p3) { // -1 : �
 ### Graham Scan
 ```cpp
 template <typename T>
-vector<Point<T> > getConvexHull(vector<Point<T> > points) {
+vector<Point<T> > getConvexHull(vector<Point<T> > points) { // points 원본 배열 바껴도 괜찮으면 &points로 받기
     assert (points.size() >= 3);
     
     swap(points[0], *min_element(points.begin(), points.end()));
     sort(points.begin() + 1, points.end(), [&](const Point<T> &a, const Point<T> &b) {
         int dir = ccw(points[0], a, b);
-        if (!dir) return a < b;
-        else return dir > 0;
+        return dir ? dir > 0 : a < b;
     });
 
     vector<Point<T> > v;
@@ -56,7 +55,7 @@ $O(N~logN)$
 중간에 덧셈 뺄셈 때문에 값이 생각보다 더 커져서 그냥 제곱한 값이 1e8정도만 되도 long long 쓰는 게 낫다.
 
 ### 사용설명
-original points가 바껴도 된다면 vector<Point<T> > &points로 참조 사용   
+original points가 바껴도 된다면 `vector<Point<T> > &points`로 참조 사용   
 
 ### 문제
-[볼록 껍질](https://www.acmicpc.net/problem/1708)
+[볼록 껍질](https://www.acmicpc.net/problem/1708)   
