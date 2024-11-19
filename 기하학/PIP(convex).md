@@ -33,7 +33,7 @@ int checkPointInConvexPolygon(const Point<T> &point, const vector<Point<T> > &po
     int n = polygon.size();
     assert(n >= 3);
 
-    if (!dir) {
+    if (!dir) { // dir은 polygon에서 점들이 주어진 방향(반시계 : 1, 시계 : -1, 모르는 경우(default) : 0)   
         int i = 2;
         while (!dir) dir = ccw(polygon[0], polygon[1], polygon[i++]);
     }
