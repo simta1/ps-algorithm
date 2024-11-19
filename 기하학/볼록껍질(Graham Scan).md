@@ -55,6 +55,8 @@ $O(N~logN)$
 중간에 덧셈 뺄셈 때문에 값이 생각보다 더 커져서 그냥 제곱한 값이 1e8정도만 되도 long long 쓰는 게 낫다.
 
 ### 사용설명
+`getConvexHull()`이 리턴하는 다각형에서 점들은 반시계 방향 정렬돼 있음   
+
 original points가 바껴도 된다면 `vector<Point<T> > &points`로 참조 사용   
 
 ### 문제

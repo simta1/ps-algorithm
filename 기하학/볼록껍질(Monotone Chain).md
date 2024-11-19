@@ -46,8 +46,8 @@ vector<Point<T> > getConvexHull(vector<Point<T> > points) { // points 원본 배
         low.push_back(point);
     }
     
-    for (int i = low.size() - 2; i > 0; i--) upp.push_back(low[i]); // upp과 low의 시작점, 끝점은 중복되는 동일한 점임
-    return upp;
+    for (int i = upp.size() - 2; i > 0; i--) low.push_back(upp[i]); // upp과 low의 시작점, 끝점은 중복되는 동일한 점임
+    return low;
 }
 ```
 ### 시간복잡도
@@ -58,6 +58,8 @@ $O(N~logN)$
 아래껍질은 반시계방향이므로 ccw=1이 될때만 push하기 위해 ccw<=0인 경우 pop   
 
 ### 사용설명
+`getConvexHull()`이 리턴하는 다각형에서 점들은 반시계 방향 정렬돼 있음   
+
 original points가 바껴도 된다면 `vector<Point<T> > &points`로 참조 사용   
 
 볼록껍질만 구하는 상황이라면 [Graham Scan](/기하학/볼록껍질(Graham%20Scan).md)을 써도 상관없음   
