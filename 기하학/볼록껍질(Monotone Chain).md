@@ -63,7 +63,9 @@ $O(N~logN)$
 original points가 바껴도 된다면 `vector<Point<T> > &points`로 참조 사용   
 
 볼록껍질만 구하는 상황이라면 [Graham Scan](/기하학/볼록껍질(Graham%20Scan).md)을 써도 상관없음   
-근데 보통 다각형 접선, Convex Layers등의 구현에는 Monotone Chain을 사용하는 듯(아직 공부안해서 확실치 않음) <!-- TODO -->   
+
+Convex Layers를 구해야 한다면 정렬을 한번만 해도 되는 Monotone Chain이 훨씬 빠름-> $O(N~logN + KN)$   
+Convex Layers를 $O(N~logN)$에 구하는 알고리즘도 있지만 이건 논외
 
 ### 문제
 [볼록 껍질](https://www.acmicpc.net/problem/1708)   

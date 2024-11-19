@@ -233,7 +233,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[볼록다각형 접선]</span> <!-- https://www.acmicpc.net/problem/18190 --> <!-- https://youngyojun.github.io/contest/review/2020/02/15/iamcoder-2019-yearend-contest/ -->
   * <span class="">[반평면 교집합(D-)]</span>
   * <span class="">[dynamic convex hull]</span>
-  * <span class="">[convex layers]</span> <!-- https://judge.yosupo.jp/problem/convex_layers --> <!-- https://en.wikipedia.org/wiki/Convex_layers -->
+  * <span class="">[Convex Layers]</span>
   * <span class="diamond">[불도저 트릭(Rotating Line Sweep)(D+)](/기하학/불도저.md)</span>
   * <span class="">[KD tree]</span> <!-- https://algoshitpo.github.io/2020/02/09/kdtree/ -->
   * <span class="">[polygon union]</span> <!-- https://jh05013.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EB%8F%84%ED%98%95%EC%9D%98%20%ED%95%A9%EC%A7%91%ED%95%A9%EA%B3%BC%20%EB%84%93%EC%9D%B4/ -->
