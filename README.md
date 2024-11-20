@@ -225,20 +225,25 @@ mermaid stateDiagram-v2 사용
   * <span class="platinum">[볼록 껍질:Monotone Chain(P-)](/기하학/볼록껍질(Monotone%20Chain).md)</span>
   * <span class="platinum">[가장 먼 두 점 : 회전하는 캘리퍼스(P-)](/기하학/Rotating%20Calipers.md)</span>
   * <span class="platinum">[plane sweeping(P-)](/기하학/Plane%20Sweeping.md)</span>
+  * <span class="platinum">[radial sweeping]</span>
   * <span class="platinum">[다각형 내부의 점 판정(P-)](/기하학/PIP.md)</span>
   * <span class="platinum">[볼록 다각형 내부의 점 판정(P+)](/기하학/PIP(convex).md)</span>
   * <span class="platinum">[등적등주 분할(P+)](/기하학/Equalizer.md)</span>
   * <span class="platinum">[가장 가까운 두 점(P+)](/기하학/Closest%20Two%20Points.md)</span>
   * <span class="">[최소 외접원(P+)]</span>
-  * <span class="">[볼록다각형 접선]</span> <!-- https://www.acmicpc.net/problem/18190 --> <!-- https://youngyojun.github.io/contest/review/2020/02/15/iamcoder-2019-yearend-contest/ -->
   * <span class="">[반평면 교집합(D-)]</span>
-  * <span class="">[dynamic convex hull]</span>
+  * <span class="">[Shamos-Hoey]</span>
+  * <span class="">[Bentley-Ottmann]</span>
+  * <span class="">[점-볼록다각형 접선]</span>
+  * <span class="">[볼록다각형-볼록다각형 접선]</span> <!-- https://www.geeksforgeeks.org/tangents-two-convex-polygons/ -->
+  * <span class="">[dynamic convex hull]</span> <!-- https://www.geeksforgeeks.org/dynamic-convex-hull-adding-points-existing-convex-hull/?ref=oin_asr2 -->
   * <span class="">[Convex Layers]</span>
   * <span class="diamond">[불도저 트릭(Rotating Line Sweep)(D+)](/기하학/불도저.md)</span>
   * <span class="">[KD tree]</span> <!-- https://algoshitpo.github.io/2020/02/09/kdtree/ -->
   * <span class="">[polygon union]</span> <!-- https://jh05013.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EB%8F%84%ED%98%95%EC%9D%98%20%ED%95%A9%EC%A7%91%ED%95%A9%EA%B3%BC%20%EB%84%93%EC%9D%B4/ -->
+  * <span class="">[polygon clipping]</span>
   * <span class="">[그린 정리(D+)]</span>
-  * <span class="">[델로네 삼각분할(R-)]</span>
+  * <span class="">[델로네 삼각분할(R-)]</span> <!-- https://00ad-8e71-00ff-055d.tistory.com/106 -->
   * <span class="">[보로노이 다이어그램(R-)]</span> <!-- https://zigui.tistory.com/32 -->
   * <span class="">[disk convex hull(R)]</span> <!-- https://www.acmicpc.net/problem/27957 -->
 * ### [수학](/수학/개념%20정리.md)
@@ -299,7 +304,8 @@ mermaid stateDiagram-v2 사용
     * <span class="">[LP]</span>
     * <span class="">[xor convolution]</span>
     * <span class="">[FFT 응용]</span> <!-- https://hyperbolic.tistory.com/4 -->
-    * <span class="">[online FFT]</span>
+    * <span class="">[online FFT]</span> <!-- https://cocoachan.tistory.com/15 -->
+    * <span class="">[CDQ]</span> <!-- https://codeforces.com/blog/entry/111399 -->
     * <span class="">[FWHT]</span> <!-- https://velog.io/@dnr6054/Fast-Walsh-Hadamard-Transform -->
     * <span class="diamond">[라그랑주 보간법(D-)](/수학/라그랑주%20보간법.md)</span>
     * <span class="diamond">[Linear sieve 곱셈적 함수(D-)](/수학/곱셈적%20함수.md)</span>
@@ -323,6 +329,7 @@ mermaid stateDiagram-v2 사용
   * <span class="silver">[비트마스크(S-)](/기타/Bitmask.md)</span>
   * <span class="silver">[좌표 압축(S-)](/기타/좌표압축.md)</span>
   * <span class="silver">[순열 사이클 분할(S+)](/기타/순열%20사이클%20분할.md)</span>
+  * <span class="">[Log Decomp]</span> <!-- https://codeforces.com/blog/entry/124766 -->
   * <span class="">[모노톤 스택]</span>
   * <span class="">[모노톤 큐]</span>
   * <span class="">[XOR Hashing]</span> <!-- https://codeforces.com/blog/entry/85900 -->
@@ -402,6 +409,8 @@ mermaid stateDiagram-v2 사용
 백준 알고리즘 분류   
 https://www.acmicpc.net/problem/tags   
 
+https://codeforces.com/blog/entry/125257
+
 tlsdydaud1   
 https://00ad-8e71-00ff-055d.tistory.com/3   
 
@@ -438,7 +447,10 @@ https://ps.mjstudio.net/categories/algorithm
 koosaga   
 https://koosaga.com/242   
 
-?   
+leo020630   
+https://leo630.tistory.com/
+
+yclock   
 https://youngyojun.github.io/
 
 S/W 멤버십 기술 블로그   
@@ -468,7 +480,7 @@ https://zigui.tistory.com/34
 algoshitpo   
 https://algoshitpo.github.io/   
 
-?   
+imeimi2000   
 https://imeimi.tistory.com/   
 
 koosaga - olympiad Library codes   
