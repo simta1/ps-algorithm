@@ -48,8 +48,13 @@ $(x_3, y_3) \text{에서 거리} = \dfrac{|(y_2 - y_1)(x_3 - x_1) - (x_2 - x_1)(
 
 ```cpp
 template <typename T>
-inline ld distPP(const Point<T> &p1, const Point<T> &p2) { // distance from P(point) to P(point)
+inline ld distPP(const Point<T> &p1, const Point<T> &p2) {
     return sqrtl((p2.x - p1.x) * (p2.x - p1.x) + (p2.y - p1.y) * (p2.y - p1.y));
+}
+
+template <typename T>
+inline T distSquarePP(const Point<T> &p1, const Point<T> &p2) {
+    return (p2.x - p1.x) * (p2.x - p1.x) + (p2.y - p1.y) * (p2.y - p1.y);
 }
 
 template <typename T>
@@ -66,8 +71,8 @@ inline ld getTriangleArea(const Point<T> &a, const Point<T> &b, const Point<T> &
 }
 
 template <typename T>
-inline ld getRectangleArea(const Point<T> &p1, const Point<T> &p2, const Point<T> &p3, const Point<T> &p4) {
-    return getTriangleArea(p1, p2, p3) + getTriangleArea(p1, p4, p3);
+inline T getTriangleAreaDouble(const Point<T> &a, const Point<T> &b, const Point<T> &c) {
+    return abs(a.x * b.y + b.x * c.y + c.x * a.y - a.y * b.x - b.y * c.x - c.y * a.x);
 }
 
 ld heron(ld a, ld b, ld c) { // 헤론
