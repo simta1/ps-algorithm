@@ -45,7 +45,7 @@ int PICP(const Point<T> &point, const vector<Point<T> > &polygon, int dir=0) { /
 
     if (!dir) { // dir은 polygon에서 점들이 주어진 방향(반시계 : 1, 시계 : -1, 모르는 경우(default) : 0)   
         int i = 2;
-        while (!dir) dir = ccw(polygon[0], polygon[1], polygon[i++]);
+        while (!dir && i < n) dir = ccw(polygon[0], polygon[1], polygon[i++]);
     }
     assert(dir != 0); // dir = 0이면 모든 점이 일직선 위에 존재
 
