@@ -2,7 +2,7 @@
 ## 볼록다각형 내부의 점 판정(Point In Convex Polygon)
 ### [기하학 헤더](/기하학/Geometry%20Header.md)
 <details>
-<summary>Point, Cross Product, CCW</summary>
+<summary>Point, Cross Product, CCW, isBetween, isOnPL</summary>
 
 ```cpp
 template <typename T>
@@ -23,13 +23,23 @@ int ccw(const Point<T> &p1, const Point<T> &p2, const Point<T> &p3) { // -1 : �
     T cp = crossProduct(p2 - p1, p3 - p1);
     return (cp > 0) - (cp < 0);
 }
+
+template <typename T>
+bool isBetween(Point<T> a, Point<T> b, Point<T> c) {
+    return min(a.x, c.x) <= b.x && b.x <= max(a.x, c.x) && min(a.y, c.y) <= b.y && b.y <= max(a.y, c.y);
+}
+
+template <typename T>
+bool isOnPL(Point<T> p, Point<T> l1, Point<T> l2) { // p가 l1 l2위에 있는지
+    return ccw(p, l1, l2) == 0 && isBetween(l1, p, l2);
+}
 ```
 </details>
 
 ### Point in Convex Polygon
 ```cpp
 template <typename T>
-int checkPointInConvexPolygon(const Point<T> &point, const vector<Point<T> > &polygon, int dir=0) { // -1 : 내부, 0 : 경계, 1 : 외부
+int PICP(const Point<T> &point, const vector<Point<T> > &polygon, int dir=0) { // -1 : 내부, 0 : 경계, 1 : 외부
     int n = polygon.size();
     assert(n >= 3);
 
@@ -42,6 +52,9 @@ int checkPointInConvexPolygon(const Point<T> &point, const vector<Point<T> > &po
     if (ccw(polygon[0], polygon[1], point) * dir < 0) return 1;
     if (ccw(polygon[0], polygon[n - 1], point) * dir > 0) return 1;
 
+    if (isOnPL(point, polygon[0], polygon[1])) return 0;
+    if (isOnPL(point, polygon[0], polygon[n - 1])) return 0;
+
     int lo = 1, hi = n;
     while (lo + 1 < hi) {
         int mid = lo + hi >> 1;
@@ -49,45 +62,13 @@ int checkPointInConvexPolygon(const Point<T> &point, const vector<Point<T> > &po
         else hi = mid;
     }
 
-    if (hi == n) { // polygon[0], polygon[n - 1], point가 일직선인 경우
-        T distToPolygon = fabsl(polygon[n - 1].x - polygon[0].x) + fabsl(polygon[n - 1].y - polygon[0].y);
-        T distToPoint = fabsl(point.x - polygon[0].x) + fabsl(point.y - polygon[0].y);
-        return distToPoint > distToPolygon;
-    }
+    if (hi == n) return 1; // polygon[0], polygon[n - 1], point가 일직선인 경우
 
     return -ccw(polygon[lo], polygon[hi], point) * dir;
 }
 ```
 ### 시간복잡도 
 $O(logN)$   
-
-### 구현 주의사항
-polygon[0], polygon[n - 1], point가 일직선인 경우 polygon[0]에서 두 점 polygon[n - 1], point까지의 거리를 비교할 때 x좌표나 y좌표 중 하나만 사용해서 계산하면 안 된다. 어차피 세 점이 한 직선 위에 있어 기울기가 같으니 x, y좌표 중 하나만 사용해도 될 것 같지만, 세 점이 모두 x좌표가 같거나 혹은 y좌표가 같은 경우 거리가 전부 0으로 계산되므로 x, y좌표 둘 모두를 고려해야 된다.
-```cpp
-if (hi == n) { // polygon[0], polygon[n - 1], point가 일직선인 경우
-
-    // 잘못된 코드
-    T distToPolygon = fabsl(polygon[n - 1].x - polygon[0].x);
-    T distToPoint = fabsl(point.x - polygon[0].x);
-    return distToPoint > distToPolygon;
-    
-    // 고친 코드
-    T distToPolygon = fabsl(polygon[n - 1].x - polygon[0].x) + fabsl(polygon[n - 1].y - polygon[0].y);
-    T distToPoint = fabsl(point.x - polygon[0].x) + fabsl(point.y - polygon[0].y);
-    return distToPoint > distToPolygon;
-
-}
-```
-polygon[0], polygon[n - 1], point가 일직선에 있다는 것은 애초에 point가 다각형 내부에 있을 수 없다는 뜻이다. 다각형 외부 또는 다각형의 경계에 존재한다.
-
-```cpp
-// 잘못된 코드
-T diff = distToPoint - distToPolygon;
-return (diff > 0) - (diff < 0);
-
-// 고친 코드
-return distToPoint > distToPolygon;
-```
 
 ### 사용설명
 오목다각형에선 사용 불가   

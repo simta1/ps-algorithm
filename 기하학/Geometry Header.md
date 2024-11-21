@@ -88,11 +88,16 @@ ld getSegmentCircleArea(ld r, ld len) { // 활꼴 넓이, r : 반지름, len : �
 }
 ```
 
-### isBetween
+### isBetween, isOnPL
 ```cpp
 template <typename T>
 bool isBetween(Point<T> a, Point<T> b, Point<T> c) {
     return min(a.x, c.x) <= b.x && b.x <= max(a.x, c.x) && min(a.y, c.y) <= b.y && b.y <= max(a.y, c.y);
+}
+
+template <typename T>
+bool isOnPL(Point<T> p, Point<T> l1, Point<T> l2) { // p가 l1 l2위에 있는지
+    return ccw(p, l1, l2) == 0 && isBetween(l1, p, l2);
 }
 ```
 
@@ -117,10 +122,6 @@ pll merge(ll a, ll b, ll c, ll d) { // tanT1 = a / b, tanT2 = c / d, tan(T1 + T2
 }
 ```
 리턴값도 (분자, 분모) 형태
-
-### isOnPL
-```cpp
-```
 
 ## 좌표 계산
 ### 두 점 $(x1, x2), (y1, y2)$을 지나는 방정식 :   
