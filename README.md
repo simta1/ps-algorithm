@@ -234,8 +234,9 @@ mermaid stateDiagram-v2 사용
   * <span class="">[반평면 교집합(D-)]</span>
   * <span class="">[Shamos-Hoey]</span>
   * <span class="">[Bentley-Ottmann]</span>
-  * <span class="">[점-볼록다각형 접선]</span>
+  * <span class="diamond">[점-볼록다각형 접선(D-)](/기하학/볼록다각형%20접선.md)</span>
   * <span class="">[볼록다각형-볼록다각형 접선]</span> <!-- https://www.geeksforgeeks.org/tangents-two-convex-polygons/ -->
+  * <span class="">[점-원 접선, 원-원 접선]</span>
   * <span class="">[dynamic convex hull]</span> <!-- https://www.geeksforgeeks.org/dynamic-convex-hull-adding-points-existing-convex-hull/?ref=oin_asr2 -->
   * <span class="">[Convex Layers]</span>
   * <span class="diamond">[불도저 트릭(Rotating Line Sweep)(D+)](/기하학/불도저.md)</span>
