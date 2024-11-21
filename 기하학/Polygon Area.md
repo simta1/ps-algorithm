@@ -32,6 +32,11 @@ auto getArea = [&](int a, int b) {
     if (a < b) return area[b] - area[a] - getTriangleArea(polygon[0], polygon[a], polygon[b]);
     return area.back() - area[a] + area[b] + getTriangleArea(polygon[0], polygon[a], polygon[b]);
 };
+
+auto getMinArea = [&](int a, int b) { // a, b번 꼭짓점을 잇는 선으로 다각형을 분할할 때 분할된 두 영역 중 작은 곳의 넓이
+    auto res = area[max(a, b)] - area[min(a, b)] - getTriangleArea(polygon[0], polygon[a], polygon[b]);
+    return min(res, area.back() - res);
+};
 ```
 다각형 (0, 1, 2) -> area[2]에 저장   
 다각형 (0, 1, 2, 3) -> area[3]에 저장   
