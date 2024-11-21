@@ -23,6 +23,19 @@ ld getPolygonArea(const vector<Point<T> > &polygon) {
     return res;
 }
 ```
+### 다각형 부분넓이 계산 (누적합)
+```cpp
+vector<ld> area(n);
+for (int i = 2; i < n; i++) area[i] = area[i - 1] + getTriangleArea(polygon[0], polygon[i - 1], polygon[i]);
+
+auto getArea = [&](int a, int b) {
+    if (a < b) return area[b] - area[a] - getTriangleArea(polygon[0], polygon[a], polygon[b]);
+    return area.back() - area[a] + area[b] + getTriangleArea(polygon[0], polygon[a], polygon[b]);
+};
+```
+다각형 (0, 1, 2) -> area[2]에 저장   
+다각형 (0, 1, 2, 3) -> area[3]에 저장   
+다각형 (0, 1, 2, ..., n - 1) -> area[n - 1]에 저장   
 ### 시간복잡도
 $O(N)$   
 
