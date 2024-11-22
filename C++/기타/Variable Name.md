@@ -66,7 +66,7 @@ ETT 등에서 dfs 스패닝 트리 만들 때 방문순서 저장
 ### trueValue
 visited배열 등에서 true인지 나타내는 값.   
 visited[i] != trueValue이면 false로 생각하는 방식.   
-배열 여러번 사용해야 될 때 굳이 O(N)으로 배열값 전부 0으로 초기화하지 않아도 trueValue값만 O(1)로 바꾸면 되서 시간복잡도 줄이는 용. ([이분 매칭](/그래프%20이론/네트워크%20플로우/Bipartite%20Matching.md) 코드 참고)
+배열 여러번 사용해야 될 때 굳이 O(N)으로 배열값 전부 0으로 초기화하지 않아도 trueValue값만 O(1)로 바꾸면 되서 시간복잡도 줄이는 용. ([이분 매칭](/그래프%20이론/네트워크%20플로우/이분매칭.md) 코드 참고)
 
 ### dpos, dir, sx, sy, cx, cy, ex, ey, dx, dy
 2차원 배열 위에서 움직일 때 이동방향, 좌표정보 저장   
@@ -101,5 +101,5 @@ for (int i = facInv.size() - 1; i > 0; i--) facInv[i - 1] = facInv[i] * i % mod;
 제곱, 제곱근 저장
 
 ### lpf, lpe
-`lpf` : linear sieve구현할 때 최소소인수 저장   
-`lpe` : 최소소인수의 지수 저장   
+linear sieve구현할 때 사용   
+각각 최소소인수, 최소소인수의 지수 저장   

@@ -239,7 +239,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[Bentley-Ottmann]</span>
   * <span class="diamond">[점-볼록다각형 접선(D-)](/기하학/볼록다각형%20접선.md)</span>
   * <span class="">[볼록다각형-볼록다각형 접선]</span> <!-- https://www.geeksforgeeks.org/tangents-two-convex-polygons/ -->
-  * <span class="">[점-원 접선, 원-원 접선]</span>
+  * <span class="">[점-원 접선, 원-원 접선]</span> <!-- https://cubelover.tistory.com/4 -->
   * <span class="">[dynamic convex hull]</span> <!-- https://www.geeksforgeeks.org/dynamic-convex-hull-adding-points-existing-convex-hull/?ref=oin_asr2 -->
   * <span class="">[Convex Layers]</span>
   * <span class="diamond">[불도저 트릭(Rotating Line Sweep)(D+)](/기하학/불도저.md)</span>
@@ -307,11 +307,14 @@ mermaid stateDiagram-v2 사용
     * <span class="">[FFT 나눗셈]</span>
     * <span class="">[simplex]</span>
     * <span class="">[LP]</span>
-    * <span class="">[xor convolution]</span>
+    * <span class="">[XOR Convolution]</span>
     * <span class="">[FFT 응용]</span> <!-- https://hyperbolic.tistory.com/4 -->
     * <span class="">[online FFT]</span> <!-- https://cocoachan.tistory.com/15 -->
     * <span class="">[CDQ]</span> <!-- https://codeforces.com/blog/entry/111399 -->
     * <span class="">[FWHT]</span> <!-- https://velog.io/@dnr6054/Fast-Walsh-Hadamard-Transform -->
+    * <span class="">[번사이드 보조정리]</span> <!-- https://algoshitpo.github.io/2020/02/09/burnside/ -->
+    * <span class="">[홀의 결혼 정리]</span>
+    * <span class="">[린드스트롬-게셀-비엔노 보조정리(LGV Lemma)]</span>
     * <span class="diamond">[라그랑주 보간법(D-)](/수학/라그랑주%20보간법.md)</span>
     * <span class="diamond">[Linear sieve 곱셈적 함수(D-)](/수학/곱셈적%20함수.md)</span>
     * <span class="diamond">[뫼비우스 함수(D-)](/수학/뫼비우스.md)</span>
@@ -387,6 +390,7 @@ mermaid stateDiagram-v2 사용
 * ### 함수
   * <span class="information">[수학관련](/C++/함수/math.md)</span>
   * <span class="">[배열관련]</span> <!-- copy doubling -->
+  * <span class="">[regex]</span>
   * <span class="">[constexpr, static_assert]</span> <!-- if constexpr 등등도 포함 -->
   * <span class="information">[multiset](/C++/함수/multiset.md)</span>
   * <span class="information">[permutation](/C++/함수/permutation.md)</span>
@@ -409,8 +413,15 @@ mermaid stateDiagram-v2 사용
   * <span class="">[percompiled header]</span> <!-- https://codeforces.com/blog/entry/79026 --> <!-- https://codeforces.com/blog/entry/53909? -->
 * ### 기타
   * <span class="information">[자주 쓰는 변수명](/C++/기타/Variable%20Name.md)</span>
-  * <span class="information">[코딩 아이디어](/C++/기타/Idea.md)</span>
-  <!-- https://xy-plane.tistory.com/11 -->
+  * <span class="information">[코딩 아이디어](/C++/기타/Idea.md)</span> <!-- https://xy-plane.tistory.com/11 -->
+# 파이썬
+  * 유용한 함수
+    * <span class="">[itertools]</span>
+    * <span class="">[regex]</span>
+    * <span class="">[eval]</span>
+  * 숏코딩 팁
+    * <span class="">[숏코딩 팁]</span>
+
 # 참고링크
 백준 알고리즘 분류   
 https://www.acmicpc.net/problem/tags   
