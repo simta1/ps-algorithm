@@ -138,6 +138,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[현 그래프(D+)]</span>
     * <span class="diamond">[유향 MST(D+)](/그래프%20이론/그래프/DMST.md)</span>
     * <span class="ruby">[offline incremental SCC(R-)](/그래프%20이론/그래프/Offline%20Incremental%20SCC.md)</span>
+    * <span class="">[온라인 동적 연결성 판정(R)]</span> <!-- https://etyu39.tistory.com/5 -->
     <!-- * <span class="">[현 그래프 판정]</span> -->
     <!-- * <span class="">[Perfect Elimination Ordering]</span> -->
     <!-- * <span class="">[최소 차수 MST]</span> -->
@@ -194,6 +195,7 @@ mermaid stateDiagram-v2 사용
   <!-- * <span class="">[aliens 트릭(D-)]</span> -->
 * ### 문자열
 <!-- RBS(Regular Bracket Sequence) -->
+  * <span class="">[괄호문자열]</span> <!-- 괄호문자열 판별, 괄호 종류 여러개일 때, 괄호문자열 응용 등등 -->
   * <span class="gold">[트라이(G+)](/문자열/Trie.md)</span>
   * <span class="platinum">[매내처(P-)](/문자열/Manacher.md)</span>
   * <span class="platinum">[롤링 해시(P-)](/문자열/롤링%20해시.md)</span>
@@ -203,6 +205,7 @@ mermaid stateDiagram-v2 사용
   * ~~<span class="">[bitap algorithm]</span>~~
   * <span class="platinum">[접미사 배열과 lcp 배열(P+)](/문자열/Suffix%20and%20LCP%20Array.md)</span>
   * <span class="">[Z algorithm]</span>
+  * <span class="">[와일드카드 문자열 매칭]</span> <!-- https://infossm.github.io/blog/2021/08/20/wildcard-string-matching/ --> <!-- https://www.acmicpc.net/problem/26136 -->
   * <span class="diamond">[회문 트리(D+)](/문자열/회문%20트리.md)</span>
   * <span class="">[접미사 트리(R-)]</span>
 * ### 기하학
@@ -225,7 +228,7 @@ mermaid stateDiagram-v2 사용
   * <span class="platinum">[볼록 껍질:Monotone Chain(P-)](/기하학/볼록껍질(Monotone%20Chain).md)</span>
   * <span class="platinum">[가장 먼 두 점 : 회전하는 캘리퍼스(P-)](/기하학/Rotating%20Calipers.md)</span>
   * <span class="platinum">[plane sweeping(P-)](/기하학/Plane%20Sweeping.md)</span>
-  * <span class="platinum">[radial sweeping]</span>
+  * <span class="">[radial sweeping]</span>
   * <span class="platinum">[다각형 내부의 점 판정(P-)](/기하학/PIP.md)</span>
   * <span class="platinum">[볼록 다각형 내부의 점 판정(P+)](/기하학/PIP(convex).md)</span>
   * <span class="platinum">[등적등주 분할(P+)](/기하학/Equalizer.md)</span>
@@ -286,6 +289,7 @@ mermaid stateDiagram-v2 사용
     * <span class="platinum">[중국인의 나머지 정리(P-)](/수학/CRT.md)</span>
     * <span class="">[Garner's algorithm]</span>
     * <span class="">[Barrett reduction]</span>
+    * <span class="">[프뤼퍼 수열]</span> <!-- https://hongjun7.tistory.com/10 -->
     * <span class="">[베르누이 수]</span>
     * ~~<span class="platinum">[Faulhaber(P+)](/수학/Faulhaber.md)</span>~~
     * <span class="">[Stern-Brocot 트리]</span> <!-- https://blog.myungwoo.kr/126 --> <!-- https://youngyojun.github.io/secmem/2022/02/18/sigma-sum-stern-brocot/ -->
@@ -346,6 +350,7 @@ mermaid stateDiagram-v2 사용
   * <span class="platinum">[덱을 이용한 구간 최댓값 트릭(P-)](/기타/Deque%20Trick.md)</span>
   * <span class="platinum">[삼분 탐색(P-)](/기타/삼분탐색.md)</span>
   * <span class="platinum">[Mo's algorithm(P+)](/기타/Mo's.md)</span>
+  * <span class="">[hilbert Mo]</span> <!-- https://tamref.com/97 -->
   * <span class="platinum">[평방분할(P+)](/기타/제곱근%20분할법.md)</span>
   * <span class="">[병렬 이분 탐색(P+)]</span>
   * <span class="">[small to large]</span>
@@ -426,14 +431,14 @@ jinhan814
 https://blog.naver.com/jinhan814/222439886998   
 https://blog.naver.com/PostView.naver?blogId=jinhan814&logNo=222689836982&parentCategoryNo=&categoryNo=6&viewDate=&isShowPopularPosts=false&from=postView   
 
-정수론   
+ahgus89 - 정수론   
 https://ahgus89.github.io/
 
-kcm1700   
+kcm1700 - 알고리즘 대회에 필요한 수학, 기하   
 https://algospot.com/wiki/read/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98_%EB%8C%80%ED%9A%8C%EC%97%90_%ED%95%84%EC%9A%94%ED%95%9C_%EC%88%98%ED%95%99   
 https://algospot.com/wiki/read/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98_%EB%8C%80%ED%9A%8C%EC%97%90_%ED%95%84%EC%9A%94%ED%95%9C_%EA%B8%B0%ED%95%98   
 
-선형대수학   
+topology - 선형대수학   
 https://tistory.joonhyung.xyz/18   
 
 bowbowbow   
@@ -444,6 +449,9 @@ https://m.blog.naver.com/kks227?categoryNo=299&tab=1
 
 MJ Studio   
 https://ps.mjstudio.net/categories/algorithm   
+
+cubelover   
+https://cubelover.tistory.com/
 
 koosaga   
 https://koosaga.com/242   
@@ -486,6 +494,17 @@ https://imeimi.tistory.com/
 
 koosaga - olympiad Library codes   
 https://github.com/koosaga/olympiad/tree/master/Library/codes   
+
+kimjihoon   
+https://etyu39.tistory.com/category/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98
+
+TAMREF   
+https://tamref.com/
+
+h0ngjun7   
+https://hongjun7.tistory.com/
+
+
 
 <!-- # 알고리즘 순서 { -->
   ```mermaid
