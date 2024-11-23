@@ -166,7 +166,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[트리 압축]</span>
     * <span class="">[센트로이드 분할(D-)]</span>
     * <span class="">[트리 동형 사상]</span>
-    * <span class="">[링크/컷 트리(D+)]</span>
+    * <span class="">[링크/컷 트리(D+)]</span> <!-- https://jh05013.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EB%A7%81%ED%81%AC-%EC%BB%B7%20%ED%8A%B8%EB%A6%AC/ --> <!-- https://justicehui.github.io/hard-algorithm/2021/01/01/link-cut-tree/ --> <!-- https://m.blog.naver.com/jinhan814/222309144459?recommendTrackingCode=2 -->
     * <span class="">[탑 트리(R-)]</span> <!-- https://etyu39.tistory.com/8 -->
 * ### [DP](/DP/Top-Down%20DP.md)
   <!-- * <span class="">[배낭 문제(G-)]</span> -->
@@ -240,16 +240,17 @@ mermaid stateDiagram-v2 사용
   * <span class="diamond">[점-볼록다각형 접선(D-)](/기하학/볼록다각형%20접선.md)</span>
   * <span class="">[볼록다각형-볼록다각형 접선]</span> <!-- https://www.geeksforgeeks.org/tangents-two-convex-polygons/ -->
   * <span class="">[점-원 접선, 원-원 접선]</span> <!-- https://cubelover.tistory.com/4 -->
-  * <span class="">[dynamic convex hull]</span> <!-- https://www.geeksforgeeks.org/dynamic-convex-hull-adding-points-existing-convex-hull/?ref=oin_asr2 -->
+  * <span class="">[Dynamic Convex Hull]</span> <!-- https://lem0nad3.tistory.com/m/133 --> <!-- https://www.geeksforgeeks.org/dynamic-convex-hull-adding-points-existing-convex-hull/?ref=oin_asr2 -->
   * <span class="">[Convex Layers]</span>
   * <span class="diamond">[불도저 트릭(Rotating Line Sweep)(D+)](/기하학/불도저.md)</span>
   * <span class="">[KD tree]</span> <!-- https://algoshitpo.github.io/2020/02/09/kdtree/ -->
-  * <span class="">[polygon union]</span> <!-- https://jh05013.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EB%8F%84%ED%98%95%EC%9D%98%20%ED%95%A9%EC%A7%91%ED%95%A9%EA%B3%BC%20%EB%84%93%EC%9D%B4/ -->
-  * <span class="">[polygon clipping]</span>
+  * <span class="">[Polygon Union]</span> <!-- https://jh05013.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EB%8F%84%ED%98%95%EC%9D%98%20%ED%95%A9%EC%A7%91%ED%95%A9%EA%B3%BC%20%EB%84%93%EC%9D%B4/ -->
+  * <span class="">[Polygon Clipping]</span>
+  * <span class="">[Boolean Operations On Polygons]</span>
   * <span class="">[그린 정리(D+)]</span>
   * <span class="">[델로네 삼각분할(R-)]</span> <!-- https://00ad-8e71-00ff-055d.tistory.com/106 -->
   * <span class="">[보로노이 다이어그램(R-)]</span> <!-- https://zigui.tistory.com/32 -->
-  * <span class="">[disk convex hull(R)]</span> <!-- https://www.acmicpc.net/problem/27957 -->
+  * <span class="">[Disk Convex Hull(R)]</span> <!-- https://www.acmicpc.net/problem/27957 -->
 * ### [수학](/수학/개념%20정리.md)
   * #### 조합론, 수열
     * <span class="silver">[nCr, 파스칼의 삼각형(S+)](/수학/조합론/Combination(DP).md)</span> <!-- https://justicehui.github.io/medium-algorithm/2024/02/10/combinatorics/ -->
@@ -273,6 +274,9 @@ mermaid stateDiagram-v2 사용
     * <span class="">[Freivalds' algorithm]</span> <!-- https://www.acmicpc.net/problem/13165 -->
     <!-- * <span class="">[Deterministic Verification of Integer Matrix Multiplication in Quadratic Time]</span> -->
   * #### 기타
+    <!-- XOR과 관련된 문제
+    https://infossm.github.io/blog/2019/12/14/%EC%A3%BC%EC%96%B4%EC%A7%84-%EC%88%98%EB%93%A4%EC%9D%98-XOR-%EC%97%B0%EC%82%B0%EC%9C%BC%EB%A1%9C-%EB%A7%8C%EB%93%A4-%EC%88%98-%EC%9E%88%EB%8A%94-%EC%88%98/
+    https://infossm.github.io/blog/2021/07/17/various-technic-solving-xor-problem/ -->
     <!-- * <span class="">[고합성수 찾기]</span>
     * <span class="">[우월고합성수]</span> -->
     <!-- Szemerédi–Trotter theorem -->
@@ -361,7 +365,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[SMAWK]</span> <!-- https://github.com/koosaga/olympiad/blob/master/Library/codes/ad_hoc/smawk.cpp -->
   * <span class="">[춤추는 링크, 크누스 X]</span>
   * <span class="">[임의 정밀도(epsilon값 계산)(A)]</span>
-  * ~~<span class="">[담금질 기법]</span>~~ <!-- https://ryute.tistory.com/35    --> <!-- https://ryute.tistory.com/36    -->
+  * ~~<span class="">[담금질 기법]</span>~~ <!-- https://ryute.tistory.com/35    --> <!-- https://ryute.tistory.com/36    --> <!-- https://algospot.com/forum/read/1211/ --> <!-- https://koosaga.com/3 -->
   * <span class="">[Fracturing Search(D+)]</span> <!-- https://usaco.guide/adv/fracturing-search?lang=cpp --> <!-- https://www.acmicpc.net/problem/14166 -->
   * <span class="">[선형 계획법]</span>
   * <span class="">[쌍대성]</span>
