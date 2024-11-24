@@ -56,7 +56,8 @@
 
 ### 함수명 통일
   * [ ] splay tree -> lazy전파 함수
-  * [ ] lazy propagation seg -> lazy전파 함련
+  * [ ] lazy propagation seg -> lazy전파 함수
+
 
 ### 변수명 통일
-  * [ ] 트리 -> 변수명 par로 변경
+  * [ ] lca -> depth배열 이름 dep로 바꾸기
