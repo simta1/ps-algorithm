@@ -1,30 +1,22 @@
 [카테고리](/README.md)
 ### 변수명 통일
 ```cpp
-adj // 그래프 인접리스트
+adj[][] // adjacent, 그래프에서 인접리스트
+rdj[][] // reverse adj, 방향그래프에서 역방향 간선 저장
+chd[][] // child, 트리에서 인접리스트. 입력을 양방향 간선으로 받아 adj에 저장한 뒤    부모->자식 방향 간선만 남겨 저장
 cur, next, cost // 그래프에서 현재 노드, 다음 노드, 간선 가중치
-dist // 다익스트라, 벨만 포드, 플로이드 워셜 등등에서 거리 계산결과 저장하는 배열
-inDegree // 위상정렬 등에서 노드로 들어오는 간선 개수
+dist[] // 다익스트라, 벨만 포드, 플로이드 워셜 등등에서 거리 계산결과 저장하는 배열
+inDegree[] // 위상정렬 등에서 노드로 들어오는 간선 개수
 node, s, e, l, r // 세그트리, s와 e는 node의 범위, l과 r은 쿼리 범위
-sz, dep, par // 트리에서 서브트리 크기, 현재노드의 깊이, 부모노드 저장하는 배열
+sz[], dep[], par[] // 트리에서 서브트리 크기, 현재노드의 깊이, 부모노드 저장하는 배열
+dfsn // ETT 등에서 dfs 스패닝 트리 만들 때 방문순서 저장
 ```
 
 ### 함수명 통일
 ```cpp
 addEdge() // 그래프 간선 추가
 propagate() // lazy seg, splay tree 등에서 lazy전파하는 함수. 다른 이름 사용한 코드 좀 있어서 수정해야 됨.
-```
-
-### 배열명, 변수명 비슷할 때
-배열명에 약어 사용   
-ex) parent, par  
-```cpp
-void makeTree(int cur, int parent) {
-    par[cur] = parent;
-    for (auto next : adj[cur]) if (cur != parent) {
-        makeTree(next, cur);
-    }
-}
+makeTree() // 트리에서 adj로 chd만드는 함수
 ```
 
 ### offset
@@ -46,23 +38,6 @@ for (auto &e : v) ++cnt[e - offset];
 ```cpp
 for (int i = 0; i < n; i++) pos[v[i]] = i;
 ```
-
-### adj, chd
-adj(adjacent) : 그래프에서 인접리스트       
-chd(child) : 트리에서 인접리스트. 입력을 양방향 간선으로 받아 adj에 저장한 뒤 부모->자식 방향 간선만 남겨 저장   
-
-### sz
-sz\[node\] : 트리에서 node를 루트로 하는 서브트리의 크기 저장
-
-### rdj
-그래프에서 역방향 간선 저장. rdj 뜻은 그냥 reverse adj 줄인 거
-```cpp
-vector<vector<pair<int, T> > > adj;
-vector<vector<pair<int, T> > > rdj; // reverse adj
-```
-
-### dfsn
-ETT 등에서 dfs 스패닝 트리 만들 때 방문순서 저장   
 
 ### trueValue
 visited배열 등에서 true인지 나타내는 값.   
