@@ -162,10 +162,12 @@ mermaid stateDiagram-v2 사용
     * <span class="platinum">[최소 공통 조상(P-)](/그래프%20이론/트리/LCA.md)</span>
     * <span class="platinum">[LCA를 통한 트리 쿼리(P-)](/그래프%20이론/트리/Query%20with%20LCA.md)</span>
     * <span class="platinum">[오일러 경로 테크닉(P-)](/그래프%20이론/트리/ETT.md)</span>
-    * <span class="">[heavy-light 분할(P+)]</span>
+    * <span class="platinum">[heavy-light 분할(P+)](/그래프%20이론/트리/HLD.md)</span>
     * <span class="">[트리 압축]</span>
+    * <span class="">[센트로이드]</span>
     * <span class="">[센트로이드 분할(D-)]</span>
     * <span class="">[트리 동형 사상]</span>
+    * <span class="">[tree width]</span>
     * <span class="">[링크/컷 트리(D+)]</span> <!-- https://jh05013.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EB%A7%81%ED%81%AC-%EC%BB%B7%20%ED%8A%B8%EB%A6%AC/ --> <!-- https://justicehui.github.io/hard-algorithm/2021/01/01/link-cut-tree/ --> <!-- https://m.blog.naver.com/jinhan814/222309144459?recommendTrackingCode=2 -->
     * <span class="">[탑 트리(R-)]</span> <!-- https://etyu39.tistory.com/8 -->
 * ### [DP](/DP/Top-Down%20DP.md)
