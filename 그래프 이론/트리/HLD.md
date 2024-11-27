@@ -91,10 +91,11 @@ public:
 };
 ```
 ### 시간복잡도
-$O(log^2{N})$   
+point update $O(logN)$   
+query $O(log^2{N})$   
 
 ### 구현 주의사항
-hld함수에서 `if (sz[chd[cur][0]] < sz[next]) swap(chd[cur][0], next);`을 통해 `chd[cur][0]`에 heavy-edge가 오도록 재배치함.   
+`hld()`함수에서 `if (sz[chd[cur][0]] < sz[next]) swap(chd[cur][0], next);`을 통해 `chd[cur][0]`에 heavy-edge가 오도록 재배치함.   
 이를 위해선 next가 `chd[cur]`의 참조(&)여야 함   
 ```cpp
 for (auto next : chd[cur]) {} // 틀린 코드
@@ -109,3 +110,4 @@ for (auto &next : chd[cur]) {} // 맞는 코드
 
 ### 참고링크
 https://justicehui.github.io/hard-algorithm/2020/01/24/hld/   
+https://jh05013.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/HLD%20%ED%95%98%EB%82%98%EB%A1%9C%20%EA%B2%BD%EB%A1%9C%20%EC%BF%BC%EB%A6%AC%EC%99%80%20%EC%84%9C%EB%B8%8C%ED%8A%B8%EB%A6%AC%20%EC%BF%BC%EB%A6%AC%20%EB%AA%A8%EB%91%90%20%EC%A7%80%EC%9B%90%ED%95%98%EA%B8%B0/   
