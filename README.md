@@ -412,20 +412,19 @@ mermaid stateDiagram-v2 사용
   * <span class="">[cph]</span>
   * <span class="information">[define](/C++/ps용%20환경설정/define.md)</span>
   * <span class="information">[snippet](/C++/ps용%20환경설정/snippet.md)</span>
+  * <span class="">[vim script]</span>
   * <span class="">[debug, c_cpp_properties.json 설정]</span>
-  <!-- * Pre-defined Compiler Macros
-  * 버전 gnu++17로 해야 Template argument deduction 등 문법 사용가능 -->
-  * <span class="">[predifined macro]</span>
+  * <span class="">[Pre-defined Compiler Macros]</span> <!-- 버전 gnu++17로 해야 Template argument deduction 등 문법 사용가능 -->
   * <span class="">[percompiled header]</span> <!-- https://codeforces.com/blog/entry/79026 --> <!-- https://codeforces.com/blog/entry/53909? -->
 * ### 기타
   * <span class="information">[자주 쓰는 변수명](/C++/기타/Variable%20Name.md)</span>
   * <span class="information">[코딩 아이디어](/C++/기타/Idea.md)</span> <!-- https://xy-plane.tistory.com/11 -->
 # 파이썬
-  * 유용한 함수
+  * ### 유용한 함수
     * <span class="">[itertools]</span>
     * <span class="">[regex]</span>
     * <span class="">[eval]</span>
-  * 숏코딩 팁
+  * ### 숏코딩 팁
     * <span class="">[숏코딩 팁]</span>
 
 # 참고링크
