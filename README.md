@@ -172,8 +172,8 @@ mermaid stateDiagram-v2 사용
     * <span class="">[링크/컷 트리(D+)]</span> <!-- https://jh05013.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EB%A7%81%ED%81%AC-%EC%BB%B7%20%ED%8A%B8%EB%A6%AC/ --> <!-- https://justicehui.github.io/hard-algorithm/2021/01/01/link-cut-tree/ --> <!-- https://m.blog.naver.com/jinhan814/222309144459?recommendTrackingCode=2 -->
     * <span class="">[탑 트리(R-)]</span> <!-- https://etyu39.tistory.com/8 -->
 * ### [DP](/DP/Top-Down%20DP.md)
-  <!-- * <span class="">[배낭 문제(G-)]</span> -->
   <!-- * <span class="">[비트 집합]</span> -->
+  <!-- 배낭 문제 bounded, unbounded -->
   <!-- https://egod1537.tistory.com/entry/Bounded-Knapsack-Problem%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9C%BC%EB%A1%9C-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0 -->
   * <span class="silver">[Kadane algorithm(S+)](/DP/Kadane%20Algorithm.md)</span>
   * <span class="silver">[LIS(S+)](/DP/LIS.md)</span>
@@ -181,8 +181,8 @@ mermaid stateDiagram-v2 사용
   * <span class="">[비트셋 LCS]</span>
   * <span class="gold">[배낭 문제(G-)](/DP/Knapsack.md)</span>
   * <span class="gold">[비트셋 배낭(G-)](/DP/Knapsack(Bitset).md)</span>
-  * <span class="">[최단거리 역추적](/DP/DP%20역추적.md)</span>
-  * <span class="">[달걀 낙하]</span>
+  * <span class="gold">[최단거리 역추적(G-)](/DP/DP%20역추적.md)</span>
+  * <span class="gold">[달걀 낙하(G+)](/DP/달걀%20낙하.md)</span>
   * <span class="gold">[비트마스크 DP(G+)](/DP/Bitmask%20DP.md)</span>
   * <span class="platinum">[토글링(P-)](/DP/toggling.md)</span>
   * <span class="platinum">[볼록껍질 최적화(P+)](/DP/CHT.md)</span>
