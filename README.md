@@ -128,6 +128,7 @@ mermaid stateDiagram-v2 사용
     * <span class="platinum">[오일러 회로(P-)](/그래프%20이론/그래프/오일러%20회로.md)</span>
     * <span class="">[블록 컷 트리]</span>
     * <span class="">[선인장]</span>
+    * <span class="">[삼각형, 사각형 찾기(D-)]</span>
     * <span class="">[_2th MST(D-)_]</span>
     * <span class="">[쌍대 그래프(D-)]</span>
     * <span class="">[도미네이터 트리(D-)]</span>
@@ -181,6 +182,7 @@ mermaid stateDiagram-v2 사용
   * <span class="gold">[배낭 문제(G-)](/DP/Knapsack.md)</span>
   * <span class="gold">[비트셋 배낭(G-)](/DP/Knapsack(Bitset).md)</span>
   * <span class="">[최단거리 역추적](/DP/DP%20역추적.md)</span>
+  * <span class="">[달걀 낙하]</span>
   * <span class="gold">[비트마스크 DP(G+)](/DP/Bitmask%20DP.md)</span>
   * <span class="platinum">[토글링(P-)](/DP/toggling.md)</span>
   * <span class="platinum">[볼록껍질 최적화(P+)](/DP/CHT.md)</span>
@@ -492,6 +494,9 @@ https://blog.myungwoo.kr/
 
 Nyaan   
 https://nyaannyaan.github.io/library/data-structure/union-find-with-potential.hpp.html
+
+stonejjun03   
+https://stonejjun.tistory.com/category/%EC%BD%94%EB%94%A9/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%26%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0   
 
 궁극의 웰노운 알고리즘   
 https://cocoachan.tistory.com/
