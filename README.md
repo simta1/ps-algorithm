@@ -77,7 +77,7 @@ mermaid stateDiagram-v2 사용
     * <span class="platinum">[다이나믹 레이지 세그(P+)](/자료구조/세그먼트%20트리/다이나믹%20레이지%20세그.md)</span>
     * ~~<span class="platinum">[_range GCD 세그(P+)_](/자료구조/세그먼트%20트리/GCD%20세그.md)</span>~~
     * <span class="platinum">[금광 세그(최대 연속 부분합 세그)(P+)](/자료구조/세그먼트%20트리/금광%20세그.md)</span>
-    * <span class="">[퍼시스턴트 세그(P+)]</span>
+    * <span class="">[퍼시스턴트 세그(P+)]</span> <!-- https://stonejjun.tistory.com/156 -->
     * <span class="">[세그트리 비츠(D+)]</span>
   * #### BBST
     * <span class="">[treap]</span>
@@ -132,7 +132,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[_2th MST(D-)_]</span>
     * <span class="">[쌍대 그래프(D-)]</span>
     * <span class="">[도미네이터 트리(D-)]</span>
-    * <span class="">[오프라인 동적 연결성 판정]</span>
+    * <span class="">[오프라인 동적 연결성 판정]</span> <!-- https://stonejjun.tistory.com/171 -->
     * <span class="">[삼각형 찾기]</span> <!-- https://jh05013.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EC%82%BC%EA%B0%81%ED%98%95%20%EC%B0%BE%EA%B8%B0/ -->
     * <span class="">[평면 그래프]</span>
     * <span class="">[쌍대 그래프]</span>
@@ -251,7 +251,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[Polygon Union]</span> <!-- https://jh05013.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EB%8F%84%ED%98%95%EC%9D%98%20%ED%95%A9%EC%A7%91%ED%95%A9%EA%B3%BC%20%EB%84%93%EC%9D%B4/ -->
   * <span class="">[Polygon Clipping]</span>
   * <span class="">[Boolean Operations On Polygons]</span>
-  * <span class="">[그린 정리(D+)]</span>
+  * <span class="">[그린 정리(D+)]</span> <!-- https://jh05013.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EB%8F%84%ED%98%95%EC%9D%98%20%ED%95%A9%EC%A7%91%ED%95%A9%EA%B3%BC%20%EB%84%93%EC%9D%B4/ -->
   * <span class="">[델로네 삼각분할(R-)]</span> <!-- https://00ad-8e71-00ff-055d.tistory.com/106 -->
   * <span class="">[보로노이 다이어그램(R-)]</span> <!-- https://zigui.tistory.com/32 -->
   * <span class="">[Disk Convex Hull(R)]</span> <!-- https://www.acmicpc.net/problem/27957 -->
@@ -368,6 +368,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[range mode query]</span> <!-- https://infossm.github.io/blog/2021/05/20/Data-Structure-For-Range-Mode-Query/ --> <!-- https://www.acmicpc.net/problem/14898 -->
   * <span class="">[SMAWK]</span> <!-- https://github.com/koosaga/olympiad/blob/master/Library/codes/ad_hoc/smawk.cpp -->
   * <span class="">[춤추는 링크, 크누스 X]</span>
+  * <span class="">[Lyndon decomposition]</span>
   * <span class="">[임의 정밀도(epsilon값 계산)(A)]</span>
   * ~~<span class="">[담금질 기법]</span>~~ <!-- https://ryute.tistory.com/35    --> <!-- https://ryute.tistory.com/36    --> <!-- https://algospot.com/forum/read/1211/ --> <!-- https://koosaga.com/3 -->
   * <span class="">[Fracturing Search(D+)]</span> <!-- https://usaco.guide/adv/fracturing-search?lang=cpp --> <!-- https://www.acmicpc.net/problem/14166 -->
@@ -383,7 +384,10 @@ mermaid stateDiagram-v2 사용
   * <span class="additional">[고합성수 검색](/utils/Highly%20Composite%20Number.md)</span>
   * <span class="additional">[배열 연산](/utils/Array.md)</span>
   * <span class="additional">[가까운 2의 멱수 계산](/utils/Nearest%20Power2.md)</span>
+  * <span class="additional">[시간 초 변환]</span>
+  * <span class="additional">[날짜 변환](/utils/날짜%20변환.md)</span>
   * <span class="">[modInt]</span>
+  * <span class="">[infInt]</span>
   * <span class="">[bigInt]</span>
   * <span class="">[baseInt]</span> <!-- bigint랑 합쳐서 구현하는 게 나을 듯 -->
 # C++ 유용한 기능
