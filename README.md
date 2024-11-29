@@ -77,7 +77,7 @@ mermaid stateDiagram-v2 사용
     * <span class="platinum">[다이나믹 레이지 세그(P+)](/자료구조/세그먼트%20트리/다이나믹%20레이지%20세그.md)</span>
     * ~~<span class="platinum">[_range GCD 세그(P+)_](/자료구조/세그먼트%20트리/GCD%20세그.md)</span>~~
     * <span class="platinum">[금광 세그(최대 연속 부분합 세그)(P+)](/자료구조/세그먼트%20트리/금광%20세그.md)</span>
-    * <span class="">[퍼시스턴트 세그(P+)]</span> <!-- https://stonejjun.tistory.com/156 -->
+    * <span class="">[퍼시스턴트 세그(P+)]</span> <!-- https://stonejjun.tistory.com/156 --> <!-- https://infossm.github.io/blog/2021/09/04/persistent/ -->
     * <span class="">[세그트리 비츠(D+)]</span>
   * #### BBST
     * <span class="">[treap]</span>
@@ -386,6 +386,7 @@ mermaid stateDiagram-v2 사용
   * <span class="additional">[가까운 2의 멱수 계산](/utils/Nearest%20Power2.md)</span>
   * <span class="additional">[시간 초 변환]</span>
   * <span class="additional">[날짜 변환](/utils/날짜%20변환.md)</span>
+  * <span class="additional">[__int128 입출력](/utils/__int128%20입출력.md)</span>
   * <span class="">[modInt]</span>
   * <span class="">[infInt]</span>
   * <span class="">[bigInt]</span>
