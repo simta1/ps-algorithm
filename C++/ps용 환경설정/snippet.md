@@ -15,6 +15,7 @@
 			"using namespace std;",
 			"using ld = double;",
 			"using ll = long long;",
+			"using hh = __int128;",
 			"using ull = unsigned long long;",
 			"using pll = pair<ll, ll>;",
 			"using pii = pair<int, int>;",
