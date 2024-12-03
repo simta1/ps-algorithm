@@ -13,6 +13,23 @@
 		"body": [
 			"#include <bits/stdc++.h>",
 			"using namespace std;",
+			"",
+			"int main() {",
+			"\tcin.tie(0) -> sync_with_stdio(0);",
+			"\t",
+			"\t$0",
+			"\t",
+			"\treturn 0;",
+			"}"
+		],
+		"description": "ps default code"
+	},
+
+	"cp default code": {
+		"prefix": "SNIP cp_default",
+		"body": [
+			"#include <bits/stdc++.h>",
+			"using namespace std;",
 			"using ld = double;",
 			"using ll = long long;",
 			"using hh = __int128;",
@@ -440,6 +457,15 @@
         "args": {
             "langId": "cpp",
             "name": "ps default code"
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+u",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "langId": "cpp",
+            "name": "cp default code"
         },
         "when": "editorTextFocus"
     },
