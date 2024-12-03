@@ -12,7 +12,7 @@ ld circlesUnion(const vector<tuple<T, T, T> > &circles) { // tuple 구조는 x, 
         return theta < 0 ? theta + 2 * PI : theta > 2 * PI ? theta - 2 * PI : theta;
     };
 
-    auto lineIntegral = [](T x, T y, T r, ld theta1, ld theta2) {
+    auto arcIntegral = [](T x, T y, T r, ld theta1, ld theta2) {
         return r * ld(0.5) * (x * (sin(theta2) - sin(theta1)) - y * (cos(theta2) - cos(theta1)) + r * (theta2 - theta1));
     };
 
@@ -61,7 +61,7 @@ ld circlesUnion(const vector<tuple<T, T, T> > &circles) { // tuple 구조는 x, 
         
         ld curE = 0;
         for (auto [s, e] : thetas) {
-            if (curE < s) res += lineIntegral(x1, y1, r1, curE, s);
+            if (curE < s) res += arcIntegral(x1, y1, r1, curE, s);
             curE = max(curE, e);
         }
     }
@@ -77,7 +77,7 @@ $O(N^2 \log{N})$
 하나의 원이 다른 원에 내접하는 경우 큰 원만 선적분   
 
 ### 문제
-[Knocked Ink](https://www.acmicpc.net/problem/17804)
+[Knocked Ink](https://www.acmicpc.net/problem/17804)   
 
 ### 원리
 [그린 정리](/기하학/그린%20정리.md)   
