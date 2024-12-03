@@ -252,7 +252,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[Polygon Clipping]</span>
   * <span class="diamond">[그린 정리(D+)](/기하학/그린%20정리.md)</span>
   * <span class="diamond">[도형에서의 불 연산: Circle Union(D+)](/기하학/Circle%20Union.md)</span>
-  * <span class="">[도형에서의 불 연산: Polygon Union]</span>
+  * <span class="">[도형에서의 불 연산: Polygon Union(R-)]</span>
   * <span class="">[델로네 삼각분할(R-)]</span> <!-- https://00ad-8e71-00ff-055d.tistory.com/106 -->
   * <span class="">[보로노이 다이어그램(R-)]</span> <!-- https://zigui.tistory.com/32 -->
   * <span class="">[Disk Convex Hull(R)]</span> <!-- https://www.acmicpc.net/problem/27957 -->
@@ -314,6 +314,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[3진 FFT(D-)]</span> <!-- https://www.acmicpc.net/problem/14882 -->
     * <span class="diamond">[NTT(D-)](/수학/NTT.md)</span>
     * <span class="">[FFT 나눗셈]</span>
+    * <span class="">[다중 대입값 계산]</span> <!-- https://infossm.github.io/blog/2019/06/16/Multipoint-evaluation/ -->
     * <span class="">[simplex]</span>
     * <span class="">[LP]</span>
     * <span class="">[XOR Convolution]</span>
@@ -331,8 +332,7 @@ mermaid stateDiagram-v2 사용
     * <span class="diamond">[메르텐스 함수(D+)](/수학/메르텐스.md)</span>
     * <span class="diamond">[메르텐스 트릭, Xudyh's sieve (D+)](/수학/Xudyh's%20sieve.md)</span>
     * <span class="">[min_25's sieve]</span>
-    * <span class="">[매트로이드(R-)]</span> <!-- https://imeimi.tistory.com/45 -->
-    <!-- https://m.blog.naver.com/kks227/221031527413 -->
+    * <span class="">[매트로이드(R-)]</span> <!-- https://imeimi.tistory.com/45 --> <!-- https://m.blog.naver.com/kks227/221031527413 -->
 * ### 게임 이론
   * <span class="">[스프라그-그런디]</span> <!-- (비트셋) -->
   * <span class="">[hackenbush]</span> <!-- https://en.wikipedia.org/wiki/Hackenbush --> <!-- https://rkm0959.tistory.com/139 -->
@@ -374,7 +374,6 @@ mermaid stateDiagram-v2 사용
   * <span class="">[Fracturing Search(D+)]</span> <!-- https://usaco.guide/adv/fracturing-search?lang=cpp --> <!-- https://www.acmicpc.net/problem/14166 -->
   * <span class="">[선형 계획법]</span>
   * <span class="">[쌍대성]</span>
-  * <span class="">[Simplex algorithm]</span>
 * ### utils
   * <span class="additional">[fastio](/utils/fastio.md)</span>
   * <span class="additional">[bit](/utils/Bit.md)</span>
@@ -454,6 +453,9 @@ jinhan814
 https://blog.naver.com/jinhan814/222439886998   
 https://blog.naver.com/PostView.naver?blogId=jinhan814&logNo=222689836982&parentCategoryNo=&categoryNo=6&viewDate=&isShowPopularPosts=false&from=postView   
 
+rkm0959 - PS 정수론 가이드   
+https://rkm0959.tistory.com/category/PS/PS%20%EC%A0%95%EC%88%98%EB%A1%A0%20%EA%B0%80%EC%9D%B4%EB%93%9C
+
 ahgus89 - 정수론   
 https://ahgus89.github.io/
 
@@ -532,8 +534,6 @@ https://tamref.com/
 
 h0ngjun7   
 https://hongjun7.tistory.com/
-
-
 
 <!-- # 알고리즘 순서 { -->
   ```mermaid
