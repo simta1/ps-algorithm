@@ -31,8 +31,11 @@ ld circlesUnion(const vector<tuple<T, T, T> > &circles) { // tuple 구조는 x, 
             if (distSquare >= sq(r1 + r2)) continue; // 외접 or 교점 없는 경우
             if (distSquare <= sq(r2 - r1)) { // 내접
                 if (r1 == r2) { // 두 원이 완전히 겹친 경우 그 중 하나만 고려
-                    r2 = 0;
-                    continue;
+                    if (i > j) { // 나중에 나오는 원이면 계산 안 함
+                        thetas.push_back({0, 2 * PI});
+                        break;
+                    }
+                    else continue; // 먼저 나온 원
                 }
                 else { // 내접하는 경우 큰 원에서만 계산
                     if (r1 < r2) { // 작은 원이면 계산 안 함
