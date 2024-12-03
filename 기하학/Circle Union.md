@@ -4,30 +4,27 @@
 template <typename T> inline T sq(T x) { return x * x; }
 
 template <typename T>
-ld circlesUnion(const vector<tuple<T, T, T> > &circles) { // tuple 구조는 x, y, r 순서
+ld circleUnionArea(const vector<tuple<T, T, T> > &circles, int idx=-1) { // tuple 구조는 x, y, r 순서
     int n = circles.size();
 
     const ld PI = acos(-1);
-    auto constrain = [&PI](ld theta) {
-        return theta < 0 ? theta + 2 * PI : theta > 2 * PI ? theta - 2 * PI : theta;
-    };
 
     auto arcIntegral = [](T x, T y, T r, ld theta1, ld theta2) {
         return r * ld(0.5) * (x * (sin(theta2) - sin(theta1)) - y * (cos(theta2) - cos(theta1)) + r * (theta2 - theta1));
     };
 
     ld res = 0;
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) if (i != idx) {
         auto [x1, y1, r1] = circles[i];
         if (r1 <= 0) continue;
 
         vector<pair<ld, ld> > thetas;
         
-        for (int j = 0; j < n; j++) if (j != i) {
+        for (int j = 0; j < n; j++) if (j != idx && j != i) {
             auto [x2, y2, r2] = circles[j];
             if (r2 <= 0) continue;
 
-            ld distSquare = sq(x2 - x1) + sq(y2 - y1);
+            T distSquare = sq(x2 - x1) + sq(y2 - y1);
             if (distSquare >= sq(r1 + r2)) continue; // 외접 or 교점 없는 경우
             if (distSquare <= sq(r2 - r1)) { // 내접
                 if (r1 == r2) { // 두 원이 완전히 겹친 경우 그 중 하나만 고려
@@ -46,17 +43,20 @@ ld circlesUnion(const vector<tuple<T, T, T> > &circles) { // tuple 구조는 x, 
                 }
             }
 
-            ld theta = acos((sq(r1) + distSquare - sq(r2)) / (2 * r1 * sqrt(distSquare)));
-            ld alpha = atan2(y2 - y1, x2 - x1);
+            ld cosTheta = ld(sq(r1) + distSquare - sq(r2)) / (2 * r1 * sqrt(ld(distSquare)));
+            ld theta = acos(min<ld>(1, max<ld>(-1, cosTheta)));
+            ld alpha = atan2<ld>(y2 - y1, x2 - x1);
 
-            auto theta1 = constrain(alpha + theta);
-            auto theta2 = constrain(alpha - theta);
+            ld theta1 = alpha - theta; // -2 * PI <= <= PI
+            if (theta1 < 0) theta1 += 2 * PI;
+            ld theta2 = alpha + theta; // -PI <= <= 2 * PI
+            if (theta2 < 0) theta2 += 2 * PI; // theta2==2*PI일 경우 0으로 해줘도 되지만 안해도 결과 똑같음, 밑에 if문에 경우나눠서 생각해보면 결과 똑같을 수 밖에 없음
 
-            if (sq(x1 + r1 - x2) + sq(y1 - y2) <= sq(r2)) {
-                thetas.push_back({0, min(theta1, theta2)});
-                thetas.push_back({max(theta1, theta2), 2 * PI});
+            if (theta1 > theta2) {
+                thetas.push_back({0, theta2});
+                thetas.push_back({theta1, 2 * PI});
             }
-            else thetas.push_back({min(theta1, theta2), max(theta1, theta2)});
+            else thetas.push_back({theta1, theta2});
         }
 
         sort(thetas.begin(), thetas.end());
