@@ -4,7 +4,7 @@
 template <typename T> inline T sq(T x) { return x * x; }
 
 template <typename T>
-ld circleUnionArea(const vector<tuple<T, T, T> > &circles, int idx=-1) { // tuple 구조는 x, y, r 순서
+ld circleUnionArea(const vector<tuple<T, T, T> > &circles) { // tuple 구조는 x, y, r 순서
     int n = circles.size();
 
     const ld PI = acos(-1);
@@ -14,13 +14,13 @@ ld circleUnionArea(const vector<tuple<T, T, T> > &circles, int idx=-1) { // tupl
     };
 
     ld res = 0;
-    for (int i = 0; i < n; i++) if (i != idx) {
+    for (int i = 0; i < n; i++) {
         auto [x1, y1, r1] = circles[i];
         if (r1 <= 0) continue;
 
         vector<pair<ld, ld> > thetas;
         
-        for (int j = 0; j < n; j++) if (j != idx && j != i) {
+        for (int j = 0; j < n; j++) if (j != i) {
             auto [x2, y2, r2] = circles[j];
             if (r2 <= 0) continue;
 
@@ -50,11 +50,13 @@ ld circleUnionArea(const vector<tuple<T, T, T> > &circles, int idx=-1) { // tupl
             ld theta1 = alpha - theta; // -2 * PI <= <= PI
             if (theta1 < 0) theta1 += 2 * PI;
             ld theta2 = alpha + theta; // -PI <= <= 2 * PI
-            if (theta2 < 0) theta2 += 2 * PI; // theta2==2*PI일 경우 0으로 해줘도 되지만 안해도 결과 똑같음, 밑에 if문에 경우나눠서 생각해보면 결과 똑같을 수 밖에 없음
+            if (theta2 < 0) theta2 += 2 * PI; // theta2==2*PI일 경우 0으로 해줘도 되지만 안해도 결과 똑같음, 밑에 if문에 경우나눠서 생각해보면 결과 똑같은 거 알 수 있음
+            
+            // 반시계방향, 즉 theta1->theta2 로 적분해야 함이 자명함
 
             if (theta1 > theta2) {
-                thetas.push_back({0, theta2});
                 thetas.push_back({theta1, 2 * PI});
+                thetas.push_back({0, theta2});
             }
             else thetas.push_back({theta1, theta2});
         }
