@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-## Union
+## Union of Circles
 ```cpp
 template <typename T> inline T sq(T x) { return x * x; }
 
@@ -83,6 +83,7 @@ $O(N^2 \log{N})$
 
 ### 문제
 [Knocked Ink](https://www.acmicpc.net/problem/17804)   
+[Lonely mdic](https://www.acmicpc.net/problem/10900)   
 
 ### 원리
 [그린 정리](/기하학/그린%20정리.md)   

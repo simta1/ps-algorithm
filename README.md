@@ -92,14 +92,14 @@ mermaid stateDiagram-v2 사용
     * <span class="platinum">[유니온 파인드 with Potential(P+)](/자료구조/기타/DSU%20potential.md)</span>
     * <span class="platinum">[로프(P-)](/자료구조/기타/rope.md)</span>
     * <span class="platinum">[ordered set(P-)](/자료구조/기타/ordered_set.md)</span>
-    * <span class="">[SPQR tree]</span>
-    * <span class="">[PQ tree]</span> <!-- https://infossm.github.io/blog/2021/10/20/PQ_Tree_Part_1/ -->
+    * <span class="">[wavelet 트리]</span>
     * <span class="">[데카르트 트리(Cartesian tree)]</span> <!-- https://imeimi.tistory.com/42 구간 내에서의 RMQ는 cartesian tree에서의 LCA? -->
     * <span class="">[Line container]</span>
     * <span class="">[리-차오 트리(D-)]</span>
+    * <span class="">[SPQR tree]</span>
+    * <span class="">[PQ tree]</span> <!-- https://infossm.github.io/blog/2021/10/20/PQ_Tree_Part_1/ -->
     <!-- * <span class="">[weighted QU]</span> -->
     <!-- * <span class="">[B-tree]</span> -->
-    <!-- * <span class="">[wavelet 트리(P+)]</span> -->
 * ### [그래프 이론](/그래프%20이론/개념%20정리.md)
   * #### 그래프
     <!-- https://ps.mjstudio.net/tip-bfs-fill -->
@@ -251,7 +251,8 @@ mermaid stateDiagram-v2 사용
   * <span class="">[KD tree]</span> <!-- https://algoshitpo.github.io/2020/02/09/kdtree/ -->
   * <span class="">[Polygon Clipping]</span>
   * <span class="diamond">[그린 정리(D+)](/기하학/그린%20정리.md)</span>
-  * <span class="diamond">[도형에서의 불 연산: Circle Union(D+)](/기하학/Circle%20Union.md)</span>
+  * <span class="diamond">[도형에서의 불 연산: Circle Union(D+)](/기하학/Union(Circle).md)</span>
+  * <span class="">[도형에서의 불 연산: Ring Union(D+)]</span>
   * <span class="">[도형에서의 불 연산: Polygon Union(R-)]</span>
   * <span class="">[델로네 삼각분할(R-)]</span> <!-- https://00ad-8e71-00ff-055d.tistory.com/106 -->
   * <span class="">[보로노이 다이어그램(R-)]</span> <!-- https://zigui.tistory.com/32 -->
