@@ -252,7 +252,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[Polygon Clipping]</span>
   * <span class="diamond">[그린 정리(D+)](/기하학/그린%20정리.md)</span>
   * <span class="diamond">[도형에서의 불 연산: Circle Union(D+)](/기하학/Union(Circle).md)</span>
-  * <span class="">[도형에서의 불 연산: Ring Union(D+)]</span>
+  * <span class="diamond">[도형에서의 불 연산: Ring Union(D+)](/기하학/Union(Ring).md)</span>
   * <span class="">[도형에서의 불 연산: Polygon Union(R-)]</span>
   * <span class="">[델로네 삼각분할(R-)]</span> <!-- https://00ad-8e71-00ff-055d.tistory.com/106 -->
   * <span class="">[보로노이 다이어그램(R-)]</span> <!-- https://zigui.tistory.com/32 -->
