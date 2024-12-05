@@ -29,12 +29,13 @@ int ccw(const Point<T> &p1, const Point<T> &p2, const Point<T> &p3) { // -1 : �
 ### Rotating Calipers
 ```cpp
 template <typename T>
-vector<Point<T> > getConvexHull(vector<Point<T> > points) {
+vector<Point<T> > getConvexHull(vector<Point<T> > points) { // points 원본 배열 바껴도 괜찮으면 &points로 받기
+    assert (points.size() >= 3);
+    
     swap(points[0], *min_element(points.begin(), points.end()));
     sort(points.begin() + 1, points.end(), [&](const Point<T> &a, const Point<T> &b) {
         int dir = ccw(points[0], a, b);
-        if (!dir) return a < b;
-        else return dir > 0;
+        return dir ? dir > 0 : a < b;
     });
 
     vector<Point<T> > v;
@@ -54,6 +55,9 @@ T distSquare(const Point<T> &p1, const Point<T> &p2) {
 template <typename T>
 T getDiameterSquare(const vector<Point<T> > &points) {
     vector<Point<T> > v = getConvexHull(points);
+
+    assert(false, "points가 이미 볼록껍질이라면 아래 코드 사용");
+    // auto &v = points;
 
     T diameter = 0;
     int n = v.size(), a = 0, b = 1;
