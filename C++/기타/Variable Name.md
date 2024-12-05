@@ -79,3 +79,11 @@ for (int i = facInv.size() - 1; i > 0; i--) facInv[i - 1] = facInv[i] * i % mod;
 ### lpf, lpe
 linear sieve구현할 때 사용   
 각각 최소소인수, 최소소인수의 지수 저장   
+
+### eps
+epsilon, 기하 문제 등에서 실수오차 고려해서 대소관계 비교할 때 사용   
+https://www.acmicpc.net/blog/view/37 참고   
+```cpp
+const ld eps = 1e-7;
+if (abs(a - b) <= eps) // a == b
+```
