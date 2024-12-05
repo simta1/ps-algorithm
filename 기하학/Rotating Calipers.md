@@ -54,6 +54,9 @@ T distSquare(const Point<T> &p1, const Point<T> &p2) {
 
 template <typename T>
 T getDiameterSquare(const vector<Point<T> > &points, bool isConvex=false) {
+    if (points.size() == 1) return 0;
+    if (points.size() == 2) return distSquare(points[0], points[1]);
+
     const vector<Point<T> > &v = isConvex ? points : getConvexHull(points);
 
     T diameter = 0;
