@@ -53,11 +53,8 @@ T distSquare(const Point<T> &p1, const Point<T> &p2) {
 }
 
 template <typename T>
-T getDiameterSquare(const vector<Point<T> > &points) {
-    vector<Point<T> > v = getConvexHull(points);
-
-    assert(false, "points가 이미 볼록껍질이라면 아래 코드 사용");
-    // auto &v = points;
+T getDiameterSquare(const vector<Point<T> > &points, bool isConvex=false) {
+    const vector<Point<T> > &v = isConvex ? points : getConvexHull(points);
 
     T diameter = 0;
     int n = v.size(), a = 0, b = 1;
