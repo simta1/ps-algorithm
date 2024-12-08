@@ -219,14 +219,13 @@ mermaid stateDiagram-v2 사용
   * <span class="">[polygon raycast]</span>
   molamola 팀노트 https://zigui.tistory.com/5 -->
   <!-- https://zigui.tistory.com/34 -->
-  * <span class="additional">[기하학 헤더](/기하학/Geometry%20Header.md)</span>
+  * <span class="additional">[기하학 헤더](/기하학/기하학%20헤더.md)</span>
     * <span class="">[외적, CCW(G-)]</span>
     * <span class="">[거리 계산 : point-point, line-point]</span>
-    * <span class="">[넓이 계산 : 삼각형 신발끈, 사각형 신발끈, 헤론, 브라마굽타, 활꼴]</span>
+    * <span class="">[넓이 계산 : 단순다각형, 헤론, 브라마굽타, 활꼴]</span>
     * <span class="">[제2 cos]</span>
     * <span class="">[좌표 계산 : 2d회전, 3d회전]</span>
-  * <span class="gold">[볼록다각형 넓이(G-)](/기하학/Polygon%20Area.md)</span>
-  * <span class="">[볼록다각형 판정]</span>
+  * <span class="gold">[볼록다각형 부분넓이(G)](/기하학/볼록다각형%20부분넓이.md)</span>
   * <span class="gold">[선분교차판정(G+)](/기하학/선분교차판정.md)</span>
   * <span class="platinum">[선분교차점 계산(P-)](/기하학/선분교차점%20계산.md)</span>
   * <span class="platinum">[볼록 껍질:Graham Scan(P-)](/기하학/볼록껍질(Graham%20Scan).md)</span>
