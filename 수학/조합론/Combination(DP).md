@@ -98,6 +98,7 @@ INF <= numeric_limits\<T\>::max() / 2 가정한 거라서 INF 더 큰 경우에�
 [다리 놓기](https://www.acmicpc.net/problem/1010)   
 [N포커](https://www.acmicpc.net/problem/16565)   
 [정상 회담 2](https://www.acmicpc.net/problem/1670) - catalan   
+[알약](https://www.acmicpc.net/problem/4811) - catalan   
 
 ### 원리
 파스칼의 삼각형   
