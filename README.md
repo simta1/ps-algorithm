@@ -246,6 +246,8 @@ mermaid stateDiagram-v2 사용
   * <span class="">[점-원 접선, 원-원 접선]</span> <!-- https://cubelover.tistory.com/4 -->
   * <span class="">[Dynamic Convex Hull]</span> <!-- https://lem0nad3.tistory.com/m/133 --> <!-- https://www.geeksforgeeks.org/dynamic-convex-hull-adding-points-existing-convex-hull/?ref=oin_asr2 -->
   * <span class="">[Convex Layers]</span>
+  * <span class="">[구분구적법]</span>
+  * <span class="">[심슨 적분]</span> <!-- https://www.acmicpc.net/problem/8303 -->
   * <span class="diamond">[불도저 트릭(Rotating Line Sweep)(D+)](/기하학/불도저.md)</span>
   * <span class="">[KD tree]</span> <!-- https://algoshitpo.github.io/2020/02/09/kdtree/ -->
   * <span class="">[Polygon Clipping]</span>
