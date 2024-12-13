@@ -128,6 +128,7 @@ mermaid stateDiagram-v2 사용
     * <span class="platinum">[오일러 회로(P-)](/그래프%20이론/그래프/오일러%20회로.md)</span>
     * <span class="">[블록 컷 트리]</span>
     * <span class="">[선인장]</span>
+    * <span class="">[Dynamic MST]</span> <!-- https://koosaga.com/211 -->
     * <span class="">[삼각형, 사각형 찾기(D-)]</span>
     * <span class="">[_2th MST(D-)_]</span>
     * <span class="">[쌍대 그래프(D-)]</span>
@@ -213,6 +214,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[Z algorithm]</span>
   * <span class="">[와일드카드 문자열 매칭]</span> <!-- https://infossm.github.io/blog/2021/08/20/wildcard-string-matching/ --> <!-- https://www.acmicpc.net/problem/26136 -->
   * <span class="diamond">[회문 트리(D+)](/문자열/회문%20트리.md)</span>
+  * <span class="">[run enumerate]</span> <!-- https://www.acmicpc.net/workbook/view/5994 --> <!-- https://judge.yosupo.jp/problem/runenumerate -->
   * <span class="">[접미사 트리(R-)]</span> <!-- https://infossm.github.io/blog/2021/02/20/suffix-tree/ -->
 * ### 기하학
   <!-- * ~~<span class="">[반공간 교집합]</span>~~ -->
@@ -369,6 +371,7 @@ mermaid stateDiagram-v2 사용
   * <span class="platinum">[평방분할(P+)](/기타/제곱근%20분할법.md)</span>
   * <span class="">[병렬 이분 탐색(P+)]</span>
   * <span class="">[small to large]</span>
+  * <span class="">[차이 부등식]</span> <!-- https://koosaga.com/72 --> <!-- https://www.acmicpc.net/workbook/view/3303 -->
   * <span class="">[range mode query]</span> <!-- https://infossm.github.io/blog/2021/05/20/Data-Structure-For-Range-Mode-Query/ --> <!-- https://www.acmicpc.net/problem/14898 -->
   * <span class="">[SMAWK]</span> <!-- https://github.com/koosaga/olympiad/blob/master/Library/codes/ad_hoc/smawk.cpp -->
   * <span class="">[춤추는 링크, 크누스 X]</span>
