@@ -14,7 +14,7 @@ private:
     };
 
     double intersect(const Line &l1, const Line &l2) {
-        // assert(l1.a != l2.a);
+        assert(l1.a != l2.a);
         return double(l2.b - l1.b) / (l1.a - l2.a);
     }
 
@@ -50,20 +50,21 @@ public:
 ```
 ### int main()
 ```cpp
-vector<ll> dp(n);
-CHT<ll> cht;
+    vector<ll> dp(n); // dp[i] = 
+    CHT<ll> cht;
 
-auto x = [&](int i) { return _; };
-auto slope = [&](int j) { return _; };
-auto yIntercept = [&](int j) { return _; };
+    // dp[i] = min_{j < i} [ slope(j) * x(i) + yIntercept(j) ]
+    auto x = [&](int i) { return _; };
+    auto slope = [&](int j) { return _; };
+    auto yIntercept = [&](int j) { return _; };
 
-dp[0] = _;
-for (int i = 1; i < n; i++) {
-    cht.add(slope(i - 1), yIntercept(i - 1));
-    dp[i] = cht.query(x(i));
-}
+    dp[0] = _;
+    for (int i = 1; i < n; i++) {
+        cht.add(slope(i - 1), yIntercept(i - 1));
+        dp[i] = cht.query(x(i));
+    }
 
-cout << dp.back();
+    cout << dp.back();
 ```
 ### 시간복잡도
 dp[n]을 계산하는데 걸리는 시간:   
