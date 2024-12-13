@@ -94,7 +94,7 @@ mermaid stateDiagram-v2 사용
     * <span class="platinum">[ordered set(P-)](/자료구조/기타/ordered_set.md)</span>
     * <span class="">[wavelet 트리]</span>
     * <span class="">[데카르트 트리(Cartesian tree)]</span> <!-- https://imeimi.tistory.com/42 구간 내에서의 RMQ는 cartesian tree에서의 LCA? -->
-    * <span class="">[Line container]</span>
+    * <span class="diamond">[Line Container(D-)](/자료구조/기타/LineContainer.md)</span>
     * <span class="">[리-차오 트리(D-)]</span>
     * <span class="">[SPQR tree]</span>
     * <span class="">[PQ tree]</span> <!-- https://infossm.github.io/blog/2021/10/20/PQ_Tree_Part_1/ -->

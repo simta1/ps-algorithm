@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### CHT
+### CHT (기울기가 단조감소할 때)
 ```cpp
 template <typename T>
 class CHT {
@@ -54,6 +54,7 @@ public:
     CHT<ll> cht;
 
     // dp[i] = min_{j < i} [ slope(j) * x(i) + yIntercept(j) ]
+    // slope(j)가 단조 감소해야 사용할 수 있음
     auto x = [&](int i) { return _; };
     auto slope = [&](int j) { return _; };
     auto yIntercept = [&](int j) { return _; };
@@ -74,6 +75,9 @@ x(i)가 불규칙한 경우(CHT::query 사용) $O(N~logN)$
 ### 사용관련
 $dp[i] = min_{j < i} \left[ slope(j) \cdot x(i) + yIntercept(j) \right]$   
 수식에 맞게 람다함수 작성   
+
+$slope(j)$가 단조 감소해야 함   
+그렇지 않다면 [line container](/자료구조/기타/LineContainer.md) 사용   
 
 x(i)값이 단조증가한다면 CHT::fastQuery() 사용   
 x(i)값이 불규칙하게 바뀌는 경우 CHT::query() 사용, CHT::query()에선 매번 이분탐색으로 x에 해당하는 직선의 방정식 찾아서 계산함   
