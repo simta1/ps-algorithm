@@ -150,6 +150,18 @@ fio >> a >> b << a + b << "\n";
 내 구현에선 쓸 거면 `while (!eof && c & 16)`로 해야 됨   
 솔직히 시간차이 별로 없는 듯 해서 좀 더 직관적인 코드로 사용
 
+### 사용설명
+실수의 출력은 오버로딩하지 않았다.   
+코드 추가하긴 귀찮아서 그냥 stringstream으로 실수->문자열로 변환한 뒤 출력하는 식으로 사용 중이다.   
+TODO 언젠가 할거없으면 오버로딩 코드 추가하지 않을까   
+```cpp
+double d;
+// fio << d; // 오버로딩 안 되어있어서 에러 남
+stringstream ss;
+ss << fixed << setprecision(n) << d;
+fio << ss.str();
+```
+
 ### 참고링크
 https://github.com/justiceHui/AlgorithmImplement/blob/master/misc/FastInput.cpp   
 https://www.acmicpc.net/blog/view/105   

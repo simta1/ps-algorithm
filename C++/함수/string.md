@@ -65,3 +65,13 @@ int num = stoi(st); // s(tring) to i(int)
 crope rp(st.c_str()); // std::string to c_str
 if (isdigit(ch)) ; // 숫자인지 확인
 ```
+
+## 소수점 n자리로 반올림한 실수 문자열변환
+```cpp
+double d;
+stringstream ss;
+ss << fixed << setprecision(n) << d;
+string str_d = ss.str();
+```
+iomanip로 stringstream에 출력하고 문자열로 변환하면 편하다.   
+[fastio](/utils/fastio.md)에서 실수형 출력 함수를 오버로딩하지 않았기에 실수를 빠른입출력 하는 경우 문자열로 변환해서 출력하면 된다.   
