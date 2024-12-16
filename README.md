@@ -216,10 +216,10 @@ mermaid stateDiagram-v2 사용
   * <span class="diamond">[회문 트리(D+)](/문자열/회문%20트리.md)</span>
   * <span class="">[run enumerate(R-)]</span>
   * <span class="">[접미사 트리(R-)]</span> <!-- https://infossm.github.io/blog/2021/02/20/suffix-tree/ -->
+  * <span class="">[suffix automaton]</span> <!-- https://www.acmicpc.net/workbook/view/13245 -->
 * ### 기하학
   <!-- * ~~<span class="">[반공간 교집합]</span>~~ -->
-  <!-- * <span class="">[3D convex hull]</span>
-  * <span class="">[polygon raycast]</span>
+  <!-- <span class="">[polygon raycast]</span>
   molamola 팀노트 https://zigui.tistory.com/5 -->
   <!-- https://zigui.tistory.com/34 -->
   * <span class="additional">[기하학 헤더](/기하학/기하학%20헤더.md)</span>
@@ -248,6 +248,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[볼록다각형-볼록다각형 접선]</span> <!-- https://www.geeksforgeeks.org/tangents-two-convex-polygons/ -->
   * <span class="">[점-원 접선, 원-원 접선]</span> <!-- https://cubelover.tistory.com/4 -->
   * <span class="">[Dynamic Convex Hull]</span> <!-- https://lem0nad3.tistory.com/m/133 --> <!-- https://www.geeksforgeeks.org/dynamic-convex-hull-adding-points-existing-convex-hull/?ref=oin_asr2 -->
+  * <span class="">[3D convex hull]</span> <!-- https://www.acmicpc.net/workbook/view/9541 -->
   * <span class="">[Convex Layers]</span>
   * <span class="">[구분구적법]</span>
   * <span class="">[심슨 적분]</span> <!-- https://www.acmicpc.net/problem/8303 -->
