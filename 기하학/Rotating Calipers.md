@@ -53,8 +53,8 @@ T distSquare(const Point<T> &p1, const Point<T> &p2) {
 }
 
 template <typename T>
-T getDiameterSquare(const vector<Point<T> > &points, bool isConvex=false) {
-    if (points.size() == 1) return 0;
+T getDiameterSquare(const vector<Point<T> > &points, bool isConvex=false) { // isConvex=true할 경우 points가 반시계 정렬되어있어야함. 시계정렬이면 그냥 false로 보내서 사용하기
+    if (points.size() <= 1) return 0;
     if (points.size() == 2) return distSquare(points[0], points[1]);
 
     const vector<Point<T> > &v = isConvex ? points : getConvexHull(points);
