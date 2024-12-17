@@ -259,7 +259,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[도형에서의 불 연산: Polygon Union]</span>
   * <span class="">[델로네 삼각분할, 보로노이 다이어그램(D+)]</span>
   * <span class="">[Euclidean MST]</span>
-  * <span class="">[3D convex hull(D+)]</span> <!-- https://www.acmicpc.net/workbook/view/9541 -->
+  * <span class="">[3D convex hull(D+)]</span> <!-- https://www.acmicpc.net/workbook/view/9541 --> <!-- https://tildesites.bowdoin.edu/~ltoma/teaching/cs3250-CompGeom/spring17/Lectures/cg-hull3d.pdf --> <!-- https://www.cs.jhu.edu/~misha/Spring16/09.pdf --> <!-- https://codeforces.com/blog/entry/81768 -->
   * <span class="">[Disk Convex Hull(R)]</span> <!-- https://www.acmicpc.net/problem/27957 -->
 * ### [수학](/수학/개념%20정리.md)
   * #### 조합론, 수열
