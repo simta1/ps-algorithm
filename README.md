@@ -144,7 +144,6 @@ mermaid stateDiagram-v2 사용
     <!-- * <span class="">[현 그래프 판정]</span> -->
     <!-- * <span class="">[Perfect Elimination Ordering]</span> -->
     <!-- * <span class="">[최소 차수 MST]</span> -->
-    <!-- * <span class="">[Euclidean MST]</span> -->
   * #### [네트워크 플로우](/그래프%20이론/네트워크%20플로우/개념%20정리.md)
     * <span class="platinum">[이분 매칭(P-)](/그래프%20이론/네트워크%20플로우/이분매칭.md)</span>
     * ~~<span class="platinum">[최대유량: Edmonds-Karp (P-)](/그래프%20이론/네트워크%20플로우/최대%20유량.md)</span>~~
@@ -248,7 +247,6 @@ mermaid stateDiagram-v2 사용
   * <span class="">[볼록다각형-볼록다각형 접선]</span> <!-- https://www.geeksforgeeks.org/tangents-two-convex-polygons/ -->
   * <span class="">[점-원 접선, 원-원 접선]</span> <!-- https://cubelover.tistory.com/4 -->
   * <span class="">[Dynamic Convex Hull]</span> <!-- https://lem0nad3.tistory.com/m/133 --> <!-- https://www.geeksforgeeks.org/dynamic-convex-hull-adding-points-existing-convex-hull/?ref=oin_asr2 -->
-  * <span class="">[3D convex hull]</span> <!-- https://www.acmicpc.net/workbook/view/9541 -->
   * <span class="">[Convex Layers]</span>
   * <span class="">[구분구적법]</span>
   * <span class="">[심슨 적분]</span> <!-- https://www.acmicpc.net/problem/8303 -->
@@ -258,9 +256,10 @@ mermaid stateDiagram-v2 사용
   * <span class="diamond">[그린 정리(D+)](/기하학/그린%20정리.md)</span>
   * <span class="diamond">[도형에서의 불 연산: Circle Union(D+)](/기하학/Union(Circle).md)</span>
   * <span class="diamond">[도형에서의 불 연산: Ring Union(D+)](/기하학/Union(Ring).md)</span>
-  * <span class="">[도형에서의 불 연산: Polygon Union(R-)]</span>
-  * <span class="">[델로네 삼각분할(R-)]</span> <!-- https://00ad-8e71-00ff-055d.tistory.com/106 -->
-  * <span class="">[보로노이 다이어그램(R-)]</span> <!-- https://zigui.tistory.com/32 -->
+  * <span class="">[도형에서의 불 연산: Polygon Union]</span>
+  * <span class="">[델로네 삼각분할, 보로노이 다이어그램(D+)]</span>
+  * <span class="">[Euclidean MST]</span>
+  * <span class="">[3D convex hull(D+)]</span> <!-- https://www.acmicpc.net/workbook/view/9541 -->
   * <span class="">[Disk Convex Hull(R)]</span> <!-- https://www.acmicpc.net/problem/27957 -->
 * ### [수학](/수학/개념%20정리.md)
   * #### 조합론, 수열
@@ -307,7 +306,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[프뤼퍼 수열]</span> <!-- https://hongjun7.tistory.com/10 -->
     * <span class="">[베르누이 수]</span>
     * ~~<span class="platinum">[Faulhaber(P+)](/수학/Faulhaber.md)</span>~~
-    * <span class="">[Stern-Brocot 트리]</span> <!-- https://blog.myungwoo.kr/126 --> <!-- https://youngyojun.github.io/secmem/2022/02/18/sigma-sum-stern-brocot/ -->
+    * <span class="">[Stern-Brocot 트리]</span> <!-- https://blog.myungwoo.kr/126 --> <!-- https://youngyojun.github.io/secmem/2022/02/18/sigma-sum-stern-brocot/ --> <!-- https://zigui.tistory.com/29 -->
     * <span class="platinum">[밀러-라빈 소수 판별법(P+)](/수학/MillerRabin.md)</span>
     * <span class="platinum">[폴라드 로(P+)](/수학/PollardRho.md)</span>
     * <span class="platinum">[FFT(P+)](/수학/FFT.md)</span>
@@ -321,7 +320,7 @@ mermaid stateDiagram-v2 사용
     * <span class="diamond">[NTT(D-)](/수학/NTT.md)</span>
     * <span class="">[FFT 나눗셈]</span>
     * <span class="">[다중 대입값 계산]</span> <!-- https://infossm.github.io/blog/2019/06/16/Multipoint-evaluation/ -->
-    * <span class="">[simplex]</span>
+    * <span class="">[simplex]</span> <!-- https://velog.io/@wjleekr927/Simplex-algorithm -->
     * <span class="">[LP]</span>
     * <span class="">[XOR Convolution]</span>
     * <span class="">[FFT 응용]</span> <!-- https://hyperbolic.tistory.com/4 -->
@@ -338,7 +337,7 @@ mermaid stateDiagram-v2 사용
     * <span class="diamond">[메르텐스 함수(D+)](/수학/메르텐스.md)</span>
     * <span class="diamond">[메르텐스 트릭, Xudyh's sieve (D+)](/수학/Xudyh's%20sieve.md)</span>
     * <span class="">[min_25's sieve]</span>
-    * <span class="">[매트로이드(R-)]</span> <!-- https://imeimi.tistory.com/45 --> <!-- https://m.blog.naver.com/kks227/221031527413 -->
+    * <span class="">[매트로이드(R-)]</span> <!-- https://m.blog.naver.com/kks227/221031527413 --> <!-- https://infossm.github.io/tags/matroid/ --> <!-- https://imeimi.tistory.com/45 --> <!-- https://m.blog.naver.com/kks227/221031527413 --> <!-- https://koosaga.com/252 --> <!-- https://joohs0505.tistory.com/4 --> <!-- https://dad-rock.tistory.com/673 -->
 * ### 게임 이론
   * <span class="">[스프라그-그런디]</span> <!-- (비트셋) -->
   * <span class="">[hackenbush]</span> <!-- https://en.wikipedia.org/wiki/Hackenbush --> <!-- https://rkm0959.tistory.com/139 -->
