@@ -260,7 +260,8 @@ mermaid stateDiagram-v2 사용
   * <span class="">[델로네 삼각분할, 보로노이 다이어그램(D+)]</span>
   * <span class="">[Euclidean MST]</span>
   * <span class="additional">[3차원 기하학](/기하학/3D%20기하.md)</span>
-  * <span class="">[3D convex hull(D+)]</span> <!-- https://tildesites.bowdoin.edu/~ltoma/teaching/cs3250-CompGeom/spring17/Lectures/cg-hull3d.pdf --> <!-- https://www.cs.jhu.edu/~misha/Spring16/09.pdf --> <!-- https://codeforces.com/blog/entry/81768 -->
+  * <span class="">[로드리게스 회전]</span> <!-- https://jebae.github.io/rodrigues-rotation -->
+  * <span class="diamond">[3D convex hull(D+)](/기하학/3D%20볼록껍질.md)</span>
   * <span class="">[Disk Convex Hull(R)]</span> <!-- https://www.acmicpc.net/problem/27957 -->
 * ### [수학](/수학/개념%20정리.md)
   * #### 조합론, 수열
