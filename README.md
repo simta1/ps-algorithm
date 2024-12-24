@@ -259,7 +259,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[도형에서의 불 연산: Polygon Union]</span>
   * <span class="">[델로네 삼각분할, 보로노이 다이어그램(D+)]</span>
   * <span class="">[Euclidean MST]</span>
-  * <span class="additional">[3차원 기하학](/기하학/3D%20기하.md)</span>
+  * <span class="additional">[3차원 기하학 헤더](/기하학/3D%20기하학%20헤더.md)</span>
   * <span class="">[로드리게스 회전]</span> <!-- https://jebae.github.io/rodrigues-rotation -->
   * <span class="diamond">[3D convex hull(D+)](/기하학/3D%20볼록껍질.md)</span>
   * <span class="">[Disk Convex Hull(R)]</span> <!-- https://www.acmicpc.net/problem/27957 -->
