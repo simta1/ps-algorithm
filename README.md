@@ -239,7 +239,7 @@ mermaid stateDiagram-v2 사용
   * <span class="platinum">[볼록 다각형 내부의 점 판정(P+)](/기하학/PIP(convex).md)</span>
   * <span class="platinum">[등적등주 분할(P+)](/기하학/Equalizer.md)</span>
   * <span class="platinum">[가장 가까운 두 점(P+)](/기하학/Closest%20Two%20Points.md)</span>
-  * <span class="">[최소 외접원(P+)]</span>
+  * <span class="platinum">[최소 외접원(P+)](/기하학/최소외접원.md)</span>
   * <span class="">[Shamos-Hoey]</span>
   * <span class="diamond">[반평면 교집합(D-)](/기하학/반평면%20교집합.md)</span>
   * <span class="">[Bentley-Ottmann]</span>
