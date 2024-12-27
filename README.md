@@ -103,7 +103,6 @@ mermaid stateDiagram-v2 사용
 * ### [그래프 이론](/그래프%20이론/개념%20정리.md)
   * #### 그래프
     <!-- https://ps.mjstudio.net/tip-bfs-fill -->
-    <!-- * <span class="">[온라인 동적 연결성 판정]</span> -->
     * <span class="">[flood fill]</span>
     * <span class="">[0-1 bfs(G-)]</span>
     * <span class="gold">[이분그래프 판정(G-)](/그래프%20이론/그래프/이분그래프%20판정.md)</span>
@@ -137,11 +136,11 @@ mermaid stateDiagram-v2 사용
     * <span class="">[삼각형 찾기]</span> <!-- https://jh05013.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EC%82%BC%EA%B0%81%ED%98%95%20%EC%B0%BE%EA%B8%B0/ -->
     * <span class="">[평면 그래프]</span>
     * <span class="">[쌍대 그래프]</span>
+    * <span class="">[현 그래프 판정]</span>
     * <span class="">[현 그래프(D+)]</span>
     * <span class="diamond">[유향 MST(D+)](/그래프%20이론/그래프/DMST.md)</span>
     * <span class="ruby">[offline incremental SCC(R-)](/그래프%20이론/그래프/Offline%20Incremental%20SCC.md)</span>
-    * <span class="">[온라인 동적 연결성 판정(R)]</span> <!-- https://etyu39.tistory.com/5 -->
-    <!-- * <span class="">[현 그래프 판정]</span> -->
+    * <span class="">[온라인 동적 연결성 판정(R+)]</span> <!-- https://etyu39.tistory.com/5 --> <!-- https://www.acmicpc.net/problem/17465 -->
     <!-- * <span class="">[Perfect Elimination Ordering]</span> -->
     <!-- * <span class="">[최소 차수 MST]</span> -->
   * #### [네트워크 플로우](/그래프%20이론/네트워크%20플로우/개념%20정리.md)
@@ -198,7 +197,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[벌레캠프-매시(D+)]</span>
   <!-- * <span class="">[aliens 트릭(D-)]</span> -->
 * ### 문자열
-<!-- RBS(Regular Bracket Sequence) -->
+  <!-- RBS(Regular Bracket Sequence) -->
   <!-- https://blog.cube219.me/posts/2021/solve-stock-price-prediction-problem-without-segment-tree/ -->
   * <span class="">[괄호문자열]</span> <!-- 괄호문자열 판별, 괄호 종류 여러개일 때, 괄호문자열 응용 등등 -->
   * <span class="gold">[트라이(G+)](/문자열/Trie.md)</span>
@@ -261,7 +260,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[Euclidean MST]</span>
   * <span class="additional">[3차원 기하학 헤더](/기하학/3D%20기하학%20헤더.md)</span>
   * <span class="">[로드리게스 회전]</span> <!-- https://jebae.github.io/rodrigues-rotation -->
-  * <span class="diamond">[3D convex hull(D+)](/기하학/3D%20볼록껍질.md)</span>
+  * <span class="diamond">[3D Convex Hull(D+)](/기하학/3D%20볼록껍질.md)</span>
   * <span class="">[Disk Convex Hull(R)]</span> <!-- https://www.acmicpc.net/problem/27957 -->
 * ### [수학](/수학/개념%20정리.md)
   * #### 조합론, 수열
