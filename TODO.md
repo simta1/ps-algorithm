@@ -1,23 +1,22 @@
-### 앞으로 해야될 거
-  1. 라빈 카프
+### 앞으로 할 거
+  1. BCC
+  1. small to large
+  1. simplex / LP dual
+  1. 매트로이드
+  1. PST
   1. hld
   1. centroid decomposition
   1. $\vdots$
   1. 스프라그 그런디
-  1. 최대유량 Dinic
-  1. 이분매칭 Hopcraft Karp
   1. $\vdots$
   1. DP 최적화들
   1. FFT 나눗셈
-  1. PST
-  1. lineContainer
   1. 리-차오
   1. 선형대수학 카테고리 추가
   1. infint, modint, baseint 구현체 추가
-  1. lp duality
-  1. 보간법
 
 ### 기존 문서에 추가할 거
+  * [ ] 유니온파인드 `template <bool largeToSmall=false>` 추가
   * [ ] 오일러 회로 -> 오일러 경로
   * [ ] CHT DP -> lineContainer
   * [ ] convex hull -> monotone chain
