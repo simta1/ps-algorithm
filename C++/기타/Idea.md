@@ -7,6 +7,12 @@ char c = "-0+"[sign + 1]; // sign -> char('-', '0', '+')
 int sign = (x >> 31) - (-x >> 31); // 더 빠른 코드, 형변환 안 일어나서인지 속도차이 꽤 큼
 ```
 
+# xy좌표 사분면 변환
+```cpp
+assert(x != 0 && y != 0);
+int quadrant = 1 + (y < 0) * 2 + (x * y < 0);
+```
+
 # 특정 조건에서 값 대신 -1 출력
 ```cpp
 cout << x + condition * ~x; // x를 출력하되 condition 만족하면 -1 출력
