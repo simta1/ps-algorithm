@@ -407,11 +407,11 @@ mermaid stateDiagram-v2 사용
   * <span class="">[사전 정의 매크로]</span>
   * <span class="">[register]</span>
   * <span class="information">[리터럴](/C++/문법/리터럴.md)</span>
+  * <span class="">[실수형 inf]</span> <!-- const double INF = 1/.0 --> <!-- 1/.0 > numeric_limits<double>::max() -->
   * <span class="">[using]</span> <!-- 기하학 풀 때 using ld; -->
   * <span class="">[저장 유형 지정자]</span> <!-- static, register -->
   * <span class="information">[template argument deduction](/C++/문법/Template%20Argument%20Deduction.md)</span>
-  * <span class="">[코드 여러줄 이어쓰기]</span>
-  * <span class="">[리터럴 여러줄 이어쓰기]</span>
+  * <span class="information">[코드 여러줄 이어쓰기](/C++/문법/코드%20줄바꿈.md)</span>
 * ### 함수
   * <span class="information">[수학관련](/C++/함수/math.md)</span>
   * <span class="">[배열관련]</span> <!-- copy doubling -->
