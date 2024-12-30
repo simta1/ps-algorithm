@@ -406,8 +406,9 @@ mermaid stateDiagram-v2 사용
   * <span class="information">[ifdef](/C++/문법/ifdef.md)</span>
   * <span class="">[사전 정의 매크로]</span>
   * <span class="">[register]</span>
+  * <span class="information">[리터럴](/C++/문법/리터럴.md)</span>
   * <span class="">[using]</span> <!-- 기하학 풀 때 using ld; -->
-  * <span class="">[literal]</span>
+  * <span class="">[저장 유형 지정자]</span> <!-- static, register -->
   * <span class="information">[template argument deduction](/C++/문법/Template%20Argument%20Deduction.md)</span>
   * <span class="">[코드 여러줄 이어쓰기]</span>
   * <span class="">[리터럴 여러줄 이어쓰기]</span>
