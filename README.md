@@ -403,6 +403,9 @@ mermaid stateDiagram-v2 사용
   * <span class="information">[람다 캡처, 재귀](/C++/문법/lambda.md)</span>
   * <span class="">[range-based for loop, 구조적 바인딩]</span>
   * <span class="information">[constexpr](/C++/문법/constexpr.md)</span>
+  * <span class="information">[ifdef](/C++/문법/ifdef.md)</span>
+  * <span class="">[사전 정의 매크로]</span>
+  * <span class="">[register]</span>
   * <span class="">[using]</span> <!-- 기하학 풀 때 using ld; -->
   * <span class="">[literal]</span>
   * <span class="information">[template argument deduction](/C++/문법/Template%20Argument%20Deduction.md)</span>
