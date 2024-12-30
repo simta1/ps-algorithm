@@ -117,6 +117,10 @@ public:
     }
 };
 ```
+
+### TODO 
+https://blog.naver.com/PostList.naver?blogId=fkddl1436&from=postList&categoryNo=7 처럼 depth대신 dfsn으로 계산하는 게 더 효율적임   
+
 ### 시간복잡도 
 preprocessing $O(N~logN)$   
 getLCA $O(logN)$
