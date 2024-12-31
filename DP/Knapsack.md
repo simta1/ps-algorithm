@@ -31,11 +31,11 @@ T knapsack(const vector<pair<int, T> > &bag, int maxWeight) {
 ```
 
 ### 시간복잡도 
-$O(NK)$   
+$O(NW)$   
 
 ### 주의사항
-for문 방향 i--로 해야 됨   
-if (w <= maxWeight) 생략하면 dp[w] = max(dp[w], v)에서 outOfBounds에러날 수 있으니 꼭 필요함
+for문 방향 `i--`로 해야 됨   
+`if (w <= maxWeight)` 생략하면 `dp[w] = max(dp[w], v)`에서 outOfBounds에러날 수 있으니 꼭 필요함
 
 ### 백준문제
-[평범한 배낭](https://www.acmicpc.net/problem/12865)
+[평범한 배낭](https://www.acmicpc.net/problem/12865)   
