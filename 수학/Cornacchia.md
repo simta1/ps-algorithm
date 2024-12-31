@@ -45,6 +45,7 @@ ll tonelliShanks(ll n, ll p) { // x^2 === n (mod p)
 
 ### Cornacchia
 ```cpp
+// 해가 존재하는 경우만 주어진다고 가정한 코드임. 해 없는지는 판단 안 함, d=1일때만 테스트해본 코드임
 pll cornacchia(ll m, ll d = 1) { // x^2 + dy^2 = m
     if (m == 2) return {1, 1};
     
