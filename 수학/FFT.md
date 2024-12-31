@@ -12,16 +12,14 @@ namespace FourierTransform {
         int n = f.size();
         
         for (int i = 1, j = 0; i < n; i++) {
-            int bit = n / 2;
-            while (j >= bit) {
-                j -= bit;
-                bit /= 2;
+            for (int bit = n >> 1; bit; bit >>= 1) {
+                j ^= bit;
+                if (j & bit) break;
             }
-            j += bit;
             if (i < j) swap(f[i], f[j]);
         }
 
-        for (int m = 2; m <= n; m *= 2) {
+        for (int m = 2; m <= n; m <<= 1) {
             ld t = 2 * PI / m * (is_reverse ? -1 : 1);
             cpx w(cos(t), sin(t));
 
@@ -36,9 +34,7 @@ namespace FourierTransform {
             }
         }
 
-        if (is_reverse) {
-            for (auto &e : f) e /= n;
-        }
+        if (is_reverse) for (auto &e : f) e /= n;
     }
 
     int powGE(int n) {
