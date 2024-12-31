@@ -221,11 +221,13 @@ mermaid stateDiagram-v2 사용
   molamola 팀노트 https://zigui.tistory.com/5 -->
   <!-- https://zigui.tistory.com/34 -->
   * <span class="additional">[기하학 헤더](/기하학/기하학%20헤더.md)</span>
-    * <span class="">[외적, CCW(G-)]</span>
-    * <span class="">[거리 계산 : point-point, line-point]</span>
-    * <span class="">[넓이 계산 : 단순다각형, 헤론, 브라마굽타, 활꼴]</span>
-    * <span class="">[제2 cos]</span>
-    * <span class="">[좌표 계산 : 2d회전, 3d회전]</span>
+    * <span class="additional">[외적, CCW(G-)](/기하학/기하학%20헤더.md#point-cross-product-ccw)</span>
+    * <span class="additional">[거리 계산 : point-point, line-point](/기하학/기하학%20헤더.md#distance)</span>
+    * <span class="additional">[넓이 계산 : 단순다각형, 헤론, 브라마굽타, 활꼴](/기하학/기하학%20헤더.md#area)</span>
+    * <span class="additional">[점-직선 포함여부 판정](/기하학/기하학%20헤더.md#isbetween-isonpl)</span>
+    * <span class="additional">[제2 cos](/기하학/기하학%20헤더.md#triangle)</span>
+    * <span class="additional">[삼각함수 합성](/기하학/기하학%20헤더.md#삼각함수)</span>
+    * <span class="additional">[좌표 계산 : 수선의 발, 대칭이동, 회전이동](/기하학/기하학%20헤더.md#좌표-계산)</span>
   * <span class="gold">[볼록다각형 부분넓이(G)](/기하학/볼록다각형%20부분넓이.md)</span>
   * <span class="gold">[선분교차판정(G+)](/기하학/선분교차판정.md)</span>
   * <span class="platinum">[선분교차점 계산(P-)](/기하학/선분교차점%20계산.md)</span>
@@ -259,7 +261,9 @@ mermaid stateDiagram-v2 사용
   * <span class="">[델로네 삼각분할, 보로노이 다이어그램(D+)]</span>
   * <span class="">[Euclidean MST]</span>
   * <span class="additional">[3차원 기하학 헤더](/기하학/3D%20기하학%20헤더.md)</span>
-  * <span class="">[로드리게스 회전]</span> <!-- https://jebae.github.io/rodrigues-rotation -->
+    * <span class="additional">[외적, 면 법선 벡터 계산](/기하학/3D%20기하학%20헤더.md)</span>
+    * <span class="additional">[거리 : point-face](/기하학/3D%20기하학%20헤더.md)</span>
+    * <span class="">[로드리게스 회전]</span> <!-- https://jebae.github.io/rodrigues-rotation -->
   * <span class="diamond">[3D Convex Hull(D+)](/기하학/3D%20볼록껍질.md)</span>
   * <span class="">[Disk Convex Hull(R)]</span> <!-- https://www.acmicpc.net/problem/27957 -->
 * ### [수학](/수학/개념%20정리.md)
