@@ -3,10 +3,7 @@
 ## 이산 제곱근
 ### Tonelli-Shanks
 ```cpp
-ll multiply(ll a, ll b, ll mod) {
-    return a * b % mod;
-    // return __int128(a) * b % mod;
-}
+inline ll multiply(ll a, ll b, ll mod) { return __int128(a) * b % mod; }
 
 ll power(ll a, ll n, ll mod) { //a ^ n % mod
     ll res = 1;
