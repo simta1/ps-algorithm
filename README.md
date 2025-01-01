@@ -177,7 +177,6 @@ mermaid stateDiagram-v2 사용
   * <span class="silver">[Kadane algorithm(S+)](/DP/Kadane%20Algorithm.md)</span>
   * <span class="silver">[LIS(S+)](/DP/LIS.md)</span>
   * <span class="gold">[LCS(G-)](/DP/LCS.md)</span>
-  * <span class="">[비트셋 LCS]</span>
   * <span class="gold">[배낭 문제(G-)](/DP/Knapsack.md)</span>
   * <span class="gold">[비트셋 배낭(G-)](/DP/Knapsack(Bitset).md)</span>
   * <span class="gold">[최단거리 역추적(G-)](/DP/DP%20역추적.md)</span>
@@ -189,6 +188,7 @@ mermaid stateDiagram-v2 사용
   * <span class="diamond">[SOS DP(D-)](/DP/SOS%20DP.md)</span>
   * <span class="">[검은 돌 트릭]</span>
   * <span class="">[히르쉬버그(D+)]</span>
+  * <span class="">[비트셋 LCS(R-)]</span>
   * <span class="">[aliens 트릭]</span>
   * <span class="">[Connection Profile DP]</span>
   * <span class="">[크누스 최적화]</span>
@@ -252,7 +252,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[구분구적법]</span>
   * <span class="">[심슨 적분]</span> <!-- https://www.acmicpc.net/problem/8303 -->
   * <span class="diamond">[불도저 트릭(Rotating Line Sweep)(D+)](/기하학/불도저.md)</span>
-  * <span class="">[KD tree]</span> <!-- https://algoshitpo.github.io/2020/02/09/kdtree/ -->
+  * <span class="">[KD tree]</span> <!-- https://algoshitpo.github.io/2020/02/09/kdtree/ --> <!-- https://gist.github.com/cgiosy/9d39fa9aedeae94c60ba0692c840c078 -->
   * <span class="">[Polygon Clipping]</span>
   * <span class="diamond">[그린 정리(D+)](/기하학/그린%20정리.md)</span>
   * <span class="diamond">[도형에서의 불 연산: Circle Union(D+)](/기하학/Union(Circle).md)</span>
@@ -357,10 +357,12 @@ mermaid stateDiagram-v2 사용
   * <span class="silver">[비트마스크(S-)](/기타/Bitmask.md)</span>
   * <span class="silver">[좌표 압축(S-)](/기타/좌표압축.md)</span>
   * <span class="silver">[순열 사이클 분할(S+)](/기타/순열%20사이클%20분할.md)</span>
+  * <span class="">[최적화]</span> <!-- https://cgiosy.github.io/posts/fast-io -->
   * <span class="">[Log Decomp]</span> <!-- https://codeforces.com/blog/entry/124766 -->
   * <span class="">[모노톤 스택]</span>
   * <span class="">[모노톤 큐]</span>
   * <span class="">[XOR Hashing]</span> <!-- https://codeforces.com/blog/entry/85900 -->
+  * <span class="">[트리 해싱]</span> <!-- https://blog.cgiosy.dev/entry/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%AC%B8%EC%A0%9C-%ED%92%80-%EB%95%8C-%EC%93%B0%EB%8A%94-%ED%95%B4%EC%8B%9C-%EC%A2%85%EB%A5%98%EB%93%A4 -->
   * <span class="">[누적합, imos]</span>
   * <span class="">[SIMD]</span>
   * <span class="">[Gray code](/기타/Gray%20code.md)</span>
@@ -388,7 +390,8 @@ mermaid stateDiagram-v2 사용
   * <span class="">[쌍대성]</span>
 * ### utils
   * <span class="additional">[fastio](/utils/fastio.md)</span>
-  * <span class="additional">[bit](/utils/Bit.md)</span>
+  * <span class="additional">[비트 연산](/utils/Bit.md)</span>
+  * <span class="additional">[비트셋 덧셈, 뺄셈](/utils/비트셋%20덧셈뺄셈.md)</span>
   * <span class="additional">[문자열 압축](/utils/String%20Compression.md)</span>
   * <span class="additional">[개수 계산](/utils/Counter.md)</span>
   * <span class="additional">[랜덤](/utils/Random.md)</span>
