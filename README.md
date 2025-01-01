@@ -188,13 +188,13 @@ mermaid stateDiagram-v2 사용
   * <span class="diamond">[SOS DP(D-)](/DP/SOS%20DP.md)</span>
   * <span class="">[검은 돌 트릭]</span>
   * <span class="">[히르쉬버그(D+)]</span>
-  * <span class="">[비트셋 LCS(R-)]</span>
   * <span class="">[aliens 트릭]</span>
   * <span class="">[Connection Profile DP]</span>
   * <span class="">[크누스 최적화]</span>
   * <span class="">[단조큐 최적화]</span>
   * <span class="">[Slope trick(D-)]</span>
   * <span class="">[벌레캠프-매시(D+)]</span>
+  * <span class="ruby">[비트셋 LCS(R-)](/DP/비트셋%20LCS.md)</span>
   <!-- * <span class="">[aliens 트릭(D-)]</span> -->
 * ### 문자열
   <!-- RBS(Regular Bracket Sequence) -->
