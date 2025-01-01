@@ -87,6 +87,9 @@ mermaid stateDiagram-v2 사용
   * #### 기타
     * <span class="gold">[유니온 파인드(G-)](/자료구조/기타/DSU.md)</span>
     * <span class="">[유니온 파인드 롤백]</span>
+    * <span class="">[자료구조 롤백 지원하기]</span> <!-- https://cologne.tistory.com/66 -->
+    * <span class="">[erasable pq]</span> <!-- https://nyaannyaan.github.io/library/data-structure/erasable-priority-queue.hpp -->
+    * <span class="">[meldable pq]</span>
     * <span class="gold">[희소 배열(G+)](/자료구조/기타/희소배열.md)</span>
     * <span class="platinum">[XOR 트라이(P-)](/자료구조/기타/XOR%20Trie.md)</span>
     * <span class="platinum">[유니온 파인드 with Potential(P+)](/자료구조/기타/DSU%20potential.md)</span>
@@ -94,6 +97,7 @@ mermaid stateDiagram-v2 사용
     * <span class="platinum">[ordered set(P-)](/자료구조/기타/ordered_set.md)</span>
     * <span class="">[wavelet 트리]</span>
     * <span class="">[데카르트 트리(Cartesian tree)]</span> <!-- https://imeimi.tistory.com/42 구간 내에서의 RMQ는 cartesian tree에서의 LCA? -->
+    * <span class="">[Farach-Colton and Bender Algorithm]</span> <!-- https://cp-algorithms.com/graph/lca_farachcoltonbender.html --> <!-- https://codeforces.com/blog/entry/86746?locale=en -->
     * <span class="diamond">[Line Container(D-)](/자료구조/기타/LineContainer.md)</span>
     * <span class="">[리-차오 트리(D-)]</span>
     * <span class="">[SPQR tree]</span>
