@@ -39,7 +39,7 @@ $O(N~2^N)$
 ### 원리
 
 
-### 참고문헌
+### 참고링크
 https://00ad-8e71-00ff-055d.tistory.com/84   
 https://codeforces.com/blog/entry/45223   
 https://blog.queuedlab.com/posts/sos-dp   
