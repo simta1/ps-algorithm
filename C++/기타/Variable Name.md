@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-### 변수명 통일
+### 변수명
 ```cpp
 adj[][] // adjacent, 그래프에서 인접리스트
 rdj[][] // reverse adj, 방향그래프에서 역방향 간선 저장
@@ -10,9 +10,10 @@ inDegree[] // 위상정렬 등에서 노드로 들어오는 간선 개수
 node, s, e, l, r // 세그트리, s와 e는 node의 범위, l과 r은 쿼리 범위
 sz[], dep[], par[] // 트리에서 서브트리 크기, 현재노드의 깊이, 부모노드 저장하는 배열
 dfsn // ETT 등에서 dfs 스패닝 트리 만들 때 방문순서 저장
+carry, borrow // 각각 덧셈/뺄셈에서 자리올림/자리내림 저장
 ```
 
-### 함수명 통일
+### 함수명
 ```cpp
 addEdge() // 그래프 간선 추가
 propagate() // lazy seg, splay tree 등에서 lazy전파하는 함수. 다른 이름 사용한 코드 좀 있어서 수정해야 됨.
