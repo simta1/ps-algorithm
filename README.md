@@ -389,6 +389,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[춤추는 링크, 크누스 X]</span>
   * <span class="">[임의 정밀도(epsilon값 계산)(A)]</span> <!-- https://www.acmicpc.net/blog/view/37 -->
   * ~~<span class="">[담금질 기법]</span>~~ <!-- https://ryute.tistory.com/35    --> <!-- https://ryute.tistory.com/36    --> <!-- https://algospot.com/forum/read/1211/ --> <!-- https://koosaga.com/3 -->
+  * <span class="">[DLAS]</span> <!-- https://cocoachan.tistory.com/12 --> <!-- https://gist.github.com/cgiosy/ed16f4988eeb7e989a97644fe61e1561 -->
   * <span class="">[Fracturing Search(D+)]</span> <!-- https://usaco.guide/adv/fracturing-search?lang=cpp --> <!-- https://www.acmicpc.net/problem/14166 --> <!-- https://blog.cube219.me/posts/2022/fracturing-search/ -->
   * <span class="">[선형 계획법]</span>
   * <span class="">[쌍대성]</span>
@@ -408,7 +409,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[modInt]</span>
   * <span class="">[infInt]</span>
   * <span class="">[bigInt]</span>
-  * <span class="">[baseInt]</span> <!-- bigint랑 합쳐서 구현하는 게 나을 듯 -->
+  * <span class="additional">[BaseInt](/utils/BaseInt.md)</span> <!-- bigint랑 합쳐서 구현하는 게 나을 듯 -->
 # C++ 유용한 기능
 * ### 문법
   * <span class="information">[람다 캡처, 재귀](/C++/문법/lambda.md)</span>
