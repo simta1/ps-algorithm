@@ -62,6 +62,7 @@ st[pos:(pos+cnt)] 리턴
 ## 문자열 형변환
 ```cpp
 int num = stoi(st); // s(tring) to i(int)
+int num = stoi(st, nullptr, 2); // st를 2진법으로 해석해서 변환
 crope rp(st.c_str()); // std::string to c_str
 if (isdigit(ch)) ; // 숫자인지 확인
 ```
