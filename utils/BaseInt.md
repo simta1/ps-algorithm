@@ -17,6 +17,7 @@ public:
     static char itoc(int x) { return x < 10 ? x + '0' : x - 10 + 'A'; }
     
     void update(int idx, int val) { // += val * N^idx;
+        assert(val >= 0);
         if (idx >= digits.size()) digits.resize(idx + 1, 0);
         for (int i = idx, carry = 0; i < digits.size() || carry; i++) {
             if (i == digits.size()) digits.push_back(0);
@@ -39,6 +40,7 @@ public:
     BaseInt<N> operator+(const BaseInt<N> &b) const { BaseInt<N> res = *this; res += b; return res; }
 
     BaseInt<N>& operator*=(int b) {
+        assert (b >= 0);
         if (!b) digits.clear();
         else {
             for (int i = 0, carry = 0; i < digits.size() || carry; i++) {
@@ -74,7 +76,8 @@ public:
 };
 ```
 ### 사용설명
-
+`update(idx, val)`은 N진법 상에서 idx번째 자리에 val만큼 더함   
+즉, N^idx * val만큼 더함   
 
 ### 문제
 [36진수](https://www.acmicpc.net/problem/1036)   
