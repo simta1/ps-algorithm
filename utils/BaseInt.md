@@ -10,11 +10,11 @@ public:
     BaseInt() = default;
     BaseInt(const string &st) {
         digits.reserve(st.size());
-        for (auto *it = st.rbegin(); it != st.rend(); it++) digits.push_back(convert(*it));
+        for (auto *it = st.rbegin(); it != st.rend(); it++) digits.push_back(ctoi(*it));
     }
 
-    static int convert(char c) { return isdigit(c) ? c - '0' : c - 'A' + 10; }
-    static char convert(int x) { return x < 10 ? x + '0' : x - 10 + 'A'; }
+    static int ctoi(char c) { return isdigit(c) ? c - '0' : c - 'A' + 10; }
+    static char itoc(int x) { return x < 10 ? x + '0' : x - 10 + 'A'; }
     
     void update(int idx, int val) { // += val * N^idx;
         if (idx >= digits.size()) digits.resize(idx + 1, 0);
@@ -67,7 +67,7 @@ public:
         if (a.digits.empty()) os << "0";
         else {
             assert(a.digits.back()!=0);
-            for (auto it = a.digits.rbegin(); it != a.digits.rend(); it++) os << convert(*it);
+            for (auto it = a.digits.rbegin(); it != a.digits.rend(); it++) os << itoc(*it);
         }
         return os;
     }
