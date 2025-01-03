@@ -410,6 +410,8 @@ mermaid stateDiagram-v2 사용
   * <span class="additional">[시간 초 변환]</span>
   * <span class="additional">[날짜 변환](/utils/날짜%20변환.md)</span>
   * <span class="additional">[__int128 입출력](/utils/__int128%20입출력.md)</span>
+  * <span class="">[파싱]</span>
+  * <span class="additional">[utf-8 입력 처리](/utils/utf-8.md)</span>
   * <span class="">[modInt]</span>
   * <span class="">[infInt]</span>
   * <span class="">[bigInt]</span>
