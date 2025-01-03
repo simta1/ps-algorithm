@@ -106,6 +106,8 @@ mermaid stateDiagram-v2 사용
     <!-- * <span class="">[B-tree]</span> -->
 * ### [그래프 이론](/그래프%20이론/개념%20정리.md)
   * #### 그래프
+    <!-- * <span class="">[horn sat]</span> -->
+    <!-- https://www.acmicpc.net/problem/3636 -->
     <!-- https://ps.mjstudio.net/tip-bfs-fill -->
     * <span class="">[flood fill]</span>
     * <span class="">[0-1 bfs(G-)]</span>
@@ -186,20 +188,22 @@ mermaid stateDiagram-v2 사용
   * <span class="gold">[최단거리 역추적(G-)](/DP/DP%20역추적.md)</span>
   * <span class="gold">[달걀 낙하(G+)](/DP/달걀%20낙하.md)</span>
   * <span class="gold">[비트마스크 DP(G+)](/DP/Bitmask%20DP.md)</span>
+  * <span class="">[트리DP, re-rooting]</span>
   * <span class="platinum">[토글링(P-)](/DP/toggling.md)</span>
-  * <span class="platinum">[볼록껍질 최적화(P+)](/DP/CHT.md)</span>
-  * <span class="platinum">[분할정복 최적화(P+)](/DP/DnC.md)</span>
+  * <span class="platinum">[볼록 껍질을 이용한 최적화(P+)](/DP/CHT.md)</span>
+  * <span class="platinum">[분할 정복을 이용한 최적화(P+)](/DP/DnC.md)</span>
   * <span class="diamond">[SOS DP(D-)](/DP/SOS%20DP.md)</span>
   * <span class="">[검은 돌 트릭]</span>
   * <span class="">[히르쉬버그(D+)]</span>
   * <span class="">[aliens 트릭]</span>
   * <span class="">[Connection Profile DP]</span>
   * <span class="">[크누스 최적화]</span>
-  * <span class="">[단조큐 최적화]</span>
-  * <span class="">[Slope trick(D-)]</span>
+  * <span class="">[단조 큐를 이용한 최적화]</span>
+  * <span class="">[함수 개형을 이용한 최적화(Slope trick) (D-)]</span>
+  * <span class="">[aliens 트릭(라그랑주 최적화)]</span>
   * <span class="">[벌레캠프-매시(D+)]</span>
+  * <span class="">[커넥션 프로파일을 이용한 다이나믹 프로그래밍]</span>
   * <span class="ruby">[비트셋 LCS(R-)](/DP/비트셋%20LCS.md)</span>
-  <!-- * <span class="">[aliens 트릭(D-)]</span> -->
 * ### 문자열
   <!-- RBS(Regular Bracket Sequence) -->
   <!-- https://blog.cube219.me/posts/2021/solve-stock-price-prediction-problem-without-segment-tree/ -->

@@ -1,4 +1,5 @@
 [카테고리](/README.md)
+## CHT(Convex Hull Trick)
 ### CHT (기울기가 단조감소할 때)
 ```cpp
 template <typename T>
