@@ -183,8 +183,8 @@ mermaid stateDiagram-v2 사용
   * <span class="silver">[Kadane algorithm(S+)](/DP/Kadane%20Algorithm.md)</span>
   * <span class="silver">[LIS(S+)](/DP/LIS.md)</span>
   * <span class="gold">[LCS(G-)](/DP/LCS.md)</span>
-  * <span class="gold">[배낭 문제(G-)](/DP/Knapsack.md)</span>
-  * <span class="gold">[비트셋 배낭(G-)](/DP/Knapsack(Bitset).md)</span>
+  * <span class="gold">[배낭 문제(G-)](/DP/배낭.md)</span>
+  * <span class="gold">[비트셋 배낭(G-)](/DP/비트셋%20배낭.md)</span>
   * <span class="gold">[최단거리 역추적(G-)](/DP/DP%20역추적.md)</span>
   * <span class="gold">[달걀 낙하(G+)](/DP/달걀%20낙하.md)</span>
   * <span class="gold">[비트마스크 DP(G+)](/DP/Bitmask%20DP.md)</span>
@@ -193,7 +193,7 @@ mermaid stateDiagram-v2 사용
   * <span class="platinum">[볼록 껍질을 이용한 최적화(P+)](/DP/CHT.md)</span>
   * <span class="platinum">[분할 정복을 이용한 최적화(P+)](/DP/DnC.md)</span>
   * <span class="diamond">[SOS DP(D-)](/DP/SOS%20DP.md)</span>
-  * <span class="">[검은 돌 트릭]</span>
+  * <span class="">[검은 돌 트릭]</span> <!-- https://ansol4328.github.io/problem%20solving/2021/10/14/unique-time-complexity/# -->
   * <span class="">[히르쉬버그(D+)]</span>
   * <span class="">[aliens 트릭]</span>
   * <span class="">[Connection Profile DP]</span>
