@@ -73,7 +73,7 @@ dp[n]을 계산하는데 걸리는 시간:
 x(i)가 단조증가인 경우(CHT::fastQuery 사용) $O(N)$   
 x(i)가 불규칙한 경우(CHT::query 사용) $O(N~logN)$   
 
-### 사용관련
+### 사용설명
 $dp[i] = min_{j < i} \left[ slope(j) \cdot x(i) + yIntercept(j) \right]$   
 수식에 맞게 람다함수 작성   
 
@@ -84,11 +84,11 @@ x(i)값이 단조증가한다면 CHT::fastQuery() 사용
 x(i)값이 불규칙하게 바뀌는 경우 CHT::query() 사용, CHT::query()에선 매번 이분탐색으로 x에 해당하는 직선의 방정식 찾아서 계산함   
 fastQuery()쓸꺼면 fastQuery()만 호출. 중간에 CHT::query() 섞어쓰면 꼬임      
 
-### 백준문제
+### 문제
 [나무 자르기](https://www.acmicpc.net/problem/13263)   
 [특공대](https://www.acmicpc.net/problem/4008)   
 
-### 참고문헌
+### 참고링크
 https://justicehui.github.io/hard-algorithm/2019/01/25/CHT/   
 https://seastar105.tistory.com/21   
 https://g-egg.tistory.com/7   

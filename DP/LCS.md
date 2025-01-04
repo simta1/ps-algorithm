@@ -37,6 +37,6 @@ int LCS(const string &a, const string &b) { // substring, 연속하게 골라야
 ### 시간복잡도 
 $O(NM)$   
 
-### 백준문제
+### 문제
 [LCS](https://www.acmicpc.net/problem/9251) - 최장 공통 부분 수열   
 [공통 부분 문자열](https://www.acmicpc.net/problem/5582) - 최장 공통 부분 문자열   

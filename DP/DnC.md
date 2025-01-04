@@ -54,12 +54,12 @@ dp[n][m]까지 계산하는 시간:
 naive $O(NM^2)$   
 dnc 최적화 $O(NM~logM)$   
 
-### 주의사항
+### 구현 주의사항
 if (l > r) return; 꼭 필요하다.   
 ex) l = 0, r = 1   
 m = 0, dnc(l, m - 1)호출되면서 l > r 됨   
 
-### 사용관련
+### 사용설명
 람다함수 이름을 monge로 짓긴 했지만 꼭 monge array일 필요는 없음   
 monge는 dnc최적화가 사용가능한 충분조건일 뿐 필요조건은 아님   
 즉, monge가 아니어도 dnc 최적화 사용가능한 경우가 존재   
@@ -91,11 +91,11 @@ ex) dp[i][j] = $max_{j-d \le k \le j} \left[ dp[i - 1][k] + monge(k, j) \right]$
 lowerLimit(m) : m - d   
 upperLimit(m) : m   
 
-### 백준문제
+### 문제
 [탈옥](https://www.acmicpc.net/problem/13261) - min   
 [김치](https://www.acmicpc.net/problem/11001) - max   
 
-### 참고문헌
+### 참고링크
 https://anz1217.tistory.com/144   
 https://blog.myungwoo.kr/99   
 https://ps.mjstudio.net/dnc-opt   
