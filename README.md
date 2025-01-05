@@ -444,7 +444,7 @@ mermaid stateDiagram-v2 사용
   * <span class="information">[문자열관련](/C++/함수/string.md)</span>
   * <span class="information">[이분탐색 람다함수](/C++/함수/lower_bound_lambda.md)</span>
   * <span class="information">[custom pq](/C++/함수/custom%20pq.md)</span>
-  * <span class="information">[io manip](/C++/함수/iomanip.md)</span>
+  * <span class="information">[io manip](/C++/함수/io%20manip.md)</span>
 * ### ps용 환경설정
   * <span class="">[cph, competitive-companion]</span> <!-- https://chromewebstore.google.com/detail/competitive-companion/cjnmckjndlpiamhfimnnjmnckgghkjbl -->
   * <span class="information">[define](/C++/ps용%20환경설정/define.md)</span>
