@@ -443,7 +443,7 @@ mermaid stateDiagram-v2 사용
   * <span class="information">[문자관련](/C++/함수/char.md)</span>
   * <span class="information">[문자열관련](/C++/함수/string.md)</span>
   * <span class="information">[이분탐색 람다함수](/C++/함수/lower_bound_lambda.md)</span>
-  * <span class="information">[custom pq](/C++/함수/costom%20pq.md)</span>
+  * <span class="information">[custom pq](/C++/함수/custom%20pq.md)</span>
   * <span class="information">[io manip](/C++/함수/iomanip.md)</span>
 * ### ps용 환경설정
   * <span class="">[cph]</span>
