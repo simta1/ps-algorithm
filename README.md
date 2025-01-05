@@ -418,8 +418,8 @@ mermaid stateDiagram-v2 사용
   * <span class="additional">[BaseInt](/utils/BaseInt.md)</span> <!-- bigint랑 합쳐서 구현하는 게 나을 듯 -->
 # C++ 유용한 기능
 * ### 문법
+  * <span class="information">[Range-based for loop, 구조적 바인딩](/C++/문법/Range-based%20for%20loop.md)</span>
   * <span class="information">[람다 캡처, 재귀](/C++/문법/lambda.md)</span>
-  * <span class="">[range-based for loop, 구조적 바인딩]</span>
   * <span class="information">[constexpr](/C++/문법/constexpr.md)</span>
   * <span class="information">[ifdef](/C++/문법/ifdef.md)</span>
   * <span class="">[사전 정의 매크로]</span>
@@ -446,10 +446,10 @@ mermaid stateDiagram-v2 사용
   * <span class="information">[custom pq](/C++/함수/custom%20pq.md)</span>
   * <span class="information">[io manip](/C++/함수/iomanip.md)</span>
 * ### ps용 환경설정
-  * <span class="">[cph]</span>
+  * <span class="">[cph, competitive-companion]</span> <!-- https://chromewebstore.google.com/detail/competitive-companion/cjnmckjndlpiamhfimnnjmnckgghkjbl -->
   * <span class="information">[define](/C++/ps용%20환경설정/define.md)</span>
-  * <span class="information">[snippet](/C++/ps용%20환경설정/snippet.md)</span>
-  * <span class="">[vim script]</span>
+  * <span class="information">[vsc snippet](/C++/ps용%20환경설정/snippet.md)</span>
+  * <span class="">[vim script]</span> <!-- auto cin -->
   * <span class="">[debug, c_cpp_properties.json 설정]</span>
   * <span class="">[Pre-defined Compiler Macros]</span> <!-- 버전 gnu++17로 해야 Template argument deduction 등 문법 사용가능 -->
   * <span class="">[percompiled header]</span> <!-- https://codeforces.com/blog/entry/79026 --> <!-- https://codeforces.com/blog/entry/53909? -->
