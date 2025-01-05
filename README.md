@@ -431,7 +431,7 @@ mermaid stateDiagram-v2 사용
   * <span class="information">[template argument deduction](/C++/문법/Template%20Argument%20Deduction.md)</span>
   * <span class="information">[코드 여러줄 이어쓰기](/C++/문법/코드%20줄바꿈.md)</span>
 * ### 함수
-  * <span class="information">[수학관련](/C++/함수/math.md)</span>
+  * <span class="information">[수학관련](/C++/함수/수학%20관련.md)</span>
   * <span class="information">[배열관련](/C++/함수/배열%20관련.md)</span>
   * <span class="">[regex]</span>
   * <span class="">[constexpr, static_assert]</span> <!-- if constexpr 등등도 포함 -->
