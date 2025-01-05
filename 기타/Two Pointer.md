@@ -34,6 +34,7 @@ $O()$
 
 ### 문제
 [주몽](https://www.acmicpc.net/problem/1940) - 반대 방향   
+[부분합](https://www.acmicpc.net/problem/1806) - 같은 방향   
 [Building a Field](https://www.acmicpc.net/problem/16522) - 같은 방향   
 
 ### 원리
