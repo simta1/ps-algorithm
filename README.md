@@ -58,7 +58,7 @@ mermaid stateDiagram-v2 사용
 <span class="additional">기타(A)<span>
 
 * ### 자료구조
-    <span class="information">[자료구조 구현할 때 주의사항](/자료구조/주의사항.md)</span>
+  <span class="information">[자료구조 구현할 때 주의사항](/자료구조/주의사항.md)</span>
   * #### 세그먼트 트리
     <!-- 펜윅으로 머지소트 트리 대체? https://codeforces.com/blog/entry/107849 -->
     <!-- * <span class="">[비재귀 레이지 세그]</span> -->
@@ -75,7 +75,7 @@ mermaid stateDiagram-v2 사용
     * <span class="platinum">[레이지 세그(P-)](/자료구조/세그먼트%20트리/레이지%20세그.md)</span>
     * <span class="platinum">[다이나믹 세그(P-)](/자료구조/세그먼트%20트리/다이나믹%20세그.md)</span>
     * <span class="platinum">[다이나믹 레이지 세그(P+)](/자료구조/세그먼트%20트리/다이나믹%20레이지%20세그.md)</span>
-    * ~~<span class="platinum">[_range GCD 세그(P+)_](/자료구조/세그먼트%20트리/GCD%20세그.md)</span>~~
+    * ~~<span class="platinum">[_GCD 세그(P+)_](/자료구조/세그먼트%20트리/GCD%20세그.md)</span>~~
     * <span class="platinum">[금광 세그(최대 연속 부분합 세그)(P+)](/자료구조/세그먼트%20트리/금광%20세그.md)</span>
     * <span class="">[퍼시스턴트 세그(P+)]</span>
     * <span class="">[세그트리 비츠(D+)]</span>
@@ -137,7 +137,8 @@ mermaid stateDiagram-v2 사용
     * <span class="">[삼각형, 사각형 찾기(D-)]</span>
     * <span class="">[_2th MST(D-)_]</span>
     * <span class="">[쌍대 그래프(D-)]</span>
-    * <span class="">[도미네이터 트리(D-)]</span>
+    * <span class="">[그래프 채색]</span> <!-- https://infossm.github.io/blog/2023/06/21/Graph-Coloring/ -->
+    * <span class="">[도미네이터 트리]</span>
     * <span class="">[오프라인 동적 연결성 판정]</span> <!-- https://stonejjun.tistory.com/171 -->
     * <span class="">[삼각형 찾기]</span> <!-- https://jh05013.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EC%82%BC%EA%B0%81%ED%98%95%20%EC%B0%BE%EA%B8%B0/ -->
     * <span class="">[평면 그래프]</span>
@@ -353,7 +354,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[min_25's sieve]</span>
     * <span class="">[매트로이드(R-)]</span> <!-- https://m.blog.naver.com/kks227/221031527413 --> <!-- https://infossm.github.io/tags/matroid/ --> <!-- https://imeimi.tistory.com/45 --> <!-- https://m.blog.naver.com/kks227/221031527413 --> <!-- https://koosaga.com/252 --> <!-- https://joohs0505.tistory.com/4 --> <!-- https://dad-rock.tistory.com/673 -->
 * ### 게임 이론
-  * <span class="">[스프라그-그런디]</span> <!-- (비트셋) -->
+  * <span class="">[스프라그-그런디]</span> <!-- (비트셋) --> <!-- https://blog.myungwoo.kr/82 --> <!-- https://blog.myungwoo.kr/27 -->
   * <span class="">[hackenbush]</span> <!-- https://en.wikipedia.org/wiki/Hackenbush --> <!-- https://rkm0959.tistory.com/139 -->
   * <span class="">[coldgame]</span> <!-- https://infossm.github.io/blog/2024/11/01/Coldgame-problem-solving/ -->
 * ### 기타
