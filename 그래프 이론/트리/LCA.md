@@ -4,115 +4,49 @@
 ```cpp
 class Tree {
 private:
+    const int root = 1;
     int maxDepth;
     vector<int> depth;
     vector<vector<int> > adj, ac; //ancestor
 
     void makeTree(int cur, int parent) { // 1-based
         depth[cur] = depth[parent] + 1;
-
         ac[cur][0] = parent;
-        for (int i = 1; i <= maxDepth; i++) {
-            int ancestor = ac[cur][i - 1];
-            ac[cur][i] = ac[ancestor][i - 1];
-        }
-
-        for (int next : adj[cur]) if (next != parent) {
-            makeTree(next, cur);
-        }   
+        for (int i = 1; i <= maxDepth; i++) ac[cur][i] = ac[ac[cur][i - 1]][i - 1];
+        for (int next : adj[cur]) if (next != parent) makeTree(next, cur);
     }
 
 public:
-    Tree(int n) : depth(n + 1), adj(n + 1), maxDepth(floor(log2(n))), ac(n + 1, vector<int>(maxDepth + 1)) {
+    Tree(int n) : depth(n + 1), adj(n + 1), maxDepth(floor(log2(n))), ac(n + 1, vector<int>(maxDepth + 1)) { // 1-based
         for (int i = 1; i < n; i++) {
-            int a, b;
-            cin >> a >> b;
-            adj[a].push_back(b);
-            adj[b].push_back(a);
+            int u, v;
+            cin >> u >> v;
+            adj[u].push_back(v);
+            adj[v].push_back(u);
         }
-        makeTree(1, 0);
+        makeTree(root, 0);
     }
 
-    int getLCA(int a, int b) { // 1-based
+    int getLCA(int a, int b) { // 1-based // fixed root
         if (depth[a] > depth[b]) swap(a, b);
         int diff = depth[b] - depth[a];
         while (diff) {
-            b = ac[b][log2(diff & -diff)];
+            b = ac[b][__builtin_ctz(diff)];
             diff &= (diff - 1);
         }
 
         if (a == b) return a;
 
-        for (int i = maxDepth; i >= 0; i--) {
-            if (ac[a][i] != ac[b][i]) {
-                a = ac[a][i];
-                b = ac[b][i];
-            }
-        }
+        for (int i = maxDepth; i >= 0; i--) if (ac[a][i] != ac[b][i]) a = ac[a][i], b = ac[b][i];
         return ac[a][0];
     }
-};
-```
-### unfixed root
-```cpp
-class Tree {
-private:
-    int maxDepth;
-    vector<int> depth;
-    vector<vector<int> > adj, ac; //ancestor
-
-    void makeTree(int cur, int parent) { // 1-based
-        depth[cur] = depth[parent] + 1;
-
-        ac[cur][0] = parent;
-        for (int i = 1; i <= maxDepth; i++) {
-            int ancestor = ac[cur][i - 1];
-            ac[cur][i] = ac[ancestor][i - 1];
-        }
-
-        for (int next : adj[cur]) if (next != parent) {
-            makeTree(next, cur);
-        }   
-    }
-
-    int getLCA(int a, int b) { // root : 1
-        if (depth[a] > depth[b]) swap(a, b);
-        int diff = depth[b] - depth[a];
-        while (diff) {
-            b = ac[b][log2(diff & -diff)];
-            diff &= (diff - 1);
-        }
-
-        if (a == b) return a;
-
-        for (int i = maxDepth; i >= 0; i--) {
-            if (ac[a][i] != ac[b][i]) {
-                a = ac[a][i];
-                b = ac[b][i];
-            }
-        }
-        return ac[a][0];
-    }
-
-public:
-    Tree(int n) : depth(n + 1), adj(n + 1), maxDepth(floor(log2(n))), ac(n + 1, vector<int>(maxDepth + 1)) {
-        for (int i = 1; i < n; i++) {
-            int a, b;
-            cin >> a >> b;
-            adj[a].push_back(b);
-            adj[b].push_back(a);
-        }
-        makeTree(1, 0);
-    }
-
-    int getLCA(int root, int u, int v) {
-        int a = getLCA(root, u);
-        int b = getLCA(u, v);
-        int c = getLCA(v, root);
-        
-        int res = a;
-        if (depth[res] < depth[b]) res = b;
-        if (depth[res] < depth[c]) res = c;
+    
+    int getLCA(int root, int a, int b) { // 1-based // unfixed root
+        int x = getLCA(root, a);
+        int y = getLCA(root, b);
+        int res = getLCA(a, b);
+        if (depth[res] < depth[x]) res = x;
+        if (depth[res] < depth[y]) res = y;
         return res;
     }
 };
@@ -120,6 +54,7 @@ public:
 
 ### TODO 
 https://blog.naver.com/PostList.naver?blogId=fkddl1436&from=postList&categoryNo=7 처럼 depth대신 dfsn으로 계산하는 게 더 효율적임   
+https://www.acmicpc.net/problem/33150 은 depth로 구현하는 게 더 편한 듯, 오프라인 쿼리로 dfsn 먼저 계산해두면 dfsn으로도 구현할 수 있을 거 같긴 함   
 
 ### 시간복잡도 
 preprocessing $O(N~logN)$   
