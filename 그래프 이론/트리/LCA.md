@@ -1,23 +1,22 @@
 [카테고리](/README.md)
 ## LCA(Lowest Common Ancestor, Binary Lifting)
-### fixed root
 ```cpp
 class Tree {
 private:
     const int root = 1;
     int maxDepth;
-    vector<int> depth;
+    vector<int> dep;
     vector<vector<int> > adj, ac; //ancestor
 
     void makeTree(int cur, int parent) { // 1-based
-        depth[cur] = depth[parent] + 1;
+        dep[cur] = dep[parent] + 1;
         ac[cur][0] = parent;
         for (int i = 1; i <= maxDepth; i++) ac[cur][i] = ac[ac[cur][i - 1]][i - 1];
         for (int next : adj[cur]) if (next != parent) makeTree(next, cur);
     }
 
 public:
-    Tree(int n) : depth(n + 1), adj(n + 1), maxDepth(floor(log2(n))), ac(n + 1, vector<int>(maxDepth + 1)) { // 1-based
+    Tree(int n) : dep(n + 1), adj(n + 1), maxDepth(floor(log2(n))), ac(n + 1, vector<int>(maxDepth + 1)) { // 1-based
         for (int i = 1; i < n; i++) {
             int u, v;
             cin >> u >> v;
@@ -28,8 +27,8 @@ public:
     }
 
     int getLCA(int a, int b) { // 1-based // fixed root
-        if (depth[a] > depth[b]) swap(a, b);
-        int diff = depth[b] - depth[a];
+        if (dep[a] > dep[b]) swap(a, b);
+        int diff = dep[b] - dep[a];
         while (diff) {
             b = ac[b][__builtin_ctz(diff)];
             diff &= (diff - 1);
@@ -45,8 +44,8 @@ public:
         int x = getLCA(root, a);
         int y = getLCA(root, b);
         int res = getLCA(a, b);
-        if (depth[res] < depth[x]) res = x;
-        if (depth[res] < depth[y]) res = y;
+        if (dep[res] < dep[x]) res = x;
+        if (dep[res] < dep[y]) res = y;
         return res;
     }
 };
