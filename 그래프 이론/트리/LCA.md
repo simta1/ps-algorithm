@@ -4,19 +4,26 @@
 class Tree {
 private:
     const int root = 1;
-    int maxDepth;
     vector<int> dep;
     vector<vector<int> > adj, ac; //ancestor
 
+    int getAc(int cur, int pow) { // cur의 2^pow번째 조상
+        return pow < ac[cur].size() ? ac[cur][pow] : -1;
+    }
+
     void makeTree(int cur, int parent) { // 1-based
-        dep[cur] = dep[parent] + 1;
-        ac[cur][0] = parent;
-        for (int i = 1; i <= maxDepth; i++) ac[cur][i] = ac[ac[cur][i - 1]][i - 1];
+        if (cur != root) {
+            dep[cur] = dep[parent] + 1;
+            ac[cur].resize(32 - __builtin_clz(dep[cur])); // log2f(dep[cur]) + 1
+            ac[cur][0] = parent;
+            for (int i = 1; i < ac[cur].size(); i++) ac[cur][i] = getAc(ac[cur][i - 1], i - 1);
+        }
+
         for (int next : adj[cur]) if (next != parent) makeTree(next, cur);
     }
 
 public:
-    Tree(int n) : dep(n + 1), adj(n + 1), maxDepth(floor(log2(n))), ac(n + 1, vector<int>(maxDepth + 1)) { // 1-based
+    Tree(int n) : dep(n + 1), adj(n + 1), ac(n + 1) { // 1-based
         for (int i = 1; i < n; i++) {
             int u, v;
             cin >> u >> v;
@@ -36,7 +43,7 @@ public:
 
         if (a == b) return a;
 
-        for (int i = maxDepth; i >= 0; i--) if (ac[a][i] != ac[b][i]) a = ac[a][i], b = ac[b][i];
+        for (int i = ac[a].size() - 1; i >= 0; i--) if (getAc(a, i) != getAc(b, i)) a = ac[a][i], b = ac[b][i];
         return ac[a][0];
     }
     
@@ -52,7 +59,7 @@ public:
 ```
 
 ### TODO 
-https://blog.naver.com/PostList.naver?blogId=fkddl1436&from=postList&categoryNo=7 처럼 depth대신 dfsn으로 계산하는 게 더 효율적임   
+https://blog.naver.com/fkddl1436/223701943267 처럼 depth대신 dfsn으로 계산하는 게 더 효율적임   
 https://www.acmicpc.net/problem/33150 은 depth로 구현하는 게 더 편한 듯, 오프라인 쿼리로 dfsn 먼저 계산해두면 dfsn으로도 구현할 수 있을 거 같긴 함   
 
 ### 시간복잡도 
