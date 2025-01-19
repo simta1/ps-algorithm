@@ -40,3 +40,4 @@ $O(NM)$
 ### 문제
 [LCS](https://www.acmicpc.net/problem/9251) - 최장 공통 부분 수열   
 [공통 부분 문자열](https://www.acmicpc.net/problem/5582) - 최장 공통 부분 문자열   
+[LCS 2](https://www.acmicpc.net/problem/9252) - 최장 공통 부분 수열 + 최단거리 역추적   
