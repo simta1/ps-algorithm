@@ -7,16 +7,12 @@ private:
     vector<int> dep;
     vector<vector<int> > adj, ac; //ancestor
 
-    int getAc(int cur, int pow) { // cur의 2^pow번째 조상
-        return pow < ac[cur].size() ? ac[cur][pow] : -1;
-    }
-
     void makeTree(int cur, int parent) { // 1-based
         if (cur != root) {
             dep[cur] = dep[parent] + 1;
             ac[cur].resize(32 - __builtin_clz(dep[cur])); // log2f(dep[cur]) + 1
             ac[cur][0] = parent;
-            for (int i = 1; i < ac[cur].size(); i++) ac[cur][i] = getAc(ac[cur][i - 1], i - 1);
+            for (int i = 1; i < ac[cur].size(); i++) ac[cur][i] = ac[ac[cur][i - 1]][i - 1];
         }
 
         for (int next : adj[cur]) if (next != parent) makeTree(next, cur);
@@ -43,7 +39,7 @@ public:
 
         if (a == b) return a;
 
-        for (int i = ac[a].size() - 1; i >= 0; i--) if (getAc(a, i) != getAc(b, i)) a = ac[a][i], b = ac[b][i];
+        for (int i = ac[a].size() - 1; i >= 0; i--) if (i < ac[a].size() && ac[a][i] != ac[b][i]) a = ac[a][i], b = ac[b][i];
         return ac[a][0];
     }
     
