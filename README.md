@@ -277,7 +277,11 @@ mermaid stateDiagram-v2 사용
   * <span class="">[Disk Convex Hull(R)]</span> <!-- https://www.acmicpc.net/problem/27957 -->
 * ### [수학](/수학/개념%20정리.md)
   * #### 조합론, 수열
-    * <span class="silver">[nCr, 파스칼의 삼각형(S+)](/수학/조합론/Combination.md)</span> <!-- https://justicehui.github.io/medium-algorithm/2024/02/10/combinatorics/ -->
+    <!-- https://justicehui.github.io/medium-algorithm/2024/02/10/combinatorics/ -->
+    * <span class="additional">[이항계수 nCr](/수학/조합론/이항계수.md)</span>
+      * <span class="silver">[파스칼의 삼각형(S+)](/수학/조합론/이항계수.md#ncr-modm-계산)</span>
+      * <span class="gold">[모듈러 역원을 이용한 계산(G+)](/수학/조합론/이항계수.md#ncr-modp-계산)</span>
+      * <span class="platinum">[뤼카정리(P-)](/수학/조합론/이항계수.md#ncr-modp-p-ll-n-계산)</span>
     * <span class="gold">[거듭제곱 피보나치(G+)](/수학/조합론/피보나치.md)</span>
     * <span class="">[교란수]</span>
     * <span class="">[자연수 분할](/수학/조합론/자연수%20분할.md)</span> <!-- P(n, k) -->
