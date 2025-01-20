@@ -277,7 +277,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[Disk Convex Hull(R)]</span> <!-- https://www.acmicpc.net/problem/27957 -->
 * ### [수학](/수학/개념%20정리.md)
   * #### 조합론, 수열
-    * <span class="silver">[nCr, 파스칼의 삼각형(S+)](/수학/조합론/Combination(DP).md)</span> <!-- https://justicehui.github.io/medium-algorithm/2024/02/10/combinatorics/ -->
+    * <span class="silver">[nCr, 파스칼의 삼각형(S+)](/수학/조합론/Combination.md)</span> <!-- https://justicehui.github.io/medium-algorithm/2024/02/10/combinatorics/ -->
     * <span class="gold">[거듭제곱 피보나치(G+)](/수학/조합론/피보나치.md)</span>
     * <span class="">[교란수]</span>
     * <span class="">[자연수 분할](/수학/조합론/자연수%20분할.md)</span> <!-- P(n, k) -->
