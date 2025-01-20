@@ -1,6 +1,83 @@
 [카테고리](/README.md)
-## Combination by DP
-### Combination
+## Combination
+### $nCr$ 계산
+__시간복잡도__ $O(r)$
+```cpp
+ll nCr(int n, int r) {
+    ll res = 1;
+    for (int i = 1; i <= r; i++) res = res * n-- / i;
+    return res;
+}
+```
+n개의 연속한 수의 곱은 항상 n!의 배수이므로 i=1부터 r까지 증가시키며 나눠주면 나머지 없이 잘 나눠떨어진다.   
+[이항 계수 1](https://www.acmicpc.net/problem/11401)   
+
+### $nCr \mod{M}$ 계산
+$1 \le i \le n, 1 \le j \le r$인 모든 i, j에 대해 $\binom{i}{j}$의 값을 계산   
+__시간복잡도__ $O(nr)$   
+```cpp
+// int main
+    vector nCr(n + 1, vector<ll>(r + 1));
+
+    nCr[1][0] = nCr[1][1] = 1;
+    for (int i = 2; i <= n; i++) {
+        nCr[i][0] = 1;
+        for (int j = 1; j <= min(r, i); j++) nCr[i][j] = (nCr[i - 1][j - 1] + nCr[i - 1][j]) % mod;
+    }
+```
+보통 n의 제한이 큰 문제에서는 nCr의 결과가 int나 long long의 범위를 넘어서기에 nCr을 특정 수로 나눈 나머지를 묻는다.   
+계산 중간에 mod를 취하게 되므로 위에서 사용한 'n개의 연속한 수의 곱은 항상 n!의 배수'라는 성질을 사용할 수 없다. ($n! \nmid (k(k+1) \cdots (k+n-1) \, \% \, M)$ 라는 뜻)   
+파스칼 삼각형$\displaystyle\binom{n}{r} = \displaystyle\binom{n - 1}{r - 1} + \displaystyle\binom{n - 1}{r}$으로 덧셈만을 사용하여 계산하면 중간에 나머지 연산을 취할 수 있다.   
+[이항 계수 2](https://www.acmicpc.net/problem/11051)   
+
+### $nCr \mod{P}$ 계산
+__시간복잡도__ $O(1)$ (전처리 $O(maxN + \log{P})$)
+```cpp
+// modInverse코드
+
+// int main
+    vector<ll> fac(n + 1, 1);
+    for (int i = 2; i < fac.size(); i++) fac[i] = fac[i - 1] * i % mod;
+
+    vector<ll> facInv(fac.size(), modInverse(fac.back(), mod));
+    for (int i = facInv.size() - 1; i > 0; i--) facInv[i - 1] = facInv[i] * i % mod;
+
+    auto nCr = [&](int n, int r) { return fac[n] * facInv[r] % mod * facInv[n - r] % mod; };
+```
+나누는 수가 소수라면 모듈러 역원을 구할 수 있기에 훨씬 빠른 계산이 가능해진다.   
+$1!, ..., n! \mod{p}$의 값과 이들의 모듈러 역원을 $O(N + \log{P})$에 전부 계산할 수 있으므로, ([모듈러 역원](/수학/ExtendedGCD,%20Modular%20Inverse.md#사용설명) 참고)   
+$nCr = n!(r!)^{-1}((n-r)!)^{-1}$을 사용하면 $O(1)$에 각 쿼리를 계산할 수 있다.   
+[이항 계수 3](https://www.acmicpc.net/problem/11401)   
+
+### $nCr \mod{P} (P \ll n)$ 계산
+__시간복잡도__ $O(\log_{P}{N})$ (전처리 $O(p)$)
+```cpp
+// modInverse코드
+
+// int main
+    vector<ll> fac(mod, 1);
+    for (int i = 2; i < mod; i++) fac[i] = fac[i - 1] * i % mod;
+    
+    vector<ll> facInv(fac.size(), modInverse(fac.back(), mod));
+    for (int i = facInv.size() - 1; i > 0; i--) facInv[i - 1] = facInv[i] * i % mod;
+    
+    auto _nCr = [&](int n, int r) -> ll { return fac[n] * facInv[r] % mod * facInv[n - r] % mod; }; // n < mod, r < mod일 때
+    auto nCr = [&](ll n, ll r) -> ll {
+        ll res = 1;
+        for (; n > 0; n /= mod, r /= mod) {
+            if (n % mod < r % mod) return 0;
+            res = res * _nCr(n % mod, r % mod) % mod;
+        }
+        return res;
+    };
+```
+lucas theorem을 이용하면 $nCr$의 계산을 $i \lt p, j \lt p$인 $\binom{i}{j}$들만 계산할 수 있어도 충분하다.
+
+---
+---
+---
+
+### nCr mod M 계산용 템플릿(DP)
 ```cpp
 template <typename T, T mod>
 class Combination {
