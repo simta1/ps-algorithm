@@ -13,12 +13,12 @@ dfsn // ETT 등에서 dfs 스패닝 트리 만들 때 방문순서 저장
 carry, borrow // 각각 덧셈/뺄셈에서 자리올림/자리내림 저장
 ```
 
-### 함수명
+### lowHalf, highHalf
 ```cpp
-addEdge() // 그래프 간선 추가
-propagate() // lazy seg, splay tree 등에서 lazy전파하는 함수. 다른 이름 사용한 코드 좀 있어서 수정해야 됨.
-makeTree() // 트리에서 adj로 chd만드는 함수
+int lowHalf = n >> 1;
+int highHalf = n + 1 >> 1;
 ```
+자연수 절반으로 분할할 때 사용
 
 ### offset
 배열에 음수 인덱스 사용하고 싶을 때 인덱스 얼마나 평행이동할지 저장
@@ -87,4 +87,11 @@ https://www.acmicpc.net/blog/view/37 참고
 ```cpp
 const ld eps = 1e-7;
 if (abs(a - b) <= eps) // a == b
+```
+
+### 함수명
+```cpp
+addEdge() // 그래프 간선 추가
+propagate() // lazy seg, splay tree 등에서 lazy전파하는 함수. 다른 이름 사용한 코드 좀 있어서 수정해야 됨.
+makeTree() // 트리에서 adj로 chd만드는 함수
 ```
