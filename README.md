@@ -283,7 +283,7 @@ mermaid stateDiagram-v2 사용
       * <span class="gold">[모듈러 역원을 이용한 계산(G+)](/수학/조합론/이항계수.md#ncr-modp-계산)</span>
       * <span class="platinum">[뤼카정리(P-)](/수학/조합론/이항계수.md#ncr-modp-p-ll-n-계산)</span>
       * <span class="platinum">[p-지수를 이용한 계산(P-)](/수학/조합론/이항계수.md#ncr-modm-계산)</span>
-      * <span class="diamond">[$nCr \mod{p^e}\,$ 계산(D-)](/수학/조합론/이항계수.md#ncr-modpe-계산)</span>
+      * <span class="diamond">[nCr mod p^e 계산(D-)](/수학/조합론/이항계수.md#ncr-modpe-계산)</span>
     * <span class="gold">[거듭제곱 피보나치(G+)](/수학/조합론/피보나치.md)</span>
     * <span class="">[교란수]</span>
     * <span class="">[자연수 분할](/수학/조합론/자연수%20분할.md)</span> <!-- P(n, k) -->
