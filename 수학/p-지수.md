@@ -1,6 +1,6 @@
 [카테고리](/README.md)
 ## p-지수(p-adic valuation)
-### p-지수 $v_p(n)$ 계산
+### p-지수 $\nu_p(n)$ 계산
 ```cpp
 template <typename T>
 T pAdicValuation(T n, T p) { // n!의 p-지수
@@ -10,7 +10,7 @@ T pAdicValuation(T n, T p) { // n!의 p-지수
 }
 ```
 
-### $\dfrac{n!}{p^{v_p(n)}} \pmod{p^e}$ 계산 (p진법에서 n!의 0이 아닌 마지막 e자리)
+### $\dfrac{n!}{p^{\nu_p(n)}} \pmod{p^e}$ 계산 (p진법에서 n!의 0이 아닌 마지막 e자리)
 ```cpp
 ll power(ll a, ll n, ll mod) { // a ^ n % mod
     ll res = 1;
