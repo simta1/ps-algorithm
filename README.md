@@ -179,12 +179,11 @@ mermaid stateDiagram-v2 사용
     * <span class="">[탑 트리(R-)]</span> <!-- https://etyu39.tistory.com/8 -->
 * ### [DP](/DP/Top-Down%20DP.md)
   <!-- * <span class="">[비트 집합]</span> -->
-  <!-- 배낭 문제 bounded, unbounded -->
   <!-- https://egod1537.tistory.com/entry/Bounded-Knapsack-Problem%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9C%BC%EB%A1%9C-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0 -->
   * <span class="silver">[Kadane algorithm(S+)](/DP/Kadane%20Algorithm.md)</span>
   * <span class="silver">[LIS(S+)](/DP/LIS.md)</span>
   * <span class="gold">[LCS(G-)](/DP/LCS.md)</span>
-  * <span class="gold">[배낭 문제(G-)](/DP/배낭.md)</span>
+  * <span class="gold">[배낭문제(G-)](/DP/배낭문제.md)</span>
   * <span class="gold">[비트셋 배낭(G-)](/DP/비트셋%20배낭.md)</span>
   * <span class="gold">[최단거리 역추적(G-)](/DP/DP%20역추적.md)</span>
   * <span class="gold">[달걀 낙하(G+)](/DP/달걀%20낙하.md)</span>
@@ -250,9 +249,9 @@ mermaid stateDiagram-v2 사용
   * <span class="platinum">[등적등주 분할(P+)](/기하학/Equalizer.md)</span>
   * <span class="platinum">[가장 가까운 두 점(P+)](/기하학/Closest%20Two%20Points.md)</span>
   * <span class="platinum">[최소 외접원(P+)](/기하학/최소외접원.md)</span>
-  * <span class="">[Shamos-Hoey]</span>
+  * <span class="">[Shamos-Hoey]</span> <!-- https://qwerasdfzxcl.tistory.com/18 -->
   * <span class="diamond">[반평면 교집합(D-)](/기하학/반평면%20교집합.md)</span>
-  * <span class="">[Bentley-Ottmann]</span>
+  * <span class="">[Bentley-Ottmann]</span> <!-- https://velog.io/@frog_slayer/Bentley-Ottmann -->
   * <span class="diamond">[점-볼록다각형 접선(D-)](/기하학/볼록다각형%20접선.md)</span>
   * <span class="">[볼록다각형-볼록다각형 접선]</span> <!-- https://www.geeksforgeeks.org/tangents-two-convex-polygons/ -->
   * <span class="">[점-원 접선, 원-원 접선]</span> <!-- https://cubelover.tistory.com/4 -->
