@@ -183,7 +183,10 @@ mermaid stateDiagram-v2 사용
   * <span class="silver">[Kadane algorithm(S+)](/DP/Kadane%20Algorithm.md)</span>
   * <span class="silver">[LIS(S+)](/DP/LIS.md)</span>
   * <span class="gold">[LCS(G-)](/DP/LCS.md)</span>
-  * <span class="gold">[배낭문제(G-)](/DP/배낭문제.md)</span>
+  * <span class="additional">[배낭문제(G-)](/DP/배낭문제.md)</span>
+    * <span class="gold">[0-1 Knapsack(G-)](/DP/배낭문제.md#0-1-knapsack-problem)</span>
+    * <span class="gold">[Unbounded Knapsack(G-)](/DP/배낭문제.md#bounded-knapsack-problem)</span>
+    * <span class="platinum">[Bounded Knapsack(P-)](/DP/배낭문제.md#unbounded-knapsack-problem)</span>
   * <span class="gold">[비트셋 배낭(G-)](/DP/비트셋%20배낭.md)</span>
   * <span class="gold">[최단거리 역추적(G-)](/DP/DP%20역추적.md)</span>
   * <span class="gold">[달걀 낙하(G+)](/DP/달걀%20낙하.md)</span>
