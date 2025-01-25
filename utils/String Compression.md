@@ -6,10 +6,10 @@ vector<pair<char, int> > compress(const string &st) {
     vector<pair<char, int> > res;
     int n = st.length();
     
-    for (int i = 0; i < n;) {
-        int cnt = 0;
-        while (i < n && st[i] == st[i]) ++cnt, ++i;
-        res.push_back({st[i], cnt});
+    for (int i = 0, j; i < n; i = j) {
+        j = i + 1;
+        while (j < n && st[i] == st[j]) ++j;
+        res.emplace_back(st[i], j - i);
     }
     
     return res;
@@ -19,14 +19,14 @@ vector<pair<char, int> > compress(const string &st) {
 ```cpp
 vector<int> compress(const string &st) {
     vector<int> res;
-    int n = st.length();
+    int n = st.size();
     
-    for (int i = 0; i < n;) {
-        int cnt = 0;
-        while (i < n && st[i] == st[i]) ++cnt, ++i;
-        res.push_back(cnt);
+    for (int i = 0, j; i < n; i = j) {
+        j = i + 1;
+        while (j < n && st[i] == st[j]) ++j;
+        res.push_back(j - i);
     }
-    
+
     return res;
 }
 ```
