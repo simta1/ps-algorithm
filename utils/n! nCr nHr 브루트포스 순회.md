@@ -19,7 +19,7 @@ vector<bool> select(n, false);
 fill(select.begin(), select.begin() + r, true);
 
 do {
-    for (int i = 0; i < n; i++) if (selected[i]) {
+    for (int i = 0; i < n; i++) if (select[i]) {
         // v[i] 사용
     }
 } while (prev_permutation(select.begin(), select.end()));
