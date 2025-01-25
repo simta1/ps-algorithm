@@ -1,15 +1,18 @@
 [카테고리](/README.md)
 ## 최장 증가 부분 수열(LIS, Longest Increasing Subsequence)
-### LIS $O(N^2)$
 ```cpp
-vector<int> dp(n, 1);
-for (int i = 0; i < n; i++) {
-    for (int j = 0; j < i; j++) if (v[i] > v[j]) dp[i] = max(dp[i], dp[j] + 1);
+template <typename T>
+int LIS(const vector<T> &v) {
+    vector<T> dp; // dp[i] : 길이 i이상의 LIS를 만들 때 LIS의 i번째 원소로 가능한 최소값
+    for (auto e : v) {
+        if (dp.empty() || dp.back() < e) dp.push_back(e);
+        else *lower_bound(dp.begin(), dp.end(), e) = e;
+    }
+    return dp.size();
 }
-cout << *max_element(dp.begin(), dp.end());
 ```
 ### 시간복잡도
-<!-- TODO $O(NlogN)$    -->
+$O(N \log{N})$   
 
 ### 문제
-[]()
+[가장 긴 증가하는 부분 수열 3](https://www.acmicpc.net/problem/12738)   
