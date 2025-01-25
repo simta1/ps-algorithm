@@ -78,7 +78,8 @@ mermaid stateDiagram-v2 사용
     * ~~<span class="platinum">[_GCD 세그(P+)_](/자료구조/세그먼트%20트리/GCD%20세그.md)</span>~~
     * <span class="platinum">[금광 세그(최대 연속 부분합 세그)(P+)](/자료구조/세그먼트%20트리/금광%20세그.md)</span>
     * <span class="">[퍼시스턴트 세그(P+)]</span>
-    * <span class="">[세그트리 비츠(D+)]</span>
+    * <span class="">[세그트리비츠(D+)]</span> <!-- https://infossm.github.io/blog/2019/10/19/Segment-Tree-Beats/ -->
+    * <span class="">[Kinetic Segment Tree]</span> <!-- https://koosaga.com/307 -->
   * #### BBST
     * <span class="">[treap]</span>
     * <span class="diamond">[스플레이 트리(D-)](/자료구조/BBST/SplayTree.md)</span>
