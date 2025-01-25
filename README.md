@@ -368,6 +368,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[coldgame]</span> <!-- https://infossm.github.io/blog/2024/11/01/Coldgame-problem-solving/ -->
 * ### 기타
   * <span class="additional">[비트 트릭(A)](/기타/Bit%20Trick.md)</span>
+  * <span class="">[정렬, `std::sort()` strict weak ordering]</span> <!-- https://panty.run/strict-weak-ordering/ -->
   * <span class="">[계수 정렬]</span>
   * <span class="silver">[기수 정렬(S-)](/기타/Radix%20Sort.md)</span>
   * <span class="silver">[이분 탐색(S-)](/기타/이분탐색.md)</span>
