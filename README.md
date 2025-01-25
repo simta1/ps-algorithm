@@ -322,7 +322,7 @@ mermaid stateDiagram-v2 사용
     * <span class="gold">[harmonic lemma 배수 개수 계산(G+)](/수학/배수%20개수%20계산.md)</span>
     * <span class="gold">[p-지수(G+)](/수학/p-지수.md)</span>
     * <span class="gold">[확장 유클리드 호제법, 모듈러 역원(G+)](/수학/ExtendedGCD,%20Modular%20Inverse.md)</span>
-    * <span class="">[모듈러 역원 값 여러개 계산]</span> <!-- https://codeforces.com/blog/entry/83075 -->
+    * <span class="">[Canonical Extended GCD]</span> <!-- https://panty.run/egcd/ -->
     * <span class="gold">[오일러 파이 함수(G+)](/수학/Phi%20Function.md)</span>
     * <span class="platinum">[중국인의 나머지 정리(P-)](/수학/CRT.md)</span>
     * <span class="">[Garner's algorithm]</span>
