@@ -64,3 +64,4 @@ $\therefore x_1=y_2, y_1 = x_2-ky_2$
 
 ### 참고링크
 https://rkm0959.tistory.com/182   
+https://panty.run/egcd/   
