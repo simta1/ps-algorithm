@@ -189,10 +189,11 @@ mermaid stateDiagram-v2 사용
     * <span class="gold">[Unbounded Knapsack(G-)](/DP/배낭문제.md#bounded-knapsack-problem)</span>
     * <span class="platinum">[Bounded Knapsack(P-)](/DP/배낭문제.md#unbounded-knapsack-problem)</span>
   * <span class="gold">[비트셋 배낭(G-)](/DP/비트셋%20배낭.md)</span>
+  * <span class="">[동전 거스름돈DP]</span>
   * <span class="gold">[최단거리 역추적(G-)](/DP/DP%20역추적.md)</span>
   * <span class="gold">[달걀 낙하(G+)](/DP/달걀%20낙하.md)</span>
   * <span class="gold">[비트마스크 DP(G+)](/DP/Bitmask%20DP.md)</span>
-  * <span class="">[트리DP, re-rooting]</span>
+  * <span class="">[트리DP, re-rooting]</span> <!-- https://codeforces.com/blog/entry/124286 -->
   * <span class="platinum">[토글링(P-)](/DP/toggling.md)</span>
   * <span class="platinum">[볼록 껍질을 이용한 최적화(P+)](/DP/CHT.md)</span>
   * <span class="platinum">[분할 정복을 이용한 최적화(P+)](/DP/DnC.md)</span>
