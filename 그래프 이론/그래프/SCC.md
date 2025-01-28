@@ -3,7 +3,7 @@
 ## SCC(Strongly Connected Component)
 ### Tarjan's algorithm
 ```cpp
-vector<vector<int> > getSCC(int n, const vector<vector<int> > &adj) {
+vector<vector<int> > getSCC(int n, const vector<vector<int> > &adj) { // 위상정렬된 순서로 {scc1{}, scc2{}, ... } 리턴
     vector<int> dfsn(n + 1, 0), sccn(n + 1, -1);
     stack<int> s;
 
