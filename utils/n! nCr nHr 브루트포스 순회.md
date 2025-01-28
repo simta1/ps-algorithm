@@ -24,7 +24,9 @@ do {
     }
 } while (prev_permutation(select.begin(), select.end()));
 ```
-초기배열이 내림차순이므로 prev_permutation() 사용
+초기배열이 내림차순이므로 prev_permutation() 사용   
+
+$n \le 63$이라면 [비트 트릭 - nCr 비트마스크 순회](/ps-snippet/C++/기타/Bit%20Trick.md#ncr-비트마스크-순회)에 unsigned long long 자료형을 사용해 구현하는 것이 더 효율적이다.   
 
 ### nHr brute force
 ```cpp

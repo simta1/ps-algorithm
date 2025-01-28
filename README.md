@@ -368,7 +368,6 @@ mermaid stateDiagram-v2 사용
   * <span class="">[hackenbush]</span> <!-- https://en.wikipedia.org/wiki/Hackenbush --> <!-- https://rkm0959.tistory.com/139 -->
   * <span class="">[coldgame]</span> <!-- https://infossm.github.io/blog/2024/11/01/Coldgame-problem-solving/ -->
 * ### 기타
-  * <span class="additional">[비트 트릭(A)](/기타/Bit%20Trick.md)</span>
   * <span class="">[정렬, `std::sort()` strict weak ordering]</span> <!-- https://panty.run/strict-weak-ordering/ -->
   * <span class="">[계수 정렬]</span>
   * <span class="silver">[기수 정렬(S-)](/기타/Radix%20Sort.md)</span>
@@ -467,8 +466,9 @@ mermaid stateDiagram-v2 사용
   * <span class="">[Pre-defined Compiler Macros]</span> <!-- 버전 gnu++17로 해야 Template argument deduction 등 문법 사용가능 -->
   * <span class="">[percompiled header]</span> <!-- https://codeforces.com/blog/entry/79026 --> <!-- https://codeforces.com/blog/entry/53909? -->
 * ### 기타
+  * <span class="information">[비트 트릭](/C++/기타/Bit%20Trick.md)</span>
   * <span class="information">[자주 쓰는 변수명](/C++/기타/Variable%20Name.md)</span>
-  * <span class="information">[코딩 아이디어](/C++/기타/Idea.md)</span> <!-- https://xy-plane.tistory.com/11 -->
+  * <span class="information">[코딩 아이디어](/C++/기타/Idea.md)</span>
 # 파이썬
   * ### 유용한 함수
     * <span class="">[itertools]</span>

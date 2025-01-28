@@ -11,7 +11,7 @@ a &= ~(1<<x);	// remove
 a ^= (1<<x);	// toggle
 
 // check
-if (a & (1<<x))	// have
+if (a & (1<<x))	// have // if (a >> x & 1)도 가능
 if (~a & (1<<x))// don't have
 
 // last element (bit trick)
