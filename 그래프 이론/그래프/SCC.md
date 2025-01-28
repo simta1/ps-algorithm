@@ -3,55 +3,36 @@
 ## SCC(Strongly Connected Component)
 ### Tarjan's algorithm
 ```cpp
-class Graph {
-private:
-    int n, dfsn, sccn;
-    vector<vector<int> > adj;
-    vector<int> visited, sccNumber;
+vector<vector<int> > getSCC(int n, const vector<vector<int> > &adj) {
+    vector<int> dfsn(n + 1, 0), sccn(n + 1, -1);
     stack<int> s;
 
-    int dfs(int cur) {
-        int res = visited[cur] = dfsn++;
+    int dfsi = 0, scci = 0;
+    function<int(int)> dfs = [&](int cur) -> int {
+        int low = dfsn[cur] = ++dfsi;
         s.push(cur);
 
-        for (int next : adj[cur]) {
-            if (!~visited[next]) res = min(res, dfs(next));
-            else if (!~sccNumber[next]) res = min(res, visited[next]);
-        }
+        for (auto next : adj[cur]) if (!~sccn[next]) low = min(low, dfsn[next] ? dfsn[next] : dfs(next));
 
-        if (res == visited[cur]) {
+        if (low == dfsn[cur]) {
             while (1) {
                 int node = s.top();
                 s.pop();
-                sccNumber[node] = sccn;
+                sccn[node] = scci;
                 if (node == cur) break;
             }
-            ++sccn;
+            ++scci;
         }
 
-        return res;
-    }
+        return low;
+    };
+    for (int i = 1; i <= n; i++) if (!dfsn[i]) dfs(i);
 
-public:
-    Graph(int n) : n(n), adj(n + 1), visited(n + 1, -1), sccNumber(n + 1, -1) {}
-
-    void addEdge(int u, int v) {
-        adj[u].push_back(v);
-    }
-
-    vector<vector<int> > findSCC() {
-        dfsn = sccn = 0;
-
-        for (int i = 1; i <= n; i++) if (!~visited[i]) {
-            dfs(i);
-        }
-
-        vector<vector<int> > sccList(sccn);
-        for (int i = 1; i <= n; i++) sccList[sccn - 1 - sccNumber[i]].push_back(i);
-        
-        return sccList;
-    }
-};
+    vector<vector<int> > res(scci);
+    for (int i = 1; i <= n; i++) res[scci - 1 - sccn[i]].push_back(i);
+    
+    return res;
+}
 ```
 ### 시간복잡도 
 $O(V + E)$   
@@ -62,4 +43,4 @@ $O(V + E)$
 self-loop나 parallel edge있어도 잘 작동하므로 딱히 고려할 필요 없음
 
 ### 문제
-[Strongly Connected Component](https://www.acmicpc.net/problem/2150)
+[Strongly Connected Component](https://www.acmicpc.net/problem/2150)   
