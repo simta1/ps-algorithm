@@ -3,7 +3,7 @@
 ## SCC(Strongly Connected Component)
 ### Tarjan's algorithm
 ```cpp
-vector<vector<int> > getSCC(int n, const vector<vector<int> > &adj) { // 위상정렬된 순서로 {scc1{}, scc2{}, ... } 리턴
+pair<vector<vector<int> >, vector<int> > getSCC(int n, const vector<vector<int> > &adj) { //  auto [sccs, sccn] = getSCC(n, adj);로 사용 // sccs에는 위상정렬된 순서로 {scc1{}, scc2{}, ... } 저장되어 있음
     vector<int> dfsn(n + 1, 0), sccn(n + 1, -1);
     stack<int> s;
 
@@ -28,10 +28,9 @@ vector<vector<int> > getSCC(int n, const vector<vector<int> > &adj) { // 위상�
     };
     for (int i = 1; i <= n; i++) if (!dfsn[i]) dfs(i);
 
-    vector<vector<int> > res(scci);
-    for (int i = 1; i <= n; i++) res[scci - 1 - sccn[i]].push_back(i);
-    
-    return res;
+    vector<vector<int> > sccs(scci);
+    for (int i = 1; i <= n; i++) sccs[sccn[i] = scci - 1 - sccn[i]].push_back(i);
+    return {sccs, sccn};
 }
 ```
 ### 시간복잡도 
