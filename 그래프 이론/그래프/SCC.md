@@ -30,7 +30,7 @@ pair<vector<vector<int> >, vector<int> > getSCC(int n, const vector<vector<int> 
 
     vector<vector<int> > sccs(scci);
     for (int i = 1; i <= n; i++) sccs[sccn[i] = scci - 1 - sccn[i]].push_back(i);
-    return {sccs, sccn};
+    return {sccs, sccn}; // sccn은 0-based임에 주의, 노드 x는 sccs[sccn[x]]에 포함되어 있음
 }
 ```
 ### 시간복잡도 
