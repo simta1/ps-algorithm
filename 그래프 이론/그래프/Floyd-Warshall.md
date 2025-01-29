@@ -21,6 +21,7 @@ tuple<bool, sum_t, vector<vector<sum_t> > > floydWarshall(int n, const vector<ve
     return {hasNegCycle, INF, dist};
 }
 ```
+
 ### 시간복잡도 
 $O(V^3)$   
 음수 가중치 존재 시에도 사용 가능   
@@ -30,3 +31,31 @@ $O(V^3)$
 
 ### 문제
 [플로이드](https://www.acmicpc.net/problem/11404)   
+
+### 도달가능성 여부를 유지한 채로 최소의 도로만 남기기
+```cpp
+vector<vector<int> > reduceGraph(int n, const vector<vector<int> > &adj) {
+    vector dist(n + 1, vector<bool>(n + 1));
+    for (int u = 1; u <= n; u++) for (auto v : adj[u]) dist[u][v] = true;
+
+    for (int i = 1; i <= n; i++) dist[i][i] = false;
+
+    for (int m = 1; m <= n; m++) {
+        for (int s = 1; s <= n; s++) {
+            for (int e = 1; e <= n; e++) {
+                if (dist[s][e] && dist[s][m] && dist[m][e]) dist[s][e] = false;
+            }
+        }
+    }
+    
+    vector<vector<int> > reduced(n + 1);
+    for (int u = 1; u <= n; u++) {
+        for (int v = 1; v <= n; v++) {
+            if (dist[u][v]) reduced[u].push_back(v);
+        }
+    }
+
+    return reduced;
+}
+```
+__백준문제__ [도시 계획](https://www.acmicpc.net/problem/11097)   
