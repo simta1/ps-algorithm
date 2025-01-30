@@ -33,6 +33,31 @@ pair<vector<vector<int> >, vector<int> > getSCC(int n, const vector<vector<int> 
     return {sccs, sccn}; // sccn은 0-based임에 주의, 노드 x는 sccs[sccn[x]]에 포함되어 있음
 }
 ```
+### SCC끼리 묶은 DAG 만들기
+```cpp
+pair<int, vector<vector<int> > > graphToDAG(int n, const vector<vector<int> > &adj, const vector<vector<int> > &sccs, const vector<int> &sccn) {
+    vector<int> toEdgeExist(sccs.size() + 1, -1);
+    vector<vector<int> > dag(sccs.size() + 1);
+
+    for (auto &scc : sccs) for (auto u : scc) {
+        for (auto v : adj[u]) if (sccn[u] != sccn[v] && toEdgeExist[sccn[v]] != sccn[u]) {
+            toEdgeExist[sccn[v]] = sccn[u];
+            dag[sccn[u] + 1].push_back(sccn[v] + 1);
+        }
+    }
+
+    // for (auto scc : sccs) for (auto u : scc) cout << "orig node " << u << " -> dag node " << sccn[u] + 1 << "\n";
+    // for (int u = 1; u <= sccs.size(); u++) for (auto v : dag[u]) cout << "dag edge : " << u << " -> " << v << "\n";
+    
+    return {sccs.size(), dag}; // auto [dagN, dag] = graphToDAG(n, adj, sccs, sccn); 으로 사용
+}
+```
+주석 코드로 새로 만들어진 dag의 구조를 출력할 수 있음   
+sccn은 0-based로 매겨지지만 dag그래프에선 노드 번호가 1-based임에 주의   
+
+`toEdgeExist`는 간선을 추가했는지 저장하기 위한 배열로, 변수 `sccn[u]`를 [trueValue](/ps-snippet/C++/기타/Variable%20Name.md#truevalue)로 사용해서 구현한 것임.   
+toEdgeExist를 확인하지 않고 그냥 그래프를 구성해도 문제될 것은 없지만 DAG에 parallel edge를 추가하지 않기 위해선 필요한 과정   
+
 ### 시간복잡도 
 $O(V + E)$   
 
