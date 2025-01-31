@@ -124,7 +124,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[최소 스패닝 트리: Borůvka]</span>
     * <span class="gold">[_정점 착색수(G+)_](/그래프%20이론/그래프/Graph%20Coloring.md)</span>
     * <span class="">[_간선 착색수_]</span>
-    * <span class="gold">[위상 정렬(G+)](/그래프%20이론/그래프/Topological%20Sort.md)</span>
+    * <span class="gold">[위상정렬(G+)](/그래프%20이론/그래프/위상정렬.md)</span>
     * <span class="">[kth 최단 경로]</span>
     * <span class="platinum">[강한 연결 요소(P-)](/그래프%20이론/그래프/SCC.md)</span>
     * <span class="platinum">[단절점(P-)](/그래프%20이론/그래프/단절점.md)</span>
