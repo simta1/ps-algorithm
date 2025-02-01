@@ -113,7 +113,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[flood fill]</span>
     * <span class="">[0-1 bfs(G-)]</span>
     * <span class="gold">[이분그래프 판정(G-)](/그래프%20이론/그래프/이분그래프%20판정.md)</span>
-    * <span class="gold">[다익스트라(G-)](/그래프%20이론/그래프/Dijkstra.md)</span>
+    * <span class="gold">[다익스트라(G-)](/그래프%20이론/그래프/다익스트라.md)</span>
     * <span class="">[dial's algorithm]</span>
     * ~~<span class="">[A*]</span>~~
     * <span class="gold">[벨만-포드(G-)](/그래프%20이론/그래프/Bellman-Ford.md)</span>
