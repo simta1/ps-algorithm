@@ -116,7 +116,7 @@ mermaid stateDiagram-v2 사용
     * <span class="gold">[다익스트라(G-)](/그래프%20이론/그래프/다익스트라.md)</span>
     * <span class="">[dial's algorithm]</span>
     * ~~<span class="">[A*]</span>~~
-    * <span class="gold">[벨만-포드(G-)](/그래프%20이론/그래프/Bellman-Ford.md)</span>
+    * <span class="gold">[벨만-포드(G-)](/그래프%20이론/그래프/벨만-포드.md)</span>
     * <span class="gold">[SPFA(G-)](/그래프%20이론/그래프/SPFA.md)</span>
     * <span class="gold">[플로이드 워셜(G-)](/그래프%20이론/그래프/플로이드-워셜.md)</span>
     * <span class="gold">[최소 스패닝 트리: Kruskal(G-)](/그래프%20이론/그래프/MST.md)</span>
