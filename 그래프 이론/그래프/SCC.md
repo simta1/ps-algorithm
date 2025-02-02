@@ -168,3 +168,15 @@ dagN == sccs.size()이므로 dp배열의 크기는 dagN+1과 sccs.size()+1 중 �
 처음에 dp를 초기화할 때 i노드의 값을 `dp[sccn[i] + 1]`에 누적한 이유는 `sccn[i]`가 0-based이고 dag그래프는 1-based를 사용하기 때문   
 `graphToDAG()`의 결과로 얻어진 dag에서 노드의 번호는 위상정렬된 순서이므로,   
 `for (int u = 1; u <= dagN; u++) for (auto v : dag[u]) dp[v] = __gcd(dp[v], dp[u]);`에서 u는 위상정렬된 순서로 들어가며 따라서 dp배열도 옳게 업데이트된다.   
+
+### SCC 사용 예시코드
+```cpp
+vector<bool> isLeafNode(sccs.size(), true);
+for (int u = 1; u <= n; u++) {
+    for (auto v : adj[u]) if (sccn[u] != sccn[v]) isLeafNode[sccn[u]] = false;
+}
+
+vector<int> leafNodes;
+for (int i = 1; i <= n; i++) if (isLeafNode[sccn[i]]) leafNodes.push_back(i);
+```
+SCC끼리 묶었을 때 기준 leafNode인지 확인하는 경우 굳이 `graphToDAG()`를 사용하지 않고도 간단히 짤 수 있다. `graphToDAG()`를 사용하는 게 더 나은 상황과 아닌 상황이 있으니 사용하기 전에 생각해보는 게 좋다.   
