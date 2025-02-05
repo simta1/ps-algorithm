@@ -1,7 +1,7 @@
 [카테고리](/README.md)
 ## 2-SAT
 ```cpp
-class Graph {
+class CNF {
 private:
     int n;
     vector<vector<int> > adj;
@@ -40,30 +40,29 @@ private:
     }
 
 public:
-    Graph(int n) : n(n), adj(2 * n + 1), sccn(2 * n + 1, -1) {}
+    CNF(int n) : n(n), adj(2 * n + 1), sccn(2 * n + 1, -1) {}
 
-    void add1SAT(int a) { // 1-based // a가 true
-        adj[getNode(-a)].push_back(getNode(a));
-    }
-
-    void add2SAT(int a, int b) { // 1-based // a or b가 true
+    void add2SAT(int a, int b) { // a or b가 true
         adj[getNode(-a)].push_back(getNode(b));
         adj[getNode(-b)].push_back(getNode(a));
     }
 
-    void addAtLeast2SAT(int a, int b, int c) { // 1-based // a, b, c 중 2개 이상이 true
-        add2SAT(a, b);
-        add2SAT(b, c);
-        add2SAT(c, a);
-    }
-
-    bool check() {
+    // 전부 1-based
+    void add1SAT(int a) { adj[getNode(-a)].push_back(getNode(a)); } // a가 true
+    void addAtLeast2SAT(int a, int b, int c) { add2SAT(a, b); add2SAT(b, c); add2SAT(c, a); } // a, b, c 중 2개 이상이 true
+    void addExactly1SAT(int a, int b) { add2SAT(a, b); add2SAT(-a, -b); } // a, b 중 정확히 하나만 true
+    void addEqual2SAT(int a, int b) { add2SAT(a, -b); add2SAT(-a, b); } // a == b 가 true
+    void addNotEqualSAT(int a, int b) { add2SAT(a, b); add2SAT(-a, -b); } // a != b 가 true
+    void add22SAT(int a1, int a2, int b1, int b2) { add2SAT(a1, b1); add2SAT(a1, b2); add2SAT(a2, b1); add2SAT(a2, b2); } // (a1 and a2) or (b1 and b2)가 true
+    void addNMSAT(const vector<int> &as, const vector<int> &bs) { for (auto &a : as) for (auto &b : bs) add2SAT(a, b); } // (a1 and a2 and ... and aN) or (b1 and b2 and ... and bM)가 true
+    
+    bool solve() {
         findSCC();
         for (int i = 1; i <= n; i++) if (sccn[getNode(i)] == sccn[getNode(-i)]) return false;
         return true;
     }
 
-    bool getValue(int i) { // 1-based
+    bool getSolution(int i) { // 1-based
         return sccn[getNode(-i)] < sccn[getNode(i)]; // false -> true 꼴이 되어야 하므로 x가 true라면 !x -> x 
     }
 };
@@ -99,3 +98,6 @@ x -> !x 라면 x = false
 따라서 x가 true일 조건은 !x -> x   
 
 $a, b, c$ 중 2개 이상이 true인 것은 $(a \lor b) \land (b \lor c) \land (c \lor a)$가 true인 것과 동치임   
+
+### 참고링크
+https://blog.leejseo.com/61   
