@@ -28,7 +28,7 @@ pll merge(const pll &a, const pll &b) {
     return {p1 / g * p2, p1 * x + m1};
 }
 
-pll crt(const vector<pll> &rems) {
+pll crt(const vector<pll> &rems) { // rems 원소는 {p, n % p}꼴
     pll res(1, 0);
 
     for (auto &p : rems) {
@@ -41,7 +41,8 @@ pll crt(const vector<pll> &rems) {
 }
 ```
 ### 시간복잡도 
-$O(N~logN)$   
+$O(N~logP)$   
+($P := \displaystyle\prod_{k=1}^{n}p_k$)
 
 ### 사용설명
 crt().first = -1이라면 연립합동식이 해를 가지지 않음
