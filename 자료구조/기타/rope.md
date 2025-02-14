@@ -45,8 +45,8 @@ operator\>\>는 안 됨
 $O(logN)$   
 
 ### 문제
-[순열복원](https://www.acmicpc.net/problem/1777)
-[로프와 쿼리](https://www.acmicpc.net/problem/16994) - substr
+[순열복원](https://www.acmicpc.net/problem/1777)   
+[로프와 쿼리](https://www.acmicpc.net/problem/16994) - substr   
 
 ### 참고링크
 https://m.blog.naver.com/melon940925/222120515591   
