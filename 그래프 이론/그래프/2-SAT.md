@@ -50,9 +50,8 @@ public:
     // 전부 1-based
     void add1SAT(int a) { adj[getNode(-a)].push_back(getNode(a)); } // a가 true
     void addAtLeast2SAT(int a, int b, int c) { add2SAT(a, b); add2SAT(b, c); add2SAT(c, a); } // a, b, c 중 2개 이상이 true
-    void addExactly1SAT(int a, int b) { add2SAT(a, b); add2SAT(-a, -b); } // a, b 중 정확히 하나만 true
     void addEqual2SAT(int a, int b) { add2SAT(a, -b); add2SAT(-a, b); } // a == b 가 true
-    void addNotEqualSAT(int a, int b) { add2SAT(a, b); add2SAT(-a, -b); } // a != b 가 true
+    void addNotEqualSAT(int a, int b) { add2SAT(a, b); add2SAT(-a, -b); } // a != b 가 true // a, b 중 정확히 하나만 true
     void add22SAT(int a1, int a2, int b1, int b2) { add2SAT(a1, b1); add2SAT(a1, b2); add2SAT(a2, b1); add2SAT(a2, b2); } // (a1 and a2) or (b1 and b2)가 true
     void addNMSAT(const vector<int> &as, const vector<int> &bs) { for (auto &a : as) for (auto &b : bs) add2SAT(a, b); } // (a1 and a2 and ... and aN) or (b1 and b2 and ... and bM)가 true
     
@@ -69,6 +68,7 @@ public:
 ```
 ### 시간복잡도 
 $O(V + E)$   
+$V$는 변수 개수, $E$는 절(clause)의 개수   
 
 ### 표기
 $\lor$은 OR, $\land$는 AND, $\lnot$은 NOT을 나타낸다.
