@@ -6,10 +6,9 @@ private:
     int n;
     vector<vector<int> > adj;
     vector<int> sccn;
-
-    int getNode(int a) { // -1, 1, -2, 2, -3, 3, -4, 4, ... -> 1, 2, 3, 4, 5, 6, 7, 8, ...
-        return abs(a) * 2 - (a < 0);
-    }
+    
+    // -1, 1, -2, 2, -3, 3, -4, 4, ... -> 1, 2, 3, 4, 5, 6, 7, 8, ...
+    int getNode(int a) { return a > 0 ? (a * 2) : (-a * 2 - 1); }
 
     void findSCC() {
         vector<int> dfsn(2 * n + 1, 0);
@@ -51,7 +50,7 @@ public:
     void add1SAT(int a) { adj[getNode(-a)].push_back(getNode(a)); } // a가 true
     void addAtLeast2SAT(int a, int b, int c) { add2SAT(a, b); add2SAT(b, c); add2SAT(c, a); } // a, b, c 중 2개 이상이 true
     void addEqual2SAT(int a, int b) { add2SAT(a, -b); add2SAT(-a, b); } // a == b 가 true
-    void addNotEqualSAT(int a, int b) { add2SAT(a, b); add2SAT(-a, -b); } // a != b 가 true // a, b 중 정확히 하나만 true
+    void addNotEqual2SAT(int a, int b) { add2SAT(a, b); add2SAT(-a, -b); } // a != b 가 true // a, b 중 정확히 하나만 true
     void add22SAT(int a1, int a2, int b1, int b2) { add2SAT(a1, b1); add2SAT(a1, b2); add2SAT(a2, b1); add2SAT(a2, b2); } // (a1 and a2) or (b1 and b2)가 true
     void addNMSAT(const vector<int> &as, const vector<int> &bs) { for (auto &a : as) for (auto &b : bs) add2SAT(a, b); } // (a1 and a2 and ... and aN) or (b1 and b2 and ... and bM)가 true
     
