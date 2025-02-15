@@ -2,9 +2,9 @@
 ## 다항식 연산
 ### FFT (Fast Fourier Transform)
 ```cpp
-namespace Poly {
+namespace Poly { // FFT
     using ll = long long;
-    int powGE(int n) { return 1 << __lg(n) + !!(n & (n - 1)); }
+    int pow2GE(int n) { return 1 << __lg(n) + !!(n & (n - 1)); }
 
     template <typename T>
     void __transform(vector<T> &f, bool is_reverse, T root) {
@@ -55,7 +55,7 @@ namespace Poly {
         using cpx = complex<double_t>;
         vector<cpx> a(v1.begin(), v1.end());
         vector<cpx> b(v2.begin(), v2.end());
-        int n = powGE(a.size() + b.size());
+        int n = pow2GE(a.size() + b.size());
         a.resize(n);
         b.resize(n);
         fft(a, false);
@@ -72,7 +72,7 @@ namespace Poly {
     vector<ll> square(const vector<T> &v) {
         using cpx = complex<double_t>;
         vector<cpx> a(v.begin(), v.end());
-        int n = powGE(a.size() * 2);
+        int n = pow2GE(a.size() * 2);
         a.resize(n);
         fft(a, false);
         for (int i = 0; i < n; i++) a[i] *= a[i];
@@ -85,21 +85,23 @@ namespace Poly {
 }
 ```
 ### 정확도 높은 FFT
-<!-- TODO 확인 필요 -->
+### TODO [씽크스몰](https://www.acmicpc.net/problem/11385)에서 WA 받았음
 ```cpp
-namespace Poly {
-    static const int splitBit = 15;
-    template <typename T>
+namespace Poly { // 정확도 높은 FFT
+    static const int splitBit = 20;
+    static const int split = 1 << splitBit;
+    template <typename double_t=double, typename T>
     vector<ll> multiplyPrecisely(const vector<T> &v1, const vector<T> &v2) {
-        int n = pow2GE(v1.size() + v2.size());
+        using cpx = complex<double_t>;
+        int n = pow2GE(v1.size() + v2.size() + 1);
 
         vector<cpx> a1(n), a2(n), b1(n), b2(n);
         for (int i = 0; i < v1.size(); i++) {
-            a1[i] = v1[i] & ~-(1 << splitBit);
+            a1[i] = v1[i] & (split - 1);
             a2[i] = v1[i] >> splitBit;
         }
         for (int i = 0; i < v2.size(); i++) {
-            b1[i] = v2[i] & ~-(1 << splitBit);
+            b1[i] = v2[i] & (split - 1);
             b2[i] = v2[i] >> splitBit;
         }
 
@@ -120,13 +122,7 @@ namespace Poly {
         fft(c3, true);
 
         vector<ll> res(n);
-        for (int i = 0; i < n; i++) {
-            ll a = llround(c1[i].real()); // % mod;
-            ll b = llround(c2[i].real()); // % mod;
-            ll c = llround(c3[i].real()); // % mod;
-            res[i] = (a + (b << splitBit) + (c << 2 * splitBit)); // % mod;
-            // if (res[i] < 0) res[i] += mod;
-        }
+        for (int i = 0; i < n; i++) res[i] = round(c1[i].real()) + (ll(round(c2[i].real())) << splitBit) + (ll(round(c3[i].real())) << 2 * splitBit);
         return res;
     }
 }
@@ -196,7 +192,7 @@ public:
 
 ### NTT (Number Theoretic Transform)
 ```cpp
-namespace Poly {
+namespace Poly { // NTT
     template <ll p, ll primitiveRoot>
     void ntt(vector<ModInt<p> > &f, bool is_reverse) {
         __transform(f, is_reverse, ModInt<p>(primitiveRoot).pow((p - 1) / f.size()));
@@ -211,7 +207,7 @@ namespace Poly {
     vector<ll> multiplyMod(const vector<T> &v1, const vector<T> &v2) {
         vector<ModInt<p> > a(v1.begin(), v1.end());
         vector<ModInt<p> > b(v2.begin(), v2.end());
-        int n = powGE(a.size() + b.size());
+        int n = pow2GE(a.size() + b.size());
         assert(n <= ((p - 1) & -(p - 1)));
         a.resize(n);
         b.resize(n);
