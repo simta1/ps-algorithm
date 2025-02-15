@@ -43,7 +43,7 @@ public:
         return ac[a][0];
     }
     
-    int getLCA(int root, int a, int b) { // 1-based // unfixed root
+    int getLCA(int a, int b, int root) { // 1-based // unfixed root
         int x = getLCA(root, a);
         int y = getLCA(root, b);
         int res = getLCA(a, b);
