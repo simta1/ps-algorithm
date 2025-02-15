@@ -1,23 +1,74 @@
 [카테고리](/README.md)
 ## ModInt
 ```cpp
-MOD>= sqrt(numeric_limits<T>::max() - 1)인지 아닌지로 if constexpr확인해서 곱셈 오버로딩하기.
-만약 MOD>=sqrt면 a * b % mod대신 T(__int128(a) * b % mod)로 해야 됨
+using ll = long long;
+template <ll MOD>
+class ModInt {
+    static_assert(MOD > 1);
+    static_assert(MOD - 1 <= numeric_limits<long long>::max() / 2, "operator+ 수정해야 함");
+
+public:
+    ll value;
+
+    explicit ModInt() = default;
+    explicit ModInt(ll n) {
+        value = n % MOD;
+        if (value < 0) value += MOD;
+    }
+
+    tuple<ll, ll, ll> extendedGCD(ll a, ll b) const { // ax + by = gcd(a, b)
+        if (b == 0) return {1, 0, a};
+        auto [x, y, g] = extendedGCD(b, a % b);
+        return {y, x - (a / b) * y, g};
+    }
+
+    ModInt inv() const {
+        auto [x, y, g] = extendedGCD(value, MOD);
+        assert(g == 1); // g!=1이면 역원 존재 안함
+        return ModInt(x);
+    }
+
+    ModInt pow(ll n) const {
+        ModInt base = *this, res(1);
+        while (n) {
+            if (n & 1) res *= base;
+            base *= base;
+            n >>= 1;
+        }
+        return res;
+    }
+
+    ModInt operator+(const ModInt &other) const { ll res = value + other.value; if (res >= MOD) res -= MOD; return ModInt(res); }
+    ModInt &operator+=(const ModInt &other) { value += other.value; if (value >= MOD) value -= MOD; return *this; }
+    ModInt operator-(const ModInt &other) const { ll res = value - other.value; if (res < 0) res += MOD; return ModInt(res); }
+    ModInt &operator-=(const ModInt &other) { value -= other.value; if (value < 0) value += MOD; return *this; }
+    ModInt operator*(const ModInt &other) const {
+        if constexpr ((MOD - 1) > numeric_limits<ll>::max() / (MOD - 1)) return ModInt(ll(__int128(value) * other.value % MOD));
+        else return ModInt(value * other.value % MOD);
+    }
+    ModInt &operator*=(const ModInt &other) {
+        if constexpr ((MOD - 1) > numeric_limits<ll>::max() / (MOD - 1)) value = ll(__int128(value) * other.value % MOD);
+        else value = value * other.value % MOD;
+        return *this;
+    }
+    ModInt operator/(const ModInt &other) const { return *this * other.inv(); }
+    ModInt &operator/=(const ModInt &other) { return *this *= other.inv(); }
+    bool operator==(const ModInt &other) const { return value == other.value; }
+    bool operator!=(const ModInt &other) const { return value != other.value; }
+    friend istream &operator>>(istream &is, ModInt &m) { ll x; is >> x; m = ModInt(x); return is; }
+    friend ostream &operator<<(ostream &os, const ModInt &m) { return os << m.value; }
+};
 ```
-### 시간복잡도
-$O()$   
-
-### 구현 주의사항
-
 
 ### 사용설명
-
+$\text{MOD} <= 4611686018427387904$인 상황을 가정한 코드임(static_assert로 확인하게 해둠)   
+만약 $\text{MOD} > 4611686018427387904$라면 `2 * (MOD - 1) < numeric_limits<ll>::max()`를 만족하지 않으므로 덧셈 과정에서 오버플로우가 발생할 수 있음   
+`operator*`에서 한 것처럼 `if constexpr`으로 케이스를 나누어 해결할 수 있지만 코드 길이가 길어지기에 넣지 않았고 $\text{MOD} <= 4611686018427387904$를 강제하기로 함.   
+애초에 ps에서 $\text{MOD}$로 주어지는 값의 범위는 보통 1e10을 넘지 않기에 앞으로도 이 코드 그대로 사용할 듯
 
 ### 문제
 []()
-
-### 원리
-
+문제 풀 때 종종 사용할 일이 있기도 하고, 그와 별개로 NTT구현에서 fft와의 코드중복을 줄일 때도 유용함   
 
 ### 참고링크
 https://memoacmicpc.tistory.com/entry/%EA%B8%B0%EB%B3%B8-%EC%9D%B4%EB%A1%A0   
