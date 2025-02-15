@@ -39,7 +39,7 @@ namespace Poly { // FFT
             }
         }
 
-        if (is_reverse) for (auto &e : f) e /= n;
+        if (is_reverse) for (auto &e : f) e /= T(n);
     }
     
     const long double PI = acos(-1);
@@ -63,8 +63,8 @@ namespace Poly { // FFT
         for (int i = 0; i < n; i++) a[i] *= b[i];
         fft(a, true);
 
-        vector<ll> res(n);
-        for (int i = 0; i < n; i++) res[i] = round(a[i].real());
+        vector<ll> res(v1.size() + v2.size() - 1);
+        for (int i = 0; i < res.size(); i++) res[i] = round(a[i].real());
         return res;
     }
 
@@ -78,8 +78,8 @@ namespace Poly { // FFT
         for (int i = 0; i < n; i++) a[i] *= a[i];
         fft(a, true);
 
-        vector<ll> res(n);
-        for (int i = 0; i < n; i++) res[i] = round(a[i].real());
+        vector<ll> res(v.size() * 2 - 1);
+        for (int i = 0; i < res.size(); i++) res[i] = round(a[i].real());
         return res;
     }
 }
@@ -121,8 +121,8 @@ namespace Poly { // 정확도 높은 FFT
         fft(c2, true);
         fft(c3, true);
 
-        vector<ll> res(n);
-        for (int i = 0; i < n; i++) res[i] = round(c1[i].real()) + (ll(round(c2[i].real())) << splitBit) + (ll(round(c3[i].real())) << 2 * splitBit);
+        vector<ll> res(v1.size() + v2.size() - 1);
+        for (int i = 0; i < res.size(); i++) res[i] = round(c1[i].real()) + (ll(round(c2[i].real())) << splitBit) + (ll(round(c3[i].real())) << 2 * splitBit);
         return res;
     }
 }
@@ -216,8 +216,8 @@ namespace Poly { // NTT
         for (int i = 0; i < n; i++) a[i] = a[i] * b[i];
         ntt<p, primitiveRoot>(a, true);
         
-        vector<ll> res(n);
-        for (int i = 0; i < n; i++) res[i] = a[i].value;
+        vector<ll> res(v1.size() + v2.size() - 1);
+        for (int i = 0; i < res.size(); i++) res[i] = a[i].value;
         return res;
     }
 
@@ -260,14 +260,11 @@ auto res = Poly::multiplyMod<2'483'027'969, 3>(poly1, poly2);
 // NTT+CRT
 auto res = Poly::multiplyMod5e18(poly1, poly2);
 ```
-<!--
-예전 코드 기준 작성했던 거. 지금 코드는 한 번 확인 필요 TODO
-[보석 가게](https://www.acmicpc.net/problem/13575) 문제에서 처음 벡터를 선언할 때 크기 1000으로 선언하면 mle가 남?
-처음부터 벡터의 크기를 2의 거듭제곱이 되도록(이 문제에선 1024로) 선언한 뒤 거듭제곱을 하니 mle가 해결됐음.    -->
 
 ### 문제
 [큰 수 곱셈 (2)](https://www.acmicpc.net/problem/15576)   
 [큰 수 곱셈 (3)](https://www.acmicpc.net/problem/22289)   
+[보석 가게](https://www.acmicpc.net/problem/13575)   
 [씽크스몰](https://www.acmicpc.net/problem/11385) - NTT + CRT(`multiplyMod5e18()` 함수 사용하면 됨)   
 
 ### 원리
