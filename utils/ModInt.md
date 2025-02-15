@@ -68,7 +68,7 @@ $\text{MOD} <= 4611686018427387904$인 상황을 가정한 코드임(static_asse
 
 ### 문제
 []()
-문제 풀 때 종종 사용할 일이 있기도 하고, 그와 별개로 NTT구현에서 fft와의 코드중복을 줄일 때도 유용함   
+문제 풀 때 종종 사용할 일이 있기도 하고, [NTT](/수학/NTT.md#ntt-number-theoretic-transform)구현에서 fft 코드 그대로 가져가 사용할 때도 유용함   
 
 ### 참고링크
 https://memoacmicpc.tistory.com/entry/%EA%B8%B0%EB%B3%B8-%EC%9D%B4%EB%A1%A0   

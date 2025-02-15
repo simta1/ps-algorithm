@@ -135,13 +135,12 @@ mermaid stateDiagram-v2 사용
     * <span class="">[블록 컷 트리]</span>
     * <span class="">[선인장]</span>
     * <span class="">[Dynamic MST]</span> <!-- https://koosaga.com/211 -->
-    * <span class="">[삼각형, 사각형 찾기(D-)]</span>
     * <span class="">[_2th MST(D-)_]</span>
     * <span class="">[쌍대 그래프(D-)]</span>
     * <span class="">[그래프 채색]</span> <!-- https://infossm.github.io/blog/2023/06/21/Graph-Coloring/ -->
     * <span class="">[도미네이터 트리]</span>
     * <span class="">[오프라인 동적 연결성 판정]</span> <!-- https://stonejjun.tistory.com/171 -->
-    * <span class="">[삼각형 찾기]</span> <!-- https://jh05013.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EC%82%BC%EA%B0%81%ED%98%95%20%EC%B0%BE%EA%B8%B0/ -->
+    * <span class="">[3-cycles 찾기]</span> <!-- https://jh05013.github.io/blog/enumerating-triangles/ -->
     * <span class="">[평면 그래프]</span>
     * <span class="">[쌍대 그래프]</span>
     * <span class="">[현 그래프 판정]</span>
@@ -198,7 +197,7 @@ mermaid stateDiagram-v2 사용
   * <span class="platinum">[볼록 껍질을 이용한 최적화(P+)](/DP/CHT.md)</span>
   * <span class="platinum">[분할 정복을 이용한 최적화(P+)](/DP/DnC.md)</span>
   * <span class="diamond">[SOS DP(D-)](/DP/SOS%20DP.md)</span>
-  * <span class="">[검은 돌 트릭]</span> <!-- https://ansol4328.github.io/problem%20solving/2021/10/14/unique-time-complexity/# -->
+  * <span class="">[검은 돌 트릭]</span> <!-- https://ansol4328.github.io/problem%20solving/2021/10/14/unique-time-complexity/# --> <!-- https://codeforces.com/blog/entry/100910 7번 -->
   * <span class="">[히르쉬버그(D+)]</span>
   * <span class="">[aliens 트릭]</span>
   * <span class="">[Connection Profile DP]</span>
@@ -207,7 +206,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[함수 개형을 이용한 최적화(Slope trick) (D-)]</span>
   * <span class="">[aliens 트릭(라그랑주 최적화)]</span>
   * <span class="">[벌레캠프-매시(D+)]</span>
-  * <span class="">[커넥션 프로파일을 이용한 다이나믹 프로그래밍]</span>
+  * <span class="">[커넥션 프로파일을 이용한 다이나믹 프로그래밍]</span> <!-- https://jh05013.github.io/blog/cpdp/ -->
   * <span class="ruby">[비트셋 LCS(R-)](/DP/비트셋%20LCS.md)</span>
 * ### 문자열
   <!-- RBS(Regular Bracket Sequence) -->
@@ -334,16 +333,18 @@ mermaid stateDiagram-v2 사용
     * <span class="">[Stern-Brocot 트리]</span> <!-- https://blog.myungwoo.kr/126 --> <!-- https://youngyojun.github.io/secmem/2022/02/18/sigma-sum-stern-brocot/ --> <!-- https://zigui.tistory.com/29 -->
     * <span class="platinum">[밀러-라빈 소수 판별법(P+)](/수학/MillerRabin.md)</span>
     * <span class="platinum">[폴라드 로(P+)](/수학/PollardRho.md)</span>
-    * <span class="platinum">[FFT(P+)](/수학/FFT.md)</span>
     * ~~<span class="">[카라츠바]</span>~~
+    * <span class="additional">[다항식 연산, FFT(P+)](/수학/FFT.md)</span>
+      * <span class="platinum">[다항식곱셈: FFT(P+)](/수학/FFT.md#fft-fast-fourier-transform)</span>
+      * <span class="diamond">[정확도 높은 FFT(D-)](/수학/FFT.md#정확도-높은-fft)</span>
+      * <span class="diamond">[다항식곱셈: NTT(D-)](/수학/FFT.md#ntt-number-theoretic-transform)</span>
+      * <span class="">[FFT 나눗셈]</span>
+      * <span class="">[3진 FFT(D-)]</span> <!-- https://www.acmicpc.net/problem/14882 -->
     * <span class="">[이산 로그(P+)]</span>
     * <span class="diamond">[이산 제곱근(D-)](/수학/Tonelli-Shanks.md)</span>
     * <span class="">[이산 k제곱근]</span>
     * <span class="diamond">[Cornacchia's algorithm(D-)](/수학/Cornacchia.md)</span>
     * <span class="diamond">[Power tower(D-)](/수학/Power%20Tower.md)</span>
-    * <span class="">[3진 FFT(D-)]</span> <!-- https://www.acmicpc.net/problem/14882 -->
-    * <span class="diamond">[NTT(D-)](/수학/NTT.md)</span>
-    * <span class="">[FFT 나눗셈]</span>
     * <span class="">[다중 대입값 계산]</span> <!-- https://infossm.github.io/blog/2019/06/16/Multipoint-evaluation/ -->
     * <span class="">[simplex]</span> <!-- https://velog.io/@wjleekr927/Simplex-algorithm -->
     * <span class="">[LP]</span>
@@ -424,7 +425,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[파싱]</span>
   * <span class="additional">[utf-8 입력 처리](/utils/utf-8.md)</span>
   * <span class="additional">[n!, nCr, nHr 브루트포스 순회](/utils/n!%20nCr%20nHr%20브루트포스%20순회.md)</span>
-  * <span class="">[modInt]</span>
+  * <span class="additional">[modInt](/utils/ModInt.md)</span>
   * <span class="">[infInt]</span>
   * <span class="">[bigInt]</span>
   * <span class="additional">[BaseInt](/utils/BaseInt.md)</span> <!-- bigint랑 합쳐서 구현하는 게 나을 듯 -->
