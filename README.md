@@ -167,7 +167,8 @@ mermaid stateDiagram-v2 사용
     <!-- * <span class="">[홀의 결혼 정리]</span> -->
   * #### 트리
     * <span class="platinum">[최소 공통 조상(P-)](/그래프%20이론/트리/LCA.md)</span>
-    * <span class="platinum">[LCA를 통한 트리 쿼리(P-)](/그래프%20이론/트리/Query%20with%20LCA.md)</span>
+    * <span class="platinum">[O(1) LCA]</span> <!-- https://cocoachan.tistory.com/16 -->
+    * <span class="platinum">[LCA를 이용한 트리 쿼리(P-)](/그래프%20이론/트리/Query%20with%20LCA.md)</span>
     * <span class="platinum">[오일러 경로 테크닉(P-)](/그래프%20이론/트리/ETT.md)</span>
     * <span class="platinum">[heavy-light 분할(P+)](/그래프%20이론/트리/HLD.md)</span>
     * <span class="">[트리 압축]</span>
@@ -381,6 +382,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[Log Decomp]</span> <!-- https://codeforces.com/blog/entry/124766 -->
   * <span class="">[모노톤 스택]</span>
   * <span class="">[모노톤 큐]</span>
+  * <span class="">[RMQ]</span>
   * <span class="">[XOR Hashing]</span> <!-- https://codeforces.com/blog/entry/85900 -->
   * <span class="">[트리 해싱]</span> <!-- https://blog.cgiosy.dev/entry/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%AC%B8%EC%A0%9C-%ED%92%80-%EB%95%8C-%EC%93%B0%EB%8A%94-%ED%95%B4%EC%8B%9C-%EC%A2%85%EB%A5%98%EB%93%A4 -->
   * <span class="">[누적합, imos]</span>
