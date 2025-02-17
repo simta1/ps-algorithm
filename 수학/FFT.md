@@ -24,16 +24,24 @@ namespace Poly { // FFT
     }
 
     template <typename T>
-    void __transform(vector<T> &f, bool is_reverse, const vector<T> &roots) {
+    void __transform(vector<T> &f, bool is_reverse, T root) {
         int n = f.size();
         for (auto [i, j] : getBitRev(n)) swap(f[i], f[j]);
+        
+        if (is_reverse) root = T(1) / root;
+        vector<T> wms;
+        for (int m = n; m >= 2; m >>=1) {
+            wms.push_back(root);
+            root *= root;
+        }
 
-        for (int m = 2; m <= n; m <<= 1) {
-            int step = n / m;
+        for (int m = 2, wIdx = wms.size(); m <= n; m <<= 1) {
+            T w_m = wms[--wIdx];
             for (int i = 0; i < n; i += m) {
-                for (int j = 0; j < m / 2; j++) {
+                T w_j(1); // (w_m)^j
+                for (int j = 0; j < m / 2; j++, w_j *= w_m) {
                     T even = f[i + j];
-                    T odd = roots[step * j] * f[i + j + m / 2];
+                    T odd = w_j * f[i + j + m / 2];
                     f[i + j] = even + odd;
                     f[i + j + m / 2] = even - odd;
                 }
@@ -43,17 +51,10 @@ namespace Poly { // FFT
         if (is_reverse) for (auto &e : f) e /= T(n);
     }
     
-    const long double PI = acos(-1);
-    
     template <typename double_t>
     void fft(vector<complex<double_t> > &f, bool is_reverse) {
-        int n = f.size();
-        double_t ang = 2 * PI / n * (is_reverse ? -1 : 1);
-
-        vector<complex<double_t> > roots(n / 2);
-        for (int i = 0; i < n / 2; i++) roots[i] = complex<double_t>(cos(ang * i), sin(ang * i));
-
-        __transform(f, is_reverse, roots);
+        double_t t = 2 * acos(double_t(-1)) / f.size(); // acos(double_t(-1))는 PI
+        __transform(f, is_reverse, complex<double_t>(cos(t), sin(t)));
     }
 
     template <typename double_t, typename T>
@@ -123,13 +124,7 @@ namespace Poly { // 정확도 높은 FFT
 namespace Poly { // NTT
     template <ll p, ll primitiveRoot>
     void ntt(vector<ModInt<p> > &f, bool is_reverse) {
-        int n = f.size();
-        ModInt<p> w = ModInt<p>(primitiveRoot).pow((p - 1) / n);
-        if (is_reverse) w = w.inv();
-        
-        vector<ModInt<p> > roots(n / 2, ModInt<p>(1));
-        for (int i = 1; i < n / 2; i++) roots[i] = roots[i - 1] * w;
-        __transform(f, is_reverse, roots);
+        __transform(f, is_reverse,ModInt<p>(primitiveRoot).pow((p - 1) / f.size()));
     }
     
     // | p = a*2^b+1   | a   | b  | 2^b       | g |
@@ -287,11 +282,20 @@ namespace Poly { // NTT 다항식 나눗셈, 키타마사
 }
 ```
 ### 시간복잡도 
-$O(N \log{N})$   
+| 함수명 | 용도 | 시간복잡도 |
+| - | - | - |
+| `multiply<double_t>(f, g)` | fft 다항식 곱셈 | $O(N \log{N})$ |
+| `multiplyPrecisely<double_t>(f, g)` | 정확도 높은 fft 다항식 곱셈 |  $O(N \log{N})$ |
+| `multiplyMod<p, primitiveRoot>(f, g)` | ntt 다항식 곱셈 | $O(N \log{N})$ |
+| `invertMod<p, primitiveRoot>(f, deg)` | $f(x)^{-1} \pmod{x^\text{deg}}$ | $O(N \log{N})$ |
+|`divideMod<p, primitiveRoot>(f, g)` | {$f(x) \text{ / } g(x)$, $f(x) \text{ \% } g(x)$} 계산 | $O(N \log{N})$ |
+|`remainderMod<p, primitiveRoot>(f, g)` | $f(x) \text{ \% } g(x)$ 계산 | $O(N \log{N})$ |
+|`kitamasaNTT<p, primitiveRoot>(n, g)` | $x^n \pmod{g(x)}$ 계산 | $O(K \log{K} \log{N})$ ($K$는 $g(x)$의 최고차항의 차수)   
+|`kitamasaNaive<p, primitiveRoot>(n, g, MOD)` | $x^n \pmod{g(x)}$ 계산 | $O(K^2 \log{N})$ ($K$는 $g(x)$의 최고차항의 차수)   
 
 ### 사용설명
 FFT 쓸 때 가능하면 double 사용   
-오차범위 확인할 때 참고 -> [부동소숫점 오류](https://www.acmicpc.net/blog/view/37)   
+오차범위 확인할 때 참고 -> [부동소수점 오류](https://www.acmicpc.net/blog/view/37)   
 
 ```cpp
 // FFT를 사용하여 곱셈
