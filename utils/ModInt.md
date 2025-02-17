@@ -37,22 +37,20 @@ public:
         }
         return res;
     }
-
-    ModInt operator+(const ModInt &other) const { ll res = value + other.value; if (res >= MOD) res -= MOD; return ModInt(res); }
-    ModInt &operator+=(const ModInt &other) { value += other.value; if (value >= MOD) value -= MOD; return *this; }
-    ModInt operator-(const ModInt &other) const { ll res = value - other.value; if (res < 0) res += MOD; return ModInt(res); }
-    ModInt &operator-=(const ModInt &other) { value -= other.value; if (value < 0) value += MOD; return *this; }
-    ModInt operator*(const ModInt &other) const {
-        if constexpr ((MOD - 1) > numeric_limits<ll>::max() / (MOD - 1)) return ModInt(ll(__int128(value) * other.value % MOD));
-        else return ModInt(value * other.value % MOD);
-    }
-    ModInt &operator*=(const ModInt &other) {
+    
+    ModInt operator-() const { return ModInt(-value); }
+    ModInt& operator+=(const ModInt &other) { if ((value += other.value) >= MOD) value -= MOD; return *this; }
+    ModInt& operator-=(const ModInt &other) { if ((value -= other.value) < 0) value += MOD; return *this; }
+    ModInt& operator*=(const ModInt &other) {
         if constexpr ((MOD - 1) > numeric_limits<ll>::max() / (MOD - 1)) value = ll(__int128(value) * other.value % MOD);
         else value = value * other.value % MOD;
         return *this;
     }
-    ModInt operator/(const ModInt &other) const { return *this * other.inv(); }
-    ModInt &operator/=(const ModInt &other) { return *this *= other.inv(); }
+    ModInt& operator/=(const ModInt &other) { return *this *= other.inv(); }
+    ModInt operator+(const ModInt &other) const { return ModInt(value) += other; }
+    ModInt operator-(const ModInt &other) const { return ModInt(value) -= other; }
+    ModInt operator*(const ModInt &other) const { return ModInt(value) *= other; }
+    ModInt operator/(const ModInt &other) const { return ModInt(value) /= other; }
     bool operator==(const ModInt &other) const { return value == other.value; }
     bool operator!=(const ModInt &other) const { return value != other.value; }
     friend istream &operator>>(istream &is, ModInt &m) { ll x; is >> x; m = ModInt(x); return is; }
