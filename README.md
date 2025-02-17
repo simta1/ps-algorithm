@@ -295,7 +295,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[nCr mod 소수, 뤼카(P-)]</span>
     * <span class="">[nCr mod 합성수(D-)]</span>
     * <span class="">[생성 함수(D-)]</span> <!-- 카탈란 생성함수 O(nlogN) --> <!-- https://github.com/infossm/infossm.github.io/blob/master/_posts/2019-10-19-generating-function.md -->
-    * <span class="diamond">[$O(K^2 \log{N})$ 키타마사(D-)](/수학/FFT.md#ok2-logn-키타마사)</span>
+    * <span class="diamond">[O(K^2 logN) 키타마사(D-)](/수학/FFT.md#ok2-logn-키타마사)</span>
     * <span class="">[Bostan-Mori]</span>
     <!-- https://codeforces.com/blog/entry/111862 -->
     <!-- https://blog.myungwoo.kr/149 -->
@@ -339,7 +339,7 @@ mermaid stateDiagram-v2 사용
       * <span class="platinum">[다항식곱셈: FFT(P+)](/수학/FFT.md#fft-fast-fourier-transform)</span>
       * <span class="diamond">[정확도 높은 FFT(D-)](/수학/FFT.md#정확도-높은-fft)</span>
       * <span class="diamond">[다항식곱셈: NTT(D-)](/수학/FFT.md#ntt-number-theoretic-transform)</span>
-      * <span class="diamond">[$O(K \log{K} \log{N})$ 다항식 나눗셈, 키타마사(D+)](/수학/FFT.md#ok-logk-logn-다항식-나눗셈-키타마사)</span>
+      * <span class="diamond">[O(K logK logN) 다항식 나눗셈, 키타마사(D+)](/수학/FFT.md#ok-logk-logn-다항식-나눗셈-키타마사)</span>
       * <span class="">[3진 FFT(D-)]</span> <!-- https://www.acmicpc.net/problem/14882 -->
     * <span class="">[이산 로그(P+)]</span>
     * <span class="diamond">[이산 제곱근(D-)](/수학/Tonelli-Shanks.md)</span>
