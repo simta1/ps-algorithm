@@ -152,7 +152,7 @@ namespace Poly { // NTT
     }
 }
 ```
-### 다항식 나눗셈, 키타마사
+### 다항식 나눗셈, $O(K \log{K} \log{N})$ 키타마사
 ```cpp
 namespace Poly { // NTT 다항식 나눗셈, 키타마사
     template <ll p, ll primitiveRoot, typename T>
@@ -211,7 +211,7 @@ namespace Poly { // NTT 다항식 나눗셈, 키타마사
     }
 
     template <ll p, ll primitiveRoot, typename T>
-    vector<ll> kitamasaNTT(ll n, const vector<T> &g) { // f(x)=x^n에 대해 f % g 계산 // g차수 k일 때 O(K logK logN)
+    vector<ll> divideMod(ll n, const vector<T> &g) { // f(x)=x^n에 대해 f % g 계산 // g차수 k일 때 O(K logK logN)
         vector<ll> res = {1};
         vector<ll> xn = {0, 1};
         
@@ -224,8 +224,25 @@ namespace Poly { // NTT 다항식 나눗셈, 키타마사
         return res;
     }
 
+    template <ll p, ll primitiveRoot, typename T> // p = a * 2^b + 1 꼴 소수
+    ll kitamasaNTT(ll n, const vector<T> &a, const vector<T> &coef) { // a는 초항{a1, a2, ..., ak}, c는 계수{c1, c2, ..., ck} // A_n = (C_1 x A_n−1 + C_2 x A_n−2 + ... + C_k x A_n−k) mod P일 때 A_n 계산
+        if (n <= a.size()) return a[n - 1];
+
+        vector<ll> f(coef.size() + 1, 1); // x^k - c_1 x^(k-1) - c_2 x^(k-2) - ... - c_k x^0
+        for (int i = 0; i < coef.size(); i++) f[coef.size() - 1 - i] = -coef[i];
+        auto d = divideMod<p, primitiveRoot>(n - 1, f); // x^(n-1)을 {x^k - c_1 x^(k-1) - c_2 x^(k-2) - ... - c_k x^0}로 나눈 나머지
+
+        ll res = 0; // an = a1 * d1 + a2 * d2 + ... + ak * dk
+        for (int i = 0; i < d.size(); i++) res = (res + a[i] * d[i]) % p;
+        return res;
+    }
+}
+```
+### $O(K^2 \log{N})$ 키타마사
+```cpp
+namespace Poly { // NTT 다항식 나눗셈, 키타마사
     template <typename T>
-    vector<ll> kitamasaNaive(ll n, const vector<T> &g, const ll MOD) { // f(x)=x^n에 대해 f % g 계산 // g차수 k일 때 O(K^2 logN)
+    vector<ll> divideModNaive(ll n, const vector<T> &g, const ll MOD) { // f(x)=x^n에 대해 f % g 계산 // g차수 k일 때 O(K^2 logN)
         vector<ll> res = {1};
         vector<ll> xn = {0, 1};
 
@@ -254,26 +271,13 @@ namespace Poly { // NTT 다항식 나눗셈, 키타마사
         return res;
     }
     
-    template <ll p, ll primitiveRoot, typename T> // p = a * 2^b + 1 꼴 소수
-    ll recurrenceNTT(ll n, const vector<T> &a, const vector<T> &coef) { // a는 초항{a1, a2, ..., ak}, c는 계수{c1, c2, ..., ck} // A_n = (C_1 x A_n−1 + C_2 x A_n−2 + ... + C_k x A_n−k) mod P일 때 A_n 계산
+    template <typename T>
+    ll kitamasaNaive(ll n, const vector<T> &a, const vector<T> &coef, const ll MOD) { // a는 초항{a1, a2, ..., ak}, c는 계수{c1, c2, ..., ck} // A_n = (C_1 x A_n−1 + C_2 x A_n−2 + ... + C_k x A_n−k) mod P일 때 A_n 계산
         if (n <= a.size()) return a[n - 1];
 
         vector<ll> f(coef.size() + 1, 1); // x^k - c_1 x^(k-1) - c_2 x^(k-2) - ... - c_k x^0
         for (int i = 0; i < coef.size(); i++) f[coef.size() - 1 - i] = -coef[i];
-        auto d = kitamasaNTT<p, primitiveRoot>(n - 1, f); // x^(n-1)을 {x^k - c_1 x^(k-1) - c_2 x^(k-2) - ... - c_k x^0}로 나눈 나머지
-
-        ll res = 0; // an = a1 * d1 + a2 * d2 + ... + ak * dk
-        for (int i = 0; i < d.size(); i++) res = (res + a[i] * d[i]) % p;
-        return res;
-    }
-    
-    template <typename T> // p = a * 2^b + 1 꼴 소수
-    ll recurrenceNaive(ll n, const vector<T> &a, const vector<T> &coef, const ll MOD) { // a는 초항{a1, a2, ..., ak}, c는 계수{c1, c2, ..., ck} // A_n = (C_1 x A_n−1 + C_2 x A_n−2 + ... + C_k x A_n−k) mod P일 때 A_n 계산
-        if (n <= a.size()) return a[n - 1];
-
-        vector<ll> f(coef.size() + 1, 1); // x^k - c_1 x^(k-1) - c_2 x^(k-2) - ... - c_k x^0
-        for (int i = 0; i < coef.size(); i++) f[coef.size() - 1 - i] = -coef[i];
-        auto d = kitamasaNaive(n - 1, f, MOD); // x^(n-1)을 {x^k - c_1 x^(k-1) - c_2 x^(k-2) - ... - c_k x^0}로 나눈 나머지와 같음
+        auto d = divideModNaive(n - 1, f, MOD); // x^(n-1)을 {x^k - c_1 x^(k-1) - c_2 x^(k-2) - ... - c_k x^0}로 나눈 나머지와 같음
         
         ll res = 0; // an = a1 * d1 + a2 * d2 + ... + ak * dk
         for (int i = 0; i < d.size(); i++) res = (res + a[i] * d[i]) % MOD;
@@ -287,11 +291,15 @@ namespace Poly { // NTT 다항식 나눗셈, 키타마사
 | `multiply<double_t>(f, g)` | fft 다항식 곱셈 | $O(N \log{N})$ |
 | `multiplyPrecisely<double_t>(f, g)` | 정확도 높은 fft 다항식 곱셈 |  $O(N \log{N})$ |
 | `multiplyMod<p, primitiveRoot>(f, g)` | ntt 다항식 곱셈 | $O(N \log{N})$ |
-| `invertMod<p, primitiveRoot>(f, deg)` | $f(x)^{-1} \pmod{x^\text{deg}}$ | $O(N \log{N})$ |
+| `invertMod<p, primitiveRoot>(f, deg)` | $f(x)^{-1} \pmod{x^\text{deg}}$ 계산 | $O(N \log{N})$ |
 |`divideMod<p, primitiveRoot>(f, g)` | {$f(x) \text{ / } g(x)$, $f(x) \text{ \% } g(x)$} 계산 | $O(N \log{N})$ |
-|`remainderMod<p, primitiveRoot>(f, g)` | $f(x) \text{ \% } g(x)$ 계산 | $O(N \log{N})$ |
-|`kitamasaNTT<p, primitiveRoot>(n, g)` | $x^n \pmod{g(x)}$ 계산 | $O(K \log{K} \log{N})$ ($K$는 $g(x)$의 최고차항의 차수)   
-|`kitamasaNaive<p, primitiveRoot>(n, g, MOD)` | $x^n \pmod{g(x)}$ 계산 | $O(K^2 \log{N})$ ($K$는 $g(x)$의 최고차항의 차수)   
+|`divideMod<p, primitiveRoot>(n, g)` | $x^n \pmod{g(x)}$ 계산 | $O(K \log{K} \log{N})$ ($K$는 $g(x)$의 최고차항의 차수)   
+|`divideModNaive(n, g, MOD)` | $x^n \pmod{g(x)}$ 계산 | $O(K^2 \log{N})$ ($K$는 $g(x)$의 최고차항의 차수)   
+|`kitamasaNTT<p, primitiveRoot>(n, a, coef)` | 초항 ${a_1, ..., a_k}$과 점화식 $a_i = c_1 a_{i−1} + ... + c_k a_{i−k}$에 대해 $a_n \mod{p}$ 계산 | $O(K \log{K} \log{N})$ ($K$는 $g(x)$의 최고차항의 차수)   
+|`kitamasaNaive(n, a, coef, MOD)` | 초항 ${a_1, ..., a_k}$과 점화식 $a_i = c_1 a_{i−1} + ... + c_k a_{i−k}$에 대해 $a_n \mod{\text{MOD}}$ 계산 | $O(K^2 \log{N})$ ($K$는 $g(x)$의 최고차항의 차수)   
+
+`<p, primitiveRoot>`가 붙은 함수는 NTT사용하는 함수임   
+kitamasa의 경우 MOD가 NTT를 사용할 수 없는 수라면 `kitamasaNaive(n, g, MOD)`를 써야 함   
 
 ### 사용설명
 FFT 쓸 때 가능하면 double 사용   
@@ -317,7 +325,8 @@ auto res = Poly::multiplyMod5e18(poly1, poly2);
 [큰 수 곱셈 (3)](https://www.acmicpc.net/problem/22289)   
 [보석 가게](https://www.acmicpc.net/problem/13575)   
 [씽크스몰](https://www.acmicpc.net/problem/11385) - NTT + CRT(`multiplyMod5e18()` 함수 사용하면 됨)   
-[RNG](https://www.acmicpc.net/problem/13725) - 다항식 나눗셈(키타마사 필요)   
+[RNG](https://www.acmicpc.net/problem/13725) - 다항식 나눗셈, 키타마사(`kitamasaNTT()`)   
+[피보나치 수 3](https://www.acmicpc.net/problem/2749) - 다항식 나눗셈, 키타마사(`kitamasaNaive()`)   
 
 ### 원리
 FFT의 비재귀 구현을 위해 `f[i]`와 `f[bitReverse(i)]`를 swap하는 과정에서 비트트릭 사용   
