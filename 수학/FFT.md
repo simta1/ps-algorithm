@@ -152,7 +152,54 @@ namespace Poly { // NTT
     }
 }
 ```
-### 다항식 나눗셈, $O(K \log{K} \log{N})$ 키타마사
+### $O(K^2 \log{N})$ 키타마사
+```cpp
+namespace Poly { // O(K^2 logN) 키타마사
+    template <typename T>
+    vector<ll> divideModNaive(ll n, const vector<T> &g, const ll MOD) { // f(x)=x^n에 대해 f % g 계산 // g차수 k일 때 O(K^2 logN)
+        vector<ll> res = {1};
+        vector<ll> xn = {0, 1};
+
+        auto add = [&MOD](ll &a, ll b) { a = (a + b) % MOD; };
+        auto sub = [&MOD](ll &a, ll b) { a = (a - b) % MOD; if (a < 0) a += MOD; };
+
+        auto multiplyModNaive = [&](const vector<ll> &a, const vector<ll> &b) {
+            vector<ll> res(a.size() + b.size() - 1);
+            for (int i = 0; i < a.size(); i++) for (int j = 0; j < b.size(); j++) add(res[i + j], a[i] * b[j]);
+            return res;
+        };
+
+        auto remainderModNaive = [&](const vector<ll> &a, const vector<ll> &b) {
+            vector<ll> res(a);
+            for (int i = a.size() - 1; i >= b.size() - 1; i--) for (int j = 0; j < b.size(); j++) sub(res[i - (b.size() - 1 - j)], res[i] * b[j]);
+            res.resize(b.size() - 1);
+            return res;
+        };
+        
+        while (n) {
+            if (n & 1) res = remainderModNaive(multiplyModNaive(res, xn), g);
+            xn = remainderModNaive(multiplyModNaive(xn, xn), g);
+            n >>= 1;
+        }
+
+        return res;
+    }
+    
+    template <typename T>
+    ll kitamasaNaive(ll n, const vector<T> &a, const vector<T> &coef, const ll MOD) { // a는 초항{a1, a2, ..., ak}, c는 계수{c1, c2, ..., ck} // A_n = (C_1 x A_n−1 + C_2 x A_n−2 + ... + C_k x A_n−k) mod P일 때 A_n 계산
+        if (n <= a.size()) return a[n - 1];
+
+        vector<ll> f(coef.size() + 1, 1); // x^k - c_1 x^(k-1) - c_2 x^(k-2) - ... - c_k x^0
+        for (int i = 0; i < coef.size(); i++) f[coef.size() - 1 - i] = -coef[i];
+        auto d = divideModNaive(n - 1, f, MOD); // x^(n-1)을 {x^k - c_1 x^(k-1) - c_2 x^(k-2) - ... - c_k x^0}로 나눈 나머지와 같음
+        
+        ll res = 0; // an = a1 * d1 + a2 * d2 + ... + ak * dk
+        for (int i = 0; i < d.size(); i++) res = (res + a[i] * d[i]) % MOD;
+        return res;
+    }
+}
+```
+### $O(K \log{K} \log{N})$ 다항식 나눗셈, 키타마사
 ```cpp
 namespace Poly { // NTT 다항식 나눗셈, 키타마사
     template <ll p, ll primitiveRoot, typename T>
@@ -234,53 +281,6 @@ namespace Poly { // NTT 다항식 나눗셈, 키타마사
 
         ll res = 0; // an = a1 * d1 + a2 * d2 + ... + ak * dk
         for (int i = 0; i < d.size(); i++) res = (res + a[i] * d[i]) % p;
-        return res;
-    }
-}
-```
-### $O(K^2 \log{N})$ 키타마사
-```cpp
-namespace Poly { // NTT 다항식 나눗셈, 키타마사
-    template <typename T>
-    vector<ll> divideModNaive(ll n, const vector<T> &g, const ll MOD) { // f(x)=x^n에 대해 f % g 계산 // g차수 k일 때 O(K^2 logN)
-        vector<ll> res = {1};
-        vector<ll> xn = {0, 1};
-
-        auto add = [&MOD](ll &a, ll b) { a = (a + b) % MOD; };
-        auto sub = [&MOD](ll &a, ll b) { a = (a - b) % MOD; if (a < 0) a += MOD; };
-
-        auto multiplyModNaive = [&](const vector<ll> &a, const vector<ll> &b) {
-            vector<ll> res(a.size() + b.size() - 1);
-            for (int i = 0; i < a.size(); i++) for (int j = 0; j < b.size(); j++) add(res[i + j], a[i] * b[j]);
-            return res;
-        };
-
-        auto remainderModNaive = [&](const vector<ll> &a, const vector<ll> &b) {
-            vector<ll> res(a);
-            for (int i = a.size() - 1; i >= b.size() - 1; i--) for (int j = 0; j < b.size(); j++) sub(res[i - (b.size() - 1 - j)], res[i] * b[j]);
-            res.resize(b.size() - 1);
-            return res;
-        };
-        
-        while (n) {
-            if (n & 1) res = remainderModNaive(multiplyModNaive(res, xn), g);
-            xn = remainderModNaive(multiplyModNaive(xn, xn), g);
-            n >>= 1;
-        }
-
-        return res;
-    }
-    
-    template <typename T>
-    ll kitamasaNaive(ll n, const vector<T> &a, const vector<T> &coef, const ll MOD) { // a는 초항{a1, a2, ..., ak}, c는 계수{c1, c2, ..., ck} // A_n = (C_1 x A_n−1 + C_2 x A_n−2 + ... + C_k x A_n−k) mod P일 때 A_n 계산
-        if (n <= a.size()) return a[n - 1];
-
-        vector<ll> f(coef.size() + 1, 1); // x^k - c_1 x^(k-1) - c_2 x^(k-2) - ... - c_k x^0
-        for (int i = 0; i < coef.size(); i++) f[coef.size() - 1 - i] = -coef[i];
-        auto d = divideModNaive(n - 1, f, MOD); // x^(n-1)을 {x^k - c_1 x^(k-1) - c_2 x^(k-2) - ... - c_k x^0}로 나눈 나머지와 같음
-        
-        ll res = 0; // an = a1 * d1 + a2 * d2 + ... + ak * dk
-        for (int i = 0; i < d.size(); i++) res = (res + a[i] * d[i]) % MOD;
         return res;
     }
 }
