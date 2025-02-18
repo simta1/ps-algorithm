@@ -77,9 +77,33 @@ namespace Poly { // FFT
 }
 ```
 ### 정확도 높은 FFT
-### TODO [씽크스몰](https://www.acmicpc.net/problem/11385)에서 WA 받았음
 ```cpp
 namespace Poly { // 정확도 높은 FFT
+    template <typename double_t>
+    void fftPrecisely(vector<complex<double_t> > &f, bool is_reverse) {
+        using cpx = complex<double_t>;
+        int n = f.size();
+        for (auto [i, j] : getBitRev(n)) swap(f[i], f[j]);
+        
+        vector<cpx> roots(n / 2);
+		double_t ang = 2 * acos(-1) / n * (is_reverse ? -1 : 1);
+        for (int i = 0; i < n / 2; i++) roots[i] = cpx(cos(ang * i), sin(ang * i));
+
+        for (int m = 2; m <= n; m <<= 1) {
+            int step = n / m;
+            for (int i = 0; i < n; i += m) {
+                for (int j = 0; j < m / 2; j++) {
+                    cpx even = f[i + j];
+                    cpx odd = roots[step * j] * f[i + j + m / 2];
+                    f[i + j] = even + odd;
+                    f[i + j + m / 2] = even - odd;
+                }
+            }
+        }
+
+        if (is_reverse) for (auto &e : f) e /= cpx(n);
+	}
+    
     static constexpr int splitBit = 15;
     static constexpr int split = (1 << splitBit) - 1;
     template <typename double_t=double, typename T>
@@ -89,8 +113,8 @@ namespace Poly { // 정확도 높은 FFT
         vector<cpx> a(n), b(n), c1(n), c2(n);
         for (int i = 0; i < v1.size(); i++) a[i] = cpx(v1[i] >> splitBit, v1[i] & split);
         for (int i = 0; i < v2.size(); i++) b[i] = cpx(v2[i] >> splitBit, v2[i] & split);
-        fft(a, false);
-        fft(b, false);
+        fftPrecisely(a, false);
+        fftPrecisely(b, false);
         for (int i = 0; i < n; i++) {
             int j = (i ? (n - i) : i);
             cpx ans1 = (a[i] + conj(a[j])) * cpx(0.5, 0);
@@ -100,11 +124,16 @@ namespace Poly { // 정확도 높은 FFT
             c1[i] = (ans1 * ans3) + (ans1 * ans4) * cpx(0, 1);
             c2[i] = (ans2 * ans3) + (ans2 * ans4) * cpx(0, 1);
         }
-        fft(c1, true);
-        fft(c2, true);
+        fftPrecisely(c1, true);
+        fftPrecisely(c2, true);
         
         vector<ll> res(v1.size() + v2.size() - 1);
-        for (int i = 0; i < res.size(); i++) res[i] = (ll(round(c1[i].real())) << 2 * splitBit) + (ll(round(c1[i].imag()) + llround(c2[i].real())) << splitBit) + round(c2[i].imag());
+        for (int i = 0; i < res.size(); i++) {
+            ll av = llround(c1[i].real());
+            ll bv = llround(c1[i].imag()) + llround(c2[i].real());
+			ll cv = llround(c2[i].imag());
+            res[i] = (av << 30) + (bv << 15) + cv;
+        }
         return res;
     }
 }
@@ -290,6 +319,24 @@ namespace Poly { // NTT 다항식 나눗셈, 키타마사
 
 `<p, primitiveRoot>`가 붙은 함수는 NTT사용하는 함수임   
 kitamasa의 경우 MOD가 NTT를 사용할 수 없는 수라면 `kitamasaNaive(n, g, MOD)`를 써야 함   
+
+### 구현 주의사항
+정확도 높은 fft에서는 더 높은 정확도를 위해 `fft()` 함수 대신 `fftPrecisely()`함수를 새로 작성해서 사용했음   
+`__transform()`의 구조를 `fftPrecisely()`와 비슷하게 작성하고 매개변수로 `T root` 대신 `vector<T> &roots`를 받도록 하면 코드의 재사용률을 높일 수 있지만 fftPrecisely()의 속도가 생각보다 느려서 따로 사용하기로 결정함   
+```cpp
+// 정확도 높음
+vector<cpx> roots(n / 2);
+double ang = 2 * acos(-1) / n * (is_reverse ? -1 : 1);
+for (int i = 0; i < n / 2; i++) roots[i] = cpx(cos(ang * i), sin(ang * i));
+
+// 정확도 낮음
+double t = 2 * acos(double_t(-1)) / n * (is_reverse ? -1 : 1);
+cpx root(cos(t), sin(t));
+vector<cpx> my_roots(n / 2, 1);
+for (int i = 1; i < n / 2; i++) my_roots[i] = my_roots[i - 1] * root;
+
+// 미리 계산된 root를 제곱해가며 roots를 얻는 것보다 직접 angle * i의 값에 cos, sin함수를 취해 roots배열을 계산하는 것이 더 정확도가 높음
+```
 
 ### 사용설명
 FFT 쓸 때 가능하면 double 사용   
