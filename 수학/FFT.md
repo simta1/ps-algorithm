@@ -80,41 +80,31 @@ namespace Poly { // FFT
 ### TODO [씽크스몰](https://www.acmicpc.net/problem/11385)에서 WA 받았음
 ```cpp
 namespace Poly { // 정확도 높은 FFT
-    static const int splitBit = 20;
-    static const int split = 1 << splitBit;
+    static constexpr int splitBit = 15;
+    static constexpr int split = (1 << splitBit) - 1;
     template <typename double_t=double, typename T>
     vector<ll> multiplyPrecisely(const vector<T> &v1, const vector<T> &v2) {
         using cpx = complex<double_t>;
         int n = pow2GE(v1.size() + v2.size() + 1);
-
-        vector<cpx> a1(n), a2(n), b1(n), b2(n);
-        for (int i = 0; i < v1.size(); i++) {
-            a1[i] = v1[i] & (split - 1);
-            a2[i] = v1[i] >> splitBit;
+        vector<cpx> a(n), b(n), c1(n), c2(n);
+        for (int i = 0; i < v1.size(); i++) a[i] = cpx(v1[i] >> splitBit, v1[i] & split);
+        for (int i = 0; i < v2.size(); i++) b[i] = cpx(v2[i] >> splitBit, v2[i] & split);
+        fft(a, false);
+        fft(b, false);
+        for (int i = 0; i < n; i++) {
+            int j = (i ? (n - i) : i);
+            cpx ans1 = (a[i] + conj(a[j])) * cpx(0.5, 0);
+            cpx ans2 = (a[i] - conj(a[j])) * cpx(0, -0.5);
+            cpx ans3 = (b[i] + conj(b[j])) * cpx(0.5, 0);
+            cpx ans4 = (b[i] - conj(b[j])) * cpx(0, -0.5);
+            c1[i] = (ans1 * ans3) + (ans1 * ans4) * cpx(0, 1);
+            c2[i] = (ans2 * ans3) + (ans2 * ans4) * cpx(0, 1);
         }
-        for (int i = 0; i < v2.size(); i++) {
-            b1[i] = v2[i] & (split - 1);
-            b2[i] = v2[i] >> splitBit;
-        }
-
-        fft(a1, false);
-        fft(a2, false);
-        fft(b1, false);
-        fft(b2, false);
-
-        vector<cpx> c1(n), c2(n), c3(n);
-        for(int i=0; i<n; i++){
-            c1[i] = a1[i] * b1[i];
-            c2[i] = a1[i] * b2[i] + a2[i] * b1[i];
-            c3[i] = a2[i] * b2[i];
-        }
-
         fft(c1, true);
         fft(c2, true);
-        fft(c3, true);
-
+        
         vector<ll> res(v1.size() + v2.size() - 1);
-        for (int i = 0; i < res.size(); i++) res[i] = round(c1[i].real()) + (ll(round(c2[i].real())) << splitBit) + (ll(round(c3[i].real())) << 2 * splitBit);
+        for (int i = 0; i < res.size(); i++) res[i] = (ll(round(c1[i].real())) << 2 * splitBit) + (ll(round(c1[i].imag()) + llround(c2[i].real())) << splitBit) + round(c2[i].imag());
         return res;
     }
 }
