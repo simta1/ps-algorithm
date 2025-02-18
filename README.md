@@ -314,6 +314,12 @@ mermaid stateDiagram-v2 사용
     <!-- * <span class="">[고합성수 찾기]</span>
     * <span class="">[우월고합성수]</span> -->
     <!-- Szemerédi–Trotter theorem -->
+    <!-- 
+      * <span class="">[3진 FFT(D-)]</span> <!-- https://www.acmicpc.net/problem/14882 -->
+    -->
+    <!-- 
+    * <span class="">[FFT 응용]</span> <!-- https://hyperbolic.tistory.com/4 -->
+     -->
     * <span class="additional">[부등식](/수학/부등식.md)</span>
     * <span class="silver">[분할정복 거듭제곱(S+)](/수학/빠른%20거듭제곱.md)</span>
     * <span class="silver">[에라토스테네스의 체(S+)](/수학/에라토스테네스의%20체.md)</span>
@@ -340,20 +346,18 @@ mermaid stateDiagram-v2 사용
       * <span class="diamond">[정확도 높은 FFT(D-)](/수학/FFT.md#정확도-높은-fft)</span>
       * <span class="diamond">[다항식곱셈: NTT(D-)](/수학/FFT.md#ntt-number-theoretic-transform)</span>
       * <span class="diamond">[O(K logK logN) 다항식 나눗셈, 키타마사(D+)](/수학/FFT.md#ok-logk-logn-다항식-나눗셈-키타마사)</span>
-      * <span class="">[3진 FFT(D-)]</span> <!-- https://www.acmicpc.net/problem/14882 -->
+      * <span class="">[다중 대입값 계산(D+)]</span> <!-- https://infossm.github.io/blog/2019/06/16/Multipoint-evaluation/ -->
     * <span class="">[이산 로그(P+)]</span>
     * <span class="diamond">[이산 제곱근(D-)](/수학/Tonelli-Shanks.md)</span>
     * <span class="">[이산 k제곱근]</span>
     * <span class="diamond">[Cornacchia's algorithm(D-)](/수학/Cornacchia.md)</span>
     * <span class="diamond">[Power tower(D-)](/수학/Power%20Tower.md)</span>
-    * <span class="">[다중 대입값 계산]</span> <!-- https://infossm.github.io/blog/2019/06/16/Multipoint-evaluation/ -->
     * <span class="">[simplex]</span> <!-- https://velog.io/@wjleekr927/Simplex-algorithm -->
     * <span class="">[LP]</span>
-    * <span class="">[XOR Convolution]</span>
-    * <span class="">[FFT 응용]</span> <!-- https://hyperbolic.tistory.com/4 -->
-    * <span class="">[online FFT]</span> <!-- https://cocoachan.tistory.com/15 -->
-    * <span class="">[CDQ]</span> <!-- https://codeforces.com/blog/entry/111399 -->
-    * <span class="">[FWHT]</span> <!-- https://velog.io/@dnr6054/Fast-Walsh-Hadamard-Transform -->
+    * <span class="">[CDQ Convolution(online FFT)]</span> <!-- https://codeforces.com/blog/entry/111399 --> <!-- https://cocoachan.tistory.com/15 -->
+    * <span class="">[XOR Convolution, FWHT]</span> <!-- fft()에서 root=1로 하면 roots[*]=1이라 xor convolution 되는 듯 https://github.com/koosaga/olympiad/blob/master/Library/codes/math/algebra.cpp --> <!-- https://velog.io/@dnr6054/Fast-Walsh-Hadamard-Transform --> <!-- https://cubelover.tistory.com/19 --> <!-- https://teferi.net/ps/fwht -->
+    * <span class="">[OR/AND Convolution]</span> <!-- https://codeforces.com/blog/entry/115438 -->
+    * <span class="">[subset, GCD, LCM Convolution]</span> <!-- https://www.acmicpc.net/blog/view/127 --> <!-- https://codeforces.com/blog/entry/92153 --> <!-- https://codeforces.com/blog/entry/112346 -->
     * <span class="">[번사이드 보조정리]</span> <!-- https://algoshitpo.github.io/2020/02/09/burnside/ -->
     * <span class="">[홀의 결혼 정리]</span>
     * <span class="">[린드스트롬-게셀-비엔노 보조정리(LGV Lemma)]</span>
