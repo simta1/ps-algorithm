@@ -234,7 +234,7 @@ namespace Poly { // NTT 다항식 나눗셈, 키타마사
             vector<ll> prod = multiplyMod<p, primitiveRoot>(res, vector<ll>(f.begin(), f.begin() + nextDeg));
             prod.resize(nextDeg);
 
-            // prod = 2 - f(x) * res(x) (1이 되어야 함)
+            // prod = 2 - f(x) * res(x)
             if ((prod[0] -= 2) < 0) prod[0] += p;
             for (int i = 0; i < prod.size(); i++) if (prod[i] != 0) prod[i] = p - prod[i];
 
@@ -399,6 +399,16 @@ FFT의 비재귀 구현을 위해 `f[i]`와 `f[bitReverse(i)]`를 swap하는 과
         // ...
     }
 ```
+
+> 다항식 나눗셈에서 사용되는 invertMod의 원리([출처](https://algoshitpo.github.io/2020/05/20/fft-ntt/))   
+$B(x)C(x) \equiv 1 \pmod{x^k}$   
+$B(x)C(x) - 1 \equiv 0 \pmod{x^k}$   
+$(B(x)C(x) - 1)^2 \equiv 0 \pmod{x^{2k}}$   
+$B(x)^2 C(x)^2 - 2b(x)C(x) + 1 \equiv 0 \pmod{x^{2k}}$   
+$B(x)C(x)(2 - B(x)C(x)) \equiv 1 \pmod{x^{2k}}$   
+$B(x)^{-1} \equiv C(x)(2-B(x)C(x)) \pmod{x^{2k}}$   
+>
+> 따라서 $\mod{x^k}$에서 $B(x)$의 역원 $C(x)$를 안다면 $\mod{x^{2k}}$의 역원은 $C(x) (2 - B(x)C(x))$로 계산할 수 있다.   
 
 ### 참고링크
 https://algoshitpo.github.io/2020/05/20/fft-ntt/ - fft, 정확도 높은 fft, ntt, 키타마사   
