@@ -401,7 +401,9 @@ FFT의 비재귀 구현을 위해 `f[i]`와 `f[bitReverse(i)]`를 swap하는 과
 ```
 
 ### 참고링크
-https://algoshitpo.github.io/2020/05/20/fft-ntt/ - fft, 정확도 높은 fft, ntt   
+https://algoshitpo.github.io/2020/05/20/fft-ntt/ - fft, 정확도 높은 fft, ntt, 키타마사   
 https://algoshitpo.github.io/2020/05/20/linear-recurrence/ - 다항식 나눗셈   
 https://blog.myungwoo.kr/147 - 다항식 나눗셈 시간복잡도   
-https://hyperbolic.tistory.com/4   
+https://hyperbolic.tistory.com/4 - 다항식 나눗셈   
+https://justicehui.github.io/hard-algorithm/2021/03/13/kitamasa/ - 키타마사   
+https://blog.myungwoo.kr/148 - 키타마사   
