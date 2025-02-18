@@ -315,11 +315,13 @@ mermaid stateDiagram-v2 사용
     * <span class="">[우월고합성수]</span> -->
     <!-- Szemerédi–Trotter theorem -->
     <!-- 
-      * <span class="">[3진 FFT(D-)]</span> <!-- https://www.acmicpc.net/problem/14882 -->
+      * <span class="">[3진 FFT(D-)]</span>
+      https://www.acmicpc.net/problem/14882 
     -->
     <!-- 
-    * <span class="">[FFT 응용]</span> <!-- https://hyperbolic.tistory.com/4 -->
-     -->
+      * <span class="">[FFT 응용]</span>
+      https://hyperbolic.tistory.com/4
+    -->
     * <span class="additional">[부등식](/수학/부등식.md)</span>
     * <span class="silver">[분할정복 거듭제곱(S+)](/수학/빠른%20거듭제곱.md)</span>
     * <span class="silver">[에라토스테네스의 체(S+)](/수학/에라토스테네스의%20체.md)</span>
