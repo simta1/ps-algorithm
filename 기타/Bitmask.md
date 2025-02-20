@@ -3,7 +3,7 @@
 ```cpp
 // init
 a = 0; // empty
-a = (1<<n) - 1; // all
+a = (1 << n) - 1; // all
 
 // update
 a |= (1<<x);	// add
@@ -11,8 +11,12 @@ a &= ~(1<<x);	// remove
 a ^= (1<<x);	// toggle
 
 // check
-if (a & (1<<x))	// have // if (a >> x & 1)도 가능
+if (a & (1<<x))	// have
 if (~a & (1<<x))// don't have
+
+// check 동치코드
+if (a >> x & 1) // have
+if (~a >> x & 1) // don't have
 
 // last element (bit trick)
 a &= (a - 1);	// remove last
