@@ -46,7 +46,7 @@ pair<int, vector<vector<int> > > graphToDAG(int n, const vector<vector<int> > &a
         }
     }
 
-    // for (auto scc : sccs) for (auto u : scc) cout << "orig node " << u << " -> dag node " << sccn[u] + 1 << "\n";
+    // for (auto &scc : sccs) for (auto u : scc) cout << "orig node " << u << " -> dag node " << sccn[u] + 1 << "\n";
     // for (int u = 1; u <= sccs.size(); u++) for (auto v : dag[u]) cout << "dag edge : " << u << " -> " << v << "\n";
     
     return {sccs.size(), dag}; // auto [dagN, dag] = graphToDAG(n, adj, sccs, sccn); 으로 사용
@@ -119,7 +119,7 @@ pair<int, vector<vector<int> > > graphToDAG(int n, const vector<vector<int> > &a
         }
     }
 
-    // for (auto scc : sccs) for (auto u : scc) cout << "orig node " << u << " -> dag node " << sccn[u] + 1 << "\n";
+    // for (auto &scc : sccs) for (auto u : scc) cout << "orig node " << u << " -> dag node " << sccn[u] + 1 << "\n";
     // for (int u = 1; u <= sccs.size(); u++) for (auto v : dag[u]) cout << "dag edge : " << u << " -> " << v << "\n";
     
     return {sccs.size(), dag}; // auto [dagN, dag] = graphToDAG(n, adj, sccs, sccn); 으로 사용
