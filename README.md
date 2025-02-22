@@ -339,7 +339,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[프뤼퍼 수열]</span> <!-- https://hongjun7.tistory.com/10 -->
     * <span class="">[베르누이 수]</span>
     * ~~<span class="platinum">[Faulhaber(P+)](/수학/Faulhaber.md)</span>~~
-    * <span class="">[Stern-Brocot 트리]</span> <!-- https://blog.myungwoo.kr/126 --> <!-- https://youngyojun.github.io/secmem/2022/02/18/sigma-sum-stern-brocot/ --> <!-- https://zigui.tistory.com/29 -->
+    * <span class="">[Stern-Brocot 트리]</span> <!-- https://www.acmicpc.net/problem/1882 --> <!-- https://blog.myungwoo.kr/126 --> <!-- https://youngyojun.github.io/secmem/2022/02/18/sigma-sum-stern-brocot/ --> <!-- https://zigui.tistory.com/29 -->
     * <span class="platinum">[밀러-라빈 소수 판별법(P+)](/수학/MillerRabin.md)</span>
     * <span class="platinum">[폴라드 로(P+)](/수학/PollardRho.md)</span>
     * ~~<span class="">[카라츠바]</span>~~
@@ -455,6 +455,7 @@ mermaid stateDiagram-v2 사용
   * <span class="information">[수학관련](/C++/함수/수학%20관련.md)</span>
   * <span class="information">[배열관련](/C++/함수/배열%20관련.md)</span>
   * <span class="">[regex]</span>
+  * <span class="">[std array](/C++/함수/std%20array.md)</span>
   * <span class="">[constexpr, static_assert]</span> <!-- if constexpr 등등도 포함 -->
   * <span class="information">[multiset](/C++/함수/multiset.md)</span>
   * <span class="information">[permutation](/C++/함수/permutation.md)</span>
