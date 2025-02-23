@@ -6,7 +6,7 @@ namespace Poly { // FFT
     using ll = long long;
     int pow2GE(int n) { return 1 << __lg(n) + !!(n & (n - 1)); }
     
-    vector<vector<pair<int, int> > > bitRev; // 비트 반전 저장 // 다항식 나눗셈 등에선 ntt()를 여러 번 호출하므로 비트 반전 결과를 캐싱해두면 좋다고 함
+    vector<vector<pair<int, int> > > bitRev; // 비트 반전 저장 // 다항식 곱셈 한 번에도 fft()가 여러 번 호출되므로 비트 반전 결과를 캐싱해두고 사용하면 성능향상에 좋음
     const vector<pair<int, int> >& getBitRev(int n) {
         if (__lg(n) >= bitRev.size()) bitRev.resize(__lg(n) + 1);
 
