@@ -471,7 +471,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[cph, competitive-companion]</span> <!-- https://chromewebstore.google.com/detail/competitive-companion/cjnmckjndlpiamhfimnnjmnckgghkjbl -->
   * <span class="information">[define](/C++/ps용%20환경설정/define.md)</span>
   * <span class="information">[vsc snippet](/C++/ps용%20환경설정/snippet.md)</span>
-  * <span class="">[vim script]</span> <!-- auto cin -->
+  * <span class="information">[vim script](/C++/ps용%20환경설정/vim%20script.md)</span>
   * <span class="">[debug, c_cpp_properties.json 설정]</span>
   * <span class="">[Pre-defined Compiler Macros]</span> <!-- 버전 gnu++17로 해야 Template argument deduction 등 문법 사용가능 -->
   * <span class="">[percompiled header]</span> <!-- https://codeforces.com/blog/entry/79026 --> <!-- https://codeforces.com/blog/entry/53909? -->
