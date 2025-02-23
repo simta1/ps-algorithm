@@ -54,6 +54,10 @@ vector<int> getNodeOfBCC(int n, const vector<pair<int, int> > &bcc) {
     
     ++trueValue;
     return res;
+
+/*  int E = bcc.size(), V = getNodeOfBCC(n, bcc).size();라 할 때
+    E >= V라면 사이클을 이루는 BCC
+    E < V라면 self-loop(E=0, V=1) 혹은 단절선(E=1, V=2) 뿐임     */
 }
 ```
 그냥 set 사용해서 간단히 구현할 수도 있지만 너무 느리다.   
@@ -94,6 +98,7 @@ cout << bridges << "\n"; // 단절선 개수
 
 ### 문제
 [Critical Structures](https://www.acmicpc.net/problem/20264)   
+[Minimum Spanning Cactus](https://www.acmicpc.net/problem/23314)   
 
 ### 참고링크
 https://blog.naver.com/kks227/220802704686   
