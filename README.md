@@ -132,7 +132,7 @@ mermaid stateDiagram-v2 사용
     * <span class="platinum">[단절점(P-)](/그래프%20이론/그래프/단절점.md)</span>
     * <span class="platinum">[단절선(P-)](/그래프%20이론/그래프/단절선.md)</span>
     * <span class="platinum">[이중 연결 요소(P-)](/그래프%20이론/그래프/BCC.md)</span>
-    * <span class="">[선인장(P+)]</span>
+    * <span class="platinum">[선인장(P+)](/그래프%20이론/그래프/선인장.md)</span>
     * <span class="">[블록 컷 트리]</span>
     * <span class="">[Dynamic MST]</span> <!-- https://koosaga.com/211 -->
     * <span class="">[_2th MST(D-)_]</span>
