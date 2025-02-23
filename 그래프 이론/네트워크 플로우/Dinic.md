@@ -86,7 +86,7 @@ public:
             }
         }
 
-        // proxySOurce -> s 연결 제거
+        // proxySource -> s 연결 제거
         adj[proxySource].pop_back();
         adj[s].pop_back();
 
@@ -128,8 +128,8 @@ $O(V^2 E)$
 그렇다고 map 쓰기엔 꽤 느려서 그냥 Edge구조체에 같이 저장하는 게 가장 나은 듯 함   
 
 > 무한간선이 포함된 그래프일 경우 최대유량 구할 때 INF에 다른 수가 더해지면서 오버플로우 날 가능성이 있음   
-이를 방지하고자 proxySource를 선언한뒤 proxySource -> e로 무한간선 하나를 이어준 뒤 proxySource -> sink로의 최대유량을 계산함   
-이러면 애초에 유량이 inf를 초과해서 흐를 수 없으므로 오버플로우 날 수가 없음
+proxySource를 선언하고 proxySource -> source로 무한간선 하나를 이어준 뒤 proxySource -> sink로의 최대유량을 계산하면 애초에 유량의 최대값이 inf를 넘지 못하므로 오버플로우가 발생하지 않음   
+내 구현에서는 proxySource를 n+1노드로 사용하므로 adj, level 등의 배열의 크기를 n+2로 설정했음   
 
 ### 사용설명
 > 무한간선이라면 addEdge(a, b, -1) 사용
