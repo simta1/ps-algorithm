@@ -38,21 +38,62 @@ vector<vector<pair<int, int> > > getBCC(int n, const vector<vector<int> > &adj) 
     return bccs;
 }
 ```
+### BCC에 포함된 간선 정보로부터 포함된 정점 찾기
+```cpp
+vector<int> getNodeOfBCC(int n, const vector<pair<int, int> > &bcc) {
+    static int trueValue = 1;
+    static vector<int> visited(n + 1);
+    // static vector<int> visited(1001); // 테스트케이스 여러 개라 n 바뀔 수 있는 문제면 ({n 입력제한 최대값} + 1) 크기만큼 초기화하기
+    
+    vector<int> res;
+    for (auto [u, v] : bcc) {
+        if (visited[u] != trueValue) res.push_back(u);
+        if (visited[v] != trueValue) res.push_back(v);
+        visited[u] = visited[v] = trueValue;
+    }
+    
+    ++trueValue;
+    return res;
+}
+```
+그냥 set 사용해서 간단히 구현할 수도 있지만 너무 느리다.   
+trueValue변수에 대한 설명은 [자주쓰는 변수명](/C++/기타/Variable%20Name.md#truevalue) 참고.   
+static변수는 한 번만 초기화되므로 trueValue의 이점을 그대로 적용할 수 있다.   
+
+하지만 오히려 한 번만 초기화된다는 점 때문에 [Critical Structures](https://www.acmicpc.net/problem/20264)처럼 여러 테스트케이스가 주어지고 중간에 n이 바뀔 수 있는 문제에서는 초기화 부분의 코드를 `static vector<int> visited(maxN + 1);`로 수정해서 사용해야 된다.(maxN은 입력제한에서 주어진 $n$의 최대값에 해당하는 리터럴)
 
 ### 시간복잡도
 $O(V + E)$   
 
 ### 구현 주의사항
-`if (dfsn[next] < dfsn[cur]) edgeStack.emplace(cur, next);`에서 if문 확인 해줘야 간선이 중복되어 들어가지 않음   
+`getBCC()`에서 `if (dfsn[next] < dfsn[cur]) edgeStack.emplace(cur, next);`에서 if문 확인 해줘야 간선이 중복되어 들어가지 않음   
 
 ### 개념정리
-BCC에서 정점의 개수를 $V$, 간선의 개수를 $E$라고 할 때   
-$E \ge V$라면 해당 BCC는 사이클을 이룬다.    
-$E = V$라면 해당 BCC는 단순사이클을 이루고,   
-$E \ge V + 1$이라면 해당 BCC의 모든 정점을 지나는 사이클에 chord가 존재한다.   
+2개 이상의 BCC에 포함되는 정점은 단절점이다.(역도 성립)   
+$V=2$, $E=1$라면 해당 BCC는 단절선이다.(역도 성립)   
+
+```cpp
+// ex) BCC 사용해서 단절점, 단절선 개수 세기
+int cutVertexes = 0, bridges = 0;
+
+auto bccs = getBCC(n, adj);
+vector<int> cnt(n + 1);
+
+for (auto &bcc : bccs) {
+    auto nodes = getNodeOfBCC(n, bcc);
+    int V = nodes.size();
+    int E = bcc.size();
+
+    for (auto e : nodes) criticalNodes += (++cnt[e] == 2);
+    bridges += (V == 2 && E == 1);
+}
+
+cout << cutVertexes << "\n"; // 단절점 개수 
+cout << bridges << "\n"; // 단절선 개수 
+```
 
 ### 문제
-[Cactus? Not cactus?](https://www.acmicpc.net/problem/10891)   
+[Critical Structures](https://www.acmicpc.net/problem/20264)   
 
 ### 참고링크
 https://blog.naver.com/kks227/220802704686   
