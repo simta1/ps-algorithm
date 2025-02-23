@@ -43,16 +43,10 @@ vector<vector<pair<int, int> > > getBCC(int n, const vector<vector<int> > &adj) 
 $O(V + E)$   
 
 ### 구현 주의사항
-
-
-### 사용설명
-
+`if (dfsn[next] < dfsn[cur]) edgeStack.emplace(cur, next);`에서 if문 확인 해줘야 간선이 중복되어 들어가지 않음   
 
 ### 문제
 [Cactus? Not cactus?](https://www.acmicpc.net/problem/10891)   
-
-### 원리
-
 
 ### 참고링크
 https://blog.naver.com/kks227/220802704686   
