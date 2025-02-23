@@ -1,3 +1,4 @@
+[카테고리](/README.md)
 ### c_cpp_properties.json
 ```json
 {

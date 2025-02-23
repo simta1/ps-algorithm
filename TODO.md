@@ -1,5 +1,4 @@
 ### 앞으로 할 거
-  1. BCC
   1. small to large
   1. simplex / LP dual
   1. 매트로이드
@@ -10,20 +9,16 @@
   1. 스프라그 그런디
   1. $\vdots$
   1. DP 최적화들
-  1. FFT 나눗셈
   1. 리-차오
   1. 선형대수학 카테고리 추가
-  1. infint, modint, baseint 구현체 추가
 
 ### 기존 문서에 추가할 거
   * [ ] 유니온파인드 `template <bool largeToSmall=false>` 추가
   * [ ] 오일러 회로 -> 오일러 경로
   * [ ] CHT DP -> lineContainer
-  * [ ] convex hull -> monotone chain
   * [ ] 행렬제곱 -> $O(R^3 + RlogN)$ 구현
 
 ### 코드 테스트 안 끝난 거
-  * [ ] splay tree
   * [ ] 방향 그래프에서 오일러 회로
 
 ### 개선할 거
@@ -34,11 +29,8 @@
   * [x] FFT -> 비재귀로 변경
   * [x] FFT -> 비트뒤집기 최적화
   * [ ] FFT -> SSE/AVX최적화?
-
   * [ ] 행렬곱셈 -> 캐시 적중률 높이기
-
   * [ ] 세그먼트 트리 -> 사칙연산 비트연산으로 대체
-  
   * [ ] LCA -> 캐시 적중률 높이기
 
 ### LaTeX 수식 형태 통일
@@ -46,11 +38,7 @@
 
 ## 리팩토링
 ### 코드, 폴더 구조
-  * [X] MST -> 클래스화
-  * [ ] 기하학 -> 기하학용 헤더? 묶기
   * [ ] 기하학 도형 -> assert(size() >= 3); 추가
-  * [ ] 세그먼트 트리 identity변수 만들기
-  * [ ] c++기능 관련 문서들 -> 카테고리로 돌아갈 수 있게 하이퍼링크 추가
   * [ ] 스니펫 제목 크기 \#\#\# -> \#\#으로 변경
 
 ### 함수명 통일
@@ -60,3 +48,4 @@
 
 ### 변수명 통일
   * [ ] lca -> depth배열 이름 dep로 바꾸기
+  * [ ] Dinic -> `template <typename F>` 대신 `template <typename flow_t>`나 `template <typename cap_t>`로 변경
