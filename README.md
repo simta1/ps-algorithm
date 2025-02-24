@@ -206,6 +206,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[단조 큐를 이용한 최적화]</span>
   * <span class="">[함수 개형을 이용한 최적화(Slope trick) (D-)]</span>
   * <span class="">[aliens 트릭(라그랑주 최적화)]</span>
+  * <span class="">[SMAWK]</span> <!-- https://github.com/koosaga/olympiad/blob/master/Library/codes/ad_hoc/smawk.cpp -->
   * <span class="">[벌레캠프-매시(D+)]</span>
   * <span class="">[커넥션 프로파일을 이용한 다이나믹 프로그래밍]</span> <!-- https://jh05013.github.io/blog/cpdp/ -->
   * <span class="ruby">[비트셋 LCS(R-)](/DP/비트셋%20LCS.md)</span>
@@ -396,6 +397,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[Gray code](/기타/Gray%20code.md)</span>
   * <span class="gold">[후위 표기식(G+)](/기타/Postfix%20Notation.md)</span>
   * <span class="">[중간에서 만나기(G+)]</span>
+  * <span class="platinum">[small to large(P-)](/기타/small%20to%20large.md)</span>
   * <span class="platinum">[반전수(P-)](/기타/반전수.md)</span>
   * <span class="">[스위핑]</span>
   * <span class="">[슬라이딩 윈도우]</span>
@@ -406,10 +408,8 @@ mermaid stateDiagram-v2 사용
   * <span class="">[hilbert Mo]</span> <!-- https://tamref.com/97 -->
   * <span class="platinum">[평방분할(P+)](/기타/제곱근%20분할법.md)</span>
   * <span class="">[병렬 이분 탐색(P+)]</span>
-  * <span class="">[small to large]</span>
   * <span class="">[차이 부등식]</span> <!-- https://koosaga.com/72 --> <!-- https://www.acmicpc.net/workbook/view/3303 -->
   * <span class="">[range mode query]</span> <!-- https://infossm.github.io/blog/2021/05/20/Data-Structure-For-Range-Mode-Query/ --> <!-- https://www.acmicpc.net/problem/14898 -->
-  * <span class="">[SMAWK]</span> <!-- https://github.com/koosaga/olympiad/blob/master/Library/codes/ad_hoc/smawk.cpp -->
   * <span class="">[춤추는 링크, 크누스 X]</span>
   * <span class="">[임의 정밀도(epsilon값 계산)(A)]</span> <!-- https://www.acmicpc.net/blog/view/37 -->
   * ~~<span class="">[담금질 기법]</span>~~ <!-- https://ryute.tistory.com/35    --> <!-- https://ryute.tistory.com/36    --> <!-- https://algospot.com/forum/read/1211/ --> <!-- https://koosaga.com/3 -->
@@ -486,6 +486,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[eval]</span>
   * ### 숏코딩 팁
     * <span class="">[숏코딩 팁]</span>
+    <!-- [*open(0)][1:] -->
 
 # 참고링크
 백준 알고리즘 분류   
