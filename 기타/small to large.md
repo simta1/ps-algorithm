@@ -9,10 +9,10 @@ private:
 
 public:
     SmallToLarge(int n) : sets(n + 1), idx(n + 1) { iota(idx.begin(), idx.end(), 0); }
-    set<T>& operator[](int a) { return sets[idx[a]]; }
-    const set<T>& operator[](int a) const { return sets[idx[a]]; }
+    set<T>& operator[](int a) { return sets[idx[a]]; } // 1-based
+    const set<T>& operator[](int a) const { return sets[idx[a]]; } // 1-based
 
-    void merge(int a, int b) { // b에 있는 걸 a로 옮기고 b는 공집합으로 만듦
+    void merge(int a, int b) { // 1-based // b에 있는 걸 a로 옮기고 b는 공집합으로 만듦
         int &i = idx[a];
         int &j = idx[b];
         if (i == j) return;
@@ -24,9 +24,11 @@ public:
 };
 ```
 ### 시간복잡도
-$b$집합의 모든 원소를 $a$집합으로 옮기는 `merge(a, b)`의 시간복잡도는 $O(min(a, b))$   
+$b$집합의 모든 원소를 $a$집합으로 옮기는 `merge(a, b)`는 $O(min(a, b))$번의 원소 이동이 필요.   
 
-집합 $k$개가 있고 초기집합들에 존재하는 원소의 총 개수가 $N$이라 할 때 두 집합을 합치는 연산을 $(k - 1)$번 진행해 한 집합으로 합치기 위해선 $O(N \log{N})$번의 원소 이동이 필요하다.   
+집합 $k$개가 있고 초기집합들에 존재하는 원소의 총 개수가 $N$이라 할 때 두 집합을 합치는 연산을 $(k - 1)$번 진행해 한 집합으로 합치기 위해선 $O(N \log{N})$번의 원소 이동이 필요.   
+
+원소이동의 시간복잡도는 구현에 따라 달라지겠지만 위의 구현은 `set<T>`를 사용하므로 원소 이동의 시간복잡도는 $O(\log{N})$임      
 
 ### 사용설명
 [뭉쳐야 산다](https://www.acmicpc.net/problem/28277) 예시코드
@@ -57,6 +59,7 @@ while (q--) {
 
 ### 문제
 [뭉쳐야 산다](https://www.acmicpc.net/problem/28277)   
+[트리의 색깔과 쿼리](https://www.acmicpc.net/problem/17469) - [DSU](/자료구조/기타/DSU.md)와 smallToLarge를 같이 사용하는 문제   
 
 ### 원리
 작은 집합의 원소를 큰 집합으로 이동시키기 때문에, 어떤 원소가 집합이 합쳐지면서 다른 집합으로 이동했을 경우 그 원소가 속한 집합의 크기는 2배 이상으로 증가   
