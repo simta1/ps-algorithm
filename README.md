@@ -327,6 +327,7 @@ mermaid stateDiagram-v2 사용
     * <span class="silver">[분할정복 거듭제곱(S+)](/수학/빠른%20거듭제곱.md)</span>
     * <span class="silver">[에라토스테네스의 체(S+)](/수학/에라토스테네스의%20체.md)</span>
     * <span class="gold">[Linear sieve 소수 판별(G-)](/수학/Linear%20Sieve.md)</span>
+    * <span class="gold">[프로베니우스의 동전 문제(G)](/수학/프로베니우스%20동전%20문제.md)</span>
     * <span class="gold">[약수 리스트 계산(G-)](/수학/약수%20리스트%20계산.md)</span>
     * <span class="gold">[harmonic lemma 조화 수열 계산(G+)](/수학/Harmonic%20Lemma.md)</span>
     * <span class="gold">[harmonic lemma 배수 개수 계산(G+)](/수학/배수%20개수%20계산.md)</span>
