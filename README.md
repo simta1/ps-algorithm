@@ -92,6 +92,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[erasable pq]</span> <!-- https://nyaannyaan.github.io/library/data-structure/erasable-priority-queue.hpp -->
     * <span class="">[meldable pq]</span>
     * <span class="gold">[희소 배열(G+)](/자료구조/기타/희소배열.md)</span>
+    * <span class="platinum">[Small To Large(작은 집합에서 큰 집합으로 합치는 테크닉) (P-)](/자료구조/기타/Small%20To%20Large.md)</span>
     * <span class="platinum">[XOR 트라이(P-)](/자료구조/기타/XOR%20Trie.md)</span>
     * <span class="platinum">[유니온 파인드 with Potential(P+)](/자료구조/기타/DSU%20potential.md)</span>
     * <span class="platinum">[로프(P-)](/자료구조/기타/rope.md)</span>
@@ -404,7 +405,6 @@ mermaid stateDiagram-v2 사용
   * <span class="">[Gray code](/기타/Gray%20code.md)</span>
   * <span class="gold">[후위 표기식(G+)](/기타/Postfix%20Notation.md)</span>
   * <span class="">[중간에서 만나기(G+)]</span>
-  * <span class="platinum">[small to large(P-)](/기타/small%20to%20large.md)</span>
   * <span class="platinum">[반전수(P-)](/기타/반전수.md)</span>
   * <span class="">[스위핑]</span>
   * <span class="">[슬라이딩 윈도우]</span>
