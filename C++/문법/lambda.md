@@ -6,6 +6,13 @@ auto f = [&]() {
 };
 ```
 
+### 람다함수 최적화
+c++에서 람다함수는 기본적으로 inline으로 취급되지만 무조건 inline이 되는 것은 아님   
+람다함수 선언 시 constexpr을 사용하면 inline을 포함한 여러 최적화가 이루어질 가능성이 커진다고 함   
+```cpp
+constexpr auto square = [](int x) -> int { return x * x; };
+```
+
 ### 람다재귀
 ```cpp
 function<R(T1, T2, ...)> f = [&](T1 t1, T2 t2, ...) -> R {
