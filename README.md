@@ -381,7 +381,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[min_25's sieve]</span>
     * <span class="">[매트로이드(R-)]</span> <!-- https://m.blog.naver.com/kks227/221031527413 --> <!-- https://infossm.github.io/tags/matroid/ --> <!-- https://imeimi.tistory.com/45 --> <!-- https://m.blog.naver.com/kks227/221031527413 --> <!-- https://koosaga.com/252 --> <!-- https://joohs0505.tistory.com/4 --> <!-- https://dad-rock.tistory.com/673 -->
 * ### 게임 이론
-  * <span class="">[스프라그-그런디]</span> <!-- (비트셋) --> <!-- https://blog.myungwoo.kr/82 --> <!-- https://blog.myungwoo.kr/27 -->
+  * <span class="">[스프라그-그런디 정리]</span> <!-- (비트셋) --> <!-- https://blog.myungwoo.kr/82 --> <!-- https://blog.myungwoo.kr/27 -->
   * <span class="">[hackenbush]</span> <!-- https://en.wikipedia.org/wiki/Hackenbush --> <!-- https://rkm0959.tistory.com/139 -->
   * <span class="">[coldgame]</span> <!-- https://infossm.github.io/blog/2024/11/01/Coldgame-problem-solving/ -->
 * ### 기타
@@ -459,8 +459,9 @@ mermaid stateDiagram-v2 사용
   * <span class="information">[template argument deduction](/C++/문법/Template%20Argument%20Deduction.md)</span>
   * <span class="information">[코드 여러줄 이어쓰기](/C++/문법/코드%20줄바꿈.md)</span>
 * ### 함수
-  * <span class="information">[수학관련](/C++/함수/수학%20관련.md)</span>
-  * <span class="information">[배열관련](/C++/함수/배열%20관련.md)</span>
+  * <span class="information">[수학 관련 함수들](/C++/함수/수학%20관련.md)</span>
+  * <span class="information">[배열 관련 함수들](/C++/함수/배열%20관련.md)</span>
+  * <span class="information">[비트셋](/C++/함수/비트셋.md)</span>
   * <span class="">[regex]</span>
   * <span class="">[std array](/C++/함수/std%20array.md)</span>
   * <span class="">[constexpr, static_assert]</span> <!-- if constexpr 등등도 포함 -->
