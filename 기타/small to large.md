@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-## small to large
+## Small To Large
 ```cpp
 template <typename T>
 class SmallToLarge {
@@ -12,7 +12,7 @@ public:
     set<T>& operator[](int a) { return sets[idx[a]]; } // 1-based
     const set<T>& operator[](int a) const { return sets[idx[a]]; } // 1-based
 
-    void merge(int a, int b) { // 1-based // b에 있는 걸 a로 옮기고 b는 공집합으로 만듦
+    void moveElements(int a, int b) { // 1-based // b에 있는 걸 a로 옮기고 b는 공집합으로 만듦
         int &i = idx[a];
         int &j = idx[b];
         if (i == j) return;
@@ -23,8 +23,29 @@ public:
     }
 };
 ```
+### Small To Large + DSU
+```cpp
+template <typename T>
+class SmallToLargeWithDSU : public DisjointSet, public SmallToLarge<T> {
+public:
+    SmallToLargeWithDSU(int n) : DisjointSet(n), SmallToLarge<T>(n) {}
+
+    set<T>& operator[](int a) {
+        return SmallToLarge<T>::operator[](find(a));
+    }
+    // const set<T>& operator[](int a) const는 find(a)가 const가 아니라서 못 함
+
+    void merge(int a, int b) { // a와 b를 하나로 합침, 이후 a와 b에 접근하면 합쳐진 곳으로 접근됨
+        if (!isConnected(a, b)) {
+            SmallToLarge<T>::moveElements(find(a), find(b));
+            DisjointSet::merge(b, a); // smallToLarge::moveElements()와 매개변수 순서를 반대로 둬야 함. b에서 a로 원소를 옮기므로 이후 find()함수가 a를 리턴하도록 해야 되고 이를 위해선 DSU::merge(b, a)처럼 순서가 바껴야 됨
+        }
+    }
+};
+
+```
 ### 시간복잡도
-$b$집합의 모든 원소를 $a$집합으로 옮기는 `merge(a, b)`는 $O(min(a, b))$번의 원소 이동이 필요.   
+$b$집합의 모든 원소를 $a$집합으로 옮기는 `moveElements(a, b)`는 $O(min(a, b))$번의 원소 이동이 필요. (`SmallToLargeWithDSU::merge(a, b)`도 마찬가지)   
 
 집합 $k$개가 있고 초기집합들에 존재하는 원소의 총 개수가 $N$이라 할 때 두 집합을 합치는 연산을 $(k - 1)$번 진행해 한 집합으로 합치기 위해선 $O(N \log{N})$번의 원소 이동이 필요.   
 
@@ -47,7 +68,7 @@ while (q--) {
     if (op == 1) {
         int a, b;
         cin >> a >> b;
-        stol.merge(a, b);
+        stol.moveElements(a, b);
     }
     else {
         int a;
@@ -59,7 +80,8 @@ while (q--) {
 
 ### 문제
 [뭉쳐야 산다](https://www.acmicpc.net/problem/28277)   
-[트리의 색깔과 쿼리](https://www.acmicpc.net/problem/17469) - [DSU](/자료구조/기타/DSU.md)와 smallToLarge를 같이 사용하는 문제   
+[트리의 색깔과 쿼리](https://www.acmicpc.net/problem/17469) - Small To Large + DSU   
+[물류창고](https://www.acmicpc.net/problem/28296) - Small To Large + DSU(여기선 SmallToLarge를 set대신 map으로 구현)   
 
 ### 원리
 작은 집합의 원소를 큰 집합으로 이동시키기 때문에, 어떤 원소가 집합이 합쳐지면서 다른 집합으로 이동했을 경우 그 원소가 속한 집합의 크기는 2배 이상으로 증가   
