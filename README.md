@@ -86,7 +86,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[Persistent BBST, Weight-Balanced Tree]</span> <!-- https://koosaga.com/342 -->
     * <span class="">[레드-블랙 트리]</span>
   * #### 기타
-    * <span class="gold">[유니온 파인드(G-)](/자료구조/기타/DSU.md)</span>
+    * <span class="gold">[DSU(유니온 파인드) (G-)](/자료구조/기타/DSU.md)</span>
     * <span class="">[유니온 파인드 롤백]</span>
     * <span class="">[자료구조 롤백 지원하기]</span> <!-- https://cologne.tistory.com/66 -->
     * <span class="">[erasable pq]</span> <!-- https://nyaannyaan.github.io/library/data-structure/erasable-priority-queue.hpp -->
@@ -128,11 +128,11 @@ mermaid stateDiagram-v2 사용
     * <span class="gold">[위상정렬(G+)](/그래프%20이론/그래프/위상정렬.md)</span>
     * <span class="">[kth 최단 경로]</span>
     * <span class="platinum">[오일러 회로(P-)](/그래프%20이론/그래프/오일러%20회로.md)</span>
-    * <span class="platinum">[강한 연결 요소(P-)](/그래프%20이론/그래프/SCC.md)</span>
+    * <span class="platinum">[SCC(강한 연결 요소) (P-)](/그래프%20이론/그래프/SCC.md)</span>
     * <span class="platinum">[2-SAT(P-)](/그래프%20이론/그래프/2-SAT.md)</span>
     * <span class="platinum">[단절점(P-)](/그래프%20이론/그래프/단절점.md)</span>
     * <span class="platinum">[단절선(P-)](/그래프%20이론/그래프/단절선.md)</span>
-    * <span class="platinum">[이중 연결 요소(P-)](/그래프%20이론/그래프/BCC.md)</span>
+    * <span class="platinum">[BCC(이중 연결 요소) (P-)](/그래프%20이론/그래프/BCC.md)</span>
     * <span class="platinum">[선인장(P+)](/그래프%20이론/그래프/선인장.md)</span>
     * <span class="">[블록 컷 트리]</span>
     * <span class="">[Dynamic MST]</span> <!-- https://koosaga.com/211 -->
@@ -167,11 +167,11 @@ mermaid stateDiagram-v2 사용
     <!-- * <span class="">[Successive Shortest Path Algorithm]</span> --> <!-- https://koosaga.com/289 --> <!-- 다이아1 문제 https://www.acmicpc.net/problem/23181 -->
     <!-- * <span class="">[홀의 결혼 정리]</span> -->
   * #### 트리
-    * <span class="platinum">[최소 공통 조상(P-)](/그래프%20이론/트리/LCA.md)</span>
-    * <span class="platinum">[O(1) LCA]</span> <!-- https://cocoachan.tistory.com/16 -->
+    * <span class="platinum">[LCA(최소 공통 조상) (P-)](/그래프%20이론/트리/LCA.md)</span>
+    * <span class="">[O(1) LCA]</span> <!-- https://cocoachan.tistory.com/16 -->
     * <span class="platinum">[LCA를 이용한 트리 쿼리(P-)](/그래프%20이론/트리/Query%20with%20LCA.md)</span>
-    * <span class="platinum">[오일러 경로 테크닉(P-)](/그래프%20이론/트리/ETT.md)</span>
-    * <span class="platinum">[heavy-light 분할(P+)](/그래프%20이론/트리/HLD.md)</span>
+    * <span class="platinum">[ETT(오일러 경로 테크닉) (P-)](/그래프%20이론/트리/ETT.md)</span>
+    * <span class="platinum">[HLD(heavy-light 분할) (P+)](/그래프%20이론/트리/HLD.md)</span>
     * <span class="">[트리 압축]</span>
     * <span class="">[센트로이드]</span>
     * <span class="">[센트로이드 분할(D-)]</span>
