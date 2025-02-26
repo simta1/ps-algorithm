@@ -205,7 +205,7 @@ namespace Poly { // O(K^2 logN) 키타마사
     }
     
     template <typename T>
-    ll kitamasaNaive(ll n, const vector<T> &a, const vector<T> &coef, const ll MOD) { // a는 초항{a1, a2, ..., ak}, c는 계수{c1, c2, ..., ck} // A_n = (C_1 x A_n−1 + C_2 x A_n−2 + ... + C_k x A_n−k) mod P일 때 A_n 계산
+    ll kitamasaNaive(ll n, const vector<T> &a, const vector<T> &coef, const ll MOD) { // a는 초항{a1, a2, ..., ak}, c는 계수{c1, c2, ..., ck} // A_n = (C_1 x A_n−1 + C_2 x A_n−2 + ... + C_k x A_n−k) mod M일 때 A_n 계산
         if (n <= a.size()) return a[n - 1];
 
         vector<ll> f(coef.size() + 1, 1); // x^k - c_1 x^(k-1) - c_2 x^(k-2) - ... - c_k x^0
@@ -362,8 +362,9 @@ auto res = Poly::multiplyMod5e18(poly1, poly2);
 [큰 수 곱셈 (3)](https://www.acmicpc.net/problem/22289)   
 [보석 가게](https://www.acmicpc.net/problem/13575)   
 [씽크스몰](https://www.acmicpc.net/problem/11385) - NTT + CRT(`multiplyMod5e18()` 함수 사용하면 됨)   
-[RNG](https://www.acmicpc.net/problem/13725) - 다항식 나눗셈, 키타마사(`kitamasaNTT()`)   
-[피보나치 수 3](https://www.acmicpc.net/problem/2749) - 다항식 나눗셈, 키타마사(`kitamasaNaive()`)   
+[피보나치 수 3](https://www.acmicpc.net/problem/2749) - $O(K^2 \log{N})$ 키타마사(`kitamasaNaive()`)   
+[타일 채우기 2](https://www.acmicpc.net/problem/13976) - $O(K^2 \log{N})$ 키타마사(`kitamasaNaive()`)   
+[RNG](https://www.acmicpc.net/problem/13725) - NTT 다항식 나눗셈, $O(K \log{K} \log{N})$ 키타마사(`kitamasaNTT()`)   
 
 ### 원리
 FFT의 비재귀 구현을 위해 `f[i]`와 `f[bitReverse(i)]`를 swap하는 과정에서 비트트릭 사용   
