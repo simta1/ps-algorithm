@@ -210,6 +210,12 @@ mermaid stateDiagram-v2 사용
   * <span class="">[벌레캠프-매시(D+)]</span>
   * <span class="">[커넥션 프로파일을 이용한 다이나믹 프로그래밍]</span> <!-- https://jh05013.github.io/blog/cpdp/ -->
   * <span class="ruby">[비트셋 LCS(R-)](/DP/비트셋%20LCS.md)</span>
+
+* ### 그리디
+  * <span class="gold">[저울문제(G+)](/그리디/저울문제.md)</span>
+  <!-- [멀티탭 스케줄링](https://www.acmicpc.net/problem/1700) -->
+  <!-- [강의실 배정](https://www.acmicpc.net/problem/11000) -->
+
 * ### 문자열
   <!-- RBS(Regular Bracket Sequence) -->
   <!-- https://blog.cube219.me/posts/2021/solve-stock-price-prediction-problem-without-segment-tree/ -->
