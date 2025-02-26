@@ -2,6 +2,16 @@
 ## Small To Large
 ```cpp
 template <typename Container>
+inline void moveAllAndClear(Container &from, Container &to) {
+    // moveAll
+    to.insert(from.begin(), from.end()); // set일 때 기준
+    static_assert(false, "set이 아니라면 moveAll 부분 코드 수정");
+    
+    // clear
+    from.clear();
+}
+
+template <typename Container>
 class SmallToLarge {
 private:
     vector<Container> sets;
@@ -12,25 +22,13 @@ public:
     Container& operator[](int a) { return sets[idx[a]]; } // 1-based
     const Container& operator[](int a) const { return sets[idx[a]]; } // 1-based
 
-    void moveElements(int from, int to) { // 1-based // from에 있는 걸 to로 옮기고 from은 공집합으로 만듦
-        int &i = idx[to];
-        int &j = idx[from];
-        if (i == j) return;
+    void moveElements(int _from, int _to) { // 1-based // _from에 있는 걸 _to로 옮기고 _from은 공집합으로 만듦
+        int &to = idx[_to];
+        int &from = idx[_from];
+        if (to == from) return;
 
-        if (sets[i].size() < sets[j].size()) swap(i, j);
-        
-        if constexpr (std::is_same_v<Container, set<typename Container::value_type> >) {
-            sets[i].insert(sets[j].begin(), sets[j].end()); // Container가 set인 경우
-        }
-        else if constexpr (std::is_same_v<Container, map<typename Container::key_type, typename Container::mapped_type> >) {
-            for (auto &[key, val] : sets[j]) sets[i][key] += val; // Container가 map인 경우
-        }
-        else {
-            // sets[j]의 원소를 sets[i]로 옮기기
-            assert(false); // Container가 set, map이 아닌 경우 assert(false)지우고 직접 원소 옮기는 코드 작성
-        }
-
-        sets[j].clear();
+        if (sets[to].size() < sets[from].size()) swap(from, to);
+        moveAllAndClear(sets[from], sets[to]);
     }
 };
 ```
@@ -60,6 +58,10 @@ $b$집합의 모든 원소를 $a$집합으로 옮기는 `moveElements(a, b)`는 
 집합 $k$개가 있고 초기집합들에 존재하는 원소의 총 개수가 $N$이라 할 때 두 집합을 합치는 연산을 $(k - 1)$번 진행해 한 집합으로 합치기 위해선 $O(N \log{N})$번의 원소 이동이 필요.   
 
 원소이동의 시간복잡도는 Container에 따라 달라지겠지만 `set<T>` 사용할 때 기준 원소 이동의 시간복잡도는 $O(\log{N})$임   
+
+### 비고
+원래는 `moveAllAndClear(from, to)`함수를 람다함수로 SmallToLarge의 생성자에 넣도록 구현하려 했는데 이러면 `moveAllAndClear()`에서 첫번째 매개변수가 from, 두번째가 to임을 외워놓아야 한다는 문제가 있어서 포기했다.   
+그냥 전역함수에서 상황에 맞게 직접 수정하여 사용할 생각이다.   
 
 ### 사용설명
 [뭉쳐야 산다](https://www.acmicpc.net/problem/28277) 예시코드   
