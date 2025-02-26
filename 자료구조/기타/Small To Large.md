@@ -12,9 +12,9 @@ public:
     Container& operator[](int a) { return sets[idx[a]]; } // 1-based
     const Container& operator[](int a) const { return sets[idx[a]]; } // 1-based
 
-    void moveElements(int a, int b) { // 1-based // b에 있는 걸 a로 옮기고 b는 공집합으로 만듦
-        int &i = idx[a];
-        int &j = idx[b];
+    void moveElements(int from, int to) { // 1-based // from에 있는 걸 to로 옮기고 from은 공집합으로 만듦
+        int &i = idx[to];
+        int &j = idx[from];
         if (i == j) return;
 
         if (sets[i].size() < sets[j].size()) swap(i, j);
@@ -84,7 +84,7 @@ int main() {
         if (op == 1) {
             int a, b;
             cin >> a >> b;
-            stol.moveElements(a, b);
+            stol.moveElements(b, a);
         }
         else {
             int a;
