@@ -1,13 +1,13 @@
 [카테고리](/README.md)
 ## Random
 ```cpp
-template <typename T, T MIN, T MAX>
+template <typename T>
 class Random {
     mt19937 engine;
     uniform_int_distribution<T> distribution;
     
 public:
-    Random() : engine(chrono::system_clock::now().time_since_epoch().count()), distribution(MIN, MAX) {}
+    Random(T mn, T mx) : engine(chrono::system_clock::now().time_since_epoch().count()), distribution(mn, mx) {} // mn, mx 포함하는 범위에서 난수 생성
     T operator()() { return distribution(engine); }
 };
 ```
