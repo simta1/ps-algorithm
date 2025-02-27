@@ -312,8 +312,8 @@ mermaid stateDiagram-v2 사용
     * <span class="silver">[행렬(S-)](/수학/선형대수학/Matrix.md)</span>
     * <span class="">[가우스 소거법(P-)]</span>
     * <span class="">[키르히호프(P-)]</span> <!-- https://www.acmicpc.net/problem/9614 -->
-    * <span class="">[strassen algorithm]</span>
-    * <span class="">[Freivalds' algorithm]</span> <!-- https://www.acmicpc.net/problem/13165 -->
+    * ~~<span class="">[strassen algorithm]</span>~~
+    * <span class="platinum">[Freivalds' algorithm(P+)](/수학/선형대수학/Freivalds'%20algorithm.md)</span>
     <!-- * <span class="">[Deterministic Verification of Integer Matrix Multiplication in Quadratic Time]</span> -->
   * #### 기타
     <!-- XOR과 관련된 문제
