@@ -314,7 +314,6 @@ mermaid stateDiagram-v2 사용
     * <span class="">[키르히호프(P-)]</span> <!-- https://www.acmicpc.net/problem/9614 -->
     * ~~<span class="">[strassen algorithm]</span>~~
     * <span class="platinum">[Freivalds' algorithm(P+)](/수학/선형대수학/Freivalds'%20algorithm.md)</span>
-    <!-- * <span class="">[Deterministic Verification of Integer Matrix Multiplication in Quadratic Time]</span> -->
   * #### 기타
     <!-- XOR과 관련된 문제
     https://infossm.github.io/blog/2019/12/14/%EC%A3%BC%EC%96%B4%EC%A7%84-%EC%88%98%EB%93%A4%EC%9D%98-XOR-%EC%97%B0%EC%82%B0%EC%9C%BC%EB%A1%9C-%EB%A7%8C%EB%93%A4-%EC%88%98-%EC%9E%88%EB%8A%94-%EC%88%98/

@@ -43,5 +43,17 @@ signed에서의 오버플로우는 UB지만 unsigned에서의 오버플로우는
 [이것도 해결해 보시지](https://www.acmicpc.net/problem/13165)   
 <!-- [Inner Product](https://www.acmicpc.net/problem/17313)    -->
 
+### 원리
+$n \times n$행렬 $A, B, C$가 $AB = C$를 만족한다면 임의의 $n \times 1$ 행렬 $x$에 대해 $ABx = Cx$를 만족한다.   
+$ABx$의 값은 $Bx$를 먼저 계산한 뒤 $A(Bx)$를 계산하면 $O(N^2)$에 계산이 가능하므로 랜덤한 행렬 $x$를 잡아 $ABx = Cx$인지 확인하는 것은 $O(N^2)$에 가능하다.
+
+$AB$와 $C$를 비교하는 대신 $ABx$와 $Cx$를 비교하는 알고리즘을 생각하자.   
+$ABx \neq Cx$라면 $AB \neq C$임은 확실하고(대우명제임),   
+따라서 알고리즘이 틀릴 확률은 $ABx = Cx$이지만 $AB \neq C$일 확률과 같다.   
+$x$의 원소가 $0$과 $1$로만 이루어져있을 때 이러한 확률은 $\dfrac{1}{2}$ 미만이므로 $x$를 바꿔가며 알고리즘을 여러 번 시행하면 높은 정확도를 보장할 수 있다.   
+
 ### 참고링크
 https://blog.naver.com/sluggeryck/220938909066   
+
+### 난수를 사용하지 않는 결정론적 알고리즘? (PS 범위 아님)
+ps-snippet 레포지토리와는 거리가 먼 듯 해서 https://simtal.tistory.com/94 에 정리해둠   
