@@ -470,7 +470,7 @@ mermaid stateDiagram-v2 사용
   * <span class="information">[GCC built-in](/C++/함수/builtin.md)</span>
   * <span class="information">[GCC 최적화](/C++/함수/GCC%20optimize.md)</span>
   * <span class="information">[문자관련](/C++/함수/char.md)</span>
-  * <span class="information">[문자열관련](/C++/함수/string.md)</span>
+  * <span class="information">[문자열 관련 함수들](/C++/함수/문자열%20관련.md)</span>
   * <span class="information">[이분탐색 람다함수](/C++/함수/lower_bound_lambda.md)</span>
   * <span class="information">[custom pq](/C++/함수/custom%20pq.md)</span>
   * <span class="information">[io manip](/C++/함수/io%20manip.md)</span>
