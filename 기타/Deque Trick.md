@@ -11,7 +11,6 @@ vector<int> dequeTrick(int len, const vector<int> &v) {
         while (!dq.empty() && v[dq.back()] > v[i]) dq.pop_back();
         dq.push_back(i);
         if (i - dq.front() + 1 > len) dq.pop_front();
-
         res[i] = v[dq.front()];
     }
 
@@ -28,7 +27,6 @@ vector<int> dequeTrick(int len, const vector<int> &v) {
         while (!dq.empty() && v[dq.back()] < v[i]) dq.pop_back();
         dq.push_back(i);
         if (i - dq.front() + 1 > len) dq.pop_front();
-
         res[i] = v[dq.front()];
     }
 
@@ -46,7 +44,7 @@ auto cmp = [&](int front, int back) {
 for (int i = 0; i < v.size(); i++) {
     while (!dq.empty() && !cmp(dq.back(), i)) dq.pop_back();
     dq.push_back(i);
-    if (i - dq.front() + 1 > k) dq.pop_front();
+    if (i - dq.front() + 1 > len) dq.pop_front();
 }
 ```
 ### 시간복잡도 
