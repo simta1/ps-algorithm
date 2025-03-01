@@ -1,5 +1,5 @@
 [카테고리](/README.md)
-## Freivalds' algorithm
+## Freivalds' algorithm ([Random](/utils/Random.md) 필요)
 ```cpp
 template <typename T>
 bool freivalds(const vector<vector<T> > &a, const vector<vector<T> > &b, const vector<vector<T> > &c) { // n*n행렬 A, B, C에 대해 AB==C인지 O(LOOP * N^2)에 확인 // (0.5^LOOP)의 확률로 AB!=C인데 AB==C라고 틀린 판별을 내릴 가능성 있음
@@ -10,7 +10,7 @@ bool freivalds(const vector<vector<T> > &a, const vector<vector<T> > &b, const v
     constexpr int LOOP = 30;
 
     for (int it = LOOP; it--;) {
-        for (auto &e : x) e = rand() & 1;
+        for (auto &e : x) e = rand();
         
         for (int i = 0; i < n; i++) {
             Bx[i] = 0;
