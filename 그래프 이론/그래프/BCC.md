@@ -43,7 +43,7 @@ vector<vector<pair<int, int> > > getBCC(int n, const vector<vector<int> > &adj) 
 vector<int> getNodeOfBCC(int n, const vector<pair<int, int> > &bcc) {
     static int trueValue = 1;
     static vector<int> visited(n + 1);
-    // static vector<int> visited(1001); // 테스트케이스 여러 개라 n 바뀔 수 있는 문제면 ({n 입력제한 최대값} + 1) 크기만큼 초기화하기
+    if (visited.size() < n + 1) visited.resize(n + 1); // 테스트케이스 여러 개인 문제면 n 바뀔 수 있음
     
     vector<int> res;
     for (auto [u, v] : bcc) {
@@ -62,9 +62,7 @@ vector<int> getNodeOfBCC(int n, const vector<pair<int, int> > &bcc) {
 ```
 그냥 set 사용해서 간단히 구현할 수도 있지만 너무 느리다.   
 trueValue변수에 대한 설명은 [자주쓰는 변수명](/C++/기타/Variable%20Name.md#truevalue) 참고.   
-static변수는 한 번만 초기화되므로 trueValue의 이점을 그대로 적용할 수 있다.   
-
-하지만 오히려 한 번만 초기화된다는 점 때문에 [Critical Structures](https://www.acmicpc.net/problem/20264)처럼 여러 테스트케이스가 주어지고 중간에 n이 바뀔 수 있는 문제에서는 초기화 부분의 코드를 `static vector<int> visited(maxN + 1);`로 수정해서 사용해야 된다.(maxN은 입력제한에서 주어진 $n$의 최대값에 해당하는 리터럴)
+static변수는 한 번만 초기화되므로 trueValue의 이점이 그대로 적용된다.   
 
 ### 시간복잡도
 $O(V + E)$   
