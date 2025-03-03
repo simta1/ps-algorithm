@@ -55,5 +55,5 @@ $x$의 원소가 $0$과 $1$로만 이루어져있을 때 이러한 확률은 $\d
 ### 참고링크
 https://blog.naver.com/sluggeryck/220938909066   
 
-### 난수를 사용하지 않는 결정론적 알고리즘? (PS 범위 아님)
-ps-snippet 레포지토리와는 거리가 먼 듯 해서 https://simtal.tistory.com/94 에 정리해둠   
+### 난수를 사용하지 않는 $O(N^2)$ 알고리즘 (PS 범위 아님)
+ps-snippet 레포지토리와는 거리가 먼 듯 해서 https://simtal.tistory.com/41 에 정리해둠   

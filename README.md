@@ -352,7 +352,7 @@ mermaid stateDiagram-v2 사용
       * <span class="platinum">[다항식곱셈: FFT(P+)](/수학/FFT.md#fft-fast-fourier-transform)</span>
       * <span class="diamond">[정확도 높은 FFT(D-)](/수학/FFT.md#정확도-높은-fft)</span>
       * <span class="diamond">[다항식곱셈: NTT(D-)](/수학/FFT.md#ntt-number-theoretic-transform)</span>
-      * <span class="diamond">[O(K logK logN) 다항식 나눗셈, 키타마사(D+)](/수학/FFT.md#ok-logk-logn-다항식-나눗셈-키타마사)</span>
+      * <span class="diamond">[다항식 나눗셈, O(K logK logN) 키타마사(D+)](/수학/FFT.md#다항식-나눗셈-ok-logk-logn-키타마사)</span>
       * <span class="">[다중 대입값 계산(D+)]</span> <!-- https://infossm.github.io/blog/2019/06/16/Multipoint-evaluation/ -->
     * <span class="">[이산 로그(P+)]</span>
     * <span class="diamond">[이산 제곱근(D-)](/수학/Tonelli-Shanks.md)</span>

@@ -57,7 +57,7 @@ sccn은 0-based로 매겨지지만 dag그래프에선 노드 번호가 1-based�
 
 dag에서 노드의 번호는 이미 위상정렬되어 있음(sccn이 위상정렬된 순이기 때문)   
 
-`toEdgeExist`는 간선을 추가했는지 저장하기 위한 배열로, 변수 `sccn[u]`를 [trueValue](/ps-snippet/C++/기타/Variable%20Name.md#truevalue)로 사용해서 구현한 것임.   
+`toEdgeExist`는 간선을 추가했는지 저장하기 위한 배열로, 변수 `sccn[u]`를 [trueValue](/C++/기타/Variable%20Name.md#truevalue)로 사용해서 구현한 것임.   
 toEdgeExist를 확인하지 않고 그냥 그래프를 구성해도 문제될 것은 없지만 DAG에 parallel edge를 추가하지 않기 위해선 필요한 과정   
 
 ### 시간복잡도 

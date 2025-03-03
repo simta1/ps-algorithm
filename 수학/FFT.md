@@ -218,7 +218,7 @@ namespace Poly { // O(K^2 logN) 키타마사
     }
 }
 ```
-### $O(K \log{K} \log{N})$ 다항식 나눗셈, 키타마사
+### 다항식 나눗셈, $O(K \log{K} \log{N})$ 키타마사
 ```cpp
 namespace Poly { // NTT 다항식 나눗셈, 키타마사
     template <ll p, ll primitiveRoot, typename T>

@@ -32,7 +32,7 @@ template<size_t _Nb> inline bitset<_Nb> operator+(const bitset<_Nb> &A, const bi
 ```
 </details>
 
-### 알고리즘 이름
+### Bitset LCS
 ```cpp
 template <size_t sz> // sz는 min(a의 가능한 최대 크기, b의 가능한 최대 크기) 이상인 값으로 사용
 int LCS(const string &_a, const string &_b) {
@@ -64,7 +64,7 @@ w는 word size
 
 ### 공간복잡도
 $O(\dfrac{min(n, m) |\sum|}{w})$   
-$|\sum|$는 문자열에 등장한는 문자 종류의 개수   
+$|\sum|$는 문자열에 등장하는 문자 종류의 개수   
 ex) 대문자로만 이루어진 문자열은 26   
 
 ### 문제
