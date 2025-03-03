@@ -35,7 +35,7 @@ pair<vector<vector<int> >, vector<int> > getSCC(int n, const vector<vector<int> 
 ```
 ### SCC끼리 묶은 DAG 만들기
 ```cpp
-pair<int, vector<vector<int> > > graphToDAG(int n, const vector<vector<int> > &adj, const vector<vector<int> > &sccs, const vector<int> &sccn) {
+pair<int, vector<vector<int> > > graphToDAG(int n, const vector<vector<int> > &adj, const vector<vector<int> > &sccs, const vector<int> &sccn) { // sccn은 0-based이지만 DAG의 노드는 1-based로 만들어서 리턴하니 주의
     vector<int> toEdgeExist(sccs.size() + 1, -1);
     vector<vector<int> > dag(sccs.size() + 1);
 
