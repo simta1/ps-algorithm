@@ -66,9 +66,8 @@ mermaid stateDiagram-v2 사용
     <!-- 펜윅 레이지 + 역원없는 연산 지원 버전 만들까 싶었으나 솔직히 너무 과한 듯. 다이나믹 레이지 세그가 너무 막강함 -->
     * <span class="gold">[펜윅 트리(G+)](/자료구조/세그먼트%20트리/펜윅.md)</span>
     * <span class="platinum">[세그먼트 트리(G+), 세그 이분 탐색(P-)](/자료구조/세그먼트%20트리/세그먼트%20트리.md)</span>
-    * <span class="platinum">[2D 펜윅(P-)](/자료구조/세그먼트%20트리/2차원%20펜윅.md)</span>
     * <span class="platinum">[2D 세그(P-)](/자료구조/세그먼트%20트리/2차원%20세그.md)</span>
-    * <span class="platinum">[n차원 펜윅(P-)](/자료구조/세그먼트%20트리/다차원%20펜윅.md)</span>
+    * <span class="platinum">[다차원 펜윅(P-)](/자료구조/세그먼트%20트리/다차원%20펜윅.md)</span>
     * <span class="platinum">[머지소트 트리(P-)](/자료구조/세그먼트%20트리/머지소트%20트리.md)</span>
     * <span class="platinum">[레이지 세그(P-)](/자료구조/세그먼트%20트리/레이지%20세그.md)</span>
     * <span class="platinum">[다이나믹 세그(P-)](/자료구조/세그먼트%20트리/다이나믹%20세그.md)</span>
