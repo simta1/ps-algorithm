@@ -219,7 +219,7 @@ mermaid stateDiagram-v2 사용
   <!-- https://blog.cube219.me/posts/2021/solve-stock-price-prediction-problem-without-segment-tree/ -->
   * <span class="">[괄호문자열]</span> <!-- 괄호문자열 판별, 괄호 종류 여러개일 때, 괄호문자열 응용 등등 -->
   * <span class="gold">[트라이(G+)](/문자열/Trie.md)</span>
-  * <span class="platinum">[매내처(P-)](/문자열/Manacher.md)</span>
+  * <span class="platinum">[매내처(P-)](/문자열/매내처.md)</span>
   * <span class="platinum">[롤링 해시(P-)](/문자열/롤링%20해시.md)</span>
   * <span class="platinum">[라빈 카프(P-)](/문자열/Rabin-Karp.md)</span>
   * <span class="platinum">[KMP(P-)](/문자열/KMP.md)</span>
