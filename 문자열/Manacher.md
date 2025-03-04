@@ -1,40 +1,39 @@
 [카테고리](/README.md)
 ## Manacher
 ```cpp
-class Manacher {
-private:
-    vector<int> radius;
+template <typename Container> // Container = string or vector<>
+vector<int> manacher(const Container &orig, typename Container::value_type dummy) { // dummy는 char이면 '#', int면 알아서 잘...
+    Container st(orig.size() << 1 | 1, dummy);
+    for (int i = 0; i < orig.size(); i++) st[2 * i + 1] = orig[i];
 
-public:
-    Manacher(const string &orig) : radius(orig.size() << 1 | 1) {
-        string st = "#";
-        for (auto &c : orig) {
-            st += c;
-            st += '#';
-        }
+    vector<int> radius(st.size());
+    for (int i = 1, maxJ = 0; i < st.size(); i++) {
+        if (maxJ + radius[maxJ] < i) radius[i] = 0;
+        else radius[i] = min(radius[2 * maxJ - i], maxJ + radius[maxJ] - i);
         
-        int maxJ = 0;
-
-        for (int i = 1; i < st.size(); i++) {
-            if (maxJ + radius[maxJ] < i) radius[i] = 0;
-            else radius[i] = min(radius[2 * maxJ - i], maxJ + radius[maxJ] - i);
-            
-            while (i - radius[i] - 1 >= 0 && i + radius[i] + 1 < st.size() && st[i - radius[i] - 1] == st[i + radius[i] + 1]) ++radius[i];
-
-            if (maxJ + radius[maxJ] < i + radius[i]) maxJ = i;
-        }
+        while (i - radius[i] - 1 >= 0 && i + radius[i] + 1 < st.size() && st[i - radius[i] - 1] == st[i + radius[i] + 1]) ++radius[i];
+        if (maxJ + radius[maxJ] < i + radius[i]) maxJ = i;
     }
+    return radius;
 
-    int longestPalindromeLength() {
-        return *max_element(radius.begin(), radius.end());
-    }
+    /* ex) abacc -> #a#b#a#c#c#
+                    01030101210 
+    radius[i]는 i를 중심으로 하는 가장 긴 펠린드롬의 반지름임과 동시에 dummy문자를 지웠을 때 남는 진짜 문자의 개수와 같음.
+    즉, dummy문자를 제외한 원래 문자열에서의 펠린드롬의 길이라고 생각 가능
+    
+    원래 문자열 orig에서 0-based로 i번째인 값(orig[i])을 중심으로 하는 (홀수길이) 펠린드롬의 정보는 radius[2i+1]에 있음
+    i와 i+1을 중심으로 하는 (짝수길이) 펠린드롬의 정보는 radius[2i+2]에 있음 */
+}
 
-    long long countPalindromeSubstring() {
-        long long res = 0;
-        for (auto &r : radius) res += r + 1 >> 1;
-        return res;
-    }
-};
+int longestPalindromeLength(const vector<int> &radius) {
+    return *max_element(radius.begin(), radius.end());
+}
+
+long long countPalindromeSubstring(const vector<int> &radius) {
+    long long res = 0;
+    for (auto &r : radius) res += r + 1 >> 1;
+    return res;
+}
 ```
 ### 시간복잡도 
 $O(N)$   
