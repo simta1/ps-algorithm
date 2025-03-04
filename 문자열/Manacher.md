@@ -7,23 +7,23 @@ vector<int> manacher(const Container &orig, typename Container::value_type dummy
     for (int i = 0; i < orig.size(); i++) st[2 * i + 1] = orig[i];
 
     vector<int> radius(st.size());
-    for (int i = 1, maxJ = 0; i < st.size(); i++) {
-        if (maxJ + radius[maxJ] < i) radius[i] = 0;
-        else radius[i] = min(radius[2 * maxJ - i], maxJ + radius[maxJ] - i);
-        
+    for (int i = 1, p = 0; i < st.size(); i++) { // p는 0<=j<i인 j들 중 j + radius[j]가 가장 큰 j
+        radius[i] = i > p + radius[p] ? 0 : min(radius[2 * p - i], p + radius[p] - i);
         while (i - radius[i] - 1 >= 0 && i + radius[i] + 1 < st.size() && st[i - radius[i] - 1] == st[i + radius[i] + 1]) ++radius[i];
-        if (maxJ + radius[maxJ] < i + radius[i]) maxJ = i;
+        if (p + radius[p] < i + radius[i]) p = i;
     }
     return radius;
+}
 
-    /* ex) abacc -> #a#b#a#c#c#
-                    01030101210 
+/* ex) abacc -> #a#b#a#c#c#
+                01030101210 
     radius[i]는 i를 중심으로 하는 가장 긴 펠린드롬의 반지름임과 동시에 dummy문자를 지웠을 때 남는 진짜 문자의 개수와 같음.
     즉, dummy문자를 제외한 원래 문자열에서의 펠린드롬의 길이라고 생각 가능
     
+    i를 중심으로 하는 최장 펠린드롬 부분문자열의 길이가 radius[i]이므로 i를 중심으로 하는 펠린드롬 부분문자열의 개수는 (radius[i] + 1) / 2개
+    
     원래 문자열 orig에서 0-based로 i번째인 값(orig[i])을 중심으로 하는 (홀수길이) 펠린드롬의 정보는 radius[2i+1]에 있음
     i와 i+1을 중심으로 하는 (짝수길이) 펠린드롬의 정보는 radius[2i+2]에 있음 */
-}
 
 int longestPalindromeLength(const vector<int> &radius) {
     return *max_element(radius.begin(), radius.end());
@@ -37,24 +37,19 @@ long long countPalindromeSubstring(const vector<int> &radius) {
 ```
 ### 시간복잡도 
 $O(N)$   
-
-### 구현 주의사항
-문자열 사이에 '#' 끼워넣을 때 주의   
-st += (c + '#'); 으로 하면 c와 '#'이 각각 char형이기 때문에, c와 '#'의 아스키코드를 합한 값에 해당하는 char형 문자 하나가 st의 끝에 추가되어 st가 제대로 만들어지지 않음   
-st += (c + "#"); 의 경우에도 이유는 모르겠으나 st가 제대로 만들어지지 않음   
-그냥 st += c, st += '#';으로 나누어 적는 게 낫다.   
+참고로 매내처 안 쓰고 DP로도 계산할 수 있는데 그러면 $O(N^2)$임   
 
 ### 사용설명
-i를 중심으로 하는 최장 펠린드롬 부분문자열의 길이는 radius[i]   
-따라서 i를 중심으로 하는 펠린드롬 부분문자열의 개수는 (radius[i] + 1) / 2개   
-
+i를 중심으로 하는 최장 펠린드롬 부분문자열의 길이는 `radius[i]`   
+따라서 i를 중심으로 하는 펠린드롬 부분문자열의 개수는 `(radius[i] + 1) / 2`개   
 
 ### 문제
-[가장 긴 팰린드롬 부분 문자열](https://www.acmicpc.net/problem/13275)   
-[#15164번_제보](https://www.acmicpc.net/problem/16163) - 회문 부분 문자열의 개수   
+[팰린드롬?](https://www.acmicpc.net/problem/10942) - $O(N^2)$ 가능   
+[가장 긴 팰린드롬 부분 문자열](https://www.acmicpc.net/problem/13275) - `longestPalindromeLength()`   
+[#15164번_제보](https://www.acmicpc.net/problem/16163) - `countPalindromeSubstring()`   
 
 ### 원리
-radius[i]가 펠린드롬의 길이와 동일한 이유   
+`radius[i]`가 펠린드롬의 길이와 동일한 이유   
 * if (i & 1)인 경우   
 '#'이 삽입된 문자열 st에서 i & 1인 경우 st[i]는 orig의 문자   
 ex) #a#b#a#, radius[i] = 3   
