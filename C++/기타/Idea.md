@@ -80,7 +80,9 @@ x기우성 상관없이 항상 성립
 return (a < b && b < c) || (c < b && b < a);
 
 // 변경 후
-return (b > a) != (b > c);
+return (b - a) * (b - c) < 0;
+return ((b - a) ^ (b - c)) < 0; // 오버플로우 위험이 있는 곱셈보다 안전한 방식, 하지만 ^의 연산자 우선순위가 <보다 낮음에 주의
+// *을 쓰든 ^을 쓰든 signed자료형이어야 됨에 주의 // 예를들어 b가 vector.size()같은 형식이면 unsigned라서 뭘해도 양수로 나옴
 ```
 
 # 오차 없는 ceil, round
