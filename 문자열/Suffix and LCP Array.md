@@ -51,6 +51,11 @@ string longestRepeatedSubstring(const string &st, const vector<int> &sa, const v
     int i = max_element(lcp.begin() + 1, lcp.end()) - lcp.begin();
     return st.substr(sa[i], lcp[i]);
 }
+
+long long countDistinctSubstrings(const string &st, const vector<int> &lcp) {
+    long long n = st.size();
+    return n * (n + 1) / 2 - accumulate(lcp.begin() + 1, lcp.end(), 0LL);
+}
 ```
 ### 시간복잡도
 suffixArray $O(N \log{N})$   
