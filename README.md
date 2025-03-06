@@ -232,7 +232,7 @@ mermaid stateDiagram-v2 사용
   * <span class="diamond">[회문 트리(D+)](/문자열/회문%20트리.md)</span>
   * <span class="">[run enumerate(R-)]</span>
   * <span class="">[접미사 트리(R-)]</span> <!-- https://infossm.github.io/blog/2021/02/20/suffix-tree/ -->
-  * <span class="">[suffix automaton]</span> <!-- https://www.acmicpc.net/workbook/view/13245 -->
+  * <span class="">[suffix automaton]</span> <!-- https://www.acmicpc.net/workbook/view/13245 --> <!-- https://infossm.github.io/blog/2023/02/01/suffix-automaton/ -->
 * ### 기하학
   <!-- * ~~<span class="">[반공간 교집합]</span>~~ -->
   <!-- <span class="">[polygon raycast]</span>
