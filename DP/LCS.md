@@ -37,6 +37,10 @@ int LCS(const string &a, const string &b) { // substring, 연속하게 골라야
 ### 시간복잡도 
 $O(NM)$   
 
+더 빠른 알고리즘도 있음.   
+[최장 공통 부분 문자열](https://www.acmicpc.net/problem/9249)은 [접미사 배열과 LCP 배열](/문자열/Suffix%20and%20LCP%20Array.md)로 $O((N+M)\log(N+M))$,   
+[최장 공통 부분 수열](https://www.acmicpc.net/problem/18439)은 [비트셋 LCS](/DP/비트셋%20LCS.md)로 $O(\dfrac{NM}{w})$에 계산이 가능함   
+
 ### 문제
 [LCS](https://www.acmicpc.net/problem/9251) - 최장 공통 부분 수열   
 [공통 부분 문자열](https://www.acmicpc.net/problem/5582) - 최장 공통 부분 문자열   
