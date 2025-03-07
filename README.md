@@ -393,7 +393,6 @@ mermaid stateDiagram-v2 사용
   * <span class="">[Log Decomp]</span> <!-- https://codeforces.com/blog/entry/124766 -->
   * <span class="">[모노톤 스택]</span>
   * <span class="">[모노톤 큐]</span>
-  * <span class="">[RMQ]</span>
   * <span class="">[XOR Hashing]</span> <!-- https://codeforces.com/blog/entry/85900 -->
   * <span class="">[트리 해싱]</span> <!-- https://blog.cgiosy.dev/entry/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%AC%B8%EC%A0%9C-%ED%92%80-%EB%95%8C-%EC%93%B0%EB%8A%94-%ED%95%B4%EC%8B%9C-%EC%A2%85%EB%A5%98%EB%93%A4 -->
   * <span class="">[누적합, imos]</span>
@@ -404,7 +403,7 @@ mermaid stateDiagram-v2 사용
   * <span class="platinum">[반전수(P-)](/기타/반전수.md)</span>
   * <span class="">[스위핑]</span>
   * <span class="">[슬라이딩 윈도우]</span>
-  * <span class="">[Range Minimum Query]</span>
+  * <span class="">[RMQ]</span>
   * <span class="platinum">[덱을 이용한 구간 최댓값 트릭(P-)](/기타/Deque%20Trick.md)</span>
   * <span class="platinum">[삼분 탐색(P-)](/기타/삼분탐색.md)</span>
   * <span class="platinum">[Mo's algorithm(P+)](/기타/Mo's.md)</span>
