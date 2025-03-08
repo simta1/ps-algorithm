@@ -83,7 +83,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[Persistent BBST, Weight-Balanced Tree]</span> <!-- https://koosaga.com/342 -->
     * <span class="">[레드-블랙 트리]</span>
   * #### 기타
-    * <span class="gold">[DSU(유니온 파인드) (G-)](/자료구조/기타/DSU.md)</span>
+    * <span class="gold">[DSU(유니온 파인드)(G-)](/자료구조/기타/DSU.md)</span>
     * <span class="">[유니온 파인드 롤백]</span>
     * <span class="">[자료구조 롤백 지원하기]</span> <!-- https://cologne.tistory.com/66 -->
     * <span class="">[erasable pq]</span> <!-- https://nyaannyaan.github.io/library/data-structure/erasable-priority-queue.hpp -->
@@ -403,12 +403,12 @@ mermaid stateDiagram-v2 사용
   * <span class="platinum">[반전수(P-)](/기타/반전수.md)</span>
   * <span class="">[스위핑]</span>
   * <span class="">[슬라이딩 윈도우]</span>
-  * <span class="">[RMQ]</span>
   * <span class="platinum">[덱을 이용한 구간 최댓값 트릭(P-)](/기타/Deque%20Trick.md)</span>
+  * <span class="platinum">[RMQ(Range Minimum Query)(P-)](/기타/RMQ.md)</span>
   * <span class="platinum">[삼분 탐색(P-)](/기타/삼분탐색.md)</span>
   * <span class="platinum">[Mo's algorithm(P+)](/기타/Mo's.md)</span>
   * <span class="">[hilbert Mo]</span> <!-- https://tamref.com/97 -->
-  * <span class="platinum">[평방분할(P+)](/기타/제곱근%20분할법.md)</span>
+  * <span class="platinum">[제곱근 분할법(P+)](/기타/제곱근%20분할법.md)</span>
   * <span class="">[병렬 이분 탐색(P+)]</span>
   * <span class="">[차이 부등식]</span> <!-- https://koosaga.com/72 --> <!-- https://www.acmicpc.net/workbook/view/3303 -->
   * <span class="">[range mode query]</span> <!-- https://infossm.github.io/blog/2021/05/20/Data-Structure-For-Range-Mode-Query/ --> <!-- https://www.acmicpc.net/problem/14898 -->
