@@ -1,9 +1,8 @@
 [카테고리](/README.md)
-# 작성중.. 코드 실험 안 끝남 <!-- TODO -->
 ## Deque Trick
 ### Deque Trick (min)
 ```cpp
-vector<int> dequeTrick(int len, const vector<int> &v) {
+vector<int> dequeTrickMin(int len, const vector<int> &v) { // res[i]는 v[max(0, i - len + 1)]~v[i]의 최솟값 // 즉, 정확히 길이가 len인 구간의 최솟값은 res[len-1:n)에 저장됨
     vector<int> res(v.size());
     deque<int> dq;
 
@@ -19,7 +18,7 @@ vector<int> dequeTrick(int len, const vector<int> &v) {
 ```
 ### Deque Trick (max)
 ```cpp
-vector<int> dequeTrick(int len, const vector<int> &v) {
+vector<int> dequeTrickMax(int len, const vector<int> &v) { // res[i]는 v[max(0, i - len + 1)]~v[i]의 최댓값 // 즉, 정확히 길이가 len인 구간의 최솟값은 res[len-1:n)에 저장됨
     vector<int> res(v.size());
     deque<int> dq;
 
@@ -37,8 +36,8 @@ vector<int> dequeTrick(int len, const vector<int> &v) {
 ```cpp
 deque<int> dq;
 
-auto cmp = [&](int front, int back) {
-    // return ~~~~~;
+auto cmp = [&](int front, int back) { // front에 구하려는 값이 들어가야 함
+    // ex) min이면 return v[front] <= v[back];
 };
 
 for (int i = 0; i < v.size(); i++) {
@@ -48,13 +47,7 @@ for (int i = 0; i < v.size(); i++) {
 }
 ```
 ### 시간복잡도 
-$O()$   
-
-### 구현 주의사항
-
-
-### 사용설명
-
+$O(N)$   
 
 ### 문제
 [최솟값 찾기](https://www.acmicpc.net/problem/11003) - min   
@@ -69,4 +62,3 @@ ex) min을 구하려 한다면 `v[dq.front()] <= v[dq.front() + 1] <= ... <= v[d
 push_back()하기 전에 조건 만족하지 않는 것들을 pop해야되므로   
 `while (!dq.empty() && !(v[dq.back()] <= v[i])) dq.pop_back();`이고   
 따라서 정리하면 `while (!dq.empty() && v[dq.back()] >  v[i]) dq.pop_back();`   
-<!-- TODO monotone deque, monotone stack 등등 클래스로 구현해서 써도 괜찮을 듯. 생성자에서 람다함수로 cmp함수 받고. while (!empty() && !cmp) pop(); 하면 될 듯 -->   
