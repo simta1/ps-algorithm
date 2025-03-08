@@ -36,41 +36,78 @@ vector<int> getSuffixArray(const string &st) {
 vector<int> getLCPArray(const string &st, const vector<int> &sa) {
     int n = st.size();
     assert(n >= 1);
-    vector<int> rank(n), lcp(n + 1); // 분명 인덱스를 n-1까지밖에 사용 안해서 lcp(n)으로 해도 될 거 같은데 테케 여러개 주어지는 문제에서 lcp(n)쓰면 에러남. 왜지?
+    vector<int> rank(n), lcp(n - 1);
     for (int i = 0; i < n; i++) rank[sa[i]] = i; // sa[idx]=i -> st[i:]가 idx번째 접미사 // rank[i]=idx 즉, st[i:]가 몇번째 접미사인지 rank[i]에 저장
 
     for (int i = 0, h = 0; i < n; ++i, h -= !!h) if (rank[i]) {
         for (int j = sa[rank[i] - 1]; j + h < n && i + h < n && st[j + h] == st[i + h];) ++h;
-        lcp[rank[i]] = h;
+        lcp[rank[i] - 1] = h;
     }
 
     return lcp;
-} // lcp[i]는 sa[i]와 sa[i - 1]의 최장 공통 접두사, lcp[0]은 그냥 쓰레기값
+} // lcp[i]는 sa[i]와 sa[i + 1]의 최장 공통 접두사 // 따라서 lcp배열의 크기는 n-1임
+```
 
+### 가장 긴 반복 부분 문자열, 서로 다른 부분 문자열의 개수, k번 이상 등장하는 서로 다른 부분 문자열의 개수([Deque trick](/기타/Deque%20Trick.md) 필요)
+```cpp
 string longestRepeatedSubstring(const string &st, const vector<int> &sa, const vector<int> &lcp) {
-    int i = max_element(lcp.begin() + 1, lcp.end()) - lcp.begin();
+    if (st.size() == 1) return "";
+    int i = max_element(lcp.begin(), lcp.end()) - lcp.begin();
     return st.substr(sa[i], lcp[i]);
 }
 
 long long countDistinctSubstrings(const string &st, const vector<int> &lcp) {
     long long n = st.size();
-    return n * (n + 1) / 2 - accumulate(lcp.begin() + 1, lcp.end(), 0LL);
+    return n * (n + 1) / 2 - accumulate(lcp.begin(), lcp.end(), 0LL);
+}
+
+vector<int> dequeTrickMin(int len, const vector<int> &v) { // res[i]는 v[max(0, i - len + 1)]~v[i]의 최솟값 // 즉, 정확히 길이가 len인 구간의 최솟값은 res[len-1:n)에 저장됨
+    vector<int> res(v.size());
+    deque<int> dq;
+
+    for (int i = 0; i < v.size(); i++) {
+        while (!dq.empty() && v[dq.back()] > v[i]) dq.pop_back();
+        dq.push_back(i);
+        if (i - dq.front() + 1 > len) dq.pop_front();
+        res[i] = v[dq.front()];
+    }
+    
+    return res;
+}
+
+long long countDistinctSubstringsRepeatedAtLeastK(const string &st, const vector<int> &lcp, int k) { // k번 이상 등장하는 부분 문자열 종류의 수
+    assert(k >= 2); // k=1일 땐  n * (n + 1) / 2 - accumulate(lcp.begin(), lcp.end(), 0LL);
+    if (st.size() < k) return 0;
+
+    auto rmq = dequeTrickMin(k - 1, lcp); // sa배열 k개의 최장공통접두사가 필요하므로 lcp배열에선 k-1개씩 뽑아서 min값을 구하면 됨
+    long long res = rmq[k - 2];
+    for (int i = k - 1; i < st.size() - 1; i++) res += max(0, rmq[i] - rmq[i - 1]);
+    return res;
 }
 ```
 ### 시간복잡도
 suffixArray $O(N \log{N})$   
-lcp $O(N)$   
-suffixArray $O(N)$ 알고리즘도 있지만 복잡해서 잘 안쓴다고 함   
+(suffix 배열이 주어져 있을 때) lcp $O(N)$   
+
+suffixArray를 $O(N)$에 구하는 알고리즘도 있지만 복잡해서 잘 안쓴다고 함   
 
 ### 구현 주의사항
 group의 원소는 0 초과의 값을 가져야 된다.   
-countingSort에서 group[a + t] 접근할 때 인덱스 초과하면 0으로 바꿔서 cnt[0]에 저장하므로 이 0과 구별하기 위해선 group배열의 값은 0을 가지면 안 된다.   
-tmp[sa[0]] = 1로 초기화하는 것도 같은 이유   
+countingSort에서 group\[a + t\] 접근할 때 인덱스 초과하면 0으로 바꿔서 cnt\[0\]에 저장하므로 이 0과 구별하기 위해선 group배열의 값은 0을 가지면 안 된다.   
+tmp\[sa\[0\]\] = 1로 초기화하는 것도 같은 이유   
+
+### 사용설명
+sa에 대응되는 문자열 출력하고 싶으면 아래코드 사용   
+```cpp
+for (auto i : sa) cout << st.substr(i) << "\n";
+```
 
 ### 문제
 [Suffix Array](https://www.acmicpc.net/problem/9248)   
 [반복 부분문자열](https://www.acmicpc.net/problem/1605) - `longestRepeatedSubstring()`   
 [Repeated Substrings](https://www.acmicpc.net/problem/16415) - `longestRepeatedSubstring()`   
+[서로 다른 부분 문자열의 개수 2](https://www.acmicpc.net/problem/11479) - `countDistinctSubstrings()`   
+[반복되는 부분 문자열](https://www.acmicpc.net/problem/10413) - `countDistinctSubstringsRepeatedAtLeastK(k=2)`   
 
 ### 원리
 rank는 sa배열에 대한 역함수. 즉, st[i:]가 sa에서 몇 번째인지 저장   
@@ -88,3 +125,5 @@ https://blog.naver.com/kks227/221028710658
 https://loosie.tistory.com/798   
 https://blog.myungwoo.kr/57   
 https://koosaga.com/125   
+https://infossm.github.io/blog/2021/07/18/suffix-array-and-lcp/   
+https://m.blog.naver.com/jqkt15/221795956351 - 반복 부분 문자열의 개수   
