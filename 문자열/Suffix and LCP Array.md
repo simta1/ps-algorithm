@@ -86,18 +86,23 @@ long long countDistinctSubstringsRepeatedAtLeastK(const string &st, const vector
 }
 ```
 ### 시간복잡도
-suffixArray $O(N \log{N})$   
-(suffix 배열이 주어져 있을 때) lcp $O(N)$   
+suffix array $O(N \log{N})$   
+(suffix 배열이 주어져 있을 때) lcp array $O(N)$   
 
-suffixArray를 $O(N)$에 구하는 알고리즘도 있지만 복잡해서 잘 안쓴다고 함   
+suffix array를 $O(N)$에 구하는 알고리즘도 있지만 복잡해서 잘 쓰지 않는 듯   
 
 ### 구현 주의사항
 group의 원소는 0 초과의 값을 가져야 된다.   
-countingSort에서 group\[a + t\] 접근할 때 인덱스 초과하면 0으로 바꿔서 cnt\[0\]에 저장하므로 이 0과 구별하기 위해선 group배열의 값은 0을 가지면 안 된다.   
-tmp\[sa\[0\]\] = 1로 초기화하는 것도 같은 이유   
+`countingSort`에서 `group[a + t]`에 접근할 때 인덱스 초과하면 0으로 바꿔서 `cnt[0]`에 저장하므로 이 0과 구별하기 위해선 group배열의 값은 0을 가지면 안 된다.   
+`tmp[sa[0]] = 1`로 초기화하는 것도 같은 이유다.   
 
 ### 사용설명
-sa에 대응되는 문자열 출력하고 싶으면 아래코드 사용   
+getLCPArray()에서 만드는 rank배열이 필요한 문제도 가끔 있음   
+
+lcp배열에서 RMQ구하면 i번째 접미사부터 j번째 접미사까지의 최장공통접두사의 길이를 구할 수 있음   
+RMQ는 전처리 $O(N\log{N})$ 쿼리 $O(1)$의 구현을 사용할 때도 있고, `countDistinctSubstringsRepeatedAtLeastK()`에서처럼 길이가 정해진 구간에 대해서만 계산하는 경우엔 Deque Trick으로 모든 구간에 대해 $O(N)$으로 계산할 수도 있음([RMQ](/기타/RMQ.md) 참고)   
+
+접미사 순서대로 출력하고 싶으면 아래코드 사용   
 ```cpp
 for (auto i : sa) cout << st.substr(i) << "\n";
 ```
@@ -108,6 +113,7 @@ for (auto i : sa) cout << st.substr(i) << "\n";
 [Repeated Substrings](https://www.acmicpc.net/problem/16415) - `longestRepeatedSubstring()`   
 [서로 다른 부분 문자열의 개수 2](https://www.acmicpc.net/problem/11479) - `countDistinctSubstrings()`   
 [반복되는 부분 문자열](https://www.acmicpc.net/problem/10413) - `countDistinctSubstringsRepeatedAtLeastK(k=2)`   
+[Prefix와 Suffix](https://www.acmicpc.net/problem/13576) - rank배열 필요, lcp배열에서 rmq 계산해야 되는 문제   
 
 ### 원리
 rank는 sa배열에 대한 역함수. 즉, st[i:]가 sa에서 몇 번째인지 저장   
