@@ -85,7 +85,7 @@ mermaid stateDiagram-v2 사용
   * #### 기타
     * <span class="gold">[DSU(유니온 파인드)(G-)](/자료구조/기타/DSU.md)</span>
     * <span class="">[유니온 파인드 롤백]</span>
-    * <span class="">[자료구조 롤백 지원하기]</span> <!-- https://cologne.tistory.com/66 -->
+    * <span class="">[amortized 시간복잡도, 자료구조 롤백 지원하기]</span> <!-- https://cologne.tistory.com/66 -->
     * <span class="">[erasable pq]</span> <!-- https://nyaannyaan.github.io/library/data-structure/erasable-priority-queue.hpp -->
     * <span class="">[meldable pq]</span>
     * <span class="gold">[희소 배열(G+)](/자료구조/기타/희소배열.md)</span>
@@ -132,7 +132,7 @@ mermaid stateDiagram-v2 사용
     * <span class="platinum">[BCC(이중 연결 요소) (P-)](/그래프%20이론/그래프/BCC.md)</span>
     * <span class="platinum">[선인장(P+)](/그래프%20이론/그래프/선인장.md)</span>
     * <span class="">[블록 컷 트리]</span>
-    * <span class="">[Dynamic MST]</span> <!-- https://koosaga.com/211 -->
+    * <span class="">[Dynamic MST]</span> <!-- https://koosaga.com/211 --> <!-- https://www.acmicpc.net/workbook/view/2329 --> <!-- https://docs.lib.purdue.edu/cgi/viewcontent.cgi?article=1367&context=cstech --> <!-- https://codeforces.com/blog/entry/105192 -->
     * <span class="">[_2th MST(D-)_]</span>
     * <span class="">[쌍대 그래프(D-)]</span>
     * <span class="">[그래프 채색]</span> <!-- https://infossm.github.io/blog/2023/06/21/Graph-Coloring/ -->
@@ -143,10 +143,10 @@ mermaid stateDiagram-v2 사용
     * <span class="">[쌍대 그래프]</span>
     * <span class="">[현 그래프 판정]</span>
     * <span class="">[현 그래프(D+)]</span>
+    * <span class="">[Perfect Elimination Ordering]</span>
     * <span class="diamond">[유향 MST(D+)](/그래프%20이론/그래프/DMST.md)</span>
     * <span class="ruby">[offline incremental SCC(R-)](/그래프%20이론/그래프/Offline%20Incremental%20SCC.md)</span>
     * <span class="">[온라인 동적 연결성 판정(R+)]</span> <!-- https://etyu39.tistory.com/5 --> <!-- https://www.acmicpc.net/problem/17465 -->
-    <!-- * <span class="">[Perfect Elimination Ordering]</span> -->
     <!-- * <span class="">[최소 차수 MST]</span> -->
   * #### [네트워크 플로우](/그래프%20이론/네트워크%20플로우/개념%20정리.md)
     * <span class="platinum">[이분 매칭(P-)](/그래프%20이론/네트워크%20플로우/이분매칭.md)</span>
@@ -226,6 +226,7 @@ mermaid stateDiagram-v2 사용
   * <span class="platinum">[아호 코라식(P+)](/문자열/Aho-Corasick.md)</span>
   * ~~<span class="">[bitap algorithm]</span>~~
   * <span class="platinum">[접미사 배열과 lcp 배열(P+)](/문자열/Suffix%20and%20LCP%20Array.md)</span>
+  * <span class="">[LCE]</span> <!-- Longest Common Extension --> <!-- https://www.geeksforgeeks.org/longest-common-extension-lce-introduction-and-naive-method/ --> <!-- https://www.geeksforgeeks.org/longest-common-extension-lce-using-rmq/ -->
   * <span class="">[Lyndon Factorization(Duval algorithm)]</span> <!-- https://codeforces.com/blog/entry/89629 --> <!-- https://gall.dcinside.com/mgallery/board/view/?id=ps&no=21405 --> <!-- https://codeforces.com/blog/entry/106725 -->
   * <span class="">[Z algorithm]</span>
   * <span class="">[와일드카드 문자열 매칭]</span> <!-- https://infossm.github.io/blog/2021/08/20/wildcard-string-matching/ --> <!-- https://www.acmicpc.net/problem/26136 -->
@@ -385,6 +386,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[계수 정렬]</span>
   * <span class="silver">[기수 정렬(S-)](/기타/Radix%20Sort.md)</span>
   * <span class="silver">[이분 탐색(S-)](/기타/이분탐색.md)</span>
+  * <span class="">[Fractional Cascading]</span> <!-- https://codeforces.com/blog/entry/21892 -->
   * <span class="silver">[투 포인터(S-)](/기타/Two%20Pointer.md)</span>
   * <span class="silver">[비트마스크(S-)](/기타/Bitmask.md)</span>
   * <span class="silver">[좌표 압축(S-)](/기타/좌표압축.md)</span>
