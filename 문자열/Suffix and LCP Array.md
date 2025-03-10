@@ -36,14 +36,13 @@ vector<int> getSuffixArray(const string &st) {
 vector<int> getLCPArray(const string &st, const vector<int> &sa) {
     int n = st.size();
     assert(n >= 1);
+
     vector<int> rank(n), lcp(n - 1);
     for (int i = 0; i < n; i++) rank[sa[i]] = i; // sa[idx]=i -> st[i:]가 idx번째 접미사 // rank[i]=idx 즉, st[i:]가 몇번째 접미사인지 rank[i]에 저장
-
     for (int i = 0, h = 0; i < n; ++i, h -= !!h) if (rank[i]) {
         for (int j = sa[rank[i] - 1]; j + h < n && i + h < n && st[j + h] == st[i + h];) ++h;
         lcp[rank[i] - 1] = h;
     }
-
     return lcp;
 } // lcp[i]는 sa[i]와 sa[i + 1]의 최장 공통 접두사 // 따라서 lcp배열의 크기는 n-1임
 ```
