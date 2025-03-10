@@ -214,7 +214,7 @@ mermaid stateDiagram-v2 사용
   <!-- [멀티탭 스케줄링](https://www.acmicpc.net/problem/1700) -->
   <!-- [강의실 배정](https://www.acmicpc.net/problem/11000) -->
 
-* ### 문자열
+* ### [문자열](/문자열/개념%20정리.md)
   <!-- RBS(Regular Bracket Sequence) -->
   <!-- https://blog.cube219.me/posts/2021/solve-stock-price-prediction-problem-without-segment-tree/ -->
   * <span class="">[괄호문자열]</span> <!-- 괄호문자열 판별, 괄호 종류 여러개일 때, 괄호문자열 응용 등등 -->
