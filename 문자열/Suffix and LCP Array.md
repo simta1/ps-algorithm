@@ -47,7 +47,7 @@ vector<int> getLCPArray(const string &st, const vector<int> &sa) {
 } // lcp[i]는 sa[i]와 sa[i + 1]의 최장 공통 접두사 // 따라서 lcp배열의 크기는 n-1임
 ```
 
-### 가장 긴 반복 부분 문자열, 서로 다른 부분 문자열의 개수, k번 이상 등장하는 서로 다른 부분 문자열의 개수([Deque trick](/기타/Deque%20Trick.md) 필요)
+### 가장 긴 반복 부분 문자열, 서로 다른 부분 문자열의 개수, k번 이상 등장하는 서로 다른 부분 문자열의 개수([Deque trick](/기타/Deque%20Trick.md) 필요), k번 이상 등장하는 가장 긴 부분 문자열([Deque trick](/기타/Deque%20Trick.md) 필요)
 ```cpp
 string longestRepeatedSubstring(const string &st, const vector<int> &sa, const vector<int> &lcp) {
     if (st.size() == 1) return "";
@@ -83,6 +83,15 @@ long long countDistinctSubstringsRepeatedAtLeastK(const string &st, const vector
     for (int i = k - 1; i < st.size() - 1; i++) res += max(0, rmq[i] - rmq[i - 1]);
     return res;
 }
+
+string longestSubstringRepeatedAtLeastK(const string &st, const vector<int> &sa, const vector<int> &lcp, int k) { // k번 이상 등장하는 부분 문자열 중 가장 긴 부분 문자열
+    if (k == 1) return st;
+    if (st.size() < k) return "";
+
+    auto rmq = dequeTrickMin(k - 1, lcp); // sa배열 k개의 최장공통접두사가 필요하므로 lcp배열에선 k-1개씩 뽑아서 min값을 구하면 됨
+    int i = max_element(rmq.begin() + k - 2, rmq.end()) - rmq.begin();
+    return st.substr(sa[i], rmq[i]);
+}
 ```
 ### 시간복잡도
 suffix array $O(N \log{N})$   
@@ -112,7 +121,9 @@ for (auto i : sa) cout << st.substr(i) << "\n";
 [Repeated Substrings](https://www.acmicpc.net/problem/16415) - `longestRepeatedSubstring()`   
 [서로 다른 부분 문자열의 개수 2](https://www.acmicpc.net/problem/11479) - `countDistinctSubstrings()`   
 [반복되는 부분 문자열](https://www.acmicpc.net/problem/10413) - `countDistinctSubstringsRepeatedAtLeastK(k=2)`   
+[Milk Patterns](https://www.acmicpc.net/problem/6206) - `longestSubstringRepeatedAtLeastK()`   
 [Prefix와 Suffix](https://www.acmicpc.net/problem/13576) - rank배열 필요, lcp배열에서 rmq 계산해야 되는 문제   
+[Stammering Aliens](https://www.acmicpc.net/problem/3864) - lcp에서 min rmq, sa에서 max rmq   
 
 ### 원리
 rank는 sa배열에 대한 역함수. 즉, st[i:]가 sa에서 몇 번째인지 저장   
