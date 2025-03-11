@@ -33,7 +33,7 @@ vector<int> getSuffixArray(const string &st) {
 ```
 ### LCP Array (Kasai's algorithm)
 ```cpp
-vector<int> getLCPArray(const string &st, const vector<int> &sa) {
+pair<vector<int>, vector<int> > getLCPArray(const string &st, const vector<int> &sa) {
     int n = st.size();
     assert(n >= 1);
 
@@ -43,7 +43,7 @@ vector<int> getLCPArray(const string &st, const vector<int> &sa) {
         for (int j = sa[rank[i] - 1]; j + h < n && i + h < n && st[j + h] == st[i + h];) ++h;
         lcp[rank[i] - 1] = h;
     }
-    return lcp;
+    return {rank, lcp};
 } // lcp[i]는 sa[i]와 sa[i + 1]의 최장 공통 접두사 // 따라서 lcp배열의 크기는 n-1임
 ```
 
@@ -105,14 +105,23 @@ group의 원소는 0 초과의 값을 가져야 된다.
 `tmp[sa[0]] = 1`로 초기화하는 것도 같은 이유다.   
 
 ### 사용설명
-getLCPArray()에서 만드는 rank배열이 필요한 문제도 가끔 있음   
+> 접미사 순서대로 출력하고 싶으면 아래코드 사용   
+> ```cpp
+> for (auto i : sa) cout << st.substr(i) << "\n";
+> ```
 
-lcp배열에서 RMQ구하면 i번째 접미사부터 j번째 접미사까지의 최장공통접두사의 길이를 구할 수 있음   
+i번째 접미사부터 j번째 접미사까지의 최장공통접두사의 길이는 `min(lcp[i], ..., lcp[j - 1])`이기 때문에 lcp배열에서 RMQ 구하면 됨   
 RMQ는 전처리 $O(N\log{N})$ 쿼리 $O(1)$의 구현을 사용할 때도 있고, `countDistinctSubstringsRepeatedAtLeastK()`에서처럼 길이가 정해진 구간에 대해서만 계산하는 경우엔 Deque Trick으로 모든 구간에 대해 $O(N)$으로 계산할 수도 있음([RMQ](/기타/RMQ.md) 참고)   
 
-접미사 순서대로 출력하고 싶으면 아래코드 사용   
+`st[i:]`와 `st[j:]`의 최장공통접두사의 길이는 `rank[n - 1 - i]`번째 접미사부터 `rank[n - 1 - j]`번째 접미사까지의 최장공통접두사의 길이를 구하면 됨.   
 ```cpp
-for (auto i : sa) cout << st.substr(i) << "\n";
+if (i == j) return n - i;
+
+RMQ rmq(lcp);
+int idx1 = rank[n - 1 - i];
+int idx2 = rank[n - 1 - j];
+if (idx1 > idx2) swap(idx1, idx2);
+return rmq.query(idx1, idx2 - 1); // idx1 <= idx2 - 1은 i!=j라서 항상 만족함
 ```
 
 ### 문제
@@ -122,7 +131,8 @@ for (auto i : sa) cout << st.substr(i) << "\n";
 [서로 다른 부분 문자열의 개수 2](https://www.acmicpc.net/problem/11479) - `countDistinctSubstrings()`   
 [반복되는 부분 문자열](https://www.acmicpc.net/problem/10413) - `countDistinctSubstringsRepeatedAtLeastK(k=2)`   
 [Milk Patterns](https://www.acmicpc.net/problem/6206) - `longestSubstringRepeatedAtLeastK()`   
-[Prefix와 Suffix](https://www.acmicpc.net/problem/13576) - rank배열 필요, lcp배열에서 rmq 계산해야 되는 문제   
+[문자열과 쿼리](https://www.acmicpc.net/problem/13713) - rank 쓰는 문제, lcp에서 rmq 계산 필요   
+[Prefix와 Suffix](https://www.acmicpc.net/problem/13576) - rank 쓰는 문제, lcp에서 rmq 계산 필요   
 [Stammering Aliens](https://www.acmicpc.net/problem/3864) - lcp에서 min rmq, sa에서 max rmq   
 
 ### 원리
