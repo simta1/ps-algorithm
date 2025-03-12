@@ -441,6 +441,7 @@ mermaid stateDiagram-v2 사용
   * <span class="additional">[modInt](/utils/ModInt.md)</span>
   * <span class="">[infInt]</span>
   * <span class="">[bigInt]</span>
+  * <span class="additional">[문자열 관련](/utils/string.md)</span>
   * <span class="additional">[BaseInt](/utils/BaseInt.md)</span> <!-- bigint랑 합쳐서 구현하는 게 나을 듯 -->
 # C++ 유용한 기능
 * ### 문법
