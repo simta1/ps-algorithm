@@ -47,6 +47,23 @@ pair<vector<int>, vector<int> > getLCPArray(const string &st, const vector<int> 
 } // lcp[i]는 sa[i]와 sa[i + 1]의 최장 공통 접두사 // 따라서 lcp배열의 크기는 n-1임
 ```
 
+### $O((N+M)\log(N+M))$ LCS(최장공통 부분 문자열)
+```cpp
+string LCString(const string &a, const string &b, char dummy) { // 최장 공통 부분 문자열(최장 공통 부분 수열 아님) // dummy는 문자열에 없는 문자 -> ex) '#'
+    string st = a + string(1, dummy) + b;
+    auto sa = getSuffixArray(st);
+    auto [rank, lcp] = getLCPArray(st, sa);
+    
+    int idx = 0;
+    for (int i = 1; i < lcp.size(); i++) if ((int(a.size() - sa[i]) ^ int(a.size() - sa[i + 1])) < 0) { // sa[i]<a.size()<sa[i+1] or sa[i+1]<a.size()<sa[i]
+        if (lcp[idx] < lcp[i]) idx = i;
+    }
+    
+    return st.substr(sa[idx], lcp[idx]);
+}
+```
+a.size(), sa[i], sa[i + 1]의 대소관계 비교는 [사이값 확인](/ps-snippet/C++/기타/Idea.md#사이값-확인) 문서 참고   
+
 ### 가장 긴 반복 부분 문자열, 서로 다른 부분 문자열의 개수, k번 이상 등장하는 서로 다른 부분 문자열의 개수([Deque trick](/기타/Deque%20Trick.md) 필요), k번 이상 등장하는 가장 긴 부분 문자열([Deque trick](/기타/Deque%20Trick.md) 필요)
 ```cpp
 string longestRepeatedSubstring(const string &st, const vector<int> &sa, const vector<int> &lcp) {
@@ -126,6 +143,7 @@ return rmq.query(idx1, idx2 - 1); // idx1 <= idx2 - 1은 i!=j라서 항상 만�
 
 ### 문제
 [Suffix Array](https://www.acmicpc.net/problem/9248)   
+[최장 공통 부분 문자열](https://www.acmicpc.net/problem/9249) - `LCString()`   
 [반복 부분문자열](https://www.acmicpc.net/problem/1605) - `longestRepeatedSubstring()`   
 [Repeated Substrings](https://www.acmicpc.net/problem/16415) - `longestRepeatedSubstring()`   
 [서로 다른 부분 문자열의 개수 2](https://www.acmicpc.net/problem/11479) - `countDistinctSubstrings()`   
