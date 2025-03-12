@@ -33,7 +33,7 @@ function<void(int, int)> makeTree = [&adj, &chd, &makeTree](int cur, int parent)
 
 ### cur, next, cost, dist[]
 `cur, next, cost` : 그래프에서 현재 노드, 간선으로 이어진 다음 노드, 간선 가중치   
-`dist[]` : 다익스트라, 벨만 포드, 플로읻 워셜 등등에서 거리 계산결과 저장하는 배열   
+`dist[]` : 다익스트라, 벨만 포드, 플로이드 워셜 등등에서 거리 계산결과 저장하는 배열   
 ```cpp
 for (auto [next, cost] : adj[cur]) if (dist[next] > dist[cur] + cost) {
     dist[next] = dist[cur] + cost;
