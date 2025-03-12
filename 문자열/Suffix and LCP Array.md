@@ -2,12 +2,13 @@
 ## Suffix Array, LCP Array
 ### Suffix Array (Mander-Myers)
 ```cpp
-vector<int> getSuffixArray(const string &st) {
+template <typename Container> // Container = string or vector<>
+vector<int> getSuffixArray(const Container &st) {
     int n = st.size();
     vector<int> sa(n), rank(n), tmp(n);
     for (int i = 0; i < n; i++) sa[i] = i, rank[i] = st[i];
 
-    vector<int> cnt(max(n, 256) + 1, 0); // 아스키코드 최대값 포함 가능하게 선언
+    vector<int> cnt(max<int>(n, *max_element(st.begin(), st.end())) + 1, 0);
 
     auto countingSort = [&](int t) {
         fill(cnt.begin(), cnt.end(), 0);
@@ -33,7 +34,8 @@ vector<int> getSuffixArray(const string &st) {
 ```
 ### LCP Array (Kasai's algorithm)
 ```cpp
-pair<vector<int>, vector<int> > getLCPArray(const string &st, const vector<int> &sa) {
+template <typename Container> // Container = string or vector<>
+pair<vector<int>, vector<int> > getLCPArray(const Container &st, const vector<int> &sa) {
     int n = st.size();
     assert(n >= 1);
 
@@ -49,17 +51,25 @@ pair<vector<int>, vector<int> > getLCPArray(const string &st, const vector<int> 
 
 ### $O((N+M)\log(N+M))$ LCS(최장공통 부분 문자열)
 ```cpp
-string LCString(const string &a, const string &b, char dummy) { // 최장 공통 부분 문자열(최장 공통 부분 수열 아님) // dummy는 문자열에 없는 문자 -> ex) '#'
-    string st = a + string(1, dummy) + b;
+template <typename Container> // Container = string or vector<>
+Container LCString(const Container &a, const Container &b, typename Container::value_type dummy) { // 최장 공통 부분 문자열(최장 공통 부분 수열 아님) // dummy는 Container에 없는 문자 -> ex) char이면 '#' 같은 거
+    Container st(a.size() + 1 + b.size(), dummy);
+    for (int i = 0; i < a.size(); i++) st[i] = a[i];
+    for (int i = 0; i < b.size(); i++) st[a.size() + 1 + i] = b[i];
+    
     auto sa = getSuffixArray(st);
     auto [rank, lcp] = getLCPArray(st, sa);
     
-    int idx = 0;
-    for (int i = 1; i < lcp.size(); i++) if ((int(a.size() - sa[i]) ^ int(a.size() - sa[i + 1])) < 0) { // sa[i]<a.size()<sa[i+1] or sa[i+1]<a.size()<sa[i]
-        if (lcp[idx] < lcp[i]) idx = i;
+    int idx = -1, len = 0;
+    for (int i = 0; i < lcp.size(); i++) if ((int(a.size() - sa[i]) ^ int(a.size() - sa[i + 1])) < 0) { // sa[i]<a.size()<sa[i+1] or sa[i+1]<a.size()<sa[i]
+        if (len < lcp[i]) {
+            len = lcp[i];
+            idx = i;
+        }
     }
-    
-    return st.substr(sa[idx], lcp[idx]);
+
+    if (!~idx) return Container(0);
+    return Container(st.begin() + sa[idx], st.begin() + sa[idx] + lcp[idx]);
 }
 ```
 a.size(), sa[i], sa[i + 1]의 대소관계 비교는 [사이값 확인](/ps-snippet/C++/기타/Idea.md#사이값-확인) 문서 참고   
