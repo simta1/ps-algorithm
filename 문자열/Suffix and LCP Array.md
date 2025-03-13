@@ -3,7 +3,7 @@
 ### Suffix Array (Mander-Myers)
 ```cpp
 template <typename Container> // Container = string or vector<>
-vector<int> getSuffixArray(const Container &st) {
+pair<vector<int>, vector<int> > getSuffixArray(const Container &st) {
     int n = st.size();
     vector<int> sa(n), rank(n), tmp(n);
     for (int i = 0; i < n; i++) sa[i] = i, rank[i] = st[i];
@@ -29,23 +29,23 @@ vector<int> getSuffixArray(const Container &st) {
         if (rank[sa.back()] == n) break;
     }
 
-    return sa;
+    for (auto &e : rank) --e; // 1-based -> 0-based // 0<=i<n에 대해 rank[sa[i]] == i임 // sa[idx]=i -> st[i:]가 idx번째 접미사 // rank[i]=idx 즉, st[i:]가 몇번째 접미사인지 rank[i]에 저장됨
+    return {sa, rank};
 }
 ```
 ### LCP Array (Kasai's algorithm)
 ```cpp
 template <typename Container> // Container = string or vector<>
-pair<vector<int>, vector<int> > getLCPArray(const Container &st, const vector<int> &sa) {
+vector<int> getLCPArray(const Container &st, const vector<int> &sa, const vector<int> &rank) {
     int n = st.size();
     assert(n >= 1);
 
-    vector<int> rank(n), lcp(n - 1);
-    for (int i = 0; i < n; i++) rank[sa[i]] = i; // sa[idx]=i -> st[i:]가 idx번째 접미사 // rank[i]=idx 즉, st[i:]가 몇번째 접미사인지 rank[i]에 저장
+    vector<int> lcp(n - 1);
     for (int i = 0, h = 0; i < n; ++i, h -= !!h) if (rank[i]) {
         for (int j = sa[rank[i] - 1]; j + h < n && i + h < n && st[j + h] == st[i + h];) ++h;
         lcp[rank[i] - 1] = h;
     }
-    return {rank, lcp};
+    return lcp;
 } // lcp[i]는 sa[i]와 sa[i + 1]의 최장 공통 접두사 // 따라서 lcp배열의 크기는 n-1임
 ```
 
@@ -57,8 +57,8 @@ Container LCString(const Container &a, const Container &b, typename Container::v
     for (int i = 0; i < a.size(); i++) st[i] = a[i];
     for (int i = 0; i < b.size(); i++) st[a.size() + 1 + i] = b[i];
     
-    auto sa = getSuffixArray(st);
-    auto [rank, lcp] = getLCPArray(st, sa);
+    auto [sa, rank] = getSuffixArray(st);
+    auto lcp = getLCPArray(st, sa, rank);
     
     int idx = -1, len = 0;
     for (int i = 0; i < lcp.size(); i++) if ((int(a.size() - sa[i]) ^ int(a.size() - sa[i + 1])) < 0) { // sa[i]<a.size()<sa[i+1] or sa[i+1]<a.size()<sa[i]
@@ -68,7 +68,7 @@ Container LCString(const Container &a, const Container &b, typename Container::v
         }
     }
 
-    if (!~idx) return Container(0);
+    if (!~idx) return Container(0, 0);
     return Container(st.begin() + sa[idx], st.begin() + sa[idx] + lcp[idx]);
 }
 ```
@@ -76,10 +76,11 @@ a.size(), sa[i], sa[i + 1]의 대소관계 비교는 [사이값 확인](/ps-snip
 
 ### 가장 긴 반복 부분 문자열, 서로 다른 부분 문자열의 개수, k번 이상 등장하는 서로 다른 부분 문자열의 개수([Deque trick](/기타/Deque%20Trick.md) 필요), k번 이상 등장하는 가장 긴 부분 문자열([Deque trick](/기타/Deque%20Trick.md) 필요)
 ```cpp
-string longestRepeatedSubstring(const string &st, const vector<int> &sa, const vector<int> &lcp) {
-    if (st.size() == 1) return "";
+template <typename Container> // Container = string or vector<>
+Container longestRepeatedSubstring(const Container &st, const vector<int> &sa, const vector<int> &lcp) {
+    if (st.size() == 1) return Container(0, 0);
     int i = max_element(lcp.begin(), lcp.end()) - lcp.begin();
-    return st.substr(sa[i], lcp[i]);
+    return Container(st.begin() + sa[i], st.begin() + sa[i] + lcp[i]);
 }
 
 long long countDistinctSubstrings(const string &st, const vector<int> &lcp) {
@@ -101,23 +102,24 @@ vector<int> dequeTrickMin(int len, const vector<int> &v) { // res[i]는 v[max(0,
     return res;
 }
 
-long long countDistinctSubstringsRepeatedAtLeastK(const string &st, const vector<int> &lcp, int k) { // k번 이상 등장하는 부분 문자열 종류의 수
+long long countDistinctSubstringsRepeatedAtLeastK(const vector<int> &lcp, int k) { // k번 이상 등장하는 반복 부분 문자열 종류의 수
     assert(k >= 2); // k=1일 땐  n * (n + 1) / 2 - accumulate(lcp.begin(), lcp.end(), 0LL);
-    if (st.size() < k) return 0;
+    if (lcp.size() + 1 < k) return 0; // 문자열 길이는 lcp.size()+1
 
     auto rmq = dequeTrickMin(k - 1, lcp); // sa배열 k개의 최장공통접두사가 필요하므로 lcp배열에선 k-1개씩 뽑아서 min값을 구하면 됨
     long long res = rmq[k - 2];
-    for (int i = k - 1; i < st.size() - 1; i++) res += max(0, rmq[i] - rmq[i - 1]);
+    for (int i = k - 1; i < lcp.size(); i++) res += max(0, rmq[i] - rmq[i - 1]);
     return res;
 }
 
-string longestSubstringRepeatedAtLeastK(const string &st, const vector<int> &sa, const vector<int> &lcp, int k) { // k번 이상 등장하는 부분 문자열 중 가장 긴 부분 문자열
+template <typename Container> // Container = string or vector<>
+Container longestSubstringRepeatedAtLeastK(const Container &st, const vector<int> &sa, const vector<int> &lcp, int k) { // k번 이상 등장하는 부분 문자열 중 가장 긴 부분 문자열
     if (k == 1) return st;
-    if (st.size() < k) return "";
+    if (st.size() < k) return Container(0, 0);
 
     auto rmq = dequeTrickMin(k - 1, lcp); // sa배열 k개의 최장공통접두사가 필요하므로 lcp배열에선 k-1개씩 뽑아서 min값을 구하면 됨
     int i = max_element(rmq.begin() + k - 2, rmq.end()) - rmq.begin();
-    return st.substr(sa[i], rmq[i]);
+    return Container(st.begin() + sa[i], st.begin() + sa[i] + rmq[i]);
 }
 ```
 ### 시간복잡도
@@ -128,8 +130,9 @@ suffix array를 $O(N)$에 구하는 알고리즘도 있지만 복잡해서 잘 �
 
 ### 구현 주의사항
 group의 원소는 0 초과의 값을 가져야 된다.   
-`countingSort`에서 `group[a + t]`에 접근할 때 인덱스 초과하면 0으로 바꿔서 `cnt[0]`에 저장하므로 이 0과 구별하기 위해선 group배열의 값은 0을 가지면 안 된다.   
+`countingSort`에서 `rank[sa[i] + t]`에 접근할 때 인덱스 초과하면 0으로 바꿔서 `cnt[0]`에 저장하므로 이 0과 구별하기 위해선 rank배열의 값은 0을 가지면 안 된다.   
 `tmp[sa[0]] = 1`로 초기화하는 것도 같은 이유다.   
+`getSuffixArray()`가 끝난 후 rank배열을 0-based로 바꿔주는 게 이후 lcp배열의 계산이나 여러 응용에 훨씬 편하다.   
 
 ### 사용설명
 > 접미사 순서대로 출력하고 싶으면 아래코드 사용   
