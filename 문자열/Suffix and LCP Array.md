@@ -7,6 +7,7 @@ pair<vector<int>, vector<int> > getSuffixArray(const Container &st) {
     int n = st.size();
     vector<int> sa(n), rank(n), tmp(n);
     for (int i = 0; i < n; i++) sa[i] = i, rank[i] = st[i];
+    if constexpr (is_same_v<Container, vector<typename Container::value_type>>) for (auto e : rank) assert(e > 0); // rank[i]에 양수만 들어가야됨 // Container=vector<int>같은거면 확인
 
     vector<int> cnt(max<int>(n, *max_element(st.begin(), st.end())) + 1, 0);
 
