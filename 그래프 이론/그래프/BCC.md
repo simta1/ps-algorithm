@@ -56,8 +56,8 @@ vector<int> getNodeOfBCC(int n, const vector<pair<int, int> > &bcc) {
     return res;
 
 /*  int E = bcc.size(), V = getNodeOfBCC(n, bcc).size();라 할 때
-    E >= V라면 사이클을 이루는 BCC
-    E < V라면 self-loop(E=0, V=1) 혹은 단절선(E=1, V=2) 뿐임     */
+    E >= V라면 사이클을 이루는 BCC (E = V라면 단순사이클, E>V라면 해당 BCC의 모든 정점을 지나는 사이클에 chord가 존재)
+    E < V라면 (E=0, V=1) 혹은 단절선(E=1, V=2) 뿐임     */
 }
 ```
 그냥 set 사용해서 간단히 구현할 수도 있지만 너무 느리다.   
