@@ -144,13 +144,13 @@ group의 원소는 0 초과의 값을 가져야 된다.
 i번째 접미사부터 j번째 접미사까지의 최장공통접두사의 길이는 `min(lcp[i], ..., lcp[j - 1])`이기 때문에 lcp배열에서 RMQ 구하면 됨   
 RMQ는 전처리 $O(N\log{N})$ 쿼리 $O(1)$의 구현을 사용할 때도 있고, `countDistinctSubstringsRepeatedAtLeastK()`에서처럼 길이가 정해진 구간에 대해서만 계산하는 경우엔 Deque Trick으로 모든 구간에 대해 $O(N)$으로 계산할 수도 있음([RMQ](/기타/RMQ.md) 참고)   
 
-`st[i:]`와 `st[j:]`의 최장공통접두사의 길이는 `rank[n - 1 - i]`번째 접미사부터 `rank[n - 1 - j]`번째 접미사까지의 최장공통접두사의 길이를 구하면 됨.   
+`st[i:]`와 `st[j:]`의 최장공통접두사의 길이는 `rank[i]`번째 접미사부터 `rank[j]`번째 접미사까지의 최장공통접두사의 길이를 구하면 됨.   
 ```cpp
 if (i == j) return n - i;
 
 RMQ rmq(lcp);
-int idx1 = rank[n - 1 - i];
-int idx2 = rank[n - 1 - j];
+int idx1 = rank[i];
+int idx2 = rank[j];
 if (idx1 > idx2) swap(idx1, idx2);
 return rmq.query(idx1, idx2 - 1); // idx1 <= idx2 - 1은 i!=j라서 항상 만족함
 ```
