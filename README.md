@@ -85,9 +85,9 @@ mermaid stateDiagram-v2 사용
   * #### 기타
     * <span class="gold">[DSU(유니온 파인드)(G-)](/자료구조/기타/DSU.md)</span>
     * <span class="">[유니온 파인드 롤백]</span>
-    * <span class="">[amortized 시간복잡도, 자료구조 롤백 지원하기]</span> <!-- https://cologne.tistory.com/66 -->
-    * <span class="">[erasable pq]</span> <!-- https://nyaannyaan.github.io/library/data-structure/erasable-priority-queue.hpp -->
+    * <span class="gold">[Erasable Priority Queue(G)](/자료구조/기타/Erasable%20PQ.md)</span>
     * <span class="">[meldable pq]</span>
+    * <span class="">[amortized 시간복잡도, 자료구조 롤백 지원하기]</span> <!-- https://cologne.tistory.com/66 -->
     * <span class="gold">[희소 배열(G+)](/자료구조/기타/희소배열.md)</span>
     * <span class="platinum">[Small To Large(작은 집합에서 큰 집합으로 합치는 테크닉) (P-)](/자료구조/기타/Small%20To%20Large.md)</span>
     * <span class="platinum">[XOR 트라이(P-)](/자료구조/기타/XOR%20Trie.md)</span>
