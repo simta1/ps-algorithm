@@ -25,3 +25,7 @@ std::pair<int, int> 타입의 요소들을 리스트 초기화할 때 이중 중
 {}만 사용하면 std::array의 생성자가 std::initializer_list<std::pair<int, int>>를 받는 형태로 해석될 수도 있는데, std::array는 std::initializer_list를 직접 지원하지 않기 때문에 컴파일 오류가 발생합니다.
 ```
 모르겠당 ㅋ
+
+## array 초기화 없이 선언
+`vector<int> v(N);`에서는 모든 값이 0으로 초기화되지만 `array<int, N> v;`는 자동으로 0으로 초기화되지 않고 쓰레기값이 남는다.   
+`array<int, N> v = {};`처럼 해야 0으로 초기화된다.   
