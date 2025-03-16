@@ -362,12 +362,12 @@ mermaid stateDiagram-v2 사용
     * <span class="">[이산 k제곱근]</span>
     * <span class="diamond">[Cornacchia's algorithm(D-)](/수학/Cornacchia.md)</span>
     * <span class="diamond">[Power tower(D-)](/수학/Power%20Tower.md)</span>
-    * <span class="">[simplex]</span> <!-- https://velog.io/@wjleekr927/Simplex-algorithm -->
-    * <span class="">[LP]</span>
     * <span class="">[CDQ Convolution(online FFT)]</span> <!-- https://codeforces.com/blog/entry/111399 --> <!-- https://cocoachan.tistory.com/15 -->
     * <span class="">[XOR Convolution, FWHT]</span> <!-- fft()에서 root=1로 하면 roots[*]=1이라 xor convolution 되는 듯 https://github.com/koosaga/olympiad/blob/master/Library/codes/math/algebra.cpp --> <!-- https://velog.io/@dnr6054/Fast-Walsh-Hadamard-Transform --> <!-- https://cubelover.tistory.com/19 --> <!-- https://teferi.net/ps/fwht -->
     * <span class="">[OR/AND Convolution]</span> <!-- https://codeforces.com/blog/entry/115438 -->
     * <span class="">[subset, GCD, LCM Convolution]</span> <!-- https://www.acmicpc.net/blog/view/127 --> <!-- https://codeforces.com/blog/entry/92153 --> <!-- https://codeforces.com/blog/entry/112346 -->
+    * <span class="">[LP(D-)]</span>
+    * <span class="diamond">[Simplex Method(D)](/수학/Simplex%20Method.md)</span>
     * <span class="">[번사이드 보조정리]</span> <!-- https://algoshitpo.github.io/2020/02/09/burnside/ -->
     * <span class="">[홀의 결혼 정리]</span>
     * <span class="">[린드스트롬-게셀-비엔노 보조정리(LGV Lemma)]</span>
@@ -378,7 +378,7 @@ mermaid stateDiagram-v2 사용
     * <span class="diamond">[메르텐스 함수(D+)](/수학/메르텐스.md)</span>
     * <span class="diamond">[메르텐스 트릭, Xudyh's sieve (D+)](/수학/Xudyh's%20sieve.md)</span>
     * <span class="">[min_25's sieve]</span>
-    * <span class="">[매트로이드(R-)]</span> <!-- https://m.blog.naver.com/kks227/221031527413 --> <!-- https://infossm.github.io/tags/matroid/ --> <!-- https://imeimi.tistory.com/45 --> <!-- https://m.blog.naver.com/kks227/221031527413 --> <!-- https://koosaga.com/252 --> <!-- https://joohs0505.tistory.com/4 --> <!-- https://dad-rock.tistory.com/673 -->
+    * <span class="">[매트로이드(R-)]</span> <!-- https://m.blog.naver.com/kks227/221031527413 --> <!-- https://infossm.github.io/tags/matroid/ --> <!-- https://imeimi.tistory.com/45 --> <!-- https://m.blog.naver.com/kks227/221031527413 --> <!-- https://koosaga.com/252 --> <!-- https://joohs0505.tistory.com/4 --> <!-- https://dad-rock.tistory.com/673 --> <!-- https://m.blog.naver.com/kks227/220985752330?recommendTrackingCode=2 -->
 * ### 게임 이론
   * <span class="">[스프라그-그런디 정리]</span> <!-- (비트셋) --> <!-- https://blog.myungwoo.kr/82 --> <!-- https://blog.myungwoo.kr/27 -->
   * <span class="">[hackenbush]</span> <!-- https://en.wikipedia.org/wiki/Hackenbush --> <!-- https://rkm0959.tistory.com/139 -->
