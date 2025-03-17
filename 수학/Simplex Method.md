@@ -1,28 +1,30 @@
 [카테고리](/README.md)
 ## Simplex Method
 ```cpp
+template <typename double_t>
 class LP {
 private:
-    using T = long double;
-    const T eps = 1e-7;
+    const double_t eps = 1e-7;
     
-    bool eq(T a, T b) { return abs(a - b) < eps;  }
-    bool lt(T a, T b) { return a < b && !eq(a, b); }
+    bool eq(double_t a, double_t b) { return abs(a - b) < eps;  }
+    bool lt(double_t a, double_t b) { return a < b && !eq(a, b); }
 
     int n, m; // n: 변수 개수, m: 제약조건 개수
-    vector<vector<T> > a; // a[m+1][n+1], b[m+1], c[n+1], sol[n+1]
-    vector<T> b, c, sol; // a는 제약조건 계수, b는 제약조건 제한값(음수 가능), c는 최대화할 목적함수의 계수
-    T res;
+    vector<vector<double_t> > a; // a[m][n], b[m], c[n], sol[n]
+    vector<double_t> b, c, sol; // a는 제약조건 계수, b는 제약조건 제한값(음수 가능), c는 최대화할 목적함수의 계수
+    double_t res;
 
 public:
-    LP(int n, const vector<T> &c, int _m=0) : n(n), c(c), sol(n + 1), m(0), a(1), b(1) { // c는 목적함수의 계수들임, 1-based임
-        assert(c.size() == n + 1); // 1-based라서
-        b.reserve(_m + 1); // 1-based라서
-        a.reserve(_m + 1);
+    template <typename T>
+    LP(const vector<T> &v, int constraints = 0) : c(v.begin(), v.end()), sol(v.size()) { // c는 목적함수의 계수들임, 1-based임
+        n = c.size();
+        m = 0;
+        b.reserve(constraints);
+        a.reserve(constraints);
     }
 
-    void add(const vector<T> &_a, T _b) {
-        assert(_a.size() == n + 1);
+    void add(const vector<double_t> &_a, double_t _b) { // a0x0 + a1x1 + ... + a(n-1)x(n-1) <= b
+        assert(_a.size() == n);
         a.push_back(_a);
         b.push_back(_b);
         ++m;
@@ -34,22 +36,22 @@ public:
         fill(sol.begin(), sol.end(), 0);
         res = 0;
 
-        vector<T> Left(m + 1), Down(n + 1);
-        for (int i = 1; i <= n; i++) Down[i] = i;
-        for (int i = 1; i <= m; i++) Left[i] = n + i;
+        vector<double_t> left(m), down(n);
+        for (int i = 0; i < n; i++) down[i] = i;
+        for (int i = 0; i < m; i++) left[i] = n + i;
 
-        auto pivot = [&](int x,int y) {
-            swap(Left[x], Down[y]); // 기저 변수 교체
-            T k = a[x][y];
+        auto pivot = [&](int x, int y) {
+            swap(left[x], down[y]); // 기저 변수 교체?
+            double_t k = a[x][y];
             a[x][y] = 1;
             vector<int> nz;
-            for (int i = 1; i <= n; i++) { // 행 스케일링?
+            for (int i = 0; i < n; i++) { // 행 스케일링?
                 a[x][i] /= k;
                 if (!eq(a[x][i], 0)) nz.push_back(i);
             }
             b[x] /= k;
     
-            for (int i = 1; i <= m; i++) { // 가우스 소거?
+            for (int i = 0; i < m; i++) { // 가우스 소거?
                 if (i == x || eq(a[i][y], 0)) continue;
                 k = a[i][y]; a[i][y] = 0;
                 b[i] -= k * b[x];
@@ -63,27 +65,28 @@ public:
         };
 
         while (1) { // Eliminating negative b[i]
-            int x = 0, y = 0;
-            for (int i = 1; i <= m; i++) if (lt(b[i], 0) && (x == 0 || b[x] > b[i])) x = i;
-            if (x == 0) break;
-            for (int i = 1; i <= n; i++) if (lt(a[x][i], 0) && (y == 0 || a[x][i] < a[x][y])) y = i;
-            if (y == 0) return 1;
+            int x = -1, y = -1;
+            for (int i = 0; i < m; i++) if (lt(b[i], 0) && (!~x || b[x] > b[i])) x = i;
+            if (x == -1) break;
+            for (int i = 0; i < n; i++) if (lt(a[x][i], 0) && (!~y || a[x][y] > a[x][i])) y = i;
+            if (y == -1) return 1;
             pivot(x, y);
         }
 
         while (1) {
-            int x = 0, y = 0;
-            for (int i = 1; i <= n; i++) if (lt(0, c[i]) && (!y || c[i] > c[y])) y = i;
-            if (y == 0) break;
-            for (int i = 1; i <= m; i++) if (lt(0, a[i][y]) && (!x || b[i]/a[i][y] < b[x]/a[x][y])) x = i;
-            if (x == 0) return 2;
+            int x = -1, y = -1;
+            for (int i = 0; i < n; i++) if (lt(0, c[i]) && (!~y || c[y] < c[i])) y = i;
+            if (y == -1) break;
+            for (int i = 0; i < m; i++) if (lt(0, a[i][y]) && (!~x || b[x]/a[x][y] > b[i]/a[i][y])) x = i;
+            if (x == -1) return 2;
             pivot(x, y);
         }
-        for (int i = 1; i <= m; i++) if (Left[i] <= n) sol[Left[i]] = b[i];
+        
+        for (int i = 0; i < m; i++) if (left[i] < n) sol[left[i]] = b[i];
         return 0;
     }
     
-    pair<T, vector<T> > getSolution() {
+    pair<double_t, vector<double_t> > getSolution() {
         return {res, sol};
     }
 };
@@ -113,7 +116,7 @@ n = 2, m = 3, a = [[0.5, 2, 1], [1, 2, 4]], b = [24, 60], c = [6, 14, 13]
 n = 3, m = 2, a = [[-0.5, -1], [-2, -2], [-1, -4]], b = [-6, -14, -13], c = [-24, -60]   
 
 ### 문제
-[]()   
+[Cheese, If You Please](https://www.acmicpc.net/problem/17854)   
 
 ### 원리
 
