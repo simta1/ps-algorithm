@@ -124,7 +124,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[_간선 착색수_]</span>
     * <span class="gold">[위상정렬(G+)](/그래프%20이론/그래프/위상정렬.md)</span>
     * <span class="">[kth 최단 경로]</span>
-    * <span class="platinum">[오일러 회로(P-)](/그래프%20이론/그래프/오일러%20회로.md)</span>
+    * <span class="platinum">[오일러 회로(P-)](/그래프%20이론/그래프/오일러%20회로.md)</span> <!-- https://qwerasdfzxcl.tistory.com/41 -->
     * <span class="platinum">[SCC(강한 연결 요소) (P-)](/그래프%20이론/그래프/SCC.md)</span>
     * <span class="platinum">[2-SAT(P-)](/그래프%20이론/그래프/2-SAT.md)</span>
     * <span class="platinum">[단절점(P-)](/그래프%20이론/그래프/단절점.md)</span>
@@ -418,6 +418,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[병렬 이분 탐색(P+)]</span>
   * <span class="">[차이 부등식]</span> <!-- https://koosaga.com/72 --> <!-- https://www.acmicpc.net/workbook/view/3303 -->
   * <span class="">[range mode query]</span> <!-- https://infossm.github.io/blog/2021/05/20/Data-Structure-For-Range-Mode-Query/ --> <!-- https://www.acmicpc.net/problem/14898 -->
+  * <span class="">[exchange arguement]</span> <!-- https://codeforces.com/blog/entry/63533 --> <!-- https://gazelle-and-cs.tistory.com/59 --> <!-- https://infossm.github.io/blog/2019/11/16/Exchange-argument/ --> <!-- https://koosaga.com/349 -->
   * <span class="">[춤추는 링크, 크누스 X]</span>
   * <span class="">[임의 정밀도(epsilon값 계산)(A)]</span> <!-- https://www.acmicpc.net/blog/view/37 -->
   * ~~<span class="">[담금질 기법]</span>~~ <!-- https://ryute.tistory.com/35    --> <!-- https://ryute.tistory.com/36    --> <!-- https://algospot.com/forum/read/1211/ --> <!-- https://koosaga.com/3 -->
