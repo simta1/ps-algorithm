@@ -126,8 +126,8 @@ https://m.blog.naver.com/kks227/220967218183
 https://koosaga.com/226   
 https://gazelle-and-cs.tistory.com/17
 
-https://junstar92.tistory.com/382#simplex-algorithms - simplex   
-https://blog.naver.com/ksj8406/221431580870 - simplex법   
+https://junstar92.tistory.com/382#simplex-algorithms - simplex법(원리)   
+https://blog.naver.com/ksj8406/221431580870 - simplex법(구현)   
 https://blog.naver.com/ksj8406/221432990250 - simplex법   
 https://zigui.tistory.com/5 - simplex법 코드   
 
