@@ -248,6 +248,7 @@ mermaid stateDiagram-v2 사용
     * <span class="additional">[제2 cos](/기하학/기하학%20헤더.md#triangle)</span>
     * <span class="additional">[삼각함수 합성](/기하학/기하학%20헤더.md#삼각함수)</span>
     * <span class="additional">[좌표 계산 : 수선의 발, 대칭이동, 회전이동](/기하학/기하학%20헤더.md#좌표-계산)</span>
+    * <span class="additional">[좌표 계산 : 오심 좌표](/기하학/기하학%20헤더.md#barycentric-coordinates)</span>
   * <span class="gold">[볼록다각형 부분넓이(G)](/기하학/볼록다각형%20부분넓이.md)</span>
   * <span class="gold">[선분교차판정(G+)](/기하학/선분교차판정.md)</span>
   * <span class="platinum">[선분교차점 계산(P-)](/기하학/선분교차점%20계산.md)</span>
@@ -289,6 +290,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[Disk Convex Hull(R)]</span> <!-- https://www.acmicpc.net/problem/27957 -->
 * ### [수학](/수학/개념%20정리.md)
   * #### 조합론, 수열
+    <!-- https://infossm.github.io/blog/2024/01/29/counting/ -->
     <!-- https://justicehui.github.io/medium-algorithm/2024/02/10/combinatorics/ -->
     * <span class="additional">[이항계수 nCr](/수학/조합론/이항계수.md)</span>
       * <span class="silver">[파스칼의 삼각형(S+)](/수학/조합론/이항계수.md#forall-1-le-n-le-n-1-le-r-le-r에-대해-nCr-modm-전부-계산)</span>
