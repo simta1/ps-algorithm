@@ -94,7 +94,7 @@ mermaid stateDiagram-v2 사용
     * <span class="platinum">[유니온 파인드 with Potential(P+)](/자료구조/기타/DSU%20potential.md)</span>
     * <span class="platinum">[로프(P-)](/자료구조/기타/rope.md)</span>
     * <span class="platinum">[ordered set(P-)](/자료구조/기타/ordered_set.md)</span>
-    * <span class="">[wavelet 트리]</span>
+    * <span class="">[wavelet 트리]</span> <!-- https://blog.naver.com/PostView.naver?blogId=jinhan814&logNo=223272990036&categoryNo=6&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postView&userTopListOpen=true&userTopListCount=30&userTopListManageOpen=false&userTopListCurrentPage=1 --> <!-- https://www.acmicpc.net/problem/7469 -->
     * <span class="">[데카르트 트리(Cartesian tree)]</span> <!-- https://imeimi.tistory.com/42 구간 내에서의 RMQ는 cartesian tree에서의 LCA? -->
     * <span class="">[Farach-Colton and Bender Algorithm]</span> <!-- https://cp-algorithms.com/graph/lca_farachcoltonbender.html --> <!-- https://codeforces.com/blog/entry/86746?locale=en -->
     * <span class="diamond">[Line Container(D-)](/자료구조/기타/LineContainer.md)</span>
@@ -159,17 +159,17 @@ mermaid stateDiagram-v2 사용
     * <span class="diamond">[서큘레이션, L-R flow(D-)](/그래프%20이론/네트워크%20플로우/서큘레이션.md)</span>
     * <span class="diamond">[헝가리안(D-)](/그래프%20이론/네트워크%20플로우/헝가리안.md)</span>
     * <span class="">[일반 매칭(D+)]</span>
-    * <span class="">[Stoer-Wagner Algorithm]</span> <!-- https://justicehui.github.io/hard-algorithm/2019/11/28/global-min-cut/ -->
-    * <span class="">[Gomory-Hu Tree]</span>
+    * <span class="">[Stoer-Wagner Algorithm(스토어-바그너)]</span> <!-- https://justicehui.github.io/hard-algorithm/2019/11/28/global-min-cut/ -->
+    * <span class="">[Gomory-Hu Tree]</span> <!-- https://infossm.github.io/blog/2024/11/24/odd-cut/ -->
     <!-- * <span class="">[Successive Shortest Path Algorithm]</span> --> <!-- https://koosaga.com/289 --> <!-- 다이아1 문제 https://www.acmicpc.net/problem/23181 -->
     <!-- * <span class="">[홀의 결혼 정리]</span> -->
   * #### 트리
     * <span class="platinum">[LCA(최소 공통 조상) (P-)](/그래프%20이론/트리/LCA.md)</span>
-    * <span class="">[O(1) LCA]</span> <!-- https://cocoachan.tistory.com/16 -->
+    * <span class="">[O(1) LCA]</span> <!-- https://cocoachan.tistory.com/16 --> <!-- https://blog.naver.com/PostView.naver?blogId=jinhan814&logNo=223270299361&categoryNo=6&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postView&userTopListOpen=true&userTopListCount=30&userTopListManageOpen=false&userTopListCurrentPage=1 -->
     * <span class="platinum">[LCA를 이용한 트리 쿼리(P-)](/그래프%20이론/트리/Query%20with%20LCA.md)</span>
     * <span class="platinum">[ETT(오일러 경로 테크닉) (P-)](/그래프%20이론/트리/ETT.md)</span>
     * <span class="platinum">[HLD(heavy-light 분할) (P+)](/그래프%20이론/트리/HLD.md)</span>
-    * <span class="">[트리 압축]</span>
+    * <span class="">[트리 압축]</span> <!-- https://infossm.github.io/blog/2021/09/21/virtual-tree/ -->
     * <span class="">[센트로이드]</span>
     * <span class="">[센트로이드 분할(D-)]</span>
     * <span class="">[트리 동형 사상]</span>
@@ -363,7 +363,7 @@ mermaid stateDiagram-v2 사용
     * <span class="diamond">[이산 제곱근(D-)](/수학/Tonelli-Shanks.md)</span>
     * <span class="">[이산 k제곱근]</span>
     * <span class="diamond">[Cornacchia's algorithm(D-)](/수학/Cornacchia.md)</span>
-    * <span class="diamond">[Power tower(D-)](/수학/Power%20Tower.md)</span>
+    * <span class="diamond">[Power tower(D-)](/수학/Power%20Tower.md)</span> <!-- https://www.acmicpc.net/problem/13970 -->
     * <span class="">[CDQ Convolution(online FFT)]</span> <!-- https://codeforces.com/blog/entry/111399 --> <!-- https://cocoachan.tistory.com/15 -->
     * <span class="">[XOR Convolution, FWHT]</span> <!-- fft()에서 root=1로 하면 roots[*]=1이라 xor convolution 되는 듯 https://github.com/koosaga/olympiad/blob/master/Library/codes/math/algebra.cpp --> <!-- https://velog.io/@dnr6054/Fast-Walsh-Hadamard-Transform --> <!-- https://cubelover.tistory.com/19 --> <!-- https://teferi.net/ps/fwht -->
     * <span class="">[OR/AND Convolution]</span> <!-- https://codeforces.com/blog/entry/115438 -->
@@ -371,6 +371,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[LP(D-)]</span>
     * <span class="diamond">[Simplex Method(D)](/수학/Simplex%20Method.md)</span>
     * <span class="">[번사이드 보조정리]</span> <!-- https://algoshitpo.github.io/2020/02/09/burnside/ -->
+    * <span class="">[포여 열거 정리]</span> <!-- https://infossm.github.io/blog/2024/03/27/Polya-counting/ -->
     * <span class="">[홀의 결혼 정리]</span>
     * <span class="">[린드스트롬-게셀-비엔노 보조정리(LGV Lemma)]</span>
     * <span class="diamond">[라그랑주 보간법(D-)](/수학/라그랑주%20보간법.md)</span>
@@ -439,7 +440,7 @@ mermaid stateDiagram-v2 사용
   * <span class="additional">[시간 초 변환]</span>
   * <span class="additional">[날짜 변환](/utils/날짜%20변환.md)</span>
   * <span class="additional">[__int128 입출력](/utils/__int128%20입출력.md)</span>
-  * <span class="">[파싱]</span>
+  * <span class="">[파싱]</span> <!-- https://www.acmicpc.net/problem/3476 -->
   * <span class="additional">[utf-8 입력 처리](/utils/utf-8.md)</span>
   * <span class="additional">[n!, nCr, nHr 브루트포스 순회](/utils/n!%20nCr%20nHr%20브루트포스%20순회.md)</span>
   * <span class="additional">[modInt](/utils/ModInt.md)</span>
