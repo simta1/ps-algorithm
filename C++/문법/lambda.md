@@ -6,21 +6,6 @@ auto f = [&]() {
 };
 ```
 
-### 람다함수 최적화
-c++에서 람다함수는 기본적으로 inline으로 취급되지만 무조건 inline이 되는 것은 아님   
-람다함수 선언 시 constexpr을 사용하면 inline을 포함한 여러 최적화가 이루어질 가능성이 커진다고 함   
-```cpp
-constexpr auto square = [](int x) -> int { return x * x; };
-```
-
-### 람다재귀
-```cpp
-function<R(T1, T2, ...)> f = [&](T1 t1, T2 t2, ...) -> R {
-    // ...
-};
-```
-람다함수가 재귀일 때는 타입 추론이 안 되므로 직접 리턴 타입과 f의 타입을 명시해야 됨.
-
 ### 캡처
 ```cpp
 auto f = [a, &b]() {
@@ -38,6 +23,31 @@ auto f = [a, &b]() mutable {
 ```
 mutable사용 시 값 캡쳐한 변수 수정 가능
 
-### 람다 내부 람다
-람다 내부에서도 람다함수 선언할 수는 있는데 아직까지 쓴 적 없음   
-언젠가 쓸 일 생기면 그 때 정리   
+### 람다재귀
+```cpp
+function<R(T1, T2, ...)> f = [&](T1 t1, T2 t2, ...) -> R {
+    // ...
+};
+```
+람다함수가 재귀일 때는 타입 추론이 안 되므로 직접 리턴 타입과 f의 타입을 명시해야 됨.
+
+### std::function 성능 오버헤드
+TODO)   
+타입 소멸, 간접 호출, 인라인화 안 됨 등등...   
+
+### std::function없이 람다재귀
+```cpp
+auto f = [&](auto&& self, T1 t1, T2 t2, ...) -> R {
+    // ...
+    self(self, ...);
+};
+
+// f(f, ...)으로 호출
+```
+근데 솔직히 self매번 쓰는 거 귀찮기도 하고 std::function 그냥 써도 생각보다 크게 느리진 않음   
+
+### constexpr lambda
+람다에도 constexpr 붙일 수 있음   
+```cpp
+constexpr auto square = [](int x) -> int { return x * x; };
+```
