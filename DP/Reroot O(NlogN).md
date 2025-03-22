@@ -1,6 +1,6 @@
 [카테고리](/README.md)
 ## Rerooting
-### The Ultimate Reroot Template (코드포스에서 그대로 가져왔음 : https://codeforces.com/blog/entry/124286)
+### $O(N\log{N})$ The Ultimate Reroot Template (코드포스에서 그대로 가져왔음 : https://codeforces.com/blog/entry/124286)
 ```cpp
 namespace reroot { // https://codeforces.com/blog/entry/124286
     const auto exclusive = [](const auto &a, const auto &base, const auto &merge_into, int vertex) {
