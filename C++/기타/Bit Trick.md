@@ -50,6 +50,7 @@ $\because$
 ### if (x && !(x & x - 1))
 2의 거듭제곱만 true   
 if (x && !(x & ~-x)) 도 가능   
+추가로 `x==numeric_limits<int>::min()`일 때 안 됨. unsigned면 괜찮겠지만 int라서 음수기 때문에 2의 멱수가 아님   
 
 ex) 1, 2, 4, 8, 16, ...   
 $\because$   
