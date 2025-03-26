@@ -300,8 +300,9 @@ mermaid stateDiagram-v2 사용
       * <span class="platinum">[p-지수를 이용한 계산(P-)](/수학/조합론/이항계수.md#ncr-modm-계산)</span>
       * <span class="diamond">[nCr mod p^e 계산(D-)](/수학/조합론/이항계수.md#ncr-modpe-계산)</span>
     * <span class="gold">[교란수(G+)](/수학/조합론/교란수.md)</span>
+    * <span class="">[카탈란]</span> <!-- https://codeforces.com/topic/88130/en5 -->
     * <span class="gold">[거듭제곱 피보나치(G+)](/수학/조합론/피보나치.md)</span>
-    * <span class="additional">[자연수 분할](/수학/조합론/자연수%20분할.md)</span> <!-- P(n, k) -->
+    * <span class="additional">[분할수(자연수 분할 P(n, k))](/수학/조합론/자연수%20분할.md)</span>
     * <span class="platinum">[집합 분할(P-)](/수학/조합론/집합%20분할.md)</span>
     * <span class="">[nCr mod 소수, 뤼카(P-)]</span>
     * <span class="">[nCr mod 합성수(D-)]</span>
