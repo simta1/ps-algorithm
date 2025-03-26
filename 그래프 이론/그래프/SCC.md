@@ -78,52 +78,8 @@ self-loop나 parallel edge있어도 잘 작동하므로 딱히 고려할 필요 
 using namespace std;
 using ll = long long;
 
-pair<vector<vector<int> >, vector<int> > getSCC(int n, const vector<vector<int> > &adj) { //  auto [sccs, sccn] = getSCC(n, adj);로 사용 // sccs에는 위상정렬된 순서로 {scc1{}, scc2{}, ... } 저장되어 있음
-    vector<int> dfsn(n + 1, 0), sccn(n + 1, -1);
-    stack<int> s;
-
-    int dfsi = 0, scci = 0;
-    function<int(int)> dfs = [&](int cur) -> int {
-        int low = dfsn[cur] = ++dfsi;
-        s.push(cur);
-
-        for (auto next : adj[cur]) if (!~sccn[next]) low = min(low, dfsn[next] ? dfsn[next] : dfs(next));
-
-        if (low == dfsn[cur]) {
-            while (1) {
-                int node = s.top();
-                s.pop();
-                sccn[node] = scci;
-                if (node == cur) break;
-            }
-            ++scci;
-        }
-
-        return low;
-    };
-    for (int i = 1; i <= n; i++) if (!dfsn[i]) dfs(i);
-
-    vector<vector<int> > sccs(scci);
-    for (int i = 1; i <= n; i++) sccs[sccn[i] = scci - 1 - sccn[i]].push_back(i);
-    return {sccs, sccn}; // sccn은 0-based임에 주의, 노드 x는 sccs[sccn[x]]에 포함되어 있음
-}
-
-pair<int, vector<vector<int> > > graphToDAG(int n, const vector<vector<int> > &adj, const vector<vector<int> > &sccs, const vector<int> &sccn) {
-    vector<int> toEdgeExist(sccs.size() + 1, -1);
-    vector<vector<int> > dag(sccs.size() + 1);
-
-    for (auto &scc : sccs) for (auto u : scc) {
-        for (auto v : adj[u]) if (sccn[u] != sccn[v] && toEdgeExist[sccn[v]] != sccn[u]) {
-            toEdgeExist[sccn[v]] = sccn[u];
-            dag[sccn[u] + 1].push_back(sccn[v] + 1);
-        }
-    }
-
-    // for (auto &scc : sccs) for (auto u : scc) cout << "orig node " << u << " -> dag node " << sccn[u] + 1 << "\n";
-    // for (int u = 1; u <= sccs.size(); u++) for (auto v : dag[u]) cout << "dag edge : " << u << " -> " << v << "\n";
-    
-    return {sccs.size(), dag}; // auto [dagN, dag] = graphToDAG(n, adj, sccs, sccn); 으로 사용
-}
+// getSCC
+// graphToDAG
 
 int main() {
     cin.tie(0) -> sync_with_stdio(0);
