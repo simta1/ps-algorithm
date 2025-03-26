@@ -40,9 +40,10 @@ mermaid stateDiagram-v2 사용
 | $n \le 50$            | $O(\sqrt2^n)$                             |                                                       |
 | $n \le 100$           | $O(n^4)$                                  |                                                       |
 | $n \le 500$           | $O(n^3)$                                  |                                                       |
-| $n \le 2,000$         | $O(n^2 \log{n})$, $O(\dfrac{n^3}{24})$    | SIMD                                                  |
+| $n \le 2,000$         | $O(n^2 \log{n})$, $O(\dfrac{n^3}{16})$    | SIMD                                                  |
 | $n \le 5,000$         | $O(n^2)$                                  |                                                       |
-| $n \le 100,000$       | $O(n \sqrt n)$, $O(n \log^2n)$            |                                                       |
+| $n \le 50,000$        | $O(\dfrac{n^2}{64})$                      |                                                       |
+| $n \le 100,000$       | $O(n \sqrt n)$, $O(n \log^2n)$            | bitset                                                |
 | $n \le 1,000,000$     | $O(n \log n)$                             |                                                       |
 | $n \le 5,000,000$     | $O(n \log n)$                             |                                                       |
 | $n \le 100,000,000$   | $O(n)$                                    |                                                       |
@@ -405,7 +406,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[XOR Hashing]</span> <!-- https://codeforces.com/blog/entry/85900 -->
   * <span class="">[트리 해싱]</span> <!-- https://blog.cgiosy.dev/entry/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%AC%B8%EC%A0%9C-%ED%92%80-%EB%95%8C-%EC%93%B0%EB%8A%94-%ED%95%B4%EC%8B%9C-%EC%A2%85%EB%A5%98%EB%93%A4 -->
   * <span class="">[누적합, imos]</span>
-  * <span class="">[SIMD]</span>
+  * <span class="">[SIMD]</span> <!-- https://justicehui.github.io/hard-algorithm/2021/11/15/simd-in-ps/ -->
   * <span class="">[Gray code](/기타/Gray%20code.md)</span>
   * <span class="gold">[후위 표기식(G+)](/기타/Postfix%20Notation.md)</span>
   * <span class="">[중간에서 만나기(G+)]</span>
