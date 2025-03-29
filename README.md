@@ -305,8 +305,7 @@ mermaid stateDiagram-v2 사용
     * <span class="gold">[거듭제곱 피보나치(G+)](/수학/조합론/피보나치.md)</span>
     * <span class="additional">[분할수(자연수 분할 P(n, k))](/수학/조합론/자연수%20분할.md)</span>
     * <span class="platinum">[제2종 스털링 수(집합 분할)(P-)](/수학/조합론/집합%20분할.md)</span>
-    * <span class="">[nCr mod 소수, 뤼카(P-)]</span>
-    * <span class="">[nCr mod 합성수(D-)]</span>
+    * <span class="platinum">[Valid Permutations for DI Sequence(P-)](/수학/조합론/DI%20Sequence.md)</span>
     * <span class="">[생성 함수(D-)]</span> <!-- 카탈란 생성함수 O(nlogN) --> <!-- https://github.com/infossm/infossm.github.io/blob/master/_posts/2019-10-19-generating-function.md -->
     * <span class="diamond">[O(K^2 logN) 키타마사(D-)](/수학/FFT.md#ok2-logn-키타마사)</span>
     * <span class="">[Bostan-Mori]</span>
