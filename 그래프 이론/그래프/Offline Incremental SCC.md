@@ -31,6 +31,7 @@ public:
 </details>
 
 ### [SCC](/그래프%20이론/그래프/SCC.md)
+TODO 예전 SCC 코드 기준임.. 기존 SCC 코드를 다시 짜서 이젠 이렇게 안 쓰는 중이긴 함..   
 <details>
 <summary> scc를 계산할 노드들만 따로 저장하기 위한 inGraph 선언<br>
 addEdge()랑 clear()에 inGraph업데이트하는 과정 추가<br>

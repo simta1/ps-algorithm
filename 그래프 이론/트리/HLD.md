@@ -1,5 +1,6 @@
 [카테고리](/README.md)
 ## HLD(heavy-light decomposition)
+## TODO 세그트리 코드 바껴서 수정 필요함
 ## 일단 테스트는 끝났지만 임시구현임, 수정 필요
 ```cpp
 template <typename T>
