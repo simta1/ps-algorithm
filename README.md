@@ -387,8 +387,9 @@ mermaid stateDiagram-v2 사용
     * <span class="">[매트로이드(R-)]</span> <!-- https://m.blog.naver.com/kks227/221031527413 --> <!-- https://infossm.github.io/tags/matroid/ --> <!-- https://imeimi.tistory.com/45 --> <!-- https://m.blog.naver.com/kks227/221031527413 --> <!-- https://koosaga.com/252 --> <!-- https://joohs0505.tistory.com/4 --> <!-- https://dad-rock.tistory.com/673 --> <!-- https://m.blog.naver.com/kks227/220985752330?recommendTrackingCode=2 -->
 * ### 게임 이론
   * <span class="">[스프라그-그런디 정리]</span> <!-- (비트셋) --> <!-- https://blog.myungwoo.kr/82 --> <!-- https://blog.myungwoo.kr/27 -->
-  * <span class="">[hackenbush]</span> <!-- https://en.wikipedia.org/wiki/Hackenbush --> <!-- https://rkm0959.tistory.com/139 -->
-  * <span class="">[coldgame]</span> <!-- https://infossm.github.io/blog/2024/11/01/Coldgame-problem-solving/ -->
+  * <span class="">[Coldgame]</span> <!-- https://infossm.github.io/blog/2024/11/01/Coldgame-problem-solving/ -->
+  * <span class="">[Hackenbush(D-)]</span> <!-- https://rkm0959.tistory.com/139 -->
+  * <span class="">[Blue-Red Hackenbush(R-)]</span> <!-- https://www.youtube.com/watch?v=ZYj4NkeGPdM&t=369s -->
 * ### 기타
   * <span class="">[정렬, `std::sort()` strict weak ordering]</span> <!-- https://panty.run/strict-weak-ordering/ -->
   * <span class="">[계수 정렬]</span>
