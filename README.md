@@ -194,6 +194,7 @@ mermaid stateDiagram-v2 사용
   * <span class="gold">[비트마스크 DP(G+)](/DP/Bitmask%20DP.md)</span>
   * <span class="additional">[O(NlogN) The Ultimate Reroot Template](/DP/Reroot%20O(NlogN).md)</span>
   * <span class="additional">[O(N) Rerooting](/DP/Reroot%20O(N).md)</span>
+  * <span class="platinum">[괄호 문자열(P-)](/DP/괄호%20문자열.md)</span>
   * <span class="platinum">[토글링(P-)](/DP/toggling.md)</span>
   * <span class="platinum">[볼록 껍질을 이용한 최적화(P+)](/DP/CHT.md)</span>
   * <span class="platinum">[분할 정복을 이용한 최적화(P+)](/DP/DnC.md)</span>
