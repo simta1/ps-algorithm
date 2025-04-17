@@ -175,7 +175,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[센트로이드 분할(D-)]</span>
     * <span class="">[트리 동형 사상]</span>
     * <span class="">[tree width]</span>
-    * <span class="">[링크/컷 트리(D+)]</span> <!-- https://jh05013.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EB%A7%81%ED%81%AC-%EC%BB%B7%20%ED%8A%B8%EB%A6%AC/ --> <!-- https://justicehui.github.io/hard-algorithm/2021/01/01/link-cut-tree/ --> <!-- https://m.blog.naver.com/jinhan814/222309144459?recommendTrackingCode=2 -->
+    * <span class="diamond">[링크/컷 트리(D+)](/자료구조/BBST/LCT.md)</span> <!-- https://jh05013.github.io/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EB%A7%81%ED%81%AC-%EC%BB%B7%20%ED%8A%B8%EB%A6%AC/ --> <!-- https://justicehui.github.io/hard-algorithm/2021/01/01/link-cut-tree/ --> <!-- https://m.blog.naver.com/jinhan814/222309144459?recommendTrackingCode=2 -->
     * <span class="">[탑 트리(R-)]</span> <!-- https://etyu39.tistory.com/8 -->
 * ### [DP](/DP/Top-Down%20DP.md)
   <!-- * <span class="">[비트 집합]</span> -->
