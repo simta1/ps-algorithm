@@ -335,6 +335,7 @@ mermaid stateDiagram-v2 사용
       https://hyperbolic.tistory.com/4
     -->
     * <span class="additional">[부등식](/수학/부등식.md)</span>
+    * <span class="silver">[보이어–무어 다수결 투표(S+)](/기타/보이어-무어.md)</span>
     * <span class="silver">[분할정복 거듭제곱(S+)](/수학/빠른%20거듭제곱.md)</span>
     * <span class="silver">[에라토스테네스의 체(S+)](/수학/에라토스테네스의%20체.md)</span>
     * <span class="gold">[Linear sieve 소수 판별(G-)](/수학/Linear%20Sieve.md)</span>
