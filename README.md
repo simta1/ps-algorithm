@@ -195,6 +195,7 @@ mermaid stateDiagram-v2 사용
   * <span class="additional">[O(NlogN) The Ultimate Reroot Template](/DP/Reroot%20O(NlogN).md)</span>
   * <span class="additional">[O(N) Rerooting](/DP/Reroot%20O(N).md)</span>
   * <span class="platinum">[괄호 문자열(P-)](/DP/괄호%20문자열.md)</span>
+  * <span class="">[bitonic tour]</span> <!-- https://ps.mjstudio.net/bitonic-tour -->
   * <span class="platinum">[토글링(P-)](/DP/toggling.md)</span>
   * <span class="platinum">[볼록 껍질을 이용한 최적화(P+)](/DP/CHT.md)</span>
   * <span class="platinum">[분할 정복을 이용한 최적화(P+)](/DP/DnC.md)</span>
@@ -364,6 +365,7 @@ mermaid stateDiagram-v2 사용
       * <span class="diamond">[다항식곱셈: NTT(D-)](/수학/FFT.md#ntt-number-theoretic-transform)</span>
       * <span class="diamond">[다항식 나눗셈, O(K logK logN) 키타마사(D+)](/수학/FFT.md#다항식-나눗셈-ok-logk-logn-키타마사)</span>
       * <span class="">[다중 대입값 계산(D+)]</span> <!-- https://infossm.github.io/blog/2019/06/16/Multipoint-evaluation/ -->
+      * <span class="">[Formal Power Series]</span> <!-- https://blog.naver.com/jinhan814/223200770737 --> <!-- https://blog.naver.com/jinhan814/223206364353 --> <!-- https://www.acmicpc.net/workbook/view/16664 -->
     * <span class="">[이산 로그(P+)]</span>
     * <span class="diamond">[이산 제곱근(D-)](/수학/Tonelli-Shanks.md)</span>
     * <span class="">[이산 k제곱근]</span>
