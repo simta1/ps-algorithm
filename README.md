@@ -289,7 +289,7 @@ mermaid stateDiagram-v2 사용
   * <span class="additional">[3차원 기하학 헤더](/기하학/3D%20기하학%20헤더.md)</span>
     * <span class="additional">[외적, 면 법선 벡터 계산](/기하학/3D%20기하학%20헤더.md)</span>
     * <span class="additional">[거리 : point-face](/기하학/3D%20기하학%20헤더.md)</span>
-    * <span class="">[로드리게스 회전]</span> <!-- https://jebae.github.io/rodrigues-rotation -->
+    * <span class="additional">[좌표 계산 : 회전이동](/기하학/3D%20기하학%20헤더.md#회전이동)</span>
   * <span class="diamond">[3D Convex Hull(D+)](/기하학/3D%20볼록껍질.md)</span>
   * <span class="">[Disk Convex Hull(R)]</span> <!-- https://www.acmicpc.net/problem/27957 -->
 * ### [수학](/수학/개념%20정리.md)
