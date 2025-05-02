@@ -5,12 +5,12 @@ template <bool onlyPositive, typename T>
 void radixSort(vector<T> &v) {
     static_assert(is_integral<T>::value, "T가 정수형 자료형이어야 함");
 
-	const unsigned int SZ = 8;
+    const unsigned int SZ = 8;
     const unsigned int mask = (1 << SZ) - 1;
-	static queue<T> qs[1 << SZ];
+    static queue<T> qs[1 << SZ];
 
     for (int k = 0; k < sizeof(T); k++) {
-	    for (const auto &e : v) qs[e >> k * SZ & mask].push(e);
+        for (const auto &e : v) qs[e >> k * SZ & mask].push(e);
         v.clear();
 
         for (auto& q : qs) {
