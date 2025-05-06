@@ -216,6 +216,7 @@ mermaid stateDiagram-v2 사용
 * ### 그리디
   * <span class="gold">[저울문제(G+)](/그리디/저울문제.md)</span>
   * <span class="">[그리디 알고리즘의 증명]</span> <!-- https://79brue.tistory.com/60 --> <!-- https://gazelle-and-cs.tistory.com/59 --> <!-- https://younggyun.tistory.com/12 -->
+  * <span class="">[exchange arguement]</span> <!-- https://codeforces.com/blog/entry/63533 --> <!-- https://gazelle-and-cs.tistory.com/59 --> <!-- https://infossm.github.io/blog/2019/11/16/Exchange-argument/ --> <!-- https://koosaga.com/349 -->
   <!-- [멀티탭 스케줄링](https://www.acmicpc.net/problem/1700) -->
   <!-- [강의실 배정](https://www.acmicpc.net/problem/11000) -->
 
@@ -375,7 +376,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[XOR Convolution, FWHT]</span> <!-- fft()에서 root=1로 하면 roots[*]=1이라 xor convolution 되는 듯 https://github.com/koosaga/olympiad/blob/master/Library/codes/math/algebra.cpp --> <!-- https://velog.io/@dnr6054/Fast-Walsh-Hadamard-Transform --> <!-- https://cubelover.tistory.com/19 --> <!-- https://teferi.net/ps/fwht -->
     * <span class="">[OR/AND Convolution]</span> <!-- https://codeforces.com/blog/entry/115438 -->
     * <span class="">[subset, GCD, LCM Convolution]</span> <!-- https://www.acmicpc.net/blog/view/127 --> <!-- https://codeforces.com/blog/entry/92153 --> <!-- https://codeforces.com/blog/entry/112346 -->
-    * <span class="">[LP(D-)]</span>
+    * <span class="">[LP(선형 계획법), 쌍대성(D-)]</span>
     * <span class="diamond">[Simplex Method(D)](/수학/Simplex%20Method.md)</span>
     * <span class="">[번사이드 보조정리]</span> <!-- https://algoshitpo.github.io/2020/02/09/burnside/ -->
     * <span class="">[포여 열거 정리]</span> <!-- https://infossm.github.io/blog/2024/03/27/Polya-counting/ -->
@@ -427,14 +428,11 @@ mermaid stateDiagram-v2 사용
   * <span class="">[병렬 이분 탐색(P+)]</span>
   * <span class="">[차이 부등식]</span> <!-- https://koosaga.com/72 --> <!-- https://www.acmicpc.net/workbook/view/3303 -->
   * <span class="">[range mode query]</span> <!-- https://infossm.github.io/blog/2021/05/20/Data-Structure-For-Range-Mode-Query/ --> <!-- https://www.acmicpc.net/problem/14898 -->
-  * <span class="">[exchange arguement]</span> <!-- https://codeforces.com/blog/entry/63533 --> <!-- https://gazelle-and-cs.tistory.com/59 --> <!-- https://infossm.github.io/blog/2019/11/16/Exchange-argument/ --> <!-- https://koosaga.com/349 -->
   * <span class="">[춤추는 링크, 크누스 X]</span>
   * <span class="">[임의 정밀도(epsilon값 계산)(A)]</span> <!-- https://www.acmicpc.net/blog/view/37 -->
   * ~~<span class="">[담금질 기법]</span>~~ <!-- https://ryute.tistory.com/35    --> <!-- https://ryute.tistory.com/36    --> <!-- https://algospot.com/forum/read/1211/ --> <!-- https://koosaga.com/3 -->
   * <span class="">[DLAS]</span> <!-- https://cocoachan.tistory.com/12 --> <!-- https://gist.github.com/cgiosy/ed16f4988eeb7e989a97644fe61e1561 -->
   * <span class="">[Fracturing Search(D+)]</span> <!-- https://usaco.guide/adv/fracturing-search?lang=cpp --> <!-- https://www.acmicpc.net/problem/14166 --> <!-- https://blog.cube219.me/posts/2022/fracturing-search/ -->
-  * <span class="">[선형 계획법]</span>
-  * <span class="">[쌍대성]</span>
 * ### utils
   * <span class="additional">[fastio](/utils/fastio.md)</span>
   * <span class="additional">[비트 연산](/utils/Bit.md)</span>
