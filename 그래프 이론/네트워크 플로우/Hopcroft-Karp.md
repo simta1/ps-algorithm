@@ -22,7 +22,7 @@ private:
             int l = q.front();
             q.pop();
             for (auto r : adj[l]) {
-                if (!~matchR[r]) flag = true;
+                if (!~matchR[r]) flag = true; // return true; 하면 안 됨 (level배열 전부 계산하기 전에 return하면 안되니까)
                 else if (!~level[matchR[r]]) {
                     level[matchR[r]] = level[l] + 1;
                     q.push(matchR[r]);
