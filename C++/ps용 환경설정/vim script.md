@@ -1,67 +1,8 @@
 [카테고리](/README.md)
 ## vim script
 vscode neovim extension 사용 중   
-`vim ~/.config/nvim/init.vim`   
-```vim
-set ignorecase
-set smartcase
-
-call plug#begin('~/.config/nvim/plugged')
-Plug 'tpope/vim-surround'
-Plug 'phaazon/hop.nvim'
-Plug 'nvim-tree/nvim-tree.lua'
-call plug#end()
-
-" Surround
-nmap ds <Plug>Dsurround
-nmap cs <Plug>Csurround
-nmap ys <Plug>Ysurround
-nmap yss <Plug>Yssurround
-
-" Hop (easymotion 대용)
-lua << EOF
-require'hop'.setup()
-EOF
-
-nmap <Leader>w <cmd>lua require'hop'.hint_words()<cr>
-xmap <Leader>w <cmd>lua require'hop'.hint_words()<cr>
-
-function! GenerateCinCodeRange(startLine, endLine)
-  let l:cin_line = ""
-  for i in range(a:startLine, a:endLine)
-    let l:line = getline(i)
-    let l:indent = matchstr(l:line, '^\s*')
-    let l:match = matchlist(l:line, '\(int\|float\|double\|string\|char\|bool\|ll\|ld\|ui\|ull\)\s\+\(.\+\);')
-
-    if len(l:match) >= 2
-      let l:variables = l:match[2]
-      let l:variables = split(l:variables, '\s*,\s*')
-
-      if l:cin_line == ""
-        let l:cin_line = l:indent . "cin >> " . join(l:variables, " >> ")
-      else
-        let l:cin_line .= " >> " . join(l:variables, " >> ")
-      endif
-    endif
-  endfor
-
-  if l:cin_line != ""
-    let l:cin_line .= ";"
-    call append(a:endLine, l:cin_line)
-	 call cursor(a:endLine + 1, len(l:cin_line))
-  else
-	 echo "No valid variable declaration found"
-  endif
-endfunction
-
-xnoremap <leader>in :<C-u>call GenerateCinCodeRange(line("'<"), line("'>"))<CR>
-nnoremap <leader>in :call GenerateCinCodeRange(line('.'), line('.'))<CR>
-
-nnoremap <silent> <leader>/ :nohlsearch<CR>
-nnoremap <leader>r :source $MYVIMRC<CR>
-```
-
-GenerateCinCodeRange는 선언된 변수 추출해서 cin으로 입력받는 코드 생성해주는 함수임   
+https://github.com/simta1/dotfiles/blob/main/.config/nvim/init.vim   
+GenerateCinCodeRange는 선언된 변수 추출해서 cin으로 입력받는 코드 생성해주는 함수   
 
 ### 사용예시 1
 ```cpp
@@ -95,5 +36,4 @@ cin >> n >> m >> k >> x >> y >> z;
 애초에 어려운 문제라서 푸는 데 시간이 오래 걸린다면 입출력 코드 조금 빨리 짜도 별 의미가 없겠지만,   
 UCPC 첫번째 문제 등 1분 내로 풀리는 문제에선 이런 시간 줄이는 게 퍼솔에 꽤 큰 도움이 됨   
 
-
-근데 저런 상황 아니어도 가끔 변수 입력 많은 문제 나와서 유용함   
+\+ 가끔 변수 입력 많은 문제 풀 때도 편함   
