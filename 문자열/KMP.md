@@ -1,6 +1,6 @@
 [카테고리](/README.md)
 ## KMP(Knuth-Morris-Pratt Algorithm)
-### Fail Function (string)
+### Fail Function
 ```cpp
 template <typename T> // T = string or vector<>
 vector<int> getPi(const T &st) {
