@@ -17,13 +17,13 @@ public:
 	RMQ(const vector<T> &v) : mn(1, v) {
 		for (int i = 1, len = 1; len * 2 <= v.size(); ++i, len *= 2) {
 			mn.emplace_back(v.size() - len * 2 + 1);
-            for (int j = 0; j < mn[i].size(); j++) mn[i][j] = min(mn[i - 1][j], mn[i - 1][j + len]);
+			for (int j = 0; j < mn[i].size(); j++) mn[i][j] = min(mn[i - 1][j], mn[i - 1][j + len]);
 		}
 	}
 
 	T query(int a, int b) const { // 0-based // [a:b]에서 최솟값
-        assert(0 <= a && a <= b && b < mn[0].size());
-        int i = __lg(b - a + 1);
+		assert(0 <= a && a <= b && b < mn[0].size());
+		int i = __lg(b - a + 1);
 		return min(mn[i][a], mn[i][b - (1 << i) + 1]);
 	}
 };
