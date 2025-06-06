@@ -1,47 +1,34 @@
 [카테고리](/README.md)
-# 아직 테스트 안 해본 코드임
-<!-- TODO -->
-### SOS DP (2D 구현)
+### SOS DP
 ```cpp
-vector dp(1 << n, vector<T>(n + 1));
-dp[mask][0] = v[0]; ?
-
-for (int mask = 0; mask < (1 << n); mask++) {
-    for (int i = 0; i < n; i++) { 
-        dp[mask][i + 1] = dp[mask][i];
-        if(mask & 1 << i) dp[mask][i + 1] += dp[mask ^ (1 << i)][i];
-    } 
-}
-```
-### SOS DP (1D 구현)
-```cpp
-vector<T> dp(1 << n);
-for (int i = 0; i < (1 << n); i++) dp[i] = v[i];
-
-for (int i = 0; i < n; i++) {
-    for (int mask = 0; mask < (1 << n); mask++) if (mask & (1 << i)) {
-        dp[mask] += dp[mask ^ (1 << i)];
+template <typename T>
+vector<T> sosDP(int n, const vector<T> &v) {
+    assert(v.size() == (1 << n));
+    vector<T> dp(v);
+    for (int axis = 1; axis < (1 << n); axis <<= 1) {
+        for (int mask = axis; mask < (1 << n); mask = (mask + 1) | axis) dp[mask] += dp[mask ^ axis];
+        // dp[mask] = max(dp[mask], dp[mask ^ axis]); // max로 누적하는 경우
     }
+    return dp;
 }
 ```
 ### 시간복잡도 
 $O(N~2^N)$   
 
-### 주의사항
-
-
-### 사용관련
-
-
 ### 백준문제
-[]()
+[내가 어렸을 때 가지고 놀던 장난감](https://www.acmicpc.net/problem/2803) - sum   
+[직사각형 만들기](https://www.acmicpc.net/problem/1801) - max   
 
 ### 원리
-
+아래랑 같은 의미
+```cpp
+for (int i = 0; i < n; i++) {
+    for (int mask = 0; mask < (1 << n); mask++) {
+        if (mask >> i & 1) dp[mask] += dp[mask ^ (1 << i)];
+    }
+}
+```
 
 ### 참고링크
-https://00ad-8e71-00ff-055d.tistory.com/84   
-https://codeforces.com/blog/entry/45223   
 https://blog.queuedlab.com/posts/sos-dp   
 https://qwerasdfzxcl.tistory.com/35   
-https://gina65.tistory.com/6   
