@@ -173,43 +173,40 @@ namespace Poly { // NTT
 ```
 ### $O(K^2 \log{N})$ 키타마사
 ```cpp
-namespace Poly { // O(K^2 logN) 키타마사
+namespace Poly {
     template <typename T>
-    vector<ll> divideModNaive(ll n, const vector<T> &g, const ll MOD) { // f(x)=x^n에 대해 f % g 계산 // g차수 k일 때 O(K^2 logN)
-        vector<ll> res = {1};
-        vector<ll> xn = {0, 1};
+    vector<ll> divideModNaive(ll n, const vector<T> &g, const ll MOD) { // f(x)=x^n에 대해 f % g 계산 // g 최고차항 계수는 1 // g차수 k일 때 O(K^2 logN)
+        const int k = g.size() - 1;
+        assert(g[k] == 1);
 
+        vector<ll> res(k), xn(k);
+        res[0] = 1;
+        if (k == 1) xn[0] = (MOD - g[0]) % MOD; // x === -g[0] (mod x + g[0])
+        else xn[1] = 1; // x
+        
         auto add = [&MOD](ll &a, ll b) { a = (a + b) % MOD; };
         auto sub = [&MOD](ll &a, ll b) { a = (a - b) % MOD; if (a < 0) a += MOD; };
-
-        auto multiplyModNaive = [&](const vector<ll> &a, const vector<ll> &b) {
-            vector<ll> res(a.size() + b.size() - 1);
-            for (int i = 0; i < a.size(); i++) for (int j = 0; j < b.size(); j++) add(res[i + j], a[i] * b[j]);
-            return res;
+        auto mul = [&](vector<ll> &a, const vector<ll> &b) {
+            vector<ll> scratch(2 * k - 1);
+            for (int i = 0; i < k; i++) if (a[i]) for (int j = 0; j < k; ++j) add(scratch[i + j], a[i] * b[j]); // scratch = a * b
+            for (int i = 2 * k - 2; i >= k; i--) if (scratch[i]) for (int j = 1; j <= k; ++j) sub(scratch[i - j], scratch[i] * g[k - j]); // scratch %= g
+            for (int i = 0; i < k; i++) a[i] = scratch[i];
         };
 
-        auto remainderModNaive = [&](const vector<ll> &a, const vector<ll> &b) {
-            vector<ll> res(a);
-            for (int i = a.size() - 1; i >= b.size() - 1; i--) for (int j = 0; j < b.size(); j++) sub(res[i - (b.size() - 1 - j)], res[i] * b[j]);
-            res.resize(b.size() - 1);
-            return res;
-        };
-        
         while (n) {
-            if (n & 1) res = remainderModNaive(multiplyModNaive(res, xn), g);
-            xn = remainderModNaive(multiplyModNaive(xn, xn), g);
+            if (n & 1) mul(res, xn);
+            mul(xn, xn);
             n >>= 1;
         }
-
         return res;
     }
-    
+
     template <typename T>
     ll kitamasaNaive(ll n, const vector<T> &a, const vector<T> &coef, const ll MOD) { // a는 초항{a1, a2, ..., ak}, c는 계수{c1, c2, ..., ck} // A_n = (C_1 x A_n−1 + C_2 x A_n−2 + ... + C_k x A_n−k) mod M일 때 A_n 계산
-        if (n <= a.size()) return a[n - 1];
+        if (n <= a.size()) return (a[n - 1] % MOD + MOD) % MOD;
 
         vector<ll> f(coef.size() + 1, 1); // x^k - c_1 x^(k-1) - c_2 x^(k-2) - ... - c_k x^0
-        for (int i = 0; i < coef.size(); i++) f[coef.size() - 1 - i] = -coef[i];
+        for (int i = 0; i < coef.size(); i++) f[coef.size() - 1 - i] = (MOD - coef[i]) % MOD;
         auto d = divideModNaive(n - 1, f, MOD); // x^(n-1)을 {x^k - c_1 x^(k-1) - c_2 x^(k-2) - ... - c_k x^0}로 나눈 나머지와 같음
         
         ll res = 0; // an = a1 * d1 + a2 * d2 + ... + ak * dk
@@ -364,6 +361,7 @@ auto res = Poly::multiplyMod5e18(poly1, poly2);
 [씽크스몰](https://www.acmicpc.net/problem/11385) - NTT + CRT(`multiplyMod5e18()` 함수 사용하면 됨)   
 [피보나치 수 3](https://www.acmicpc.net/problem/2749) - $O(K^2 \log{N})$ 키타마사(`kitamasaNaive()`)   
 [타일 채우기 2](https://www.acmicpc.net/problem/13976) - $O(K^2 \log{N})$ 키타마사(`kitamasaNaive()`)   
+[블록 4](https://www.acmicpc.net/problem/15572) - $O(K^2 \log{N})$ 키타마사(`kitamasaNaive()`)   
 [RNG](https://www.acmicpc.net/problem/13725) - NTT 다항식 나눗셈, $O(K \log{K} \log{N})$ 키타마사(`kitamasaNTT()`)   
 
 ### 원리
