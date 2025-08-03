@@ -1,4 +1,9 @@
-### 앞으로 할 거
+팀노트 25페이지안에 최대한 많이 넣으려면 코드줄바꿈이랑 코드길이 줄여야 됨..
+###### 1. 클래스로 선언한 것들 전부 구조체로 바꾸고 접근 지정자 삭제
+###### 2. for, if안에 코드 한줄인 경우 줄바꿈 X
+###### 3. for { if { code }} 이런 형태도 중괄호 없이 한줄로 쓰기
+
+<!-- ### 앞으로 할 거
   1. small to large
   1. simplex / LP dual
   1. 매트로이드
@@ -48,4 +53,4 @@
 
 ### 변수명 통일
   * [ ] lca -> depth배열 이름 dep로 바꾸기
-  * [ ] Dinic -> `template <typename F>` 대신 `template <typename flow_t>`나 `template <typename cap_t>`로 변경
+  * [ ] Dinic -> `template <typename F>` 대신 `template <typename flow_t>`나 `template <typename cap_t>`로 변경 -->
