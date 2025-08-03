@@ -8,25 +8,25 @@ RMQ는 주어진 배열에서 임의의 범위 `[L:R]`에 대한 최소값을 �
 5. 특정 길이$L$에 대해 $N-L+1$개의 모든 구간에서 최솟값 계산 $O(N)$ ([덱을 이용한 구간 최댓값 트릭](/기타/Deque%20Trick.md) 사용)   
 ### RMQ
 ```cpp
-template <typename T>
-class RMQ {
-private:
-	vector<vector<T> > mn; // mn[i][j]에 v[j:j+2^i)의 최솟값 저장 // 즉, j로 시작하며 2^i길이인 구간의 최솟값 저장
+template <typename T, const T& (*op)(const T&, const T&)>
+struct RMQ {
+	vector<vector<T> > ac; // ac[i][j]에 v[j:j+2^i)의 op() 누적값 저장 // 즉, j로 시작하며 2^i길이인 구간의 값 저장
 
-public:
-	RMQ(const vector<T> &v) : mn(1, v) {
+	RMQ(const vector<T> &v) : ac(1, v) {
 		for (int i = 1, len = 1; len * 2 <= v.size(); ++i, len *= 2) {
-			mn.emplace_back(v.size() - len * 2 + 1);
-			for (int j = 0; j < mn[i].size(); j++) mn[i][j] = min(mn[i - 1][j], mn[i - 1][j + len]);
+			ac.emplace_back(v.size() - len * 2 + 1);
+			for (int j = 0; j < ac[i].size(); j++) ac[i][j] = op(ac[i - 1][j], ac[i - 1][j + len]);
 		}
 	}
 
-	T query(int a, int b) const { // 0-based // [a:b]에서 최솟값
-		assert(0 <= a && a <= b && b < mn[0].size());
+	T query(int a, int b) const { // 0-based // [a:b]의 op() 누적값
+		assert(0 <= a && a <= b && b < ac[0].size());
 		int i = __lg(b - a + 1);
-		return min(mn[i][a], mn[i][b - (1 << i) + 1]);
+		return op(ac[i][a], ac[i][b - (1 << i) + 1]);
 	}
 };
+
+// const RMQ<int, min> rmq(v);
 ```
 ### 시간복잡도
 전처리 $O(N\log{N})$   
@@ -38,7 +38,7 @@ query $O(1)$
 vector<int> v(n);
 for (auto &e : v) cin >> e;
 
-const RMQ rmq(v); // const로 선언
+const RMQ<int, min> rmq(v); // const로 선언
 ```
 
 ### 문제
