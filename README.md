@@ -192,8 +192,9 @@ mermaid stateDiagram-v2 사용
   * <span class="gold">[최단거리 역추적(G-)](/DP/DP%20역추적.md)</span>
   * <span class="gold">[달걀 낙하(G+)](/DP/달걀%20낙하.md)</span>
   * <span class="gold">[비트마스크 DP(G+)](/DP/Bitmask%20DP.md)</span>
-  * <span class="additional">[O(NlogN) The Ultimate Reroot Template](/DP/Reroot%20O(NlogN).md)</span>
-  * <span class="additional">[O(N) Rerooting](/DP/Reroot%20O(N).md)</span>
+  * <span class="gold">[digit DP(G+)](/DP/digit%20DP.md)</span>
+  * <span class="platinum">[O(NlogN) The Ultimate Reroot Template](/DP/Reroot%20O(NlogN).md)</span>
+  * <span class="platinum">[O(N) Rerooting](/DP/Reroot%20O(N).md)</span>
   * <span class="platinum">[괄호 문자열(P-)](/DP/괄호%20문자열.md)</span>
   * <span class="">[bitonic tour]</span> <!-- https://ps.mjstudio.net/bitonic-tour -->
   * <span class="platinum">[토글링(P-)](/DP/toggling.md)</span>
