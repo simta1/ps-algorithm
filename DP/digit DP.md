@@ -103,4 +103,5 @@ else {
 ### 문제
 [농부 비니](https://www.acmicpc.net/problem/20957) - `dp[pos]`   
 [자리합](https://www.acmicpc.net/problem/5425) - `dp[pos][tight]`   
+[책 페이지](https://www.acmicpc.net/problem/1019) - `dp[pos][tight][started]`   
 [Special Numbers](https://www.acmicpc.net/problem/30861) - `dp[pos][tight][started][hasZero]`   
