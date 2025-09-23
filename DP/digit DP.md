@@ -1,6 +1,7 @@
 [카테고리](/README.md)
 ## Digit Dp
 ### 상한이 있는 경우(tight 사용)
+digt dp는 보통 distribution-DP 형태로 짜는 게 편하다.
 ```cpp
 ll digitSum(ll n) {
 	if (n <= 0) return 0;
@@ -86,6 +87,7 @@ return dp[len][0][1][1] + dp[len][1][1][1];
 ```
 
 ### 구현 주의사항
+
 ```cpp
 // dp state에 자릿수의 곱이 포함된 경우
 // ex) dp[pos][tight][started][mul]

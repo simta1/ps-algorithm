@@ -100,6 +100,7 @@ mermaid stateDiagram-v2 사용
     * <span class="">[Farach-Colton and Bender Algorithm]</span> <!-- https://cp-algorithms.com/graph/lca_farachcoltonbender.html --> <!-- https://codeforces.com/blog/entry/86746?locale=en -->
     * <span class="diamond">[Line Container(D-)](/자료구조/기타/LineContainer.md)</span>
     * <span class="">[리-차오 트리(D-)]</span>
+    * <span class="">[Persistent Convex Hull(D+)]</span> <!-- https://infossm.github.io/blog/2025/07/24/CHT-with-time/ -->
     * <span class="">[SPQR tree]</span>
     * <span class="">[PQ tree]</span> <!-- https://infossm.github.io/blog/2021/10/20/PQ_Tree_Part_1/ -->
     <!-- * <span class="">[weighted QU]</span> -->
@@ -194,6 +195,7 @@ mermaid stateDiagram-v2 사용
   * <span class="gold">[달걀 낙하(G+)](/DP/달걀%20낙하.md)</span>
   * <span class="gold">[비트마스크 DP(G+)](/DP/Bitmask%20DP.md)</span>
   * <span class="gold">[digit DP(G+)](/DP/digit%20DP.md)</span>
+  * <span class="platinum">[Valid Permutations for DI Sequence(P-)](/DP/DI%20Sequence.md)</span>
   * <span class="platinum">[O(NlogN) The Ultimate Reroot Template](/DP/Reroot%20O(NlogN).md)</span>
   * <span class="platinum">[O(N) Rerooting](/DP/Reroot%20O(N).md)</span>
   * <span class="platinum">[괄호 문자열(P-)](/DP/괄호%20문자열.md)</span>
@@ -311,7 +313,6 @@ mermaid stateDiagram-v2 사용
     * <span class="gold">[거듭제곱 피보나치(G+)](/수학/조합론/피보나치.md)</span>
     * <span class="additional">[분할수(자연수 분할 P(n, k))](/수학/조합론/자연수%20분할.md)</span>
     * <span class="platinum">[제2종 스털링 수(집합 분할)(P-)](/수학/조합론/집합%20분할.md)</span>
-    * <span class="platinum">[Valid Permutations for DI Sequence(P-)](/수학/조합론/DI%20Sequence.md)</span>
     * <span class="">[생성 함수(D-)]</span> <!-- 카탈란 생성함수 O(nlogN) --> <!-- https://github.com/infossm/infossm.github.io/blob/master/_posts/2019-10-19-generating-function.md -->
     * <span class="diamond">[O(K^2 logN) 키타마사(D-)](/수학/FFT.md#ok2-logn-키타마사)</span>
     * <span class="">[Bostan-Mori]</span>
@@ -353,7 +354,7 @@ mermaid stateDiagram-v2 사용
     * <span class="gold">[오일러 파이 함수(G+)](/수학/Phi%20Function.md)</span>
     * <span class="platinum">[중국인의 나머지 정리(P-)](/수학/CRT.md)</span>
     * <span class="">[Garner's algorithm]</span>
-    * <span class="">[Barrett reduction]</span>
+    * <span class="">[Barrett reduction]</span> <!-- https://infossm.github.io/blog/2025/06/03/barrett-montgomery/ -->
     * <span class="">[프뤼퍼 수열]</span> <!-- https://hongjun7.tistory.com/10 -->
     * <span class="">[베르누이 수]</span>
     * <span class="">[벨만-포드를 이용한 단순연립부등식]</span> <!-- https://www.acmicpc.net/workbook/view/18304 -->
