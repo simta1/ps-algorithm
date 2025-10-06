@@ -1,7 +1,7 @@
 [카테고리](/README.md)
 ## vim script
 vscode neovim extension 사용 중   
-https://github.com/simta1/dotfiles/blob/main/.config/nvim/init.vim   
+https://github.com/simta1/dotfiles/blob/main/nvim/.config/nvim/after/plugin/cpp_cin.lua   
 GenerateCinCodeRange는 선언된 변수 추출해서 cin으로 입력받는 코드 생성해주는 함수   
 
 ### 사용예시 1
