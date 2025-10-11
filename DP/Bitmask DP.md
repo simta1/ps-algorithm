@@ -1,5 +1,4 @@
 [카테고리](/README.md)
-[카테고리](/README.md)
 ## Bitmask DP
 ```cpp
 vector<ld> dp(1 << n, DEFAULT_VALUE);

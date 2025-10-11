@@ -1,7 +1,6 @@
 [카테고리](/README.md)
 ## LineContainer
-### kactl 코드 그대로 가져왔음, 코드 출처 : https://github.com/kth-competitive-programming/kactl/blob/main/content/data-structures/LineContainer.h
-### TODO upper=false일 땐 내가 추가한 거고 아직 테스트 안 된 코드임
+[kactl 코드](https://github.com/kth-competitive-programming/kactl/blob/main/content/data-structures/LineContainer.h)에 upper=false일 때만 추가한 거임
 ```cpp
 struct Line { // https://github.com/kth-competitive-programming/kactl/blob/main/content/data-structures/LineContainer.h
 	mutable ll k, m, p;

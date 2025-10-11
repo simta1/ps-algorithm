@@ -1,6 +1,4 @@
 [카테고리](/README.md)
-<!-- TODO 코드실험해야 됨 -->
-# 테스트 안 끝난 코드
 ## Counter
 ```cpp
 // https://www.acmicpc.net/problem/13028
@@ -56,6 +54,3 @@ public:
     }
 };
 ```
-
-### 백준문제
-[]()
