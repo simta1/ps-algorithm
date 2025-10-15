@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-using ll = long long;
 
 int main() {
 	cin.tie(0) -> sync_with_stdio(0);
@@ -10,10 +9,11 @@ int main() {
 
 	vector<int> v(m);
 	for (auto &e : v) cin >> e;
+	sort(v.begin(), v.end());
 
 	int ans = 0;
 	for (int _ = n; _--;) {
-		ll x, y;
+		int x, y;
 		cin >> x >> y;
 
 		if (y > l) continue;
