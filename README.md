@@ -372,6 +372,7 @@ mermaid stateDiagram-v2 사용
       * <span class="">[다중 대입값 계산(D+)]</span> <!-- https://infossm.github.io/blog/2019/06/16/Multipoint-evaluation/ -->
       * <span class="">[Formal Power Series]</span> <!-- https://blog.naver.com/jinhan814/223200770737 --> <!-- https://blog.naver.com/jinhan814/223206364353 --> <!-- https://www.acmicpc.net/workbook/view/16664 -->
     * <span class="">[이산 로그(P+)]</span>
+    * <span class="diamond">[유리 등차수열의 내림 합(D-)](/math/유리%20등차수열의%20내림%20합.md)</span>
     * <span class="diamond">[이산 제곱근(D-)](/math/Tonelli-Shanks.md)</span>
     * <span class="">[이산 k제곱근]</span>
     * <span class="diamond">[Cornacchia's algorithm(D-)](/math/Cornacchia.md)</span>
