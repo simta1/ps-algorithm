@@ -45,7 +45,8 @@ private:
     template <class T>
     T readInt() { // eof일 경우 0 리턴
         if constexpr (noNegative) {
-            int val = 0, c = readChar();
+            int c = readChar();
+			T val = 0;
             while ('0' <= c && c <= '9') val = (val << 1) + (val << 3) + (c & 15), c = getBuf();
             return val;
         }
