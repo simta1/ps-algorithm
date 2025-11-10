@@ -69,6 +69,24 @@ T getDiameterSquare(const vector<Point<T> > &points, bool isConvex=false) { // i
     }
     return diameter;
 }
+
+template <typename T>
+inline T getTriangleAreaDouble(const Point<T> &a, const Point<T> &b, const Point<T> &c) {
+    return abs(a.x * b.y + b.x * c.y + c.x * a.y - a.y * b.x - b.y * c.x - c.y * a.x);
+}
+
+template <typename T>
+T largestTriangleDouble(const vector<Point<T> > &hull) { // O(N^2) // 볼록껍질에 포함되는 가장 큰 삼각형의 넓이
+	assert(hull.size() >= 3);
+	ll res = 0;
+	for (int i = 0; i + 2 < hull.size(); i++) {
+		for (int j = i + 1, k = i + 2; j < hull.size(); j++) {
+			while (k + 1 < hull.size() && getTriangleAreaDouble(hull[i], hull[j], hull[k]) < getTriangleAreaDouble(hull[i], hull[j], hull[k + 1])) ++k;
+			res = max(res, getTriangleAreaDouble(hull[i], hull[j], hull[k]));
+		}
+	}
+	return res;
+}
 ```
 ### 시간복잡도 
 $O(N \log{N})$   
