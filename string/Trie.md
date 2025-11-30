@@ -18,22 +18,10 @@ private:
         }
 
         Node *go(T val) {
-            if (!have(val)) {
-                Node *node = new Node;
-                mp[val] = node;
-            }
-
+            if (!have(val)) mp[val] = new Node;
             return mp[val];
         }
     } *root;
-
-    void print(Node *cur, int depth) {
-        for (auto &[val, next] : cur->mp) {
-            for (int i = 0; i < depth; i++) cout << "-";
-            cout << val << "\n";
-            print(next, depth + 1);
-        }
-    }
 
 public:
     Trie() : root(new Node()) {}
