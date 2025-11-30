@@ -17,7 +17,8 @@ ll power(ll a, ll n, ll mod) { //a ^ n % mod
     return res;
 }
 
-ll tonelliShanks(ll n, ll p) { // x^2 === n (mod p) // 해가 없다면 -1 리턴
+// p=4k+3이고 n이 이차잉여라면 이산제곱근은 n^((p+1)/4)
+ll tonelliShanks(ll n, ll p) { // x^2 === n (mod p) // 해가 없다면 -1 리턴 // O(log^2(p))   
     assert (n >= 0 && n < p);
     
     if (!n) return 0;
