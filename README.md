@@ -196,6 +196,7 @@ mermaid stateDiagram-v2 사용
   * <span class="gold">[비트마스크 DP(G+)](/DP/Bitmask%20DP.md)</span>
   * <span class="gold">[digit DP(G+)](/DP/digit%20DP.md)</span>
   * <span class="platinum">[Valid Permutations for DI Sequence(P-)](/DP/DI%20Sequence.md)</span>
+  * <span class="">[Hall DP]()</span> <!-- https://codeforces.com/blog/entry/148452 -->
   * <span class="platinum">[O(NlogN) The Ultimate Reroot Template](/DP/Reroot%20O(NlogN).md)</span>
   * <span class="platinum">[O(N) Rerooting](/DP/Reroot%20O(N).md)</span>
   * <span class="platinum">[괄호 문자열(P-)](/DP/괄호%20문자열.md)</span>
@@ -261,6 +262,7 @@ mermaid stateDiagram-v2 사용
     * <span class="additional">[좌표 계산 : 오심 좌표](/geometry/기하학%20헤더.md#barycentric-coordinates)</span>
   * <span class="gold">[볼록다각형 부분넓이(G)](/geometry/볼록다각형%20부분넓이.md)</span>
   * <span class="gold">[선분교차판정(G+)](/geometry/선분교차판정.md)</span>
+  * <span class="gold">[각도 정렬(G+)](./geometry/radial_sort.md)</span>
   * <span class="platinum">[선분교차점 계산(P-)](/geometry/선분교차점%20계산.md)</span>
   * <span class="platinum">[볼록 껍질:Graham Scan(P-)](/geometry/볼록껍질(Graham%20Scan).md)</span>
   * <span class="platinum">[볼록 껍질:Monotone Chain(P-)](/geometry/볼록껍질(Monotone%20Chain).md)</span>
