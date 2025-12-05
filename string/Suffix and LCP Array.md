@@ -5,7 +5,7 @@
 template <typename Container> // Container = string or vector<>
 pair<vector<int>, vector<int> > getSuffixArray(const Container &st) {
     int n = st.size();
-    vector<int> sa(n), rank(n), tmp(n);
+    vector<int> sa(n), rank(2 * n), tmp(2 * n); // n만큼만 필요하지만 경계검사 (i < n ? rank[i] : 0) 제거용 패딩
     for (int i = 0; i < n; i++) sa[i] = i, rank[i] = st[i];
     if constexpr (is_same_v<Container, vector<typename Container::value_type>>) for (auto e : rank) assert(e > 0); // rank[i]에 양수만 들어가야됨 // Container=vector<int>같은거면 확인
 
@@ -13,9 +13,9 @@ pair<vector<int>, vector<int> > getSuffixArray(const Container &st) {
 
     auto countingSort = [&](int t) {
         fill(cnt.begin(), cnt.end(), 0);
-        for (int i = 0; i < n; i++) ++cnt[sa[i] + t < n ? rank[sa[i] + t] : 0];
+        for (int i = 0; i < n; i++) ++cnt[rank[sa[i] + t]];
         for (int i = 1; i < cnt.size(); i++) cnt[i] += cnt[i - 1];
-        for (int i = n - 1; i >= 0; i--) tmp[--cnt[sa[i] + t < n ? rank[sa[i] + t] : 0]] = sa[i];
+        for (int i = n - 1; i >= 0; i--) tmp[--cnt[rank[sa[i] + t]]] = sa[i];
         swap(sa, tmp);
     };
 
@@ -24,12 +24,13 @@ pair<vector<int>, vector<int> > getSuffixArray(const Container &st) {
         countingSort(0);
 
         tmp[sa[0]] = 1;
-        for (int i = 1; i < n; i++) tmp[sa[i]] = tmp[sa[i - 1]] +  (rank[sa[i - 1]] != rank[sa[i]] || rank[sa[i - 1] + t] != rank[sa[i] + t]);
+        for (int i = 1; i < n; i++) tmp[sa[i]] = tmp[sa[i - 1]] + (rank[sa[i - 1]] != rank[sa[i]] || rank[sa[i - 1] + t] != rank[sa[i] + t]);
         swap(rank, tmp);
 
         if (rank[sa.back()] == n) break;
     }
 
+    rank.resize(n);
     for (auto &e : rank) --e; // 1-based -> 0-based // 0<=i<n에 대해 rank[sa[i]] == i임 // sa[idx]=i -> st[i:]가 idx번째 접미사 // rank[i]=idx 즉, st[i:]가 몇번째 접미사인지 rank[i]에 저장됨
     return {sa, rank};
 }
@@ -73,9 +74,9 @@ Container LCString(const Container &a, const Container &b, typename Container::v
     return Container(st.begin() + sa[idx], st.begin() + sa[idx] + lcp[idx]);
 }
 ```
-a.size(), sa[i], sa[i + 1]의 대소관계 비교는 [사이값 확인](/ps-snippet/C++/기타/Idea.md#사이값-확인) 문서 참고   
+a.size(), sa[i], sa[i + 1]의 대소관계 비교는 [사이값 확인](/C++/기타/Idea.md#사이값-확인) 문서 참고   
 
-### 가장 긴 반복 부분 문자열, 서로 다른 부분 문자열의 개수, k번 이상 등장하는 서로 다른 부분 문자열의 개수([Deque trick](/기타/Deque%20Trick.md) 필요), k번 이상 등장하는 가장 긴 부분 문자열([Deque trick](/기타/Deque%20Trick.md) 필요)
+### 가장 긴 반복 부분 문자열, 서로 다른 부분 문자열의 개수, k번 이상 등장하는 서로 다른 부분 문자열의 개수([Deque trick](/misc/Deque%20Trick.md) 필요), k번 이상 등장하는 가장 긴 부분 문자열([Deque trick](/misc/Deque%20Trick.md) 필요)
 ```cpp
 template <typename Container> // Container = string or vector<>
 Container longestRepeatedSubstring(const Container &st, const vector<int> &sa, const vector<int> &lcp) {
@@ -142,7 +143,7 @@ group의 원소는 0 초과의 값을 가져야 된다.
 > ```
 
 i번째 접미사부터 j번째 접미사까지의 최장공통접두사의 길이는 `min(lcp[i], ..., lcp[j - 1])`이기 때문에 lcp배열에서 RMQ 구하면 됨   
-RMQ는 전처리 $O(N\log{N})$ 쿼리 $O(1)$의 구현을 사용할 때도 있고, `countDistinctSubstringsRepeatedAtLeastK()`에서처럼 길이가 정해진 구간에 대해서만 계산하는 경우엔 Deque Trick으로 모든 구간에 대해 $O(N)$으로 계산할 수도 있음([RMQ](/기타/RMQ.md) 참고)   
+RMQ는 전처리 $O(N\log{N})$ 쿼리 $O(1)$의 구현을 사용할 때도 있고, `countDistinctSubstringsRepeatedAtLeastK()`에서처럼 길이가 정해진 구간에 대해서만 계산하는 경우엔 Deque Trick으로 모든 구간에 대해 $O(N)$으로 계산할 수도 있음([RMQ](/misc/RMQ.md) 참고)   
 
 `st[i:]`와 `st[j:]`의 최장공통접두사의 길이는 `rank[i]`번째 접미사부터 `rank[j]`번째 접미사까지의 최장공통접두사의 길이를 구하면 됨.   
 ```cpp
