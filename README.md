@@ -171,8 +171,8 @@ mermaid stateDiagram-v2 사용
     * <span class="platinum">[LCA를 이용한 트리 쿼리(P-)](/graph_theory/tree/Query%20with%20LCA.md)</span>
     * <span class="platinum">[ETT(오일러 경로 테크닉) (P-)](/graph_theory/tree/ETT.md)</span>
     * <span class="platinum">[HLD(heavy-light 분할) (P+)](/graph_theory/tree/HLD.md)</span>
+    * <span class="platinum">[센트로이드(P-)](./graph_theory/tree/centroid.md)</span>
     * <span class="">[트리 압축]</span> <!-- https://infossm.github.io/blog/2021/09/21/virtual-tree/ -->
-    * <span class="">[센트로이드]</span>
     * <span class="">[센트로이드 분할(D-)]</span>
     * <span class="">[트리 동형 사상]</span>
     * <span class="">[tree width]</span>
@@ -357,6 +357,7 @@ mermaid stateDiagram-v2 사용
     * <span class="platinum">[중국인의 나머지 정리(P-)](/math/CRT.md)</span>
     * <span class="">[Garner's algorithm]</span>
     * <span class="">[Barrett reduction]</span> <!-- https://infossm.github.io/blog/2025/06/03/barrett-montgomery/ -->
+    * <span class="">[fast mod]</span> <!-- https://codeforces.com/contest/2169/submission/349377750 -->
     * <span class="">[프뤼퍼 수열]</span> <!-- https://hongjun7.tistory.com/10 -->
     * <span class="">[베르누이 수]</span>
     * <span class="">[벨만-포드를 이용한 단순연립부등식]</span> <!-- https://www.acmicpc.net/workbook/view/18304 -->
@@ -437,7 +438,7 @@ mermaid stateDiagram-v2 사용
   * <span class="">[차이 부등식]</span> <!-- https://koosaga.com/72 --> <!-- https://www.acmicpc.net/workbook/view/3303 -->
   * <span class="">[range mode query]</span> <!-- https://infossm.github.io/blog/2021/05/20/Data-Structure-For-Range-Mode-Query/ --> <!-- https://www.acmicpc.net/problem/14898 -->
   * <span class="">[춤추는 링크, 크누스 X]</span>
-  * <span class="">[임의 정밀도(epsilon값 계산)(A)]</span> <!-- https://www.acmicpc.net/blog/view/37 -->
+  * <span class="">[임의 정밀도(epsilon값 계산)(A)]</span> <!-- https://www.acmicpc.net/blog/view/37 --> <!-- https://blog.shift.moe/2022/10/31/on-floating-point-errors/ -->
   * ~~<span class="">[담금질 기법]</span>~~ <!-- https://ryute.tistory.com/35    --> <!-- https://ryute.tistory.com/36    --> <!-- https://algospot.com/forum/read/1211/ --> <!-- https://koosaga.com/3 -->
   * <span class="">[DLAS]</span> <!-- https://cocoachan.tistory.com/12 --> <!-- https://gist.github.com/cgiosy/ed16f4988eeb7e989a97644fe61e1561 -->
   * <span class="">[Fracturing Search(D+)]</span> <!-- https://usaco.guide/adv/fracturing-search?lang=cpp --> <!-- https://www.acmicpc.net/problem/14166 --> <!-- https://blog.cube219.me/posts/2022/fracturing-search/ -->
