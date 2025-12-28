@@ -1,6 +1,3 @@
-[카테고리](/README.md)
-## 금광 세그 (point update & range query)
-```cpp
 template <typename T>
 class GoldMineSeg {
 private:
@@ -66,30 +63,11 @@ public:
         return query(1, 0, n - 1, l - 1, r - 1).lr;
     }
 };
-```
-### 시간복잡도
-update $O(logN)$   
-query $O(logN)$   
+/*
+`query()`는 연속부분합들 중 최댓값 계산
+이때 구간길이가 최소 1인 것들 중에서만 계산
+즉, 값이 전부 음수면 답이 0이 나오는 게 아니라 음수들 중 최대값이 나옴
 
-### 구현 주의사항
-버리는 구간일 때 (0, 0, 0, 0)이 아니라 (0, -INF, -INF, -INF) 써야 된다.
-```cpp
-// 틀린 코드
-if (l > e || s > r) return Node(0, 0, 0, 0);
-
-// 맞는 코드
-if (l > e || s > r) return Node(0, -INF, -INF, -INF);
-```
-
-### 사용설명
-`query()`는 연속부분합들 중 최댓값 계산   
-이때 구간길이가 최소 1인 것들 중에서만 계산   
-즉, 값이 전부 음수면 답이 0이 나오는 게 아니라 음수들 중 최대값이 나옴   
-
-`v[1:n]`이 A과 B로 이루어졌을 때 A로만 이루어진 구간의 최대 길이 구하는 법   
-A -> 1, B -> -n을 val로 취급해서 최대연속합 구하면 됨   
-
-### 문제
-[연속합과 쿼리](https://www.acmicpc.net/problem/16993)   
-[빨간점, 파란점](https://www.acmicpc.net/problem/3121) - 'R'로만 이루어진 구간의 최대 길이   
-[탭댄스](https://www.acmicpc.net/problem/2849) - 0과 1이 번갈아 나오는 구간의 최대 길이   
+v[1:n]이 A과 B로 이루어졌을 때 A로만 이루어진 구간의 최대 길이 구하는 법
+A -> 1, B -> -n을 val로 취급해서 최대연속합 구하면 됨
+*/

@@ -1,7 +1,4 @@
-[카테고리](/README.md)
-## Dynamic Lazy Segment Tree
-## updateAdd만 지원
-```cpp
+// only updateAdd
 template <typename idx_t, typename T>
 class DynamicLazySeg {
 private:
@@ -19,12 +16,12 @@ private:
     vector<Node> tree;
     const int root = 1;
     const idx_t MAX_IDX;
-    
+
     int newNode() { tree.push_back(Node()); return tree.size() - 1; }
-    
+
     void propagate(int node, int s, int e) {
         if (!node) return; // tree[0].val은 항상 항등원으로 유지되어야 함
-        
+
         if (!tree[node].lazy) return;
 
         tree[node].val += (e - s + 1) * tree[node].lazy;
@@ -76,7 +73,7 @@ public:
     DynamicLazySeg(idx_t maxIdx) : MAX_IDX(maxIdx), tree(2) {} // tree[0] : dummy, tree[1] : root
 
     void reserve(int sz) { if (sz > tree.capacity()) tree.reserve(sz); } // array doubling 최소화
-    
+
     void updateAdd(idx_t l, idx_t r, T val) { // 0 <= i <= MAX_IDX
         assert(haveOverlap(0, MAX_IDX, l, r));
         update(root, 0, MAX_IDX, l, r, val, 1);
@@ -91,9 +88,8 @@ public:
         return query(root, 0, MAX_IDX, l, r);
     }
 };
-```
-### updateAdd, updateChange 전부 지원
-```cpp
+
+// updateAdd + updateChange
 template <typename idx_t, typename T>
 class DynamicLazySeg {
 private:
@@ -111,9 +107,9 @@ private:
     vector<Node> tree;
     const int root = 1;
     const idx_t MAX_IDX;
-    
+
     int newNode() { tree.push_back(Node()); return tree.size() - 1; }
-    
+
     void propagate(int node, int s, int e) {
         if (!node) return; // tree[0].val은 항상 항등원으로 유지되어야 함
 
@@ -132,7 +128,7 @@ private:
         }
         else { // updateAdd
             if (!tree[node].lazy) return;
-            
+
             tree[node].val += (e - s + 1) * tree[node].lazy;
             if (s != e) {
                 if (!tree[node].l) tree[node].l = newNode();
@@ -147,7 +143,7 @@ private:
     bool haveOverlap(idx_t s, idx_t e, idx_t l, idx_t r) {
         return !(r < s || e < l);
     }
-    
+
     // 항상 haveOverlap()으로 확인된 구간만 들어옴, 구간이 하나도 겹치지 않는 경우는 애초에 없음
     void update(int node, idx_t s, idx_t e, idx_t l, idx_t r, T val, bool add) {
         if (l <= s && e <= r) {
@@ -168,7 +164,7 @@ private:
                 if(!tree[node].r) tree[node].r = newNode();
                 update(tree[node].r, m + 1, e, l, r, val, add);
             }
-            
+
             propagate(tree[node].l, s, m);
             propagate(tree[node].r, m + 1, e);
             tree[node].val = tree[tree[node].l].val + tree[tree[node].r].val;
@@ -191,7 +187,7 @@ public:
     DynamicLazySeg(idx_t maxIdx) : MAX_IDX(maxIdx), tree(2) {} // tree[0] : dummy, tree[1] : root
 
     void reserve(int sz) { if (sz > tree.capacity()) tree.reserve(sz); } // array doubling 최소화
-    
+
     void updateAdd(idx_t l, idx_t r, T val) { // 0 <= i <= MAX_IDX
         update(root, 0, MAX_IDX, l, r, val, 1);
     }
@@ -211,24 +207,21 @@ public:
     T query(idx_t l, idx_t r) { // 0 <= l <= r <= MAX_IDX
         return query(root, 0, MAX_IDX, l, r);
     }
-};
-```
-### 세그이분탐색
-```cpp
+
 private:
     idx_t findKthSmallest(int node, idx_t s, idx_t e, T k) {
         if (s == e) return s;
-        
+
         idx_t m = s + e >> 1;
         propagate(tree[node].l, s, m);
         T lsz = tree[tree[node].l].val;
         if (lsz >= k) return findKthSmallest(tree[node].l, s, m, k);
         return findKthSmallest(tree[node].r, m + 1, e, k - lsz);
     }
-    
+
     idx_t findKthLargest(int node, idx_t s, idx_t e, T k) {
         if (s == e) return s;
-        
+
         idx_t m = s + e >> 1;
         propagate(tree[node].r, m + 1, e);
         T rsz = tree[tree[node].r].val;
@@ -248,130 +241,4 @@ public:
         propagate(root, 0, MAX_IDX);
         return k > tree[root].val ? -1 : findKthLargest(root, 0, MAX_IDX, k);
     }
-```
-### 시간복잡도
-range update $O(logN)$   
-range query $O(logN)$   
-
-### 공간복잡도
-$O(QlogN)$   
-
-### 구현 주의사항
-> lazy 세그에서 세그이분탐색 할 때 항상 해당되는 내용이긴 한데, `findKth()`안에서 propagate를 할 때 `propagate(node, s, e)`가 아니라 확인하려는 자식에 대해 propagate를 해야 된다.   
-근데 이 경우 `propagate(node, s, e)`를 호출하지 않으므로 처음 루트에 lazy가 있다면 전파되지 않기 때문에, `private findKth()`를 호출하기 전 `public findKth()`에서 먼저 `propagate(root)`를 해둬야 한다.   
-물론 `private findKth()`함수 안에 `propagate(node, s, e)`를 추가해도 되긴 하지만 이러면 중복으로 propagate()가 호출되는 횟수가 많아져 비효율적이다.
-```cpp
-private:
-    idx_t findKthSmallest(int node, idx_t s, idx_t e, T k) {
-        if (s == e) return s;
-        
-        idx_t m = s + e >> 1;
-        propagate(tree[node].l, s, m); // tree[tree[node].r].val 확인하기 전 먼저 propagate
-        T lsz = tree[tree[node].l].val;
-        if (lsz >= k) return findKthSmallest(tree[node].l, s, m, k);
-        return findKthSmallest(tree[node].r, m + 1, e, k - lsz);
-    }
-
-
-public: 
-    idx_t findKthSmallest(int k) {
-        assert (k >= 1);
-        propagate(root, 0, MAX_IDX); // root에 있는 lazy 전파
-        return k > tree[root].val ? -1 : findKthSmallest(root, 0, MAX_IDX, k);
-    }
-```
-
-> `update()`를 구현할 때 애초에 구간이 겹치지 않는다면 노드를 만들지 않아야 된다.   
-물론 만들어도 상관없지만 이런 필요없는 노드를 만드는지 아닌지가 메모리 사용량에 정말정말 큰 차이를 만든다. (심한 경우엔 메모리 사용량 2~3배 차이나는 듯)   
-```cpp
-// 수정 전 코드. 메모리 초과
-void update(int node, idx_t s, idx_t e, idx_t l, idx_t r, T val, bool add) {
-    propagate(node, s, e);
-
-    if (r < s || e < l) return;
-    if (l <= s && e <= r) {
-        tree[node].lazy = val;
-        return;
-    }
-
-    idx_t m = s + e >> 1;
-    if(!tree[node].l) tree[node].l = newNode();
-    update(tree[node].l, s, m, l, r, val, add);
-    if(!tree[node].r) tree[node].r = newNode();
-    update(tree[node].r, m + 1, e, l, r, val, add);
-    tree[node].val += val * (min(e, r) - max(s, l) + 1);
-}
-
-// 수정 후 코드
-void update(int node, idx_t s, idx_t e, idx_t l, idx_t r, T val, bool add) {
-    propagate(node, s, e);
-
-    // (r < s || e < l)인지 확인 안해도됨. 구간이 아예 안겹치는 경우는 haveOverlap()으로 미리 걸러짐
-    // 보기엔 if문 고작 한 개지만 update는 계속 재귀호출되며 여러번 호출되는 함수기에 생각보다 많이 실행되는 코드라서 꽤나 많은 시간을 잡아먹음. 최대한 없앨 수 있는 코드는 없애야 됨
-    if (l <= s && e <= r) {
-        tree[node].lazy = val;
-        return;
-    }
-
-    idx_t m = s + e >> 1;
-    if (haveOverlap(s, m, l, r)) { // 애초에 구간 겹치지 않는 경우엔 노드를 만들지도 않음
-        if(!tree[node].l) tree[node].l = newNode();
-        update(tree[node].l, s, m, l, r, val, add);
-    }
-    if (haveOverlap(m + 1, e, l, r)) {
-        if(!tree[node].r) tree[node].r = newNode();
-        update(tree[node].r, m + 1, e, l, r, val, add);
-    }
-    tree[node].val += val * (min(e, r) - max(s, l) + 1);
-}
-```
-
-### 구현 주의사항 (updateAdd, updateChange)
-updateAdd 외에도 updateChange를 같이 지원하기 위해 Node에 lazyKind변수를 추가했는데 메모리 사용량이 $\dfrac{4}{3}$배가 됨   
-고작 bool 변수 1개로 왜이렇게 증가하나 싶어서 보니 구조체 패딩이 원인이었음.   
-`T = long long`으로 사용할 경우 구조체에 추가한 건 bool변수 1개뿐이지만 구조체 패딩에 의해 각 노드당 8byte가 추가됨.   
-계속 메모리초과 나다가 결국 `__attribute__((__packed__))` 사용해서 해결함   
-```cpp
-struct Node { // T = long long일 때 32byte
-    ll val, lazy; // 8 * 2 = 16 byte
-    int l, r; // 4 * 2 = 8 byte, 구조체 패딩 없이 딱 떨어짐
-    bool val; // 1byte밖에 사용하지 않지만 패딩으로 인해 구조체 크기는 8byte 증가
 };
-
-struct __attribute__((__packed__)) Node { // T = long long일 때 25byte
-    // ...
-};
-```
-
-### 사용설명
-> updateAdd와 updateChange를 같이 쓸 경우 메모리 낭비를 최소화하고자 구조체 패딩을 하지 않도록 했음   
-근데 updateChange가 필요하지 않은 상황에서도 굳이 구조체 패딩 없이 느린 코드를 사용하는 건 좀 별로인 것 같아서 updateAdd만 지원하던 이전코드도 같이 남겨둠   
-당연히 더 빠르고 속도차이 꽤 있으니 updateChange가 필요없다면 우선적으로 사용   
-
-> updateChange를 사용하는 문제의 경우 대부분 change를 0또는 1로만 하는 문제가 많은데, 이 경우에는 따로 lazy의 자료형을 bool로 바꾸는 게 좋음   
-어차피 bool(1) 숫자를 더해도 계속 1이므로 딱히 문제 없이 잘 작동함   
-지금은 lazy와 val의 자료형을 무조건 일치시키도록 템플릿을 짜둔지라 직접 코드 내에서 바꿔서 사용해야 됨   
-그냥 Node 구조체 선언한 코드에서 lazy 자료형만 아래처럼 바꾸면 끝남
-```cpp
-struct __attribute__((__packed__)) Node {
-    T val;
-    int l, r;
-    bool lazy; // updateChange(0 or 1)만 들어오는 경우라면 T 대신 bool로 직접 코드 바꾸기
-    bool lazyKind;
-};
-```
-
-> 0 <= max_idx 내의 인덱스에 대해서 업데이트 가능   
-array doubling 고려해서 reserve()해두고 사용하면 더 좋음   
-보통 10~20ms정도 줄일 수 있음
-
-> range update는 update(l, r, val) 사용   
-point update는 update(i, val) 사용
-
-### 문제
-[일기예보](https://www.acmicpc.net/problem/14577) - 다이나믹 / pUpdateAdd, rQuery / 세그이분탐색   
-[나무는 쿼리를 싫어해~](https://www.acmicpc.net/problem/20212) - 다이나믹 레이지 / rUpdateAdd, rQuery
-[Monkey and Apple-trees](https://www.acmicpc.net/problem/11843) - 다이나믹 레이지 / rUpdateChange(0 or 1), rQuery / lazy자료형 bool로 바꿔야 통과
-
-### 참고링크
-https://nicotina04.tistory.com/265   

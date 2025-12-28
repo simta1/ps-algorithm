@@ -1,6 +1,3 @@
-[카테고리](/README.md)
-## 세그먼트 트리, 세그이분탐색(Binary Search on SegmentTree)
-```cpp
 template<typename T, T (*op)(const T&, const T&), T (*e)()>
 class SegmentTree {
 private:
@@ -95,43 +92,14 @@ public:
         return query(1, r) < k ? -1 : findLeftMost(r, [&](T sum) { return sum < k; }) - 1;
     }
 };
-```
-### 시간복잡도
-build(생성자) $O(N)$   
-update $O(\log{N})$   
-query $O(\log{N})$   
-세그이분탐색(`findLeftMost()`, `findRightMost()`, `findKthSmallest()`, `findKthLargest()`) $O(\log{N})$   
 
-### 사용설명
+/*
 findLeftMost(l, f)은 만족하는 r 없는 경우 l-1 리턴   
 findRightMost(r, f)은 만족하는 l 없는 경우 r+1 리턴   
 findKthSmallest, findKthLargest은 만족하는 값이 없는 경우 -1 리턴   
 
-### 사용예시
-```cpp
 // ex) 합 세그
 int op(const int &a, const int &b) { return a + b; }
 int e() { return 0; }
-SegmentTree<int, sum, zero> seg(v); // v는 vector<T>
-
-// ex) 최솟값 세그 (std::min은 op에 대입이 안 돼서 직접 선언해줘야 함)
-int min(const int &a, const int &b) { return a < b ? a : b; }
-SegmentTree<int, min, numeric_limits<int>::max> seg(v);
-```
-
-### 백준 문제
-__세그트리__   
-[구간 합 구하기](https://www.acmicpc.net/problem/2042) - 합 세그   
-[최솟값 찾기](https://www.acmicpc.net/problem/11003) - 최솟값 세그   
-
-__세그이분탐색__   
-[중앙값 측정](https://www.acmicpc.net/problem/9426) - findKthSmallest   
-[까다로운 아이들과 선물 상자](https://www.acmicpc.net/problem/23760) - findKthLargest   
-[요세푸스 문제 2](https://www.acmicpc.net/problem/1168) - findKthSmallest   
-[D. Colored Portals](https://codeforces.com/contest/2004/problem/D)   
-
-### 참고링크
-https://book.acmicpc.net/ds/segment-tree - 세그트리(개념설명, 재귀구현)    
-https://seungwuk98.tistory.com/37 - 비재귀 세그트리   
-https://blog.naver.com/jinhan814/222145041843 - 비재귀 세그트리 빠른 코드   
-https://00ad-8e71-00ff-055d.tistory.com/162 - 세그이분탐색   
+SegmentTree<int, sum, zero> seg(v);
+*/

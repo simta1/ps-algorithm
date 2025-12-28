@@ -1,6 +1,3 @@
-[카테고리](/README.md)
-## MergesortTree
-```cpp
 template <typename T>
 class MergesortTree {
 private:
@@ -42,20 +39,5 @@ public:
         return query(1, 0, n - 1, l - 1, r - 1, k);
     }
 };
-```
-### 시간복잡도 
-$O(N~logN)$   
 
-### 공간복잡도 
-$O(N~logN)$   
-
-### 구현 주의사항
-MergesortTree(int n) 생성자는 일부러 삭제함    
-update로 원소들을 일일이 하나씩 넣으면 매번 원소를 넣고 정렬해야 되서 여러모로 비효율적이기 때문에 처음부터 벡터 v를 생성자에서 받아 한번에 트리를 구축하는 게 낫다.   
-
-### 사용설명
-생성자에 보내는 벡터 v는 0-based (결국 private query()함수가 0-based이기 때문)
-
-### 문제
-[수열과 쿼리 3](https://www.acmicpc.net/problem/13544)   
-[트리와 색깔](https://www.acmicpc.net/problem/15899) - 추가 알고리즘 [ETT](/그래프%20이론/트리/Euler%20Tour%20Technique.md) 필요
+// time, space O(N~logN)

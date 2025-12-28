@@ -1,25 +1,22 @@
-[카테고리](/README.md)
-## 링크/컷 트리(Link/cut tree)
-```cpp
 class LinkCutTree {
 private:
     struct Node {
         int l, r, p, sz;
         Node() : l(0), r(0), p(0), sz(0) {}
     };
-    
+
     vector<Node> tree;
-    
+
     bool isRoot(int cur) {
         return (!tree[cur].p || (tree[tree[cur].p].l != cur && tree[tree[cur].p].r != cur));
     }
-    
+
     void update(int cur) {
         tree[cur].sz = 1;
         if (tree[cur].l) tree[cur].sz += tree[tree[cur].l].sz;
         if (tree[cur].r) tree[cur].sz += tree[tree[cur].r].sz;
     }
-    
+
     void rotate(int cur) {
         int parent = tree[cur].p;
         int grandParent = tree[parent].p;
@@ -45,7 +42,7 @@ private:
         tree[cur].p = grandParent;
 
         if (child) tree[child].p = parent; // child 연결관게 수정
-        
+
         update(parent);
         update(cur);
     }
@@ -59,7 +56,7 @@ private:
             }
         }
     }
-    
+
     int access(int cur) {
         splay(cur);
         tree[cur].r = 0;
@@ -98,22 +95,4 @@ public:
         return access(y);
     }
 };
-```
-### 시간복잡도
-$amortized~O(logN)$   
-
-### 구현 주의사항
-LCT의 구조는 실제 트리와 구조가 다름.   
-https://justicehui.github.io/hard-algorithm/2021/01/01/link-cut-tree/ 에서 실제 트리와 해당 트리를 나타내느 LCT 그림을 여럿 보여주니 참고   
-
-
-### 사용설명
-
-
-### 문제
-[트리와 쿼리 11](https://www.acmicpc.net/problem/13539)   
-
-### 참고링크
-https://cubelover.tistory.com/10 - 스플레이 트리(사전지식)   
-https://justicehui.github.io/hard-algorithm/2021/01/01/link-cut-tree/ - 링크/컷 트리   
-https://imeimi.tistory.com/27 - 링크/컷 트리   
+// amortized~O(logN)

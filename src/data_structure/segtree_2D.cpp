@@ -1,6 +1,3 @@
-[카테고리](/README.md)
-## SegmentTree2D (point update & range query)
-```cpp
 template <typename T>
 T merge(const T &a, const T &b) {
     return a + b;
@@ -111,26 +108,17 @@ public:
         init(1, 0, n - 1);
     }
 
-    void updateAdd(int x, int y, T val) { // 1-based
+    void updateAdd(int x, int y, T val) { // 1-based // O(logN logM)
         updateAdd(1, 0, n - 1, x - 1, y, val);
         v[x - 1][y - 1] += val;
     }
     
-    void updateChange(int x, int y, T val) { // 1-based
+    void updateChange(int x, int y, T val) { // 1-based // O(logN logM)
         updateAdd(1, 0, n - 1, x - 1, y, val - v[x - 1][y - 1]);
         v[x - 1][y - 1] = val;
     }
 
-    T query(int x1, int y1, int x2, int y2) { // 1-based
+    T query(int x1, int y1, int x2, int y2) { // 1-based // O(logN logM)
         return query(1, 0, n - 1, x1 - 1, x2 - 1, y1, y2);
     }
 };
-```
-### 시간복잡도
-update $O(log(N) \times log(M))$   
-query $O(log(N) \times log(M))$   
-N, M은 각각 행과 열의 개수   
-펜윅 트리로 구현하는 게 훨씬 빠르고 코드도 짧다.   
-
-### 문제
-[구간 합 구하기 3](https://www.acmicpc.net/problem/11658)
