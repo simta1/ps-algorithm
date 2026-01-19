@@ -16,7 +16,7 @@ tuple<int, vector<int>, vector<int> > bimatch(int n1, int n2, const vector<vecto
     for (int i = 0; i < adj.size(); i++) res += dfs(dfs, i, i + 1);
     return {res, matchL, matchR};
 }
-pair<vector<int>, vector<int> > mvc(int n1, int n2, const vector<vector<int> > &adj, const vector<int> &matchL, const vector<int> &matchR) { // O(V+E) // 0-based
+pair<vector<int>, vector<int> > getMVC(int n1, int n2, const vector<vector<int> > &adj, const vector<int> &matchL, const vector<int> &matchR) { // O(V+E) // 0-based
     vector<bool> visitedL(n1), visitedR(n2);
     auto dfs = [&](auto &&dfs, int l) -> void {
         visitedL[l] = true;
@@ -31,5 +31,5 @@ pair<vector<int>, vector<int> > mvc(int n1, int n2, const vector<vector<int> > &
     for (int r = 0; r < n2; r++) if (visitedR[r]) mvcR.push_back(r);
     return {mvcL, mvcR};
 }
-
 // Maximum Independent Set = V - mvc
+// Kőnig's theorem: 이분그래프에서 최대매칭=|mvc|
