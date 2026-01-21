@@ -33,3 +33,5 @@ pair<vector<int>, vector<int> > getMVC(int n1, int n2, const vector<vector<int> 
 }
 // Maximum Independent Set = V - mvc
 // Kőnig's theorem: 이분그래프에서 최대매칭=|mvc|
+// misL = L - mvcL, misR = R - mvcR
+// antichain은 v_in이 misL이고 && v_out이 misR인 v들을 모으면 됨
