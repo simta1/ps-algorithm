@@ -13,32 +13,32 @@ struct Dinic {
 		adj[a].push_back({b, adj[b].size(), c, c});
 		adj[b].push_back({a, adj[a].size() - 1, rcap, rcap});
 	}
-	F dfs(int cur, int t, F f) {
-		if (cur == t || !f) return f;
+	F dfs(int cur, int t, F mn) {
+		if (cur == t || !mn) return mn;
 		for (int &i = ptr[cur]; i < adj[cur].size(); i++) {
 			auto &e = adj[cur][i];
 			if (lvl[e.to] != lvl[cur] + 1) continue;
-            if (F p = dfs(e.to, t, min(f, e.c))) {
-                e.c -= p, adj[e.to][e.rev].c += p;
-                return p;
+            if (F f = dfs(e.to, t, min(mn, e.c))) {
+                e.c -= f, adj[e.to][e.rev].c += f;
+                return f;
             }
 		}
 		return 0;
 	}
     template <bool scaling=false> F maxFlow(int s, int t) { // O(V^2 E) // max(cap)이 큰 경우 scaling=true가 빠름
-		F flow = 0; q[0] = s;
+		F res = 0; q[0] = s;
         for (int i = scaling ? 0 : 30; i < 31; i++) do {
 			lvl = ptr = vector<int>(q.size());
-			int qi = 0, qe = lvl[s] = 1;
-			while (qi < qe && !lvl[t]) {
-				int cur = q[qi++];
-				for (Edge e : adj[cur]) if (!lvl[e.to] && e.c >> (30 - i)) {
+			int qs = 0, qe = lvl[s] = 1;
+			while (qs < qe && !lvl[t]) {
+				int cur = q[qs++];
+				for (Edge &e : adj[cur]) if (!lvl[e.to] && e.c >> (30 - i)) {
                     q[qe++] = e.to, lvl[e.to] = lvl[cur] + 1;
                 }
 			}
-			while (F p = dfs(s, t, numeric_limits<F>::max())) flow += p;
+			while (F f = dfs(s, t, numeric_limits<F>::max())) res += f;
 		} while (lvl[t]);
-		return flow;
+		return res;
 	}
 	bool leftOfMinCut(int a) { return lvl[a] != 0; } // min-cut에서 source 집합에 속하는지
 };
