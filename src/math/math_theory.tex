@@ -65,3 +65,12 @@ $n$이하 square-free 수의 개수 $\displaystyle\sum_{i=1}^{n} \mu[i] \left\lf
 서로소인 두 자연수 a, b에 대해 an + bm꼴로 나타낼 수 없는 최대값은 ab - a - b \\
 즉, $ab - a - b + 1 = (a-1)(b-1)$이상의 자연수는 전부 $an+bm$꼴로 표현 가능 \\
 gcd(a, b) = g라면 (a/g - 1)(b/g - 1)g 이상의 g의 배수는 전부 표현 가능 \\
+
+\vspace{5pt}
+\noindent \textbf{Permutation Cycle Counting} \\
+순열 $\sigma \in S_n$의 cycle 개수를 $c(\sigma)$라 하면
+\[
+\sum_{\sigma \in S_n} x^{c(\sigma)}
+=
+x(x+1)(x+2)\cdots(x+n-1)
+\]
