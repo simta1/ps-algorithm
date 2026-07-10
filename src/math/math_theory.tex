@@ -67,10 +67,29 @@ $n$이하 square-free 수의 개수 $\displaystyle\sum_{i=1}^{n} \mu[i] \left\lf
 gcd(a, b) = g라면 (a/g - 1)(b/g - 1)g 이상의 g의 배수는 전부 표현 가능 \\
 
 \vspace{5pt}
-\noindent \textbf{Permutation Cycle Counting} \\
-순열 $\sigma \in S_n$의 cycle 개수를 $c(\sigma)$라 하면
+\noindent \textbf{Cycle Count Generating Functions} \\
+순열 $\sigma \in S_n$의 cycle 개수를 $c(\sigma)$, 교란순열의 집합을 $\mathcal{D}_n$이라 하면
 \[
 \sum_{\sigma \in S_n} x^{c(\sigma)}
 =
-x(x+1)(x+2)\cdots(x+n-1)
+x(x+1)(x+2)\cdots(x+n-1),
+\]
+\[
+\sum_{\sigma \in \mathcal{D}_n} x^{c(\sigma)}
+=
+\sum_{q=0}^{n}(-1)^q\binom{n}{q}x^q
+\prod_{i=0}^{n-q-1}(x+i).
+\]
+\[
+\sum_{\sigma \in S_n}(-1)^{c(\sigma)}
+=
+\begin{cases}
+1 & n=0,\\
+-1 & n=1,\\
+0 & n\ge 2,
+\end{cases}
+\qquad
+\sum_{\sigma \in \mathcal{D}_n}(-1)^{c(\sigma)}
+=
+1-n.
 \]
