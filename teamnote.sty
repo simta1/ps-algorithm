@@ -57,7 +57,11 @@
     \renewcommand{\authorname}{#3}
 }
 \pagestyle{fancy}
-\lhead{\schoolname{} -- \teamname}
+\lhead{
+    \ifthenelse{\equal{\schoolname}{}}%
+        {\teamname}%
+        {\schoolname{} -- \teamname}
+}
 \rhead{Page \thepage{} of
 \ifthenelse{\pageref{LastPage} < 26}{\pageref{LastPage}}{\textcolor{red}{\textbf{\pageref{LastPage}}}}}
 \fancyfoot{}
