@@ -6,6 +6,8 @@ struct Seg {
         sz = 1;
         while (sz < n) sz <<= 1;
         tree.resize(sz << 1, e());
+        // for (int i = 0; i < n; i++) tree[sz | i] = v[i];
+        // for (int i = sz - 1; i >= 1; i--) tree[i] = op(tree[i << 1], tree[i << 1 | 1]); 
     }
     void update(int i, T val) { // 0-based
         tree[i |= sz] = val;
