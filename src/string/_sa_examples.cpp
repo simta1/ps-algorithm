@@ -1,5 +1,5 @@
 // O((N+M)\log(N+M)) LCS
-template <typename Container> // Container = string or vector<>
+template <typename Container>
 Container LCString(const Container &a, const Container &b, typename Container::value_type dummy) {
     Container st(a.size() + 1 + b.size(), dummy);
     for (int i = 0; i < a.size(); i++) st[i] = a[i];
@@ -18,7 +18,7 @@ Container LCString(const Container &a, const Container &b, typename Container::v
 }
 
 // 가장 긴 반복 부분 문자열
-template <typename Container> // Container = string or vector<>
+template <typename Container>
 Container longestRepeatedSubstring(const Container &st, const vector<int> &sa, const vector<int> &lcp) {
     if (st.size() == 1) return Container(0, 0);
     int i = max_element(lcp.begin(), lcp.end()) - lcp.begin();
@@ -53,7 +53,7 @@ long long countDistinctSubstringsRepeatedAtLeastK(const vector<int> &lcp, int k)
     return res;
 }
 
-template <typename Container> // Container = string or vector<>
+template <typename Container>
 Container longestSubstringRepeatedAtLeastK(const Container &st, const vector<int> &sa, const vector<int> &lcp, int k) { // k번 이상 등장하는 부분 문자열 중 가장 긴 부분 문자열
     if (k == 1) return st;
     if (st.size() < k) return Container(0, 0);

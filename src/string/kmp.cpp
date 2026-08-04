@@ -1,4 +1,4 @@
-template <typename T> // T = string or vector<>
+template <typename T>
 vector<int> getPi(const T &st) { // O(N)
     vector<int> pi(st.size());
     for (int i = 1, j = 0; i < st.size(); i++) {
@@ -7,7 +7,7 @@ vector<int> getPi(const T &st) { // O(N)
     }
     return pi;
 }
-template <typename T> // T = string or vector<>
+template <typename T>
 vector<int> kmp(const T &st, const T &pattern) { // O(N+M)
     int n = st.size(), m = pattern.size();
     auto pi = getPi(pattern);

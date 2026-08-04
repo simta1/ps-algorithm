@@ -9,40 +9,40 @@ struct AhoCorasick {
             go.fill(-1);
         }
     };
-    vector<Node> tr = {Node()};
+    vector<Node> tree = {Node()};
     int charToIdx(char ch) const { return ch - FIRST; }
     void insert(const string &st) {
         int cur = 0;
         for (auto ch : st) {
             int i = charToIdx(ch);
-            if (!~tr[cur].mp[i]) {
-                tr[cur].mp[i] = tr.size();
-                tr.emplace_back();
+            if (!~tree[cur].mp[i]) {
+                tree[cur].mp[i] = tree.size();
+                tree.emplace_back();
             }
-            cur = tr[cur].mp[i];
+            cur = tree[cur].mp[i];
         }
-        tr[cur].end = true;
+        tree[cur].end = true;
     }
     void build() { // build O(ALPHA * sum(m_i))
         queue<int> q;
         for (int i = 0; i < ALPHA; i++) {
-            int next = tr[0].mp[i];
-            if (!~next) tr[0].go[i] = 0;
+            int next = tree[0].mp[i];
+            if (!~next) tree[0].go[i] = 0;
             else {
-                tr[0].go[i] = next;
+                tree[0].go[i] = next;
                 q.push(next);
             }
         }
         while (!q.empty()) {
             int cur = q.front();
             q.pop();
-            tr[cur].end |= tr[tr[cur].fail].end;
+            tree[cur].end |= tree[tree[cur].fail].end;
             for (int i = 0; i < ALPHA; i++) {
-                int next = tr[cur].mp[i];
-                if (!~next) tr[cur].go[i] = tr[tr[cur].fail].go[i];
+                int next = tree[cur].mp[i];
+                if (!~next) tree[cur].go[i] = tree[tree[cur].fail].go[i];
                 else {
-                    tr[cur].go[i] = next;
-                    tr[next].fail = tr[tr[cur].fail].go[i];
+                    tree[cur].go[i] = next;
+                    tree[next].fail = tree[tree[cur].fail].go[i];
                     q.push(next);
                 }
             }
@@ -51,8 +51,8 @@ struct AhoCorasick {
     bool findSubstring(const string &st) const { // O(N)
         int cur = 0;
         for (auto ch : st) {
-            cur = tr[cur].go[charToIdx(ch)];
-            if (tr[cur].end) return true;
+            cur = tree[cur].go[charToIdx(ch)];
+            if (tree[cur].end) return true;
         }
         return false;
     }

@@ -1,18 +1,18 @@
-template <typename Container> // Container = string or vector<>
+template <typename Container>
 pair<vector<int>, vector<int>> getSuffixArray(const Container &st) { // O(N logN)
     int n = st.size();
     if (n == 1) return {{0}, {0}};
     assert(n > 0);
     int m = *max_element(st.begin(), st.end());
     vector<int> sa(n), x(n + 1), y(n + 1), cnt(max(n, m) + 1);
-    for (int i = 0; i < n; i++) assert(st[i] > 0); // 0은 문자열 끝을 나타내는 sentinel rank
+    for (int i = 0; i < n; i++) assert(st[i] > 0);
     for (int i = 0; i < n; i++) ++cnt[x[i] = st[i]];
     for (int i = 1; i <= m; i++) cnt[i] += cnt[i - 1];
     for (int i = n - 1; i >= 0; i--) sa[--cnt[x[i]]] = i;
     for (int len = 1, p = 1; p < n; len <<= 1, m = p) {
-        p = 0;
-        for (int i = n - len; i < n; i++) y[p++] = i;
-        for (int i = 0; i < n; i++) if (sa[i] >= len) y[p++] = sa[i] - len;
+        int idx = 0;
+        for (int i = n - len; i < n; i++) y[idx++] = i;
+        for (int i = 0; i < n; i++) if (sa[i] >= len) y[idx++] = sa[i] - len;
         fill(cnt.begin(), cnt.begin() + m + 1, 0);
         for (int i = 0; i < n; i++) ++cnt[x[y[i]]];
         for (int i = 1; i <= m; i++) cnt[i] += cnt[i - 1];
@@ -25,11 +25,11 @@ pair<vector<int>, vector<int>> getSuffixArray(const Container &st) { // O(N logN
         }
     }
     x.resize(n);
-    for (auto &e : x) --e; // rank 1-based -> 0-based
+    for (auto &e : x) --e;
     return {sa, x}; // rank=x
 }
-template <typename Container> // Container = string or vector<>
-vector<int> getLCPArray(const Container &st, const vector<int> &sa, const vector<int> &rank) { // O(N)   
+template <typename Container>
+vector<int> getLCPArray(const Container &st, const vector<int> &sa, const vector<int> &rank) { // O(N)
     int n = st.size();
     assert(n >= 1);
     vector<int> lcp(n - 1);
