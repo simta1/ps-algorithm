@@ -1,32 +1,26 @@
 template <typename T>
 struct DSU {
-    vector<int> parent;
-    vector<T> weight;
-    DSU(int n) : parent(n + 1), weight(n + 1) {
-        iota(parent.begin(), parent.end(), 0);
+    vector<int> p;
+    vector<T> w;
+    DSU(int n) : p(n + 1), w(n + 1) {
+        iota(p.begin(), p.end(), 0);
     }
     int find(int a) {
-        if (parent[a] == a) return a;
-        find(parent[a]); // calculate weight[parent[a]]
-        weight[a] += weight[parent[a]];
-        return parent[a] = find(parent[a]);
+        if (p[a] == a) return a;
+        int ra = find(p[a]); // w[p[a]] 계산
+        w[a] += w[p[a]];
+        return p[a] = ra;
     }
-    void merge(int a, int b, T w) { // b = a + w
+    void merge(int a, int b, T val) { // b = a + val
         int ra = find(a);
         int rb = find(b);
-        if (ra > rb) {
-            swap(ra, rb);
-            swap(a, b);
-            w *= -1;
-        }
-        weight[rb] = weight[a] + w - weight[b];
-        parent[rb] = ra;
-    }
-    bool isConnected(int a, int b) {
-        return find(a) == find(b);
+        w[rb] = w[a] + val - w[b];
+        p[rb] = ra;
     }
     T getDiff(int a, int b) {
-        assert(isConnected(a, b)); // 아니면 비교 불가
-        return weight[b] - weight[a];
+        int ra = find(a);
+        int rb = find(b);
+        assert(ra == rb);
+        return w[b] - w[a];
     }
 };
