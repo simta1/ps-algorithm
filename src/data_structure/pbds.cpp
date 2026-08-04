@@ -17,7 +17,6 @@ for (auto it = rp.begin(); it != rp.end(); it++) // rp[idx]접근은 O(logN)이�
 using namespace __gnu_pbds;
 template <typename T> using ordered_set = tree<T, null_type, less<T>, rb_tree_tag,
 tree_order_statistics_node_update>;
-template <typename T> using ordered_multiset = tree<T, null_type, less_equal<T>,
 rb_tree_tag, tree_order_statistics_node_update>;
 // find_by_order(k) : k(0-based)번째 값의 it 반환
 // order_of_key(x) : x보다 작은 원소 개수 반환
