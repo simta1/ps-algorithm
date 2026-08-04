@@ -1,5 +1,5 @@
 template <typename Container>
-pair<vector<int>, vector<int>> getSuffixArray(const Container &st) { // O(N logN)
+pair<vector<int>, vector<int>> get_sa(const Container &st) { // O(N logN)
     int n = st.size();
     if (n == 1) return {{0}, {0}};
     assert(n > 0);
@@ -29,7 +29,7 @@ pair<vector<int>, vector<int>> getSuffixArray(const Container &st) { // O(N logN
     return {sa, x}; // rank=x
 }
 template <typename Container>
-vector<int> getLCPArray(const Container &st, const vector<int> &sa, const vector<int> &rank) { // O(N)
+vector<int> get_lcp(const Container &st, const vector<int> &sa, const vector<int> &rank) { // O(N)
     int n = st.size();
     assert(n >= 1);
     vector<int> lcp(n - 1);
@@ -39,8 +39,8 @@ vector<int> getLCPArray(const Container &st, const vector<int> &sa, const vector
     }
     return lcp;
 } // lcp[i]: sa[i], sa[i + 1]의 최장 공통 접두사 // lcp.size() = n-1
-// auto [sa, rank] = getSuffixArray(st);
-// auto lcp = getLCPArray(st, sa, rank);
+// auto [sa, rank] = get_sa(st);
+// auto lcp = get_lcp(st, sa, rank);
 // st[i:], st[j:]의 최장공통접두사의 길이
 // if (i == j) return n - i;
 // RMQ rmq(lcp);
