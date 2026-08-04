@@ -1,23 +1,24 @@
 struct Node {
-    Node *chd[2];
+    int chd[2] = {-1, -1};
 };
-
-Node *root = new Node();
+vector<Node> tree = {Node()};
 auto insert = [&](int x) {
-    Node *cur = root;
+    int cur = 0;
     for (int i = 29; i >= 0; i--) {
         int bit = x >> i & 1;
-        if (!cur->chd[bit]) cur->chd[bit] = new Node();
-        cur = cur->chd[bit];
+        if (!~tree[cur].chd[bit]) {
+            tree[cur].chd[bit] = tree.size();
+            tree.emplace_back();
+        }
+        cur = tree[cur].chd[bit];
     }
 };
-
 auto mnquery = [&](int x) {
-    Node *cur = root;
+    int cur = 0;
     for (int i = 29; i >= 0; i--) {
         int bit = x >> i & 1;
-        if (!cur->chd[bit]) bit ^= 1;
-        cur = cur->chd[bit];
+        if (!~tree[cur].chd[bit]) bit ^= 1;
+        cur = tree[cur].chd[bit];
         x ^= bit << i;
     }
     return x;
