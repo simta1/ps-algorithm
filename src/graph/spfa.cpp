@@ -10,12 +10,12 @@ auto spfa = [&](int s) { // O(VE) // average O(V+E)
         auto cur = q.front();
         q.pop();
         inq[cur] = false;
-        for (auto [next, cost] : adj[cur]) if (dist[next] > dist[cur] + cost) {
-            dist[next] = dist[cur] + cost;
-            if (inq[next]) continue;
-            if (++cnt[next] >= n) return pair{true, dist}; // hasNegCycle
-            q.push(next);
-            inq[next] = true;
+        for (auto [nxt, cost] : adj[cur]) if (dist[nxt] > dist[cur] + cost) {
+            dist[nxt] = dist[cur] + cost;
+            if (inq[nxt]) continue;
+            if (++cnt[nxt] >= n) return pair{true, dist}; // hasNegCycle
+            q.push(nxt);
+            inq[nxt] = true;
         }
     }
     return pair{false, dist}; // {hasNegCycle, dist}

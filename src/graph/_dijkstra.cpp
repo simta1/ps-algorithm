@@ -8,9 +8,9 @@ auto dijkstra = [&](int s) { // O(E logV)
         auto [distance, cur] = pq.top();
         pq.pop();
         if (distance > dist[cur]) continue;
-        for (auto [next, cost] : adj[cur]) if (dist[next] > dist[cur] + cost) {
-            dist[next] = dist[cur] + cost;
-            pq.emplace(dist[next], next);
+        for (auto [nxt, cost] : adj[cur]) if (dist[nxt] > dist[cur] + cost) {
+            dist[nxt] = dist[cur] + cost;
+            pq.emplace(dist[nxt], nxt);
         }
     }
     return dist;

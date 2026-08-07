@@ -11,9 +11,9 @@ pair<bool, vector<int> > getPEO(int n, const vector<vector<int>>& adj) { // O(V+
         if (visited[cur]) continue;
         visited[cur] = true;
         order.push_back(cur);
-        for (auto next : adj[cur]) if (!visited[next]) {
-            buckets[++label[next]].push_back(next);
-            mx = max(mx, label[next]);
+        for (auto nxt : adj[cur]) if (!visited[nxt]) {
+            buckets[++label[nxt]].push_back(nxt);
+            mx = max(mx, label[nxt]);
         }
     }
     reverse(order.begin(), order.end());

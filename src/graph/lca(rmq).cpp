@@ -4,9 +4,9 @@ vector<int> pos(n + 1);
 int sz = 0;
 auto mkt = [&](auto &&mkt, int cur, int par) -> void {
     euler[pos[cur] = sz++] = cur;
-    for (auto next : adj[cur]) if (next != par) {
-        dep[next] = dep[cur] + 1;
-        mkt(mkt, next, cur);
+    for (auto nxt : adj[cur]) if (nxt != par) {
+        dep[nxt] = dep[cur] + 1;
+        mkt(mkt, nxt, cur);
         euler[sz++] = cur;
     }
 };

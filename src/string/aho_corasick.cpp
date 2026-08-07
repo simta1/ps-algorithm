@@ -26,11 +26,11 @@ struct AhoCorasick {
     void build() { // build O(ALPHA * sum(m_i))
         queue<int> q;
         for (int i = 0; i < ALPHA; i++) {
-            int next = tree[0].mp[i];
-            if (!~next) tree[0].go[i] = 0;
+            int nxt = tree[0].mp[i];
+            if (!~nxt) tree[0].go[i] = 0;
             else {
-                tree[0].go[i] = next;
-                q.push(next);
+                tree[0].go[i] = nxt;
+                q.push(nxt);
             }
         }
         while (!q.empty()) {
@@ -38,12 +38,12 @@ struct AhoCorasick {
             q.pop();
             tree[cur].end |= tree[tree[cur].fail].end;
             for (int i = 0; i < ALPHA; i++) {
-                int next = tree[cur].mp[i];
-                if (!~next) tree[cur].go[i] = tree[tree[cur].fail].go[i];
+                int nxt = tree[cur].mp[i];
+                if (!~nxt) tree[cur].go[i] = tree[tree[cur].fail].go[i];
                 else {
-                    tree[cur].go[i] = next;
-                    tree[next].fail = tree[tree[cur].fail].go[i];
-                    q.push(next);
+                    tree[cur].go[i] = nxt;
+                    tree[nxt].fail = tree[tree[cur].fail].go[i];
+                    q.push(nxt);
                 }
             }
         }

@@ -6,9 +6,9 @@ auto propagate = [&](int node, int s, int e) {
     if (lm[node] != 1 || la[node]) {
         tree[node] = (tree[node] * lm[node] + (e - s + 1) * la[node]) % MOD;
         if (s != e) {
-            for (auto next : {node << 1, node << 1 | 1}) {
-                lm[next] = lm[next] * lm[node] % MOD;
-                la[next] = (la[next] * lm[node] + la[node]) % MOD;
+            for (auto nxt : {node << 1, node << 1 | 1}) {
+                lm[nxt] = lm[nxt] * lm[node] % MOD;
+                la[nxt] = (la[nxt] * lm[node] + la[node]) % MOD;
             }
         }
         lm[node] = 1;

@@ -8,7 +8,7 @@ auto topoSort = [&](int n, const vector<vector<int> > &adj) { // O(V + E)
         int cur = q.front();
         q.pop();
         res.push_back(cur);
-        for (int next : adj[cur]) if (--indeg[next] == 0) q.push(next);
+        for (int nxt : adj[cur]) if (--indeg[nxt] == 0) q.push(nxt);
     }
     bool hasCycle = res.size() != n;
     return {hasCycle, res};

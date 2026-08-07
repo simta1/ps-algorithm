@@ -3,11 +3,11 @@ int mx = __lg(n);
 vector<int> dep(n + 1);
 vector ac(n + 1, vector<int>(mx + 1));
 auto dfs = [&](auto &&dfs, int cur, int par) -> void {
-    for (auto next : adj[cur]) if (next != par) {
-        dep[next] = dep[cur] + 1;
-        ac[next][0] = cur;
-        for (int i = 1; i <= mx; i++) ac[next][i] = ac[ac[next][i - 1]][i - 1];
-        dfs(dfs, next, cur);
+    for (auto nxt : adj[cur]) if (nxt != par) {
+        dep[nxt] = dep[cur] + 1;
+        ac[nxt][0] = cur;
+        for (int i = 1; i <= mx; i++) ac[nxt][i] = ac[ac[nxt][i - 1]][i - 1];
+        dfs(dfs, nxt, cur);
     }
 };
 dfs(dfs, 1, -1); // O(NlogN)

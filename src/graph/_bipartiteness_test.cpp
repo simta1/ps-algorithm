@@ -7,12 +7,12 @@ auto isBipartite = [&]() {
         while (!q.empty()) {
             int cur = q.front();
             q.pop();
-            for (int next : adj[cur]) {
-                if (!vis[next]) {
-                    q.push(next);
-                    vis[next] = 3 - vis[cur];
+            for (int nxt : adj[cur]) {
+                if (!vis[nxt]) {
+                    q.push(nxt);
+                    vis[nxt] = 3 - vis[cur];
                 }
-                else if (vis[next] == vis[cur]) return false;
+                else if (vis[nxt] == vis[cur]) return false;
             }
         }
     }

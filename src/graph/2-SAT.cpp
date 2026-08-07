@@ -38,7 +38,7 @@ struct TwoSat {
         function<int(int)> dfs = [&](int cur) -> int {
             int low = dfsn[cur] = ++dfsi;
             s[top++] = cur;
-            for (auto next : adj[cur]) if (!~sccn[next]) low = min(low, dfsn[next] ? dfsn[next] : dfs(next));
+            for (auto nxt : adj[cur]) if (!~sccn[nxt]) low = min(low, dfsn[nxt] ? dfsn[nxt] : dfs(nxt));
             if (low == dfsn[cur]) {
                 do { sccn[s[--top]] = scci; } while (s[top] != cur);
                 ++scci;

@@ -44,11 +44,11 @@ vector<ll> invertMod(const vector<T> &f, int deg) { // f(x)^-1 mod x^deg 계산 
     assert(!f.empty() && f[0] % p != 0); // f(x)의 상수항이 0이면 역원이 존재하지 않음 // 참고로 divideMod(f, g)에서 g의 계수를 뒤집은 게 invertMod의 f이므로 f[0]!=0이란 건 divideMod에서 g의 최고차항의 계수가 0이 아니란 것과 동치임
     vector<ll> res = {mint<p>(f[0] % p).inv().value}; // f(x)^-1 mod x^1
     for (int curDeg = 1; curDeg < deg; curDeg <<= 1) {
-        int nextDeg = curDeg << 1;
+        int nxtDeg = curDeg << 1;
 
         // prod = f(x) * res(x)
-        vector<ll> prod = multiplyMod<p, primitiveRoot>(res, vector<ll>(f.begin(), f.begin() + min(int(f.size()), nextDeg)));
-        prod.resize(nextDeg);
+        vector<ll> prod = multiplyMod<p, primitiveRoot>(res, vector<ll>(f.begin(), f.begin() + min(int(f.size()), nxtDeg)));
+        prod.resize(nxtDeg);
 
         // prod = 2 - f(x) * res(x)
         if ((prod[0] -= 2) < 0) prod[0] += p;
@@ -56,7 +56,7 @@ vector<ll> invertMod(const vector<T> &f, int deg) { // f(x)^-1 mod x^deg 계산 
 
         // 새로운 res(x) = res(x) * (2 - f(x) * res(x))
         res = multiplyMod<p, primitiveRoot>(res, prod);
-        res.resize(nextDeg);
+        res.resize(nxtDeg);
     }
 
     res.resize(deg);

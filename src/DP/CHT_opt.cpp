@@ -36,9 +36,9 @@ struct CHT {
 	}
 
 	void rollback() {
-		auto [prevN, changedIdx, lineBeforeChange] = history.back();
+		auto [prvN, changedIdx, lineBeforeChange] = history.back();
 		history.pop_back();
-		n = prevN;
+		n = prvN;
 		lines[changedIdx] = lineBeforeChange;
 	}
 

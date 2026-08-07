@@ -10,11 +10,11 @@ pll cornacchia(ll m, ll d) { // x^2 + d y^2 = m // m은 소수, d>0 // 해 없�
     assert(m >= 2 && d > 0);
     ll r0 = tonelliShanks((m - d % m) % m, m);
     if (r0 == -1) return {-1, -1};
-    ll prev = m, cur = r0;
+    ll prv = m, cur = r0;
     while ((__int128)cur * cur >= m) {
-        ll next = prev % cur;
-        prev = cur;
-        cur = next;
+        ll nxt = prv % cur;
+        prv = cur;
+        cur = nxt;
     }
     ll x = cur;
     ll rem = m - x * x;

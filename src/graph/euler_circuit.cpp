@@ -45,12 +45,12 @@ pair<bool, vector<int> > getCircuit(vector<vector<Edge> > adj, int start) { // a
 // 단방향 그래프
 pair<bool, vector<int> > getCircuit(vector<vector<pair<int, int> > > adj, int start) { // adj비워져도 괜찮으면 참조 사용 // O(V+E)
     int E = 0;
-    for (auto &r : adj) for (auto [next, cnt] : r) E += cnt;
+    for (auto &r : adj) for (auto [nxt, cnt] : r) E += cnt;
     vector<int> res;
     auto dfs = [&](auto &&dfs, int cur) -> void {
         while (!adj[cur].empty()) {
-            auto &[next, cnt] = adj[cur].back();
-            int tmp = next; // dangling 방지
+            auto &[nxt, cnt] = adj[cur].back();
+            int tmp = nxt; // dangling 방지
             if (--cnt == 0) adj[cur].pop_back();
             dfs(dfs, tmp);
         }
