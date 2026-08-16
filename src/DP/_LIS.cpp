@@ -1,6 +1,6 @@
 template <typename T>
-int LIS(const vector<T> &v) { // O(N logN)
-    vector<T> dp; // dp[i] : 길이 i이상의 LIS를 만들 때 LIS의 i번째 원소로 가능한 최소값
+int LIS(const vector<T> &v) {
+    vector<T> dp;
     for (auto e : v) {
         if (dp.empty() || dp.back() < e) dp.push_back(e);
         else *lower_bound(dp.begin(), dp.end(), e) = e;
@@ -8,13 +8,11 @@ int LIS(const vector<T> &v) { // O(N logN)
     return dp.size();
 }
 
-// LIS 계산
 template <typename T>
-vector<int> LIS(const vector<T> &v) { // v에 대한 인덱스로 LIS 나타내서 리턴 // O(N logN)
+vector<int> LIS(const vector<T> &v) {
     int n = v.size();
     vector<int> pos(n);
-    vector<T> dp; // dp[i] : 길이 i이상의 LIS를 만들 때 LIS의 i번째 원소로 가능한 최소값
-
+    vector<T> dp;
     for (int i = 0; i < n; i++) {
         if (dp.empty() || dp.back() < v[i]) {
             pos[i] = dp.size();
@@ -25,7 +23,6 @@ vector<int> LIS(const vector<T> &v) { // v에 대한 인덱스로 LIS 나타내�
             dp[pos[i]] = v[i];
         }
     }
-
     vector<int> LIS(dp.size());
     for (int i = n - 1, cur = dp.size() - 1; i >= 0; i--) if (pos[i] == cur) LIS[cur--] = i;
     return LIS;

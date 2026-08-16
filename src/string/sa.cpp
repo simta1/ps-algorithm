@@ -1,5 +1,5 @@
 template <typename Container>
-pair<vector<int>, vector<int>> get_sa(const Container &st) { // O(N logN)
+auto get_sa(const Container &st) { // O(N logN)
     int n = st.size();
     if (n == 1) return {{0}, {0}};
     assert(n > 0);
@@ -26,7 +26,7 @@ pair<vector<int>, vector<int>> get_sa(const Container &st) { // O(N logN)
     }
     x.resize(n);
     for (auto &e : x) --e;
-    return {sa, x}; // rank=x
+    return pair{sa, x}; // rank=x
 }
 template <typename Container>
 vector<int> get_lcp(const Container &st, const vector<int> &sa, const vector<int> &rank) { // O(N)
