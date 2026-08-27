@@ -1,6 +1,4 @@
-vector<int> dep(n + 1);
-vector<int> euler(2 * n - 1);
-vector<int> pos(n + 1);
+vector<int> dep(n + 1), pos(n + 1), euler(2 * n - 1);
 int sz = 0;
 auto mkt = [&](auto &&mkt, int cur, int par) -> void {
     euler[pos[cur] = sz++] = cur;

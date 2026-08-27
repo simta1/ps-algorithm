@@ -1,7 +1,7 @@
 template <typename Container>
 auto get_sa(const Container &st) { // O(N logN)
     int n = st.size();
-    if (n == 1) return {{0}, {0}};
+    if (n == 1) return pair{vector{0}, vector{0}};
     assert(n > 0);
     int m = *max_element(st.begin(), st.end());
     vector<int> sa(n), x(n + 1), y(n + 1), cnt(max(n, m) + 1);
