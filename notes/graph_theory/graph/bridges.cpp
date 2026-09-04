@@ -2,20 +2,19 @@ vector<pair<int, int> > getBridges(int n, const vector<vector<int> > &adj) { // 
     vector<int> dfsn(n + 1);
     vector<pair<int, int> > res;
     int dfsi = 0;
-    function<int(int, int)> dfs = [&](int cur, int parent) -> int {
+    auto dfs = [&](auto &&dfs, int cur, int par) -> int {
         int low = dfsn[cur] = ++dfsi;
-        for (auto next : adj[cur]) if (next != parent) {
-            if (!dfsn[next]) {
-                int nextLow = dfs(next, cur);
+        for (auto nxt : adj[cur]) if (nxt != par) {
+            if (!dfsn[nxt]) {
+                int nextLow = dfs(dfs, nxt, cur);
                 low = min(low, nextLow);
-                if (nextLow > dfsn[cur]) res.emplace_back(cur, next);
+                if (nextLow > dfsn[cur]) res.emplace_back(cur, nxt);
             }
-            else low = min(low, dfsn[next]);
+            else low = min(low, dfsn[nxt]);
         }
-
         return low;
     };
-    for (int i = 1; i <= n; i++) if(!dfsn[i]) dfs(i, -1);
+    for (int i = 1; i <= n; i++) if(!dfsn[i]) dfs(dfs, i, -1);
     for (auto &[a, b] : res) if (a > b) swap(a, b);
     return res;
 }

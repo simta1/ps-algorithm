@@ -1,6 +1,6 @@
 namespace Poly { // FFT
 template <typename real_t>
-void fft(vector<complex<real_t> > &a) {
+void fft(vector<complex<real_t>> &a, bool inv) {
     using cpx = complex<real_t>;
     int n = a.size(), L = __lg(n);
     static vector<complex<long double> > R(2, 1);
@@ -24,12 +24,10 @@ void fft(vector<complex<real_t> > &a) {
             }
         }
     }
-}
-template <typename real_t>
-void ifft(vector<complex<real_t> > &a) {
-    reverse(a.begin() + 1, a.end());
-    fft(a);
-    for (auto &e : a) e /= real_t(a.size());
+    if (inv) {
+        reverse(a.begin() + 1, a.end());
+        for (auto &e : a) e /= real_t(a.size());
+    }
 }
 template <typename real_t, typename T>
 vector<ll> multiply(const vector<T> &A, const vector<T> &B) {
@@ -41,13 +39,13 @@ vector<ll> multiply(const vector<T> &A, const vector<T> &B) {
     vector<cpx> in(n), out(n);
     for (int i = 0; i < A.size(); i++) in[i] = A[i];
     for (int i = 0; i < B.size(); i++) in[i].imag(B[i]);
-    fft(in);
+    fft(in, false);
     for (auto &x : in) x *= x;
     for (int i = 0; i < n; i++) out[i] = in[-i & (n - 1)] - conj(in[i]);
-	fft(out);
+    fft(out, false);
     vector<ll> res(need);
     for (int i = 0; i < res.size(); i++) res[i] = llround(imag(out[i]) / (4 * n));
-	return res;
+    return res;
 }
 }
 

@@ -41,10 +41,16 @@ vector<int> get_lcp(const Container &st, const vector<int> &sa, const vector<int
 } // lcp[i]: sa[i], sa[i + 1]의 최장 공통 접두사 // lcp.size() = n-1
 // auto [sa, rank] = get_sa(st);
 // auto lcp = get_lcp(st, sa, rank);
-// st[i:], st[j:]의 최장공통접두사의 길이
-// if (i == j) return n - i;
-// RMQ rmq(lcp);
-// int idx1 = rank[i];
-// int idx2 = rank[j];
-// if (idx1 > idx2) swap(idx1, idx2);
-// return rmq.query(idx1, idx2 - 1); // i!=j라서 idx1 <= idx2 - 1 성립
+// RMQ<int, min> rmq(lcp);
+auto lce = [&](int i, int j) { // lcp(st[i:], st[j:])
+    if (i == j) return n - i;
+    int idx1 = rank[i];
+    int idx2 = rank[j];
+    if (idx1 > idx2) swap(idx1, idx2);
+    return rmq.query(idx1, idx2 - 1); // i!=j라서 idx1 <= idx2 - 1 성립
+};
+auto cmp = [&](int i, int j, int i2, int j2) { // st[i:j] < st[i2:j2]
+    int len = lce(i, i2);
+    if (len >= min(j - i + 1, j2 - i2 + 1)) return j - i < j2 - i2;
+    return rank[i] < rank[i2];
+};
